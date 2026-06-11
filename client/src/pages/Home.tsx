@@ -1,4 +1,5 @@
 import { ShaderAnimation } from "@/components/ShaderAnimation"
+import { RippleShader, BloomShader, ParticleBloom } from "@/components/AdvancedShaders"
 import { useLocation } from "wouter"
 import { useState } from "react"
 
@@ -63,8 +64,11 @@ export default function Home() {
 
   return (
     <div className="relative w-full h-screen overflow-hidden bg-black">
-      {/* Shader Background */}
+      {/* Shader Background - Multiple Layers */}
       <ShaderAnimation height="h-screen" colorMode="red" />
+      <RippleShader />
+      <BloomShader />
+      <ParticleBloom />
 
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 bg-black/30 backdrop-blur-md border-b border-red-500/20">
