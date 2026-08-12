@@ -30,6 +30,7 @@ NOIACORE es mi laboratorio creativo y técnico: una práctica orientada a conver
 
 - [Manos Abiertas](https://github.com/belentani7/manosabiertas): 442 páginas, cursos gratuitos, estudio guiado de CV, asistentes offline y CI reproducible; integración verificada en [PR #1](https://github.com/belentani7/manosabiertas/pull/1).
 - [Netlify](https://github.com/belentani7/Netlify): comprobaciones modernas para Next.js 16 y preview validada; integración verificada en [PR #1](https://github.com/belentani7/Netlify/pull/1).
+- [Meta-Skill](https://github.com/belentani7/meta-skill): router sin dependencias con 10 tests y CI en Python 3.11/3.14 para Linux y Windows; integración verificada en [PR #1](https://github.com/belentani7/meta-skill/pull/1).
 
 ### En desarrollo
 
@@ -68,6 +69,7 @@ NOIACORE is my creative and technical lab: a practice focused on turning complex
 
 - [Manos Abiertas](https://github.com/belentani7/manosabiertas): 442 pages, free courses, guided CV studio, offline assistants and reproducible CI; integration verified in [PR #1](https://github.com/belentani7/manosabiertas/pull/1).
 - [Netlify](https://github.com/belentani7/Netlify): modern checks for Next.js 16 and a validated deployment preview; integration verified in [PR #1](https://github.com/belentani7/Netlify/pull/1).
+- [Meta-Skill](https://github.com/belentani7/meta-skill): dependency-free router with 10 tests and Python 3.11/3.14 CI on Linux and Windows; integration verified in [PR #1](https://github.com/belentani7/meta-skill/pull/1).
 
 ### In progress
 
