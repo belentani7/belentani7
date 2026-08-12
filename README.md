@@ -14,6 +14,12 @@ NOIACORE es mi laboratorio creativo y técnico: una práctica orientada a conver
 - Accesibilidad aplicada a navegación, lectura, movimiento y preferencias visuales.
 - Plataformas educativas, recursos multilingües y herramientas guiadas.
 
+### Cómo trabajo
+
+- Código público con alcance, procedencia y limitaciones explícitas.
+- Verificación reproducible: lint, tipos, tests, build, accesibilidad y secretos según el proyecto.
+- Experiencias visuales con alternativa funcional para movimiento reducido y equipos modestos.
+
 ### Trabajo público seleccionado
 
 - [Manos Abiertas](https://github.com/belentani7/manosabiertas): plataforma educativa y de orientación construida con Next.js, React y TypeScript, con controles de accesibilidad.
@@ -42,6 +48,12 @@ NOIACORE is my creative and technical lab: a practice focused on turning complex
 - GSAP and ScrollTrigger for purposeful motion and interaction.
 - Accessibility across navigation, reading, motion and visual preferences.
 - Educational platforms, multilingual resources and guided tools.
+
+### How I work
+
+- Public code with explicit scope, provenance and limitations.
+- Reproducible verification: lint, types, tests, build, accessibility and secret scanning as appropriate.
+- Visual experiences with functional alternatives for reduced motion and modest hardware.
 
 ### Selected public work
 
