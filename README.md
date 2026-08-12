@@ -22,7 +22,10 @@ NOIACORE es mi laboratorio creativo y técnico: una práctica orientada a conver
 
 ### En desarrollo
 
-- [Manos Abiertas PR #1: cursos gratuitos, estudio guiado de CV y asistentes offline](https://github.com/belentani7/manosabiertas/pull/1)
+- [Manos Abiertas PR #1](https://github.com/belentani7/manosabiertas/pull/1): 442 páginas, cursos gratuitos, estudio guiado de CV, asistentes offline y CI reproducible.
+- [Cruzando el Charco PR #1](https://github.com/belentani7/Cruzando-el-charco/pull/1): portal de orientación reconstruido desde su archivo fuente con privacidad por defecto.
+- [Netlify PR #1](https://github.com/belentani7/Netlify/pull/1): modernización de comprobaciones para Next.js 16.
+- [Abrazo PR #1](https://github.com/belentani7/abrazo-tender-words/pull/1): endurecimiento de seguridad y calidad del frontend.
 
 ---
 
@@ -48,4 +51,7 @@ NOIACORE is my creative and technical lab: a practice focused on turning complex
 
 ### In progress
 
-- [Manos Abiertas PR #1: free courses, guided CV studio and offline assistants](https://github.com/belentani7/manosabiertas/pull/1)
+- [Manos Abiertas PR #1](https://github.com/belentani7/manosabiertas/pull/1): 442 pages, free courses, guided CV studio, offline assistants and reproducible CI.
+- [Cruzando el Charco PR #1](https://github.com/belentani7/Cruzando-el-charco/pull/1): guidance portal rebuilt from its source archive with privacy by default.
+- [Netlify PR #1](https://github.com/belentani7/Netlify/pull/1): modernized checks for Next.js 16.
+- [Abrazo PR #1](https://github.com/belentani7/abrazo-tender-words/pull/1): frontend security and quality hardening.
