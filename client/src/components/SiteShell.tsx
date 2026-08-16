@@ -7,6 +7,7 @@ const navigation = [
   { href: "/artist", label: "Artist" },
   { href: "/music", label: "Music" },
   { href: "/studio", label: "Studio" },
+  { href: "/lore", label: "Lore Codex" },
   { href: "/judas", label: "Judas" },
   { href: "/portal", label: "Portal" },
   { href: "/gallery", label: "Gallery" },

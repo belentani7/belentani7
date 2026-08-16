@@ -1,17 +1,9 @@
-# Revisión integral del front-end
+# Restauración del Lore Completo de Belentani
 
-- [x] Auditar MANUS-AI-SKILLS-ALL.zip y comparar su contenido con el proyecto actual.
-- [x] Revisar la estructura y el texto de la web de Belentani/Manus AI Skills.
-- [x] Definir una dirección visual sobria: negro carbón, rojo oscuro controlado, marfil y gris humo.
-- [x] Rehacer la composición principal, navegación, tarjetas, tipografía y jerarquía visual.
-- [x] Reducir o eliminar efectos que parezcan decorativos, coloridos o genéricos.
-- [x] Implementar estados responsive y foco accesible.
-- [x] Verificar rutas, legibilidad, consola y build.
-- [ ] Guardar checkpoint final después de validar la revisión.
-
-## Decisiones de diseño
-
-- Evitar gradientes arcoíris, azul/morado, exceso de glow y tarjetas uniformemente redondeadas.
-- Mantener el rojo como acento editorial y no como relleno dominante.
-- Priorizar composición asimétrica, tipografía expresiva y textura discreta.
-- Tratar los shaders como atmósfera secundaria; el contenido y la identidad de Belentani deben dominar.
+- [x] Reconocer el error de síntesis excesiva y establecer el plan para restaurar el lore completo.
+- [ ] Inspeccionar archivos locales, subidas previas y estructura del proyecto para extraer todo el lore existente sobre Belentani, Duck, San Pedro, Judas, la Dimensión Zion y los arquetipos.
+- [ ] Crear un archivo maestro de lore en el proyecto (`client/src/data/loreDatabase.ts`) que organice toda la mitología en capas navegables.
+- [ ] Rediseñar las páginas de la web para que Belentani sea el núcleo central (universo, cronología, personajes, mitología, música, archivos de lore) y Judas sea una sección/era específica dentro del ecosistema.
+- [ ] Implementar un visor de lore interactivo que permita leer fragmentos extensos con tipografía editorial y controles de profundidad.
+- [ ] Verificar build, consistencia y navegación sin perder un solo fragmento de la historia original.
+- [ ] Guardar checkpoint y entregar la versión definitiva de Belentani.

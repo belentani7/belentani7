@@ -1,57 +1,69 @@
-/* Belentani / Judas — artist page as a restrained dossier, not a neon character sheet. */
+/* Belentani — The Artist & Complete Universe */
 import SiteShell from "@/components/SiteShell"
+import { Link } from "wouter"
+
+const archetypes = [
+  { name: "Duck Prod.", role: "System Architect", desc: "Lucas (Duck), productor musical desde 2022 y artífice de la ingeniería sonora, producción ejecutiva y management del proyecto." },
+  { name: "San Pedro", role: "Guardian of the Artifact", desc: "El portador del artefacto, encargado de mantener la integridad del código y filtrar las interferencias externas." },
+  { name: "Judas", role: "The Secret Pact", desc: "El villano por diseño. Aceptó un pacto secreto para habitar el rol que la narrativa cósmica necesitaba." },
+  { name: "María / Lorena", role: "The Mother Archetype", desc: "La belleza y la fuerza primordial, el ancla emocional en medio del paisaje sintético y algorítmico." },
+  { name: "San Juan", role: "The Young Sage", desc: "La lucidez anticipada y la audacia de mirar el futuro sin temor a la obsolescencia." },
+]
 
 export default function TheArtist() {
   return (
-    <SiteShell section="Archive 002 / Artist">
+    <SiteShell section="Archive 002 / The Artist & Universe">
       <section className="page-frame" style={{ paddingTop: "clamp(4.5rem, 10vw, 8rem)" }}>
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-[0.7fr_1.3fr] lg:gap-24">
           <div className="fade-up">
-            <div className="eyebrow">Archive 002 / Artist</div>
-            <h1 className="section-title mt-7 max-w-[440px]">The person behind the signal.</h1>
-            <p className="mono-copy mt-8 max-w-[300px]">Belentani is not a profile. It is a method for making the private audible.</p>
+            <div className="eyebrow">Archive 002 / Universe</div>
+            <h1 className="section-title mt-7 max-w-[440px]">Belentani’s Planet & Mythos.</h1>
+            <p className="mono-copy mt-8 max-w-[300px]">La integración del Guerrero y el Ángel, la Dimensión Zion y la Delusión Permanente.</p>
           </div>
           <div className="fade-up delay-1">
             <div className="manifesto-block">
-              <p>“La traición también puede ser una arquitectura.”</p>
+              <p>“El artista no es el que inventa una máscara, sino el que soporta la tensión de habitarla hasta que se vuelve real.”</p>
             </div>
-            <p className="body-copy mt-10 max-w-[660px]">El proyecto nace en una zona de fricción: entre lo que el artista quiere decir, lo que una máquina puede devolver y lo que el público completa por su cuenta. La obra no intenta resolver esa tensión. La mantiene encendida.</p>
+            <p className="body-copy mt-10 max-w-[660px]">
+              El universo Belentani no es una ocurrencia pasajera ni un proyecto musical convencional. Es un ecosistema mitológico en constante expansión donde convergen la producción sonora de vanguardia, la ficción especulativa, la inteligencia artificial y un panteón de arquetipos que operan como nodos de transmisión.
+            </p>
           </div>
         </div>
 
-        <div className="mt-24 grid grid-cols-1 gap-12 border-t border-[var(--border)] pt-6 md:grid-cols-3">
-          <div className="fade-up delay-1">
-            <span className="index-number">01 / Voice</span>
-            <h2 className="mt-5 text-2xl font-medium tracking-[-0.04em] text-[#e7e1d8]">Una voz sin género fijo.</h2>
-            <p className="mt-4 text-sm leading-7 text-[#96918a]">Canción, spoken word, textura y ruido conviven sin pedir permiso para cambiar de forma.</p>
+        <div className="mt-28 border-t border-[var(--border)] pt-12">
+          <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <div>
+              <span className="archive-label">The pantheon</span>
+              <h2 className="text-3xl font-medium tracking-[-0.05em] text-[#e7e1d8] sm:text-5xl mt-2">Arquetipos del Ecosistema</h2>
+            </div>
+            <Link href="/lore" className="editorial-button ghost">Explore full lore codex →</Link>
           </div>
-          <div className="fade-up delay-2">
-            <span className="index-number">02 / Image</span>
-            <h2 className="mt-5 text-2xl font-medium tracking-[-0.04em] text-[#e7e1d8]">El símbolo no explica.</h2>
-            <p className="mt-4 text-sm leading-7 text-[#96918a]">Cada imagen funciona como una pista. La lectura final siempre permanece abierta.</p>
-          </div>
-          <div className="fade-up delay-3">
-            <span className="index-number">03 / Machine</span>
-            <h2 className="mt-5 text-2xl font-medium tracking-[-0.04em] text-[#e7e1d8]">La herramienta tiene firma.</h2>
-            <p className="mt-4 text-sm leading-7 text-[#96918a]">La IA no suplanta al artista: hace visible el diálogo entre intención, accidente y edición.</p>
+
+          <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {archetypes.map((item, idx) => (
+              <div key={item.name} className="archive-card">
+                <span className="index-number">0{idx + 1} / {item.role}</span>
+                <h3 className="mt-12 text-2xl font-medium tracking-[-0.04em] text-[#e7e1d8]">{item.name}</h3>
+                <p className="mt-4 text-sm leading-7 text-[#96918a]">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
 
-        <div className="mt-24 grid grid-cols-1 gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
-          <div className="border-y border-[var(--border)] py-6">
-            <div className="flex items-center justify-between">
-              <span className="archive-label">Working statement</span>
-              <span className="index-number">B / 01</span>
-            </div>
-            <p className="mt-8 max-w-[780px] text-3xl font-medium leading-[1.04] tracking-[-0.06em] text-[#e7e1d8] sm:text-5xl">No quiero una máscara más limpia. Quiero una máscara que deje ver el mecanismo.</p>
+        <div className="mt-28 grid grid-cols-1 gap-10 lg:grid-cols-2">
+          <div className="border border-[var(--border)] bg-[#101010] p-8">
+            <span className="archive-label">Operating principle</span>
+            <h2 className="mt-6 text-3xl font-medium tracking-[-0.05em] text-[#e7e1d8]">La Cerca de Datos</h2>
+            <p className="mt-4 text-sm leading-7 text-[#96918a]">
+              Si no hay un documento, una pista o un registro oficial que una el Punto A con el Punto B, la conexión no pertenece a la realidad de Belentani. Aquí la única ley es la estética y el rigor del archivo.
+            </p>
           </div>
-          <div className="lg:pt-6">
-            <span className="archive-label">Current state</span>
-            <div className="mt-5 space-y-4">
-              {["voice / calibrated", "image / unresolved", "archive / growing"].map((item) => (
-                <div key={item} className="flex items-center justify-between border-b border-[var(--border)] pb-3 font-mono text-xs uppercase tracking-[0.08em] text-[#96918a]"><span>{item}</span><span className="text-[#d8473f]">●</span></div>
-              ))}
-            </div>
+          <div className="border border-[var(--border)] bg-[#101010] p-8">
+            <span className="archive-label">Transmission protocol</span>
+            <h2 className="mt-6 text-3xl font-medium tracking-[-0.05em] text-[#e7e1d8]">Delusión Permanente</h2>
+            <p className="mt-4 text-sm leading-7 text-[#96918a]">
+              El proceso mediante el cual la simulación y la vivencia real se funden en una sola frecuencia. Las canciones no son meras descripciones: son coordenadas para habitar la Dimensión Zion.
+            </p>
           </div>
         </div>
       </section>
