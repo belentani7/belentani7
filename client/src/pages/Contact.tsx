@@ -1,26 +1,28 @@
-import { ShaderAnimation } from "@/components/ShaderAnimation"
-import { useLocation } from "wouter"
-import { useState } from "react"
+/* Belentani / Judas — contact page as a direct studio desk, not a chatbot prop. */
+import SiteShell from "@/components/SiteShell"
 
 export default function Contact() {
-  const [, navigate] = useLocation()
-  const [language, setLanguage] = useState<"es" | "en" | "pt" | "fr" | "it">("es")
-
   return (
-    <div className="relative w-full min-h-screen bg-black overflow-hidden">
-      <ShaderAnimation height="h-screen" colorMode="red" />
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 bg-black/40 backdrop-blur-md border-b border-red-500/20">
-        <button onClick={() => navigate("/")} className="text-red-500 hover:text-red-400 transition-colors font-mono">← Inicio</button>
-        <div className="flex gap-2">
-          {(["es", "en", "pt", "fr", "it"] as const).map((lang) => (
-            <button key={lang} onClick={() => setLanguage(lang)} className={`px-2 py-1 text-xs font-mono transition-all ${language === lang ? "text-red-500 border border-red-500 bg-red-500/10" : "text-gray-400 border border-gray-600 hover:text-red-400"}`}>{lang.toUpperCase()}</button>
-          ))}
+    <SiteShell section="Archive 007 / Contact">
+      <section className="page-frame" style={{ paddingTop: "clamp(4.5rem, 10vw, 8rem)" }}>
+        <div className="grid grid-cols-1 gap-16 lg:grid-cols-[0.75fr_1.25fr] lg:gap-24">
+          <div className="fade-up"><div className="eyebrow">Archive 007 / Contact</div><h1 className="section-title mt-7 max-w-[430px]">Leave a trace.</h1><p className="mono-copy mt-8 max-w-[280px]">Bookings, press, collaborations and studio requests.</p></div>
+          <div className="fade-up delay-1">
+            <form className="space-y-8" onSubmit={(event) => event.preventDefault()}>
+              <label className="block"><span className="archive-label">01 / Your name</span><input required name="name" className="mt-3 w-full border-b border-[var(--border)] bg-transparent px-0 py-3 text-lg text-[#e7e1d8] outline-none transition-colors placeholder:text-[#5f5b56] focus:border-[#d8473f]" placeholder="Name / alias" /></label>
+              <label className="block"><span className="archive-label">02 / Email</span><input required type="email" name="email" className="mt-3 w-full border-b border-[var(--border)] bg-transparent px-0 py-3 text-lg text-[#e7e1d8] outline-none transition-colors placeholder:text-[#5f5b56] focus:border-[#d8473f]" placeholder="you@domain.com" /></label>
+              <label className="block"><span className="archive-label">03 / Message</span><textarea required name="message" rows={5} className="mt-3 w-full resize-y border-b border-[var(--border)] bg-transparent px-0 py-3 text-lg text-[#e7e1d8] outline-none transition-colors placeholder:text-[#5f5b56] focus:border-[#d8473f]" placeholder="What should the archive know?" /></label>
+              <div className="flex flex-wrap items-center justify-between gap-4"><button type="submit" className="editorial-button">Send request</button><span className="mono-copy">Response window / 48 hours</span></div>
+            </form>
+          </div>
         </div>
-      </nav>
-      <div className="relative z-20 pt-24 px-6 pb-12 max-w-4xl mx-auto text-center">
-        <h1 className="text-5xl font-black text-red-500 mb-4" style={{ textShadow: "0 0 20px rgba(239, 68, 68, 0.6)" }}>CONTACTO</h1>
-        <p className="text-gray-400 font-mono">Conecta con Belentani y el equipo</p>
-      </div>
-    </div>
+
+        <div className="mt-24 grid grid-cols-1 gap-8 border-t border-[var(--border)] pt-6 sm:grid-cols-3">
+          <div><span className="archive-label">General</span><a className="editorial-link mt-5" href="mailto:hello@belentani.art">hello@belentani.art</a></div>
+          <div><span className="archive-label">Press</span><a className="editorial-link mt-5" href="mailto:press@belentani.art">press@belentani.art</a></div>
+          <div><span className="archive-label">Signal</span><span className="mono-copy mt-5 block">Madrid / remote / no fixed room</span></div>
+        </div>
+      </section>
+    </SiteShell>
   )
 }

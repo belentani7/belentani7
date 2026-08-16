@@ -1,26 +1,59 @@
-import { ShaderAnimation } from "@/components/ShaderAnimation"
-import { useLocation } from "wouter"
-import { useState } from "react"
+/* Belentani / Judas — music page as a release index: no fake player, clear archive states. */
+import SiteShell from "@/components/SiteShell"
+import { Link } from "wouter"
+
+const releases = [
+  { id: "01", title: "Judas", type: "Next release", detail: "Single / first signal", state: "Preparing" },
+  { id: "02", title: "Moral Binary", type: "Study 02", detail: "Voice / machine / pressure", state: "In progress" },
+  { id: "03", title: "Artifact", type: "Study 01", detail: "A guardian keeps the code", state: "Archived" },
+]
 
 export default function Music() {
-  const [, navigate] = useLocation()
-  const [language, setLanguage] = useState<"es" | "en" | "pt" | "fr" | "it">("es")
-
   return (
-    <div className="relative w-full min-h-screen bg-black overflow-hidden">
-      <ShaderAnimation height="h-screen" colorMode="red" />
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 bg-black/40 backdrop-blur-md border-b border-red-500/20">
-        <button onClick={() => navigate("/")} className="text-red-500 hover:text-red-400 transition-colors font-mono">← Inicio</button>
-        <div className="flex gap-2">
-          {(["es", "en", "pt", "fr", "it"] as const).map((lang) => (
-            <button key={lang} onClick={() => setLanguage(lang)} className={`px-2 py-1 text-xs font-mono transition-all ${language === lang ? "text-red-500 border border-red-500 bg-red-500/10" : "text-gray-400 border border-gray-600 hover:text-red-400"}`}>{lang.toUpperCase()}</button>
+    <SiteShell section="Archive 003 / Music">
+      <section className="page-frame" style={{ paddingTop: "clamp(4.5rem, 10vw, 8rem)" }}>
+        <div className="grid grid-cols-1 gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-24">
+          <div className="fade-up">
+            <div className="eyebrow">Archive 003 / Music</div>
+            <h1 className="section-title mt-7 max-w-[500px]">Listen before the archive changes.</h1>
+          </div>
+          <div className="fade-up delay-1">
+            <p className="body-copy max-w-[620px]">La música de Belentani no se presenta como una playlist cerrada. Cada pieza es una habitación: tiene una entrada, una tensión y una salida que puede cambiar con el tiempo.</p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link href="/contact" className="editorial-button">Notify me</Link>
+              <a className="editorial-button ghost" href="mailto:studio@belentani.art">Request press file</a>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-24 border-t border-[var(--border)]">
+          {releases.map((release) => (
+            <article key={release.id} className="grid grid-cols-[70px_1fr_auto] gap-4 border-b border-[var(--border)] py-7 sm:grid-cols-[90px_1.2fr_1fr_auto] sm:items-center sm:gap-8">
+              <span className="index-number">{release.id}</span>
+              <div>
+                <h2 className="text-3xl font-medium tracking-[-0.06em] text-[#e7e1d8] sm:text-5xl">{release.title}</h2>
+                <p className="mt-2 text-sm text-[#96918a]">{release.type} · {release.detail}</p>
+              </div>
+              <span className="archive-label hidden sm:block">{release.state}</span>
+              <span className="text-xl text-[#d8473f]">{release.state === "Archived" ? "↗" : "—"}</span>
+            </article>
           ))}
         </div>
-      </nav>
-      <div className="relative z-20 pt-24 px-6 pb-12 max-w-4xl mx-auto text-center">
-        <h1 className="text-5xl font-black text-red-500 mb-4" style={{ textShadow: "0 0 20px rgba(239, 68, 68, 0.6)" }}>MÚSICA</h1>
-        <p className="text-gray-400 font-mono">Playlists, producciones y colaboraciones de Belentani</p>
-      </div>
-    </div>
+
+        <div className="mt-24 grid grid-cols-1 gap-10 lg:grid-cols-2">
+          <div className="border border-[var(--border)] bg-[#101010] p-6 sm:p-8">
+            <span className="archive-label">Listening room</span>
+            <h2 className="mt-8 max-w-[430px] text-4xl font-medium leading-[0.96] tracking-[-0.06em] text-[#e7e1d8]">The sound is not finished until it leaves you a question.</h2>
+            <div className="mt-14 flex items-end gap-1 border-b border-[#7d181d] pb-3" aria-hidden="true">
+              {[18, 34, 24, 52, 30, 44, 22, 66, 39, 28, 58, 32, 46, 24, 60, 36, 18, 50].map((height, index) => <span key={index} className="flex-1 bg-[#d8473f]" style={{ height: `${height}px`, opacity: index % 3 === 0 ? 0.6 : 0.9 }} />)}
+            </div>
+            <p className="mono-copy mt-4">01:15 — signal pending / no playback attached</p>
+          </div>
+          <div className="manifesto-block self-end">
+            <p>“La canción es el lugar donde la máquina ya no puede fingir que no siente.”</p>
+          </div>
+        </div>
+      </section>
+    </SiteShell>
   )
 }

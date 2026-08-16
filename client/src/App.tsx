@@ -11,7 +11,8 @@ import Judas from "./pages/Judas";
 import Portal from "./pages/Portal";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
-import Skills from "./pages/Skills";
+import Skills from "@/pages/Skills";
+import Studio from "@/pages/Studio";
 
 function Router() {
   return (
@@ -24,6 +25,7 @@ function Router() {
       <Route path={"/gallery"} component={Gallery} />
       <Route path={"/contact"} component={Contact} />
       <Route path={"/skills"} component={Skills} />
+      <Route path={"/studio"} component={Studio} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
