@@ -13,6 +13,7 @@ const navigation = [
   { href: "/gallery", label: "Gallery" },
   { href: "/contact", label: "Contact" },
   { href: "/skills", label: "Skills" },
+  { href: "/qa-panel", label: "QA Panel" },
 ]
 
 interface SiteShellProps {

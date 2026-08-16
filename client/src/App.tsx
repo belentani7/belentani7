@@ -14,6 +14,7 @@ import Contact from "./pages/Contact";
 import Skills from "@/pages/Skills";
 import Studio from "@/pages/Studio";
 import LoreExplorer from "@/pages/LoreExplorer";
+import SyntheticQaView from "@/pages/SyntheticQaView";
 
 function Router() {
   return (
@@ -28,6 +29,7 @@ function Router() {
       <Route path={"/skills"} component={Skills} />
       <Route path={"/studio"} component={Studio} />
       <Route path={"/lore"} component={LoreExplorer} />
+      <Route path={"/qa-panel"} component={SyntheticQaView} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
