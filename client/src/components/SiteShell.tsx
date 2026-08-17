@@ -5,6 +5,7 @@ import { Link, useLocation } from "wouter"
 
 const navigation = [
   { href: "/artist", label: "Artist" },
+  { href: "/universe", label: "Master Dossier" },
   { href: "/music", label: "Music" },
   { href: "/studio", label: "Studio" },
   { href: "/lore", label: "Lore Codex" },
