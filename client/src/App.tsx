@@ -19,6 +19,7 @@ import SyntheticQaView from "@/pages/SyntheticQaView";
 import AwwwardsProtocolView from "@/pages/AwwwardsProtocolView";
 import ArchivePageTemplate from "@/pages/ArchivePageTemplate";
 import ArchiveIndexView from "@/pages/ArchiveIndexView";
+import Audit100View from "@/pages/Audit100View";
 
 function Router() {
   return (
@@ -37,6 +38,7 @@ function Router() {
       <Route path={"/qa-panel"} component={SyntheticQaView} />
       <Route path={"/awwwards"} component={AwwwardsProtocolView} />
       <Route path={"/archive/20-index"} component={ArchiveIndexView} />
+      <Route path={"/audit-100"} component={Audit100View} />
       <Route path={"/archive/:pageId"} component={ArchivePageTemplate} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
