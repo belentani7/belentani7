@@ -14,19 +14,27 @@ export default function TheArtist() {
   return (
     <SiteShell section="Archive 002 / The Artist & Universe">
       <section className="page-frame" style={{ paddingTop: "clamp(4.5rem, 10vw, 8rem)" }}>
-        <div className="grid grid-cols-1 gap-16 lg:grid-cols-[0.7fr_1.3fr] lg:gap-24">
+        <div className="grid grid-cols-1 gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20 items-center">
           <div className="fade-up">
-            <div className="eyebrow">Archive 002 / Universe</div>
-            <h1 className="section-title mt-7 max-w-[440px]">Belentani’s Planet & Mythos.</h1>
-            <p className="mono-copy mt-8 max-w-[300px]">La integración del Guerrero y el Ángel, la Dimensión Zion y la Delusión Permanente.</p>
-          </div>
-          <div className="fade-up delay-1">
-            <div className="manifesto-block">
+            <div className="eyebrow">Archive 002 / Universe & Portrait</div>
+            <h1 className="section-title mt-7 max-w-[540px]">Belentani’s Planet & Mythos.</h1>
+            <p className="mono-copy mt-8 max-w-[420px]">La integración del Guerrero y el Ángel, la Dimensión Zion y la Delusión Permanente.</p>
+            <div className="manifesto-block mt-8">
               <p>“El artista no es el que inventa una máscara, sino el que soporta la tensión de habitarla hasta que se vuelve real.”</p>
             </div>
-            <p className="body-copy mt-10 max-w-[660px]">
-              El universo Belentani no es una ocurrencia pasajera ni un proyecto musical convencional. Es un ecosistema mitológico en constante expansión donde convergen la producción sonora de vanguardia, la ficción especulativa, la inteligencia artificial y un panteón de arquetipos que operan como nodos de transmisión.
-            </p>
+          </div>
+          <div className="fade-up delay-1 border border-[var(--border)] bg-[#101010] p-3 shadow-2xl">
+            <div className="relative overflow-hidden aspect-[9/16] max-h-[520px] w-full">
+              <img 
+                src="/belentani-portrait.webp" 
+                alt="Belentani Portrait — Official Archive" 
+                className="h-full w-full object-cover grayscale contrast-125 transition-transform duration-700 hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent opacity-60" />
+              <div className="absolute bottom-4 left-4 font-mono text-xs text-[#d8473f] tracking-[0.15em]">
+                SUBJECT: BELENTANI / 01-CANON
+              </div>
+            </div>
           </div>
         </div>
 

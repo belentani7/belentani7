@@ -1,8 +1,7 @@
-# Extracción de Drive y Reconstrucción del Universo Belentani
+# Protocolo de Competición Awwwards (2000 Criterios) y Retrato de Belentani
 
-- [x] Establecer el plan para extraer el lore completo de Google Drive sin resúmenes destructivos.
-- [ ] Inspeccionar conectores y archivos accesibles en el entorno para mapear el corpus de Google Drive sobre Belentani.
-- [ ] Construir un dossier maestro en el proyecto que integre todas las hojas, cronologías y personajes originales.
-- [ ] Diseñar y programar las páginas web definitivas (Home, Dossier/Lore, Characters, Chronology, Music, Studio, Contact, Skills) con la dirección visual editorial.
-- [ ] Validar compilación, consistencia y navegación completa.
-- [ ] Guardar checkpoint y entregar la solución definitiva.
+- [x] Definir el marco estratégico para competir en Awwwards con 2000 criterios de evaluación rigorosa.
+- [ ] Construir la matriz estructurada de evaluación en 5 dimensiones principales (Diseño, Usabilidad, Creatividad, Contenido y Rendimiento).
+- [ ] Optimizar la imagen del usuario (`7395fded-9153-4ecb-9c6b-ba85b1ecd3ec.webp`) para integrarla como pieza central en la portada y en la sección del artista.
+- [ ] Reforzar la arquitectura web con componentes interactivos de alta fidelidad, microinteracciones y accesibilidad WCAG 2.2 AA.
+- [ ] Validar compilación, consistencia y empaquetar el resultado final para entrega.
