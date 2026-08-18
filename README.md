@@ -636,3 +636,7 @@ const { data } = trpc.items.getByIds.useQuery({ ids });
 **Rule:** Use sonner for toasts; do not add react-toastify or @radix-ui/react-toast
 
 **Rule:** If you put placeholder components for App.tsx routes, you MUST replace them with actual components after your implementation.
+
+## Desktop app
+
+The Windows 11 Electron IDE and persistent coding agent lives in [`desktop/`](desktop/). Run `cd desktop && npm ci && npm test`.
