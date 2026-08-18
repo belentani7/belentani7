@@ -1,7 +1,8 @@
-# Protocolo de Competición Awwwards (2000 Criterios) y Retrato de Belentani
+# Corrección visual real de Belentani
 
-- [x] Definir el marco estratégico para competir en Awwwards con 2000 criterios de evaluación rigorosa.
-- [ ] Construir la matriz estructurada de evaluación en 5 dimensiones principales (Diseño, Usabilidad, Creatividad, Contenido y Rendimiento).
-- [ ] Optimizar la imagen del usuario (`7395fded-9153-4ecb-9c6b-ba85b1ecd3ec.webp`) para integrarla como pieza central en la portada y en la sección del artista.
-- [ ] Reforzar la arquitectura web con componentes interactivos de alta fidelidad, microinteracciones y accesibilidad WCAG 2.2 AA.
-- [ ] Validar compilación, consistencia y empaquetar el resultado final para entrega.
+- [x] Comparar la portada actual con la última captura y localizar por qué las rondas anteriores no cambiaron la percepción visual.
+- [x] Reemplazar la composición hero actual por una portada centrada en el retrato, con una nueva escala tipográfica y una jerarquía distinta.
+- [x] Rehacer la navegación y el shell para que la web se perciba como Belentani, no como un archivo genérico de Judas.
+- [x] Aplicar una nueva paleta, textura, espaciado, tarjetas y estados de interacción de forma visible en Home y SiteShell.
+- [x] Probar la portada en escritorio y móvil, comprobar navegación y ejecutar TypeScript/build.
+- [ ] Guardar checkpoint únicamente después de confirmar que la captura nueva es claramente diferente.

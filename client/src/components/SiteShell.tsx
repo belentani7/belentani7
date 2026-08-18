@@ -1,21 +1,15 @@
-/* Belentani / Judas — shared black-box editorial shell. Keep navigation quiet, typographic and archival. */
+/* Belentani — shared universe shell: quiet navigation, portrait-led identity, archive depth. */
 import { useState } from "react"
 import type { ReactNode } from "react"
 import { Link, useLocation } from "wouter"
 
 const navigation = [
+  { href: "/universe", label: "Universe" },
   { href: "/artist", label: "Artist" },
-  { href: "/universe", label: "Master Dossier" },
   { href: "/music", label: "Music" },
-  { href: "/studio", label: "Studio" },
-  { href: "/lore", label: "Lore Codex" },
-  { href: "/judas", label: "Judas" },
+  { href: "/lore", label: "Lore" },
   { href: "/portal", label: "Portal" },
-  { href: "/gallery", label: "Gallery" },
   { href: "/contact", label: "Contact" },
-  { href: "/skills", label: "Skills" },
-  { href: "/qa-panel", label: "QA Panel" },
-  { href: "/awwwards", label: "Awwwards Protocol" },
 ]
 
 interface SiteShellProps {
@@ -71,8 +65,8 @@ export default function SiteShell({ children, section = "Archive 001", eyebrow =
 
       <footer className="site-footer">
         <div className="site-footer-inner">
-          <span className="archive-label">BELENTANI — The Judas Era</span>
-          <span className="archive-label">Human / Agent / Archive</span>
+          <span className="archive-label">BELENTANI — Full Universe</span>
+          <span className="archive-label">Sound / Symbol / Archive</span>
         </div>
       </footer>
     </div>

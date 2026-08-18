@@ -26,7 +26,7 @@ export default function TheArtist() {
           <div className="fade-up delay-1 border border-[var(--border)] bg-[#101010] p-3 shadow-2xl">
             <div className="relative overflow-hidden aspect-[9/16] max-h-[520px] w-full">
               <img 
-                src="/belentani-portrait.webp" 
+                src="/manus-storage/belentani-portrait_c0ab5f2c.webp" 
                 alt="Belentani Portrait — Official Archive" 
                 className="h-full w-full object-cover grayscale contrast-125 transition-transform duration-700 hover:scale-105"
               />
