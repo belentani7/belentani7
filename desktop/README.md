@@ -1,49 +1,44 @@
-# Bellentani 0.5.0
+# Bellentani
 
-Bellentani es un IDE y agente de código persistente para Windows 11 construido como aplicación Electron con interfaz HTML/CSS/JavaScript, terminal PowerShell y un núcleo local auditable. Su arquitectura separa el proceso principal, el puente seguro y la interfaz, y mantiene la selección de proyectos, memoria, sesiones y snapshots en el equipo.
+Bellentani es un IDE y agente persistente de código para Windows 11. Combina un editor Monaco, explorador de proyectos, terminal PowerShell, Git, tareas, memoria local, proveedor de IA configurable, cambios revisables y controles PVC-U en una aplicación Electron.
+
+## Uso
+
+Ejecuta el portable generado en `dist/Bellentani-Setup-0.5.0.exe`, abre una carpeta de proyecto y trabaja desde la misma ventana. En Windows 11 la terminal usa PowerShell nativo. El agente solo modifica archivos después de mostrar el diff y solicitar confirmación; cada aplicación crea un snapshot para rollback.
 
 ## Capacidades
 
-La aplicación incluye editor Monaco, explorador de proyectos, búsqueda de archivos, pestaña activa, guardado, terminal PowerShell nativa en Windows, tareas de `package.json`, Git controlado, memoria persistente, proveedor IA OpenAI-compatible configurable y contexto de proyecto para el agente.
+El editor ofrece pestañas y modelos Monaco por archivo, búsqueda global, guardado y diagnósticos básicos para JavaScript y JSON. El agente recibe contexto del workspace, puede usar un proveedor OpenAI-compatible y puede proponer archivos en formato estructurado para revisión, aplicación y recuperación. Git, tareas de `package.json`, snapshots, diff, rollback, depuración Node, extensiones locales y servidores MCP pasan por validación PVC-U y límites del workspace.
 
-El agente puede generar planes, consultar contexto, proponer cambios y trabajar con un flujo reversible. El panel **Snapshot** crea una copia de seguridad; **Aplicar cambios** muestra un diff, exige confirmación y registra un snapshot de rollback; y la operación de recuperación puede usarse desde el núcleo o la CLI. El botón **Depurar** ejecuta una sesión Node con inspector y la somete a PVC-U antes de iniciar el proceso.
-
-Las extensiones integradas cubren PVC-U, Git, PowerShell y el agente. Además, Bellentani descubre manifiestos JSON en `.bellentani/extensions` dentro del workspace. La CLI permite diagnóstico, auditoría, contexto, snapshot, diff y rollback.
-
-## PVC-U
-
-PVC-U valida entradas, secretos, prompt injection, operaciones de herramientas, tareas, Git, cambios del workspace, intención de agentes y ciclo de vida de modelos. Registra evidencia con hash encadenado, perfiles de riesgo, perfiles universales por dominio, `Validation Envelope`, auto-validación y revisión humana proporcional.
-
-## Uso en Windows 11
-
-Ejecuta `Bellentani-Setup-0.5.0.exe`, abre una carpeta y selecciona un proyecto. PowerShell se ejecuta nativamente en Windows 11. En el sandbox Linux se utiliza un modo compatible/simulado para la terminal.
+Las extensiones locales se descubren desde `.bellentani/extensions/*.json`. Los servidores MCP se configuran en `.bellentani/mcp.json` y requieren aprobación explícita antes de invocarse.
 
 ## Desarrollo
 
 ```powershell
-npm install
+npm ci
 npm test
-npm run dev
 npm run build
 ```
 
-El empaquetado genera `dist/Bellentani-Setup-0.5.0.exe` como distribución portable x64.
-
-## CLI
+El build genera `dist/Bellentani-Setup-0.5.0.exe` como portable x64. La CLI comparte el núcleo del escritorio:
 
 ```powershell
 node bellentani-cli.js doctor
 node bellentani-cli.js audit
 node bellentani-cli.js context C:\ruta\proyecto
 node bellentani-cli.js snapshot C:\ruta\proyecto
-node bellentani-cli.js rollback C:\ruta\proyecto ID_DEL_SNAPSHOT
 node bellentani-cli.js diff C:\ruta\proyecto src\app.js propuesta.txt
+node bellentani-cli.js rollback C:\ruta\proyecto ID_DEL_SNAPSHOT
 ```
 
 ## Seguridad
 
-El renderer no tiene acceso directo a Node.js. Las rutas se confinan al workspace, las operaciones de herramientas pasan por PVC-U, los patrones destructivos conocidos se bloquean, y las claves del proveedor IA no se guardan en el JSON de estado: se almacenan mediante `safeStorage` de Electron cuando el sistema lo permite.
+El renderer no tiene acceso directo a Node.js. El proceso principal valida rutas contra el workspace, limita tiempo y salida de procesos, bloquea patrones destructivos conocidos, registra decisiones PVC-U y separa las credenciales IA del estado ordinario usando `safeStorage` cuando está disponible. La revisión humana es obligatoria para solicitudes, herramientas y servidores MCP de riesgo elevado.
 
-## Estado y límites
+## Arquitectura
 
-Esta versión es una entrega funcional integrada, no una reimplementación industrial completa de VS Code, Cursor, Codex y OpenClaw. El depurador es básico, no sustituye un backend LSP completo, las extensiones locales son manifiestos y no un marketplace, y la ejecución aislada de procesos depende de la política local de Windows. La documentación distingue estas capacidades para evitar presentar como terminado lo que aún requiere una validación nativa y un ciclo de producción adicional.
+`src/main.js` gestiona ventanas, IPC, procesos y persistencia. `src/preload.js` expone únicamente la API permitida. `src/workspace.js` implementa rutas, snapshots, diff, aplicación y rollback. `src/mcp.js` controla servidores MCP. `src/pvcu.js` aplica políticas y evidencia. `src/index.html` contiene la interfaz del IDE.
+
+## Licencia
+
+Bellentani se distribuye bajo MIT. Consulta `SECURITY.md` para reportar vulnerabilidades y `CONTRIBUTING.md` para cambios de código.
