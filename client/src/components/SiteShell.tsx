@@ -10,6 +10,7 @@ const navigation = [
   { href: "/lore", label: "Lore" },
   { href: "/portal", label: "Portal" },
   { href: "/contact", label: "Contact" },
+  { href: "/archive/20-index", label: "20 Pages Map" },
 ]
 
 interface SiteShellProps {

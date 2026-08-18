@@ -17,6 +17,8 @@ import LoreExplorer from "@/pages/LoreExplorer";
 import BelentaniUniverse from "@/pages/BelentaniUniverse";
 import SyntheticQaView from "@/pages/SyntheticQaView";
 import AwwwardsProtocolView from "@/pages/AwwwardsProtocolView";
+import ArchivePageTemplate from "@/pages/ArchivePageTemplate";
+import ArchiveIndexView from "@/pages/ArchiveIndexView";
 
 function Router() {
   return (
@@ -34,6 +36,8 @@ function Router() {
       <Route path={"/universe"} component={BelentaniUniverse} />
       <Route path={"/qa-panel"} component={SyntheticQaView} />
       <Route path={"/awwwards"} component={AwwwardsProtocolView} />
+      <Route path={"/archive/20-index"} component={ArchiveIndexView} />
+      <Route path={"/archive/:pageId"} component={ArchivePageTemplate} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
