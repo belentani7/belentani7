@@ -7,6 +7,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 from engine.browser.navigation import Navigator
+from engine.browser.discovery import discover
 from engine.scraper.extraction import extract
 from engine.intelligence.scoring import score_page
 from engine.core.natural import parse_mission
@@ -33,9 +34,16 @@ class MissionEngine:
         spec = self.normalize_spec(raw_spec)
         mission_id = mission_id or self.db.create_mission(spec)
         self.db.event(mission_id, 'mission.created', {'spec': spec})
+        if not spec.get('urls') and spec.get('needs_discovery'):
+            try:
+                discovered = discover(spec.get('objective', ''), limit=int(spec.get('max_pages', 3)))
+                spec['urls'] = discovered
+                self.db.event(mission_id, 'discovery.completed', {'query': spec.get('objective', ''), 'urls': discovered})
+            except Exception as exc:
+                self.db.event(mission_id, 'discovery.failed', {'query': spec.get('objective', ''), 'error': str(exc)})
         plan = self.plan(spec)
         if not plan:
-            self.db.update_mission(mission_id, 'failed', 'La misión necesita al menos una URL HTTP(S)')
+            self.db.update_mission(mission_id, 'failed', 'No se encontraron URLs HTTP(S) para la misión')
             return mission_id
         self.db.update_mission(mission_id, 'running')
         for item in plan: self.db.create_task(mission_id, item['url'], item['kind'])
