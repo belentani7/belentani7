@@ -66,6 +66,11 @@ class Database:
         with self._conn() as c:
             return [dict(r) for r in c.execute('SELECT * FROM missions ORDER BY created_at DESC')]
 
+    def recover_orphans(self):
+        with self._lock, self._conn() as c:
+            c.execute("UPDATE missions SET status='interrupted', updated_at=?, error=COALESCE(error, 'Proceso reiniciado') WHERE status IN ('running', 'queued')", (time.time(),))
+            c.execute("UPDATE tasks SET status='interrupted', updated_at=?, error=COALESCE(error, 'Proceso reiniciado') WHERE status='running'", (time.time(),))
+
     def create_task(self, mission_id: str, url: str | None, kind: str) -> str:
         tid = str(uuid.uuid4()); now = time.time()
         with self._lock, self._conn() as c:

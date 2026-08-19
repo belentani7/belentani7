@@ -40,6 +40,14 @@ class EngineTests(unittest.TestCase):
             cache.set('url', {'url': 'https://example.com'})
             self.assertEqual(cache.get('url')['url'], 'https://example.com')
 
+    def test_recover_orphans(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            db = Database(Path(tmp) / 'db.sqlite')
+            mid = db.create_mission({'urls': ['https://example.com']})
+            db.update_mission(mid, 'running')
+            db.recover_orphans()
+            self.assertEqual(db.get_mission(mid)['status'], 'interrupted')
+
     def test_invalid_url_is_validated(self):
         with tempfile.TemporaryDirectory() as tmp:
             db = Database(Path(tmp) / 'db.sqlite'); engine = MissionEngine(db, Path(tmp) / 'artifacts')

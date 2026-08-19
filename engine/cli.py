@@ -11,6 +11,7 @@ from engine.storage.export import export_json, export_jsonl, export_csv
 
 ROOT = Path(__file__).resolve().parent
 DB = Database(os.getenv('BELLENTANI_DB', str(ROOT / 'data' / 'bellentani.db')))
+DB.recover_orphans()
 ENGINE = MissionEngine(DB, os.getenv('BELLENTANI_ARTIFACTS', str(ROOT / 'data' / 'artifacts')), int(os.getenv('BELLENTANI_WORKERS', '3')))
 
 
