@@ -9,6 +9,7 @@ from urllib.parse import urlparse
 from engine.browser.navigation import Navigator
 from engine.scraper.extraction import extract
 from engine.intelligence.scoring import score_page
+from engine.core.natural import parse_mission
 
 
 class MissionEngine:
@@ -19,7 +20,7 @@ class MissionEngine:
 
     def normalize_spec(self, raw: dict | str) -> dict:
         if isinstance(raw, str):
-            return {'name': 'natural-language-mission', 'objective': raw, 'urls': [], 'max_pages': 3}
+            return parse_mission(raw)
         spec = dict(raw); spec.setdefault('name', 'mission'); spec.setdefault('objective', 'Extract and validate public web information'); spec.setdefault('urls', []); spec.setdefault('max_pages', 3); spec.setdefault('retries', 2); spec.setdefault('rate_limit', 0.8)
         spec['urls'] = list(dict.fromkeys(spec.get('urls') or spec.get('seeds') or []))
         return spec
@@ -56,7 +57,7 @@ class MissionEngine:
             self.db.update_task(task['id'], 'running', attempts=attempt)
             self.db.event(mission_id, 'task.started', {'attempt': attempt, 'url': task['url']}, task['id'])
             try:
-                nav = Navigator(timeout=float(spec.get('timeout', 20)), rate_limit=float(spec.get('rate_limit', 0.8)))
+                nav = Navigator(timeout=float(spec.get('timeout', 20)), rate_limit=float(spec.get('rate_limit', 0.8)), cache_dir=str(self.artifacts.parent / 'cache'), respect_robots=bool(spec.get('respect_robots', True)))
                 shot_dir = self.artifacts / mission_id / task['id']; shot_dir.mkdir(parents=True, exist_ok=True)
                 pages = nav.crawl(task['url'], max_pages=int(task['kind'] == 'crawl' and spec.get('max_pages', 3)), screenshot_dir=str(shot_dir))
                 records = []

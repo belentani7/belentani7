@@ -7,6 +7,8 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
 
 from engine.core.mission import MissionEngine
+from engine.core.natural import parse_mission
+from engine.storage.cache import CacheStore
 from engine.storage.database import Database
 
 
@@ -28,6 +30,15 @@ class EngineTests(unittest.TestCase):
             self.assertEqual(tasks[0]['result']['pages'][0]['title'], 'Empresa Real')
             self.assertEqual(tasks[0]['result']['pages'][0]['json_ld'][0]['name'], 'Empresa Real')
             self.assertTrue(tasks[0]['result']['pages'][0]['evidence'])
+
+    def test_natural_parser_and_cache(self):
+        spec = parse_mission('Analiza 500 empresas en https://example.com y devuelve SEO')
+        self.assertEqual(spec['urls'], ['https://example.com'])
+        self.assertEqual(spec['max_pages'], 50)
+        with tempfile.TemporaryDirectory() as tmp:
+            cache = CacheStore(Path(tmp), ttl=60)
+            cache.set('url', {'url': 'https://example.com'})
+            self.assertEqual(cache.get('url')['url'], 'https://example.com')
 
     def test_invalid_url_is_validated(self):
         with tempfile.TemporaryDirectory() as tmp:

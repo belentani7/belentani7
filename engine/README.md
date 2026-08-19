@@ -1,6 +1,6 @@
 # Bellentani Mission Engine
 
-El engine es la capa principal de Bellentani. Puede ejecutar misiones reales aunque se elimine todo el frontend.
+El engine es la capa principal de Bellentani. Puede ejecutar misiones reales aunque se elimine todo el frontend y acepta especificaciones JSON o lenguaje natural con URLs explícitas.
 
 ## Instalación local
 
@@ -20,9 +20,11 @@ Desde la raíz del repositorio:
 PYTHONPATH=. ./manos mission run engine/examples/public-site.json
 PYTHONPATH=. ./manos mission status MISSION_ID
 PYTHONPATH=. ./manos mission results MISSION_ID
+PYTHONPATH=. ./manos mission export MISSION_ID csv engine/data/results/result.csv
+PYTHONPATH=. ./manos mission run 'Analiza https://example.com y extrae SEO' --natural
 ```
 
-La misión descarga páginas públicas realmente, extrae HTML, texto, metadatos, JSON-LD, enlaces y señales tecnológicas, guarda evidencias con hash y persiste resultados en SQLite.
+La misión descarga páginas públicas realmente, extrae HTML, texto, metadatos, JSON-LD, enlaces y señales tecnológicas, guarda evidencias con hash y persiste resultados en SQLite. El navegador usa rate limiting, cache TTL, deduplicación y respeto de robots.txt.
 
 ## API
 

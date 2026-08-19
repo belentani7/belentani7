@@ -15,6 +15,7 @@ pool = ThreadPoolExecutor(max_workers=2)
 class MissionRequest(BaseModel):
     objective: str = Field(min_length=3)
     urls: list[str] = Field(default_factory=list)
+    natural: str | None = None
     max_pages: int = Field(default=3, ge=1, le=50)
     retries: int = Field(default=2, ge=0, le=5)
     rate_limit: float = Field(default=0.8, ge=0.0)
@@ -26,7 +27,9 @@ def health(): return {'ok': True, 'engine': 'Bellentani'}
 @app.post('/missions', status_code=202)
 async def create(req: MissionRequest):
     spec = req.model_dump()
-    mission_id = DB.create_mission(spec)
+    if req.natural:
+        spec = req.natural
+    mission_id = DB.create_mission(ENGINE.normalize_spec(spec))
     def run_existing():
         # Reuse the persisted id by executing the same lifecycle with a worker-safe wrapper.
         ENGINE.run(spec, mission_id)
