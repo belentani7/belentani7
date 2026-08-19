@@ -1,33 +1,57 @@
-# Pedro Belentani
+# Bellentani Mission Engine
 
-Creative technology, AI systems, and educational platforms.
+Bellentani es un motor ejecutable de investigación web. La interfaz Electron es opcional: el producto principal funciona por CLI y API aunque se elimine todo el frontend.
 
-I build practical tools that connect **artificial intelligence, automation, creative production, and human support**. This profile is the public entry point to a broader ecosystem of experiments, products, and open-source work.
+## Primera ejecución real
 
-## Focus areas
+```bash
+cd /home/ubuntu/Belentani
+PYTHONPATH=. ./manos mission run engine/examples/public-site.json
+PYTHONPATH=. ./manos mission status ID_DE_MISION
+PYTHONPATH=. ./manos mission results ID_DE_MISION
+PYTHONPATH=. ./manos mission export ID_DE_MISION csv engine/data/results/result.csv
+```
 
-- **AI tools and agents:** routing, orchestration, local workflows, and practical automation.
-- **Creative systems:** music, visual experiences, interactive sites, and production workflows.
-- **Human tools:** educational platforms, guided documents, accessibility, and community support.
-- **Evidence and quality:** audits, reproducible workflows, validation, and responsible release practices.
+El engine navega URLs públicas de forma real, sigue páginas internas dentro del mismo host, extrae HTML, texto, títulos, descripciones, headings, enlaces, JSON-LD, señales de tecnología y oportunidades, y conserva evidencia con hash, estado, timestamps y artefactos.
 
-## Selected projects
+## Misión multi-URL
 
-| Project | Description |
-| --- | --- |
-| [NOIACORE](https://github.com/belentani7/NOIACORE) | AI and creative-technology ecosystem. |
-| [OmniAgent](https://github.com/belentani7/omniagent) | CLI for routing AI tasks to an appropriate model. |
-| [Manos Abiertas](https://github.com/belentani7/manosabiertas) | Multilingual educational and community platform. |
-| [AI Command Center](https://github.com/belentani7/ai-command-center-level10) | Unified workspace for AI-assisted workflows. |
-| [DUCK ZION Apex](https://github.com/belentani7/duck-zion-apex-public) | Professional vocal-production platform snapshot. |
-| [Cruzando el Charco](https://github.com/belentani7/Cruzando-el-charco) | Practical support portal for migrant LGBT+ men in Barcelona and L'Hospitalet. |
+```bash
+PYTHONPATH=. ./manos mission run engine/examples/multi-site.json
+```
 
-## How to navigate this profile
+La ejecución usa concurrencia controlada, rate limiting por host, retries, errores aislados, persistencia SQLite y deduplicación de URLs.
 
-The repositories are at different stages: some are public products, some are experiments, and some are private working environments. The selected projects above are the best starting points for understanding the direction of the work.
+## API
 
-For collaboration, please open an issue in the relevant repository with context, expected behavior, and a minimal reproduction when applicable.
+```bash
+PYTHONPATH=. uvicorn engine.api.server:app --host 0.0.0.0 --port 8080
+```
 
-## Principles
+La API ofrece `POST /missions`, `GET /missions`, `GET /missions/{id}`, `GET /missions/{id}/status` y `GET /missions/{id}/results`. Las misiones se ejecutan en workers y pueden consultarse mientras avanzan.
 
-I prefer small, understandable systems over opaque complexity; documentation over assumptions; and useful prototypes that can be tested, improved, and shared responsibly.
+## Docker
+
+```bash
+cd engine
+docker compose up --build
+```
+
+El contenedor instala Playwright Chromium, persiste SQLite y artefactos en `engine/data`, y expone el puerto 8080. En el sandbox actual no hay daemon Docker; el Dockerfile y compose están preparados para un host con Docker.
+
+## Desarrollo y pruebas
+
+```bash
+cd /home/ubuntu/Belentani
+PYTHONPATH=. python3 -m unittest discover -s engine/tests -v
+```
+
+Los tests ejecutan un servidor HTTP real local y verifican extracción, JSON-LD, evidencia, validación de URLs y persistencia. `engine/requirements.txt` contiene las dependencias del motor. La arquitectura se separa en `core`, `browser`, `scraper`, `intelligence`, `storage`, `observability`, `integrations` y `api`.
+
+## Interfaces existentes
+
+`desktop/` conserva el IDE Electron y la consola opcional. No es necesario para ejecutar misiones. La CLI `manos` y la API FastAPI usan directamente `engine/`.
+
+## Configuración
+
+Copia `engine/.env.example` y configura `BELLENTANI_DB`, `BELLENTANI_ARTIFACTS` y `BELLENTANI_WORKERS`. No se generan datos ficticios: si una fuente falla, la misión registra el error y no inventa el resultado.

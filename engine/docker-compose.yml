@@ -1,0 +1,12 @@
+services:
+  bellentani-engine:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      BELLENTANI_DB: /app/data/bellentani.db
+      BELLENTANI_ARTIFACTS: /app/data/artifacts
+      BELLENTANI_WORKERS: "3"
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
