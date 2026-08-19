@@ -22,7 +22,12 @@ class MissionRequest(BaseModel):
     timeout: float = Field(default=20, ge=1, le=120)
 
 @app.get('/health')
-def health(): return {'ok': True, 'engine': 'Bellentani'}
+def health():
+    try:
+        DB.list_missions()
+        return {'ok': True, 'engine': 'Bellentani', 'storage': 'ok'}
+    except Exception as exc:
+        return {'ok': False, 'engine': 'Bellentani', 'storage': 'error', 'error': str(exc)}
 
 @app.post('/missions', status_code=202)
 async def create(req: MissionRequest):
@@ -31,8 +36,11 @@ async def create(req: MissionRequest):
         spec = req.natural
     mission_id = DB.create_mission(ENGINE.normalize_spec(spec))
     def run_existing():
-        # Reuse the persisted id by executing the same lifecycle with a worker-safe wrapper.
-        ENGINE.run(spec, mission_id)
+        try:
+            ENGINE.run(spec, mission_id)
+        except Exception as exc:
+            DB.update_mission(mission_id, 'failed', str(exc))
+            DB.event(mission_id, 'mission.worker_error', {'error': str(exc)})
     pool.submit(run_existing)
     return {'id': mission_id, 'status': 'queued'}
 
@@ -50,7 +58,10 @@ def status(mission_id: str):
     mission = DB.get_mission(mission_id)
     if not mission: raise HTTPException(404, 'Misión no encontrada')
     tasks = DB.get_tasks(mission_id)
-    return {'id': mission_id, 'status': mission['status'], 'tasks': [{'id': t['id'], 'url': t['url'], 'status': t['status'], 'attempts': t['attempts'], 'error': t['error']} for t in tasks]}
+    counts = {}
+    for task in tasks:
+        counts[task['status']] = counts.get(task['status'], 0) + 1
+    return {'id': mission_id, 'status': mission['status'], 'progress': {'total': len(tasks), 'by_status': counts}, 'tasks': [{'id': t['id'], 'url': t['url'], 'status': t['status'], 'attempts': t['attempts'], 'error': t['error']} for t in tasks]}
 
 @app.get('/missions/{mission_id}/results')
 def results(mission_id: str):
