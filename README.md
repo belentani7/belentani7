@@ -2,7 +2,7 @@
 
 Creative technology, AI systems, and educational platforms.
 
-I build practical tools that connect **artificial intelligence, automation, creative production, and human support**. This profile is the public entry point to a broader ecosystem of experiments, products, and open-source work.
+I build practical tools that connect **art, artificial intelligence, automation, creative production, and human support**. This profile is the public entry point to a broader ecosystem of experiments, products, and working projects.
 
 ## Focus areas
 
@@ -16,17 +16,18 @@ I build practical tools that connect **artificial intelligence, automation, crea
 | Project | Description |
 | --- | --- |
 | [NOIACORE](https://github.com/belentani7/NOIACORE) | AI and creative-technology ecosystem. |
-| [OmniAgent](https://github.com/belentani7/omniagent) | CLI for routing AI tasks to an appropriate model. |
+| [OmniAgent](https://github.com/belentani7/omniagent) | CLI for routing AI tasks to an appropriate provider. |
 | [Manos Abiertas](https://github.com/belentani7/manosabiertas) | Multilingual educational and community platform. |
-| [AI Command Center](https://github.com/belentani7/ai-command-center-level10) | Unified workspace for AI-assisted workflows. |
-| [DUCK ZION Apex](https://github.com/belentani7/duck-zion-apex-public) | Professional vocal-production platform snapshot. |
+| [Belentani Centro Manus AI](https://github.com/belentani7/BELENTANI-CENTRO-MANUS-AI) | Working environment for AI-assisted creative and technical workflows. |
+| [Judas Era Fullstack](https://github.com/belentani7/BELENTANI-JUDAS-ERA-FULLSTACK) | Full-stack implementation of the Belentani Judas-era experience. |
+| [DUCK-ZION-PREMIUM](https://github.com/belentani7/DUCK-ZION-PREMIUM) | Professional Duck Zion studio project. |
 | [Cruzando el Charco](https://github.com/belentani7/Cruzando-el-charco) | Practical support portal for migrant LGBT+ men in Barcelona and L'Hospitalet. |
 
-## How to navigate this profile
+## Repository map
 
-The repositories are at different stages: some are public products, some are experiments, and some are private working environments. The selected projects above are the best starting points for understanding the direction of the work.
+The account contains public products, experiments, creative work, research, private working environments, and project snapshots. **Repositories are intentionally kept separate:** a repository should not be deleted or merged merely because another project has a similar name or purpose.
 
-For collaboration, please open an issue in the relevant repository with context, expected behavior, and a minimal reproduction when applicable.
+For collaboration, open an issue in the relevant repository with context, expected behavior, and a minimal reproduction when applicable.
 
 ## Principles
 
