@@ -1,7 +1,7 @@
 /* Belentani — shared universe shell: quiet navigation, portrait-led identity, archive depth. */
-import { useState } from "react"
-import type { ReactNode } from "react"
-import { Link, useLocation } from "wouter"
+import { useState } from "react";
+import type { ReactNode } from "react";
+import { Link, useLocation } from "wouter";
 
 const navigation = [
   { href: "/universe", label: "Universe" },
@@ -12,24 +12,34 @@ const navigation = [
   { href: "/contact", label: "Contact" },
   { href: "/archive/20-index", label: "20 Pages Map" },
   { href: "/audit-100", label: "100-Step Audit" },
-]
+];
 
 interface SiteShellProps {
-  children: ReactNode
-  section?: string
-  eyebrow?: string
+  children: ReactNode;
+  section?: string;
+  eyebrow?: string;
 }
 
-export default function SiteShell({ children, section = "Archive 001", eyebrow = "Belentani / Judas" }: SiteShellProps) {
-  const [menuOpen, setMenuOpen] = useState(false)
-  const [location] = useLocation()
+export default function SiteShell({
+  children,
+  section = "Archive 001",
+  eyebrow = "Belentani / Judas",
+}: SiteShellProps) {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [location] = useLocation();
 
   return (
     <div className="site-shell">
       <header className="site-header">
         <div className="site-header-inner">
-          <Link href="/" className="brand-mark" onClick={() => setMenuOpen(false)}>
-            <span className="brand-symbol" aria-hidden="true">B</span>
+          <Link
+            href="/"
+            className="brand-mark"
+            onClick={() => setMenuOpen(false)}
+          >
+            <span className="brand-symbol" aria-hidden="true">
+              B
+            </span>
             <span className="brand-wordmark">BELENTANI</span>
           </Link>
 
@@ -43,13 +53,18 @@ export default function SiteShell({ children, section = "Archive 001", eyebrow =
             className="mobile-menu-button"
             aria-expanded={menuOpen}
             aria-controls="site-navigation"
-            onClick={() => setMenuOpen((open) => !open)}
+            onClick={() => setMenuOpen(open => !open)}
           >
             {menuOpen ? "Close" : "Menu"}
           </button>
 
-          <nav id="site-navigation" className="site-nav" data-open={menuOpen} aria-label="Primary navigation">
-            {navigation.map((item) => (
+          <nav
+            id="site-navigation"
+            className="site-nav"
+            data-open={menuOpen}
+            aria-label="Primary navigation"
+          >
+            {navigation.map(item => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -72,5 +87,5 @@ export default function SiteShell({ children, section = "Archive 001", eyebrow =
         </div>
       </footer>
     </div>
-  )
+  );
 }

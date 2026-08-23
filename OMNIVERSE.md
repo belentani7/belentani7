@@ -29,6 +29,7 @@ This is the architectural map for the Belentani GitHub ecosystem. Projects are i
 ## Public ecosystem
 
 ### AI / agents / developer tooling
+
 - `omniagent` — AI task/model routing.
 - `claude-skills-pack` — reusable AI coding skills.
 - `manus-ai-skill-pack` — Manus-oriented skills/workflows.
@@ -37,6 +38,7 @@ This is the architectural map for the Belentani GitHub ecosystem. Projects are i
 - `oss-compass` — open-source intelligence.
 
 ### Generative media / VFX
+
 - `comfyui-json-compiler`
 - `llm-vfx-orchestrator`
 - `latent-consistency-bench`
@@ -45,6 +47,7 @@ This is the architectural map for the Belentani GitHub ecosystem. Projects are i
 - `cinematic-prompt-formatter`
 
 ### Music / audio / creative production
+
 - `duck-zion-studio`
 - `DUCK-A-GEMA-1-LAB`
 - `DUCK-ZION-GITHUB`
@@ -52,6 +55,7 @@ This is the architectural map for the Belentani GitHub ecosystem. Projects are i
 - `judas-experience`
 
 ### Products / web / experiences
+
 - `Belentani`
 - `belentaniexperience`
 - `belentani_Omega`
@@ -64,6 +68,7 @@ This is the architectural map for the Belentani GitHub ecosystem. Projects are i
 - `nataliamarinho`
 
 ### Experiments / labs
+
 - `qbp-core`
 - `mimo-companion`
 - `linguaforge`

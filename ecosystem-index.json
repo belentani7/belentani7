@@ -4,16 +4,74 @@
   "version": "1.0.0",
   "principle": "Many repositories, one connected ecosystem; preserve history, unify interfaces.",
   "universes": {
-    "BELENTANI": ["Belentani", "belentaniexperience", "Belentani.cv-ai", "belentani-099", "BELENTANI-BUILDAI-HTML-Y-FOTOS", "pedro-premium-hub"],
+    "BELENTANI": [
+      "Belentani",
+      "belentaniexperience",
+      "Belentani.cv-ai",
+      "belentani-099",
+      "BELENTANI-BUILDAI-HTML-Y-FOTOS",
+      "pedro-premium-hub"
+    ],
     "JUDAS": ["judas-experience"],
-    "OMEGA": ["belentani_Omega", "belentani-Omega", "belentani-omega-template", "belentani-omega-master", "Duck-Omega"],
-    "DUCK": ["duck-zion-studio", "DUCK-ZION-GITHUB", "DUCK-A-GEMA-1-LAB", "DUCK-STUDIO-LOCAL-WIN11", "heyduck"],
-    "AI_SYSTEMS": ["omniagent", "nexus-aion-enterprise", "nexus-workforce-enterprise", "MetaSkill", "meta-skill", "claude-skills-pack", "manus-ai-skill-pack"],
-    "CREATIVE_TECH": ["cinematic-prompt-formatter", "comfyui-json-compiler", "llm-vfx-orchestrator", "latent-consistency-bench", "temporal-artifact-detector", "pbr-validator", "qbp-core", "mimo-companion"],
-    "PUBLIC_GOOD": ["manosabiertas", "Cruzando-el-charco", "entrenador-jorge-bcn", "linguaforge", "abrazo-tender-words", "tender-words-connect"],
-    "RESEARCH": ["oss-compass", "universal-impact-suite-index", "CARQUIDEC", "prisma26", "08-AION-WORKFORCE", "ArteQueVeste-v2"]
+    "OMEGA": [
+      "belentani_Omega",
+      "belentani-Omega",
+      "belentani-omega-template",
+      "belentani-omega-master",
+      "Duck-Omega"
+    ],
+    "DUCK": [
+      "duck-zion-studio",
+      "DUCK-ZION-GITHUB",
+      "DUCK-A-GEMA-1-LAB",
+      "DUCK-STUDIO-LOCAL-WIN11",
+      "heyduck"
+    ],
+    "AI_SYSTEMS": [
+      "omniagent",
+      "nexus-aion-enterprise",
+      "nexus-workforce-enterprise",
+      "MetaSkill",
+      "meta-skill",
+      "claude-skills-pack",
+      "manus-ai-skill-pack"
+    ],
+    "CREATIVE_TECH": [
+      "cinematic-prompt-formatter",
+      "comfyui-json-compiler",
+      "llm-vfx-orchestrator",
+      "latent-consistency-bench",
+      "temporal-artifact-detector",
+      "pbr-validator",
+      "qbp-core",
+      "mimo-companion"
+    ],
+    "PUBLIC_GOOD": [
+      "manosabiertas",
+      "Cruzando-el-charco",
+      "entrenador-jorge-bcn",
+      "linguaforge",
+      "abrazo-tender-words",
+      "tender-words-connect"
+    ],
+    "RESEARCH": [
+      "oss-compass",
+      "universal-impact-suite-index",
+      "CARQUIDEC",
+      "prisma26",
+      "08-AION-WORKFORCE",
+      "ArteQueVeste-v2"
+    ]
   },
-  "states": ["idea", "lab", "prototype", "beta", "active", "production", "archive"],
+  "states": [
+    "idea",
+    "lab",
+    "prototype",
+    "beta",
+    "active",
+    "production",
+    "archive"
+  ],
   "integration": {
     "manifest": "ecosystem.json",
     "identity": "BELENTANI",
