@@ -4,6 +4,11 @@
 
 I build a deliberately heterogeneous ecosystem where art, music, AI, automation, software, research, community tools and experimental interfaces can coexist without erasing their history.
 
+**Verified:** 46 public repos · all pushed within the last 30 days · building in public since Sep 2025
+
+**Live:** [NOIACORE LAB](https://belentani.vercel.app) · [Manos Abiertas](https://manosabiertas-seven.vercel.app)
+
+
 ## The Belentani ecosystem
 
 ### 🎭 Identity / Web / Visual
