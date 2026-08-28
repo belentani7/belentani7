@@ -1,37 +1,57 @@
-# Bellentani
+# Bellentani Mission Engine
 
-Bellentani es un entorno de desarrollo y agente persistente que combina una aplicación web y un escritorio Windows 11.
+Bellentani es un motor ejecutable de investigación web. La interfaz Electron es opcional: el producto principal funciona por CLI y API aunque se elimine todo el frontend.
 
-## Componentes
-
-- `client/`: interfaz web React.
-- `server/`: servicios del frontend web.
-- `desktop/`: aplicación Electron para Windows 11 con Monaco, PowerShell, Git, agente, memoria, snapshots, rollback, CLI, MCP y PVC-U.
-
-## Web
+## Primera ejecución real
 
 ```bash
-npm ci
-npm run check
-npm run build
-npm run dev
+cd /home/ubuntu/Belentani
+PYTHONPATH=. ./manos mission run engine/examples/public-site.json
+PYTHONPATH=. ./manos mission status ID_DE_MISION
+PYTHONPATH=. ./manos mission results ID_DE_MISION
+PYTHONPATH=. ./manos mission export ID_DE_MISION csv engine/data/results/result.csv
 ```
 
-## Escritorio Windows 11
+El engine navega URLs públicas de forma real, sigue páginas internas dentro del mismo host, extrae HTML, texto, títulos, descripciones, headings, enlaces, JSON-LD, señales de tecnología y oportunidades, y conserva evidencia con hash, estado, timestamps y artefactos.
 
-```powershell
-cd desktop
-npm ci
-npm test
-npm run build
+## Misión multi-URL
+
+```bash
+PYTHONPATH=. ./manos mission run engine/examples/multi-site.json
 ```
 
-El build de escritorio genera `desktop/dist/Bellentani-Setup-0.5.0.exe` como portable x64.
+La ejecución usa concurrencia controlada, rate limiting por host, retries, errores aislados, persistencia SQLite y deduplicación de URLs.
 
-## Flujo seguro
+## API
 
-El agente trabaja con contexto del workspace, muestra diffs antes de aplicar cambios y crea snapshots para rollback. Las operaciones de terminal, Git, tareas, depuración y MCP pasan por validación PVC-U. Las rutas se confinan al proyecto y las credenciales IA se mantienen separadas del estado ordinario.
+```bash
+PYTHONPATH=. uvicorn engine.api.server:app --host 0.0.0.0 --port 8080
+```
 
-## Licencia y seguridad
+La API ofrece `POST /missions`, `GET /missions`, `GET /missions/{id}`, `GET /missions/{id}/status` y `GET /missions/{id}/results`. Las misiones se ejecutan en workers y pueden consultarse mientras avanzan.
 
-El proyecto usa MIT. Consulta `desktop/LICENSE`, `desktop/SECURITY.md` y `desktop/CONTRIBUTING.md`.
+## Docker
+
+```bash
+cd engine
+docker compose up --build
+```
+
+El contenedor instala Playwright Chromium, persiste SQLite y artefactos en `engine/data`, y expone el puerto 8080. En el sandbox actual no hay daemon Docker; el Dockerfile y compose están preparados para un host con Docker.
+
+## Desarrollo y pruebas
+
+```bash
+cd /home/ubuntu/Belentani
+PYTHONPATH=. python3 -m unittest discover -s engine/tests -v
+```
+
+Los tests ejecutan un servidor HTTP real local y verifican extracción, JSON-LD, evidencia, validación de URLs y persistencia. `engine/requirements.txt` contiene las dependencias del motor. La arquitectura se separa en `core`, `browser`, `scraper`, `intelligence`, `storage`, `observability`, `integrations` y `api`.
+
+## Interfaces existentes
+
+`desktop/` conserva el IDE Electron y la consola opcional. No es necesario para ejecutar misiones. La CLI `manos` y la API FastAPI usan directamente `engine/`.
+
+## Configuración
+
+Copia `engine/.env.example` y configura `BELLENTANI_DB`, `BELLENTANI_ARTIFACTS` y `BELLENTANI_WORKERS`. No se generan datos ficticios: si una fuente falla, la misión registra el error y no inventa el resultado.

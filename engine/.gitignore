@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+data/*.db
+data/*.db-*
+data/artifacts/*
+data/results/*
+data/cache/*
+!data/**/.gitkeep

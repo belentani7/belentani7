@@ -1,0 +1,189 @@
+{
+  "mission": {
+    "id": "fe3ab943-f490-488d-9935-69b8a370997e",
+    "status": "completed",
+    "spec_json": "{\"name\": \"public-site-real-check\", \"objective\": \"Analiza la web p\\u00fablica, identifica metadatos, p\\u00e1ginas relevantes, tecnolog\\u00eda observable, datos estructurados y oportunidades SEO con evidencia.\", \"urls\": [\"https://example.com\"], \"max_pages\": 2, \"retries\": 2, \"rate_limit\": 0.5, \"timeout\": 20}",
+    "created_at": 1787114939.09759,
+    "updated_at": 1787114944.6816964,
+    "error": null
+  },
+  "results": [
+    {
+      "id": "8653ac3d-2b8b-48b0-b222-c8fbc2ebd0b1",
+      "mission_id": "fe3ab943-f490-488d-9935-69b8a370997e",
+      "url": "https://example.com",
+      "kind": "crawl",
+      "status": "completed",
+      "attempts": 1,
+      "error": null,
+      "created_at": 1787114939.1018293,
+      "updated_at": 1787114944.6776252,
+      "result": {
+        "seed": "https://example.com",
+        "pages": [
+          {
+            "url": "https://example.com/",
+            "title": "Example Domain",
+            "description": "",
+            "language": "en",
+            "text": "Example Domain Example Domain This domain is for use in documentation examples without needing permission. Avoid use in operations. Learn more",
+            "headings": [
+              "Example Domain"
+            ],
+            "technologies": [],
+            "meta": {
+              "viewport": "width=device-width, initial-scale=1"
+            },
+            "json_ld": [],
+            "links": [],
+            "word_count": 21,
+            "status": 200,
+            "mode": "http",
+            "evidence": [
+              {
+                "kind": "page",
+                "url": "https://example.com/",
+                "content_hash": "ff67a9d764d6a2367a187734e697f6a53217db9a21c101d410a113ca871a299d",
+                "fetched_at": 1787114944.6735287
+              }
+            ],
+            "score": {
+              "scores": {
+                "content": 0,
+                "seo": 3,
+                "structured_data": 0,
+                "technology": 0,
+                "navigation": 0
+              },
+              "overall": 0.6,
+              "opportunities": [
+                {
+                  "type": "seo",
+                  "message": "No se detectó meta description",
+                  "evidence": [
+                    {
+                      "kind": "page",
+                      "url": "https://example.com/",
+                      "content_hash": "ff67a9d764d6a2367a187734e697f6a53217db9a21c101d410a113ca871a299d",
+                      "fetched_at": 1787114944.6735287
+                    }
+                  ]
+                },
+                {
+                  "type": "structured_data",
+                  "message": "No se detectó JSON-LD",
+                  "evidence": [
+                    {
+                      "kind": "page",
+                      "url": "https://example.com/",
+                      "content_hash": "ff67a9d764d6a2367a187734e697f6a53217db9a21c101d410a113ca871a299d",
+                      "fetched_at": 1787114944.6735287
+                    }
+                  ]
+                },
+                {
+                  "type": "content",
+                  "message": "Contenido textual escaso",
+                  "evidence": [
+                    {
+                      "kind": "page",
+                      "url": "https://example.com/",
+                      "content_hash": "ff67a9d764d6a2367a187734e697f6a53217db9a21c101d410a113ca871a299d",
+                      "fetched_at": 1787114944.6735287
+                    }
+                  ]
+                }
+              ],
+              "objective": "Analiza la web pública, identifica metadatos, páginas relevantes, tecnología observable, datos estructurados y oportunidades SEO con evidencia.",
+              "evidence": [
+                {
+                  "kind": "page",
+                  "url": "https://example.com/",
+                  "content_hash": "ff67a9d764d6a2367a187734e697f6a53217db9a21c101d410a113ca871a299d",
+                  "fetched_at": 1787114944.6735287
+                }
+              ]
+            }
+          }
+        ],
+        "page_count": 1,
+        "validated": true,
+        "completed_at": 1787114944.677471
+      }
+    }
+  ],
+  "events": [
+    {
+      "id": 11,
+      "mission_id": "fe3ab943-f490-488d-9935-69b8a370997e",
+      "task_id": null,
+      "kind": "mission.created",
+      "payload_json": "{\"spec\": {\"name\": \"public-site-real-check\", \"objective\": \"Analiza la web pública, identifica metadatos, páginas relevantes, tecnología observable, datos estructurados y oportunidades SEO con evidencia.\", \"urls\": [\"https://example.com\"], \"max_pages\": 2, \"retries\": 2, \"rate_limit\": 0.5, \"timeout\": 20}}",
+      "created_at": 1787114939.0996802,
+      "payload": {
+        "spec": {
+          "name": "public-site-real-check",
+          "objective": "Analiza la web pública, identifica metadatos, páginas relevantes, tecnología observable, datos estructurados y oportunidades SEO con evidencia.",
+          "urls": [
+            "https://example.com"
+          ],
+          "max_pages": 2,
+          "retries": 2,
+          "rate_limit": 0.5,
+          "timeout": 20
+        }
+      }
+    },
+    {
+      "id": 12,
+      "mission_id": "fe3ab943-f490-488d-9935-69b8a370997e",
+      "task_id": "8653ac3d-2b8b-48b0-b222-c8fbc2ebd0b1",
+      "kind": "task.started",
+      "payload_json": "{\"attempt\": 1, \"url\": \"https://example.com\"}",
+      "created_at": 1787114939.105009,
+      "payload": {
+        "attempt": 1,
+        "url": "https://example.com"
+      }
+    },
+    {
+      "id": 13,
+      "mission_id": "fe3ab943-f490-488d-9935-69b8a370997e",
+      "task_id": "8653ac3d-2b8b-48b0-b222-c8fbc2ebd0b1",
+      "kind": "task.completed",
+      "payload_json": "{\"page_count\": 1}",
+      "created_at": 1787114944.6790316,
+      "payload": {
+        "page_count": 1
+      }
+    },
+    {
+      "id": 14,
+      "mission_id": "fe3ab943-f490-488d-9935-69b8a370997e",
+      "task_id": null,
+      "kind": "mission.completed",
+      "payload_json": "{\"statuses\": [\"completed\"]}",
+      "created_at": 1787114944.6833122,
+      "payload": {
+        "statuses": [
+          "completed"
+        ]
+      }
+    }
+  ],
+  "costs": [
+    {
+      "id": 4,
+      "mission_id": "fe3ab943-f490-488d-9935-69b8a370997e",
+      "category": "http_pages",
+      "units": 1.0,
+      "amount": 0.0,
+      "metadata_json": "{\"strategy\": \"deterministic-extraction\", \"task_id\": \"8653ac3d-2b8b-48b0-b222-c8fbc2ebd0b1\"}",
+      "created_at": 1787114944.6758018,
+      "metadata": {
+        "strategy": "deterministic-extraction",
+        "task_id": "8653ac3d-2b8b-48b0-b222-c8fbc2ebd0b1"
+      }
+    }
+  ]
+}

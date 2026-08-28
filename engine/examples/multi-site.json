@@ -1,0 +1,9 @@
+{
+  "name": "multi-public-sites",
+  "objective": "Extrae título, descripción, JSON-LD, enlaces, tecnología observable y oportunidades de cada sitio.",
+  "urls": ["https://example.com", "https://www.python.org"],
+  "max_pages": 1,
+  "retries": 2,
+  "rate_limit": 0.25,
+  "timeout": 20
+}

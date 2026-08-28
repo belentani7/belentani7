@@ -1,0 +1,9 @@
+{
+  "name": "public-site-real-check",
+  "objective": "Analiza la web pública, identifica metadatos, páginas relevantes, tecnología observable, datos estructurados y oportunidades SEO con evidencia.",
+  "urls": ["https://example.com"],
+  "max_pages": 2,
+  "retries": 2,
+  "rate_limit": 0.5,
+  "timeout": 20
+}
