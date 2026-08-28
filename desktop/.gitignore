@@ -1,0 +1,11 @@
+node_modules/
+dist/
+*.log
+.env
+.env.*
+!.env.example
+.bellentani-state.json
+.bellentani-provider.secret
+.bellentani/snapshots/
+.DS_Store
+Thumbs.db

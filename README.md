@@ -1,74 +1,37 @@
-# Pedro Belentani
+# Bellentani
 
-**AI Systems & Trust & Safety · Full-Stack TS/Python · Creative tech · Barcelona**
+Bellentani es un entorno de desarrollo y agente persistente que combina una aplicación web y un escritorio Windows 11.
 
-**Creative technology → AI systems → audiovisual work → interactive web → research**
+## Componentes
 
-I build a deliberately heterogeneous ecosystem where art, music, AI, automation, software, research, community tools and experimental interfaces can coexist without erasing their history.
+- `client/`: interfaz web React.
+- `server/`: servicios del frontend web.
+- `desktop/`: aplicación Electron para Windows 11 con Monaco, PowerShell, Git, agente, memoria, snapshots, rollback, CLI, MCP y PVC-U.
 
-**Verified:** 48 public repos · all pushed within the last 30 days · building in public since Sep 2025
+## Web
 
-**Live:** [NOIACORE LAB](https://belentani.vercel.app) · [Manos Abiertas](https://manosabiertas-seven.vercel.app)
+```bash
+npm ci
+npm run check
+npm run build
+npm run dev
+```
 
-## The Belentani ecosystem
+## Escritorio Windows 11
 
-### 🎬 Identity / Web / Visual
+```powershell
+cd desktop
+npm ci
+npm test
+npm run build
+```
 
-- [Belentani](https://github.com/belentani7/Belentani) — core application.
-- [belentaniexperience](https://github.com/belentani7/belentaniexperience) — interactive experience.
+El build de escritorio genera `desktop/dist/Bellentani-Setup-0.5.0.exe` como portable x64.
 
-### 🎭 Judas / artistic archive
+## Flujo seguro
 
-- [judas-experience](https://github.com/belentani7/judas-experience) — interactive audiovisual experience.
+El agente trabaja con contexto del workspace, muestra diffs antes de aplicar cambios y crea snapshots para rollback. Las operaciones de terminal, Git, tareas, depuración y MCP pasan por validación PVC-U. Las rutas se confinan al proyecto y las credenciales IA se mantienen separadas del estado ordinario.
 
-### 🤖 NOIACORE / AI / agents
+## Licencia y seguridad
 
-- [omniagent](https://github.com/belentani7/omniagent)
-- [local-agent](https://github.com/belentani7/local-agent)
-- [llm-vfx-orchestrator](https://github.com/belentani7/llm-vfx-orchestrator)
-- [mimo-companion](https://github.com/belentani7/mimo-companion)
-
-### 🦆 Duck / Zion
-
-- [heyduck](https://github.com/belentani7/heyduck)
-- [Duck-Omega](https://github.com/belentani7/Duck-Omega)
-
-### 🫂 Human / community / education
-
-- [manosabiertas](https://github.com/belentani7/manosabiertas)
-- [Cruzando-el-charco](https://github.com/belentani7/Cruzando-el-charco)
-- [nataliamarinho](https://github.com/belentani7/nataliamarinho)
-- [entrenador-jorge-bcn](https://github.com/belentani7/entrenador-jorge-bcn)
-- [Belentani.cv-ai](https://github.com/belentani7/Belentani.cv-ai)
-
-### 🧰 AI developer tooling / research
-
-- [manus-ai-skill-pack](https://github.com/belentani7/manus-ai-skill-pack)
-- [comfyui-json-compiler](https://github.com/belentani7/comfyui-json-compiler)
-- [cinematic-prompt-formatter](https://github.com/belentani7/cinematic-prompt-formatter)
-- [gpu-cost-optimizer](https://github.com/belentani7/gpu-cost-optimizer)
-- [pbr-validator](https://github.com/belentani7/pbr-validator)
-- [temporal-artifact-detector](https://github.com/belentani7/temporal-artifact-detector)
-- [latent-consistency-bench](https://github.com/belentani7/latent-consistency-bench)
-
-### 📚 Books / long-form work
-
-### 🛍️ Commerce / creative services
-
-- [arte-que-veste](https://github.com/belentani7/arte-que-veste)
-
-## Visual engineering standard
-
-For web-facing projects I am progressively standardizing on:
-
-**semantic HTML → CSS design system → native JavaScript → WebGL/GLSL when useful → GSAP/ScrollTrigger when justified → existing project imagery → responsive/mobile → accessibility → performance.**
-
-The goal is not to make every repository look identical. The goal is to make every interface feel intentional, fast, cinematic and recognisably authored.
-
-## Preservation rule
-
-**No project is deleted or merged merely because another repository looks similar.** Snapshots, experiments, private workspaces, forks, prototypes and historical versions are part of the archive. Improvements should be additive and reversible wherever practical.
-
-## Engineering rule
-
-No fake features. Existing functionality is preserved. Visual layers must degrade gracefully, respect `prefers-reduced-motion`, avoid blocking interaction, and never require an external service when a local implementation is sufficient.
+El proyecto usa MIT. Consulta `desktop/LICENSE`, `desktop/SECURITY.md` y `desktop/CONTRIBUTING.md`.
