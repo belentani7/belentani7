@@ -20,7 +20,7 @@ Ninguno.
 
 ## Hallazgos ALTOS
 
-Ninguno. No hay RCE, inyección SQL, pérdida de datos ni build roto.
+- **Vulnerabilidades de dependencias (Dependabot).** Al hacer push, GitHub notificó **52 vulnerabilidades** en la rama por defecto: **2 críticas, 24 altas, 25 moderadas, 1 baja**. No se ejecutó `pnpm audit --production` completo en el entorno (sin red de npm registrada durante la auditoría), pero la alerta de Dependabot es suficiente para clase ALTA. **Recomendado:** revisar y actualizar las dependencias afectadas (muchas son de la familia `@radix-ui/*`, `three`, `vite`, etc.). No se modificó `package.json` porque actualizar dependencias automáticamente es un cambio alto y de riesgo para una corrección mínima; merece PR dedicado con verificación de build/test.
 
 ## Hallazgos MEDIOS
 
