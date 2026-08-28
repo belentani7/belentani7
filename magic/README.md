@@ -10,7 +10,7 @@ The signature layer for this node.
 | `lore.md` | Ecosystem world-building and the Three Rules |
 | `ai-instructions.md` | Virtual AI agent briefing |
 | `skill.md` | opencode skill: apply the magic treatment |
-| `plugin.js` | opencode plugin exposing an `/immersive` command |
+| `plugin.ts` | opencode plugin exposing an `/immersive` command |
 
 Open `immersive.html` in a browser to enter the experience.
 Open `ai-instructions.md` to brief agents working in this node.

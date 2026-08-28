@@ -17,7 +17,7 @@ Add a `magic/` folder (unless present) containing:
 4. `lore.md` - ecosystem world-building and the Three Rules.
 5. `ai-instructions.md` - virtual AI agent briefing.
 6. `skill.md` - this skill.
-7. `plugin.js` - opencode plugin exposing an `/immersive` command.
+7. `plugin.ts` - opencode plugin exposing an `/immersive` command.
 8. `README.md` - kit overview.
 
 ## Rules
