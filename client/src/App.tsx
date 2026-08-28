@@ -20,6 +20,7 @@ import AwwwardsProtocolView from "@/pages/AwwwardsProtocolView";
 import ArchivePageTemplate from "@/pages/ArchivePageTemplate";
 import ArchiveIndexView from "@/pages/ArchiveIndexView";
 import Audit100View from "@/pages/Audit100View";
+import Missions from "@/pages/Missions";
 
 function Router() {
   return (
@@ -40,6 +41,7 @@ function Router() {
       <Route path={"/archive/20-index"} component={ArchiveIndexView} />
       <Route path={"/audit-100"} component={Audit100View} />
       <Route path={"/archive/:pageId"} component={ArchivePageTemplate} />
+      <Route path={"/missions"} component={Missions} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
