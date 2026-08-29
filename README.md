@@ -1,4 +1,4 @@
-# Belentani Mission Engine
+# Belentani Protocol Activaded
 
 Belentani es un motor ejecutable de investigación web. La interfaz Electron es opcional: el producto principal funciona por CLI y API aunque se elimine todo el frontend.
 
