@@ -1,6 +1,6 @@
 # Belentani Mission Engine
 
-Bellentani es un motor ejecutable de investigación web. La interfaz Electron es opcional: el producto principal funciona por CLI y API aunque se elimine todo el frontend.
+Belentani es un motor ejecutable de investigación web. La interfaz Electron es opcional: el producto principal funciona por CLI y API aunque se elimine todo el frontend.
 
 ## Primera ejecución real
 
