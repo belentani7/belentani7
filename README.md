@@ -38,6 +38,9 @@ Full-stack engineer specializing in **multi-agent AI systems**, **creative techn
 ### 🚀 [NOIACORE](https://github.com/belentani7/NOIACORE)
 **Multi-agent intelligence system** — Autonomous agent orchestration framework with real-time task routing, cost optimization, and agent coordination. Zero-token classification for 16 task archetypes.
 
+### 🛒 [BarriServei AI](https://github.com/belentani7/noiacore-turbo-v2)
+**Autonomous local services platform** — FastAPI + Next.js marketplace with OpenAI Function Calling, Stripe Connect escrow, WhatsApp Cloud API. AI-driven service intake, provider management, and automated payouts.
+
 ### 🎧 [DUCK Ecosystem](https://github.com/belentani7/duck-hub)
 **Complete music production toolkit** — Astro-based hub + 6 web apps (catalog, sequencer, station, FL Studio integration). Consolidated from 12 repos into 3 functional repositories.
 
