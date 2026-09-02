@@ -11,7 +11,7 @@
 
 **São Paulo → Barcelona** | Português · Español · English
 
-[![Available](https://img.shields.io/badge/Available%20for-work-brightgreen?style=flat-square)](mailto:contact@belentani.com)
+[![Available](https://img.shields.io/badge/Available%20for-work-brightgreen?style=flat-square)](https://belentani.vercel.app)
 
 ---
 
@@ -141,7 +141,6 @@ I'm available for:
 
 **Let's build something that matters.**
 
-[![Email](https://img.shields.io/badge/Email-contact%40belentani.com-blue?style=flat-square)](mailto:contact@belentani.com)
 [![GitHub](https://img.shields.io/badge/GitHub-belentani7-black?style=flat-square&logo=github)](https://github.com/belentani7)
 [![Portfolio](https://img.shields.io/badge/Portfolio-belentani.vercel.app-green?style=flat-square)](https://belentani.vercel.app)
 
