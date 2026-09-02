@@ -35,14 +35,29 @@ Full-stack engineer specializing in **multi-agent AI systems**, **creative techn
 
 ## Featured Projects
 
-### 🚀 [NOIACORE](https://github.com/belentani7/NOIACORE)
-**Multi-agent intelligence system** — Autonomous agent orchestration framework with real-time task routing, cost optimization, and agent coordination. Zero-token classification for 16 task archetypes.
-
 ### 🛒 [BarriServei AI](https://github.com/belentani7/noiacore-turbo-v2)
-**Autonomous local services platform** — FastAPI + Next.js marketplace with OpenAI Function Calling, Stripe Connect escrow, WhatsApp Cloud API. AI-driven service intake, provider management, and automated payouts.
+Autonomous local services platform — FastAPI + Next.js + Stripe Connect + WhatsApp Cloud API. AI-powered service marketplace with escrow payments.
+
+### 🔒 [AgentGuard](https://github.com/belentani7/agentguard)
+The firewall for your AI budget — Go daemon that monitors spending, enforces daily/weekly limits, auto-pauses agents, routes overflow to cheaper models.
+
+### 📦 [AgentBox](https://github.com/belentani7/agentbox)
+Disposable cloud sandboxes for AI agents — spin up isolated VMs for Claude, Aider, Codex, Qwen. $4/month, Terraform-powered, zero risk.
+
+### ⚒️ [SkillForge](https://github.com/belentani7/skillforge)
+Universal package manager for AI coding skills — write once, install everywhere. npm/brew for Claude, Codex, Aider, Qwen, Gemini.
+
+### 🖥️ [NEXUS OS](https://github.com/belentani7/nexus-os)
+Neon Glass Operating System — browser-based OS shell with 38+ apps, cyberpunk aesthetics, zero dependencies. Pure vanilla JS.
+
+### 🚀 [NOIACORE](https://github.com/belentani7/NOIACORE)
+Multi-agent intelligence system — autonomous agent orchestration framework with real-time task routing and zero-token classification.
 
 ### 🎧 [DUCK Ecosystem](https://github.com/belentani7/duck-hub)
-**Complete music production toolkit** — Astro-based hub + 6 web apps (catalog, sequencer, station, FL Studio integration). Consolidated from 12 repos into 3 functional repositories.
+Complete music production toolkit — Astro-based hub + 6 web apps (catalog, sequencer, station, FL Studio integration).
+
+### 💼 [Belentani Monorepo](https://github.com/belentani7/belentani-monorepo)
+UX Academy + ManosAbiertas + Belentani platforms — TurboRepo, Next.js 14, TypeScript, Tailwind CSS.
 
 ### 🏳️‍🌈 [Cruzando el Charco](https://github.com/belentani7/Cruzando-el-charco)
 **Social impact platform** — Free, confidential portal for LGBT+ migrants in Barcelona. Housing, health, legal information, community resources.
