@@ -1,115 +1,1165 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Belentani + NOIACORE | Frontend, creative technology and educational platforms"
-    />
-    <meta name="color-scheme" content="dark" />
-    <title>Pedro Belentani · Laboratorio abierto · belentani7</title>
-    <link rel="stylesheet" href="site.css" />
-  </head>
-  <body style="--accent: #ffb9e6">
-    <a class="skip-link" href="#contenido">Saltar al contenido</a>
-    <header class="site-header" aria-label="Cabecera del sitio">
-      <a
-        class="brand"
-        href="https://github.com/belentani7"
-        aria-label="Perfil de belentani7"
-        >B7<span>/</span>OPEN</a
-      >
-      <a
-        class="source-link"
-        href="https://github.com/belentani7/belentani7"
-        target="_blank"
-        rel="noopener"
-        >Ver código <span aria-hidden="true">↗</span></a
-      >
-    </header>
-    <main id="contenido">
-      <section class="hero" aria-labelledby="titulo-principal">
-        <p class="eyebrow">Tecnología creativa y sistemas de IA</p>
-        <h1 id="titulo-principal">Pedro Belentani · Laboratorio abierto</h1>
-        <p class="lede">
-          Punto de entrada al ecosistema de herramientas de IA, automatización,
-          producción creativa y apoyo humano.
-        </p>
-        <div class="actions">
-          <a
-            class="button button-primary"
-            href="https://github.com/belentani7/belentani7"
-            target="_blank"
-            rel="noopener"
-            >Explorar repositorio <span aria-hidden="true">↗</span></a
-          >
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>belentani7 · THE EXPERIENCE</title>
+<meta name="description" content="Belentani Neural Network — 3D wireframe × neo-neoglass red"/>
+<style>
+/* ============================================= */
+/* NEO-NEOGLASS-3D SYSTEM v2 — CORE              */
+/* ============================================= */
 
-          <button
-            class="button button-secondary"
-            type="button"
-            data-copy-url="https://github.com/belentani7/belentani7"
-          >
-            Copiar enlace
-          </button>
+:root {
+  --bg: #0a0a0f;
+  --glass-light: rgba(255,255,255,0.04);
+  --glass-mid: rgba(255,255,255,0.07);
+  --glass-high: rgba(255,255,255,0.12);
+  --neon-red: #ff073a;
+  --neon-red-dim: #ff4466;
+  --neon-red-deep: rgba(255,7,58,0.08);
+  --neon-red-glow: rgba(255,7,58,0.4);
+  --text: #e0e0e0;
+  --muted: #8b949e;
+  --blue-auto: #44bbff;
+  --yellow-aux: #ffd044;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse at 20% 50%, rgba(255,7,58,0.04) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(255,7,58,0.03) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* WIREFRAME GRID OVERLAY */
+.wireframe-grid {
+  position: fixed;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* === NEGLASS PANELS === */
+.neoglass {
+  background: var(--glass-light);
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  box-shadow: 
+    0 4px 24px rgba(0,0,0,0.5),
+    inset 0 1px 0 rgba(255,255,255,0.04);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.neoglass:hover {
+  border-color: rgba(255,7,58,0.3);
+  box-shadow: 
+    0 0 20px rgba(255,7,58,0.15),
+    0 4px 24px rgba(0,0,0,0.5),
+    inset 0 0 12px rgba(255,7,58,0.04);
+}
+
+.neoglass.active {
+  border-color: var(--neon-red);
+  box-shadow: 
+    0 0 30px var(--neon-red-glow),
+    0 0 60px rgba(255,7,58,0.2),
+    inset 0 0 20px var(--neon-red-deep);
+}
+
+/* Depth layers */
+.depth-far { backdrop-filter: blur(20px); opacity: 0.6; }
+.depth-mid { backdrop-filter: blur(12px); opacity: 0.85; }
+.depth-near { backdrop-filter: blur(6px); opacity: 1; }
+
+/* === JUDAS BEAT ANIMATION === */
+@keyframes judas-beat {
+  0%   { box-shadow: 0 0 10px rgba(255,7,58,0.2), inset 0 0 5px var(--neon-red-deep); }
+  50%  { box-shadow: 0 0 35px var(--neon-red-glow), 0 0 70px rgba(255,7,58,0.15), inset 0 0 15px var(--neon-red-deep); }
+  100% { box-shadow: 0 0 10px rgba(255,7,58,0.2), inset 0 0 5px var(--neon-red-deep); }
+}
+
+.judas-beat { animation: judas-beat 2.5s ease-in-out infinite; }
+
+/* Pulsing dot */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(0.8); }
+}
+.pulse-dot {
+  width: 8px; height: 8px;
+  background: var(--neon-red);
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 8px var(--neon-red-glow);
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* Cursor blink */
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.cursor-blink {
+  display: inline-block;
+  width: 2px; height: 1em;
+  background: var(--neon-red);
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: cursor-blink 1s steps(1) infinite;
+}
+
+/* Materialize entrance */
+@keyframes materialize {
+  0%   { opacity: 0; transform: translateY(30px) scale(0.97); filter: blur(8px); }
+  60%  { filter: blur(0); }
+  100% { opacity: 1; transform: none; filter: none; }
+}
+.materialize { animation: materialize 1s cubic-bezier(.2,.9,.3,1) both; }
+.d1 { animation-delay: 0.2s; }
+.d2 { animation-delay: 0.5s; }
+.d3 { animation-delay: 0.8s; }
+.d4 { animation-delay: 1.1s; }
+
+/* Float animation */
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.float-anim { animation: floaty 6s ease-in-out infinite; }
+.f2 { animation-delay: 1.2s; }
+.f3 { animation-delay: 2.4s; }
+
+/* Glitch overlay */
+#glitch-overlay {
+  position: fixed; inset: 0;
+  pointer-events: none; z-index: 999;
+  opacity: 0; mix-blend-mode: screen;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(255,0,60,0.15) 0 2px,
+    transparent 2px 7px
+  );
+}
+body.glitch-active #glitch-overlay {
+  animation: glitch-flash 0.6s steps(8) both;
+}
+@keyframes glitch-flash {
+  0% { opacity: 0; }
+  15% { opacity: 1; transform: translateX(-8px) skewX(-1deg); }
+  40% { opacity: 0.8; transform: translateX(5px); }
+  70% { opacity: 0.5; transform: translateX(-3px) skewX(0.5deg); }
+  100% { opacity: 0; transform: none; }
+}
+
+/* ============================================= */
+/* LAYOUT                                        */
+/* ============================================= */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 10;
+}
+
+/* HEADER */
+.xp-header {
+  position: sticky; top: 0; z-index: 100;
+  padding: 12px 0;
+  background: rgba(10,10,15,0.8);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.header-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  max-width: 1200px; margin: 0 auto; padding: 0 24px;
+}
+.brand {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  color: var(--text);
+  text-decoration: none;
+}
+.brand span { color: var(--neon-red); }
+.brand .cursor-blink { width: 2px; height: 1em; background: var(--neon-red); margin-left: 1px; vertical-align: text-bottom; }
+
+.header-links { display: flex; gap: 16px; }
+.header-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  transition: color 0.2s;
+}
+.header-links a:hover { color: var(--neon-red); }
+
+/* HERO */
+.hero {
+  padding: 80px 0 60px;
+  text-align: center;
+}
+.hero-avatar-wrap {
+  width: 120px; height: 120px;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid transparent;
+  background-image: linear-gradient(var(--bg), var(--bg)), linear-gradient(135deg, var(--neon-red), var(--neon-red-dim));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  position: relative;
+}
+.hero-avatar-wrap::after {
+  content: '';
+  position: absolute; inset: -4px;
+  border-radius: 50%;
+  border: 1px solid var(--neon-red);
+  opacity: 0.4;
+  animation: pulse-ring 3s ease-in-out infinite;
+}
+@keyframes pulse-ring {
+  0%, 100% { transform: scale(1); opacity: 0.4; }
+  50% { transform: scale(1.08); opacity: 0; }
+}
+.hero-avatar-wrap img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  filter: saturate(1.1) contrast(1.05);
+}
+
+.hero h1 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #fff;
+  text-shadow: 0 0 20px var(--neon-red-glow), 0 0 40px rgba(255,7,58,0.15);
+  margin-bottom: 8px;
+}
+.hero .login {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  color: var(--neon-red-dim);
+  letter-spacing: 0.2em;
+}
+.hero .bio-line {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--muted);
+  max-width: 600px;
+  margin: 16px auto 0;
+  line-height: 1.7;
+}
+.typed-container {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  color: var(--neon-red);
+  margin: 20px auto 0;
+  display: inline-block;
+  text-shadow: 0 0 10px rgba(255,7,58,0.5);
+}
+
+/* MAIN GRID */
+.main-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 24px;
+  padding: 40px 0 80px;
+}
+@media (max-width: 900px) {
+  .main-grid { grid-template-columns: 1fr; }
+}
+
+/* SIDEBAR */
+.sidebar { display: flex; flex-direction: column; gap: 16px; }
+
+.meta-row {
+  display: flex; align-items: center; gap: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  padding: 6px 0;
+}
+.meta-label {
+  color: var(--neon-red-dim);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  min-width: 70px;
+}
+.meta-value { color: var(--text); }
+.meta-value a {
+  color: var(--neon-red);
+  text-decoration: none;
+}
+.meta-value a:hover { text-decoration: underline; }
+
+/* PORTAL BUTTONS — Floating Neoglass */
+.portal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 8px;
+}
+.portal-btn {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 12px;
+  text-decoration: none;
+  color: var(--text);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  background: var(--glass-light);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.portal-btn:hover {
+  border-color: rgba(255,7,58,0.4);
+  background: rgba(255,7,58,0.06);
+  box-shadow: 0 0 16px rgba(255,7,58,0.12);
+  color: #fff;
+  transform: translateY(-2px);
+}
+.portal-btn .icon { font-size: 14px; }
+
+/* CONTENT */
+.content { display: flex; flex-direction: column; gap: 20px; }
+
+.section-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--neon-red);
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255,7,58,0.15);
+  margin-bottom: 16px;
+}
+
+/* Skills bars */
+.skill-bars { display: flex; flex-direction: column; gap: 10px; }
+.skill-bar {
+  display: grid;
+  grid-template-columns: 180px 1fr 48px;
+  align-items: center;
+  gap: 12px;
+}
+.skill-name {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+}
+.bar-track {
+  height: 6px;
+  background: rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.04);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3d0012, var(--neon-red), var(--neon-red-dim));
+  border-radius: 3px;
+  box-shadow: 0 0 8px rgba(255,7,58,0.4);
+  transition: width 1.5s cubic-bezier(.2,.8,.2,1);
+  width: 0;
+}
+.bar-fill.animated { /* set via JS */ }
+.skill-pct {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--neon-red-dim);
+  text-align: right;
+}
+
+/* Active Ops Table */
+.ops-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+}
+.ops-table tr { border-bottom: 1px solid rgba(255,255,255,0.04); }
+.ops-table td {
+  padding: 10px 4px;
+  vertical-align: middle;
+}
+.ops-table .op-status {
+  width: 10px;
+  text-align: center;
+}
+.ops-name { font-weight: 700; color: var(--text); }
+.op-stack { color: var(--muted); }
+.op-tag {
+  color: var(--neon-red);
+  font-size: 10px;
+  padding: 2px 8px;
+  background: rgba(255,7,58,0.08);
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+/* Tags / chips */
+.chip-grid {
+  display: flex; flex-wrap: wrap; gap: 6px;
+}
+.chip {
+  padding: 4px 12px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 20px;
+  transition: all 0.2s;
+}
+.chip:hover {
+  color: var(--text);
+  border-color: rgba(255,7,58,0.3);
+  background: rgba(255,7,58,0.05);
+}
+
+/* GEM stones (from original design) */
+.gems-row {
+  display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+  margin: 20px 0;
+}
+.gem-stone {
+  width: 100px; height: 100px;
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  background: linear-gradient(160deg, rgba(255,90,120,0.25), rgba(90,0,22,0.4));
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 2px;
+  text-align: center;
+  transition: transform 0.35s, filter 0.35s;
+  cursor: crosshair;
+  backdrop-filter: blur(6px);
+}
+.gem-stone:hover {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 20px rgba(255,7,58,0.7));
+}
+.gem-stone .gem-icon { font-size: 20px; }
+.gem-stone .gem-name {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: #ffd7de;
+  font-weight: 700;
+}
+.gem-stone .gem-sub {
+  font-size: 8px;
+  color: var(--neon-red-dim);
+  letter-spacing: 0.1em;
+}
+
+/* FOOTER */
+.xp-footer {
+  text-align: center;
+  padding: 30px 0;
+  border-top: 1px solid rgba(255,255,255,0.04);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+}
+.xp-footer .footer-brand span { color: var(--neon-red); }
+
+/* Canvas background rain */
+#rain-canvas {
+  position: fixed; inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+body.rain-on #rain-canvas { opacity: 1; }
+
+/* Boot sequence */
+#boot-seq {
+  position: fixed; inset: 0; z-index: 1000;
+  background: #050006;
+  display: flex; align-items: center; justify-content: center;
+  transition: opacity 0.8s ease;
+  cursor: pointer;
+}
+#boot-seq.done { opacity: 0; pointer-events: none; }
+.boot-inner {
+  width: min(640px, 90vw);
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--neon-red);
+}
+.boot-inner h5 {
+  font-size: 11px; letter-spacing: 0.3em;
+  color: var(--neon-red-dim);
+  margin-bottom: 16px;
+  text-shadow: 0 0 12px var(--neon-red-glow);
+}
+#boot-log {
+  min-height: 140px;
+  font-size: 13px;
+  white-space: pre-wrap;
+  text-shadow: 0 0 8px rgba(255,7,58,0.5);
+}
+#boot-log .ok { color: #7dffb0; }
+
+/* Scanline effect */
+.scanlines {
+  position: fixed; inset: 0;
+  pointer-events: none; z-index: 998;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0px,
+    transparent 2px,
+    rgba(0,0,0,0.03) 2px,
+    rgba(0,0,0,0.03) 4px
+  );
+  opacity: 0.5;
+}
+
+/* Three.js canvas container */
+#three-container {
+  position: fixed; inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Hide raw content behind canvas */
+.main-content { position: relative; z-index: 10; }
+</style>
+</head>
+<body>
+
+<!-- BOOT SEQUENCE -->
+<div id="boot-seq">
+  <div class="boot-inner">
+    <h5>JUDAS_OS v12.0 // NEO-NEOGLASS-3D // RENDERIZANDO</h5>
+    <div id="boot-log"></div>
+    <div style="margin-top:16px; height:6px; border:1px solid rgba(255,7,58,0.4); border-radius:4px; background:rgba(255,7,58,0.06); overflow:hidden;">
+      <div id="boot-pbar" style="height:100%; width:0; background:linear-gradient(90deg,#3d0012,var(--neon-red)); box-shadow:0 0 14px var(--neon-red-glow); transition:width 0.1s;"></div>
+    </div>
+    <div id="boot-pct" style="margin-top:6px; font-size:11px; color:var(--neon-red-dim); letter-spacing:0.2em;">RENDER 0%</div>
+  </div>
+</div>
+
+<div id="glitch-overlay"></div>
+<div class="scanlines"></div>
+<div class="wireframe-grid"></div>
+<canvas id="rain-canvas"></canvas>
+
+<!-- THREE.JS CANVAS -->
+<div id="three-container"></div>
+
+<!-- HEADER -->
+<header class="xp-header">
+  <div class="header-inner">
+    <a href="#" class="brand">BEL<span>/</span>XP<span class="cursor-blink"></span></a>
+    <nav class="header-links">
+      <a href="#ops">OPS</a>
+      <a href="#skills">SKILLS</a>
+      <a href="#arsenal">ARSENAL</a>
+      <a href="https://github.com/belentani7" target="_blank" rel="noopener">GITHUB ↗</a>
+    </nav>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main class="main-content">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-avatar-wrap materialize">
+        <!-- EDITABLE PHOTO: Replace src with your avatar URL -->
+        <img src="https://avatars.githubusercontent.com/u/123456789?v=4" alt="Belentani avatar" id="avatar-img"/>
+      </div>
+      <h1 class="materialize d1">BELENTANI</h1>
+      <div class="login materialize d1">@belentani7</div>
+      <p class="bio-line materialize d2">Neural Architect · Voice AI Systems · Zero-Token Routing<br/>Creative Technology · Full-Stack TS/Python/Java · São Paulo → Barcelona</p>
+      <div class="typed-container materialize d2">&gt;<span id="typed-text">Neural Architect</span><span class="cursor-blink"></span></div>
+    </div>
+  </section>
+
+  <!-- PORTAL BUTTONS (floating neoglass) -->
+  <section class="container materialize d3" style="padding-bottom: 40px;">
+    <div class="portal-grid">
+      <a class="portal-btn judas-beat" href="https://belentani.vercel.app" target="_blank" rel="noopener">
+        <span class="icon">🌐</span> Vercel Lab
+      </a>
+      <a class="portal-btn" href="https://github.com/belentani7" target="_blank" rel="noopener">
+        <span class="icon">⚡</span> GitHub
+      </a>
+      <a class="portal-btn" href="http://www.belentani.es/" target="_blank" rel="noopener">
+        <span class="icon">🎭</span> Judas Exp
+      </a>
+      <a class="portal-btn" href="http://www.belentani.eu/" target="_blank" rel="noopener">
+        <span class="icon">💼</span> Portfolio
+      </a>
+      <a class="portal-btn" href="https://judas-experience-13898.buildaispace.app/" target="_blank" rel="noopener">
+        <span class="icon">🔴</span> NOIACORE
+      </a>
+      <a class="portal-btn" href="https://linkedin.com/in/pedro-b-09473598" target="_blank" rel="noopener">
+        <span class="icon">🎵</span> LinkedIn
+      </a>
+    </div>
+  </section>
+
+  <!-- MAIN GRID -->
+  <div class="container">
+    <div class="main-grid">
+      
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        
+        <!-- DOSSIER PANEL -->
+        <div class="neoglass materialize d2" style="padding:20px;">
+          <div class="section-title" style="border:none; padding:0; margin-bottom:12px;">◆ OPERATOR DOSSIER</div>
+          
+          <div class="meta-row">
+            <span class="meta-label">ORIGIN</span>
+            <span class="meta-value">São Paulo, BR</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">DEPLOYED</span>
+            <span class="meta-value">L'Hospitalet, BCN</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">LANGS</span>
+            <span class="meta-value">PT · ES · EN · CA</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">ORG</span>
+            <span class="meta-value" style="color:var(--neon-red); font-weight:700;">NOIACORE</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">REPOS</span>
+            <span class="meta-value">444 <span style="color:var(--muted);">(88 pub)</span></span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">CLEARANCE</span>
+            <span class="meta-value" style="color:var(--neon-red);">OMEGA ∞</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">STATUS</span>
+            <span class="meta-value"><span class="pulse-dot"></span> AVAILABLE</span>
+          </div>
         </div>
-        <p class="copy-status" role="status" aria-live="polite"></p>
-      </section>
-      <section class="facts" aria-label="Información del proyecto">
-        <div><span>REPOSITORIO</span><strong>belentani7</strong></div>
-        <div><span>TECNOLOGÍA</span><strong>TypeScript</strong></div>
-        <div><span>PUBLICACIÓN</span><strong>GitHub Pages</strong></div>
-      </section>
-      <section class="overview" aria-labelledby="sobre-proyecto">
-        <div class="section-heading">
-          <p class="eyebrow">01 · CONTEXTO</p>
-          <h2 id="sobre-proyecto">Un punto de entrada claro.</h2>
+
+        <!-- STATS COUNTERS -->
+        <div class="neoglass materialize d3 float-anim f2" style="padding:20px;">
+          <div class="section-title" style="border:none; padding:0; margin-bottom:12px;">◆ TELEMETRY</div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+            <div style="text-align:center;">
+              <div style="font-family:'JetBrains Mono',monospace; font-size:24px; font-weight:800; color:var(--neon-red); text-shadow:0 0 12px var(--neon-red-glow);" data-target="444">0</div>
+              <div style="font-size:9px; color:var(--muted); letter-spacing:0.15em; margin-top:2px;">REPOS</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-family:'JetBrains Mono',monospace; font-size:24px; font-weight:800; color:var(--neon-red); text-shadow:0 0 12px var(--neon-red-glow);" data-target="1332">0</div>
+              <div style="font-size:9px; color:var(--muted); letter-spacing:0.15em; margin-top:2px;">CONTRIB</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-family:'JetBrains Mono',monospace; font-size:24px; font-weight:800; color:var(--neon-red); text-shadow:0 0 12px var(--neon-red-glow);" data-target="120">0</div>
+              <div style="font-size:9px; color:var(--muted); letter-spacing:0.15em; margin-top:2px;">MÓDULOS IA</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-family:'JetBrains Mono',monospace; font-size:24px; font-weight:800; color:var(--neon-red); text-shadow:0 0 12px var(--neon-red-glow);" data-target="88">0</div>
+              <div style="font-size:9px; color:var(--muted); letter-spacing:0.15em; margin-top:2px;">PUBLICOS</div>
+            </div>
+          </div>
         </div>
-        <p>
-          Esta página acompaña al repositorio como una portada pública, ligera y
-          accesible. El código, la documentación detallada y las instrucciones
-          de uso permanecen en el repositorio para mantener una única fuente de
-          verdad.
-        </p>
-      </section>
-      <section class="highlights" aria-labelledby="puntos-clave">
-        <div class="section-heading">
-          <p class="eyebrow">02 · PUNTOS CLAVE</p>
-          <h2 id="puntos-clave">Qué encontrarás.</h2>
+
+        <!-- GEMS ROW -->
+        <div class="materialize d4">
+          <div class="gems-row">
+            <div class="gem-stone"><span class="gem-icon">⬡</span><span class="gem-name">PEDRO</span><span class="gem-sub">LA ROCA</span></div>
+            <div class="gem-stone"><span class="gem-icon">◉</span><span class="gem-name">MARCOS</span><span class="gem-sub">EL CRONISTA</span></div>
+            <div class="gem-stone"><span class="gem-icon">⌬</span><span class="gem-name">SANTOS</span><span class="gem-sub">LA ANTENA</span></div>
+            <div class="gem-stone"><span class="gem-icon">▣</span><span class="gem-name">BELENTANI</span><span class="gem-sub">EL ARTEFACTO</span></div>
+          </div>
         </div>
-        <ol>
-          <li>
-            <span>01</span>
-            <p>Sistemas de IA aplicados</p>
-          </li>
-          <li>
-            <span>02</span>
-            <p>Producción creativa</p>
-          </li>
-          <li>
-            <span>03</span>
-            <p>Herramientas educativas y accesibles</p>
-          </li>
-        </ol>
+
+      </aside>
+
+      <!-- CONTENT -->
+      <section class="content">
+        
+        <!-- ACTIVE OPS -->
+        <div id="ops" class="neoglass materialize d1" style="padding:20px;">
+          <div class="section-title">◆ ACTIVE OPERATIONS</div>
+          <table class="ops-table">
+            <tr>
+              <td class="op-status"><span class="pulse-dot" style="animation-duration:2s;"></span></td>
+              <td class="ops-name">NOIACORE LAB</td>
+              <td class="op-stack">React 19 · tRPC · LLM · MySQL</td>
+              <td><span class="op-tag">298 FILES</span></td>
+            </tr>
+            <tr>
+              <td class="op-status"><span class="pulse-dot" style="animation-duration:2.3s; animation-delay:0.4s;"></span></td>
+              <td class="ops-name">META-SKILL</td>
+              <td class="op-stack">Python · Zero-token routing</td>
+              <td><span class="op-tag">16 ARCHETYPES</span></td>
+            </tr>
+            <tr>
+              <td class="op-status"><span class="pulse-dot" style="animation-duration:1.8s; animation-delay:0.8s;"></span></td>
+              <td class="ops-name">AGENTGUARD</td>
+              <td class="op-stack">Go daemon · Budget firewall</td>
+              <td><span class="op-tag">AUTO-PAUSE</span></td>
+            </tr>
+            <tr>
+              <td class="op-status"><span class="pulse-dot" style="animation-duration:2.5s; animation-delay:0.2s;"></span></td>
+              <td class="ops-name">DUCK ECOSYSTEM</td>
+              <td class="op-stack">Astro · 6 apps · Music prod</td>
+              <td><span class="op-tag">LIVE</span></td>
+            </tr>
+            <tr>
+              <td class="op-status"><span class="pulse-dot" style="animation-duration:2s; animation-delay:0.6s; background:#ff4466;"></span></td>
+              <td class="ops-name">VOICE CLONE</td>
+              <td class="op-stack">RVC · Applio · Kaggle GPU</td>
+              <td><span class="op-tag" style="background:rgba(255,7,58,0.15);">TRAINING</span></td>
+            </tr>
+            <tr>
+              <td class="op-status"><span class="pulse-dot" style="animation-duration:2.2s; animation-delay:1s; background:#ff4466;"></span></td>
+              <td class="ops-name">EVIDENCE LEDGER</td>
+              <td class="op-stack">TypeScript · Audit trail</td>
+              <td><span class="op-tag">CRYPTOGRAPHIC</span></td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- SKILLS MATRIX -->
+        <div id="skills" class="neoglass materialize d2" style="padding:20px;">
+          <div class="section-title">◆ SKILLS MATRIX</div>
+          <div class="skill-bars" id="skill-bars">
+            <div class="skill-bar"><span class="skill-name">TypeScript / React 19</span><div class="bar-track"><div class="bar-fill" data-width="93%"></div></div><span class="skill-pct">93%</span></div>
+            <div class="skill-bar"><span class="skill-name">Python / AI Agents</span><div class="bar-track"><div class="bar-fill" data-width="90%"></div></div><span class="skill-pct">90%</span></div>
+            <div class="skill-bar"><span class="skill-name">Multi-Agent / Routing</span><div class="bar-track"><div class="bar-fill" data-width="95%"></div></div><span class="skill-pct">95%</span></div>
+            <div class="skill-bar"><span class="skill-name">RVC / Voice AI</span><div class="bar-track"><div class="bar-fill" data-width="92%"></div></div><span class="skill-pct">92%</span></div>
+            <div class="skill-bar"><span class="skill-name">3D / WebGL / R3F</span><div class="bar-track"><div class="bar-fill" data-width="85%"></div></div><span class="skill-pct">85%</span></div>
+            <div class="skill-bar"><span class="skill-name">GSAP / Animation</span><div class="bar-track"><div class="bar-fill" data-width="84%"></div></div><span class="skill-pct">84%</span></div>
+            <div class="skill-bar"><span class="skill-name">Node / Express / tRPC</span><div class="bar-track"><div class="bar-fill" data-width="92%"></div></div><span class="skill-pct">92%</span></div>
+            <div class="skill-bar"><span class="skill-name">Drizzle / MySQL / Zod</span><div class="bar-track"><div class="bar-fill" data-width="86%"></div></div><span class="skill-pct">86%</span></div>
+            <div class="skill-bar"><span class="skill-name">Next.js / Astro / Vite</span><div class="bar-track"><div class="bar-fill" data-width="88%"></div></div><span class="skill-pct">88%</span></div>
+            <div class="skill-bar"><span class="skill-name">GLSL Shaders</span><div class="bar-track"><div class="bar-fill" data-width="78%"></div></div><span class="skill-pct">78%</span></div>
+          </div>
+        </div>
+
+        <!-- TECH ARSENAL -->
+        <div id="arsenal" class="neoglass materialize d3" style="padding:20px;">
+          <div class="section-title">◆ TECH ARSENAL</div>
+          <div style="margin-bottom:16px;">
+            <div style="font-size:9px; color:var(--muted); letter-spacing:0.15em; margin-bottom:8px; font-family:'JetBrains Mono',monospace;">CORE STACK</div>
+            <div class="chip-grid">
+              <span class="chip">TypeScript</span><span class="chip">Python</span><span class="chip">Java</span><span class="chip">Go</span><span class="chip">PowerShell</span>
+            </div>
+          </div>
+          <div style="margin-bottom:16px;">
+            <div style="font-size:9px; color:var(--muted); letter-spacing:0.15em; margin-bottom:8px; font-family:'JetBrains Mono',monospace;">FRONTEND</div>
+            <div class="chip-grid">
+              <span class="chip">React 19</span><span class="chip">Next.js 15</span><span class="chip">Astro</span><span class="chip">Vite 7</span><span class="chip">Three.js</span>
+              <span class="chip">R3F</span><span class="chip">Tailwind</span><span class="chip">shadcn/ui</span>
+            </div>
+          </div>
+          <div style="margin-bottom:16px;">
+            <div style="font-size:9px; color:var(--muted); letter-spacing:0.15em; margin-bottom:8px; font-family:'JetBrains Mono',monospace;">BACKEND & DB</div>
+            <div class="chip-grid">
+              <span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">FastAPI</span><span class="chip">tRPC</span>
+              <span class="chip">Drizzle ORM</span><span class="chip">Prisma</span><span class="chip">MySQL</span><span class="chip">Redis</span>
+            </div>
+          </div>
+          <div style="margin-bottom:16px;">
+            <div style="font-size:9px; color:var(--muted); letter-spacing:0.15em; margin-bottom:8px; font-family:'JetBrains Mono',monospace;">ANIMATION & 3D</div>
+            <div class="chip-grid">
+              <span class="chip">GSAP</span><span class="chip">Lenis</span><span class="chip">Framer Motion</span><span class="chip">GLSL</span>
+              <span class="chip">WebGL</span><span class="chip">SVG Anim</span><span class="chip">PixiJS</span>
+            </div>
+          </div>
+          <div style="margin-bottom:16px;">
+            <div style="font-size:9px; color:var(--muted); letter-spacing:0.15em; margin-bottom:8px; font-family:'JetBrains Mono',monospace;">AI / AUDIO / VIDEO</div>
+            <div class="chip-grid">
+              <span class="chip">RVC</span><span class="chip">Applio</span><span class="chip">Whisper</span><span class="chip">Demucs</span>
+              <span class="chip">Tone.js</span><span class="chip">Claude Code</span><span class="chip">Qwen Code</span>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:9px; color:var(--muted); letter-spacing:0.15em; margin-bottom:8px; font-family:'JetBrains Mono',monospace;">AGENTS & TOOLS</div>
+            <div class="chip-grid">
+              <span class="chip">CrewAI</span><span class="chip">LangGraph</span><span class="chip">Cursor</span><span class="chip">Cline</span>
+              <span class="chip">Aider</span><span class="chip">OpenCode</span><span class="chip">Zed AI</span>
+            </div>
+          </div>
+        </div>
+
       </section>
-      <section class="next" aria-labelledby="siguiente-paso">
-        <p class="eyebrow">03 · SIGUIENTE PASO</p>
-        <h2 id="siguiente-paso">
-          Consulta la documentación y el código fuente.
-        </h2>
-        <a
-          class="text-link"
-          href="https://github.com/belentani7/belentani7"
-          target="_blank"
-          rel="noopener"
-          >Abrir belentani7 en GitHub <span aria-hidden="true">↗</span></a
-        >
-      </section>
-    </main>
-    <footer>
-      <span>© <span id="year"></span> belentani7</span
-      ><span>Diseñado para lectura rápida y acceso abierto.</span>
-    </footer>
-    <script src="site.js"></script>
-  </body>
+
+    </div>
+  </div>
+</main>
+
+<footer class="xp-footer">
+  <div class="container">
+    <div class="footer-brand">
+      <span>BEL</span>/<span>XP</span> · JUDAS_OS v12.0 · NEO-NEOGLASS-3D
+    </div>
+    <div style="margin-top:8px; opacity:0.5;">
+      LAT 41.3851N · LON 2.1734E · NODE: JUDAS-CORE-07 · NOIACORE LAB ONLINE
+    </div>
+  </div>
+</footer>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/"
+  }
+}
+</script>
+
+<script type="module">
+// ==============================================
+// BOOT SEQUENCE
+// ==============================================
+const bootLines = [
+  '> INITIALIZING JUDAS_OS v12.0...',
+  '> LOADING NEO-NEOGLASS KERNEL...',
+  '> MAPPING NEURAL PATHWAYS...',
+  '> CALIBRATING 432Hz RESONANCE...',
+  '> WIREFRAME GEOMETRY SYNC...',
+  '> NEURAL MESH STABLE.',
+  '> ACCESS GRANTED.'
+];
+
+const bootLog = document.getElementById('boot-log');
+let bi = 0;
+const startTime = performance.now();
+const pbar = document.getElementById('boot-pbar');
+const pctEl = document.getElementById('boot-pct');
+const bootSeq = document.getElementById('boot-seq');
+
+function addBootLine() {
+  if (bi < bootLines.length) {
+    const div = document.createElement('div');
+    div.className = 'tl' + (bi === bootLines.length - 1 ? ' ok' : '');
+    div.textContent = bootLines[bi++];
+    bootLog.appendChild(div);
+    setTimeout(addBootLine, 200);
+  }
+}
+addBootLine();
+
+function progress() {
+  const p = Math.min(1, (performance.now() - startTime) / 2500);
+  pbar.style.width = (p * 100) + '%';
+  pctEl.textContent = 'RENDER ' + Math.round(p * 100) + '%';
+  if (p < 1 && !bootSeq.classList.contains('done')) requestAnimationFrame(progress);
+}
+requestAnimationFrame(progress);
+
+function endBoot() {
+  if (bootSeq.classList.contains('done')) return;
+  bootSeq.classList.add('done');
+  setTimeout(() => { bootSeq.style.display = 'none'; }, 800);
+  triggerGlitch();
+  setTimeout(startExperience, 600);
+}
+
+setTimeout(endBoot, 3000);
+bootSeq.addEventListener('click', () => { endBoot(); });
+
+// ==============================================
+// GLITCH TRIGGER
+// ==============================================
+function triggerGlitch() {
+  document.body.classList.add('glitch-active');
+  setTimeout(() => document.body.classList.remove('glitch-active'), 600);
+}
+
+// ==============================================
+// EXPERIENCE START
+// ==============================================
+function startExperience() {
+  document.body.classList.add('rain-on');
+  
+  // Animate skill bars
+  document.querySelectorAll('.bar-fill').forEach((bar, i) => {
+    setTimeout(() => {
+      bar.style.width = bar.dataset.width;
+    }, 200 + i * 100);
+  });
+
+  // Counter animation
+  document.querySelectorAll('[data-target]').forEach(el => {
+    const target = parseInt(el.dataset.target);
+    const duration = 1500;
+    const start = performance.now();
+    function count(now) {
+      const p = Math.min(1, (now - start) / duration);
+      const e = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(target * e).toLocaleString('es-ES');
+      if (p < 1) requestAnimationFrame(count);
+    }
+    setTimeout(() => requestAnimationFrame(count), 500);
+  });
+
+  // Typing effect
+  initTyping();
+  
+  // Init Three.js wireframe scene
+  initThreeScene();
+  
+  // Init rain canvas
+  initRainCanvas();
+}
+
+// ==============================================
+// TYPING EFFECT
+// ==============================================
+const phrases = [
+  'Neural Architect',
+  'Voice Cloning Engineer',
+  'Zero-Token AI Routing',
+  'Creative Systems Architect',
+  'Full-Stack TS / Python / Java',
+  'São Paulo → Barcelona',
+  'Arquitecto de Experiencias'
+];
+let pi = 0, ci = 0, del = true;
+const typedEl = document.getElementById('typed-text');
+
+function typingLoop() {
+  const p = phrases[pi];
+  ci += del ? -1 : 1;
+  typedEl.textContent = p.slice(0, ci);
+  let speed = del ? 40 : 70;
+  if (!del && ci === p.length) { speed = 2000; del = true; }
+  else if (del && ci === 0) { del = false; pi = (pi + 1) % phrases.length; speed = 400; }
+  setTimeout(typingLoop, speed);
+}
+function initTyping() { setTimeout(typingLoop, 1000); }
+
+// ==============================================
+// THREE.JS WIREFRAME SCENE
+// ==============================================
+function initThreeScene() {
+  try {
+    const container = document.getElementById('three-container');
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    container.appendChild(renderer.domElement);
+    
+    // Wireframe material
+    const wfMat = new THREE.MeshBasicMaterial({ 
+      color: 0xff073a, 
+      wireframe: true,
+      transparent: true, 
+      opacity: 0.08 
+    });
+
+    // Red edge material
+    const edgeMat = new THREE.LineBasicMaterial({
+      color: 0xff073a,
+      transparent: true,
+      opacity: 0.15,
+    });
+
+    // Create wireframe structures (pyramid nodes from 3D commissioning GUI concept)
+    const geometries = [];
+    
+    // Large central octahedron (main node)
+    const octGeo = new THREE.OctahedronGeometry(3, 1);
+    geometries.push(octGeo);
+    
+    // Pyramid shapes (node representation)
+    const pyrGeo = new THREE.ConeGeometry(0.8, 1.6, 4);
+    for (let i = 0; i < 6; i++) {
+      const angle = (i / 6) * Math.PI * 2;
+      const r = 5;
+      const pyramid = new THREE.Mesh(pyrGeo, wfMat.clone());
+      pyramid.position.set(Math.cos(angle) * r, Math.sin(i) * 1.5, Math.sin(angle) * r);
+      pyramid.rotation.z = Math.PI;
+      scene.add(pyramid);
+      geometries.push(pyrGeo.clone());
+    }
+    
+    // Torus knot (structural complexity)
+    const tkGeo = new THREE.TorusKnotGeometry(2, 0.3, 100, 16);
+    geometries.push(tkGeo);
+    
+    // Icosahedron (mesh network)
+    const icoGeo = new THREE.IcosahedronGeometry(1.5, 2);
+    geometries.push(icoGeo);
+    
+    // Dodecahedron
+    const ddGeo = new THREE.DodecahedronGeometry(1, 0);
+    geometries.push(ddGeo);
+
+    // Add to scene
+    const meshes = [];
+    const geoPositions = [
+      [0, 0, 0],
+      [-3, 2, -2],
+      [3, -1, -3],
+      [0, 3, -4],
+      [-2, -2, -1],
+      [2, 1, -5],
+      [0, -1, 0],
+      [0, 0, 2]
+    ];
+
+    let gi = 0;
+    for (const pos of geoPositions) {
+      if (gi < geometries.length) {
+        const mesh = new THREE.Mesh(geometries[gi], wfMat.clone());
+        mesh.position.set(...pos);
+        mesh.userData.rotSpeed = { x: Math.random() * 0.005, y: Math.random() * 0.005 };
+        scene.add(mesh);
+        meshes.push(mesh);
+        gi++;
+      }
+    }
+    
+    // Edge wireframe lines connecting nodes
+    const linePoints = [];
+    for (let i = 0; i < 8; i++) {
+      for (let j = i + 1; j < 8; j++) {
+        if (Math.random() > 0.6) {
+          linePoints.push(new THREE.Vector3(
+            (Math.random() - 0.5) * 8,
+            (Math.random() - 0.5) * 6,
+            (Math.random() - 0.5) * 6 - 2
+          ));
+          linePoints.push(new THREE.Vector3(
+            (Math.random() - 0.5) * 8,
+            (Math.random() - 0.5) * 6,
+            (Math.random() - 0.5) * 6 - 2
+          ));
+        }
+      }
+    }
+    
+    const lineGeo = new THREE.BufferGeometry().setFromPoints(linePoints);
+    const lines = new THREE.LineSegments(lineGeo, edgeMat.clone());
+    scene.add(lines);
+
+    camera.position.z = 10;
+    
+    // Mouse parallax
+    let mouseX = 0, mouseY = 0;
+    document.addEventListener('mousemove', (e) => {
+      mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
+      mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+    });
+    
+    // Animation loop
+    function animate() {
+      requestAnimationFrame(animate);
+      const t = Date.now() * 0.001;
+      
+      meshes.forEach((m, i) => {
+        m.rotation.x += m.userData.rotSpeed.x;
+        m.rotation.y += m.userData.rotSpeed.y;
+        m.position.y += Math.sin(t + i) * 0.002;
+      });
+      
+      lines.rotation.y += 0.001;
+      lines.rotation.x += 0.0005;
+      
+      camera.position.x += (mouseX * 1.5 - camera.position.x) * 0.02;
+      camera.position.y += (-mouseY * 1.5 - camera.position.y) * 0.02;
+      camera.lookAt(0, 0, 0);
+      
+      renderer.render(scene, camera);
+    }
+    animate();
+    
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+  } catch (e) {
+    // Three.js failed silently — graceful degradation
+    console.log('[neo-neoglass-3d] Three.js unavailable, rendering without 3D');
+  }
+}
+
+// ==============================================
+// RAIN CANVAS
+// ==============================================
+function initRainCanvas() {
+  const cv = document.getElementById('rain-canvas');
+  const cx = cv.getContext('2d');
+  
+  function resize() {
+    cv.width = window.innerWidth;
+    cv.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+  
+  const chars = 'アカサタナハマヤラワ01アイウエオカキクケコ{}=<>/+\n';
+  const fontSize = 14;
+  let cols = Math.floor(cv.width / fontSize);
+  let drops = Array.from({length: cols}, () => Math.random() * -80);
+  
+  function drawRain() {
+    requestAnimationFrame(drawRain);
+    cx.fillStyle = 'rgba(10,10,15,0.06)';
+    cx.fillRect(0, 0, cv.width, cv.height);
+    cx.font = fontSize + 'px monospace';
+    
+    for (let i = 0; i < cols; i++) {
+      const ch = chars[Math.floor(Math.random() * chars.length)];
+      const hue = Math.random();
+      if (hue > 0.95) {
+        cx.fillStyle = '#ffe3e8'; // white-hot sparks
+      } else if (hue > 0.6) {
+        cx.fillStyle = `rgba(255,${Math.floor(40 + Math.random()*40)},${Math.floor(80 + Math.random()*60)},${0.3 + Math.random()*0.4})`;
+      } else {
+        cx.fillStyle = `rgba(140,10,40,${0.2 + Math.random()*0.3})`;
+      }
+      cx.fillText(ch, i * fontSize, drops[i] * fontSize);
+      
+      if (drops[i] * fontSize > cv.height && Math.random() > 0.975) {
+        drops[i] = 0;
+      }
+      drops[i] += 0.6;
+    }
+  }
+  drawRain();
+}
+</script>
+</body>
 </html>
