@@ -42,16 +42,27 @@ const LANGS = [
   "Tone.js","Claude Code","Qwen Code","OpenCode",
 ];
 
+/* misiones con URL web destino (botones clickeables) */
 const MISSIONS = [
-  ["NOIACORE LAB", "React 19 · tRPC · LLM", "LIVE"],
-  ["meta-skill", "Zero-token routing", "16 archetypes"],
-  ["nexus-os", "Neon Glass OS · 38+ apps", "ZERO DEPS"],
-  ["secure-t", "Cyber + AI Academy", "LIVE"],
-  ["DUCK Ecosystem", "Astro · studio apps", "6 MODULES"],
-  ["Voice Clone", "RVC · Applio · Kaggle GPU", "47 stems"],
+  ["NOIACORE LAB", "React 19 · tRPC · LLM", "LIVE", "https://belentani.vercel.app"],
+  ["meta-skill", "Zero-token routing", "16 archetypes", "https://belentani.vercel.app"],
+  ["nexus-os", "Neon Glass OS · 38+ apps", "ZERO DEPS", "https://belentani-experience.vercel.app"],
+  ["secure-t", "Cyber + AI Academy", "LIVE", "https://belentani7.github.io/secure-t/"],
+  ["DUCK Ecosystem", "Astro · studio apps", "6 MODULES", "https://belentani7.github.io/heyduck/"],
+  ["Voice Clone", "RVC · Applio · Kaggle GPU", "47 stems", "https://belentani.vercel.app"],
 ];
 
-const ECOS = ["NOIACORE","DUCK","JUDAS","OMEGA","secure-t","ManosAbiertas","CARQUIDEC","proofmesh"];
+/* ecosistemas con URL web destino */
+const ECOS = [
+  ["NOIACORE","https://belentani.vercel.app"],
+  ["DUCK","https://belentani7.github.io/heyduck/"],
+  ["JUDAS","https://judas-experience-13898.buildaispace.app/"],
+  ["OMEGA","https://belentani.vercel.app"],
+  ["secure-t","https://belentani7.github.io/secure-t/"],
+  ["ManosAbiertas","https://manosabiertas-seven.vercel.app"],
+  ["CARQUIDEC","http://www.belentani.es/"],
+  ["proofmesh","https://belentani.vercel.app"],
+];
 
 const P1 = [[180,120],[240,180],[300,320],[880,330],[950,130],[1010,200],[520,90],[700,60],[110,280],[1080,290]];
 const EDGES = [[0,1],[0,2],[1,2],[4,5],[4,7],[5,6],[6,7],[3,5],[3,4],[0,6],[8,0],[9,4]];
@@ -201,24 +212,28 @@ const marquee = `<g transform="translate(0,${C.H-52})">
 </g>`;
 
 const missionsPanel = `<g transform="translate(880,180)">
-  ${MISSIONS.map(([n,s,st],i)=>`<g transform="translate(0,${i*56})" opacity="0">
+  ${MISSIONS.map(([n,s,st,url],i)=>`<a xlink:href="${url}" target="_blank" style="cursor:pointer">
+  <g transform="translate(0,${i*56})" opacity="0">
     <animate attributeName="opacity" values="0;1;1;0" begin="${i*2.2}s" dur="13.2s" repeatCount="indefinite"/>
     <g>
       <animateTransform attributeName="transform" type="scale" values="1;1.015;1" dur="2.4s" repeatCount="indefinite"/>
-      <rect x="10" y="-16" width="280" height="52" rx="6" fill="#0a0a0f" stroke="${C.RED}" stroke-opacity=".22"/>
+      <rect x="10" y="-16" width="280" height="52" rx="6" fill="#0a0a0f" stroke="${C.RED}" stroke-opacity=".22">
+        <animate attributeName="stroke-opacity" values=".22;.7;.22" dur="2.4s" repeatCount="indefinite"/>
+      </rect>
     </g>
     <circle cx="26" cy="10" r="5" fill="${C.RED}"><animate attributeName="opacity" values="1;.2;1" dur="1.2s" repeatCount="indefinite"/></circle>
     <text x="42" y="0" font-size="16" font-weight="bold" font-family="${C.F1}" fill="${C.INK}">${esc(n)}</text>
     <text x="42" y="20" font-size="12" font-family="${C.F2}" fill="${C.MUT}">${esc(s)} · <tspan fill="${C.RED}">${esc(st)}</tspan></text>
-  </g>`).join("")}
+  </g></a>`).join("")}
 </g>`;
 
 const ecosPanel = `<g transform="translate(70,180)">
   <text x="0" y="0" font-size="12" letter-spacing="3" fill="${C.MUT}">ACTIVE ECOSYSTEMS</text>
-  ${ECOS.map((p,i)=>`<g transform="translate(0,${12+i*40})">
+  ${ECOS.map(([p,url],i)=>`<a xlink:href="${url}" target="_blank" style="cursor:pointer">
+  <g transform="translate(0,${12+i*40})">
     <animate attributeName="opacity" values=".35;1;.35" dur="${2+i%3*1.2}s" repeatCount="indefinite"/>
     <rect width="150" height="30" rx="4" fill="#0a0a0f" stroke="${C.RED}" stroke-opacity=".2"/>
-    <text x="10" y="20" font-size="13" letter-spacing="2" font-family="${C.F1}" fill="${C.INK}">${esc(p)}</text></g>`).join("")}
+    <text x="10" y="20" font-size="13" letter-spacing="2" font-family="${C.F1}" fill="${C.INK}">${esc(p)}</text></g></a>`).join("")}
 </g>`;
 
 const quote = `<g transform="translate(600,${C.H-96})">
@@ -226,7 +241,7 @@ const quote = `<g transform="translate(600,${C.H-96})">
   <text x="${META.quote.length*8+40}" y="0" font-size="17" fill="${C.RED}">_<animate attributeName="opacity" values="1;0;1" dur=".8s" repeatCount="indefinite"/></text>
 </g>`;
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${C.W} ${C.H}" width="${C.W}" height="${C.H}">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 ${C.W} ${C.H}" width="${C.W}" height="${C.H}">
 <defs>${defs}</defs>
 <rect width="${C.W}" height="${C.H}" fill="${C.BG}"/>
 ${grid}${halo}${edges}${particles}
@@ -237,4 +252,5 @@ ${quote}
 </svg>`;
 
 require("fs").writeFileSync("assets/bio-banner.svg", svg);
-console.log(`OK bio-banner.svg — ${(svg.length/1024).toFixed(1)} KB · ${STREAMS.length} streams · ${LANGS.length} langs · ${ECOS.length} ecos · FX: glitch/scan/nova/grain/ping/shimmer`);
+require("fs").writeFileSync("assets/bio-banner-inline.txt", svg);
+console.log(`OK bio-banner.svg — ${(svg.length/1024).toFixed(1)} KB · ${STREAMS.length} streams · ${LANGS.length} langs · ${ECOS.length} ecos · ${MISSIONS.length} missions clickeables (${MISSIONS.filter(m=>m[3]).length} con web)`);
