@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="1200" height="500" font-family="Courier New, monospace">
+  <defs>
+    <linearGradient id="neonG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff073a"/>
+      <stop offset="1" stop-color="#7a031c"/>
+    </linearGradient>
+    <radialGradient id="coreG" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ff073a" stop-opacity="0.9"/>
+      <stop offset="0.6" stop-color="#ff073a" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#ff073a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="gridP" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#ff073a" stroke-opacity="0.12" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- fondo -->
+  <rect width="1200" height="500" fill="#050505"/>
+
+  <!-- grid synthwave en movimiento -->
+  <g transform="translate(0,370)">
+    <g>
+      <rect x="-200" y="0" width="1600" height="260" fill="url(#gridP)"/>
+      <rect x="-200" y="0" width="1600" height="260" fill="none" stroke="none"/>
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="0 -50" dur="2s" repeatCount="indefinite"/>
+    </g>
+    <rect x="-200" y="0" width="1600" height="260" fill="url(#gridP)" transform="translate(0,-50)"/>
+  </g>
+
+  <!-- halo central -->
+  <circle cx="600" cy="230" r="160" fill="url(#coreG)">
+    <animate attributeName="r" values="150;175;150" dur="3s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- particulas / red neuronal -->
+  <g fill="#ff073a">
+    <circle cx="180" cy="120" r="3" opacity="0.8">
+      <animate attributeName="cy" values="120;110;120" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="240" cy="180" r="2" opacity="0.6">
+      <animate attributeName="cx" values="240;250;240" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="950" cy="130" r="3" opacity="0.8">
+      <animate attributeName="cy" values="130;118;130" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1010" cy="200" r="2" opacity="0.6">
+      <animate attributeName="cx" values="1010;1000;1010" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="320" r="2.5" opacity="0.7">
+      <animate attributeName="cx" values="300;312;300" dur="4.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="880" cy="330" r="2.5" opacity="0.7">
+      <animate attributeName="cy" values="330;320;330" dur="3.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="90" r="2" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;0.2;0.7" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- conexiones -->
+  <g stroke="#ff073a" stroke-opacity="0.25" stroke-width="1">
+    <line x1="180" y1="120" x2="240" y2="180"/>
+    <line x1="180" y1="120" x2="300" y2="320"/>
+    <line x1="240" y1="180" x2="300" y2="320"/>
+    <line x1="950" y1="130" x2="1010" y2="200"/>
+    <line x1="1010" y1="200" x2="880" y2="330"/>
+    <line x1="950" y1="130" x2="880" y2="330"/>
+  </g>
+
+  <!-- badge status -->
+  <g transform="translate(600,60)">
+    <rect x="-130" y="-20" width="260" height="40" rx="4" fill="none" stroke="#ff073a" stroke-opacity="0.5">
+      <animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <text x="0" y="4" text-anchor="middle" fill="#ff073a" font-size="14" letter-spacing="4">STATUS: OMEGA_CLEAN // RENDERING</text>
+  </g>
+
+  <!-- titulo con glitch -->
+  <g transform="translate(600,215)" font-family="Arial Black, sans-serif">
+    <text x="2" y="0" text-anchor="middle" font-size="88" fill="#00ffff" letter-spacing="8" opacity="0.7">
+      BELENTANI
+      <animate attributeName="opacity" values="0;0.7;0;0;0.7;0" dur="2s" repeatCount="indefinite"/>
+    </text>
+    <text x="-2" y="0" text-anchor="middle" font-size="88" fill="#ff073a" letter-spacing="8" opacity="0.8">
+      BELENTANI
+      <animate attributeName="opacity" values="0;0;0.8;0;0.8;0" dur="3s" repeatCount="indefinite"/>
+    </text>
+    <text x="0" y="0" text-anchor="middle" font-size="88" fill="#ff073a" letter-spacing="8" filter="url(#glow)">
+      BELENTANI
+      <animate attributeName="fill-opacity" values="1;0.75;1" dur="1.5s" repeatCount="indefinite"/>
+    </text>
+  </g>
+
+  <!-- subtitle -->
+  <g transform="translate(600,270)">
+    <text x="0" y="0" text-anchor="middle" fill="#ff073a" font-size="20" letter-spacing="5" filter="url(#glow)">
+      Neural Architect · Voice AI · Zero-Token Routing
+    </text>
+  </g>
+
+  <!-- quote -->
+  <g transform="translate(600,330)">
+    <rect x="-200" y="-30" width="400" height="60" rx="8" fill="#0a0a0a" stroke="#ff073a" stroke-opacity="0.15"/>
+    <text x="0" y="2" text-anchor="middle" fill="#e6e6e6" font-size="17" font-style="italic">"Fazer visível o que importa."</text>
+    <text x="210" y="-8" fill="#ff073a" font-size="17">
+      _
+      <animate attributeName="opacity" values="1;0;1" dur="0.8s" repeatCount="indefinite"/>
+    </text>
+  </g>
+</svg>
