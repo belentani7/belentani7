@@ -6,7 +6,8 @@
 <br/>
 
 <img src="https://img.shields.io/badge/STATUS-OMEGA__CLEAN-ff073a?style=for-the-badge&labelColor=050505&logo=github" />
-<img src="https://img.shields.io/badge/Ubicación-São_Paulo_⇄_L'Hospitalet-ff073a?style=for-the-badge&labelColor=050505" />
+<img src="https://img.shields.io/badge/Localidad-Barcelona-ff073a?style=for-the-badge&labelColor=050505" />
+<img src="https://img.shields.io/badge/nasci_en-São_Paulo-00ffc8?style=for-the-badge&labelColor=050505" />
 <img src="https://img.shields.io/badge/repos-109-ff073a?style=for-the-badge&labelColor=050505&logo=github" />
 <img src="https://img.shields.io/badge/top_lang-TypeScript-ff073a?style=for-the-badge&labelColor=050505" />
 <img src="https://komarev.com/ghpvc/?username=belentani7&color=ff073a&style=for-the-badge&label=SIGNAL+CLICKS" />
@@ -53,49 +54,50 @@
 <table>
 <tr>
   <td align="center" style="border:1px solid #ff073a33; padding:14px; background:#0a0a0a;">
-    <b style="color:#ff073a;">NOIACORE LAB</b><br/>
-    <sub>Creative + educational platforms</sub><br/>
-    🔴 298 files · Live
+    <a href="https://belentani.vercel.app" style="text-decoration:none;"><b style="color:#ff073a;">NOIACORE LAB</b><br/>
+    <sub style="color:#888;">creative + educational platforms</sub><br/>
+    🔴 Live</a>
   </td>
   <td align="center" style="border:1px solid #ff073a33; padding:14px; background:#0a0a0a;">
-    <b style="color:#ff073a;">DUCK</b><br/>
-    <sub>Music · apps · studio tools</sub><br/>
-    🟢 6 modules
+    <a href="https://belentani7.github.io/heyduck/" style="text-decoration:none;"><b style="color:#ff073a;">DUCK</b><br/>
+    <sub style="color:#888;">music · apps · studio tools</sub><br/>
+    🟢 Módulos</a>
   </td>
   <td align="center" style="border:1px solid #ff073a33; padding:14px; background:#0a0a0a;">
-    <b style="color:#ff073a;">JUDAS</b><br/>
-    <sub>Cristal sangrante · cinematografía</sub><br/>
-    🔴 Storyboard
+    <a href="https://judas-experience-13898.buildaispace.app/" style="text-decoration:none;"><b style="color:#ff073a;">JUDAS</b><br/>
+    <sub style="color:#888;">estética cristal sangrante</sub><br/>
+    🔴 Storyboard</a>
   </td>
   <td align="center" style="border:1px solid #ff073a33; padding:14px; background:#0a0a0a;">
-    <b style="color:#ff073a;">OMEGA</b><br/>
-    <sub>Artist ecosystem</sub><br/>
-    🔴 belentani_Omega
+    <a href="https://belentani.vercel.app" style="text-decoration:none;"><b style="color:#ff073a;">OMEGA</b><br/>
+    <sub style="color:#888;">artist ecosystem</sub><br/>
+    🔴 Live</a>
   </td>
 </tr>
 <tr>
   <td align="center" style="border:1px solid #ff073a33; padding:14px; background:#0a0a0a;">
-    <b style="color:#ff073a;">secure-t</b><br/>
-    <sub>Cyber + AI university</sub><br/>
-    🔴 TypeScript
+    <a href="https://belentani7.github.io/secure-t/" style="text-decoration:none;"><b style="color:#ff073a;">secure-t</b><br/>
+    <sub style="color:#888;">cyber + AI university</sub><br/>
+    🔴 Web</a>
   </td>
   <td align="center" style="border:1px solid #ff073a33; padding:14px; background:#0a0a0a;">
-    <b style="color:#ff073a;">nexus-os</b><br/>
-    <sub>Neon Glass OS · 38+ apps</sub><br/>
-    ⚫ Zero deps
+    <a href="https://belentani-experience.vercel.app" style="text-decoration:none;"><b style="color:#ff073a;">nexus-os</b><br/>
+    <sub style="color:#888;">neon glass OS · 38+ apps</sub><br/>
+    ⚫ Expo</a>
   </td>
   <td align="center" style="border:1px solid #ff073a33; padding:14px; background:#0a0a0a;">
-    <b style="color:#ff073a;">ManosAbiertas</b><br/>
-    <sub>Educación + migración</sub><br/>
-    🔴 Gratuito
+    <a href="https://manosabiertas-seven.vercel.app" style="text-decoration:none;"><b style="color:#ff073a;">ManosAbiertas</b><br/>
+    <sub style="color:#888;">educación + migración</sub><br/>
+    🔴 Web</a>
   </td>
   <td align="center" style="border:1px solid #ff073a33; padding:14px; background:#0a0a0a;">
-    <b style="color:#ff073a;">CARQUIDEC</b><br/>
-    <sub>Arquitectura paramétrica</sub><br/>
-    🔴 Bioclimático
+    <a href="http://www.belentani.es/" style="text-decoration:none;"><b style="color:#ff073a;">CARQUIDEC</b><br/>
+    <sub style="color:#888;">arquitectura paramétrica</sub><br/>
+    🔴 ES/EU</a>
   </td>
 </tr>
 </table>
+<sub>⚠️ Los botones apuntan a <b>webs</b> (deployments), no a repositorios — el código vive en GitHub, la experiencia en la web.</sub>
 </div>
 
 ---
@@ -187,7 +189,7 @@
 
 <div align="center">
 
-> `$ echo $STATUS:` **OMEGA_CLEAN · rendering the experience**
+> `$ echo $LOC:` **Barcelona · L'Hospitalet (n. São Paulo)**
 > `$ echo $LANG:` **TypeScript 66% · HTML 12% · JS 12% · Python 6%**
 
 *"Fazer visível o que importa."* — [belentani.vercel.app](https://belentani.vercel.app)
