@@ -1,12 +1,14 @@
 <div align="center">
 
-<!-- ANIMATED NEON BANNER (ruta SVG — GitHub lo renderiza como imagen animada) -->
+<!-- ANIMATED NEON BANNER (generado por scripts/banner-gen.js — SMIL, sin JS) -->
 <img src="assets/bio-banner.svg" alt="BELENTANI // NEURAL ARCHITECT" width="100%" style="max-width:1200px; border-radius:12px;">
 
 <br/>
 
 <img src="https://img.shields.io/badge/STATUS-OMEGA__CLEAN-ff073a?style=for-the-badge&labelColor=050505&logo=github" />
-<img src="https://img.shields.io/badge/Ubicación-São_Paulo_⇄_Barcelona-ff073a?style=for-the-badge&labelColor=050505" />
+<img src="https://img.shields.io/badge/Ubicación-São_Paulo_⇄_L'Hospitalet-ff073a?style=for-the-badge&labelColor=050505" />
+<img src="https://img.shields.io/badge/repos-109-ff073a?style=for-the-badge&labelColor=050505&logo=github" />
+<img src="https://img.shields.io/badge/top_lang-TypeScript-ff073a?style=for-the-badge&labelColor=050505" />
 <img src="https://komarev.com/ghpvc/?username=belentani7&color=ff073a&style=for-the-badge&label=SIGNAL+CLICKS" />
 
 </div>
@@ -15,9 +17,9 @@
 
 ## 🔴 LA EXPERIENCIA COMPLETA
 
-> GitHub **sanitiza** `<script>` y `<style>` en los README, así que la experiencia WebGL completa vive en su propio planeta:
+> GitHub **sanitiza** `<script>` y `<style>` en los README — la experiencia WebGL completa vive en su propio planeta, el banner SVG animado de arriba es su proyección 2D:
 
-<a href="https://belentani-experience.vercel.app" style="display:inline-block; background:#ff073a; color:#000; font-weight:bold; padding:12px 28px; border-radius:8px; text-decoration:none; letter-spacing:2px; font-family:monospace;">🚀 LAND EXPERIENCIA 3D (NEURAL CORE)</a>
+<a href="https://belentani-experience.vercel.app" style="display:inline-block; background:#ff073a; color:#000; font-weight:bold; padding:12px 28px; border-radius:8px; text-decoration:none; letter-spacing:2px; font-family:monospace;">🚀 ENTRAR EXPERIENCIA 3D (NEURAL CORE)</a>
 
 <sub>Núcleo rojo neón · WebGL particles · Bloom + Chromatic Aberration · scroll cinematográfico</sub>
 
@@ -43,22 +45,77 @@
 
 ---
 
+## 🧬 ECOSISTEMAS ACTIVOS
+
+> Un solo operador neural, múltiples universos — cada uno con su propia estética y lógica.
+
+<div align="center">
+<table>
+<tr>
+  <td align="center" style="border:1px solid #ff073a33; padding:14px; background:#0a0a0a;">
+    <b style="color:#ff073a;">NOIACORE LAB</b><br/>
+    <sub>Creative + educational platforms</sub><br/>
+    🔴 298 files · Live
+  </td>
+  <td align="center" style="border:1px solid #ff073a33; padding:14px; background:#0a0a0a;">
+    <b style="color:#ff073a;">DUCK</b><br/>
+    <sub>Music · apps · studio tools</sub><br/>
+    🟢 6 modules
+  </td>
+  <td align="center" style="border:1px solid #ff073a33; padding:14px; background:#0a0a0a;">
+    <b style="color:#ff073a;">JUDAS</b><br/>
+    <sub>Cristal sangrante · cinematografía</sub><br/>
+    🔴 Storyboard
+  </td>
+  <td align="center" style="border:1px solid #ff073a33; padding:14px; background:#0a0a0a;">
+    <b style="color:#ff073a;">OMEGA</b><br/>
+    <sub>Artist ecosystem</sub><br/>
+    🔴 belentani_Omega
+  </td>
+</tr>
+<tr>
+  <td align="center" style="border:1px solid #ff073a33; padding:14px; background:#0a0a0a;">
+    <b style="color:#ff073a;">secure-t</b><br/>
+    <sub>Cyber + AI university</sub><br/>
+    🔴 TypeScript
+  </td>
+  <td align="center" style="border:1px solid #ff073a33; padding:14px; background:#0a0a0a;">
+    <b style="color:#ff073a;">nexus-os</b><br/>
+    <sub>Neon Glass OS · 38+ apps</sub><br/>
+    ⚫ Zero deps
+  </td>
+  <td align="center" style="border:1px solid #ff073a33; padding:14px; background:#0a0a0a;">
+    <b style="color:#ff073a;">ManosAbiertas</b><br/>
+    <sub>Educación + migración</sub><br/>
+    🔴 Gratuito
+  </td>
+  <td align="center" style="border:1px solid #ff073a33; padding:14px; background:#0a0a0a;">
+    <b style="color:#ff073a;">CARQUIDEC</b><br/>
+    <sub>Arquitectura paramétrica</sub><br/>
+    🔴 Bioclimático
+  </td>
+</tr>
+</table>
+</div>
+
+---
+
 ## ⚡ TECH ARSENAL
 
 <div align="center">
 <table>
 <tr>
-  <td width="25%" style="border:1px solid #ff073a33; padding:12px; background:#0a0a0a;">
+  <td width="33%" style="border:1px solid #ff073a33; padding:12px; background:#0a0a0a;">
     <b style="color:#ff073a;">CORE SYSTEMS</b><br/>
     <code>TypeScript</code> <code>Python</code> <code>Java</code> <code>Go</code> <code>PowerShell</code>
   </td>
-  <td width="25%" style="border:1px solid #ff073a33; padding:12px; background:#0a0a0a;">
+  <td width="33%" style="border:1px solid #ff073a33; padding:12px; background:#0a0a0a;">
     <b style="color:#ff073a;">WEB / FRAMEWORKS</b><br/>
     <code>React 19</code> <code>Next.js 16</code> <code>Astro</code> <code>Vite</code> <code>tRPC</code>
   </td>
-  <td width="25%" style="border:1px solid #ff073a33; padding:12px; background:#0a0a0a;">
+  <td width="34%" style="border:1px solid #ff073a33; padding:12px; background:#0a0a0a;">
     <b style="color:#ff073a;">DATA / INFRA</b><br/>
-    <code>Drizzle</code> <code>MySQL</code> <code>Redis</code> <code>Express</code>
+    <code>Drizzle</code> <code>MySQL</code> <code>Redis</code> <code>Express</code> <code>Docker</code>
   </td>
 </tr>
 <tr>
@@ -82,14 +139,18 @@
 
 ## 🎯 ACTIVE MISSIONS
 
+> Verdadero desde las misiones del banner y los repos más recientes.
+
 | Project | Stack | Status |
 |---------|-------|--------|
 | 🔴 **NOIACORE LAB** | `React 19` `tRPC` `LLM` `MySQL` | 298 files · Live |
-| 🔴 **MetaSkill** | `Python` `Zero-token routing` | 16 archetypes |
+| 🔴 **meta-skill** | `Python` `Zero-token routing` | 16 archetypes |
 | 🔴 **AgentGuard** | `Go` `Budget firewall` | Auto-pause daemon |
-| 🔴 **DUCK Ecosystem** | `Astro` `6 apps` | GitHub Pages |
+| 🔴 **nexus-os** | `JS` `Neon Glass OS` | 38+ apps · zero deps |
 | 🟠 **Voice Clone** | `RVC` `Applio` `Kaggle GPU` | 47 stems training |
 | 🔴 **Evidence Ledger** | `TS` `Audit trail` | Cryptographic |
+| 🔴 **proofmesh** | `TS` `Change intelligence` | 6-criteria gates |
+| 🟠 **gpu-cost-optimizer** | `Python` `Diffusion` | -70% cost |
 
 ---
 
@@ -114,6 +175,10 @@
     <b style="color:#ff073a;">ES / EU</b><br/>
     <a href="http://www.belentani.es/">belentani.es</a>
   </td>
+  <td align="center" style="border:1px solid #ff073a33; padding:16px; background:#0a0a0a;">
+    <b style="color:#ff073a;">LINKEDIN</b><br/>
+    <a href="https://linkedin.com/in/pedro-b-09473598">pedro-b</a>
+  </td>
 </tr>
 </table>
 </div>
@@ -123,6 +188,7 @@
 <div align="center">
 
 > `$ echo $STATUS:` **OMEGA_CLEAN · rendering the experience**
+> `$ echo $LANG:` **TypeScript 66% · HTML 12% · JS 12% · Python 6%**
 
 *"Fazer visível o que importa."* — [belentani.vercel.app](https://belentani.vercel.app)
 
