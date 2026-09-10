@@ -506,6 +506,99 @@ ${NODES.map(nodeBtn).join("")}
 <text x="600" y="${deckH - 22}" text-anchor="middle" font-size="11" letter-spacing="3" font-family="${C.F2}" fill="${C.MUT}">ALL SYSTEMS NOMINAL · LAST SYNC 2026-09-10 · NOIACORE // BELENTANI</text>
 </svg>`;
 
+/* ============ BOTONES INDIVIDUALES (clickeables vía <a><img>) ============ */
+const slugify = (s) => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
+const buttonSvg = (n, i) => {
+  const t = TONES[n.tone];
+  const d = ((i % 7) * 0.31).toFixed(2);
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 376 76" width="376" height="76" role="img" aria-label="${esc(n.name)} — ${esc(n.desc)}">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ffffff" stop-opacity=".075"/>
+    <stop offset=".5" stop-color="#ffffff" stop-opacity=".025"/>
+    <stop offset="1" stop-color="#ffffff" stop-opacity=".01"/>
+  </linearGradient>
+  <linearGradient id="st" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#ffffff" stop-opacity=".16"/>
+    <stop offset=".5" stop-color="#ffffff" stop-opacity=".04"/>
+    <stop offset="1" stop-color="#ffffff" stop-opacity=".1"/>
+  </linearGradient>
+  <linearGradient id="ed" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+    <stop offset=".5" stop-color="#ffffff" stop-opacity=".3"/>
+    <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+  </linearGradient>
+  <filter id="soft" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="2"/></filter>
+</defs>
+<rect width="376" height="76" rx="16" fill="#05050a"/>
+<rect x="2" y="2" width="372" height="72" rx="14" fill="${t}" fill-opacity=".05" filter="url(#soft)"/>
+<rect x="3" y="3" width="370" height="70" rx="13" fill="url(#bg)" stroke="url(#st)" stroke-width="1"/>
+<rect x="3" y="3" width="370" height="70" rx="13" fill="none" stroke="${t}" stroke-opacity=".12">
+  <animate attributeName="stroke-opacity" values=".08;.38;.08" dur="3.6s" begin="${d}s" repeatCount="indefinite"/>
+</rect>
+<line x1="18" y1="4" x2="358" y2="4" stroke="url(#ed)" stroke-width="1"/>
+<circle cx="26" cy="25" r="4" fill="${t}">
+  <animate attributeName="opacity" values="1;.2;1" dur="1.7s" begin="${d}s" repeatCount="indefinite"/>
+</circle>
+<circle cx="26" cy="25" r="4" fill="none" stroke="${t}" stroke-opacity=".5">
+  <animate attributeName="r" values="5;13" dur="2.4s" begin="${d}s" repeatCount="indefinite"/>
+  <animate attributeName="stroke-opacity" values=".5;0" dur="2.4s" begin="${d}s" repeatCount="indefinite"/>
+</circle>
+<text x="44" y="27" font-size="15" font-weight="bold" font-family="'Segoe UI',system-ui,sans-serif" fill="#eeedf2">${esc(n.name)}</text>
+<text x="44" y="46" font-size="11" font-family="Consolas,'JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">${esc(n.desc)}</text>
+<text x="44" y="62" font-size="9.5" font-family="Consolas,'JetBrains Mono',monospace" fill="${t}" fill-opacity=".75">${esc(n.host)}</text>
+<text x="360" y="41" font-size="16" text-anchor="end" fill="${t}" fill-opacity=".75">→
+  <animate attributeName="fill-opacity" values=".3;.9;.3" dur="2.8s" begin="${d}s" repeatCount="indefinite"/>
+</text>
+</svg>`;
+};
+
+const deckHeaderSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 96" width="1200" height="96" role="img" aria-label="Vercel deployment grid">
+<defs>
+  <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+    <path d="M 44 0 L 0 0 0 44" fill="none" stroke="#ff073a" stroke-opacity=".08" stroke-width="1"/>
+  </pattern>
+  <linearGradient id="scanx" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#ff073a" stop-opacity="0"/>
+    <stop offset=".5" stop-color="#ff073a" stop-opacity=".9"/>
+    <stop offset="1" stop-color="#ff073a" stop-opacity="0"/>
+  </linearGradient>
+  <filter id="hglow" x="-60%" y="-60%" width="220%" height="220%">
+    <feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<rect width="1200" height="96" fill="#05050a"/>
+<rect width="1200" height="96" fill="url(#grid)" opacity=".5"/>
+<text x="28" y="46" font-size="24" font-weight="bold" font-family="'Segoe UI',system-ui,sans-serif" fill="#eeedf2" filter="url(#hglow)">VERCEL // DEPLOYMENT GRID</text>
+<text x="28" y="70" font-size="11" font-family="Consolas,'JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">${NODES.length} live nodes · 1 operator · THE BELENTANI EXPERIENCE</text>
+<circle cx="1076" cy="40" r="4" fill="#00ffc8"><animate attributeName="opacity" values="1;.2;1" dur="1.4s" repeatCount="indefinite"/></circle>
+<text x="1172" y="45" text-anchor="end" font-size="14" letter-spacing="2" font-family="Consolas,'JetBrains Mono',monospace" fill="#00ffc8">${NODES.length}/${NODES.length} ONLINE</text>
+<line x1="24" y1="88" x2="1176" y2="88" stroke="#ff073a" stroke-opacity=".18"/>
+<rect x="-160" y="87" width="160" height="2" fill="url(#scanx)" opacity=".8">
+  <animateTransform attributeName="transform" type="translate" values="0 0;1400 0" dur="5s" repeatCount="indefinite"/>
+</rect>
+</svg>`;
+
+/* ============ README: bloques (GitHub pela el SVG inline — se sirve como <img>) ============ */
+const RAW = "https://raw.githubusercontent.com/belentani7/belentani7/main/assets";
+const V = "?v=4";
+
+const heroBlock = `<img src="${RAW}/bio-banner.svg${V}" alt="The Belentani Experience — alive machine" width="1200" />`;
+
+const deckRows = [];
+for (let r = 0; r < Math.ceil(NODES.length / 3); r++) {
+  const cells = NODES.slice(r * 3, r * 3 + 3).map((n) =>
+    `<td align="center"><a href="${n.url}"><img src="${RAW}/deck/${slugify(n.name)}.svg${V}" width="300" alt="${esc(n.name)} — ${esc(n.desc)}" /></a></td>`).join("\n");
+  deckRows.push(`<tr>\n${cells}\n</tr>`);
+}
+
+const deckBlock = `<img src="${RAW}/deck-header.svg${V}" alt="Vercel deployment grid" width="1200" />
+
+<table>
+${deckRows.join("\n")}
+</table>`;
+
 /* ============ OUTPUT ============ */
 function inject(file, start, end, payload) {
   const p = path.join(ROOT, file);
@@ -522,9 +615,14 @@ fs.writeFileSync(path.join(outDir, "bio-banner.svg"), heroSvg);
 fs.writeFileSync(path.join(outDir, "bio-banner-inline.txt"), heroSvg);
 fs.writeFileSync(path.join(outDir, "vercel-deck.svg"), deckSvg);
 fs.writeFileSync(path.join(outDir, "vercel-deck-inline.txt"), deckSvg);
-inject("README.md", "<!-- BELENTANI-HERO:START -->", "<!-- BELENTANI-HERO:END -->", heroSvg);
-inject("README.md", "<!-- BELENTANI-DECK:START -->", "<!-- BELENTANI-DECK:END -->", deckSvg);
+fs.writeFileSync(path.join(outDir, "deck-header.svg"), deckHeaderSvg);
+const deckDir = path.join(outDir, "deck");
+fs.mkdirSync(deckDir, { recursive: true });
+NODES.forEach((n, i) => fs.writeFileSync(path.join(deckDir, `${slugify(n.name)}.svg`), buttonSvg(n, i)));
 
-console.log(`OK hero  assets/bio-banner.svg — ${(heroSvg.length / 1024).toFixed(1)} KB · ${STREAMS.length} streams · ${LANGS.length} langs · ${ECOS.length} ecos · ${MISSIONS.length} misiones`);
-console.log(`OK deck  assets/vercel-deck.svg — ${(deckSvg.length / 1024).toFixed(1)} KB · ${NODES.length} nodos clickeables (${NODES.filter(n => n.tone === "red").length} core · ${NODES.filter(n => n.tone === "green").length} edu · ${NODES.filter(n => n.tone === "cyan").length} labs)`);
-console.log("OK README.md — hero + deck inyectados entre marcadores");
+inject("README.md", "<!-- BELENTANI-HERO:START -->", "<!-- BELENTANI-HERO:END -->", heroBlock);
+inject("README.md", "<!-- BELENTANI-DECK:START -->", "<!-- BELENTANI-DECK:END -->", deckBlock);
+
+console.log(`OK hero   assets/bio-banner.svg — ${(heroSvg.length / 1024).toFixed(1)} KB (SMIL, servido como <img>) · ${STREAMS.length} streams · ${LANGS.length} langs · ${ECOS.length} ecos · ${MISSIONS.length} misiones`);
+console.log(`OK deck   assets/deck-header.svg + ${NODES.length} botones en assets/deck/ (${NODES.filter(n => n.tone === "red").length} core · ${NODES.filter(n => n.tone === "green").length} edu · ${NODES.filter(n => n.tone === "cyan").length} labs)`);
+console.log("OK README.md — hero <img> + grid clickeable inyectados entre marcadores");
