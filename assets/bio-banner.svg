@@ -1,41 +1,83 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 640" width="1200" height="640">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 660" width="1200" height="660" role="img" aria-label="The Belentani Experience — alive machine">
 <defs>
-  <linearGradient id="neonG" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#ff073a"/><stop offset="1" stop-color="#7a031c"/>
+  <linearGradient id="hGlass" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ffffff" stop-opacity=".085"/>
+    <stop offset=".5" stop-color="#ffffff" stop-opacity=".028"/>
+    <stop offset="1" stop-color="#ffffff" stop-opacity=".012"/>
   </linearGradient>
-  <radialGradient id="coreG" cx=".5" cy=".5" r=".5">
-    <stop offset="0" stop-color="#ff073a" stop-opacity=".9"/>
-    <stop offset=".55" stop-color="#ff073a" stop-opacity=".18"/>
+  <linearGradient id="hGlassStroke" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#ffffff" stop-opacity=".18"/>
+    <stop offset=".45" stop-color="#ffffff" stop-opacity=".05"/>
+    <stop offset="1" stop-color="#ffffff" stop-opacity=".12"/>
+  </linearGradient>
+  <linearGradient id="hEdge" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+    <stop offset=".5" stop-color="#ffffff" stop-opacity=".38"/>
+    <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="hTube" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ff073a" stop-opacity="0"/>
+    <stop offset=".5" stop-color="#ff073a" stop-opacity=".9"/>
+    <stop offset="1" stop-color="#ff073a" stop-opacity="0"/>
+  </linearGradient>
+  <radialGradient id="hCore" cx=".5" cy=".5" r=".5">
+    <stop offset="0" stop-color="#ff073a" stop-opacity=".85"/>
+    <stop offset=".55" stop-color="#ff073a" stop-opacity=".16"/>
     <stop offset="1" stop-color="#ff073a" stop-opacity="0"/>
   </radialGradient>
-  <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+  <radialGradient id="hNova" cx=".5" cy=".5" r=".5">
+    <stop offset="0" stop-color="#ffffff" stop-opacity=".9"/>
+    <stop offset=".35" stop-color="#ff073a" stop-opacity=".45"/>
+    <stop offset=".7" stop-color="#ff073a" stop-opacity=".1"/>
+    <stop offset="1" stop-color="#ff073a" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="hScanY" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ff073a" stop-opacity="0"/>
+    <stop offset=".5" stop-color="#ff073a" stop-opacity=".7"/>
+    <stop offset="1" stop-color="#ff073a" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="hShim" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#b4dcff" stop-opacity="0"/>
+    <stop offset=".5" stop-color="#b4dcff" stop-opacity=".12"/>
+    <stop offset="1" stop-color="#b4dcff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="hMem" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#ff073a"/>
+    <stop offset=".55" stop-color="#ff5078"/>
+    <stop offset="1" stop-color="#00ffff"/>
+  </linearGradient>
+  <filter id="hGlow" x="-60%" y="-60%" width="220%" height="220%">
     <feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
   </filter>
-  <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+  <filter id="hSoft" x="-40%" y="-40%" width="180%" height="180%">
     <feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
   </filter>
-  <filter id="grainF"><feTurbulence type="fractalNoise" baseFrequency=".75" numOctaves="2" stitchTiles="stitch"/>
+  <filter id="hBig" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="14"/></filter>
+  <filter id="hGrain"><feTurbulence type="fractalNoise" baseFrequency=".75" numOctaves="2" stitchTiles="stitch"/>
     <feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 6 -2"/></filter>
-  <pattern id="gridP" width="50" height="50" patternUnits="userSpaceOnUse">
+  <pattern id="hGrid" width="50" height="50" patternUnits="userSpaceOnUse">
     <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#ff073a" stroke-opacity=".12" stroke-width="1"/>
-  </pattern>
-  <radialGradient id="novaG" cx=".5" cy=".5" r=".5">
-  <stop offset="0" stop-color="#fff" stop-opacity=".9"/>
-  <stop offset=".35" stop-color="#ff073a" stop-opacity=".45"/>
-  <stop offset=".7" stop-color="#ff073a" stop-opacity=".1"/>
-  <stop offset="1" stop-color="#ff073a" stop-opacity="0"/></radialGradient><linearGradient id="scanG" x1="0" y1="0" x2="0" y2="1">
-  <stop offset="0" stop-color="#ff073a" stop-opacity="0"/>
-  <stop offset=".5" stop-color="#ff073a" stop-opacity=".7"/>
-  <stop offset="1" stop-color="#ff073a" stop-opacity="0"/></linearGradient><linearGradient id="shimG" x1="0" y1="0" x2="1" y2="1">
-  <stop offset="0" stop-color="#b4dcff" stop-opacity="0"/>
-  <stop offset=".5" stop-color="#b4dcff" stop-opacity=".12"/>
-  <stop offset="1" stop-color="#b4dcff" stop-opacity="0"/></linearGradient></defs>
-<rect width="1200" height="640" fill="#040406"/>
-<g transform="translate(0,450)">
-  <rect x="-200" y="0" width="1600" height="190" fill="url(#gridP)" opacity=".9"/>
-  <animateTransform attributeName="transform" type="translate" from="0 0" to="0 -50" dur="1.6s" repeatCount="indefinite"/>
-</g><circle cx="600" cy="270" r="180" fill="url(#coreG)">
-  <animate attributeName="r" values="150;185;150" dur="3s" repeatCount="indefinite"/></circle><line x1="180" y1="120" x2="240" y2="180" stroke="#ff073a" stroke-width="1" stroke-opacity=".25">
+  </pattern></defs>
+<rect width="1200" height="660" fill="#05050a"/>
+<rect width="1200" height="660" fill="url(#hGrid)" opacity=".3" pointer-events="none"/>
+<g transform="translate(0,470)" pointer-events="none">
+  <g>
+    <rect x="-200" y="0" width="1600" height="190" fill="url(#hGrid)" opacity=".9"/>
+    <animateTransform attributeName="transform" type="translate" from="0 0" to="0 -50" dur="1.6s" repeatCount="indefinite"/>
+  </g>
+</g>
+<circle cx="600" cy="300" r="170" fill="url(#hCore)">
+  <animate attributeName="r" values="150;186;150" dur="3s" repeatCount="indefinite"/></circle><g transform="translate(600,300)" pointer-events="none">
+  <circle r="196" fill="none" stroke="#ff073a" stroke-opacity=".14" stroke-width="1" stroke-dasharray="4 14">
+    <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="46s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="166" fill="none" stroke="#00ffff" stroke-opacity=".10" stroke-width="1" stroke-dasharray="2 10">
+    <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="34s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="136" fill="none" stroke="#ff073a" stroke-opacity=".07" stroke-width="8" stroke-dasharray="60 240">
+    <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="22s" repeatCount="indefinite"/>
+  </circle>
+</g><line x1="180" y1="120" x2="240" y2="180" stroke="#ff073a" stroke-width="1" stroke-opacity=".25">
   <animate attributeName="stroke-opacity" values="0;.35;0" dur="2s" repeatCount="indefinite"/></line><line x1="180" y1="120" x2="300" y2="320" stroke="#ff073a" stroke-width="1" stroke-opacity=".25">
   <animate attributeName="stroke-opacity" values="0;.35;0" dur="3s" repeatCount="indefinite"/></line><line x1="240" y1="180" x2="300" y2="320" stroke="#ff073a" stroke-width="1" stroke-opacity=".25">
   <animate attributeName="stroke-opacity" values="0;.35;0" dur="4s" repeatCount="indefinite"/></line><line x1="950" y1="130" x2="1010" y2="200" stroke="#ff073a" stroke-width="1" stroke-opacity=".25">
@@ -78,208 +120,8 @@
   <animate attributeName="opacity" values=".8;.15;.8" dur="2.1s" repeatCount="indefinite"/>
   <animate attributeName="cx" values="1080;1094;1080" dur="12s" repeatCount="indefinite"/>
   <animate attributeName="cy" values="290;278;290" dur="4s" repeatCount="indefinite"/></circle>
-<g>
-  <line x1="0" y1="54" x2="1200" y2="54" stroke="rgba(255,7,58,.14)"/>
-  <text x="30" y="34" fill="#eeedf2" font-size="11" letter-spacing="3">BELENTANI@NOIACORE</text>
-  <text x="264" y="34" fill="#ff5078" font-size="11" letter-spacing="2">OMEGA_CLEAN // RENDERING</text>
-  <g font-size="10" letter-spacing="2" fill="rgba(238,237,242,.56)">
-    <text x="430" y="34" opacity="0"><animate attributeName="opacity" values="0;1;0" begin="0s" dur="16.799999999999997s" repeatCount="indefinite"/><tspan fill="#ff5078">TYPE</tspan>//</text><text x="492" y="34" opacity="0"><animate attributeName="opacity" values="0;1;0" begin="1.4s" dur="16.799999999999997s" repeatCount="indefinite"/><tspan fill="#00ffff">VOICE</tspan>//</text><text x="554" y="34" opacity="0"><animate attributeName="opacity" values="0;1;0" begin="2.8s" dur="16.799999999999997s" repeatCount="indefinite"/><tspan fill="#ff5078">SHADER</tspan>//</text><text x="616" y="34" opacity="0"><animate attributeName="opacity" values="0;1;0" begin="4.199999999999999s" dur="16.799999999999997s" repeatCount="indefinite"/><tspan fill="#00ffff">OS</tspan>//</text><text x="678" y="34" opacity="0"><animate attributeName="opacity" values="0;1;0" begin="5.6s" dur="16.799999999999997s" repeatCount="indefinite"/><tspan fill="#ff5078">NET</tspan>//</text><text x="740" y="34" opacity="0"><animate attributeName="opacity" values="0;1;0" begin="7s" dur="16.799999999999997s" repeatCount="indefinite"/><tspan fill="#00ffff">SONG</tspan>//</text><text x="802" y="34" opacity="0"><animate attributeName="opacity" values="0;1;0" begin="8.399999999999999s" dur="16.799999999999997s" repeatCount="indefinite"/><tspan fill="#ff5078">LEARN</tspan>//</text><text x="864" y="34" opacity="0"><animate attributeName="opacity" values="0;1;0" begin="9.799999999999999s" dur="16.799999999999997s" repeatCount="indefinite"/><tspan fill="#00ffff">BUILD</tspan>//</text><text x="926" y="34" opacity="0"><animate attributeName="opacity" values="0;1;0" begin="11.2s" dur="16.799999999999997s" repeatCount="indefinite"/><tspan fill="#ff5078">SIGNAL</tspan>//</text><text x="988" y="34" opacity="0"><animate attributeName="opacity" values="0;1;0" begin="12.6s" dur="16.799999999999997s" repeatCount="indefinite"/><tspan fill="#00ffff">GLITCH</tspan>//</text><text x="1050" y="34" opacity="0"><animate attributeName="opacity" values="0;1;0" begin="14s" dur="16.799999999999997s" repeatCount="indefinite"/><tspan fill="#ff5078">CORE</tspan>//</text><text x="1112" y="34" opacity="0"><animate attributeName="opacity" values="0;1;0" begin="15.399999999999999s" dur="16.799999999999997s" repeatCount="indefinite"/><tspan fill="#00ffff">LOOP</tspan>//</text>
-  </g>
-  <text x="1170" y="34" text-anchor="end" fill="#00ffc8" font-size="11" letter-spacing="2">
-    <tspan fill="#00ffc8"><animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>●</tspan> LIVE</text>
-</g><g transform="translate(600,230)">
-  <text class="ghost-c" x="-2" y="0" text-anchor="middle" font-size="92" letter-spacing="10">BELENTANI</text>
-  <text class="ghost-r" x="2" y="0" text-anchor="middle" font-size="92" letter-spacing="10">BELENTANI</text>
-  <text x="0" y="0" text-anchor="middle" font-size="92" letter-spacing="10" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2" filter="url(#glow)">
-    <animate attributeName="fill-opacity" values="1;.78;1" dur="1.5s" repeatCount="indefinite"/>BELENTANI</text>
-</g><g transform="translate(600,262)">
-  <rect x="-320" y="12" width="640" height="24" fill="rgba(255,7,58,.05)"/>
-  <text y="29" text-anchor="middle" font-family="'Consolas','JetBrains Mono',monospace" font-size="12" letter-spacing="5" fill="#ff5078">NEURAL CORE · CONSCIOUSNESS ENGINE</text>
-</g><g transform="translate(0,287)">
-  <rect x="-420" y="0" width="200" height="2" fill="url(#scanG)">
-    <animateTransform attributeName="transform" type="translate" values="-360 0;420 0" dur="3s" repeatCount="indefinite"/>
-  </rect></g><g transform="translate(600,336)">
-  <text x="0" y="0" text-anchor="middle" font-size="19" letter-spacing="5" fill="#ff073a" filter="url(#soft)">Neural Architect · Voice AI · Zero-Token Routing</text>
-  <text x="0" y="28" text-anchor="middle" font-size="13" letter-spacing="3" fill="rgba(238,237,242,.56)">L'Hospitalet, Barcelona — n. São Paulo · 109 repos · 8 languages · ∞ archetypes</text>
-</g>
-<g transform="translate(70,180)">
-  <text x="0" y="0" font-size="12" letter-spacing="3" fill="rgba(238,237,242,.56)">ACTIVE ECOSYSTEMS</text>
-  <a xlink:href="https://belentani.vercel.app" target="_blank" style="cursor:pointer">
-  <g transform="translate(0,12)">
-    <animate attributeName="opacity" values=".35;1;.35" dur="2s" repeatCount="indefinite"/>
-    <rect width="150" height="30" rx="4" fill="#0a0a0f" stroke="#ff073a" stroke-opacity=".2"/>
-    <text x="10" y="20" font-size="13" letter-spacing="2" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">NOIACORE</text></g></a><a xlink:href="https://belentani7.github.io/heyduck/" target="_blank" style="cursor:pointer">
-  <g transform="translate(0,52)">
-    <animate attributeName="opacity" values=".35;1;.35" dur="3.2s" repeatCount="indefinite"/>
-    <rect width="150" height="30" rx="4" fill="#0a0a0f" stroke="#ff073a" stroke-opacity=".2"/>
-    <text x="10" y="20" font-size="13" letter-spacing="2" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">DUCK</text></g></a><a xlink:href="https://judas-experience-13898.buildaispace.app/" target="_blank" style="cursor:pointer">
-  <g transform="translate(0,92)">
-    <animate attributeName="opacity" values=".35;1;.35" dur="4.4s" repeatCount="indefinite"/>
-    <rect width="150" height="30" rx="4" fill="#0a0a0f" stroke="#ff073a" stroke-opacity=".2"/>
-    <text x="10" y="20" font-size="13" letter-spacing="2" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">JUDAS</text></g></a><a xlink:href="https://belentani.vercel.app" target="_blank" style="cursor:pointer">
-  <g transform="translate(0,132)">
-    <animate attributeName="opacity" values=".35;1;.35" dur="2s" repeatCount="indefinite"/>
-    <rect width="150" height="30" rx="4" fill="#0a0a0f" stroke="#ff073a" stroke-opacity=".2"/>
-    <text x="10" y="20" font-size="13" letter-spacing="2" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">OMEGA</text></g></a><a xlink:href="https://belentani7.github.io/secure-t/" target="_blank" style="cursor:pointer">
-  <g transform="translate(0,172)">
-    <animate attributeName="opacity" values=".35;1;.35" dur="3.2s" repeatCount="indefinite"/>
-    <rect width="150" height="30" rx="4" fill="#0a0a0f" stroke="#ff073a" stroke-opacity=".2"/>
-    <text x="10" y="20" font-size="13" letter-spacing="2" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">secure-t</text></g></a><a xlink:href="https://manosabiertas-seven.vercel.app" target="_blank" style="cursor:pointer">
-  <g transform="translate(0,212)">
-    <animate attributeName="opacity" values=".35;1;.35" dur="4.4s" repeatCount="indefinite"/>
-    <rect width="150" height="30" rx="4" fill="#0a0a0f" stroke="#ff073a" stroke-opacity=".2"/>
-    <text x="10" y="20" font-size="13" letter-spacing="2" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">ManosAbiertas</text></g></a><a xlink:href="http://www.belentani.es/" target="_blank" style="cursor:pointer">
-  <g transform="translate(0,252)">
-    <animate attributeName="opacity" values=".35;1;.35" dur="2s" repeatCount="indefinite"/>
-    <rect width="150" height="30" rx="4" fill="#0a0a0f" stroke="#ff073a" stroke-opacity=".2"/>
-    <text x="10" y="20" font-size="13" letter-spacing="2" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">CARQUIDEC</text></g></a><a xlink:href="https://belentani.vercel.app" target="_blank" style="cursor:pointer">
-  <g transform="translate(0,292)">
-    <animate attributeName="opacity" values=".35;1;.35" dur="3.2s" repeatCount="indefinite"/>
-    <rect width="150" height="30" rx="4" fill="#0a0a0f" stroke="#ff073a" stroke-opacity=".2"/>
-    <text x="10" y="20" font-size="13" letter-spacing="2" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">proofmesh</text></g></a>
-</g><g transform="translate(880,180)">
-  <a xlink:href="https://belentani.vercel.app" target="_blank" style="cursor:pointer">
-  <g transform="translate(0,0)" opacity="0">
-    <animate attributeName="opacity" values="0;1;1;0" begin="0s" dur="13.2s" repeatCount="indefinite"/>
-    <g>
-      <animateTransform attributeName="transform" type="scale" values="1;1.015;1" dur="2.4s" repeatCount="indefinite"/>
-      <rect x="10" y="-16" width="280" height="52" rx="6" fill="#0a0a0f" stroke="#ff073a" stroke-opacity=".22">
-        <animate attributeName="stroke-opacity" values=".22;.7;.22" dur="2.4s" repeatCount="indefinite"/>
-      </rect>
-    </g>
-    <circle cx="26" cy="10" r="5" fill="#ff073a"><animate attributeName="opacity" values="1;.2;1" dur="1.2s" repeatCount="indefinite"/></circle>
-    <text x="42" y="0" font-size="16" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">NOIACORE LAB</text>
-    <text x="42" y="20" font-size="12" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">React 19 · tRPC · LLM · <tspan fill="#ff073a">LIVE</tspan></text>
-  </g></a><a xlink:href="https://belentani.vercel.app" target="_blank" style="cursor:pointer">
-  <g transform="translate(0,56)" opacity="0">
-    <animate attributeName="opacity" values="0;1;1;0" begin="2.2s" dur="13.2s" repeatCount="indefinite"/>
-    <g>
-      <animateTransform attributeName="transform" type="scale" values="1;1.015;1" dur="2.4s" repeatCount="indefinite"/>
-      <rect x="10" y="-16" width="280" height="52" rx="6" fill="#0a0a0f" stroke="#ff073a" stroke-opacity=".22">
-        <animate attributeName="stroke-opacity" values=".22;.7;.22" dur="2.4s" repeatCount="indefinite"/>
-      </rect>
-    </g>
-    <circle cx="26" cy="10" r="5" fill="#ff073a"><animate attributeName="opacity" values="1;.2;1" dur="1.2s" repeatCount="indefinite"/></circle>
-    <text x="42" y="0" font-size="16" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">meta-skill</text>
-    <text x="42" y="20" font-size="12" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">Zero-token routing · <tspan fill="#ff073a">16 archetypes</tspan></text>
-  </g></a><a xlink:href="https://belentani-experience.vercel.app" target="_blank" style="cursor:pointer">
-  <g transform="translate(0,112)" opacity="0">
-    <animate attributeName="opacity" values="0;1;1;0" begin="4.4s" dur="13.2s" repeatCount="indefinite"/>
-    <g>
-      <animateTransform attributeName="transform" type="scale" values="1;1.015;1" dur="2.4s" repeatCount="indefinite"/>
-      <rect x="10" y="-16" width="280" height="52" rx="6" fill="#0a0a0f" stroke="#ff073a" stroke-opacity=".22">
-        <animate attributeName="stroke-opacity" values=".22;.7;.22" dur="2.4s" repeatCount="indefinite"/>
-      </rect>
-    </g>
-    <circle cx="26" cy="10" r="5" fill="#ff073a"><animate attributeName="opacity" values="1;.2;1" dur="1.2s" repeatCount="indefinite"/></circle>
-    <text x="42" y="0" font-size="16" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">nexus-os</text>
-    <text x="42" y="20" font-size="12" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">Neon Glass OS · 38+ apps · <tspan fill="#ff073a">ZERO DEPS</tspan></text>
-  </g></a><a xlink:href="https://belentani7.github.io/secure-t/" target="_blank" style="cursor:pointer">
-  <g transform="translate(0,168)" opacity="0">
-    <animate attributeName="opacity" values="0;1;1;0" begin="6.6000000000000005s" dur="13.2s" repeatCount="indefinite"/>
-    <g>
-      <animateTransform attributeName="transform" type="scale" values="1;1.015;1" dur="2.4s" repeatCount="indefinite"/>
-      <rect x="10" y="-16" width="280" height="52" rx="6" fill="#0a0a0f" stroke="#ff073a" stroke-opacity=".22">
-        <animate attributeName="stroke-opacity" values=".22;.7;.22" dur="2.4s" repeatCount="indefinite"/>
-      </rect>
-    </g>
-    <circle cx="26" cy="10" r="5" fill="#ff073a"><animate attributeName="opacity" values="1;.2;1" dur="1.2s" repeatCount="indefinite"/></circle>
-    <text x="42" y="0" font-size="16" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">secure-t</text>
-    <text x="42" y="20" font-size="12" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">Cyber + AI Academy · <tspan fill="#ff073a">LIVE</tspan></text>
-  </g></a><a xlink:href="https://belentani7.github.io/heyduck/" target="_blank" style="cursor:pointer">
-  <g transform="translate(0,224)" opacity="0">
-    <animate attributeName="opacity" values="0;1;1;0" begin="8.8s" dur="13.2s" repeatCount="indefinite"/>
-    <g>
-      <animateTransform attributeName="transform" type="scale" values="1;1.015;1" dur="2.4s" repeatCount="indefinite"/>
-      <rect x="10" y="-16" width="280" height="52" rx="6" fill="#0a0a0f" stroke="#ff073a" stroke-opacity=".22">
-        <animate attributeName="stroke-opacity" values=".22;.7;.22" dur="2.4s" repeatCount="indefinite"/>
-      </rect>
-    </g>
-    <circle cx="26" cy="10" r="5" fill="#ff073a"><animate attributeName="opacity" values="1;.2;1" dur="1.2s" repeatCount="indefinite"/></circle>
-    <text x="42" y="0" font-size="16" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">DUCK Ecosystem</text>
-    <text x="42" y="20" font-size="12" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">Astro · studio apps · <tspan fill="#ff073a">6 MODULES</tspan></text>
-  </g></a><a xlink:href="https://belentani.vercel.app" target="_blank" style="cursor:pointer">
-  <g transform="translate(0,280)" opacity="0">
-    <animate attributeName="opacity" values="0;1;1;0" begin="11s" dur="13.2s" repeatCount="indefinite"/>
-    <g>
-      <animateTransform attributeName="transform" type="scale" values="1;1.015;1" dur="2.4s" repeatCount="indefinite"/>
-      <rect x="10" y="-16" width="280" height="52" rx="6" fill="#0a0a0f" stroke="#ff073a" stroke-opacity=".22">
-        <animate attributeName="stroke-opacity" values=".22;.7;.22" dur="2.4s" repeatCount="indefinite"/>
-      </rect>
-    </g>
-    <circle cx="26" cy="10" r="5" fill="#ff073a"><animate attributeName="opacity" values="1;.2;1" dur="1.2s" repeatCount="indefinite"/></circle>
-    <text x="42" y="0" font-size="16" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">Voice Clone</text>
-    <text x="42" y="20" font-size="12" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">RVC · Applio · Kaggle GPU · <tspan fill="#ff073a">47 stems</tspan></text>
-  </g></a>
-</g><g transform="translate(0,588)">
-  <rect x="0" y="-20" width="1200" height="52" fill="#040406" opacity=".97"/>
-  <g><animateTransform attributeName="transform" type="translate" from="0 0" to="-2959 0" dur="28s" repeatCount="indefinite"/>
-   <text x="0" y="14" font-size="15" letter-spacing="3" fill="#00ffc8" opacity=".85" filter="url(#soft)">TypeScript  ·  Python  ·  Java  ·  Go  ·  JavaScript  ·  HTML  ·  CSS  ·  PowerShell  ·  React 19  ·  Next.js  ·  Astro  ·  Vite  ·  tRPC  ·  Node  ·  Express  ·  Drizzle  ·  MySQL  ·  Redis  ·  Three.js  ·  R3F  ·  GSAP  ·  Lenis  ·  RVC  ·  Applio  ·  Whisper  ·  Demucs  ·  Tone.js  ·  Claude Code  ·  Qwen Code  ·  OpenCode  ·  TypeScript  ·  Python  ·  Java  ·  Go  ·  JavaScript  ·  HTML  ·  CSS  ·  PowerShell  ·  React 19  ·  Next.js  ·  Astro  ·  Vite  ·  tRPC  ·  Node  ·  Express  ·  Drizzle  ·  MySQL  ·  Redis  ·  Three.js  ·  R3F  ·  GSAP  ·  Lenis  ·  RVC  ·  Applio  ·  Whisper  ·  Demucs  ·  Tone.js  ·  Claude Code  ·  Qwen Code  ·  OpenCode</text></g>
-</g>
-
-  <g transform="translate(0,40)">
-    <rect width="1200" height="5" fill="#00ffff" opacity="0">
-      <animate attributeName="opacity" values="0;0;0.5;0;0;0.9;0;0;0;0" keyTimes="0;0.015;0.02;0.03;0.31;0.315;0.32;0.33;0.92;1" dur="6s" repeatCount="indefinite"/>
-      <animateTransform attributeName="transform" type="translate" values="0 0;-22 0;14 0;0 0" keyTimes="0;0.02;0.025;0.03" dur="6s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g transform="translate(0,96)">
-    <rect width="1200" height="3" fill="#ff073a" opacity="0">
-      <animate attributeName="opacity" values="0;0;0.5;0;0;0.9;0;0;0;0" keyTimes="0;0.015;0.02;0.03;0.31;0.315;0.32;0.33;0.92;1" dur="7s" repeatCount="indefinite"/>
-      <animateTransform attributeName="transform" type="translate" values="0 0;-22 0;14 0;0 0" keyTimes="0;0.02;0.025;0.03" dur="7s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g transform="translate(0,150)">
-    <rect width="1200" height="5" fill="#ff5078" opacity="0">
-      <animate attributeName="opacity" values="0;0;0.5;0;0;0.9;0;0;0;0" keyTimes="0;0.015;0.02;0.03;0.31;0.315;0.32;0.33;0.92;1" dur="8s" repeatCount="indefinite"/>
-      <animateTransform attributeName="transform" type="translate" values="0 0;-22 0;14 0;0 0" keyTimes="0;0.02;0.025;0.03" dur="8s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g transform="translate(0,208)">
-    <rect width="1200" height="3" fill="#00ffff" opacity="0">
-      <animate attributeName="opacity" values="0;0;0.5;0;0;0.9;0;0;0;0" keyTimes="0;0.015;0.02;0.03;0.31;0.315;0.32;0.33;0.92;1" dur="9s" repeatCount="indefinite"/>
-      <animateTransform attributeName="transform" type="translate" values="0 0;-22 0;14 0;0 0" keyTimes="0;0.02;0.025;0.03" dur="9s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g transform="translate(0,260)">
-    <rect width="1200" height="5" fill="#ff073a" opacity="0">
-      <animate attributeName="opacity" values="0;0;0.5;0;0;0.9;0;0;0;0" keyTimes="0;0.015;0.02;0.03;0.31;0.315;0.32;0.33;0.92;1" dur="6s" repeatCount="indefinite"/>
-      <animateTransform attributeName="transform" type="translate" values="0 0;-22 0;14 0;0 0" keyTimes="0;0.02;0.025;0.03" dur="6s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g transform="translate(0,330)">
-    <rect width="1200" height="3" fill="#ff5078" opacity="0">
-      <animate attributeName="opacity" values="0;0;0.5;0;0;0.9;0;0;0;0" keyTimes="0;0.015;0.02;0.03;0.31;0.315;0.32;0.33;0.92;1" dur="7s" repeatCount="indefinite"/>
-      <animateTransform attributeName="transform" type="translate" values="0 0;-22 0;14 0;0 0" keyTimes="0;0.02;0.025;0.03" dur="7s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g transform="translate(0,400)">
-    <rect width="1200" height="5" fill="#00ffff" opacity="0">
-      <animate attributeName="opacity" values="0;0;0.5;0;0;0.9;0;0;0;0" keyTimes="0;0.015;0.02;0.03;0.31;0.315;0.32;0.33;0.92;1" dur="8s" repeatCount="indefinite"/>
-      <animateTransform attributeName="transform" type="translate" values="0 0;-22 0;14 0;0 0" keyTimes="0;0.02;0.025;0.03" dur="8s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g transform="translate(0,470)">
-    <rect width="1200" height="3" fill="#ff073a" opacity="0">
-      <animate attributeName="opacity" values="0;0;0.5;0;0;0.9;0;0;0;0" keyTimes="0;0.015;0.02;0.03;0.31;0.315;0.32;0.33;0.92;1" dur="9s" repeatCount="indefinite"/>
-      <animateTransform attributeName="transform" type="translate" values="0 0;-22 0;14 0;0 0" keyTimes="0;0.02;0.025;0.03" dur="9s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g transform="translate(0,530)">
-    <rect width="1200" height="5" fill="#ff5078" opacity="0">
-      <animate attributeName="opacity" values="0;0;0.5;0;0;0.9;0;0;0;0" keyTimes="0;0.015;0.02;0.03;0.31;0.315;0.32;0.33;0.92;1" dur="6s" repeatCount="indefinite"/>
-      <animateTransform attributeName="transform" type="translate" values="0 0;-22 0;14 0;0 0" keyTimes="0;0.02;0.025;0.03" dur="6s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g transform="translate(0,590)">
-    <rect width="1200" height="3" fill="#00ffff" opacity="0">
-      <animate attributeName="opacity" values="0;0;0.5;0;0;0.9;0;0;0;0" keyTimes="0;0.015;0.02;0.03;0.31;0.315;0.32;0.33;0.92;1" dur="7s" repeatCount="indefinite"/>
-      <animateTransform attributeName="transform" type="translate" values="0 0;-22 0;14 0;0 0" keyTimes="0;0.02;0.025;0.03" dur="7s" repeatCount="indefinite"/>
-    </rect>
-  </g><g><rect x="0" y="0" width="1200" height="90" fill="url(#scanG)">
-  <animateTransform attributeName="transform" type="translate" from="0 -200" to="0 640" dur="4.5s" repeatCount="indefinite"/>
-</rect></g><g transform="translate(600,270)">
-  <circle r="0" fill="url(#novaG)">
+<g transform="translate(600,300)">
+  <circle r="0" fill="url(#hNova)">
     <animate attributeName="opacity" values="0;0;1;0" keyTimes="0;0.955;0.965;1" dur="9s" repeatCount="indefinite"/>
     <animateTransform attributeName="transform" type="scale" values="0.5;0.5;1.5;2.4" keyTimes="0;0.955;0.97;1" dur="9s" repeatCount="indefinite"/>
   </circle>
@@ -287,27 +129,329 @@
     <animate attributeName="opacity" values="0;0;1;0" keyTimes="0;0.955;0.98;1" dur="9s" repeatCount="indefinite"/>
     <animateTransform attributeName="transform" type="scale" values="0.4;0.4;1.2;3" keyTimes="0;0.955;0.99;1" dur="9s" repeatCount="indefinite"/>
   </circle>
-</g><rect width="1200" height="640" fill="#fff" filter="url(#grainF)" opacity=".05" mix-blend-mode="overlay">
-  <animateTransform attributeName="transform" type="translate" values="0 0;-10 -14;14 9;-9 12;12 -8;-6 5" dur=".9s" repeatCount="indefinite"/>
-</rect><g transform="translate(600,270)">
+</g><g transform="translate(600,300)" pointer-events="none">
   <circle r="0" fill="none" stroke="#ff073a" stroke-width="1.5" opacity="0">
-    <animate attributeName="r" values="20;170" dur="3.6s" repeatCount="indefinite" begin="0s"/>
+    <animate attributeName="r" values="20;190" dur="3.6s" repeatCount="indefinite" begin="0s"/>
     <animate attributeName="opacity" values=".8;0" dur="3.6s" repeatCount="indefinite" begin="0s"/>
-  </circle></g><g transform="translate(600,270)">
+  </circle></g><g transform="translate(600,300)" pointer-events="none">
   <circle r="0" fill="none" stroke="#00ffc8" stroke-width="1.5" opacity="0">
-    <animate attributeName="r" values="20;170" dur="3.6s" repeatCount="indefinite" begin="1.2s"/>
+    <animate attributeName="r" values="20;190" dur="3.6s" repeatCount="indefinite" begin="1.2s"/>
     <animate attributeName="opacity" values=".8;0" dur="3.6s" repeatCount="indefinite" begin="1.2s"/>
-  </circle></g><g transform="translate(600,270)">
+  </circle></g><g transform="translate(600,300)" pointer-events="none">
   <circle r="0" fill="none" stroke="#ff073a" stroke-width="1.5" opacity="0">
-    <animate attributeName="r" values="20;170" dur="3.6s" repeatCount="indefinite" begin="2.4s"/>
+    <animate attributeName="r" values="20;190" dur="3.6s" repeatCount="indefinite" begin="2.4s"/>
     <animate attributeName="opacity" values=".8;0" dur="3.6s" repeatCount="indefinite" begin="2.4s"/>
-  </circle></g><g>
-  <polygon points="-300,-200 900,-200 1500,1400 300,1400" fill="url(#shimG)" opacity="0">
-    <animate attributeName="opacity" values="0;0;.5;0" keyTimes="0;0.545;0.57;0.62" dur="5.5s" repeatCount="indefinite"/>
+  </circle></g><g pointer-events="none">
+  <polygon points="-300,-200 900,-200 1500,1400 300,1400" fill="url(#hShim)" opacity="0">
+    <animate attributeName="opacity" values="0;0;.5;0;0" keyTimes="0;0.545;0.57;0.62;1" dur="5.5s" repeatCount="indefinite"/>
     <animateTransform attributeName="transform" type="translate" values="-1500 0;500 0" dur="5.5s" repeatCount="indefinite"/>
   </polygon></g>
-<g transform="translate(600,544)">
-  <text x="0" y="0" text-anchor="middle" font-size="17" font-style="italic" fill="#eeedf2" filter="url(#soft)">"Fazer visível o que importa."</text>
-  <text x="264" y="0" font-size="17" fill="#ff073a">_<animate attributeName="opacity" values="1;0;1" dur=".8s" repeatCount="indefinite"/></text>
+  <g transform="translate(0,40)" pointer-events="none">
+    <rect width="1200" height="5" fill="#00ffff" opacity="0">
+      <animate attributeName="opacity" values="0;0;0.5;0;0;0.9;0;0;0;0" keyTimes="0;0.015;0.02;0.03;0.31;0.315;0.32;0.33;0.92;1" dur="6s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0 0;-22 0;14 0;0 0;0 0" keyTimes="0;0.02;0.025;0.03;1" dur="6s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <g transform="translate(0,96)" pointer-events="none">
+    <rect width="1200" height="3" fill="#ff073a" opacity="0">
+      <animate attributeName="opacity" values="0;0;0.5;0;0;0.9;0;0;0;0" keyTimes="0;0.015;0.02;0.03;0.31;0.315;0.32;0.33;0.92;1" dur="7s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0 0;-22 0;14 0;0 0;0 0" keyTimes="0;0.02;0.025;0.03;1" dur="7s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <g transform="translate(0,150)" pointer-events="none">
+    <rect width="1200" height="5" fill="#ff5078" opacity="0">
+      <animate attributeName="opacity" values="0;0;0.5;0;0;0.9;0;0;0;0" keyTimes="0;0.015;0.02;0.03;0.31;0.315;0.32;0.33;0.92;1" dur="8s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0 0;-22 0;14 0;0 0;0 0" keyTimes="0;0.02;0.025;0.03;1" dur="8s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <g transform="translate(0,208)" pointer-events="none">
+    <rect width="1200" height="3" fill="#00ffff" opacity="0">
+      <animate attributeName="opacity" values="0;0;0.5;0;0;0.9;0;0;0;0" keyTimes="0;0.015;0.02;0.03;0.31;0.315;0.32;0.33;0.92;1" dur="9s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0 0;-22 0;14 0;0 0;0 0" keyTimes="0;0.02;0.025;0.03;1" dur="9s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <g transform="translate(0,260)" pointer-events="none">
+    <rect width="1200" height="5" fill="#ff073a" opacity="0">
+      <animate attributeName="opacity" values="0;0;0.5;0;0;0.9;0;0;0;0" keyTimes="0;0.015;0.02;0.03;0.31;0.315;0.32;0.33;0.92;1" dur="6s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0 0;-22 0;14 0;0 0;0 0" keyTimes="0;0.02;0.025;0.03;1" dur="6s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <g transform="translate(0,330)" pointer-events="none">
+    <rect width="1200" height="3" fill="#ff5078" opacity="0">
+      <animate attributeName="opacity" values="0;0;0.5;0;0;0.9;0;0;0;0" keyTimes="0;0.015;0.02;0.03;0.31;0.315;0.32;0.33;0.92;1" dur="7s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0 0;-22 0;14 0;0 0;0 0" keyTimes="0;0.02;0.025;0.03;1" dur="7s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <g transform="translate(0,400)" pointer-events="none">
+    <rect width="1200" height="5" fill="#00ffff" opacity="0">
+      <animate attributeName="opacity" values="0;0;0.5;0;0;0.9;0;0;0;0" keyTimes="0;0.015;0.02;0.03;0.31;0.315;0.32;0.33;0.92;1" dur="8s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0 0;-22 0;14 0;0 0;0 0" keyTimes="0;0.02;0.025;0.03;1" dur="8s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <g transform="translate(0,470)" pointer-events="none">
+    <rect width="1200" height="3" fill="#ff073a" opacity="0">
+      <animate attributeName="opacity" values="0;0;0.5;0;0;0.9;0;0;0;0" keyTimes="0;0.015;0.02;0.03;0.31;0.315;0.32;0.33;0.92;1" dur="9s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0 0;-22 0;14 0;0 0;0 0" keyTimes="0;0.02;0.025;0.03;1" dur="9s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <g transform="translate(0,530)" pointer-events="none">
+    <rect width="1200" height="5" fill="#ff5078" opacity="0">
+      <animate attributeName="opacity" values="0;0;0.5;0;0;0.9;0;0;0;0" keyTimes="0;0.015;0.02;0.03;0.31;0.315;0.32;0.33;0.92;1" dur="6s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0 0;-22 0;14 0;0 0;0 0" keyTimes="0;0.02;0.025;0.03;1" dur="6s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <g transform="translate(0,590)" pointer-events="none">
+    <rect width="1200" height="3" fill="#00ffff" opacity="0">
+      <animate attributeName="opacity" values="0;0;0.5;0;0;0.9;0;0;0;0" keyTimes="0;0.015;0.02;0.03;0.31;0.315;0.32;0.33;0.92;1" dur="7s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0 0;-22 0;14 0;0 0;0 0" keyTimes="0;0.02;0.025;0.03;1" dur="7s" repeatCount="indefinite"/>
+    </rect>
+  </g><g pointer-events="none"><rect x="0" y="0" width="1200" height="90" fill="url(#hScanY)">
+  <animateTransform attributeName="transform" type="translate" from="0 -200" to="0 660" dur="4.5s" repeatCount="indefinite"/>
+</rect></g><rect width="1200" height="660" fill="#ffffff" filter="url(#hGrain)" opacity=".05" pointer-events="none">
+  <animateTransform attributeName="transform" type="translate" values="0 0;-10 -14;14 9;-9 12;12 -8;-6 5" dur=".9s" repeatCount="indefinite"/>
+</rect>
+<g>
+  <rect x="56" y="72" width="1088" height="472" rx="28" fill="#ff073a" fill-opacity=".08" filter="url(#hBig)"/>
+  <rect x="48" y="64" width="1104" height="488" rx="24" fill="url(#hGlass)" stroke="url(#hGlassStroke)" stroke-width="1.2"/>
+  <line x1="76" y1="65" x2="1124" y2="65" stroke="url(#hEdge)" stroke-width="1.4"/>
+  <path d="M 78 64 L 48 64 L 48 94" fill="none" stroke="#ff073a" stroke-width="1.6" stroke-opacity=".7" filter="url(#hSoft)">
+    <animate attributeName="stroke-opacity" values=".25;.8;.25" dur="3s" repeatCount="indefinite"/></path>
+  <path d="M 1122 64 L 1152 64 L 1152 94" fill="none" stroke="#ff073a" stroke-width="1.6" stroke-opacity=".7" filter="url(#hSoft)">
+    <animate attributeName="stroke-opacity" values=".8;.25;.8" dur="3.4s" repeatCount="indefinite"/></path>
+  <path d="M 48 522 L 48 552 L 78 552" fill="none" stroke="#ff073a" stroke-width="1.6" stroke-opacity=".7" filter="url(#hSoft)">
+    <animate attributeName="stroke-opacity" values=".6;.2;.6" dur="3.8s" repeatCount="indefinite"/></path>
+  <path d="M 1152 522 L 1152 552 L 1122 552" fill="none" stroke="#ff073a" stroke-width="1.6" stroke-opacity=".7" filter="url(#hSoft)">
+    <animate attributeName="stroke-opacity" values=".2;.7;.2" dur="4.2s" repeatCount="indefinite"/></path>
+  <g transform="translate(48,64)" pointer-events="none">
+    <rect x="1.5" y="60" width="3" height="52" rx="1.5" fill="url(#hTube)" opacity=".5" filter="url(#hSoft)">
+      <animate attributeName="y" values="40;424;40" dur="9s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values=".15;.6;.15" dur="9s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="1102.5" y="400" width="3" height="40" rx="1.5" fill="url(#hTube)" opacity=".35" filter="url(#hSoft)">
+      <animate attributeName="y" values="420;60;420" dur="11s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values=".1;.5;.1" dur="11s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</g>
+<g text-anchor="middle" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif">
+  <g transform="translate(600,168)">
+    <text x="-3" font-size="52" letter-spacing="10" fill="#00ffff" opacity="0">THE BELENTANI
+      <animate attributeName="opacity" values="0;0;.5;0;0;.55;0;0" keyTimes="0;.40;.42;.44;.70;.72;.74;1" dur="8s" repeatCount="indefinite"/></text>
+    <text x="3" font-size="52" letter-spacing="10" fill="#ff073a" opacity="0">THE BELENTANI
+      <animate attributeName="opacity" values="0;0;0;.5;0;0;.55;0" keyTimes="0;.41;.43;.45;.71;.73;.75;1" dur="8s" repeatCount="indefinite"/></text>
+    <text font-size="52" letter-spacing="10" fill="#eeedf2" filter="url(#hGlow)">THE BELENTANI
+      <animate attributeName="fill-opacity" values="1;.82;1" dur="1.8s" repeatCount="indefinite"/></text>
+  </g>
+  <g transform="translate(600,236)">
+    <text x="-3" font-size="52" letter-spacing="22" fill="#00ffff" opacity="0">EXPERIENCE
+      <animate attributeName="opacity" values="0;0;.45;0;0;.5;0;0" keyTimes="0;.20;.22;.24;.60;.62;.64;1" dur="9s" repeatCount="indefinite"/></text>
+    <text x="3" font-size="52" letter-spacing="22" fill="#ff073a" opacity="0">EXPERIENCE
+      <animate attributeName="opacity" values="0;0;0;.45;0;0;.5;0" keyTimes="0;.21;.23;.25;.61;.63;.65;1" dur="9s" repeatCount="indefinite"/></text>
+    <text font-size="52" letter-spacing="22" fill="#ff073a" filter="url(#hGlow)">EXPERIENCE
+      <animate attributeName="fill-opacity" values="1;.74;1" dur="1.5s" repeatCount="indefinite"/></text>
+  </g>
+</g><g transform="translate(600,270)">
+  <rect x="-330" y="10" width="660" height="22" fill="#ff073a" fill-opacity=".05"/>
+  <text y="26" text-anchor="middle" font-family="'Consolas','JetBrains Mono',monospace" font-size="12" letter-spacing="5" fill="#ff5078">NEURAL CORE · CONSCIOUSNESS ENGINE</text>
+  <rect x="-420" y="21" width="200" height="2" fill="url(#hScanY)" pointer-events="none">
+    <animateTransform attributeName="transform" type="translate" values="-360 0;420 0" dur="3s" repeatCount="indefinite"/>
+  </rect>
+</g><g transform="translate(600,322)" text-anchor="middle">
+  <text font-size="18" letter-spacing="4" fill="#ff073a" filter="url(#hSoft)">Neural Architect · Voice AI · Zero-Token Routing</text>
+  <text y="26" font-size="12.5" letter-spacing="3" fill="rgba(238,237,242,.56)">L'Hospitalet, Barcelona — n. São Paulo · 114 repos · 8 languages · ∞ archetypes</text>
+</g>
+<g transform="translate(64,150)">
+  <text x="0" y="0" font-size="12" letter-spacing="3" fill="rgba(238,237,242,.56)">ACTIVE ECOSYSTEMS</text>
+  <a xlink:href="https://belentani.vercel.app" target="_blank">
+  <g transform="translate(0,12)">
+    <animate attributeName="opacity" values=".35;1;.35" dur="2s" repeatCount="indefinite"/>
+    <rect width="150" height="30" rx="8" fill="url(#hGlass)" stroke="url(#hGlassStroke)"/>
+    <rect x="7" y="12" width="6" height="6" rx="3" fill="#ff073a"><animate attributeName="opacity" values="1;.2;1" dur="1.4s" repeatCount="indefinite"/></rect>
+    <text x="20" y="20" font-size="12" letter-spacing="2" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">NOIACORE</text></g></a><a xlink:href="https://belentani-experience.vercel.app" target="_blank">
+  <g transform="translate(0,52)">
+    <animate attributeName="opacity" values=".35;1;.35" dur="3.2s" repeatCount="indefinite"/>
+    <rect width="150" height="30" rx="8" fill="url(#hGlass)" stroke="url(#hGlassStroke)"/>
+    <rect x="7" y="12" width="6" height="6" rx="3" fill="#ff073a"><animate attributeName="opacity" values="1;.2;1" dur="1.7s" repeatCount="indefinite"/></rect>
+    <text x="20" y="20" font-size="12" letter-spacing="2" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">EXPERIENCE</text></g></a><a xlink:href="https://judas-experience.vercel.app" target="_blank">
+  <g transform="translate(0,92)">
+    <animate attributeName="opacity" values=".35;1;.35" dur="4.4s" repeatCount="indefinite"/>
+    <rect width="150" height="30" rx="8" fill="url(#hGlass)" stroke="url(#hGlassStroke)"/>
+    <rect x="7" y="12" width="6" height="6" rx="3" fill="#ff073a"><animate attributeName="opacity" values="1;.2;1" dur="2s" repeatCount="indefinite"/></rect>
+    <text x="20" y="20" font-size="12" letter-spacing="2" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">JUDAS</text></g></a><a xlink:href="https://belentani.vercel.app" target="_blank">
+  <g transform="translate(0,132)">
+    <animate attributeName="opacity" values=".35;1;.35" dur="2s" repeatCount="indefinite"/>
+    <rect width="150" height="30" rx="8" fill="url(#hGlass)" stroke="url(#hGlassStroke)"/>
+    <rect x="7" y="12" width="6" height="6" rx="3" fill="#ff073a"><animate attributeName="opacity" values="1;.2;1" dur="2.3s" repeatCount="indefinite"/></rect>
+    <text x="20" y="20" font-size="12" letter-spacing="2" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">OMEGA</text></g></a><a xlink:href="https://belentani7.github.io/heyduck/" target="_blank">
+  <g transform="translate(0,172)">
+    <animate attributeName="opacity" values=".35;1;.35" dur="3.2s" repeatCount="indefinite"/>
+    <rect width="150" height="30" rx="8" fill="url(#hGlass)" stroke="url(#hGlassStroke)"/>
+    <rect x="7" y="12" width="6" height="6" rx="3" fill="#ff073a"><animate attributeName="opacity" values="1;.2;1" dur="1.4s" repeatCount="indefinite"/></rect>
+    <text x="20" y="20" font-size="12" letter-spacing="2" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">DUCK</text></g></a><a xlink:href="https://secure-t.vercel.app" target="_blank">
+  <g transform="translate(0,212)">
+    <animate attributeName="opacity" values=".35;1;.35" dur="4.4s" repeatCount="indefinite"/>
+    <rect width="150" height="30" rx="8" fill="url(#hGlass)" stroke="url(#hGlassStroke)"/>
+    <rect x="7" y="12" width="6" height="6" rx="3" fill="#ff073a"><animate attributeName="opacity" values="1;.2;1" dur="1.7s" repeatCount="indefinite"/></rect>
+    <text x="20" y="20" font-size="12" letter-spacing="2" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">secure-t</text></g></a><a xlink:href="https://manosabiertas-seven.vercel.app" target="_blank">
+  <g transform="translate(0,252)">
+    <animate attributeName="opacity" values=".35;1;.35" dur="2s" repeatCount="indefinite"/>
+    <rect width="150" height="30" rx="8" fill="url(#hGlass)" stroke="url(#hGlassStroke)"/>
+    <rect x="7" y="12" width="6" height="6" rx="3" fill="#ff073a"><animate attributeName="opacity" values="1;.2;1" dur="2s" repeatCount="indefinite"/></rect>
+    <text x="20" y="20" font-size="12" letter-spacing="2" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">ManosAbiertas</text></g></a><a xlink:href="http://www.belentani.es/" target="_blank">
+  <g transform="translate(0,292)">
+    <animate attributeName="opacity" values=".35;1;.35" dur="3.2s" repeatCount="indefinite"/>
+    <rect width="150" height="30" rx="8" fill="url(#hGlass)" stroke="url(#hGlassStroke)"/>
+    <rect x="7" y="12" width="6" height="6" rx="3" fill="#ff073a"><animate attributeName="opacity" values="1;.2;1" dur="2.3s" repeatCount="indefinite"/></rect>
+    <text x="20" y="20" font-size="12" letter-spacing="2" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">CARQUIDEC</text></g></a>
+</g><g transform="translate(880,150)">
+  <a xlink:href="https://noiacore-lab.vercel.app" target="_blank">
+  <g transform="translate(0,12)" opacity="0">
+    <animate attributeName="opacity" values="0;1;1;0" begin="0s" dur="13.2s" repeatCount="indefinite"/>
+    <g>
+      <animateTransform attributeName="transform" type="scale" values="1;1.015;1" dur="2.4s" repeatCount="indefinite"/>
+      <rect width="264" height="52" rx="10" fill="url(#hGlass)" stroke="url(#hGlassStroke)"/>
+      <rect width="264" height="52" rx="10" fill="none" stroke="#ff073a" stroke-opacity=".22">
+        <animate attributeName="stroke-opacity" values=".22;.7;.22" dur="2.4s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <circle cx="18" cy="26" r="5" fill="#ff073a"><animate attributeName="opacity" values="1;.2;1" dur="1.2s" repeatCount="indefinite"/></circle>
+    <text x="34" y="18" font-size="14" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">NOIACORE LAB</text>
+    <text x="34" y="38" font-size="11" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">React 19 · tRPC · LLM · <tspan fill="#ff073a">LIVE</tspan></text>
+  </g></a><a xlink:href="https://belentani-experience.vercel.app" target="_blank">
+  <g transform="translate(0,68)" opacity="0">
+    <animate attributeName="opacity" values="0;1;1;0" begin="2.2s" dur="13.2s" repeatCount="indefinite"/>
+    <g>
+      <animateTransform attributeName="transform" type="scale" values="1;1.015;1" dur="2.4s" repeatCount="indefinite"/>
+      <rect width="264" height="52" rx="10" fill="url(#hGlass)" stroke="url(#hGlassStroke)"/>
+      <rect width="264" height="52" rx="10" fill="none" stroke="#ff073a" stroke-opacity=".22">
+        <animate attributeName="stroke-opacity" values=".22;.7;.22" dur="2.4s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <circle cx="18" cy="26" r="5" fill="#ff073a"><animate attributeName="opacity" values="1;.2;1" dur="1.2s" repeatCount="indefinite"/></circle>
+    <text x="34" y="18" font-size="14" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">THE EXPERIENCE</text>
+    <text x="34" y="38" font-size="11" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">WebGL · Bloom · Cinematic · <tspan fill="#ff073a">3D</tspan></text>
+  </g></a><a xlink:href="https://belentani-experience.vercel.app" target="_blank">
+  <g transform="translate(0,124)" opacity="0">
+    <animate attributeName="opacity" values="0;1;1;0" begin="4.4s" dur="13.2s" repeatCount="indefinite"/>
+    <g>
+      <animateTransform attributeName="transform" type="scale" values="1;1.015;1" dur="2.4s" repeatCount="indefinite"/>
+      <rect width="264" height="52" rx="10" fill="url(#hGlass)" stroke="url(#hGlassStroke)"/>
+      <rect width="264" height="52" rx="10" fill="none" stroke="#ff073a" stroke-opacity=".22">
+        <animate attributeName="stroke-opacity" values=".22;.7;.22" dur="2.4s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <circle cx="18" cy="26" r="5" fill="#ff073a"><animate attributeName="opacity" values="1;.2;1" dur="1.2s" repeatCount="indefinite"/></circle>
+    <text x="34" y="18" font-size="14" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">nexus-os</text>
+    <text x="34" y="38" font-size="11" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">Neon Glass OS · 38+ apps · <tspan fill="#ff073a">ZERO DEPS</tspan></text>
+  </g></a><a xlink:href="https://belentani.vercel.app" target="_blank">
+  <g transform="translate(0,180)" opacity="0">
+    <animate attributeName="opacity" values="0;1;1;0" begin="6.6000000000000005s" dur="13.2s" repeatCount="indefinite"/>
+    <g>
+      <animateTransform attributeName="transform" type="scale" values="1;1.015;1" dur="2.4s" repeatCount="indefinite"/>
+      <rect width="264" height="52" rx="10" fill="url(#hGlass)" stroke="url(#hGlassStroke)"/>
+      <rect width="264" height="52" rx="10" fill="none" stroke="#ff073a" stroke-opacity=".22">
+        <animate attributeName="stroke-opacity" values=".22;.7;.22" dur="2.4s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <circle cx="18" cy="26" r="5" fill="#ff073a"><animate attributeName="opacity" values="1;.2;1" dur="1.2s" repeatCount="indefinite"/></circle>
+    <text x="34" y="18" font-size="14" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">meta-skill</text>
+    <text x="34" y="38" font-size="11" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">Zero-token routing · <tspan fill="#ff073a">16 archetypes</tspan></text>
+  </g></a><a xlink:href="https://belentani7.github.io/heyduck/" target="_blank">
+  <g transform="translate(0,236)" opacity="0">
+    <animate attributeName="opacity" values="0;1;1;0" begin="8.8s" dur="13.2s" repeatCount="indefinite"/>
+    <g>
+      <animateTransform attributeName="transform" type="scale" values="1;1.015;1" dur="2.4s" repeatCount="indefinite"/>
+      <rect width="264" height="52" rx="10" fill="url(#hGlass)" stroke="url(#hGlassStroke)"/>
+      <rect width="264" height="52" rx="10" fill="none" stroke="#ff073a" stroke-opacity=".22">
+        <animate attributeName="stroke-opacity" values=".22;.7;.22" dur="2.4s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <circle cx="18" cy="26" r="5" fill="#ff073a"><animate attributeName="opacity" values="1;.2;1" dur="1.2s" repeatCount="indefinite"/></circle>
+    <text x="34" y="18" font-size="14" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">DUCK Ecosystem</text>
+    <text x="34" y="38" font-size="11" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">Astro · studio apps · <tspan fill="#ff073a">6 MODULES</tspan></text>
+  </g></a><a xlink:href="https://secure-t.vercel.app" target="_blank">
+  <g transform="translate(0,292)" opacity="0">
+    <animate attributeName="opacity" values="0;1;1;0" begin="11s" dur="13.2s" repeatCount="indefinite"/>
+    <g>
+      <animateTransform attributeName="transform" type="scale" values="1;1.015;1" dur="2.4s" repeatCount="indefinite"/>
+      <rect width="264" height="52" rx="10" fill="url(#hGlass)" stroke="url(#hGlassStroke)"/>
+      <rect width="264" height="52" rx="10" fill="none" stroke="#ff073a" stroke-opacity=".22">
+        <animate attributeName="stroke-opacity" values=".22;.7;.22" dur="2.4s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <circle cx="18" cy="26" r="5" fill="#ff073a"><animate attributeName="opacity" values="1;.2;1" dur="1.2s" repeatCount="indefinite"/></circle>
+    <text x="34" y="18" font-size="14" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">secure-t</text>
+    <text x="34" y="38" font-size="11" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">Cyber + AI Academy · <tspan fill="#ff073a">LIVE</tspan></text>
+  </g></a>
+</g>
+<g transform="translate(396,392)">
+  <text x="0" y="0" font-size="10" letter-spacing="3" fill="rgba(238,237,242,.56)">MACHINE VITALS</text>
+  <g transform="translate(34,56)">
+    <circle r="26" fill="none" stroke="#ffffff" stroke-opacity=".08" stroke-width="4.5"/>
+    <path d="M 11.5 69 A 26 26 0 1 1 56.5 69" transform="translate(-34,-56)" fill="none" stroke="#ff073a" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="109" filter="url(#hSoft)">
+      <animate attributeName="stroke-dashoffset" values="109;34;76;109" dur="4.6s" repeatCount="indefinite"/>
+    </path>
+    <text x="0" y="4" text-anchor="middle" font-size="10" font-family="'Consolas','JetBrains Mono',monospace" fill="#eeedf2">CPU</text>
+  </g>
+  <g transform="translate(86,56)">
+    <rect x="0" y="20" width="7" height="10" rx="1.5" fill="#00ffc8" fill-opacity=".75">
+      <animate attributeName="height" values="10;24;14;28;10" dur="2.2s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="20;6;16;2;20" dur="2.2s" repeatCount="indefinite"/>
+    </rect><rect x="11" y="19" width="7" height="11" rx="1.5" fill="#00ffc8" fill-opacity=".75">
+      <animate attributeName="height" values="11;23;15;27;11" dur="2.6s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="19;7;15;3;19" dur="2.6s" repeatCount="indefinite"/>
+    </rect><rect x="22" y="18" width="7" height="12" rx="1.5" fill="#00ffc8" fill-opacity=".75">
+      <animate attributeName="height" values="12;22;16;26;12" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="18;8;14;4;18" dur="3s" repeatCount="indefinite"/>
+    </rect><rect x="33" y="17" width="7" height="13" rx="1.5" fill="#00ffc8" fill-opacity=".75">
+      <animate attributeName="height" values="13;21;17;25;13" dur="3.4000000000000004s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="17;9;13;5;17" dur="3.4000000000000004s" repeatCount="indefinite"/>
+    </rect><rect x="44" y="16" width="7" height="14" rx="1.5" fill="#00ffc8" fill-opacity=".75">
+      <animate attributeName="height" values="14;20;18;24;14" dur="3.8000000000000003s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="16;10;12;6;16" dur="3.8000000000000003s" repeatCount="indefinite"/>
+    </rect>
+    <line x1="0" y1="30" x2="55" y2="30" stroke="#ffffff" stroke-opacity=".12"/>
+    <text x="27" y="44" text-anchor="middle" font-size="9" letter-spacing="1" fill="rgba(238,237,242,.56)">SIGNAL</text>
+  </g>
+  <g transform="translate(168,42)">
+    <text x="0" y="0" font-size="9" letter-spacing="1" fill="rgba(238,237,242,.56)">MEM</text>
+    <rect x="0" y="8" width="170" height="9" rx="3" fill="#ffffff" fill-opacity=".06" stroke="#ffffff" stroke-opacity=".08"/>
+    <rect x="0" y="8" height="9" rx="3" fill="url(#hMem)" filter="url(#hSoft)">
+      <animate attributeName="width" values="46;148;92;164;46" dur="6.4s" repeatCount="indefinite"/>
+    </rect>
+    <text x="0" y="34" font-size="9" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">VOICE · GPU · EDGE</text>
+  </g>
+  <g transform="translate(360,42)">
+    <text x="0" y="0" font-size="9" letter-spacing="1" fill="rgba(238,237,242,.56)">TEMP</text>
+    <text x="0" y="26" font-size="16" font-family="'Consolas','JetBrains Mono',monospace" fill="#00ffff" opacity="0">42°<animate attributeName="opacity" values="1;1;0;0;0;0" keyTimes="0;.30;.34;.66;.72;1" dur="6s" repeatCount="indefinite"/></text>
+    <text x="0" y="26" font-size="16" font-family="'Consolas','JetBrains Mono',monospace" fill="#00ffff" opacity="0">44°<animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.31;.35;.63;.67;1" dur="6s" repeatCount="indefinite"/></text>
+    <text x="0" y="26" font-size="16" font-family="'Consolas','JetBrains Mono',monospace" fill="#00ffff" opacity="0">41°<animate attributeName="opacity" values="0;0;0;0;1;1" keyTimes="0;.64;.68;.94;.98;1" dur="6s" repeatCount="indefinite"/></text>
+  </g>
+  <g transform="translate(420,42)">
+    <text x="0" y="0" font-size="9" letter-spacing="1" fill="rgba(238,237,242,.56)">BPM</text>
+    <text x="0" y="26" font-size="16" font-family="'Consolas','JetBrains Mono',monospace" fill="#ff073a" filter="url(#hSoft)">128<animate attributeName="fill-opacity" values="1;.35;1" dur=".92s" repeatCount="indefinite"/></text>
+  </g>
+</g><g transform="translate(396,504)" pointer-events="none">
+  <polyline points="0,0 34,0 42,-10 46,14 51,-24 56,26 61,0 100,0 134,0 142,-10 146,14 151,-24 156,26 161,0 200,0 234,0 242,-10 246,14 251,-24 256,26 261,0 300,0 334,0 342,-10 346,14 351,-24 356,26 361,0 398,0" fill="none" stroke="#ff073a" stroke-width="1.5" stroke-linejoin="round" filter="url(#hSoft)" stroke-dasharray="760" stroke-dashoffset="760">
+    <animate attributeName="stroke-dashoffset" values="760;0;0" keyTimes="0;.72;1" dur="5.6s" repeatCount="indefinite"/>
+  </polyline>
+</g><g transform="translate(600,540)" text-anchor="middle">
+  <text font-size="16" font-style="italic" fill="#eeedf2" filter="url(#hSoft)">"Fazer visível o que importa."</text>
+  <text x="107" font-size="16" fill="#ff073a">_<animate attributeName="opacity" values="1;0;1" dur=".8s" repeatCount="indefinite"/></text>
+</g>
+<g transform="translate(0,608)">
+  <rect x="0" y="-20" width="1200" height="52" fill="#05050a" opacity=".97"/>
+  <g><animateTransform attributeName="transform" type="translate" from="0 0" to="-2959 0" dur="28s" repeatCount="indefinite"/>
+   <text x="0" y="14" font-size="15" letter-spacing="3" fill="#00ffc8" opacity=".85" filter="url(#hSoft)">TypeScript  ·  Python  ·  Java  ·  Go  ·  JavaScript  ·  HTML  ·  CSS  ·  PowerShell  ·  React 19  ·  Next.js  ·  Astro  ·  Vite  ·  tRPC  ·  Node  ·  Express  ·  Drizzle  ·  MySQL  ·  Redis  ·  Three.js  ·  R3F  ·  GSAP  ·  Lenis  ·  RVC  ·  Applio  ·  Whisper  ·  Demucs  ·  Tone.js  ·  Claude Code  ·  Qwen Code  ·  OpenCode  ·  TypeScript  ·  Python  ·  Java  ·  Go  ·  JavaScript  ·  HTML  ·  CSS  ·  PowerShell  ·  React 19  ·  Next.js  ·  Astro  ·  Vite  ·  tRPC  ·  Node  ·  Express  ·  Drizzle  ·  MySQL  ·  Redis  ·  Three.js  ·  R3F  ·  GSAP  ·  Lenis  ·  RVC  ·  Applio  ·  Whisper  ·  Demucs  ·  Tone.js  ·  Claude Code  ·  Qwen Code  ·  OpenCode</text></g>
+</g>
+<g>
+  <line x1="0" y1="54" x2="1200" y2="54" stroke="#ff073a" stroke-opacity=".14"/>
+  <text x="30" y="34" fill="#eeedf2" font-size="11" letter-spacing="3">BELENTANI@NOIACORE</text>
+  <text x="264" y="34" fill="#ff5078" font-size="11" letter-spacing="2">ALIVE MACHINE // RENDERING</text>
+  <g font-size="10" letter-spacing="2" fill="rgba(238,237,242,.56)">
+    <text x="430" y="34" opacity="0"><animate attributeName="opacity" values="0;1;0" begin="0s" dur="16.799999999999997s" repeatCount="indefinite"/><tspan fill="#ff5078">TYPE</tspan>//</text><text x="492" y="34" opacity="0"><animate attributeName="opacity" values="0;1;0" begin="1.4s" dur="16.799999999999997s" repeatCount="indefinite"/><tspan fill="#00ffff">VOICE</tspan>//</text><text x="554" y="34" opacity="0"><animate attributeName="opacity" values="0;1;0" begin="2.8s" dur="16.799999999999997s" repeatCount="indefinite"/><tspan fill="#ff5078">SHADER</tspan>//</text><text x="616" y="34" opacity="0"><animate attributeName="opacity" values="0;1;0" begin="4.199999999999999s" dur="16.799999999999997s" repeatCount="indefinite"/><tspan fill="#00ffff">OS</tspan>//</text><text x="678" y="34" opacity="0"><animate attributeName="opacity" values="0;1;0" begin="5.6s" dur="16.799999999999997s" repeatCount="indefinite"/><tspan fill="#ff5078">NET</tspan>//</text><text x="740" y="34" opacity="0"><animate attributeName="opacity" values="0;1;0" begin="7s" dur="16.799999999999997s" repeatCount="indefinite"/><tspan fill="#00ffff">SONG</tspan>//</text><text x="802" y="34" opacity="0"><animate attributeName="opacity" values="0;1;0" begin="8.399999999999999s" dur="16.799999999999997s" repeatCount="indefinite"/><tspan fill="#ff5078">LEARN</tspan>//</text><text x="864" y="34" opacity="0"><animate attributeName="opacity" values="0;1;0" begin="9.799999999999999s" dur="16.799999999999997s" repeatCount="indefinite"/><tspan fill="#00ffff">BUILD</tspan>//</text><text x="926" y="34" opacity="0"><animate attributeName="opacity" values="0;1;0" begin="11.2s" dur="16.799999999999997s" repeatCount="indefinite"/><tspan fill="#ff5078">SIGNAL</tspan>//</text><text x="988" y="34" opacity="0"><animate attributeName="opacity" values="0;1;0" begin="12.6s" dur="16.799999999999997s" repeatCount="indefinite"/><tspan fill="#00ffff">GLITCH</tspan>//</text><text x="1050" y="34" opacity="0"><animate attributeName="opacity" values="0;1;0" begin="14s" dur="16.799999999999997s" repeatCount="indefinite"/><tspan fill="#ff5078">CORE</tspan>//</text><text x="1112" y="34" opacity="0"><animate attributeName="opacity" values="0;1;0" begin="15.399999999999999s" dur="16.799999999999997s" repeatCount="indefinite"/><tspan fill="#00ffff">LOOP</tspan>//</text>
+  </g>
+  <text x="1170" y="34" text-anchor="end" fill="#00ffc8" font-size="11" letter-spacing="2">
+    <tspan fill="#00ffc8"><animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>●</tspan> LIVE</text>
 </g>
 </svg>

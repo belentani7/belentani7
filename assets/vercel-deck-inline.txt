@@ -1,0 +1,562 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 864" width="1200" height="864" role="img" aria-label="Vercel deployment grid — 24 live nodes">
+<defs>
+  <pattern id="dGrid" width="44" height="44" patternUnits="userSpaceOnUse">
+    <path d="M 44 0 L 0 0 0 44" fill="none" stroke="#ff073a" stroke-opacity=".07" stroke-width="1"/>
+  </pattern>
+  <linearGradient id="dGlass" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ffffff" stop-opacity=".075"/>
+    <stop offset=".5" stop-color="#ffffff" stop-opacity=".025"/>
+    <stop offset="1" stop-color="#ffffff" stop-opacity=".01"/>
+  </linearGradient>
+  <linearGradient id="dGlassStroke" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#ffffff" stop-opacity=".16"/>
+    <stop offset=".5" stop-color="#ffffff" stop-opacity=".04"/>
+    <stop offset="1" stop-color="#ffffff" stop-opacity=".1"/>
+  </linearGradient>
+  <linearGradient id="dEdge" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+    <stop offset=".5" stop-color="#ffffff" stop-opacity=".3"/>
+    <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="dScanX" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#ff073a" stop-opacity="0"/>
+    <stop offset=".5" stop-color="#ff073a" stop-opacity=".9"/>
+    <stop offset="1" stop-color="#ff073a" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="dScanY" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ff073a" stop-opacity="0"/>
+    <stop offset=".5" stop-color="#ff073a" stop-opacity=".5"/>
+    <stop offset="1" stop-color="#ff073a" stop-opacity="0"/>
+  </linearGradient>
+  <radialGradient id="dHalo" cx=".5" cy="0" r=".8">
+    <stop offset="0" stop-color="#ff073a" stop-opacity=".14"/>
+    <stop offset="1" stop-color="#ff073a" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="dGlow" x="-60%" y="-60%" width="220%" height="220%">
+    <feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="dSoft" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="3"/></filter></defs>
+<rect width="1200" height="864" fill="#05050a"/>
+<rect width="1200" height="864" fill="url(#dGrid)" opacity=".5" pointer-events="none"/>
+<rect width="1200" height="300" fill="url(#dHalo)" pointer-events="none"/>
+<g>
+  <text x="32" y="46" font-size="24" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2" filter="url(#dGlow)">VERCEL // DEPLOYMENT GRID</text>
+  <text x="32" y="68" font-size="11" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">24 live nodes · 1 operator · THE BELENTANI EXPERIENCE</text>
+  <circle cx="1080" cy="40" r="4" fill="#00ffc8"><animate attributeName="opacity" values="1;.2;1" dur="1.4s" repeatCount="indefinite"/></circle>
+  <text x="1168" y="45" text-anchor="end" font-size="14" letter-spacing="2" font-family="'Consolas','JetBrains Mono',monospace" fill="#00ffc8">24/24 ONLINE</text>
+  <line x1="24" y1="86" x2="1176" y2="86" stroke="#ff073a" stroke-opacity=".18"/>
+</g>
+<rect x="-160" y="85" width="160" height="2" fill="url(#dScanX)" opacity=".8" pointer-events="none">
+  <animateTransform attributeName="transform" type="translate" values="0 0;1400 0" dur="5s" repeatCount="indefinite"/>
+</rect>
+<rect x="0" y="-140" width="1200" height="140" fill="url(#dScanY)" opacity=".4" pointer-events="none">
+  <animateTransform attributeName="transform" type="translate" values="0 0;0 1004" dur="7s" repeatCount="indefinite"/>
+</rect>
+<a xlink:href="https://belentani.vercel.app" target="_blank">
+  <g transform="translate(24,108)">
+    <rect x="-6" y="-6" width="388" height="88" rx="18" fill="#ff073a" fill-opacity=".045" filter="url(#dSoft)"/>
+    <rect width="376" height="76" rx="14" fill="url(#dGlass)" stroke="url(#dGlassStroke)" stroke-width="1"/>
+    <rect width="376" height="76" rx="14" fill="none" stroke="#ff073a" stroke-opacity=".12">
+      <animate attributeName="stroke-opacity" values=".07;.34;.07" dur="3.4s" begin="0.00s" repeatCount="indefinite"/>
+    </rect>
+    <line x1="14" y1="1" x2="362" y2="1" stroke="url(#dEdge)" stroke-width="1"/>
+    <circle cx="22" cy="24" r="4" fill="#ff073a">
+      <animate attributeName="opacity" values="1;.2;1" dur="1.60s" begin="0.00s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="22" cy="24" r="4" fill="none" stroke="#ff073a" stroke-opacity=".5">
+      <animate attributeName="r" values="5;13" dur="2.4s" begin="0.00s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values=".5;0" dur="2.4s" begin="0.00s" repeatCount="indefinite"/>
+    </circle>
+    <text x="40" y="27" font-size="15" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">BELENTANI</text>
+    <text x="40" y="47" font-size="11" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">Main hub · creative + education</text>
+    <text x="40" y="64" font-size="9.5" font-family="'Consolas','JetBrains Mono',monospace" fill="#ff073a" fill-opacity=".72">belentani.vercel.app</text>
+    <text x="356" y="43" font-size="16" text-anchor="end" fill="#ff073a" fill-opacity=".75">→
+      <animate attributeName="fill-opacity" values=".3;.9;.3" dur="2.8s" begin="0.00s" repeatCount="indefinite"/>
+    </text>
+  </g></a><a xlink:href="https://belentani-experience.vercel.app" target="_blank">
+  <g transform="translate(412,108)">
+    <rect x="-6" y="-6" width="388" height="88" rx="18" fill="#ff073a" fill-opacity=".045" filter="url(#dSoft)"/>
+    <rect width="376" height="76" rx="14" fill="url(#dGlass)" stroke="url(#dGlassStroke)" stroke-width="1"/>
+    <rect width="376" height="76" rx="14" fill="none" stroke="#ff073a" stroke-opacity=".12">
+      <animate attributeName="stroke-opacity" values=".07;.34;.07" dur="3.9s" begin="0.37s" repeatCount="indefinite"/>
+    </rect>
+    <line x1="14" y1="1" x2="362" y2="1" stroke="url(#dEdge)" stroke-width="1"/>
+    <circle cx="22" cy="24" r="4" fill="#ff073a">
+      <animate attributeName="opacity" values="1;.2;1" dur="1.85s" begin="0.37s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="22" cy="24" r="4" fill="none" stroke="#ff073a" stroke-opacity=".5">
+      <animate attributeName="r" values="5;13" dur="2.4s" begin="0.37s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values=".5;0" dur="2.4s" begin="0.37s" repeatCount="indefinite"/>
+    </circle>
+    <text x="40" y="27" font-size="15" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">THE EXPERIENCE</text>
+    <text x="40" y="47" font-size="11" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">WebGL · Bloom · Cinematic</text>
+    <text x="40" y="64" font-size="9.5" font-family="'Consolas','JetBrains Mono',monospace" fill="#ff073a" fill-opacity=".72">belentani-experience.vercel.app</text>
+    <text x="356" y="43" font-size="16" text-anchor="end" fill="#ff073a" fill-opacity=".75">→
+      <animate attributeName="fill-opacity" values=".3;.9;.3" dur="2.8s" begin="0.37s" repeatCount="indefinite"/>
+    </text>
+  </g></a><a xlink:href="https://judas-experience.vercel.app" target="_blank">
+  <g transform="translate(800,108)">
+    <rect x="-6" y="-6" width="388" height="88" rx="18" fill="#ff073a" fill-opacity=".045" filter="url(#dSoft)"/>
+    <rect width="376" height="76" rx="14" fill="url(#dGlass)" stroke="url(#dGlassStroke)" stroke-width="1"/>
+    <rect width="376" height="76" rx="14" fill="none" stroke="#ff073a" stroke-opacity=".12">
+      <animate attributeName="stroke-opacity" values=".07;.34;.07" dur="4.4s" begin="0.74s" repeatCount="indefinite"/>
+    </rect>
+    <line x1="14" y1="1" x2="362" y2="1" stroke="url(#dEdge)" stroke-width="1"/>
+    <circle cx="22" cy="24" r="4" fill="#ff073a">
+      <animate attributeName="opacity" values="1;.2;1" dur="2.10s" begin="0.74s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="22" cy="24" r="4" fill="none" stroke="#ff073a" stroke-opacity=".5">
+      <animate attributeName="r" values="5;13" dur="2.4s" begin="0.74s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values=".5;0" dur="2.4s" begin="0.74s" repeatCount="indefinite"/>
+    </circle>
+    <text x="40" y="27" font-size="15" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">JUDAS</text>
+    <text x="40" y="47" font-size="11" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">Bleeding-crystal storyboard</text>
+    <text x="40" y="64" font-size="9.5" font-family="'Consolas','JetBrains Mono',monospace" fill="#ff073a" fill-opacity=".72">judas-experience.vercel.app</text>
+    <text x="356" y="43" font-size="16" text-anchor="end" fill="#ff073a" fill-opacity=".75">→
+      <animate attributeName="fill-opacity" values=".3;.9;.3" dur="2.8s" begin="0.74s" repeatCount="indefinite"/>
+    </text>
+  </g></a><a xlink:href="https://judas-access.vercel.app" target="_blank">
+  <g transform="translate(24,196)">
+    <rect x="-6" y="-6" width="388" height="88" rx="18" fill="#ff073a" fill-opacity=".045" filter="url(#dSoft)"/>
+    <rect width="376" height="76" rx="14" fill="url(#dGlass)" stroke="url(#dGlassStroke)" stroke-width="1"/>
+    <rect width="376" height="76" rx="14" fill="none" stroke="#ff073a" stroke-opacity=".12">
+      <animate attributeName="stroke-opacity" values=".07;.34;.07" dur="4.9s" begin="1.11s" repeatCount="indefinite"/>
+    </rect>
+    <line x1="14" y1="1" x2="362" y2="1" stroke="url(#dEdge)" stroke-width="1"/>
+    <circle cx="22" cy="24" r="4" fill="#ff073a">
+      <animate attributeName="opacity" values="1;.2;1" dur="2.35s" begin="1.11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="22" cy="24" r="4" fill="none" stroke="#ff073a" stroke-opacity=".5">
+      <animate attributeName="r" values="5;13" dur="2.4s" begin="1.11s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values=".5;0" dur="2.4s" begin="1.11s" repeatCount="indefinite"/>
+    </circle>
+    <text x="40" y="27" font-size="15" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">JUDAS ACCESS</text>
+    <text x="40" y="47" font-size="11" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">Ritual entry gate</text>
+    <text x="40" y="64" font-size="9.5" font-family="'Consolas','JetBrains Mono',monospace" fill="#ff073a" fill-opacity=".72">judas-access.vercel.app</text>
+    <text x="356" y="43" font-size="16" text-anchor="end" fill="#ff073a" fill-opacity=".75">→
+      <animate attributeName="fill-opacity" values=".3;.9;.3" dur="2.8s" begin="1.11s" repeatCount="indefinite"/>
+    </text>
+  </g></a><a xlink:href="https://belentani-judas-web.vercel.app" target="_blank">
+  <g transform="translate(412,196)">
+    <rect x="-6" y="-6" width="388" height="88" rx="18" fill="#ff073a" fill-opacity=".045" filter="url(#dSoft)"/>
+    <rect width="376" height="76" rx="14" fill="url(#dGlass)" stroke="url(#dGlassStroke)" stroke-width="1"/>
+    <rect width="376" height="76" rx="14" fill="none" stroke="#ff073a" stroke-opacity=".12">
+      <animate attributeName="stroke-opacity" values=".07;.34;.07" dur="5.4s" begin="1.48s" repeatCount="indefinite"/>
+    </rect>
+    <line x1="14" y1="1" x2="362" y2="1" stroke="url(#dEdge)" stroke-width="1"/>
+    <circle cx="22" cy="24" r="4" fill="#ff073a">
+      <animate attributeName="opacity" values="1;.2;1" dur="1.60s" begin="1.48s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="22" cy="24" r="4" fill="none" stroke="#ff073a" stroke-opacity=".5">
+      <animate attributeName="r" values="5;13" dur="2.4s" begin="1.48s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values=".5;0" dur="2.4s" begin="1.48s" repeatCount="indefinite"/>
+    </circle>
+    <text x="40" y="27" font-size="15" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">JUDAS WEB</text>
+    <text x="40" y="47" font-size="11" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">Narrative web · chapters</text>
+    <text x="40" y="64" font-size="9.5" font-family="'Consolas','JetBrains Mono',monospace" fill="#ff073a" fill-opacity=".72">belentani-judas-web.vercel.app</text>
+    <text x="356" y="43" font-size="16" text-anchor="end" fill="#ff073a" fill-opacity=".75">→
+      <animate attributeName="fill-opacity" values=".3;.9;.3" dur="2.8s" begin="1.48s" repeatCount="indefinite"/>
+    </text>
+  </g></a><a xlink:href="https://noiacore-lab.vercel.app" target="_blank">
+  <g transform="translate(800,196)">
+    <rect x="-6" y="-6" width="388" height="88" rx="18" fill="#ff073a" fill-opacity=".045" filter="url(#dSoft)"/>
+    <rect width="376" height="76" rx="14" fill="url(#dGlass)" stroke="url(#dGlassStroke)" stroke-width="1"/>
+    <rect width="376" height="76" rx="14" fill="none" stroke="#ff073a" stroke-opacity=".12">
+      <animate attributeName="stroke-opacity" values=".07;.34;.07" dur="3.4s" begin="1.85s" repeatCount="indefinite"/>
+    </rect>
+    <line x1="14" y1="1" x2="362" y2="1" stroke="url(#dEdge)" stroke-width="1"/>
+    <circle cx="22" cy="24" r="4" fill="#ff073a">
+      <animate attributeName="opacity" values="1;.2;1" dur="1.85s" begin="1.85s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="22" cy="24" r="4" fill="none" stroke="#ff073a" stroke-opacity=".5">
+      <animate attributeName="r" values="5;13" dur="2.4s" begin="1.85s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values=".5;0" dur="2.4s" begin="1.85s" repeatCount="indefinite"/>
+    </circle>
+    <text x="40" y="27" font-size="15" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">NOIACORE LAB</text>
+    <text x="40" y="47" font-size="11" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">React 19 · tRPC · LLM</text>
+    <text x="40" y="64" font-size="9.5" font-family="'Consolas','JetBrains Mono',monospace" fill="#ff073a" fill-opacity=".72">noiacore-lab.vercel.app</text>
+    <text x="356" y="43" font-size="16" text-anchor="end" fill="#ff073a" fill-opacity=".75">→
+      <animate attributeName="fill-opacity" values=".3;.9;.3" dur="2.8s" begin="1.85s" repeatCount="indefinite"/>
+    </text>
+  </g></a><a xlink:href="https://belentani-v2.vercel.app" target="_blank">
+  <g transform="translate(24,284)">
+    <rect x="-6" y="-6" width="388" height="88" rx="18" fill="#ff073a" fill-opacity=".045" filter="url(#dSoft)"/>
+    <rect width="376" height="76" rx="14" fill="url(#dGlass)" stroke="url(#dGlassStroke)" stroke-width="1"/>
+    <rect width="376" height="76" rx="14" fill="none" stroke="#ff073a" stroke-opacity=".12">
+      <animate attributeName="stroke-opacity" values=".07;.34;.07" dur="3.9s" begin="2.22s" repeatCount="indefinite"/>
+    </rect>
+    <line x1="14" y1="1" x2="362" y2="1" stroke="url(#dEdge)" stroke-width="1"/>
+    <circle cx="22" cy="24" r="4" fill="#ff073a">
+      <animate attributeName="opacity" values="1;.2;1" dur="2.10s" begin="2.22s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="22" cy="24" r="4" fill="none" stroke="#ff073a" stroke-opacity=".5">
+      <animate attributeName="r" values="5;13" dur="2.4s" begin="2.22s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values=".5;0" dur="2.4s" begin="2.22s" repeatCount="indefinite"/>
+    </circle>
+    <text x="40" y="27" font-size="15" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">BELENTANI V2</text>
+    <text x="40" y="47" font-size="11" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">Next-gen shell</text>
+    <text x="40" y="64" font-size="9.5" font-family="'Consolas','JetBrains Mono',monospace" fill="#ff073a" fill-opacity=".72">belentani-v2.vercel.app</text>
+    <text x="356" y="43" font-size="16" text-anchor="end" fill="#ff073a" fill-opacity=".75">→
+      <animate attributeName="fill-opacity" values=".3;.9;.3" dur="2.8s" begin="2.22s" repeatCount="indefinite"/>
+    </text>
+  </g></a><a xlink:href="https://belentani7-profile.vercel.app" target="_blank">
+  <g transform="translate(412,284)">
+    <rect x="-6" y="-6" width="388" height="88" rx="18" fill="#ff073a" fill-opacity=".045" filter="url(#dSoft)"/>
+    <rect width="376" height="76" rx="14" fill="url(#dGlass)" stroke="url(#dGlassStroke)" stroke-width="1"/>
+    <rect width="376" height="76" rx="14" fill="none" stroke="#ff073a" stroke-opacity=".12">
+      <animate attributeName="stroke-opacity" values=".07;.34;.07" dur="4.4s" begin="2.59s" repeatCount="indefinite"/>
+    </rect>
+    <line x1="14" y1="1" x2="362" y2="1" stroke="url(#dEdge)" stroke-width="1"/>
+    <circle cx="22" cy="24" r="4" fill="#ff073a">
+      <animate attributeName="opacity" values="1;.2;1" dur="2.35s" begin="2.59s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="22" cy="24" r="4" fill="none" stroke="#ff073a" stroke-opacity=".5">
+      <animate attributeName="r" values="5;13" dur="2.4s" begin="2.59s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values=".5;0" dur="2.4s" begin="2.59s" repeatCount="indefinite"/>
+    </circle>
+    <text x="40" y="27" font-size="15" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">PROFILE SHELL</text>
+    <text x="40" y="47" font-size="11" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">Vite app · portfolio core</text>
+    <text x="40" y="64" font-size="9.5" font-family="'Consolas','JetBrains Mono',monospace" fill="#ff073a" fill-opacity=".72">belentani7-profile.vercel.app</text>
+    <text x="356" y="43" font-size="16" text-anchor="end" fill="#ff073a" fill-opacity=".75">→
+      <animate attributeName="fill-opacity" values=".3;.9;.3" dur="2.8s" begin="2.59s" repeatCount="indefinite"/>
+    </text>
+  </g></a><a xlink:href="https://secure-t.vercel.app" target="_blank">
+  <g transform="translate(800,284)">
+    <rect x="-6" y="-6" width="388" height="88" rx="18" fill="#00ffc8" fill-opacity=".045" filter="url(#dSoft)"/>
+    <rect width="376" height="76" rx="14" fill="url(#dGlass)" stroke="url(#dGlassStroke)" stroke-width="1"/>
+    <rect width="376" height="76" rx="14" fill="none" stroke="#00ffc8" stroke-opacity=".12">
+      <animate attributeName="stroke-opacity" values=".07;.34;.07" dur="4.9s" begin="2.96s" repeatCount="indefinite"/>
+    </rect>
+    <line x1="14" y1="1" x2="362" y2="1" stroke="url(#dEdge)" stroke-width="1"/>
+    <circle cx="22" cy="24" r="4" fill="#00ffc8">
+      <animate attributeName="opacity" values="1;.2;1" dur="1.60s" begin="2.96s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="22" cy="24" r="4" fill="none" stroke="#00ffc8" stroke-opacity=".5">
+      <animate attributeName="r" values="5;13" dur="2.4s" begin="2.96s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values=".5;0" dur="2.4s" begin="2.96s" repeatCount="indefinite"/>
+    </circle>
+    <text x="40" y="27" font-size="15" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">SECURE-T</text>
+    <text x="40" y="47" font-size="11" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">Cyber + AI academy</text>
+    <text x="40" y="64" font-size="9.5" font-family="'Consolas','JetBrains Mono',monospace" fill="#00ffc8" fill-opacity=".72">secure-t.vercel.app</text>
+    <text x="356" y="43" font-size="16" text-anchor="end" fill="#00ffc8" fill-opacity=".75">→
+      <animate attributeName="fill-opacity" values=".3;.9;.3" dur="2.8s" begin="2.96s" repeatCount="indefinite"/>
+    </text>
+  </g></a><a xlink:href="https://secure-t-university.vercel.app" target="_blank">
+  <g transform="translate(24,372)">
+    <rect x="-6" y="-6" width="388" height="88" rx="18" fill="#00ffc8" fill-opacity=".045" filter="url(#dSoft)"/>
+    <rect width="376" height="76" rx="14" fill="url(#dGlass)" stroke="url(#dGlassStroke)" stroke-width="1"/>
+    <rect width="376" height="76" rx="14" fill="none" stroke="#00ffc8" stroke-opacity=".12">
+      <animate attributeName="stroke-opacity" values=".07;.34;.07" dur="5.4s" begin="3.33s" repeatCount="indefinite"/>
+    </rect>
+    <line x1="14" y1="1" x2="362" y2="1" stroke="url(#dEdge)" stroke-width="1"/>
+    <circle cx="22" cy="24" r="4" fill="#00ffc8">
+      <animate attributeName="opacity" values="1;.2;1" dur="1.85s" begin="3.33s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="22" cy="24" r="4" fill="none" stroke="#00ffc8" stroke-opacity=".5">
+      <animate attributeName="r" values="5;13" dur="2.4s" begin="3.33s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values=".5;0" dur="2.4s" begin="3.33s" repeatCount="indefinite"/>
+    </circle>
+    <text x="40" y="27" font-size="15" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">SECURE-T UNIV</text>
+    <text x="40" y="47" font-size="11" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">University portal</text>
+    <text x="40" y="64" font-size="9.5" font-family="'Consolas','JetBrains Mono',monospace" fill="#00ffc8" fill-opacity=".72">secure-t-university.vercel.app</text>
+    <text x="356" y="43" font-size="16" text-anchor="end" fill="#00ffc8" fill-opacity=".75">→
+      <animate attributeName="fill-opacity" values=".3;.9;.3" dur="2.8s" begin="3.33s" repeatCount="indefinite"/>
+    </text>
+  </g></a><a xlink:href="https://open-school-belentani7pedro-6758s-projects.vercel.app" target="_blank">
+  <g transform="translate(412,372)">
+    <rect x="-6" y="-6" width="388" height="88" rx="18" fill="#00ffc8" fill-opacity=".045" filter="url(#dSoft)"/>
+    <rect width="376" height="76" rx="14" fill="url(#dGlass)" stroke="url(#dGlassStroke)" stroke-width="1"/>
+    <rect width="376" height="76" rx="14" fill="none" stroke="#00ffc8" stroke-opacity=".12">
+      <animate attributeName="stroke-opacity" values=".07;.34;.07" dur="3.4s" begin="3.70s" repeatCount="indefinite"/>
+    </rect>
+    <line x1="14" y1="1" x2="362" y2="1" stroke="url(#dEdge)" stroke-width="1"/>
+    <circle cx="22" cy="24" r="4" fill="#00ffc8">
+      <animate attributeName="opacity" values="1;.2;1" dur="2.10s" begin="3.70s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="22" cy="24" r="4" fill="none" stroke="#00ffc8" stroke-opacity=".5">
+      <animate attributeName="r" values="5;13" dur="2.4s" begin="3.70s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values=".5;0" dur="2.4s" begin="3.70s" repeatCount="indefinite"/>
+    </circle>
+    <text x="40" y="27" font-size="15" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">OPEN SCHOOL</text>
+    <text x="40" y="47" font-size="11" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">Open learning platform</text>
+    <text x="40" y="64" font-size="9.5" font-family="'Consolas','JetBrains Mono',monospace" fill="#00ffc8" fill-opacity=".72">open-school · vercel.app</text>
+    <text x="356" y="43" font-size="16" text-anchor="end" fill="#00ffc8" fill-opacity=".75">→
+      <animate attributeName="fill-opacity" values=".3;.9;.3" dur="2.8s" begin="3.70s" repeatCount="indefinite"/>
+    </text>
+  </g></a><a xlink:href="https://ux-academy-professional-belentani7pedro-6758s-projects.vercel.app" target="_blank">
+  <g transform="translate(800,372)">
+    <rect x="-6" y="-6" width="388" height="88" rx="18" fill="#00ffc8" fill-opacity=".045" filter="url(#dSoft)"/>
+    <rect width="376" height="76" rx="14" fill="url(#dGlass)" stroke="url(#dGlassStroke)" stroke-width="1"/>
+    <rect width="376" height="76" rx="14" fill="none" stroke="#00ffc8" stroke-opacity=".12">
+      <animate attributeName="stroke-opacity" values=".07;.34;.07" dur="3.9s" begin="4.07s" repeatCount="indefinite"/>
+    </rect>
+    <line x1="14" y1="1" x2="362" y2="1" stroke="url(#dEdge)" stroke-width="1"/>
+    <circle cx="22" cy="24" r="4" fill="#00ffc8">
+      <animate attributeName="opacity" values="1;.2;1" dur="2.35s" begin="4.07s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="22" cy="24" r="4" fill="none" stroke="#00ffc8" stroke-opacity=".5">
+      <animate attributeName="r" values="5;13" dur="2.4s" begin="4.07s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values=".5;0" dur="2.4s" begin="4.07s" repeatCount="indefinite"/>
+    </circle>
+    <text x="40" y="27" font-size="15" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">UX ACADEMY</text>
+    <text x="40" y="47" font-size="11" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">Professional UX track</text>
+    <text x="40" y="64" font-size="9.5" font-family="'Consolas','JetBrains Mono',monospace" fill="#00ffc8" fill-opacity=".72">ux-academy · vercel.app</text>
+    <text x="356" y="43" font-size="16" text-anchor="end" fill="#00ffc8" fill-opacity=".75">→
+      <animate attributeName="fill-opacity" values=".3;.9;.3" dur="2.8s" begin="4.07s" repeatCount="indefinite"/>
+    </text>
+  </g></a><a xlink:href="https://williamschool-livid.vercel.app" target="_blank">
+  <g transform="translate(24,460)">
+    <rect x="-6" y="-6" width="388" height="88" rx="18" fill="#00ffc8" fill-opacity=".045" filter="url(#dSoft)"/>
+    <rect width="376" height="76" rx="14" fill="url(#dGlass)" stroke="url(#dGlassStroke)" stroke-width="1"/>
+    <rect width="376" height="76" rx="14" fill="none" stroke="#00ffc8" stroke-opacity=".12">
+      <animate attributeName="stroke-opacity" values=".07;.34;.07" dur="4.4s" begin="4.44s" repeatCount="indefinite"/>
+    </rect>
+    <line x1="14" y1="1" x2="362" y2="1" stroke="url(#dEdge)" stroke-width="1"/>
+    <circle cx="22" cy="24" r="4" fill="#00ffc8">
+      <animate attributeName="opacity" values="1;.2;1" dur="1.60s" begin="4.44s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="22" cy="24" r="4" fill="none" stroke="#00ffc8" stroke-opacity=".5">
+      <animate attributeName="r" values="5;13" dur="2.4s" begin="4.44s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values=".5;0" dur="2.4s" begin="4.44s" repeatCount="indefinite"/>
+    </circle>
+    <text x="40" y="27" font-size="15" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">WILLIAM SCHOOL</text>
+    <text x="40" y="47" font-size="11" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">School platform</text>
+    <text x="40" y="64" font-size="9.5" font-family="'Consolas','JetBrains Mono',monospace" fill="#00ffc8" fill-opacity=".72">williamschool-livid.vercel.app</text>
+    <text x="356" y="43" font-size="16" text-anchor="end" fill="#00ffc8" fill-opacity=".75">→
+      <animate attributeName="fill-opacity" values=".3;.9;.3" dur="2.8s" begin="4.44s" repeatCount="indefinite"/>
+    </text>
+  </g></a><a xlink:href="https://linguaforge-rouge.vercel.app" target="_blank">
+  <g transform="translate(412,460)">
+    <rect x="-6" y="-6" width="388" height="88" rx="18" fill="#00ffc8" fill-opacity=".045" filter="url(#dSoft)"/>
+    <rect width="376" height="76" rx="14" fill="url(#dGlass)" stroke="url(#dGlassStroke)" stroke-width="1"/>
+    <rect width="376" height="76" rx="14" fill="none" stroke="#00ffc8" stroke-opacity=".12">
+      <animate attributeName="stroke-opacity" values=".07;.34;.07" dur="4.9s" begin="4.81s" repeatCount="indefinite"/>
+    </rect>
+    <line x1="14" y1="1" x2="362" y2="1" stroke="url(#dEdge)" stroke-width="1"/>
+    <circle cx="22" cy="24" r="4" fill="#00ffc8">
+      <animate attributeName="opacity" values="1;.2;1" dur="1.85s" begin="4.81s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="22" cy="24" r="4" fill="none" stroke="#00ffc8" stroke-opacity=".5">
+      <animate attributeName="r" values="5;13" dur="2.4s" begin="4.81s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values=".5;0" dur="2.4s" begin="4.81s" repeatCount="indefinite"/>
+    </circle>
+    <text x="40" y="27" font-size="15" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">LINGUAFORGE</text>
+    <text x="40" y="47" font-size="11" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">Language forge lab</text>
+    <text x="40" y="64" font-size="9.5" font-family="'Consolas','JetBrains Mono',monospace" fill="#00ffc8" fill-opacity=".72">linguaforge-rouge.vercel.app</text>
+    <text x="356" y="43" font-size="16" text-anchor="end" fill="#00ffc8" fill-opacity=".75">→
+      <animate attributeName="fill-opacity" values=".3;.9;.3" dur="2.8s" begin="4.81s" repeatCount="indefinite"/>
+    </text>
+  </g></a><a xlink:href="https://lingua-aberta-belentani7pedro-6758s-projects.vercel.app" target="_blank">
+  <g transform="translate(800,460)">
+    <rect x="-6" y="-6" width="388" height="88" rx="18" fill="#00ffc8" fill-opacity=".045" filter="url(#dSoft)"/>
+    <rect width="376" height="76" rx="14" fill="url(#dGlass)" stroke="url(#dGlassStroke)" stroke-width="1"/>
+    <rect width="376" height="76" rx="14" fill="none" stroke="#00ffc8" stroke-opacity=".12">
+      <animate attributeName="stroke-opacity" values=".07;.34;.07" dur="5.4s" begin="5.18s" repeatCount="indefinite"/>
+    </rect>
+    <line x1="14" y1="1" x2="362" y2="1" stroke="url(#dEdge)" stroke-width="1"/>
+    <circle cx="22" cy="24" r="4" fill="#00ffc8">
+      <animate attributeName="opacity" values="1;.2;1" dur="2.10s" begin="5.18s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="22" cy="24" r="4" fill="none" stroke="#00ffc8" stroke-opacity=".5">
+      <animate attributeName="r" values="5;13" dur="2.4s" begin="5.18s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values=".5;0" dur="2.4s" begin="5.18s" repeatCount="indefinite"/>
+    </circle>
+    <text x="40" y="27" font-size="15" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">LINGUA ABERTA</text>
+    <text x="40" y="47" font-size="11" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">Open language lab</text>
+    <text x="40" y="64" font-size="9.5" font-family="'Consolas','JetBrains Mono',monospace" fill="#00ffc8" fill-opacity=".72">lingua-aberta · vercel.app</text>
+    <text x="356" y="43" font-size="16" text-anchor="end" fill="#00ffc8" fill-opacity=".75">→
+      <animate attributeName="fill-opacity" values=".3;.9;.3" dur="2.8s" begin="5.18s" repeatCount="indefinite"/>
+    </text>
+  </g></a><a xlink:href="https://manosabiertas-seven.vercel.app" target="_blank">
+  <g transform="translate(24,548)">
+    <rect x="-6" y="-6" width="388" height="88" rx="18" fill="#00ffc8" fill-opacity=".045" filter="url(#dSoft)"/>
+    <rect width="376" height="76" rx="14" fill="url(#dGlass)" stroke="url(#dGlassStroke)" stroke-width="1"/>
+    <rect width="376" height="76" rx="14" fill="none" stroke="#00ffc8" stroke-opacity=".12">
+      <animate attributeName="stroke-opacity" values=".07;.34;.07" dur="3.4s" begin="5.55s" repeatCount="indefinite"/>
+    </rect>
+    <line x1="14" y1="1" x2="362" y2="1" stroke="url(#dEdge)" stroke-width="1"/>
+    <circle cx="22" cy="24" r="4" fill="#00ffc8">
+      <animate attributeName="opacity" values="1;.2;1" dur="2.35s" begin="5.55s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="22" cy="24" r="4" fill="none" stroke="#00ffc8" stroke-opacity=".5">
+      <animate attributeName="r" values="5;13" dur="2.4s" begin="5.55s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values=".5;0" dur="2.4s" begin="5.55s" repeatCount="indefinite"/>
+    </circle>
+    <text x="40" y="27" font-size="15" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">MANOS ABIERTAS</text>
+    <text x="40" y="47" font-size="11" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">Education + migration</text>
+    <text x="40" y="64" font-size="9.5" font-family="'Consolas','JetBrains Mono',monospace" fill="#00ffc8" fill-opacity=".72">manosabiertas-seven.vercel.app</text>
+    <text x="356" y="43" font-size="16" text-anchor="end" fill="#00ffc8" fill-opacity=".75">→
+      <animate attributeName="fill-opacity" values=".3;.9;.3" dur="2.8s" begin="5.55s" repeatCount="indefinite"/>
+    </text>
+  </g></a><a xlink:href="https://manos-abiertas-psi.vercel.app" target="_blank">
+  <g transform="translate(412,548)">
+    <rect x="-6" y="-6" width="388" height="88" rx="18" fill="#00ffc8" fill-opacity=".045" filter="url(#dSoft)"/>
+    <rect width="376" height="76" rx="14" fill="url(#dGlass)" stroke="url(#dGlassStroke)" stroke-width="1"/>
+    <rect width="376" height="76" rx="14" fill="none" stroke="#00ffc8" stroke-opacity=".12">
+      <animate attributeName="stroke-opacity" values=".07;.34;.07" dur="3.9s" begin="5.92s" repeatCount="indefinite"/>
+    </rect>
+    <line x1="14" y1="1" x2="362" y2="1" stroke="url(#dEdge)" stroke-width="1"/>
+    <circle cx="22" cy="24" r="4" fill="#00ffc8">
+      <animate attributeName="opacity" values="1;.2;1" dur="1.60s" begin="5.92s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="22" cy="24" r="4" fill="none" stroke="#00ffc8" stroke-opacity=".5">
+      <animate attributeName="r" values="5;13" dur="2.4s" begin="5.92s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values=".5;0" dur="2.4s" begin="5.92s" repeatCount="indefinite"/>
+    </circle>
+    <text x="40" y="27" font-size="15" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">MANOS PSI</text>
+    <text x="40" y="47" font-size="11" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">Care + support node</text>
+    <text x="40" y="64" font-size="9.5" font-family="'Consolas','JetBrains Mono',monospace" fill="#00ffc8" fill-opacity=".72">manos-abiertas-psi.vercel.app</text>
+    <text x="356" y="43" font-size="16" text-anchor="end" fill="#00ffc8" fill-opacity=".75">→
+      <animate attributeName="fill-opacity" values=".3;.9;.3" dur="2.8s" begin="5.92s" repeatCount="indefinite"/>
+    </text>
+  </g></a><a xlink:href="https://saas-plasma-belentani7pedro-6758s-projects.vercel.app" target="_blank">
+  <g transform="translate(800,548)">
+    <rect x="-6" y="-6" width="388" height="88" rx="18" fill="#00ffff" fill-opacity=".045" filter="url(#dSoft)"/>
+    <rect width="376" height="76" rx="14" fill="url(#dGlass)" stroke="url(#dGlassStroke)" stroke-width="1"/>
+    <rect width="376" height="76" rx="14" fill="none" stroke="#00ffff" stroke-opacity=".12">
+      <animate attributeName="stroke-opacity" values=".07;.34;.07" dur="4.4s" begin="6.29s" repeatCount="indefinite"/>
+    </rect>
+    <line x1="14" y1="1" x2="362" y2="1" stroke="url(#dEdge)" stroke-width="1"/>
+    <circle cx="22" cy="24" r="4" fill="#00ffff">
+      <animate attributeName="opacity" values="1;.2;1" dur="1.85s" begin="6.29s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="22" cy="24" r="4" fill="none" stroke="#00ffff" stroke-opacity=".5">
+      <animate attributeName="r" values="5;13" dur="2.4s" begin="6.29s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values=".5;0" dur="2.4s" begin="6.29s" repeatCount="indefinite"/>
+    </circle>
+    <text x="40" y="27" font-size="15" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">SAAS PLASMA</text>
+    <text x="40" y="47" font-size="11" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">Starter plasma kit</text>
+    <text x="40" y="64" font-size="9.5" font-family="'Consolas','JetBrains Mono',monospace" fill="#00ffff" fill-opacity=".72">saas-plasma · vercel.app</text>
+    <text x="356" y="43" font-size="16" text-anchor="end" fill="#00ffff" fill-opacity=".75">→
+      <animate attributeName="fill-opacity" values=".3;.9;.3" dur="2.8s" begin="6.29s" repeatCount="indefinite"/>
+    </text>
+  </g></a><a xlink:href="https://keyrotor.vercel.app" target="_blank">
+  <g transform="translate(24,636)">
+    <rect x="-6" y="-6" width="388" height="88" rx="18" fill="#00ffff" fill-opacity=".045" filter="url(#dSoft)"/>
+    <rect width="376" height="76" rx="14" fill="url(#dGlass)" stroke="url(#dGlassStroke)" stroke-width="1"/>
+    <rect width="376" height="76" rx="14" fill="none" stroke="#00ffff" stroke-opacity=".12">
+      <animate attributeName="stroke-opacity" values=".07;.34;.07" dur="4.9s" begin="6.66s" repeatCount="indefinite"/>
+    </rect>
+    <line x1="14" y1="1" x2="362" y2="1" stroke="url(#dEdge)" stroke-width="1"/>
+    <circle cx="22" cy="24" r="4" fill="#00ffff">
+      <animate attributeName="opacity" values="1;.2;1" dur="2.10s" begin="6.66s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="22" cy="24" r="4" fill="none" stroke="#00ffff" stroke-opacity=".5">
+      <animate attributeName="r" values="5;13" dur="2.4s" begin="6.66s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values=".5;0" dur="2.4s" begin="6.66s" repeatCount="indefinite"/>
+    </circle>
+    <text x="40" y="27" font-size="15" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">KEYROTOR</text>
+    <text x="40" y="47" font-size="11" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">Key rotation engine</text>
+    <text x="40" y="64" font-size="9.5" font-family="'Consolas','JetBrains Mono',monospace" fill="#00ffff" fill-opacity=".72">keyrotor.vercel.app</text>
+    <text x="356" y="43" font-size="16" text-anchor="end" fill="#00ffff" fill-opacity=".75">→
+      <animate attributeName="fill-opacity" values=".3;.9;.3" dur="2.8s" begin="6.66s" repeatCount="indefinite"/>
+    </text>
+  </g></a><a xlink:href="https://nexus-machine-ops-belentani7pedro-6758s-projects.vercel.app" target="_blank">
+  <g transform="translate(412,636)">
+    <rect x="-6" y="-6" width="388" height="88" rx="18" fill="#00ffff" fill-opacity=".045" filter="url(#dSoft)"/>
+    <rect width="376" height="76" rx="14" fill="url(#dGlass)" stroke="url(#dGlassStroke)" stroke-width="1"/>
+    <rect width="376" height="76" rx="14" fill="none" stroke="#00ffff" stroke-opacity=".12">
+      <animate attributeName="stroke-opacity" values=".07;.34;.07" dur="5.4s" begin="7.03s" repeatCount="indefinite"/>
+    </rect>
+    <line x1="14" y1="1" x2="362" y2="1" stroke="url(#dEdge)" stroke-width="1"/>
+    <circle cx="22" cy="24" r="4" fill="#00ffff">
+      <animate attributeName="opacity" values="1;.2;1" dur="2.35s" begin="7.03s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="22" cy="24" r="4" fill="none" stroke="#00ffff" stroke-opacity=".5">
+      <animate attributeName="r" values="5;13" dur="2.4s" begin="7.03s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values=".5;0" dur="2.4s" begin="7.03s" repeatCount="indefinite"/>
+    </circle>
+    <text x="40" y="27" font-size="15" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">NEXUS OPS</text>
+    <text x="40" y="47" font-size="11" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">Machine ops console</text>
+    <text x="40" y="64" font-size="9.5" font-family="'Consolas','JetBrains Mono',monospace" fill="#00ffff" fill-opacity=".72">nexus-machine-ops · vercel.app</text>
+    <text x="356" y="43" font-size="16" text-anchor="end" fill="#00ffff" fill-opacity=".75">→
+      <animate attributeName="fill-opacity" values=".3;.9;.3" dur="2.8s" begin="7.03s" repeatCount="indefinite"/>
+    </text>
+  </g></a><a xlink:href="https://belentani7.github.io/heyduck/" target="_blank">
+  <g transform="translate(800,636)">
+    <rect x="-6" y="-6" width="388" height="88" rx="18" fill="#00ffff" fill-opacity=".045" filter="url(#dSoft)"/>
+    <rect width="376" height="76" rx="14" fill="url(#dGlass)" stroke="url(#dGlassStroke)" stroke-width="1"/>
+    <rect width="376" height="76" rx="14" fill="none" stroke="#00ffff" stroke-opacity=".12">
+      <animate attributeName="stroke-opacity" values=".07;.34;.07" dur="3.4s" begin="7.40s" repeatCount="indefinite"/>
+    </rect>
+    <line x1="14" y1="1" x2="362" y2="1" stroke="url(#dEdge)" stroke-width="1"/>
+    <circle cx="22" cy="24" r="4" fill="#00ffff">
+      <animate attributeName="opacity" values="1;.2;1" dur="1.60s" begin="7.40s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="22" cy="24" r="4" fill="none" stroke="#00ffff" stroke-opacity=".5">
+      <animate attributeName="r" values="5;13" dur="2.4s" begin="7.40s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values=".5;0" dur="2.4s" begin="7.40s" repeatCount="indefinite"/>
+    </circle>
+    <text x="40" y="27" font-size="15" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">DUCK HUB</text>
+    <text x="40" y="47" font-size="11" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">Studio apps · music</text>
+    <text x="40" y="64" font-size="9.5" font-family="'Consolas','JetBrains Mono',monospace" fill="#00ffff" fill-opacity=".72">belentani7.github.io/heyduck</text>
+    <text x="356" y="43" font-size="16" text-anchor="end" fill="#00ffff" fill-opacity=".75">→
+      <animate attributeName="fill-opacity" values=".3;.9;.3" dur="2.8s" begin="7.40s" repeatCount="indefinite"/>
+    </text>
+  </g></a><a xlink:href="https://belentani7.github.io/secure-t/" target="_blank">
+  <g transform="translate(24,724)">
+    <rect x="-6" y="-6" width="388" height="88" rx="18" fill="#00ffff" fill-opacity=".045" filter="url(#dSoft)"/>
+    <rect width="376" height="76" rx="14" fill="url(#dGlass)" stroke="url(#dGlassStroke)" stroke-width="1"/>
+    <rect width="376" height="76" rx="14" fill="none" stroke="#00ffff" stroke-opacity=".12">
+      <animate attributeName="stroke-opacity" values=".07;.34;.07" dur="3.9s" begin="7.77s" repeatCount="indefinite"/>
+    </rect>
+    <line x1="14" y1="1" x2="362" y2="1" stroke="url(#dEdge)" stroke-width="1"/>
+    <circle cx="22" cy="24" r="4" fill="#00ffff">
+      <animate attributeName="opacity" values="1;.2;1" dur="1.85s" begin="7.77s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="22" cy="24" r="4" fill="none" stroke="#00ffff" stroke-opacity=".5">
+      <animate attributeName="r" values="5;13" dur="2.4s" begin="7.77s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values=".5;0" dur="2.4s" begin="7.77s" repeatCount="indefinite"/>
+    </circle>
+    <text x="40" y="27" font-size="15" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">SECURE-T PAGES</text>
+    <text x="40" y="47" font-size="11" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">Cyber course · static</text>
+    <text x="40" y="64" font-size="9.5" font-family="'Consolas','JetBrains Mono',monospace" fill="#00ffff" fill-opacity=".72">belentani7.github.io/secure-t</text>
+    <text x="356" y="43" font-size="16" text-anchor="end" fill="#00ffff" fill-opacity=".75">→
+      <animate attributeName="fill-opacity" values=".3;.9;.3" dur="2.8s" begin="7.77s" repeatCount="indefinite"/>
+    </text>
+  </g></a><a xlink:href="https://belentani7.github.io/" target="_blank">
+  <g transform="translate(412,724)">
+    <rect x="-6" y="-6" width="388" height="88" rx="18" fill="#00ffff" fill-opacity=".045" filter="url(#dSoft)"/>
+    <rect width="376" height="76" rx="14" fill="url(#dGlass)" stroke="url(#dGlassStroke)" stroke-width="1"/>
+    <rect width="376" height="76" rx="14" fill="none" stroke="#00ffff" stroke-opacity=".12">
+      <animate attributeName="stroke-opacity" values=".07;.34;.07" dur="4.4s" begin="8.14s" repeatCount="indefinite"/>
+    </rect>
+    <line x1="14" y1="1" x2="362" y2="1" stroke="url(#dEdge)" stroke-width="1"/>
+    <circle cx="22" cy="24" r="4" fill="#00ffff">
+      <animate attributeName="opacity" values="1;.2;1" dur="2.10s" begin="8.14s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="22" cy="24" r="4" fill="none" stroke="#00ffff" stroke-opacity=".5">
+      <animate attributeName="r" values="5;13" dur="2.4s" begin="8.14s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values=".5;0" dur="2.4s" begin="8.14s" repeatCount="indefinite"/>
+    </circle>
+    <text x="40" y="27" font-size="15" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">BELENTANI HUB</text>
+    <text x="40" y="47" font-size="11" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">GitHub pages hub</text>
+    <text x="40" y="64" font-size="9.5" font-family="'Consolas','JetBrains Mono',monospace" fill="#00ffff" fill-opacity=".72">belentani7.github.io</text>
+    <text x="356" y="43" font-size="16" text-anchor="end" fill="#00ffff" fill-opacity=".75">→
+      <animate attributeName="fill-opacity" values=".3;.9;.3" dur="2.8s" begin="8.14s" repeatCount="indefinite"/>
+    </text>
+  </g></a><a xlink:href="https://judas-experience-13898.buildaispace.app/" target="_blank">
+  <g transform="translate(800,724)">
+    <rect x="-6" y="-6" width="388" height="88" rx="18" fill="#ff073a" fill-opacity=".045" filter="url(#dSoft)"/>
+    <rect width="376" height="76" rx="14" fill="url(#dGlass)" stroke="url(#dGlassStroke)" stroke-width="1"/>
+    <rect width="376" height="76" rx="14" fill="none" stroke="#ff073a" stroke-opacity=".12">
+      <animate attributeName="stroke-opacity" values=".07;.34;.07" dur="4.9s" begin="8.51s" repeatCount="indefinite"/>
+    </rect>
+    <line x1="14" y1="1" x2="362" y2="1" stroke="url(#dEdge)" stroke-width="1"/>
+    <circle cx="22" cy="24" r="4" fill="#ff073a">
+      <animate attributeName="opacity" values="1;.2;1" dur="2.35s" begin="8.51s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="22" cy="24" r="4" fill="none" stroke="#ff073a" stroke-opacity=".5">
+      <animate attributeName="r" values="5;13" dur="2.4s" begin="8.51s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values=".5;0" dur="2.4s" begin="8.51s" repeatCount="indefinite"/>
+    </circle>
+    <text x="40" y="27" font-size="15" font-weight="bold" font-family="'Segoe UI','Space Grotesk',system-ui,sans-serif" fill="#eeedf2">JUDAS BUILD</text>
+    <text x="40" y="47" font-size="11" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">BuildAI space deploy</text>
+    <text x="40" y="64" font-size="9.5" font-family="'Consolas','JetBrains Mono',monospace" fill="#ff073a" fill-opacity=".72">judas-experience-13898.buildaispace.app</text>
+    <text x="356" y="43" font-size="16" text-anchor="end" fill="#ff073a" fill-opacity=".75">→
+      <animate attributeName="fill-opacity" values=".3;.9;.3" dur="2.8s" begin="8.51s" repeatCount="indefinite"/>
+    </text>
+  </g></a>
+<line x1="24" y1="816" x2="1176" y2="816" stroke="#ff073a" stroke-opacity=".16"/>
+<text x="600" y="842" text-anchor="middle" font-size="11" letter-spacing="3" font-family="'Consolas','JetBrains Mono',monospace" fill="rgba(238,237,242,.56)">ALL SYSTEMS NOMINAL · LAST SYNC 2026-09-10 · NOIACORE // BELENTANI</text>
+</svg>
