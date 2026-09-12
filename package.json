@@ -4,7 +4,7 @@
   "main": "src/main.js",
   "bin": { "bellentani": "bellentani-cli.js" },
   "scripts": {
-    "test": "node tests/audit.test.js && node bellentani-cli.js doctor && node bellentani-cli.js audit",
+    "test": "cd desktop && node tests/audit.test.js && node bellentani-cli.js doctor && node bellentani-cli.js audit",
     "start": "electron .",
     "dev": "electron .",
     "build": "electron-builder --win",
