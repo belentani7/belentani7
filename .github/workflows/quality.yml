@@ -34,7 +34,10 @@ jobs:
           cache: pnpm
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: |
+          pnpm --version
+          cat pnpm-workspace.yaml
+          pnpm install --frozen-lockfile
 
       - name: Test
         run: pnpm test
