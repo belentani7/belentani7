@@ -1,7 +1,7 @@
 {
   "name": "belentani",
   "version": "0.6.0",
-  "main": "src/main.js",
+  "main": "desktop/src/main.js",
   "bin": { "bellentani": "bellentani-cli.js" },
   "scripts": {
     "test": "cd desktop && node tests/audit.test.js && node bellentani-cli.js doctor && node bellentani-cli.js audit",
@@ -28,7 +28,7 @@
   },
   "build": {
     "appId": "com.bellentani.desktop",
-    "files": ["src/**/*", "package.json", "node_modules/monaco-editor/min/**/*", "node_modules/monaco-editor/package.json", "node_modules/uuid/**/*", "node_modules/uuid/package.json"],
+    "files": ["desktop/src/**/*", "package.json", "node_modules/monaco-editor/min/**/*", "node_modules/monaco-editor/package.json", "node_modules/uuid/**/*", "node_modules/uuid/package.json"],
     "extraResources": [
       { "from": "engine", "to": "engine", "filter": ["**/*", "!data/**", "!**/__pycache__/**"] },
       { "from": "manos", "to": "manos" },
