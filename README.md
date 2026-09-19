@@ -1,4 +1,4 @@
-<div align="center">
+﻿<div align="center">
 
 <!-- ══════════════════════════════════════════════════════════════════
   THE BELENTANI EXPERIENCE · bio-machine
@@ -16,7 +16,7 @@
 <img src="https://img.shields.io/badge/THE__EXPERIENCE-3D__WEBGL-ff073a?style=for-the-badge&labelColor=050505" />
 <img src="https://img.shields.io/badge/LOC-Barcelona-ff073a?style=for-the-badge&labelColor=050505" />
 <img src="https://img.shields.io/badge/NASCIDO-S%C3%A3o__Paulo-00ffc8?style=for-the-badge&labelColor=050505" />
-<img src="https://img.shields.io/badge/REPOS-114-ff073a?style=for-the-badge&labelColor=050505&logo=github" />
+<img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2Fbelentani7&query=%24.public_repos&label=REPOS&color=ff073a&labelColor=050505&style=for-the-badge&logo=github" />
 <img src="https://komarev.com/ghpvc/?username=belentani7&color=ff073a&style=for-the-badge&label=SIGNAL+CLICKS" />
 
 </div>
@@ -31,7 +31,7 @@
 
 <a href="https://belentani-experience.vercel.app"><img src="https://img.shields.io/badge/ENTER_THE_EXPERIENCE-ff073a?style=for-the-badge&labelColor=050505&logo=vercel&logoColor=white" height="40" /></a>
 &nbsp;
-<a href="https://belentani.vercel.app"><img src="https://img.shields.io/badge/MAIN_HUB-050505?style=for-the-badge&labelColor=ff073a&logo=github&logoColor=white" height="40" /></a>
+<a href="https://belentani-experience.vercel.app"><img src="https://img.shields.io/badge/MAIN_HUB-050505?style=for-the-badge&labelColor=ff073a&logo=github&logoColor=white" height="40" /></a>
 
 </div>
 
@@ -44,7 +44,7 @@
 
 <table>
 <tr>
-<td align="center"><a href="https://belentani.vercel.app"><img src="https://raw.githubusercontent.com/belentani7/belentani7/main/assets/deck/belentani.svg?v=4" width="300" alt="BELENTANI — Main hub · creative + education" /></a></td>
+<td align="center"><a href="https://belentani-experience.vercel.app"><img src="https://raw.githubusercontent.com/belentani7/belentani7/main/assets/deck/belentani.svg?v=4" width="300" alt="BELENTANI — Main hub · creative + education" /></a></td>
 <td align="center"><a href="https://belentani-experience.vercel.app"><img src="https://raw.githubusercontent.com/belentani7/belentani7/main/assets/deck/the-experience.svg?v=4" width="300" alt="THE EXPERIENCE — WebGL · Bloom · Cinematic" /></a></td>
 <td align="center"><a href="https://judas-experience.vercel.app"><img src="https://raw.githubusercontent.com/belentani7/belentani7/main/assets/deck/judas.svg?v=4" width="300" alt="JUDAS — Bleeding-crystal storyboard" /></a></td>
 </tr>
@@ -94,17 +94,17 @@
 
 ## TELEMETRÍA DEL NÚCLEO
 
-<img src="https://github-readme-stats.vercel.app/api?username=belentani7&show_icons=true&hide_border=true&bg_color=050505&title_color=ff073a&icon_color=ff073a&text_color=e6e6e6&border_color=ff073a" alt="GitHub Stats" width="49%" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=belentani7&layout=compact&bg_color=050505&title_color=ff073a&text_color=e6e6e6&hide_border=true" alt="Top Langs" width="40%" />
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=belentani7&theme=github_dark" alt="GitHub Stats" width="49%" />
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=belentani7&theme=github_dark" alt="Top Langs" width="40%" />
 
 <br/>
 
-<img src="https://github-profile-trophy.vercel.app/?username=belentani7&theme=onedark&row=1&column=7&no-frame=true&margin-w=8" alt="Trophies" width="100%" />
+<img src="https://trophy.ryglcloud.net/?username=belentani7&theme=onedark&row=1&column=7&no-frame=true&margin-w=8" alt="Trophies" width="100%" />
 
 <br/>
 
 <img src="https://streak-stats.demolab.com/?user=belentani7&theme=radical&ring=ff073a&fire=ff073a&currStreakLabel=ff073a&background=050505&border=ff073a&sideNums=e6e6e6&sideLabels=888&dates=888" alt="Streak" width="52%" />
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=belentani7&theme=redical&custom_title=Neural%20Activity%20Grid&hide_border=true" alt="Activity Graph" width="97%" />
+<img src="https://ghchart.rshah.org/ff073a/belentani7" alt="Activity Graph" width="97%" />
 
 </div>
 
@@ -157,7 +157,7 @@
 `$ echo $LOC:` **Barcelona · L'Hospitalet (n. São Paulo)**<br/>
 `$ echo $LANG:` **TypeScript 66% · HTML 12% · JS 12% · Python 6%**
 
-*"Fazer visível o que importa."* — [belentani.vercel.app](https://belentani.vercel.app)
+*"Fazer visível o que importa."* — [belentani.vercel.app](https://belentani-experience.vercel.app)
 
 </div>
 
@@ -169,7 +169,7 @@
 ### Vercel
 | Site | URL |
 |---|---|
-| Main | https://belentani.vercel.app |
+| Main | https://belentani-experience.vercel.app |
 | Experience 3D | https://belentani-experience.vercel.app |
 | Judas Experience | https://judas-experience.vercel.app |
 | Judas Access | https://judas-access.vercel.app |
