@@ -31,7 +31,7 @@
 
 <a href="https://belentani-experience.vercel.app"><img src="https://img.shields.io/badge/ENTER_THE_EXPERIENCE-ff073a?style=for-the-badge&labelColor=050505&logo=vercel&logoColor=white" height="40" /></a>
 &nbsp;
-<a href="https://belentani-experience.vercel.app"><img src="https://img.shields.io/badge/MAIN_HUB-050505?style=for-the-badge&labelColor=ff073a&logo=github&logoColor=white" height="40" /></a>
+<a href="https://belentani.es"><img src="https://img.shields.io/badge/MAIN_HUB-050505?style=for-the-badge&labelColor=ff073a&logo=github&logoColor=white" height="40" /></a>
 
 </div>
 
@@ -44,7 +44,7 @@
 
 <table>
 <tr>
-<td align="center"><a href="https://belentani-experience.vercel.app"><img src="https://raw.githubusercontent.com/belentani7/belentani7/main/assets/deck/belentani.svg?v=4" width="300" alt="BELENTANI — Main hub · creative + education" /></a></td>
+<td align="center"><a href="https://belentani.es"><img src="https://raw.githubusercontent.com/belentani7/belentani7/main/assets/deck/belentani.svg?v=4" width="300" alt="BELENTANI — Main hub · creative + education" /></a></td>
 <td align="center"><a href="https://belentani-experience.vercel.app"><img src="https://raw.githubusercontent.com/belentani7/belentani7/main/assets/deck/the-experience.svg?v=4" width="300" alt="THE EXPERIENCE — WebGL · Bloom · Cinematic" /></a></td>
 <td align="center"><a href="https://judas-experience.vercel.app"><img src="https://raw.githubusercontent.com/belentani7/belentani7/main/assets/deck/judas.svg?v=4" width="300" alt="JUDAS — Bleeding-crystal storyboard" /></a></td>
 </tr>
@@ -157,7 +157,7 @@
 `$ echo $LOC:` **Barcelona · L'Hospitalet (n. São Paulo)**<br/>
 `$ echo $LANG:` **TypeScript 66% · HTML 12% · JS 12% · Python 6%**
 
-*"Fazer visível o que importa."* — [belentani.vercel.app](https://belentani-experience.vercel.app)
+*"Fazer visível o que importa."* — [belentani.es](https://belentani.es)
 
 </div>
 
@@ -169,7 +169,7 @@
 ### Vercel
 | Site | URL |
 |---|---|
-| Main | https://belentani-experience.vercel.app |
+| Main | https://belentani.es |
 | Experience 3D | https://belentani-experience.vercel.app |
 | Judas Experience | https://judas-experience.vercel.app |
 | Judas Access | https://judas-access.vercel.app |
