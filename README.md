@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./profile-neon.svg" alt="Belentani red neon"/>
+</p>
+
 # Belentani · NOIACORE
 
 **Neural Architect · Voice Cloning · Creative Systems · Full-Stack TS/Python**
