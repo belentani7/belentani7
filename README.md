@@ -1,205 +1,34 @@
-﻿<div align="center">
+# Belentani · NOIACORE
 
-<!-- ══════════════════════════════════════════════════════════════════
-  THE BELENTANI EXPERIENCE · bio-machine
-  generado por scripts/banner-gen.js — SVG nativo + SMIL (cero JS/CSS)
-  glassmorphism · neón rojo · alive machine
-  ══════════════════════════════════════════════════════════════════ -->
+**Neural Architect · Voice Cloning · Creative Systems · Full-Stack TS/Python**
 
-<!-- BELENTANI-HERO:START -->
-<img src="https://raw.githubusercontent.com/belentani7/belentani7/main/assets/bio-banner.svg?v=4" alt="The Belentani Experience — alive machine" width="1200" />
-<!-- BELENTANI-HERO:END -->
+> Barcelona · 120+ public repos · Multi-agent intelligence (NOIACORE)
 
-<br/>
+## Projects
 
-<img src="https://img.shields.io/badge/STATUS-ALIVE__MACHINE-ff073a?style=for-the-badge&labelColor=050505&logo=github" />
-<img src="https://img.shields.io/badge/THE__EXPERIENCE-3D__WEBGL-ff073a?style=for-the-badge&labelColor=050505" />
-<img src="https://img.shields.io/badge/LOC-Barcelona-ff073a?style=for-the-badge&labelColor=050505" />
-<img src="https://img.shields.io/badge/NASCIDO-S%C3%A3o__Paulo-00ffc8?style=for-the-badge&labelColor=050505" />
-<img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2Fbelentani7&query=%24.public_repos&label=REPOS&color=ff073a&labelColor=050505&style=for-the-badge&logo=github" />
-<img src="https://komarev.com/ghpvc/?username=belentani7&color=ff073a&style=for-the-badge&label=SIGNAL+CLICKS" />
+### Education Platforms (PT/ES/EN/CA)
+- [ManosAbiertas](https://manos-abiertas-psi.vercel.app) — free courses (IA, Office, CV builder)
+- [Secure T University](https://secure-t-university-kkky6piqb-belentani7pedro-6758s-projects.vercel.app) — cybersecurity & AI digital campus
+- [open-school](https://open-school-6nyerl39m-belentani7pedro-6758s-projects.vercel.app) — modular universal courses
+- [UX Academy](https://ux-academy-professional.vercel.app) — trilingual UX/Product Design
+- [Aprende Brasil](https://aprende-brasil-4o8a6dnyi-belentani7pedro-6758s-projects.vercel.app) — interactive Brazilian education
 
-</div>
+### AI & Agent Systems
+- [NOIACORE](https://github.com/belentani7/NOIACORE) — multi-agent intelligence system
+- [agentbox](https://github.com/belentani7/agentbox) — disposable cloud sandboxes for AI agents
+- [agent-skills](https://github.com/belentani7/agent-skills) — 311 CLI agent skills (MIT)
 
----
+### Creative & Engineering
+- [belentani_Omega](https://github.com/belentani7/belentani_Omega) — artist ecosystem (music, code, AI)
+- [belent-cad](https://github.com/belentani7/belent-cad) — open-source architectural CAD
+- [belentani-experience-tour](https://github.com/belentani7/belentani-experience-tour) — living UI/UX library
 
-## THE BELENTANI EXPERIENCE
+### Social Impact
+- [Cruzando el Charco](https://github.com/belentani7/Cruzando-el-charco) — LGTBIQ+ migrant support platform
 
-> GitHub sanitiza `<script>` y `<style>` en los README — toda la máquina de aquí abajo es **SVG nativo + SMIL**: vidrio, neón rojo y telemetría viva sin una sola línea de JavaScript.
+## Tech
 
-<div align="center">
-
-<a href="https://belentani-experience.vercel.app"><img src="https://img.shields.io/badge/ENTER_THE_EXPERIENCE-ff073a?style=for-the-badge&labelColor=050505&logo=vercel&logoColor=white" height="40" /></a>
-&nbsp;
-<a href="https://belentani.es"><img src="https://img.shields.io/badge/MAIN_HUB-050505?style=for-the-badge&labelColor=ff073a&logo=github&logoColor=white" height="40" /></a>
-
-</div>
+TypeScript · Python · Go · Next.js · React · FastAPI · Three.js · AI/ML · Vercel · Cloudflare
 
 ---
-
-## VERCEL DEPLOYMENT GRID
-
-<!-- BELENTANI-DECK:START -->
-<img src="https://raw.githubusercontent.com/belentani7/belentani7/main/assets/deck-header.svg?v=4" alt="Vercel deployment grid" width="1200" />
-
-<table>
-<tr>
-<td align="center"><a href="https://belentani.es"><img src="https://raw.githubusercontent.com/belentani7/belentani7/main/assets/deck/belentani.svg?v=4" width="300" alt="BELENTANI — Main hub · creative + education" /></a></td>
-<td align="center"><a href="https://belentani-experience.vercel.app"><img src="https://raw.githubusercontent.com/belentani7/belentani7/main/assets/deck/the-experience.svg?v=4" width="300" alt="THE EXPERIENCE — WebGL · Bloom · Cinematic" /></a></td>
-<td align="center"><a href="https://judas-experience.vercel.app"><img src="https://raw.githubusercontent.com/belentani7/belentani7/main/assets/deck/judas.svg?v=4" width="300" alt="JUDAS — Bleeding-crystal storyboard" /></a></td>
-</tr>
-<tr>
-<td align="center"><a href="https://judas-access.vercel.app"><img src="https://raw.githubusercontent.com/belentani7/belentani7/main/assets/deck/judas-access.svg?v=4" width="300" alt="JUDAS ACCESS — Ritual entry gate" /></a></td>
-<td align="center"><a href="https://belentani-judas-web.vercel.app"><img src="https://raw.githubusercontent.com/belentani7/belentani7/main/assets/deck/judas-web.svg?v=4" width="300" alt="JUDAS WEB — Narrative web · chapters" /></a></td>
-<td align="center"><a href="https://noiacore-lab.vercel.app"><img src="https://raw.githubusercontent.com/belentani7/belentani7/main/assets/deck/noiacore-lab.svg?v=4" width="300" alt="NOIACORE LAB — React 19 · tRPC · LLM" /></a></td>
-</tr>
-<tr>
-<td align="center"><a href="https://belentani-v2.vercel.app"><img src="https://raw.githubusercontent.com/belentani7/belentani7/main/assets/deck/belentani-v2.svg?v=4" width="300" alt="BELENTANI V2 — Next-gen shell" /></a></td>
-<td align="center"><a href="https://belentani7-profile.vercel.app"><img src="https://raw.githubusercontent.com/belentani7/belentani7/main/assets/deck/profile-shell.svg?v=4" width="300" alt="PROFILE SHELL — Vite app · portfolio core" /></a></td>
-<td align="center"><a href="https://secure-t.vercel.app"><img src="https://raw.githubusercontent.com/belentani7/belentani7/main/assets/deck/secure-t.svg?v=4" width="300" alt="SECURE-T — Cyber + AI academy" /></a></td>
-</tr>
-<tr>
-<td align="center"><a href="https://secure-t-university.vercel.app"><img src="https://raw.githubusercontent.com/belentani7/belentani7/main/assets/deck/secure-t-univ.svg?v=4" width="300" alt="SECURE-T UNIV — University portal" /></a></td>
-<td align="center"><a href="https://open-school-belentani7pedro-6758s-projects.vercel.app"><img src="https://raw.githubusercontent.com/belentani7/belentani7/main/assets/deck/open-school.svg?v=4" width="300" alt="OPEN SCHOOL — Open learning platform" /></a></td>
-<td align="center"><a href="https://ux-academy-professional-belentani7pedro-6758s-projects.vercel.app"><img src="https://raw.githubusercontent.com/belentani7/belentani7/main/assets/deck/ux-academy.svg?v=4" width="300" alt="UX ACADEMY — Professional UX track" /></a></td>
-</tr>
-<tr>
-<td align="center"><a href="https://williamschool-livid.vercel.app"><img src="https://raw.githubusercontent.com/belentani7/belentani7/main/assets/deck/william-school.svg?v=4" width="300" alt="WILLIAM SCHOOL — School platform" /></a></td>
-<td align="center"><a href="https://linguaforge-rouge.vercel.app"><img src="https://raw.githubusercontent.com/belentani7/belentani7/main/assets/deck/linguaforge.svg?v=4" width="300" alt="LINGUAFORGE — Language forge lab" /></a></td>
-<td align="center"><a href="https://lingua-aberta-belentani7pedro-6758s-projects.vercel.app"><img src="https://raw.githubusercontent.com/belentani7/belentani7/main/assets/deck/lingua-aberta.svg?v=4" width="300" alt="LINGUA ABERTA — Open language lab" /></a></td>
-</tr>
-<tr>
-<td align="center"><a href="https://manosabiertas-seven.vercel.app"><img src="https://raw.githubusercontent.com/belentani7/belentani7/main/assets/deck/manos-abiertas.svg?v=4" width="300" alt="MANOS ABIERTAS — Education + migration" /></a></td>
-<td align="center"><a href="https://manos-abiertas-psi.vercel.app"><img src="https://raw.githubusercontent.com/belentani7/belentani7/main/assets/deck/manos-psi.svg?v=4" width="300" alt="MANOS PSI — Care + support node" /></a></td>
-<td align="center"><a href="https://saas-plasma-belentani7pedro-6758s-projects.vercel.app"><img src="https://raw.githubusercontent.com/belentani7/belentani7/main/assets/deck/saas-plasma.svg?v=4" width="300" alt="SAAS PLASMA — Starter plasma kit" /></a></td>
-</tr>
-<tr>
-<td align="center"><a href="https://keyrotor.vercel.app"><img src="https://raw.githubusercontent.com/belentani7/belentani7/main/assets/deck/keyrotor.svg?v=4" width="300" alt="KEYROTOR — Key rotation engine" /></a></td>
-<td align="center"><a href="https://nexus-machine-ops-belentani7pedro-6758s-projects.vercel.app"><img src="https://raw.githubusercontent.com/belentani7/belentani7/main/assets/deck/nexus-ops.svg?v=4" width="300" alt="NEXUS OPS — Machine ops console" /></a></td>
-<td align="center"><a href="https://belentani7.github.io/heyduck/"><img src="https://raw.githubusercontent.com/belentani7/belentani7/main/assets/deck/duck-hub.svg?v=4" width="300" alt="DUCK HUB — Studio apps · music" /></a></td>
-</tr>
-<tr>
-<td align="center"><a href="https://belentani7.github.io/secure-t/"><img src="https://raw.githubusercontent.com/belentani7/belentani7/main/assets/deck/secure-t-pages.svg?v=4" width="300" alt="SECURE-T PAGES — Cyber course · static" /></a></td>
-<td align="center"><a href="https://belentani7.github.io/"><img src="https://raw.githubusercontent.com/belentani7/belentani7/main/assets/deck/belentani-hub.svg?v=4" width="300" alt="BELENTANI HUB — GitHub pages hub" /></a></td>
-<td align="center"><a href="https://judas-experience-13898.buildaispace.app/"><img src="https://raw.githubusercontent.com/belentani7/belentani7/main/assets/deck/judas-build.svg?v=4" width="300" alt="JUDAS BUILD — BuildAI space deploy" /></a></td>
-</tr>
-</table>
-<!-- BELENTANI-DECK:END -->
-
-<sub>`24` nodos verificados en producción (2026-09-10) · click en cualquier botón para abrir su deployment.</sub>
-
----
-
-<div align="center">
-
-## TELEMETRÍA DEL NÚCLEO
-
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=belentani7&theme=github_dark" alt="GitHub Stats" width="49%" />
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=belentani7&theme=github_dark" alt="Top Langs" width="40%" />
-
-<br/>
-
-<img src="https://trophy.ryglcloud.net/?username=belentani7&theme=onedark&row=1&column=7&no-frame=true&margin-w=8" alt="Trophies" width="100%" />
-
-<br/>
-
-<img src="https://streak-stats.demolab.com/?user=belentani7&theme=radical&ring=ff073a&fire=ff073a&currStreakLabel=ff073a&background=050505&border=ff073a&sideNums=e6e6e6&sideLabels=888&dates=888" alt="Streak" width="52%" />
-<img src="https://ghchart.rshah.org/ff073a/belentani7" alt="Activity Graph" width="97%" />
-
-</div>
-
----
-
-## UNIVERSOS
-
-| Universo | Contenido |
-|----------|-----------|
-| **BELENTANI** | identidad, hubs, cv-ai, experiencia |
-| **JUDAS** | narrativa, cristal sangrante, buildai |
-| **OMEGA** | ecosistema de artista, plantillas |
-| **DUCK** | música, studio apps, heyduck |
-| **AI_SYSTEMS** | omniagent, meta-skill, skill packs |
-| **CREATIVE_TECH** | comfyui, vfx, pbr, latent bench |
-| **PUBLIC_GOOD** | manosabiertas, linguaforge, tender words |
-| **RESEARCH** | carquidec, oss-compass, prisma26 |
-
----
-
-## ARSENAL
-
-| Capa | Stack |
-|------|-------|
-| **CORE** | `TypeScript` `Python` `Java` `Go` `PowerShell` |
-| **WEB** | `React 19` `Next.js` `Astro` `Vite` `tRPC` |
-| **DATA / INFRA** | `Drizzle` `MySQL` `Redis` `Express` `Docker` |
-| **3D / MOTION** | `Three.js` `R3F` `GSAP` `Lenis` `Framer` |
-| **AI / AUDIO** | `RVC` `Applio` `Whisper` `Demucs` `Tone.js` |
-| **AGENTS** | `Claude Code` `Qwen Code` `Aider` `OpenCode` |
-
----
-
-## ACTIVE MISSIONS
-
-| Project | Stack | Status |
-|---------|-------|--------|
-| **NOIACORE LAB** | `React 19` `tRPC` `LLM` `MySQL` | 298 files · Live |
-| **meta-skill** | `Python` `Zero-token routing` | 16 archetypes |
-| **AgentGuard** | `Go` `Budget firewall` | Auto-pause daemon |
-| **nexus-os** | `JS` `Neon Glass OS` | 38+ apps · zero deps |
-| **Voice Clone** | `RVC` `Applio` `Kaggle GPU` | 47 stems training |
-| **proofmesh** | `TS` `Change intelligence` | 6-criteria gates |
-| **gpu-cost-optimizer** | `Python` `Diffusion` | -70% cost |
-
----
-
-<div align="center">
-
-`$ echo $LOC:` **Barcelona · L'Hospitalet (n. São Paulo)**<br/>
-`$ echo $LANG:` **TypeScript 66% · HTML 12% · JS 12% · Python 6%**
-
-*"Fazer visível o que importa."* — [belentani.es](https://belentani.es)
-
-</div>
-
----
-
-<details>
-<summary><b>todas las URLs (texto plano)</b></summary>
-
-### Vercel
-| Site | URL |
-|---|---|
-| Main | https://belentani.es |
-| Experience 3D | https://belentani-experience.vercel.app |
-| Judas Experience | https://judas-experience.vercel.app |
-| Judas Access | https://judas-access.vercel.app |
-| Judas Web | https://belentani-judas-web.vercel.app |
-| Open School | https://open-school-belentani7pedro-6758s-projects.vercel.app |
-| LinguaForge | https://linguaforge-rouge.vercel.app |
-| ManosAbiertas | https://manos-abiertas-psi.vercel.app |
-| ManosAbiertas Seven | https://manosabiertas-seven.vercel.app |
-| Secure-T | https://secure-t.vercel.app |
-| Secure-T University | https://secure-t-university.vercel.app |
-| NOIACORE LAB | https://noiacore-lab.vercel.app |
-| Belentani v2 | https://belentani-v2.vercel.app |
-| Lingua Aberta | https://lingua-aberta-belentani7pedro-6758s-projects.vercel.app |
-| UX Academy | https://ux-academy-professional-belentani7pedro-6758s-projects.vercel.app |
-| SaaS Plasma | https://saas-plasma-belentani7pedro-6758s-projects.vercel.app |
-| Keyrotor | https://keyrotor.vercel.app |
-| William School | https://williamschool-livid.vercel.app |
-| Nexus Machine Ops | https://nexus-machine-ops-belentani7pedro-6758s-projects.vercel.app |
-| Profile Shell | https://belentani7-profile.vercel.app |
-
-### GitHub Pages
-| Site | URL |
-|---|---|
-| Hub | https://belentani7.github.io/ |
-| heyduck | https://belentani7.github.io/heyduck/ |
-| secure-t | https://belentani7.github.io/secure-t/ |
-
-### BuildAI Space
-| Site | URL |
-|---|---|
-| Judas Experience | https://judas-experience-13898.buildaispace.app/ |
-
-</details>
+*by [belentani7](https://github.com/belentani7)* — NOIACORE · 2026
