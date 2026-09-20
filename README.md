@@ -1,38 +1,211 @@
-<p align="center">
-  <img src="./profile-neon.svg" alt="Belentani red neon"/>
-</p>
+<div align="center">
 
-# Belentani · NOIACORE
+<img src="./profile-neon.svg" width="100%" alt="BELENTANI — red neon profile"/>
 
-**Neural Architect · Voice Cloning · Creative Systems · Full-Stack TS/Python**
+<br/>
 
-> Barcelona · 120+ public repos · Multi-agent intelligence (NOIACORE)
+<img src="https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=600&size=22&pause=900&color=FF244C&center=true&vCenter=true&width=760&lines=AI+SYSTEMS+%C2%B7+CREATIVE+TECH+%C2%B7+FULL-STACK;NOIACORE+%2F+INTELLIGENCE+SYSTEMS;ARTIST+%C2%B7+ENGINEER+%C2%B7+ARCHITECT+OF+DIGITAL+WORLDS" alt="Typing intro"/>
 
-## Projects
+<br/><br/>
 
-### Education Platforms (PT/ES/EN/CA)
-- [ManosAbiertas](https://manos-abiertas-psi.vercel.app) — free courses (IA, Office, CV builder)
-- [Secure T University](https://secure-t-university-kkky6piqb-belentani7pedro-6758s-projects.vercel.app) — cybersecurity & AI digital campus
-- [open-school](https://open-school-6nyerl39m-belentani7pedro-6758s-projects.vercel.app) — modular universal courses
-- [UX Academy](https://ux-academy-professional.vercel.app) — trilingual UX/Product Design
-- [Aprende Brasil](https://aprende-brasil-4o8a6dnyi-belentani7pedro-6758s-projects.vercel.app) — interactive Brazilian education
+<a href="https://github.com/belentani7"><img src="https://img.shields.io/badge/GITHUB-belentani7-050505?style=for-the-badge&logo=github&logoColor=white"/></a>
+<a href="https://github.com/belentani7?tab=repositories"><img src="https://img.shields.io/badge/REPOSITORIES-200%2B-FF1038?style=for-the-badge&logo=github&logoColor=white"/></a>
+<a href="https://github.com/belentani7/NOIACORE"><img src="https://img.shields.io/badge/NOIACORE-INTELLIGENCE-7A0014?style=for-the-badge&logo=github&logoColor=white"/></a>
 
-### AI & Agent Systems
-- [NOIACORE](https://github.com/belentani7/NOIACORE) — multi-agent intelligence system
-- [agentbox](https://github.com/belentani7/agentbox) — disposable cloud sandboxes for AI agents
-- [agent-skills](https://github.com/belentani7/agent-skills) — 311 CLI agent skills (MIT)
-
-### Creative & Engineering
-- [belentani_Omega](https://github.com/belentani7/belentani_Omega) — artist ecosystem (music, code, AI)
-- [belent-cad](https://github.com/belentani7/belent-cad) — open-source architectural CAD
-- [belentani-experience-tour](https://github.com/belentani7/belentani-experience-tour) — living UI/UX library
-
-### Social Impact
-- [Cruzando el Charco](https://github.com/belentani7/Cruzando-el-charco) — LGTBIQ+ migrant support platform
-
-## Tech
-
-TypeScript · Python · Go · Next.js · React · FastAPI · Three.js · AI/ML · Vercel · Cloudflare
+</div>
 
 ---
-*by [belentani7](https://github.com/belentani7)* — NOIACORE · 2026
+
+## ◉ BELENTANI
+
+**Pedro Belentani** — AI systems builder, creative technologist and full-stack engineer based in Barcelona.
+
+I build things where **software, artificial intelligence, automation, design and culture** stop behaving like separate disciplines.
+
+> **Not just applications. Living systems.**
+
+---
+
+## ⚡ WHAT I BUILD
+
+<table>
+<tr>
+<td width="50%">
+
+### 🧠 AI & AGENTS
+- Multi-agent systems
+- AI orchestration
+- Agent tooling & skills
+- LLM integrations
+- Automation pipelines
+- AI-native products
+
+</td>
+<td width="50%">
+
+### 🎛 CREATIVE TECHNOLOGY
+- Generative media
+- Interactive experiences
+- Music / artist systems
+- Visual interfaces
+- Creative automation
+- Experimental web
+
+</td>
+</tr>
+<tr>
+<td>
+
+### 🏗 ENGINEERING
+- TypeScript / Python
+- Next.js / React
+- FastAPI
+- Three.js
+- APIs & integrations
+- Vercel / Cloudflare
+
+</td>
+<td>
+
+### 🌍 HUMAN SYSTEMS
+- Education platforms
+- Migrant support
+- Accessible AI
+- Digital products
+- Open-source experiments
+- Community infrastructure
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🔴 NOIACORE
+
+**NOIACORE** is the systems layer behind the work.
+
+> **Inteligencia silenciosa. Tecnología esencial.**
+
+AI systems · automation · agents · diagnostics · creative technology.
+
+[→ Explore NOIACORE](https://github.com/belentani7/NOIACORE)
+
+---
+
+## 🧬 SELECTED SYSTEMS
+
+| PROJECT | WHAT IT IS |
+|---|---|
+| **[NOIACORE](https://github.com/belentani7/NOIACORE)** | Multi-agent intelligence system |
+| **[agentbox](https://github.com/belentani7/agentbox)** | Disposable cloud sandboxes for AI agents |
+| **[agent-skills](https://github.com/belentani7/agent-skills)** | 311 CLI agent skills · MIT |
+| **[belentani_Omega](https://github.com/belentani7/belentani_Omega)** | Artist ecosystem · music · code · AI |
+| **[belentani-experience-tour](https://github.com/belentani7/belentani-experience-tour)** | Living UI / UX experience system |
+| **[belent-cad](https://github.com/belentani7/belent-cad)** | Open-source architectural CAD |
+| **[ManosAbiertas](https://manos-abiertas-psi.vercel.app)** | Free AI / Office education platform |
+| **[Cruzando el Charco](https://github.com/belentani7/Cruzando-el-charco)** | Social-impact digital platform |
+
+---
+
+## 🛰 CURRENTLY BUILDING
+
+<pre>
+◉ AI SYSTEMS
+◉ AGENT INFRASTRUCTURE
+◉ CREATIVE AI
+◉ AUTOMATION
+◉ EDUCATION
+◉ DIGITAL EXPERIENCES
+◉ OPEN SOURCE
+</pre>
+
+<div align="center">
+
+### THE STACK
+
+<img src="https://skillicons.dev/icons?i=ts,python,go,react,nextjs,nodejs,fastapi,threejs,git,github,vercel,cloudflare,docker&perline=7" alt="Tech stack"/>
+
+</div>
+
+---
+
+## 📡 SIGNAL
+
+<div align="center">
+
+<img src="https://github-readme-stats.vercel.app/api?username=belentani7&show_icons=true&hide_border=true&bg_color=050505&title_color=FF244C&icon_color=FF1038&text_color=FFFFFF&ring_color=FF1038" height="170"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=belentani7&layout=compact&hide_border=true&bg_color=050505&title_color=FF244C&text_color=FFFFFF" height="170"/>
+
+<br/>
+
+<img src="https://streak-stats.demolab.com?user=belentani7&hide_border=true&background=050505&ring=FF1038&fire=FF244C&currStreakLabel=FF244C&sideLabels=FFFFFF&dates=888888&currStreakNum=FFFFFF&sideNums=FFFFFF" width="70%" alt="GitHub streak"/>
+
+</div>
+
+---
+
+## 🌐 EDUCATION & SOCIAL IMPACT
+
+### ManosAbiertas
+Free digital education for migrants and Latin American communities.
+
+**AI · Office · CV building · digital skills**
+
+### Other platforms
+**Secure T University · open-school · UX Academy · Aprende Brasil**
+
+Built around the idea that technology becomes more valuable when it can be **understood, accessed and used by more people**.
+
+---
+
+## 🩸 BELENTANI / OMEGA
+
+There is also another side of the system.
+
+**Music · visual identity · narrative · AI · interactive worlds**
+
+[belentani_Omega](https://github.com/belentani7/belentani_Omega)
+
+> Code can be infrastructure.  
+> Music can be infrastructure.  
+> Images can be infrastructure.  
+> A world can be infrastructure.
+
+---
+
+## 🧪 EXPERIMENTAL MODE
+
+<pre>
++ building
++ breaking
++ rebuilding
++ automating
++ composing
++ researching
++ shipping
+</pre>
+
+I like systems that feel **alive** rather than finished.
+
+---
+
+<div align="center">
+
+### ─────────────────────────────────
+
+**BELENTANI**
+
+AI SYSTEMS · CREATIVE TECH · FULL-STACK
+
+[GitHub](https://github.com/belentani7) · [NOIACORE](https://github.com/belentani7/NOIACORE)
+
+<br/>
+
+<img src="https://komarev.com/ghpvc/?username=belentani7&style=for-the-badge&color=FF1038&label=SIGNALS" alt="Profile views"/>
+
+<br/><br/>
+
+<sub>NOIACORE · 2026 · Barcelona</sub>
+
+</div>
