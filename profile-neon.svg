@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 180">
+<defs>
+  <filter id="glow" x="-50%" y="-100%" width="200%" height="300%">
+    <feGaussianBlur stdDeviation="5" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <linearGradient id="red" x1="0" x2="1"><stop stop-color="#7A0014"/><stop offset=".5" stop-color="#FF1038"/><stop offset="1" stop-color="#FF244C"/></linearGradient>
+</defs>
+<rect width="900" height="180" rx="24" fill="#050505"/>
+<g filter="url(#glow)">
+ <path d="M40 125 H860" stroke="#FF1038" stroke-width="1" opacity=".35"/>
+ <path d="M110 125 C220 35 320 165 450 78 S680 20 790 125" fill="none" stroke="url(#red)" stroke-width="3">
+   <animate attributeName="opacity" values=".35;1;.35" dur="2.8s" repeatCount="indefinite"/>
+ </path>
+ <text x="450" y="103" text-anchor="middle" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="38" font-weight="700" letter-spacing="8">BELENTANI</text>
+</g>
+<text x="450" y="145" text-anchor="middle" fill="#FF244C" font-family="Arial,Helvetica,sans-serif" font-size="11" letter-spacing="5">NOIACORE · CREATIVE SYSTEMS · AI</text>
+</svg>
