@@ -134,8 +134,8 @@ AI systems · automation · agents · diagnostics · creative technology.
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=belentani7&show_icons=true&hide_border=true&bg_color=050505&title_color=FF244C&icon_color=FF1038&text_color=FFFFFF&ring_color=FF1038" height="170"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=belentani7&layout=compact&hide_border=true&bg_color=050505&title_color=FF244C&text_color=FFFFFF" height="170"/>
+<img src="https://github-readme-stats.shion.dev/api?username=belentani7&show_icons=true&hide_border=true&bg_color=050505&title_color=FF244C&icon_color=FF1038&text_color=FFFFFF&ring_color=FF1038" height="170"/>
+<img src="https://github-readme-stats.shion.dev/api/top-langs/?username=belentani7&layout=compact&hide_border=true&bg_color=050505&title_color=FF244C&text_color=FFFFFF" height="170"/>
 
 <br/>
 
