@@ -19,7 +19,7 @@
   "homepage": "https://github.com/belentani7/belentani7",
   "productName": "Bellentani",
   "devDependencies": {
-    "electron": "^43.4.0",
+    "electron": "^44.4.3",
     "electron-builder": "^26.15.3"
   },
   "dependencies": {
