@@ -9,7 +9,7 @@
 <br/><br/>
 
 <a href="https://github.com/belentani7"><img src="https://img.shields.io/badge/GITHUB-belentani7-050505?style=for-the-badge&logo=github&logoColor=white"/></a>
-<a href="https://github.com/belentani7?tab=repositories"><img src="https://img.shields.io/badge/REPOSITORIES-200%2B-FF1038?style=for-the-badge&logo=github&logoColor=white"/></a>
+<a href="https://github.com/belentani7?tab=repositories"><img src="https://img.shields.io/badge/REPOSITORIES-419%2B-FF1038?style=for-the-badge&logo=github&logoColor=white"/></a>
 <a href="https://github.com/belentani7/NOIACORE"><img src="https://img.shields.io/badge/NOIACORE-INTELLIGENCE-7A0014?style=for-the-badge&logo=github&logoColor=white"/></a>
 
 </div>
@@ -98,15 +98,39 @@ AI systems · automation · agents · diagnostics · creative technology.
 | PROJECT | WHAT IT IS |
 |---|---|
 | **[NOIACORE](https://github.com/belentani7/NOIACORE)** | Multi-agent intelligence system |
-| **[agentbox](https://github.com/belentani7/agentbox)** | Disposable cloud sandboxes for AI agents |
-| **[agent-skills](https://github.com/belentani7/agent-skills)** | 311 CLI agent skills · MIT |
-| **[belentani_Omega](https://github.com/belentani7/belentani_Omega)** | Artist ecosystem · music · code · AI |
-| **[belentani-experience-tour](https://github.com/belentani7/belentani-experience-tour)** | Living UI / UX experience system |
+| **[agent-skills](https://github.com/belentani7/agent-skills)** | 311 CLI agent skills - MIT |
+| **[secure-t](https://github.com/belentani7/secure-t)** | Cybersecurity + AI digital university |
+| **[open-school](https://github.com/belentani7/open-school)** | Universal digital education institute |
+| **[pvc-u-core](https://github.com/belentani7/pvc-u-core)** | Governance kernel for autonomous AI companies |
+| **[agentguard](https://github.com/belentani7/agentguard)** | AI budget guardrails & agent auto-pause |
+| **[system-one-unified](https://github.com/belentani7/system-one-unified)** | Typed, deterministic offline decision engine |
 | **[belent-cad](https://github.com/belentani7/belent-cad)** | Open-source architectural CAD |
-| **[ManosAbiertas](https://manos-abiertas-psi.vercel.app)** | Free AI / Office education platform |
-| **[Cruzando el Charco](https://github.com/belentani7/Cruzando-el-charco)** | Social-impact digital platform |
+| **[Belentani.cv-ai](https://github.com/belentani7/Belentani.cv-ai)** | AI document studio - CV, GDPR, AES-256 |
+| **[Cruzando el Charco](https://github.com/belentani7/Cruzando-el-charco)** | Social-impact platform for migrant LGBT+ people |
 
 ---
+
+## RADAR 2026
+
+> Field notes 2026 - what I actually build with, not what is trending.
+
+| DOMAIN | NOW (2026) |
+|---|---|
+| Agentic coding | CLI agents (OpenCode, Claude Code, Cursor, Kilo) + MCP tool servers |
+| Agent infra | Multi-agent orchestration, subagents, skill routers, guardrails & budgets |
+| Web UI | React 19 + signals, Tailwind v4, view transitions, shadcn/ui |
+| 3D / creative | Three.js r185 WebGPU/TSL, GSAP, procedural generation |
+| Backend | FastAPI + SQLModel, PostgreSQL/Neon, Redis/BullMQ, JWT/OAuth |
+| Data / AI | RAG with local vectors, local-first + offline, LiteLLM routing |
+| Deploy | Vercel + Cloudflare Workers/R2, GitHub Actions CI |
+| Docs | Spec-driven: PRD -> SRS -> SDD -> ADR -> Plan before any code |
+
+## OPEN SOURCE STANDARD
+
+Every active repo I audit ships the same documentation baseline:
+`AGENTS.md` + `.cursorrules` + `docs/prd` + `docs/srs` + `docs/design` + `docs/adr` + `docs/plans`.
+
+> Documents rule, code obeys. Evidence over promises. Free-first.
 
 ## 🛰 CURRENTLY BUILDING
 
