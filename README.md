@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./profile-neon.svg" width="100%" alt="BELENTANI — red neon profile"/>
+<img src="./profile-machine.svg" width="100%" alt="BELENTANI — red neon profile"/>
 
 <br/>
 
