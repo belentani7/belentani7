@@ -1,0 +1,218 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" role="img" aria-label="BELENTANI — living red machine in neoglass">
+  <defs>
+    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF244C" stop-opacity="0.95"/>
+      <stop offset="45%" stop-color="#FF1038" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#050505" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vignette" cx="50%" cy="46%" r="70%">
+      <stop offset="55%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.85"/>
+    </radialGradient>
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7A0014"/>
+      <stop offset="0.5" stop-color="#FF1038"/>
+      <stop offset="1" stop-color="#FF244C"/>
+    </linearGradient>
+    <linearGradient id="neonH" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FF1038"/>
+      <stop offset="1" stop-color="#FF244C"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="glassPanel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FF1038" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.03"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-120%" y="-120%" width="340%" height="340%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0 H0 V40" fill="none" stroke="#FF1038" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- backdrop -->
+  <rect width="1200" height="420" rx="28" fill="#050505"/>
+  <rect width="1200" height="420" rx="28" fill="url(#grid)"/>
+  <rect width="1200" height="420" rx="28" fill="url(#vignette)"/>
+
+  <!-- ambient plasma -->
+  <ellipse cx="600" cy="210" rx="380" ry="205" fill="url(#coreGlow)">
+    <animate attributeName="opacity" values="0.68;1;0.68" dur="3.6s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- frame -->
+  <rect x="1.5" y="1.5" width="1197" height="417" rx="27" fill="none" stroke="url(#neon)" stroke-opacity="0.55" stroke-width="2"/>
+  <text x="34" y="44" fill="#FF244C" font-family="Verdana,Arial,sans-serif" font-size="12" letter-spacing="4" opacity="0.85">NOIACORE</text>
+  <text x="1166" y="44" text-anchor="end" fill="#ffffff" fill-opacity="0.55" font-family="Verdana,Arial,sans-serif" font-size="11" letter-spacing="3">LIVING SYSTEM</text>
+
+  <!-- ================= MACHINE CORE ================= -->
+  <g transform="translate(600 210)">
+    <!-- rotating tick ring -->
+    <g>
+      <circle r="168" fill="none" stroke="#ffffff" stroke-opacity="0.14" stroke-width="6" stroke-dasharray="1 41"/>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="70s" repeatCount="indefinite"/>
+    </g>
+    <!-- outer dashed ring -->
+    <g>
+      <circle r="150" fill="none" stroke="#FF1038" stroke-opacity="0.5" stroke-width="2" stroke-dasharray="10 16"/>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="40s" repeatCount="indefinite"/>
+    </g>
+    <!-- counterspin ring -->
+    <g>
+      <circle r="118" fill="none" stroke="#FF244C" stroke-opacity="0.5" stroke-width="1.5" stroke-dasharray="3 9"/>
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="24s" repeatCount="indefinite"/>
+    </g>
+    <!-- orbit nodes -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="12s" repeatCount="indefinite"/>
+      <circle cx="150" cy="0" r="5" fill="#FF244C" filter="url(#glow)"/>
+      <circle cx="-150" cy="0" r="3" fill="#FF1038"/>
+      <rect x="-3" y="-152" width="6" height="6" fill="#ffffff" fill-opacity="0.8"/>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="18s" repeatCount="indefinite"/>
+      <circle cx="0" cy="118" r="4" fill="#ffffff" fill-opacity="0.85"/>
+      <circle cx="118" cy="0" r="3" fill="#FF1038"/>
+    </g>
+
+    <!-- pistons / actuators -->
+    <g stroke="#FF244C" stroke-width="2" stroke-linecap="round" opacity="0.9">
+      <g>
+        <line x1="-84" y1="-84" x2="-104" y2="-104"/>
+        <animateTransform attributeName="transform" type="translate" values="0 0; -8 -8; 0 0" dur="1.8s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <g stroke="#FF244C" stroke-width="2" stroke-linecap="round" opacity="0.9">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 8 -8; 0 0" dur="2.1s" repeatCount="indefinite"/>
+      <line x1="84" y1="-84" x2="104" y2="-104"/>
+    </g>
+    <g stroke="#FF1038" stroke-width="2" stroke-linecap="round" opacity="0.9">
+      <animateTransform attributeName="transform" type="translate" values="0 0; -8 8; 0 0" dur="1.6s" repeatCount="indefinite"/>
+      <line x1="-84" y1="84" x2="-104" y2="104"/>
+    </g>
+    <g stroke="#FF1038" stroke-width="2" stroke-linecap="round" opacity="0.9">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 8 8; 0 0" dur="2.4s" repeatCount="indefinite"/>
+      <line x1="84" y1="84" x2="104" y2="104"/>
+    </g>
+
+    <!-- glass core shell -->
+    <circle r="94" fill="url(#glass)" stroke="#FF1038" stroke-opacity="0.55" stroke-width="1.5"/>
+    <circle r="78" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
+
+    <!-- plasma -->
+    <circle r="72" fill="url(#coreGlow)">
+      <animate attributeName="r" values="66;78;66" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- crystal rotor -->
+    <polygon points="0,-60 52,0 0,60 -52,0" fill="none" stroke="url(#neon)" stroke-width="3" filter="url(#glow)">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="16s" repeatCount="indefinite"/>
+    </polygon>
+    <polygon points="0,-40 34,0 0,40 -34,0" fill="#FF244C" fill-opacity="0.18" stroke="#FF244C" stroke-width="1.5">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="10s" repeatCount="indefinite"/>
+    </polygon>
+    <polygon points="0,-20 17,0 0,20 -17,0" fill="#FF1038" fill-opacity="0.35">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="6s" repeatCount="indefinite"/>
+    </polygon>
+
+    <!-- heartbeat core -->
+    <circle r="10" fill="#ffffff" filter="url(#glow)">
+      <animate attributeName="opacity" values="0.55;1;0.55" dur="1.1s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="8;12;8" dur="1.1s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- ================= GLASS HUD PANELS ================= -->
+  <!-- left panel -->
+  <g>
+    <rect x="52" y="150" width="220" height="120" rx="16" fill="url(#glassPanel)" stroke="#FF1038" stroke-opacity="0.45"/>
+    <rect x="52" y="150" width="220" height="26" rx="16" fill="#ffffff" fill-opacity="0.04"/>
+    <text x="70" y="181" fill="#ffffff" fill-opacity="0.7" font-family="Verdana,Arial,sans-serif" font-size="11" letter-spacing="2">SYSTEM STATUS</text>
+    <text x="70" y="212" fill="#FF244C" font-family="Verdana,Arial,sans-serif" font-size="14" font-weight="bold" letter-spacing="2">● ONLINE</text>
+    <text x="70" y="236" fill="#ffffff" fill-opacity="0.55" font-family="Verdana,Arial,sans-serif" font-size="10" letter-spacing="1">AGENTS 07 / QUEUE 00</text>
+    <rect x="70" y="248" width="184" height="6" rx="3" fill="#FF1038" fill-opacity="0.2"/>
+    <rect x="70" y="248" width="120" height="6" rx="3" fill="url(#neonH)">
+      <animate attributeName="width" values="60;176;60" dur="4s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- right panel -->
+  <g>
+    <rect x="928" y="150" width="220" height="120" rx="16" fill="url(#glassPanel)" stroke="#FF244C" stroke-opacity="0.45"/>
+    <rect x="928" y="150" width="220" height="26" rx="16" fill="#ffffff" fill-opacity="0.04"/>
+    <text x="946" y="181" fill="#ffffff" fill-opacity="0.7" font-family="Verdana,Arial,sans-serif" font-size="11" letter-spacing="2">CORE OUTPUT</text>
+    <g fill="url(#neonH)">
+      <rect x="946" y="238" width="12" height="20" rx="3">
+        <animate attributeName="height" values="10;34;10" dur="1.6s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="248;224;248" dur="1.6s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="966" y="238" width="12" height="20" rx="3">
+        <animate attributeName="height" values="30;14;30" dur="1.3s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="228;244;228" dur="1.3s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="986" y="238" width="12" height="20" rx="3">
+        <animate attributeName="height" values="16;38;16" dur="1.9s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="242;220;242" dur="1.9s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="1006" y="238" width="12" height="20" rx="3">
+        <animate attributeName="height" values="34;12;34" dur="1.5s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="224;246;224" dur="1.5s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="1026" y="238" width="12" height="20" rx="3">
+        <animate attributeName="height" values="12;32;12" dur="2.2s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="246;226;246" dur="2.2s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="1046" y="238" width="12" height="20" rx="3">
+        <animate attributeName="height" values="26;16;26" dur="1.1s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="232;242;232" dur="1.1s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <text x="1070" y="252" fill="#ffffff" fill-opacity="0.55" font-family="Verdana,Arial,sans-serif" font-size="10" letter-spacing="1">98.6%</text>
+  </g>
+
+  <!-- ECG -->
+  <path d="M0 360 H300 l18 -52 l14 84 l16 -112 l18 84 l22 -28 H760 l18 -46 l12 66 l14 -86 l16 66 l20 -22 H1200"
+        fill="none" stroke="#FF244C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        stroke-dasharray="70 940">
+    <animate attributeName="stroke-dashoffset" values="1010;0" dur="4.2s" repeatCount="indefinite"/>
+  </path>
+  <path d="M0 360 H300 l18 -52 l14 84 l16 -112 l18 84 l22 -28 H760 l18 -46 l12 66 l14 -86 l16 66 l20 -22 H1200"
+        fill="none" stroke="#FF244C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"
+        stroke-dasharray="70 940" filter="url(#soft)" opacity="0.5">
+    <animate attributeName="stroke-dashoffset" values="1010;0" dur="4.2s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- title -->
+  <g filter="url(#glow)">
+    <text x="600" y="86" text-anchor="middle" fill="#ffffff" font-family="Verdana,Arial,sans-serif" font-size="40" font-weight="700" letter-spacing="14">BELENTANI</text>
+  </g>
+  <text x="600" y="116" text-anchor="middle" fill="#FF244C" font-family="Verdana,Arial,sans-serif" font-size="12" letter-spacing="7">NOIACORE — LIVING MACHINE — AI SYSTEMS</text>
+
+  <!-- floating particles -->
+  <g fill="#FF244C">
+    <circle cx="160" cy="320" r="2">
+      <animate attributeName="cy" values="320;250;320" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="90" r="1.6">
+      <animate attributeName="cy" values="90;150;90" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1040" cy="330" r="2">
+      <animate attributeName="cy" values="330;260;330" dur="5.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="5.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="900" cy="80" r="1.6">
+      <animate attributeName="cy" values="80;140;80" dur="6.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="6.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
