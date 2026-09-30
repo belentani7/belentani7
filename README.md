@@ -10,14 +10,14 @@
 
 ![Repos](https://img.shields.io/badge/repositorios-481-ff073a?style=flat-square)
 ![Públicos](https://img.shields.io/badge/p%C3%BAblicos-160%2B-4de8e0?style=flat-square)
-![Webs](https://img.shields.io/badge/webs_desplegadas-139-d4af37?style=flat-square)
+![Webs](https://img.shields.io/badge/webs_desplegadas-138-d4af37?style=flat-square)
 
 ---
 
 ## Qué hago
 
 Construyo **sistemas completos**: del modelo de datos a la interfaz, del agente de IA al
-despliegue. Trabajo solo y a escala — **481 repositorios**, **139 aplicaciones publicadas**.
+despliegue. Trabajo solo y a escala — **481 repositorios**, **138 webs publicas publicadas**.
 
 Tres líneas de trabajo, todas con código real detrás:
 
