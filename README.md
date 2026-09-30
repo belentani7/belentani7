@@ -10,14 +10,14 @@
 
 ![Repos](https://img.shields.io/badge/repositorios-481-ff073a?style=flat-square)
 ![Públicos](https://img.shields.io/badge/p%C3%BAblicos-160%2B-4de8e0?style=flat-square)
-![Webs](https://img.shields.io/badge/webs_desplegadas-97-d4af37?style=flat-square)
+![Webs](https://img.shields.io/badge/webs_desplegadas-139-d4af37?style=flat-square)
 
 ---
 
 ## Qué hago
 
 Construyo **sistemas completos**: del modelo de datos a la interfaz, del agente de IA al
-despliegue. Trabajo solo y a escala — **481 repositorios**, **97 aplicaciones en producción**.
+despliegue. Trabajo solo y a escala — **481 repositorios**, **139 aplicaciones publicadas**.
 
 Tres líneas de trabajo, todas con código real detrás:
 
@@ -116,6 +116,17 @@ Cinco reglas que se ven en el código, no solo en el discurso:
 
 **Abierto a:** consultoría y auditoría técnica · proyectos de IA aplicada · colaboración en
 educación abierta e impacto social.
+
+---
+
+## Todo el trabajo, organizado
+
+Los 161 repositorios públicos, agrupados por lo que son (educación, arte,
+música, herramientas, webs) y con su web al lado:
+
+- **[Índice maestro de la cuenta](https://github.com/belentani7/belentani7/blob/main/INDICE-MAESTRO.md)**
+
+---
 
 ---
 
