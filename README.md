@@ -4,9 +4,8 @@
 
 **Barcelona, España** · [belentani.es](https://belentani.es) · belentani7pedro@gmail.com
 
-![Profile views](https://komarev.com/ghpvc/?username=belentani7&color=ff0040&style=flat-square&label=visitas)
 ![Repos](https://img.shields.io/badge/repositorios-481-ff073a?style=flat-square)
-![Públicos](https://img.shields.io/badge/p%C3%BAblicos-106-4de8e0?style=flat-square)
+![Públicos](https://img.shields.io/badge/p%C3%BAblicos-160%2B-4de8e0?style=flat-square)
 ![Webs](https://img.shields.io/badge/webs_desplegadas-97-d4af37?style=flat-square)
 
 ---
@@ -105,7 +104,6 @@ Cinco reglas que se ven en el código, no solo en el discurso:
 | | |
 |---|---|
 | **Web** | [belentani.es](https://belentani.es) |
-
 | **Email** | belentani7pedro@gmail.com |
 | **LinkedIn** | [in/pedro-b-09473598](https://www.linkedin.com/in/pedro-b-09473598) |
 | **Ubicación** | L'Hospitalet de Llobregat, Barcelona |
@@ -115,4 +113,4 @@ educación abierta e impacto social.
 
 ---
 
-<sub>481 repositorios · 106 públicos · 97 aplicaciones desplegadas · Barcelona</sub>
+<sub>481 repositorios · 160+ públicos · 97 aplicaciones desplegadas · Barcelona</sub>
