@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/terminal-header.svg" alt="Terminal: Pedro Belentani, arquitecto de sistemas de IA, Barcelona" width="100%" />
+</p>
+
 # ⬡ Pedro Belentani
 
 ### Arquitecto de sistemas de IA · Desarrollo full-stack · Tecnología creativa
@@ -107,6 +111,8 @@ Cinco reglas que se ven en el código, no solo en el discurso:
 | **Email** | belentani7pedro@gmail.com |
 | **LinkedIn** | [in/pedro-b-09473598](https://www.linkedin.com/in/pedro-b-09473598) |
 | **Ubicación** | L'Hospitalet de Llobregat, Barcelona |
+
+**Ecosistema en vivo:** [belentani.es](https://belentani.es) · [Circuito del ecosistema](https://belentani.es/ecosistema.html) · [Judas Experience](https://belentani7.github.io/belentani-judas-experience/) · [Open School](https://open-school-gamma.vercel.app) · [secure T](https://belentani7.github.io/secure-t/campus/)
 
 **Abierto a:** consultoría y auditoría técnica · proyectos de IA aplicada · colaboración en
 educación abierta e impacto social.
