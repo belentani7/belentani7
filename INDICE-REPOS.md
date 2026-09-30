@@ -1,0 +1,320 @@
+# Indice de repositorios — belentani7
+
+Generado el **2026-09-30** desde la API de GitHub.
+
+| | |
+|---|---|
+| Repositorios | 481 |
+| Publicos | 160 |
+| Privados | 321 |
+| Archivados | 86 |
+| Tamano total | 8655.7 MB |
+| Ultimo push | 2026-09-30T15:54:08 |
+
+Este indice se genera del mismo JSON que el resto de documentos, para que las
+cifras no puedan divergir.
+
+## Publicos con web (138)
+
+- **[03-DUCK-WEB-build-everything](https://github.com/belentani7/03-DUCK-WEB-build-everything)** — Sitio web DUCK - build everything
+  - web: <https://belentani7.github.io/03-DUCK-WEB-build-everything/>
+- **[03-DUCK-WEB-build-everything-drive](https://github.com/belentani7/03-DUCK-WEB-build-everything-drive)** — Sitio web DUCK - build everything (drive)
+  - web: <https://belentani7.github.io/03-DUCK-WEB-build-everything-drive/>
+- **[20-demos](https://github.com/belentani7/20-demos)** — Demos y simulaciones HTML para el portfolio de Pedro Belentani.
+  - web: <https://belentani7.github.io/20-demos/>
+- **[3d-portfolio](https://github.com/belentani7/3d-portfolio)** — Portfolio personal en 3D construido con Three.js: escena interactiva, animaciones y navegacion i
+  - web: <https://belentani7.github.io/3d-portfolio/>
+- **[ai-command-center-level10](https://github.com/belentani7/ai-command-center-level10)** — AI Command Center Level 10 - Unified Open Source Workspace
+  - web: <https://belentani7.github.io/ai-command-center-level10/>
+- **[ai-fashion-app-frontend](https://github.com/belentani7/ai-fashion-app-frontend)** — Proyecto frontend del ecosistema Belentani.
+  - web: <https://belentani7.github.io/ai-fashion-app-frontend/>
+- **[aprende-brasil](https://github.com/belentani7/aprende-brasil)** — Plataforma educativa brasileña interactiva con tutor IA, trilhas y voz preparada para OpenVoice
+  - web: <https://aprende-brasil.vercel.app/>
+- **[arte-que-veste](https://github.com/belentani7/arte-que-veste)** — Arte Que Veste - moda autoral y arte vestible; catalogo y tienda creativa.
+  - web: <https://arte-que-veste.vercel.app>
+- **[belent-cad](https://github.com/belentani7/belent-cad)** — Open-source architectural CAD for architects: paper-sketch digitization to 3D, photorealistic re
+  - web: <https://belent-cad.pages.dev/>
+- **[Belentani](https://github.com/belentani7/Belentani)** — NOIACORE LAB — plataforma digital de Pedro Belentani: catálogo, agente, automatización, observab
+  - web: <https://belentani.vercel.app>
+- **[belentani-artista-unified](https://github.com/belentani7/belentani-artista-unified)** — belentani-the-experience
+  - web: <https://belentani7.github.io/belentani-artista-unified/>
+- **[belentani-datos-abiertos](https://github.com/belentani7/belentani-datos-abiertos)** — Proyecto belentani-v2 (open-data + fetchers)
+  - web: <https://belentani7.github.io/belentani-datos-abiertos/>
+- **[belentani-design-system](https://github.com/belentani7/belentani-design-system)** — Belentani Design System: glass thick red-neon, glitch machine, coding rain. CSS+JS drop-in para 
+  - web: <https://belentani7.github.io/belentani-design-system/>
+- **[belentani-es-neon](https://github.com/belentani7/belentani-es-neon)** — Belentani Judas Era — portfolio visual estatico (dark pop, R&B, neon)
+  - web: <https://belentani7.github.io/belentani-es-neon/>
+- **[belentani-experience-tour](https://github.com/belentani7/belentani-experience-tour)** — Living UI/UX library (thick glossy red glassmorphism) that grows itself: one new React component
+  - web: <https://belentani7.github.io/belentani-experience-tour/>
+- **[belentani-github-catalogo-minimalista](https://github.com/belentani7/belentani-github-catalogo-minimalista)** — Catálogo web minimalista de los repositorios públicos de belentani7 — React + Vite + TypeScript 
+  - web: <https://github.com/belentani7>
+- **[BELENTANI-JUDAS-ERA-FULLSTACK](https://github.com/belentani7/BELENTANI-JUDAS-ERA-FULLSTACK)** — Creative web system rendering one editorial canon across twenty visual worlds
+  - web: <https://belentani7.github.io/BELENTANI-JUDAS-ERA-FULLSTACK/>
+- **[belentani-judas-era-omega](https://github.com/belentani7/belentani-judas-era-omega)** — BELENTANI // JUDAS ERA - Omega Core Experience 10/10
+  - web: <https://belentani7.github.io/belentani-judas-era-omega/>
+- **[belentani-judas-escape-mobile](https://github.com/belentani7/belentani-judas-escape-mobile)** — 11-PORTAL-CLIENTES-audited
+  - web: <https://belentani7.github.io/belentani-judas-escape-mobile/>
+- **[belentani-judas-experience](https://github.com/belentani7/belentani-judas-experience)** — The Judas Experience - interactive TypeScript web project.
+  - web: <https://belentani7.github.io/belentani-judas-experience/>
+- **[belentani-judas-web](https://github.com/belentani7/belentani-judas-web)** — Judas Experience Creative OS - web (Vite) + SEO
+  - web: <https://belentani7.github.io/belentani-judas-web/>
+- **[belentani-neural-icons](https://github.com/belentani7/belentani-neural-icons)** — Belentani Neural Icons · HBO Noir Glass
+  - web: <https://belentani7.github.io/belentani-neural-icons/>
+- **[belentani-office-pack-2027](https://github.com/belentani7/belentani-office-pack-2027)** — Belentani Office Pack 2027 — suite local-first para Windows 11
+  - web: <https://belentani7.github.io/belentani-office-pack-2027/>
+- **[belentani-omega-immersive-portal](https://github.com/belentani7/belentani-omega-immersive-portal)** — BELENTANI OMEGA — immersive 3D creative portal experience
+  - web: <https://belentani-omega-immersive-portal.vercel.app>
+- **[belentani-omega-master](https://github.com/belentani7/belentani-omega-master)** — Master archive of the JUDAS digital experience and visual narrative
+  - web: <https://belentani7.github.io/belentani-omega-master/>
+- **[belentani-omega-showcase](https://github.com/belentani7/belentani-omega-showcase)** — Galeria navegable de todas las versiones del proyecto web BELENTANI OMEGA / JUDAS ERA - publicad
+  - web: <https://belentani7.github.io/belentani-omega-showcase/>
+- **[belentani-omega-template](https://github.com/belentani7/belentani-omega-template)** — BELENTANI OMEGA: Plantilla de experiencia web inmersiva y canon conceptual.
+  - web: <https://belentani-omega-template.vercel.app>
+- **[belentani-portfolio](https://github.com/belentani7/belentani-portfolio)** — Portfolio de Pedro Belentani - AI Systems, Trust & Safety, creative tech.
+  - web: <https://belentani7.github.io/belentani-portfolio/>
+- **[belentani-school-unificado](https://github.com/belentani7/belentani-school-unificado)** — Escuela digital unificada - aplicacion web educativa con itinerarios de aprendizaje y tutoria as
+  - web: <https://belentani7.github.io/belentani-school-unificado/>
+- **[belentani-studio](https://github.com/belentani7/belentani-studio)** — Belentani - Plataforma de CVs con IA, 0 euros, multiidioma y cumplimiento GDPR
+  - web: <https://belentani7.github.io/belentani-studio/>
+- **[belentani-the-experience](https://github.com/belentani7/belentani-the-experience)** — belentani-the-experience
+  - web: <https://belentani7.github.io/belentani-the-experience/>
+- **[belentani-the-judas-experience-archive](https://github.com/belentani7/belentani-the-judas-experience-archive)** — Archivo oficial de The Judas Experience - experiencia musical interactiva.
+  - web: <https://belentani7.github.io/belentani-the-judas-experience-archive/>
+- **[belentani-unified](https://github.com/belentani7/belentani-unified)** — Unified monorepo: AION + Nexus + artist work (belentani). Duck/client repos excluded. Code organ
+  - web: <https://belentani7.github.io/belentani-unified/>
+- **[belentani-unify](https://github.com/belentani7/belentani-unify)** — Static index that gathers the scattered Belentani web fragments in one place
+  - web: <https://belentani7.github.io/belentani-unify/>
+- **[belentani-video-forge](https://github.com/belentani7/belentani-video-forge)** — Pipeline de videos cortos automáticos - Belentani ecosystem
+  - web: <https://belentani7.github.io/belentani-video-forge/>
+- **[belentani-web](https://github.com/belentani7/belentani-web)** — belentani-web - web visual HTML/CSS/JS del proyecto Belentani.
+  - web: <https://belentani7.github.io/belentani-web/>
+- **[Belentani.cv-ai](https://github.com/belentani7/Belentani.cv-ai)** — AI-powered document studio — CVs, cover letters, presentations. €0.99 one-time, GDPR compliant, 
+  - web: <https://belentani-cv-ai.vercel.app>
+- **[belentani7](https://github.com/belentani7/belentani7)** — Pedro Belentani - Arquitecto de sistemas de IA, full-stack TypeScript/Python, tecnologia creativ
+  - web: <https://belentani7.github.io/belentani7/>
+- **[belentani7.github.io](https://github.com/belentani7/belentani7.github.io)** — BELENTANI // OMEGA CORE — JUDAS_OS v12.0 · organismo vivo · 432 Hz
+  - web: <https://belentani7.github.io>
+- **[belentani_Omega](https://github.com/belentani7/belentani_Omega)** — Belentani Omega — artist ecosystem connecting music, code, and creative technology
+  - web: <https://belentani.es>
+- **[belentani_omega-belentani7](https://github.com/belentani7/belentani_omega-belentani7)** — Belentani Lab: provider adapters
+  - web: <https://belentani7.github.io/belentani_omega-belentani7/>
+- **[belentaniexperience](https://github.com/belentani7/belentaniexperience)** — Portfolio premium de Pedro Belentani: Trust & Safety, sistemas de IA, automatización, ingeniería
+  - web: <https://belentani7.github.io/belentaniexperience/>
+- **[Belentanislide](https://github.com/belentani7/Belentanislide)** — App AI Studio (Gemini) con pack abierto de datos de modelos LLM (OpenRouter) y scripts de anális
+  - web: <https://belentani7.github.io/Belentanislide/>
+- **[boutique-catalogo](https://github.com/belentani7/boutique-catalogo)** — React + TypeScript + Vite
+  - web: <https://belentani7.github.io/boutique-catalogo/>
+- **[BRAIN](https://github.com/belentani7/BRAIN)** — Motor de orquestacion en TypeScript para agentes de IA: planificacion de tareas y coordinacion d
+  - web: <https://belentani7.github.io/BRAIN/>
+- **[CARQUIDEC](https://github.com/belentani7/CARQUIDEC)** — Parametric architecture studio — AI-driven bioclimatic design and energy optimization
+  - web: <https://carquidec.vercel.app>
+- **[CARQUIDEC-ULTRA](https://github.com/belentani7/CARQUIDEC-ULTRA)** — Static web project for the CARQUIDEC car-audio brand
+  - web: <https://belentani7.github.io/CARQUIDEC-ULTRA/>
+- **[catalonia-booking](https://github.com/belentani7/catalonia-booking)** — Catalonia Booking System
+  - web: <https://belentani7.github.io/catalonia-booking/>
+- **[cinematic-prompt-formatter](https://github.com/belentani7/cinematic-prompt-formatter)** — Translate cinematic language into optimized prompts for Stable Diffusion, Flux, and SDXL models.
+  - web: <https://belentani7.github.io/cinematic-prompt-formatter/>
+- **[claude-skills-pack](https://github.com/belentani7/claude-skills-pack)** — 20 production-ready skills for AI coding assistants.
+  - web: <https://belentani7.github.io/claude-skills-pack/>
+- **[clon-manosabiertas](https://github.com/belentani7/clon-manosabiertas)** — Auditoria y plan de mejora de accesibilidad y SEO para ManosAbiertas: analisis Lighthouse, recur
+  - web: <https://belentani7.github.io/clon-manosabiertas/>
+- **[CODEX-OMEGA-SKILL](https://github.com/belentani7/CODEX-OMEGA-SKILL)** — CODEX Omega Skill - Belentani ecosystem
+  - web: <https://belentani7.github.io/CODEX-OMEGA-SKILL/>
+- **[comfyui-json-compiler](https://github.com/belentani7/comfyui-json-compiler)** — Translate natural language creative briefs into valid ComfyUI JSON workflows using LLMs.
+  - web: <https://belentani7.github.io/comfyui-json-compiler/>
+- **[Compa-ero-de-Windows-Similar-a-Widget-Flotante-en-Android](https://github.com/belentani7/Compa-ero-de-Windows-Similar-a-Widget-Flotante-en-Android)** — Prototipo de escritorio para Windows. Registra ideas de investigación por temas, formula hipótes
+  - web: <https://belentani7.github.io/Compa-ero-de-Windows-Similar-a-Widget-Flotante-en-Android/>
+- **[Cruzando-el-charco](https://github.com/belentani7/Cruzando-el-charco)** — Cruzando el Charco, impulsado por noiacore.com y creado por Pedro Belentani, es un portal gratui
+  - web: <https://belentani7.github.io/Cruzando-el-charco/>
+- **[duck-2000](https://github.com/belentani7/duck-2000)** — DUCK 2000 - web interactiva del estudio de produccion musical DUCK. Beats, catalogo y reproducto
+  - web: <https://belentani7.github.io/duck-2000/>
+- **[duck-2026](https://github.com/belentani7/duck-2026)** — DUCK 2026 - iteracion anual del ecosistema DUCK.
+  - web: <https://belentani7.github.io/duck-2026/>
+- **[DUCK-A-GEMA-1-LAB](https://github.com/belentani7/DUCK-A-GEMA-1-LAB)** — 🦆 DUCK - Ecossistema de Produção Musical
+  - web: <https://belentani7.github.io/DUCK-A-GEMA-1-LAB/>
+- **[duck-apps](https://github.com/belentani7/duck-apps)** — iDuck GUI + DUCK STATION (mobile) + DUCK FL STUDIO (DAW web) — apps ao vivo
+  - web: <https://belentani7.github.io/duck-apps/>
+- **[duck-apps-web](https://github.com/belentani7/duck-apps-web)** — DUCK web applications — catalog, sequencer, station, FL Studio tools
+  - web: <https://belentani7.github.io/duck-apps-web/>
+- **[duck-belentani-os](https://github.com/belentani7/duck-belentani-os)** — DUCK Belentani OS - snapshot auditado 2026-08-23 del sistema operativo creativo.
+  - web: <https://belentani7.github.io/duck-belentani-os/>
+- **[duck-docs](https://github.com/belentani7/duck-docs)** — DUCK studio documentation — audit reports, prompt engineering, delivery specs
+  - web: <https://belentani7.github.io/duck-docs/>
+- **[duck-ecosystem](https://github.com/belentani7/duck-ecosystem)** — Ecosistema DUCK - herramientas, GUIs y apps del estudio creativo DUCK.
+  - web: <https://belentani7.github.io/duck-ecosystem/>
+- **[duck-full-studio-pro](https://github.com/belentani7/duck-full-studio-pro)** — DUCK Full Studio Pro - FL Studio Ecosystem & Vault (Audited 10/10)
+  - web: <https://belentani7.github.io/duck-full-studio-pro/>
+- **[duck-hub](https://github.com/belentani7/duck-hub)** — DUCK hub — Astro-based portal connecting all DUCK ecosystem apps and tools
+  - web: <https://belentani7.github.io/duck-hub/>
+- **[duck-lab](https://github.com/belentani7/duck-lab)** — DUCK Lab - laboratorio de prototipos del universo DUCK/Zion.
+  - web: <https://belentani7.github.io/duck-lab/>
+- **[duck-music-lab](https://github.com/belentani7/duck-music-lab)** — DUCK Music Lab — interactive music production playground, beat sequencer and audio experimentati
+  - web: <https://belentani7.github.io/duck-music-lab/>
+- **[Duck-Omega](https://github.com/belentani7/Duck-Omega)** — DUCK Omega - ecosistema artistico y productivo del proyecto Duck/Zion (Belentani).
+  - web: <https://belentani7.github.io/Duck-Omega/>
+- **[duck-repo-final](https://github.com/belentani7/duck-repo-final)** — DUCK PROD - portfolio musical interactivo del productor Duck (Aracaju, Brasil). Instrumentos en 
+  - web: <https://belentani7.github.io/duck-repo-final/>
+- **[duck-studio-os-v2](https://github.com/belentani7/duck-studio-os-v2)** — DUCK STUDIO OS — Pacote Unificado
+  - web: <https://belentani7.github.io/duck-studio-os-v2/>
+- **[duck-studio-suite](https://github.com/belentani7/duck-studio-suite)** — Duck Studio Suite - suite integrada de produccion musical web.
+  - web: <https://belentani7.github.io/duck-studio-suite/>
+- **[duck-unified-master](https://github.com/belentani7/duck-unified-master)** — DUCK ecosystem consolidation — 9 repos unified into one monorepo with apps, docs, and shared inf
+  - web: <https://belentani7.github.io/duck-unified-master/>
+- **[duck-zion-apex-public](https://github.com/belentani7/duck-zion-apex-public)** — DUCK ZION Apex — professional vocal production platform; audited snapshot, gate currently 57/60
+  - web: <https://belentani7.github.io/duck-zion-apex-public/>
+- **[DUCK-ZION-PREMIUM](https://github.com/belentani7/DUCK-ZION-PREMIUM)** — DUCK/BELENTANI Canal Zion — Studio OS, Ecosystem y Toolkit de producción musical, afinación y ma
+  - web: <https://belentani7.github.io/DUCK-ZION-PREMIUM/>
+- **[DuckHTML](https://github.com/belentani7/DuckHTML)** — Experimentos HTML del universo DUCK - interfaces y prototipos rapidos.
+  - web: <https://duckhtml-virid.vercel.app>
+- **[eau-noire](https://github.com/belentani7/eau-noire)** — 50 herramientas de código abierto para operaciones unipersonales en la nube
+  - web: <https://belentani7.github.io/eau-noire/>
+- **[entrenador-jorge-bcn](https://github.com/belentani7/entrenador-jorge-bcn)** — Entrenador personal en Barcelona: web de servicios, planes y contacto.
+  - web: <https://belentani7.github.io/entrenador-jorge-bcn/>
+- **[evidence-ledger](https://github.com/belentani7/evidence-ledger)** — Local-first evidence receipts for AI and Trust & Safety decisions
+  - web: <https://belentani7.github.io/evidence-ledger/>
+- **[fashion-stylist-ai](https://github.com/belentani7/fashion-stylist-ai)** — AI-powered fashion stylist — visual recommendation engine using computer vision and style classi
+  - web: <https://belentani7.github.io/fashion-stylist-ai/>
+- **[fazluiz3d-ecosystem](https://github.com/belentani7/fazluiz3d-ecosystem)** — FAZLUIZ3D / ÁUREA 3D - Standalone Ecosystem 10/10 by Belentani
+  - web: <https://belentani7.github.io/fazluiz3d-ecosystem/>
+- **[gpu-cost-optimizer](https://github.com/belentani7/gpu-cost-optimizer)** — Optimize GPU compute costs in diffusion pipelines by up to 70%.
+  - web: <https://belentani7.github.io/gpu-cost-optimizer/>
+- **[harmonia-hub](https://github.com/belentani7/harmonia-hub)** — Harmonia Hub - plataforma de coordinacion y bienestar.
+  - web: <https://belentani7.github.io/harmonia-hub/>
+- **[hbo-noir-icons](https://github.com/belentani7/hbo-noir-icons)** — Pack de iconos noir inspirado en la estética HBO. Desplegado en Vercel.
+  - web: <https://belentani7.github.io/hbo-noir-icons/>
+- **[heyduck](https://github.com/belentani7/heyduck)** — HEYDUCK - hub web del universo DUCK: apps, musica y herramientas de produccion.
+  - web: <https://belentani7.github.io/heyduck/>
+- **[heyduck-github-12scripts](https://github.com/belentani7/heyduck-github-12scripts)** — 12 scripts de automatización: exportación de Google Takeout, capturas e instrumentos.
+  - web: <https://belentani7.github.io/heyduck-github-12scripts/>
+- **[heyduck-rebuild](https://github.com/belentani7/heyduck-rebuild)** — Portfolio web de Duck (Duck4x), produtor musical, beatmaker e engenheiro de som de Aracaju, Serg
+  - web: <https://belentani7.github.io/heyduck-rebuild/>
+- **[ivy-la-vie](https://github.com/belentani7/ivy-la-vie)** — IVY LA VIE — queer photoshoot project and visual portfolio.
+  - web: <https://belentani7.github.io/ivy-la-vie/>
+- **[judas-access](https://github.com/belentani7/judas-access)** — Control de acceso para la Judas Experience: puerta y permisos de la obra interactiva.
+  - web: <https://belentani7.github.io/judas-access/>
+- **[judas-experience-expanded](https://github.com/belentani7/judas-experience-expanded)** — Artefacto rojo que unifica las piezas dispersas del universo Belentani / Judas en una sola
+  - web: <https://belentani7.github.io/judas-experience-expanded/>
+- **[judas-experience-unificado](https://github.com/belentani7/judas-experience-unificado)** — Judas Experience unificado: la obra interactiva del universo Belentani reunida en una sola exper
+  - web: <https://belentani7.github.io/judas-experience-unificado/>
+- **[judas-experience-web](https://github.com/belentani7/judas-experience-web)** — BELENTANI — The Judas Experience. Universo visual Three.js procedural: planeta vivo, diamante IO
+  - web: <https://belentani7.github.io/judas-experience-web/>
+- **[judas-omega-versiones](https://github.com/belentani7/judas-omega-versiones)** — Copia de seguridad del ecosistema artistico Belentani Omega: estructura base y configuracion del
+  - web: <https://belentani7.github.io/judas-omega-versiones/>
+- **[judas-scifi-experience](https://github.com/belentani7/judas-scifi-experience)** — Judas sci-fi experience - TypeScript interactive web project.
+  - web: <https://belentani7.github.io/judas-scifi-experience/>
+- **[latent-consistency-bench](https://github.com/belentani7/latent-consistency-bench)** — Benchmarking visual consistency in AI-generated content.
+  - web: <https://belentani7.github.io/latent-consistency-bench/>
+- **[lingua-aberta-empresa](https://github.com/belentani7/lingua-aberta-empresa)** — lingua-aberta como empresa: producto web full-stack con precios, pagos Stripe, área de cliente y
+  - web: <https://belentani7.github.io/lingua-aberta-empresa/>
+- **[linguaforge](https://github.com/belentani7/linguaforge)** — Forja linguistica: herramientas de traduccion y adaptacion multilingue.
+  - web: <https://linguaforge.vercel.app>
+- **[linguaforge-v2](https://github.com/belentani7/linguaforge-v2)** — > Uma plataforma open source para aprender línguas com progressão CEFR, repetição espaçada e con
+  - web: <https://belentani7.github.io/linguaforge-v2/>
+- **[linux-power](https://github.com/belentani7/linux-power)** — Entorno Linux con PowerShell y GitHub CLI
+  - web: <https://belentani7.github.io/linux-power/>
+- **[llm-vfx-orchestrator](https://github.com/belentani7/llm-vfx-orchestrator)** — Autonomous VFX pipeline orchestration using LLMs connected to ComfyUI APIs.
+  - web: <https://belentani7.github.io/llm-vfx-orchestrator/>
+- **[manos-abiertas-2026](https://github.com/belentani7/manos-abiertas-2026)** — Manos Abiertas 2026 — Instituto Universal William: currículum abierto, generador de CV y datos a
+  - web: <https://belentani7.github.io/manos-abiertas-2026/>
+- **[ManosAbiertas](https://github.com/belentani7/ManosAbiertas)** — Plataforma educativa gratuita: cursos IA/Office, creador CV, guías derechos y recursos para migr
+  - web: <https://belentani7.github.io/ManosAbiertas/>
+- **[manus-ai-skill-pack](https://github.com/belentani7/manus-ai-skill-pack)** — Pack de skills para agentes de codigo (estilo Manus/Claude) listos para produccion.
+  - web: <https://manus-ai-skill-pack.vercel.app>
+- **[meta-skill](https://github.com/belentani7/meta-skill)** — Zero-token skill router for Claude Code and Qwen Code. Routes agent requests to the right skill 
+  - web: <https://belentani7.github.io/meta-skill/>
+- **[michelle-relayze-web](https://github.com/belentani7/michelle-relayze-web)** — Web oficial de Michelle Relayze — portfolio y presencia artística
+  - web: <https://michelle-relayze-web.vercel.app>
+- **[misaas](https://github.com/belentani7/misaas)** — Frontend SaaS premium con hero WebGL para orquestación de agentes autónomos. Landing page + dash
+  - web: <https://belentani7.github.io/misaas/>
+- **[modern-creative-web](https://github.com/belentani7/modern-creative-web)** — Proyecto del ecosistema Belentani.
+  - web: <https://belentani7.github.io/modern-creative-web/>
+- **[Myopenhands](https://github.com/belentani7/Myopenhands)** — Web interface for a coding agent, built with Vite and a Bun server
+  - web: <https://belentani7.github.io/Myopenhands/>
+- **[nataliamarinho](https://github.com/belentani7/nataliamarinho)** — Plataforma educativa multilingue para la profesora Natalia Marinho.
+  - web: <https://belentani7.github.io/nataliamarinho/>
+- **[NEUROMARKETING-BRANDING-CIENTIFICO](https://github.com/belentani7/NEUROMARKETING-BRANDING-CIENTIFICO)** — Investigacion sobre neuromarketing y branding cientifico: 12 capitulos, 45+ estudios citados y e
+  - web: <https://belentani7.github.io/NEUROMARKETING-BRANDING-CIENTIFICO/>
+- **[nexus-os](https://github.com/belentani7/nexus-os)** — Neon Glass Operating System. Browser-based OS shell with 38+ apps, cyberpunk aesthetics, zero de
+  - web: <https://nexus-os-mocha-mu.vercel.app>
+- **[NOIACORE](https://github.com/belentani7/NOIACORE)** — Multi-agent intelligence system — concept, architecture, and orchestration framework for autonom
+  - web: <https://belentani7.github.io/NOIACORE/>
+- **[noiacore-lab-consciousness](https://github.com/belentani7/noiacore-lab-consciousness)** — Experimento del laboratorio NOIACORE sobre conciencia y máquina.
+  - web: <https://belentani7.github.io/noiacore-lab-consciousness/>
+- **[noiacore-labs](https://github.com/belentani7/noiacore-labs)** — Proyecto gestionado por BELENTANI FORGE 9.0-definitivo.
+  - web: <https://belentani7.github.io/noiacore-labs/>
+- **[noiacore-registry](https://github.com/belentani7/noiacore-registry)** — Registro de componentes del ecosistema NOIACORE.
+  - web: <https://belentani7.github.io/noiacore-registry/>
+- **[omega-infinite-v4](https://github.com/belentani7/omega-infinite-v4)** — Omega Infinite v4 - HTML prototype; consolidation candidate with omega-infinite-os.
+  - web: <https://belentani7.github.io/omega-infinite-v4/>
+- **[omega-max-duck](https://github.com/belentani7/omega-max-duck)** — DUCK Ω-MAX Studio OS — CRM, producción musical, operaciones y automatizaciones para clientes y p
+  - web: <https://belentani7.github.io/omega-max-duck/>
+- **[omniagent](https://github.com/belentani7/omniagent)** — One CLI to route AI tasks to the best model.
+  - web: <https://belentani7.github.io/omniagent/>
+- **[open-school](https://github.com/belentani7/open-school)** — Instituto educativo digital universal — cursos modulares, certificaciones verificables, accesibi
+  - web: <https://open-school-gamma.vercel.app>
+- **[openclaw-workspace](https://github.com/belentani7/openclaw-workspace)** — OpenClaw workspace config
+  - web: <https://belentani7.github.io/openclaw-workspace/>
+- **[opendesign](https://github.com/belentani7/opendesign)** — Recopilación abierta de sistemas de diseño y maquetas de referencia.
+  - web: <https://belentani7.github.io/opendesign/>
+- **[oss-compass](https://github.com/belentani7/oss-compass)** — Universal validation envelopes with auditable 2-of-3 node confirmation
+  - web: <https://belentani7.github.io/oss-compass/>
+- **[pbr-validator](https://github.com/belentani7/pbr-validator)** — Validates PBR texture sets for correctness and compatibility with game engines.
+  - web: <https://belentani7.github.io/pbr-validator/>
+- **[proofmesh](https://github.com/belentani7/proofmesh)** — Evidence-first change intelligence with strict 6-criteria, 3-node, 3-level gates
+  - web: <https://belentani7.github.io/proofmesh/>
+- **[ps-lm-local-powershell](https://github.com/belentani7/ps-lm-local-powershell)** — PS-LM es un asistente educativo de una sola página para consultar vocabulario y ejemplos básicos
+  - web: <https://belentani7.github.io/ps-lm-local-powershell/>
+- **[pvc-u-frontend](https://github.com/belentani7/pvc-u-frontend)** — PVC-U Dashboard — Liquid Glass/Neon Aesthetic con React 19 + Vite 7
+  - web: <https://belentani7.github.io/pvc-u-frontend/>
+- **[qbp-core](https://github.com/belentani7/qbp-core)** — Core SDK for the Quadrachy Binding Protocol - structured format for defining and validating.
+  - web: <https://belentani7.github.io/qbp-core/>
+- **[registro-proyectos-2026](https://github.com/belentani7/registro-proyectos-2026)** — Registro maestro de proyectos Pedro Belentani 2026
+  - web: <https://registro-proyectos-2026.vercel.app>
+- **[rh-fiscal-ultra-elite](https://github.com/belentani7/rh-fiscal-ultra-elite)** — Suite RH/fiscal con automatizacion de calculos e informes.
+  - web: <https://belentani7.github.io/rh-fiscal-ultra-elite/>
+- **[secure-t](https://github.com/belentani7/secure-t)** — Universidad digital de ciberseguridad e IA - cursos, campus, auditoria, modelos locales
+  - web: <https://belentani7.github.io/secure-t/>
+- **[skills-registry](https://github.com/belentani7/skills-registry)** — Global CLI agent skill distribution system — discover, install, manage skills for Qwen Code, Cla
+  - web: <https://belentani7.github.io/skills-registry/>
+- **[Steven-renovation](https://github.com/belentani7/Steven-renovation)** — Este proyecto contiene la estructura local de una web comercial para servicios de reformas. La c
+  - web: <https://belentani7.github.io/Steven-renovation/>
+- **[system-one-unified](https://github.com/belentani7/system-one-unified)** — System One — motor de decisiones tipado, determinista y offline (POST /v1/systemone)
+  - web: <https://belentani7.github.io/system-one-unified/>
+- **[temporal-artifact-detector](https://github.com/belentani7/temporal-artifact-detector)** — Python tool for detecting flickering and temporal artifacts in AI-generated videos.
+  - web: <https://belentani7.github.io/temporal-artifact-detector/>
+- **[tender-words-connect](https://github.com/belentani7/tender-words-connect)** — Mapa de comprension y herramientas sobre TLP, vinculos y gestion emocional.
+  - web: <https://tender-words-connect.vercel.app>
+- **[ux-academy-professional-program](https://github.com/belentani7/ux-academy-professional-program)** — Trilingual UX/Product Design learning platform — practice exercises, evaluation system, and caps
+  - web: <https://ux-academy-professional.vercel.app>
+- **[william-game-cuarentena](https://github.com/belentani7/william-game-cuarentena)** — Entretenimiento sin límites - Juegos interactivos puros en HTML.
+  - web: <https://belentani7.github.io/william-game-cuarentena/>
+- **[WILLIAMSCHOOL](https://github.com/belentani7/WILLIAMSCHOOL)** — Escola digital comunitária — currículo Nepal adaptado, design institucional, acceso abierto
+  - web: <https://williamschool.vercel.app>
+- **[win11-workspace](https://github.com/belentani7/win11-workspace)** — Windows 11 workspace - TypeScript desktop-style web environment.
+  - web: <https://belentani7.github.io/win11-workspace/>
+
+## Publicos sin web
+
+- **[agent-skills](https://github.com/belentani7/agent-skills)** — Colección de 311 skills para agentes CLI (Claude Code, OpenCode, Codex, Cline, Qwen, Gemini, ZCo
+- **[agentbox](https://github.com/belentani7/agentbox)** — Disposable cloud sandboxes for AI agents. Spin up isolated VMs for Claude, Aider, Codex, Qwen. $
+- **[agentguard](https://github.com/belentani7/agentguard)** — The firewall for your AI budget. Monitor spending, enforce limits, auto-pause agents, route over
+- **[aPlan-de-Adquisici-n-de-Informaci-n-y-Ejecuci-n-Automatizada](https://github.com/belentani7/aPlan-de-Adquisici-n-de-Informaci-n-y-Ejecuci-n-Automatizada)** — Superpowers is a complete software development methodology for your coding agents, built on top 
+- **[belentani-java-platform](https://github.com/belentani7/belentani-java-platform)** — Belentani Platform — enterprise-grade Java backend with JPA entities, security layers, and micro
+- **[belentani-monorepo](https://github.com/belentani7/belentani-monorepo)** — Belentani monorepo: UX Academy + ManosAbiertas + Belentani platforms. TurboRepo, Next.js, TypeSc
+- **[belentani-ops](https://github.com/belentani7/belentani-ops)** — Cadena de herramientas Python (solo libreria estandar) para operar el
+- **[belentani-the-judas-experience](https://github.com/belentani7/belentani-the-judas-experience)** — Python SaaS GUI del ecosistema Belentani: portal cinematográfico, narrativa Judas Era y CMS Stud
+- **[Construye-Belentani_-Coder-Local-Independiente-de-API-y-IA](https://github.com/belentani7/Construye-Belentani_-Coder-Local-Independiente-de-API-y-IA)** — Belentani es una herramienta de ingeniería local y determinista. Su núcleo actual no usa modelos
+- **[Crear-un-Prompt-para-Rellenar-Vac-os-en-el-Plan](https://github.com/belentani7/Crear-un-Prompt-para-Rellenar-Vac-os-en-el-Plan)** — Permission-based lead engine with consent tracking, campaigns and appointments
+- **[deepseek-fix-verify](https://github.com/belentani7/deepseek-fix-verify)** — DeepSeek fix verification scripts (Python).
+- **[local-agent](https://github.com/belentani7/local-agent)** — Archived reference: Windows OpenManus/Ollama setup. Preserved for documentation; current work us
+- **[ManosAbiertas-backup-v1](https://github.com/belentani7/ManosAbiertas-backup-v1)** — Plataforma educativa multilingue con cursos gratuitos, CV guiado, asistentes offline y accesibil
+- **[MetaSkill](https://github.com/belentani7/MetaSkill)** — Zero-token task router for AI coding agents — classifies requests locally without burning LLM to
+- **[Netlify](https://github.com/belentani7/Netlify)** — Next.js 16 frontend laboratory with image tooling, verified lint, tests and deployment previews.
+- **[noiacore-turbo-v2](https://github.com/belentani7/noiacore-turbo-v2)** — BarriServei AI - Autonomous local services platform with AI intake, Stripe escrow, WhatsApp inte
+- **[Oculus-Tv](https://github.com/belentani7/Oculus-Tv)** — Repositório multilíngue de código aberto com livros e materiais audiovisuais educativos.
+- **[premium-effects-registry](https://github.com/belentani7/premium-effects-registry)** — Curated collection of 50+ GitHub repos for premium frontend visual effects — liquid logos, 3D/We
+- **[pvc-u-core](https://github.com/belentani7/pvc-u-core)** — Protocolo de Validación Continua Universal — Kernel de gobernanza para Empresas de IA Autónomas 
+- **[skillforge](https://github.com/belentani7/skillforge)** — Universal package manager for AI coding skills. Write once, install everywhere.
+- **[superpowers-plan](https://github.com/belentani7/superpowers-plan)** — Superpowers is a complete software development methodology for your coding agents, built on top 
+- **[the-judas-experience](https://github.com/belentani7/the-judas-experience)** — Sin descripcion
+
