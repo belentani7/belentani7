@@ -1,133 +1,135 @@
 <p align="center">
-  <img src="assets/terminal-header.svg" alt="Terminal: Pedro Belentani, arquitecto de sistemas de IA, Barcelona" width="100%" />
+  <img src="assets/terminal-header.svg" alt="Pedro Belentani - Arquitecto de sistemas de IA" width="100%">
 </p>
 
-# ⬡ Pedro Belentani
+## Pedro Belentani
 
-### Arquitecto de sistemas de IA · Desarrollo full-stack · Tecnología creativa
+**Arquitecto de sistemas de IA** — full-stack TypeScript/Python. Barcelona.
+Construyo [NOIACORE](https://github.com/belentani7/NOIACORE): agentes, educacion abierta
+y herramientas para el artista comunitario.
 
-**Barcelona, España** · [belentani.es](https://belentani.es) · belentani7pedro@gmail.com
-
-![Repos](https://img.shields.io/badge/repositorios-481-ff073a?style=flat-square)
-![Públicos](https://img.shields.io/badge/p%C3%BAblicos-160%2B-4de8e0?style=flat-square)
-![Webs](https://img.shields.io/badge/webs_desplegadas-138-d4af37?style=flat-square)
+[![Portfolio](https://img.shields.io/badge/portfolio-belentani.es-0f766e?style=flat-square)](https://belentani.es)
+[![Design System](https://img.shields.io/badge/Design%20System-27_auditorias_de_componente-6c5ce7?style=flat-square)](https://github.com/belentani7/belentani-design-system)
+[![IA](https://img.shields.io/badge/IA-agentes%20%C2%B7%20orquestacion%20%C2%B7%20RAG-blue?style=flat-square)](https://github.com/belentani7/noiacore-labs)
 
 ---
 
-## Qué hago
+### Como leer este perfil
 
-Construyo **sistemas completos**: del modelo de datos a la interfaz, del agente de IA al
-despliegue. Trabajo solo y a escala — **481 repositorios**, **138 webs publicas publicadas**.
+Las cifras de esta pagina se miden contra la API de GitHub y llevan fecha.
+Cuando una cifra no es verificable, no esta escrita.
 
-Tres líneas de trabajo, todas con código real detrás:
+- **Fuente:** `api.github.com` + `gh repo list belentani7 --limit 1000`
+- **Medido:** 2026-10-04
+- **Cobertura:** 488 de 488 repos (160 publicos + 328 privados)
 
-| Línea | Qué es | Ejemplos |
+---
+
+### Estado real de la cuenta
+
+| Metrica | Valor | Nota |
 |---|---|---|
-| **IA aplicada** | Agentes, orquestación multi-modelo, skills para CLIs | Agent Skills (311 skills), Skills Registry, ai-command-center |
-| **Plataformas sociales** | Educación y acogida, gratuitas y accesibles | Open School, ManosAbiertas, Cruzando el Charco |
-| **Tecnología creativa** | Arte, música y narrativa interactiva | Belentani Omega, Judas Experience, DUCK Studio |
+| Repositorios | **488** | 160 publicos · 328 privados |
+| Forks | **0** | Todo el trabajo es original |
+| Archivados | 110 | 378 activos |
+| Estrellas | 3 | Ver nota abajo, sin adornos |
+| Contribuciones (12 meses) | **4.086** | 3.901 commits · 76 PRs · 8 issues |
+| Repos con homepage | 138 | Homepage declarado, no verificado que sirva |
+| Cuenta creada | 2025-09-07 | 13 meses de actividad |
 
----
+**Sobre las 3 estrellas y 0 seguidores:** es el dato mas honesto del perfil. No he
+comprado seguidores ni estrellas. Los numeros grandes en GitHub vienen de mantener
+proyectos abiertos durante anos; esta cuenta tiene 13 meses. Prefiero que el perfil
+diga la verdad y que las estrellas lleguen por el trabajo.
 
-## Proyectos destacados
+### Aportaciones a terceros: 3 PRs, 1 mergeado
 
-### 🎓 Educación abierta
+Medido con `author:belentani7 type:pr`:
 
-| Proyecto | Qué es | Stack | Web |
-|---|---|---|---|
-| **[Open School](https://github.com/belentani7/open-school)** | Instituto digital universal. Cursos modulares, certificaciones verificables, **offline-first** | TypeScript, PWA, WCAG | [web](https://open-school-gamma.vercel.app) |
-| **[ManosAbiertas](https://github.com/belentani7/ManosAbiertas)** | Formación gratuita en IA y ofimática, creador de CV, guías de derechos | TypeScript, PWA | [web](https://belentani7.github.io/ManosAbiertas/) |
-| **[secure-t](https://github.com/belentani7/secure-t)** | Universidad digital de ciberseguridad e IA | HTML, offline-first | [web](https://belentani7.github.io/secure-t/) |
-| **[UX Academy](https://github.com/belentani7/ux-academy-professional-program)** | Programa trilingüe de diseño UX/Producto, 12 módulos | TypeScript | [web](https://ux-academy-professional.vercel.app) |
-
-### 🤖 IA y agentes
-
-| Proyecto | Qué es | Stack |
-|---|---|---|
-| **[Agent Skills](https://github.com/belentani7/agent-skills)** | **311 skills** para agentes CLI (Claude, Codex, OpenCode, Kilo) | Python, estándar Skills |
-| **[Skills Registry](https://github.com/belentani7/skills-registry)** | Distribución global de skills para CLIs | TypeScript |
-| **[ai-command-center-level10](https://github.com/belentani7/ai-command-center-level10)** | Centro de mando unificado para trabajo con agentes | TypeScript |
-
-### 🌍 Impacto social
-
-| Proyecto | Qué es | Stack | Web |
-|---|---|---|---|
-| **[Cruzando el Charco](https://github.com/belentani7/Cruzando-el-charco)** | Portal de acogida y arraigo para hombres migrantes LGBT+ en Barcelona | Next.js, multilingüe | [web](https://belentani7.github.io/Cruzando-el-charco/) |
-| **[tender-words-connect](https://github.com/belentani7/tender-words-connect)** | Mapa de comprensión y regulación emocional (TLP) | TypeScript | [web](https://tender-words-connect.vercel.app) |
-
-### 🎨 Tecnología creativa
-
-| Proyecto | Qué es | Stack | Web |
-|---|---|---|---|
-| **[Belentani Omega](https://github.com/belentani7/belentani_Omega)** | Ecosistema artístico: música, código y narrativa 3D | Three.js, WebGPU | [belentani.es](https://belentani.es) |
-| **[Judas Experience](https://github.com/belentani7/belentani-judas-experience)** | Experiencia interactiva, la obra central | Next.js | [web](https://belentani7.github.io/belentani-judas-experience/) |
-| **[Belentani Design System](https://github.com/belentani7/belentani-design-system)** | Glass + neón rojo + lluvia de código. Drop-in | CSS/JS, GSAP | [web](https://belentani7.github.io/belentani-design-system/) |
-| **[DUCK Studio Suite](https://github.com/belentani7/duck-studio-suite)** | Suite de producción musical web | Vite, TypeScript | [web](https://belentani7.github.io/duck-studio-suite/) |
-
----
-
-## Stack
-
-**Frontend**
-`TypeScript` `React 19` `Next.js` `Astro` `Vite` `Tailwind 4` `shadcn/ui` `Three.js` `WebGPU` `GSAP`
-
-**Backend**
-`Node.js` `Bun` `Python` `FastAPI` `Express` `Prisma` `Drizzle` `PostgreSQL` `SQLite`
-
-**IA**
-`Agentes` `MCP` `Orquestación multi-modelo` `RAG` `Prompt engineering` `Skills`
-
-**Infraestructura**
-`Docker` `Vercel` `Netlify` `Cloudflare` `GitHub Actions` `PWA offline-first`
-
-**Sistemas**
-`PowerShell` `Bash` `Git` `Linux` `Java` `Go`
-
----
-
-## Cómo trabajo
-
-Cinco reglas que se ven en el código, no solo en el discurso:
-
-1. **Accesibilidad no es opcional.** WCAG en todo lo público. Offline-first donde importa.
-2. **Gratuito para quien lo necesita.** Educación y acogida sin registro ni coste.
-3. **Documentar el porqué, no el qué.** Cada repositorio explica qué es y en qué estado está.
-4. **Verificar antes de afirmar.** Prueba real antes de decir "funciona".
-5. **Portugués > Español > Inglés > Catalán.** El orden responde al público real.
-
----
-
-## Idiomas
-
-🇧🇷 **Portugués** · 🇪🇸 **Español** · 🇬🇧 **Inglés** · 🏴 **Català**
-
----
-
-## Contacto
-
-| | |
+| Destino | Estado |
 |---|---|
-| **Web** | [belentani.es](https://belentani.es) |
-| **Email** | belentani7pedro@gmail.com |
-| **LinkedIn** | [in/pedro-b-09473598](https://www.linkedin.com/in/pedro-b-09473598) |
-| **Ubicación** | L'Hospitalet de Llobregat, Barcelona |
+| `firstcontributions/first-contributions` #124189 | mergeado 2026-08-31 |
+| `huggingface/transformers` | abierto, sin merge |
+| `QwenLM/qwen-code` | abierto, sin merge |
 
-**Ecosistema en vivo:** [belentani.es](https://belentani.es) · [Circuito del ecosistema](https://belentani.es/ecosistema.html) · [Judas Experience](https://belentani7.github.io/belentani-judas-experience/) · [Open School](https://open-school-gamma.vercel.app) · [secure T](https://belentani7.github.io/secure-t/campus/)
-
-**Abierto a:** consultoría y auditoría técnica · proyectos de IA aplicada · colaboración en
-educación abierta e impacto social.
+El unico mergeado es un repositorio de tutorial, asi que **no cuenta como aportacion
+real**. No tengo contribuciones aceptadas en proyectos de terceros. Los repos
+publicos y las issues abiertas de este perfil son el punto de partida.
 
 ---
 
-## Todo el trabajo, organizado
+### Que construyo hoy
 
-Los 161 repositorios públicos, agrupados por lo que son (educación, arte,
-música, herramientas, webs) y con su web al lado:
+#### Consolidacion de 3 familias — verificado 2026-10-04
 
-- **[Índice maestro de la cuenta](https://github.com/belentani7/belentani7/blob/main/INDICE-MAESTRO.md)**
+El 2026-10-04 integre tres familias de codigo en sus repos de destino, cada una en la
+rama `consolidacion/2026-10-04`, y verifique por API lo que llego de verdad:
+
+| Repo | Rama | Commit | Ficheros en la rama |
+|---|---|---|---|
+| [duck-ecosystem](https://github.com/belentani7/duck-ecosystem) | `consolidacion/2026-10-04` | `139a5d25` | 5.951 |
+| [NOIACORE](https://github.com/belentani7/NOIACORE) | `consolidacion/2026-10-04` | `1649a408` | 2.479 |
+| [open-school](https://github.com/belentani7/open-school) | `consolidacion/2026-10-04` | `d3035554` | 11.368 |
+
+Como se hizo:
+
+1. **Clasificar antes de inventariar.** Una carpeta no es un proyecto por estar en el
+   escritorio. 12 familias, cada una con su regla de pertenencia.
+2. **Allowlist de tipos de fichero.** Entra codigo, documentacion y config. Salen
+   binarios, imagenes, bases de datos, `.env*`, `.npmrc` y todo fichero
+   `*secret*`, `*credential*` o `*password*`.
+3. **Clasificador determinista de secretos** (fichero, linea, regla, veredicto),
+   distinguiendo **base64 embebido** de un token real. Los dos casos existen en este
+   codigo y confundirlos es la causa tipica de falsos positivos.
+4. **Publicacion verificable por API:** `git/trees?recursive=1`, no por el exito del push.
+
+**El detalle que importa:** GitHub Push Protection bloqueo el primer push de NOIACORE
+por un token OAuth de Google real (`ya29.` en `.gdrive-rclone.ini`) que el escaner local
+no habia detectado. Se elimino del commit y se reintento. El valor de verificar por API
+esta en que el control del servidor supplemental al local, y en que los dos coinciden.
+
+#### Plataformas destacadas
+
+| Proyecto | Que es | Stack |
+|---|---|---|
+| [**open-school**](https://github.com/belentani7/open-school) | Instituto educativo digital universal: cursos modulares, certificacion e itinerarios | Next.js, TS, WCAG |
+| [**agent-skills**](https://github.com/belentani7/agent-skills) | **311 skills** para agentes CLI (Claude Code, OpenCode, Codex) | Python, estandar Skill |
+| [agent-skills-registry](https://github.com/belentani7/agent-skills-registry) | Distribucion global de skills para agentes | TypeScript |
+| [**ManosAbiertas**](https://github.com/belentani7/ManosAbiertas) | Formacion gratuita en IA y Office, creador de CV, guias para derechohabientes | Vite, React, TS, PWA |
+| [**Cruzando el Charco**](https://github.com/belentani7/Cruzando-el-charco) | Portal de acceso y orgullo LGBTQ+ en Barcelona para personas migrantes | Next.js, multilingue |
+| [**Belentani Omega**](https://github.com/belentani7/belentani_Omega) | Ecosistema artistico: Omega, Belentani Omega, Jupyter Experiments y DUCK STUDIO | Three.js, WebGL, WebGPU |
+| [**Belentani Design System**](https://github.com/belentani7/belentani-design-system) | Tokens glass/aluminium, componentes CSS puros, 12 tokens en produccion | TypeScript, CSS |
+| [**ai-command-center**](https://github.com/belentani7/ai-command-center) | Centro de mando y unico trabajo con agentes de IA | TypeScript |
+| [**secure-t**](https://github.com/belentani7/secure-t) | Suite de produccion musical web | Vite, Lua, WASM |
 
 ---
 
+### Stack
+
+**Frontend** · TypeScript · `React 19` · `Vite` · `Next.js` · `Tailwind` · `CSS` · `Three.js` · `WebGPU` · `GSAP` · `shadcn/ui`
+**Backend** · Node.js · Python · `FastAPI` · `PostgreSQL` · `Prisma` · `PWA` · `Docker` · `GitHub Actions` · `WCAG`
+
 ---
 
-<sub>481 repositorios · 160+ públicos · 97 aplicaciones desplegadas · Barcelona</sub>
+### Como trabajo
+
+1. **Accesibilidad desde el primer commit,** no como fase final. WCAG, navegacion por
+   teclado y diseno accesible van en el primer commit.
+2. **Graficos para lo que sirve antes que para lucirse.** El performance de GPU es un
+   argumento narrativo, no un adorno.
+3. **Documentar el por que, no el que.** Si el README no explica la funcion, es codigo muerto.
+4. **Verificar antes de afirmar.** Comando ejecutado, salida real, cero *"deberia funcionar"*.
+5. **Codigo abierto y formacion accesible** como decision de producto, no como marketing.
+
+---
+
+### Contacto
+
+Web · [belentani.es](https://belentani.es) · Email · belentani7pedro@gmail.com · Ubicacion · Barcelona
+
+**Abierto a:** proyectos de IA aplicada, educacion abierta, accesibilidad y portfolio ↔ GitHub
+
+<!--
+Cifras: api.github.com + gh repo list belentani7 --limit 1000
+Medido: 2026-10-04 | Cobertura: 488 de 488 repos | Metodo: API, no scraping
+-->
