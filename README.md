@@ -8,7 +8,7 @@
 construyo software, herramientas de IA y proyectos educativos; como **Belentani**,
 exploro música, relato visual y tecnología creativa.
 
-[Portfolio · belentani.es](https://belentani.es) · [Perfil GitHub](https://github.com/belentani7) · [Contacto](mailto:belentani7pedro@gmail.com)
+[Portfolio · belentani.es](https://belentani.es) · [Contacto](mailto:belentani7pedro@gmail.com)
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-belentani.es-0f766e?style=flat-square)](https://belentani.es)
 [![Build](https://img.shields.io/github/actions/workflow/status/belentani7/belentani7/build.yml?branch=main&label=build&style=flat-square)](https://github.com/belentani7/belentani7/actions/workflows/build.yml)
@@ -44,15 +44,17 @@ accesibilidad · experiencias interactivas.
 
 <sub>TypeScript · React · Node.js · Python · diseño de sistemas · tecnología creativa</sub>
 
-
 ## Stack
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white) ![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB) ![Next.js](https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white) ![Node.js](https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white) ![Three.js](https://img.shields.io/badge/Three.js-000000?logo=threedotjs&logoColor=white)
 
-## Estandares con los que construyo
+## Estándares con los que construyo
 
-Cada proyecto apunta a una misma vara de calidad: documentacion clara y quickstart corto, licencia abierta (MIT), politica de seguridad y plantillas de contribucion, CI en cada push, accesibilidad WCAG, enfoque local-first y offline-first, y datos personales al minimo.
+Cada proyecto apunta a una misma vara de calidad: documentación clara y quickstart corto, licencia abierta (MIT), política de seguridad y plantillas de contribución, CI en cada push, accesibilidad WCAG, enfoque local-first y offline-first, y datos personales al mínimo.
 
 ## Actividad
 
-![Estadisticas de GitHub](https://github-readme-stats.vercel.app/api?username=belentani7&show_icons=true&theme=dark&hide_border=true)
+<p align="center">
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=belentani7&show_icons=true&theme=dark&hide_border=true&locale=es" alt="Estadísticas de GitHub de belentani7" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=belentani7&layout=compact&theme=dark&hide_border=true&locale=es" alt="Lenguajes más usados" />
+</p>
