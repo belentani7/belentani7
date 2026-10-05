@@ -43,3 +43,19 @@ accesibilidad · experiencias interactivas.
 [visita mi portfolio](https://belentani.es).
 
 <sub>TypeScript · React · Node.js · Python · diseño de sistemas · tecnología creativa</sub>
+
+
+## Stack
+
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white) ![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB) ![Next.js](https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white) ![Node.js](https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white) ![Three.js](https://img.shields.io/badge/Three.js-000000?logo=threedotjs&logoColor=white)
+
+## Estandares con los que construyo
+
+Cada proyecto apunta a una misma vara de calidad: documentacion clara y quickstart corto, licencia abierta (MIT), politica de seguridad y plantillas de contribucion, CI en cada push, accesibilidad WCAG, enfoque local-first y offline-first, y datos personales al minimo.
+
+## Actividad
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=belentani7&show_icons=true&theme=dark&hide_border=true" alt="Estadisticas de GitHub" height="150" />
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=belentani7&layout=compact&theme=dark&hide_border=true" alt="Lenguajes principales" height="150" />
+</p>p>
