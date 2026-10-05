@@ -55,7 +55,4 @@ Cada proyecto apunta a una misma vara de calidad: documentacion clara y quicksta
 
 ## Actividad
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=belentani7&show_icons=true&theme=dark&hide_border=true" alt="Estadisticas de GitHub" height="150" />
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=belentani7&layout=compact&theme=dark&hide_border=true" alt="Lenguajes principales" height="150" />
-</p>p>
+![Estadisticas de GitHub](https://github-readme-stats.vercel.app/api?username=belentani7&show_icons=true&theme=dark&hide_border=true)
