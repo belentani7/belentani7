@@ -23,5 +23,9 @@ jobs:
           test -s docs/living-machine/studio.css
           node --check docs/living-machine/studio.js
           node --check docs/living-machine/studio-core.js
+          node --check docs/living-machine/pdf-core.js
+          node --check docs/living-machine/audio-core.js
+          test -s docs/living-machine/pdf-core.js
+          test -s docs/living-machine/audio-core.js
       - name: Run suite
-        run: node --test docs/living-machine/quality.test.cjs docs/living-machine/studio.test.cjs
+        run: node --test docs/living-machine/quality.test.cjs docs/living-machine/studio.test.cjs docs/living-machine/media.test.cjs
