@@ -19,8 +19,8 @@ test("Studio sources load and parse without external modules", () => {
   assert.doesNotMatch(html, /<script[^>]+src=["']https?:/i);
   assert.doesNotMatch(js, /\bfetch\s*\(/);
 });
-test("all five applications have accessible panels", () => {
-  for (const id of ["batch", "subtitles", "cv", "storyboard", "palette"]) {
+test("all seven applications have accessible panels", () => {
+  for (const id of ["batch", "subtitles", "cv", "storyboard", "palette", "pdf", "audio"]) {
     assert.match(html, new RegExp('data-tab="' + id + '"'));
     assert.match(html, new RegExp('id="tab-' + id + '"'));
   }
