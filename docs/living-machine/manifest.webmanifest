@@ -1,0 +1,20 @@
+{
+  "name": "BELENTANI Living Machine — Useful Studio",
+  "short_name": "BELENTANI",
+  "id": "./studio.html",
+  "start_url": "./studio.html",
+  "scope": "./",
+  "display": "standalone",
+  "description": "A privacy-first browser utility studio for images, captions, CVs, audio, PDF and creative production.",
+  "theme_color": "#ff244c",
+  "background_color": "#050407",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "./studio-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
