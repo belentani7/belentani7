@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -13,6 +13,7 @@
 <script src="./pdf-core.js" defer></script>
 <script src="./audio-core.js" defer></script>
 <script src="./studio.js" defer></script>
+<script src="./studio-i18n.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#workspace">Ir al contenido</a>
@@ -20,27 +21,27 @@
 <div class="bloom" aria-hidden="true"></div>
 <header class="bar">
   <a class="wordmark" href="./index.html"><span class="sigil">B</span><span>BELENTANI <em>/ STUDIO</em></span></a>
-  <div class="bar-links"><span class="ready">● LOCAL ENGINE</span><a href="./index.html">Living Machine ↗</a><a href="https://github.com/belentani7" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+  <div class="bar-links"><select class="lang-select" id="interfaceLanguage" aria-label="Interface language"><option value="en">EN</option><option value="es">ES</option><option value="pt">PT</option></select><span class="ready" data-i18n="engine">● LOCAL ENGINE</span><a href="./index.html">Living Machine ↗</a><a href="https://github.com/belentani7" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
 </header>
 <div class="layout">
   <aside class="sidebar" aria-label="Herramientas">
-    <div class="menu-caption">APPLICATIONS / 01—07</div>
+    <div class="menu-caption" data-i18n="apps">APPLICATIONS / 01—07</div>
     <nav class="nav" id="tabs" aria-label="Laboratory tools">
-      <button data-tab="batch" class="chosen"><span>◩</span> Image batch converter <small>01</small></button>
-      <button data-tab="subtitles"><span>≋</span> Subtitle time studio <small>02</small></button>
-      <button data-tab="cv"><span>◈</span> CV clarity inspector <small>03</small></button>
-      <button data-tab="storyboard"><span>◇</span> Storyboard architect <small>04</small></button>
-      <button data-tab="palette"><span>◉</span> Image color sampler <small>05</small></button>
-      <button data-tab="pdf"><span>▤</span> Image → PDF composer <small>06</small></button>
-      <button data-tab="audio"><span>♫</span> Audio to WAV studio <small>07</small></button>
+      <button data-tab="batch" class="chosen"><span>◩</span> <span data-i18n="navBatch">Image batch converter</span> <small>01</small></button>
+      <button data-tab="subtitles"><span>≋</span> <span data-i18n="navSubtitles">Subtitle time studio</span> <small>02</small></button>
+      <button data-tab="cv"><span>◈</span> <span data-i18n="navCV">CV clarity inspector</span> <small>03</small></button>
+      <button data-tab="storyboard"><span>◇</span> <span data-i18n="navShots">Storyboard architect</span> <small>04</small></button>
+      <button data-tab="palette"><span>◉</span> <span data-i18n="navPalette">Image color sampler</span> <small>05</small></button>
+      <button data-tab="pdf"><span>▤</span> <span data-i18n="navPDF">Image → PDF composer</span> <small>06</small></button>
+      <button data-tab="audio"><span>♫</span> <span data-i18n="navAudio">Audio to WAV studio</span> <small>07</small></button>
     </nav>
     <div class="sidebar-bottom"><span>NO ACCOUNT</span><span>NO FILE UPLOAD</span><span>NO BACKEND API</span><p>Built to demonstrate useful engineering in public, with explicit operating boundaries.</p><a href="https://belentani.es">belentani.es ↗</a></div>
   </aside>
   <main id="workspace" tabindex="-1">
-    <div class="masthead"><div class="eyebrow">UTILITY SURFACE / LOCAL FIRST</div><h1>Tools that<br><i>earn their place.</i></h1><p>Pixel-precise glass, practical software and honest limits. Your files stay in your browser. Each utility is designed as a self-contained operation, with no registration or third-party file service.</p><div class="meta"><span>7 REAL TOOLS</span><span>FILES PROCESSED LOCALLY</span><span>ES · EN · PT CONTEXT</span></div></div>
+    <div class="masthead"><div class="eyebrow">UTILITY SURFACE / LOCAL FIRST</div><h1 data-i18n="headline">Tools that<br><i>earn their place.</i></h1><p data-i18n="intro">Pixel-precise glass, practical software and honest limits. Your files stay in your browser. Each utility is designed as a self-contained operation, with no registration or third-party file service.</p><div class="meta"><span data-i18n="sevenTools">7 REAL TOOLS</span><span>FILES PROCESSED LOCALLY</span><span>ES · EN · PT CONTEXT</span></div></div>
 
     <section class="panel active" id="tab-batch" aria-labelledby="batchTitle">
-      <div class="panel-head"><div><div class="eyebrow">01 / IMAGING</div><h2 id="batchTitle">Batch image converter</h2><p>Convert up to 20 local images into PNG, JPEG or WebP. Resize with aspect ratio preserved. Download individually or as a standards-compatible ZIP.</p></div><div class="mark">◩</div></div>
+      <div class="panel-head"><div><div class="eyebrow">01 / IMAGING</div><h2 id="batchTitle" data-i18n="batchTitle">Batch image converter</h2><p>Convert up to 20 local images into PNG, JPEG or WebP. Resize with aspect ratio preserved. Download individually or as a standards-compatible ZIP.</p></div><div class="mark">◩</div></div>
       <div class="drop" id="imageDrop">
         <input id="batchFiles" type="file" accept="image/png,image/jpeg,image/webp,image/avif,image/bmp,image/gif" multiple aria-describedby="batchLimits">
         <span class="drop-emblem">＋</span>
@@ -58,7 +59,7 @@
     </section>
 
     <section class="panel" id="tab-subtitles" aria-labelledby="subtitleTitle" hidden>
-      <div class="panel-head"><div><div class="eyebrow">02 / VIDEO POST-PRODUCTION</div><h2 id="subtitleTitle">Subtitle time studio</h2><p>Convert SRT/VTT, shift timestamps and export clean text. The tool processes existing captions — it does not invent speech recognition for local video files.</p></div><div class="mark">≋</div></div>
+      <div class="panel-head"><div><div class="eyebrow">02 / VIDEO POST-PRODUCTION</div><h2 id="subtitleTitle" data-i18n="subtitleTitle">Subtitle time studio</h2><p>Convert SRT/VTT, shift timestamps and export clean text. The tool processes existing captions — it does not invent speech recognition for local video files.</p></div><div class="mark">≋</div></div>
       <label for="subtitleFile">Subtitle file (optional)</label><input id="subtitleFile" type="file" accept=".srt,.vtt,.txt,text/plain">
       <label for="subtitleInput">Paste captions</label><textarea id="subtitleInput" rows="11" spellcheck="false" placeholder="1&#10;00:00:01,000 --> 00:00:03,000&#10;First sentence"></textarea>
       <div class="formline"><div><label for="subtitleShift">Shift in milliseconds (+ / −)</label><input id="subtitleShift" type="number" min="-86400000" max="86400000" value="0"></div><div><label for="subtitleFormat">Export format</label><select id="subtitleFormat"><option value="srt">SRT</option><option value="vtt">VTT</option><option value="txt">TXT transcript</option></select></div></div>
@@ -67,7 +68,7 @@
     </section>
 
     <section class="panel" id="tab-cv" aria-labelledby="cvTitle" hidden>
-      <div class="panel-head"><div><div class="eyebrow">03 / PROFESSIONAL COMMUNICATION</div><h2 id="cvTitle">CV clarity inspector</h2><p>A privacy-preserving, heuristic text review: structure, contact presence, readability length and evidence-oriented suggestions. Not an ATS score and not AI-generated hiring advice.</p></div><div class="mark">◈</div></div>
+      <div class="panel-head"><div><div class="eyebrow">03 / PROFESSIONAL COMMUNICATION</div><h2 id="cvTitle" data-i18n="cvTitle">CV clarity inspector</h2><p>A privacy-preserving, heuristic text review: structure, contact presence, readability length and evidence-oriented suggestions. Not an ATS score and not AI-generated hiring advice.</p></div><div class="mark">◈</div></div>
       <label for="cvText">Paste resume text (no uploads)</label><textarea id="cvText" rows="12" placeholder="Professional summary, experience, projects, education, skills..."></textarea>
       <div class="actionline"><button class="cta" id="cvGo">Inspect clarity ↗</button><button class="secondary" id="cvExport">Export report</button></div>
       <div id="cvResult" class="report" role="status" aria-live="polite">Your text is analyzed in memory when you press Inspect.</div>
@@ -75,7 +76,7 @@
     </section>
 
     <section class="panel" id="tab-storyboard" aria-labelledby="storyTitle" hidden>
-      <div class="panel-head"><div><div class="eyebrow">04 / CREATIVE PRODUCTION</div><h2 id="storyTitle">Storyboard architect</h2><p>Plan and export real shot lists for reels, music videos and creative campaigns: duration, camera, movement, visual intention and sound.</p></div><div class="mark">◇</div></div>
+      <div class="panel-head"><div><div class="eyebrow">04 / CREATIVE PRODUCTION</div><h2 id="storyTitle" data-i18n="storyTitle">Storyboard architect</h2><p>Plan and export real shot lists for reels, music videos and creative campaigns: duration, camera, movement, visual intention and sound.</p></div><div class="mark">◇</div></div>
       <div class="formline"><div><label for="filmTitle">Production title</label><input id="filmTitle" maxlength="100" placeholder="Judas — Midnight Sequence"></div><div><label for="filmTempo">Project tempo (BPM, optional)</label><input id="filmTempo" type="number" min="1" max="320" placeholder="128"></div></div>
       <div class="table-scroll"><table><thead><tr><th>Shot</th><th>Seconds</th><th>Camera</th><th>Movement</th><th>Visual</th><th>Audio</th><th>Notes</th><th></th></tr></thead><tbody id="shots"></tbody></table></div>
       <div class="actionline"><button class="secondary" id="addShot">＋ Add shot</button><button class="cta" id="exportShots">Export CSV ↗</button><button class="secondary" id="exportShotsJson">Export JSON</button></div>
@@ -83,7 +84,7 @@
     </section>
 
     <section class="panel" id="tab-palette" aria-labelledby="paletteTitle" hidden>
-      <div class="panel-head"><div><div class="eyebrow">05 / ART DIRECTION</div><h2 id="paletteTitle">Image color sampler</h2><p>Derive a compact palette from the pixels in your own image. Sampled colors are approximate; export swatches as reusable CSS variables.</p></div><div class="mark">◉</div></div>
+      <div class="panel-head"><div><div class="eyebrow">05 / ART DIRECTION</div><h2 id="paletteTitle" data-i18n="paletteTitle">Image color sampler</h2><p>Derive a compact palette from the pixels in your own image. Sampled colors are approximate; export swatches as reusable CSS variables.</p></div><div class="mark">◉</div></div>
       <label for="paletteImage">Local image file</label><input id="paletteImage" type="file" accept="image/*">
       <div class="image-preview"><canvas id="paletteCanvas" width="420" height="240" aria-label="Color source image preview"></canvas></div>
       <div class="actionline"><button class="cta" id="paletteGo">Extract palette ↗</button><button class="secondary" id="paletteExport">Export CSS</button></div>
@@ -92,7 +93,7 @@
     </section>
 
     <section class="panel" id="tab-pdf" aria-labelledby="pdfTitle" hidden>
-      <div class="panel-head"><div><div class="eyebrow">06 / DOCUMENT PROCESSING</div><h2 id="pdfTitle">Images into PDF</h2><p>Combine photographs and screenshots into an A4 PDF without sending them to a server. Every input is rasterized locally as JPEG, removing source metadata. One page per image, with aspect ratio preserved.</p></div><div class="mark">▤</div></div>
+      <div class="panel-head"><div><div class="eyebrow">06 / DOCUMENT PROCESSING</div><h2 id="pdfTitle" data-i18n="pdfTitle">Images into PDF</h2><p>Combine photographs and screenshots into an A4 PDF without sending them to a server. Every input is rasterized locally as JPEG, removing source metadata. One page per image, with aspect ratio preserved.</p></div><div class="mark">▤</div></div>
       <label for="pdfFiles">Select 1–25 local images</label>
       <input type="file" id="pdfFiles" accept="image/*" multiple>
       <div class="formline"><div><label for="pdfQuality">JPEG fidelity</label><select id="pdfQuality"><option value=".92">High — 92%</option><option value=".80" selected>Balanced — 80%</option><option value=".65">Small — 65%</option></select></div><div><label for="pdfMargin">Page margins in points</label><select id="pdfMargin"><option value="0">Edge to edge</option><option value="24" selected>Standard</option><option value="48">Wide</option></select></div></div>
@@ -101,7 +102,7 @@
     </section>
 
     <section class="panel" id="tab-audio" aria-labelledby="audioTitle" hidden>
-      <div class="panel-head"><div><div class="eyebrow">07 / AUDIO PROCESSING</div><h2 id="audioTitle">Audio to WAV</h2><p>Decode compatible local audio formats, inspect duration, peak and RMS, then export 16-bit mono or stereo PCM WAV. Decoding happens in the browser's Web Audio engine.</p></div><div class="mark">♫</div></div>
+      <div class="panel-head"><div><div class="eyebrow">07 / AUDIO PROCESSING</div><h2 id="audioTitle" data-i18n="audioTitle">Audio to WAV</h2><p>Decode compatible local audio formats, inspect duration, peak and RMS, then export 16-bit mono or stereo PCM WAV. Decoding happens in the browser's Web Audio engine.</p></div><div class="mark">♫</div></div>
       <label for="audioFile">Choose audio file</label><input id="audioFile" type="file" accept="audio/*">
       <div class="formline"><div><label for="audioChannels">Channels</label><select id="audioChannels"><option value="original">Keep original (up to stereo)</option><option value="mono">Mix to mono</option></select></div><div><label for="audioNormalize">Volume processing</label><select id="audioNormalize"><option value="no">Keep original peaks</option><option value="yes">Peak normalize (up to 16×)</option></select></div></div>
       <div class="image-preview"><canvas id="waveCanvas" width="760" height="170" role="img" aria-label="Waveform visual representation"></canvas></div>
