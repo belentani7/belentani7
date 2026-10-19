@@ -598,9 +598,9 @@ footer{padding:100px 0 0;color:#9aaac1;font-size:12px;display:flex;justify-conte
       if(e.key!=="Enter")return;const cmd=entry.value.toLowerCase().trim();entry.value="";
       if(!cmd)return;print("B:\\\\> "+cmd);
       if(cmd==="clear"){term.textContent="";return}
-      if(cmd==="date")print(new Date().toString());
-      if(cmd==="vista")openApp("vista");
-      else print(outputs[cmd]||"Unknown command. Type help.");
+      if(cmd==="date"){print(new Date().toString());return;}
+      if(cmd==="vista"){print(outputs.vista);openApp("vista");return;}
+      print(outputs[cmd]||"Unknown command. Type help.");
     });
   }
   function wireSystem(win){
