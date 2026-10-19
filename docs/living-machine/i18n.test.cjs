@@ -17,7 +17,7 @@ test("Localization source compiles and is served as a local script",()=>{
 });
 
 test("Studio translates visible headings and updates language without a server",()=>{
-  const keys=["headline","navBatch","navPDF","navAudio","intro","sevenTools"];
+  const keys=["headline","navBatch","navPDF","navAudio","intro","sevenTools","batchDesc"];
   const nodes=keys.map(key=>({
     key,textContent:"",innerHTML:"",
     getAttribute(name){return name==="data-i18n"?this.key:null}
@@ -41,10 +41,12 @@ test("Studio translates visible headings and updates language without a server",
   assert.match(nodes.find(n=>n.key==="headline").innerHTML,/merecen existir/);
   assert.match(nodes.find(n=>n.key==="navPDF").textContent,/PDF/);
   assert.equal(saved["belentani-studio-lang"],"es");
+  assert.match(nodes.find(n=>n.key==="batchDesc").textContent,/^Convierte/);
   callbacks.change({target:{value:"pt"}});
   assert.equal(document.documentElement.lang,"pt");
   assert.match(nodes.find(n=>n.key==="intro").textContent,/navegador/);
   assert.equal(saved["belentani-studio-lang"],"pt");
+  assert.match(nodes.find(n=>n.key==="batchDesc").textContent,/^Converta/);
   callbacks.change({target:{value:"en"}});
   assert.equal(document.documentElement.lang,"en");
   assert.match(nodes.find(n=>n.key==="headline").innerHTML,/earn their place/);
