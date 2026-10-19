@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#050407"><meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'none'; object-src 'none'; base-uri 'self'">
+<title>BELENTANI · Diagnostics</title><link rel="stylesheet" href="./studio.css"><link rel="icon" href="./studio-icon.svg">
+<script src="./studio-core.js" defer></script><script src="./pdf-core.js" defer></script><script src="./audio-core.js" defer></script><script src="./video-sheet.js" defer></script><script src="./diagnostics.js" defer></script>
+<style>
+.dshell{max-width:930px;margin:auto;padding:50px 20px 110px}.dshell h1{font-size:clamp(45px,8vw,94px);font-weight:600;letter-spacing:-.075em;line-height:.98;margin:20px 0}.dshell p{line-height:1.8;color:#c3b4c1}.checks{display:grid;gap:10px;margin-top:22px}.check{display:flex;align-items:start;justify-content:space-between;gap:16px;border:1px solid #ffffff28;background:linear-gradient(120deg,#ffffff12,#ff244c08);padding:17px;border-radius:14px}.check strong{font-size:14px}.check small{display:block;color:#af9ba9;line-height:1.6;margin-top:6px}.check .state{color:#b8ffde;white-space:nowrap;font:12px Consolas,monospace}.check.warn .state{color:#ffe0ad}.check.fail .state{color:#ffb3b3}#summary{border:1px solid #ffffff32;border-radius:14px;padding:14px;margin:25px 0;background:#120a14;font:12px Consolas,monospace}@media(max-width:560px){.check{flex-direction:column}}
+</style></head>
+<body><header class="bar"><a class="wordmark" href="./studio.html"><span class="sigil">B</span> BELENTANI <em>/ CHECK</em></a><div class="bar-links"><a href="./studio.html">Studio ↗</a><a href="./index.html">Machine ↗</a></div></header>
+<main class="dshell"><div class="eyebrow">LOCAL ENGINE / CAPABILITY VERIFICATION</div><h1>Verify the<br><span style="color:#ff9ab5">machine.</span></h1>
+<p>Execute actual smoke checks for the offline file engines and inspect optional browser capabilities. This page does not upload your files, track you or replace a full cross-browser test suite. Optional unsupported APIs appear as warnings.</p>
+<div class="actionline"><button class="cta" id="diagRun">Run local checks ↗</button><button class="secondary" id="diagExport" disabled>Export report JSON</button></div>
+<div id="summary" role="status" aria-live="polite">Ready for a local check.</div><div id="checks" class="checks" aria-live="polite"></div>
+<p class="hint">Reports contain only capability test results, not personal files, uploaded media, system identifiers or credentials.</p></main>
+<footer><span>© 2026 Pedro Belentani · Engineering with verifiable limits</span><span>LOCAL / NO TELEMETRY</span></footer></body></html>
