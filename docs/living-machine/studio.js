@@ -94,6 +94,17 @@ $("#subtitleFile").addEventListener("change",async e=>{
   if(file.size>3000000){toast("#subtitleResult","Subtitle input exceeds 3MB.",true);return}
   $("#subtitleInput").value=await file.text();toast("#subtitleResult","Loaded "+file.name);
 });
+$("#captionDraft").addEventListener("click",()=>{
+ try{
+   const script=$("#subtitleInput").value;
+   if(script.includes("-->"))throw Error("This already looks like timed subtitles. Use the SRT/VTT converter instead.");
+   const wpm=Number($("#captionWpm").value),start=Number($("#captionStart").value);
+   const cues=Core.draftTimedCaptions(script,{wordsPerMinute:wpm,startMs:start*1000});
+   $("#subtitleInput").value=Core.subtitleExport(cues,"srt");
+   $("#subtitleShift").value="0";
+   toast("#subtitleResult",cues.length+" editable timed cues generated. Timings are estimates, not speech transcription; verify with your video.");
+ }catch(err){toast("#subtitleResult",err.message||"Unable to draft captions.",true)}
+});
 function produceCaptions(){
   const cues=Core.parseCaptions($("#subtitleInput").value);
   if(!cues.length)throw Error("No valid timed subtitle cues found.");
