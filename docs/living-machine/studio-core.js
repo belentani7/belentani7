@@ -30,6 +30,40 @@ function timeString(n,comma){n=Math.max(0,Math.round(n));const pad=(v,l=2)=>Stri
 function parseCaptions(text){const blocks=String(text).replace(/^\uFEFF/,"").replace(/\r/g,"").replace(/^WEBVTT[^\n]*\n?/,"").trim().split(/\n\s*\n/);const cues=[];for(const b of blocks){const lines=b.split("\n").map(s=>s.trim()).filter(Boolean),i=lines.findIndex(s=>s.includes("-->"));if(i<0)continue;const parts=lines[i].split(/\s*-->\s*/);if(parts.length!==2)throw Error("Bad cue");const start=timestamp(parts[0]),end=timestamp(parts[1].split(/\s+/)[0]);if(end<=start)throw Error("Caption must end after start");const body=lines.slice(i+1).join("\n");if(body)cues.push({start,end,body});}return cues;}
 function subtitleExport(cues,type){if(!["srt","vtt","txt"].includes(type))throw Error("Unsupported format");if(type==="txt")return cues.map(c=>c.body).join("\n");return(type==="vtt"?"WEBVTT\n\n":"")+cues.map((c,i)=>(type==="srt"?i+1+"\n":"")+timeString(c.start,type==="srt")+" --> "+timeString(c.end,type==="srt")+"\n"+c.body).join("\n\n")+"\n";}
 function offsetCaptions(cues,ms){if(!Number.isFinite(ms)||Math.abs(ms)>86400000)throw Error("Offset must be within 24 hours");return cues.map(c=>({start:Math.max(0,c.start+ms),end:Math.max(0,c.end+ms),body:c.body})).filter(c=>c.end>c.start);}
+/**
+ * Create editable subtitle timing from a written script (not transcription).
+ * Durations are estimated solely from reading speed; users must sync to media.
+ */
+function draftTimedCaptions(input,options={}){
+ const original=String(input||"").trim();
+ if(!original)throw Error("Paste a transcript or script first.");
+ if(original.length>35000)throw Error("Script limit is 35,000 characters.");
+ const wpm=Number(options.wordsPerMinute??165);
+ const start=Number(options.startMs??0);
+ const maxChars=Number(options.maxCharacters??68);
+ if(!Number.isFinite(wpm)||wpm<80||wpm>280)throw Error("Reading speed must be 80–280 words/minute.");
+ if(!Number.isFinite(start)||start<0||start>86400000)throw Error("Start time must be within 24 hours.");
+ if(!Number.isInteger(maxChars)||maxChars<28||maxChars>90)throw Error("Character limit must be 28–90.");
+ const words=original.replace(/\s+/g," ").trim().split(" ");
+ const groups=[];let current=[],length=0;
+ function flush(){if(current.length){groups.push(current.join(" "));current=[];length=0;}}
+ for(const word of words){
+   if(current.length && (length+1+word.length>maxChars||current.length>=12))flush();
+   current.push(word);length+=word.length+(current.length>1?1:0);
+   if(current.length>=3 && /[.!?…。！？]$/.test(word))flush();
+ }
+ flush();
+ if(groups.length>500)throw Error("Maximum 500 captions. Shorten the script.");
+ let cursor=Math.round(start);
+ return groups.map(body=>{
+   const count=(body.match(/\S+/g)||[]).length;
+   const duration=Math.round(Math.max(1250,Math.min(5200,count*60000/wpm+300)));
+   const entry={start:cursor,end:cursor+duration,body};
+   cursor=entry.end+100;
+   if(cursor>86400000)throw Error("Timed script exceeds 24 hours.");
+   return entry;
+ });
+}
 function csvEscape(v){let s=v==null?"":String(v);if(/^\s*[=+@]/.test(s)||/^\s*-(?!\d+([.,]\d+)?\s*$)/.test(s))s="'"+s;return/[",\r\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s;}
 function storyboardCSV(shots){return [["Shot","Seconds","Camera","Movement","Visual","Audio","Notes"],...shots.map((s,i)=>[i+1,s.seconds,s.camera,s.movement,s.visual,s.audio,s.notes])].map(r=>r.map(csvEscape).join(",")).join("\r\n");}
 function getTextMetrics(s){s=String(s||"");const words=(s.match(/\S+/g)||[]).length;return{characters:[...s].length,words,lines:s?s.split(/\r?\n/).length:0,paragraphs:s.trim()?s.trim().split(/\n\s*\n/).length:0,readingMinutes:Math.round(words/220*10)/10};}
@@ -40,5 +74,5 @@ function analyzeCV(input){
  const suggestions=[];if(wordCount<120)suggestions.push("Add specific outcomes and responsibilities.");if(wordCount>950)suggestions.push("Create a shorter version for quick review.");if(!email)suggestions.push("Make a professional contact method visible.");if(!sections.experience)suggestions.push("Use a clear professional experience heading.");if(!sections.skills)suggestions.push("Show relevant technologies and skills.");if(!sections.projects)suggestions.push("Consider adding verifiable project evidence.");if(!impact)suggestions.push("Use measurable results only when supported by evidence.");
  return{wordCount,characters:txt.length,sections,contact:{email,portfolioOrProfile:link},quantifiedImpact:impact,suggestions,disclaimer:"Heuristic readability analysis, not ATS certification or hiring prediction."};
 }
-return{utf8,safeFilename,escapeHTML,crc32,zipFiles,timestamp,timeString,parseCaptions,subtitleExport,offsetCaptions,csvEscape,storyboardCSV,getTextMetrics,analyzeCV};
+return{utf8,safeFilename,escapeHTML,crc32,zipFiles,timestamp,timeString,parseCaptions,subtitleExport,offsetCaptions,draftTimedCaptions,csvEscape,storyboardCSV,getTextMetrics,analyzeCV};
 });
