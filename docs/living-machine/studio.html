@@ -10,6 +10,8 @@
 <title>BELENTANI STUDIO / Free Browser Tools</title>
 <link rel="stylesheet" href="./studio.css">
 <script src="./studio-core.js" defer></script>
+<script src="./pdf-core.js" defer></script>
+<script src="./audio-core.js" defer></script>
 <script src="./studio.js" defer></script>
 </head>
 <body>
@@ -22,18 +24,20 @@
 </header>
 <div class="layout">
   <aside class="sidebar" aria-label="Herramientas">
-    <div class="menu-caption">APPLICATIONS / 01—05</div>
+    <div class="menu-caption">APPLICATIONS / 01—07</div>
     <nav class="nav" id="tabs" aria-label="Laboratory tools">
       <button data-tab="batch" class="chosen"><span>◩</span> Image batch converter <small>01</small></button>
       <button data-tab="subtitles"><span>≋</span> Subtitle time studio <small>02</small></button>
       <button data-tab="cv"><span>◈</span> CV clarity inspector <small>03</small></button>
       <button data-tab="storyboard"><span>◇</span> Storyboard architect <small>04</small></button>
       <button data-tab="palette"><span>◉</span> Image color sampler <small>05</small></button>
+      <button data-tab="pdf"><span>▤</span> Image → PDF composer <small>06</small></button>
+      <button data-tab="audio"><span>♫</span> Audio to WAV studio <small>07</small></button>
     </nav>
     <div class="sidebar-bottom"><span>NO ACCOUNT</span><span>NO FILE UPLOAD</span><span>NO BACKEND API</span><p>Built to demonstrate useful engineering in public, with explicit operating boundaries.</p><a href="https://belentani.es">belentani.es ↗</a></div>
   </aside>
   <main id="workspace" tabindex="-1">
-    <div class="masthead"><div class="eyebrow">UTILITY SURFACE / LOCAL FIRST</div><h1>Tools that<br><i>earn their place.</i></h1><p>Pixel-precise glass, practical software and honest limits. Your files stay in your browser. Each utility is designed as a self-contained operation, with no registration or third-party file service.</p><div class="meta"><span>5 REAL TOOLS</span><span>FILES PROCESSED LOCALLY</span><span>ES · EN · PT CONTEXT</span></div></div>
+    <div class="masthead"><div class="eyebrow">UTILITY SURFACE / LOCAL FIRST</div><h1>Tools that<br><i>earn their place.</i></h1><p>Pixel-precise glass, practical software and honest limits. Your files stay in your browser. Each utility is designed as a self-contained operation, with no registration or third-party file service.</p><div class="meta"><span>7 REAL TOOLS</span><span>FILES PROCESSED LOCALLY</span><span>ES · EN · PT CONTEXT</span></div></div>
 
     <section class="panel active" id="tab-batch" aria-labelledby="batchTitle">
       <div class="panel-head"><div><div class="eyebrow">01 / IMAGING</div><h2 id="batchTitle">Batch image converter</h2><p>Convert up to 20 local images into PNG, JPEG or WebP. Resize with aspect ratio preserved. Download individually or as a standards-compatible ZIP.</p></div><div class="mark">◩</div></div>
@@ -85,6 +89,24 @@
       <div class="actionline"><button class="cta" id="paletteGo">Extract palette ↗</button><button class="secondary" id="paletteExport">Export CSS</button></div>
       <div id="swatches" class="swatches" aria-live="polite"></div>
       <div id="paletteResult" class="result" role="status" aria-live="polite">Choose a local image to begin.</div>
+    </section>
+
+    <section class="panel" id="tab-pdf" aria-labelledby="pdfTitle" hidden>
+      <div class="panel-head"><div><div class="eyebrow">06 / DOCUMENT PROCESSING</div><h2 id="pdfTitle">Images into PDF</h2><p>Combine photographs and screenshots into an A4 PDF without sending them to a server. Every input is rasterized locally as JPEG, removing source metadata. One page per image, with aspect ratio preserved.</p></div><div class="mark">▤</div></div>
+      <label for="pdfFiles">Select 1–25 local images</label>
+      <input type="file" id="pdfFiles" accept="image/*" multiple>
+      <div class="formline"><div><label for="pdfQuality">JPEG fidelity</label><select id="pdfQuality"><option value=".92">High — 92%</option><option value=".80" selected>Balanced — 80%</option><option value=".65">Small — 65%</option></select></div><div><label for="pdfMargin">Page margins in points</label><select id="pdfMargin"><option value="0">Edge to edge</option><option value="24" selected>Standard</option><option value="48">Wide</option></select></div></div>
+      <div class="actionline"><button id="pdfGo" class="cta">Compose & download PDF ↗</button></div>
+      <div id="pdfResult" class="result" role="status" aria-live="polite">No images selected.</div>
+    </section>
+
+    <section class="panel" id="tab-audio" aria-labelledby="audioTitle" hidden>
+      <div class="panel-head"><div><div class="eyebrow">07 / AUDIO PROCESSING</div><h2 id="audioTitle">Audio to WAV</h2><p>Decode compatible local audio formats, inspect duration, peak and RMS, then export 16-bit mono or stereo PCM WAV. Decoding happens in the browser's Web Audio engine.</p></div><div class="mark">♫</div></div>
+      <label for="audioFile">Choose audio file</label><input id="audioFile" type="file" accept="audio/*">
+      <div class="formline"><div><label for="audioChannels">Channels</label><select id="audioChannels"><option value="original">Keep original (up to stereo)</option><option value="mono">Mix to mono</option></select></div><div><label for="audioNormalize">Volume processing</label><select id="audioNormalize"><option value="no">Keep original peaks</option><option value="yes">Peak normalize (up to 16×)</option></select></div></div>
+      <div class="image-preview"><canvas id="waveCanvas" width="760" height="170" role="img" aria-label="Waveform visual representation"></canvas></div>
+      <div class="actionline"><button id="audioGo" class="cta">Decode & download WAV ↗</button></div>
+      <div id="audioResult" class="result" role="status" aria-live="polite">No audio selected. Sample count is limited to protect your device.</div>
     </section>
 
     <section class="bottom-note"><div class="eyebrow">EVIDENCE / NOT EMPTY PROMISES</div><p>All implemented utilities use native browser APIs and a small, auditable JavaScript core. Results vary with supported codecs, memory limits and browser permissions. No social-platform restrictions are bypassed.</p><a href="https://github.com/belentani7/belentani7" target="_blank" rel="noopener noreferrer">Review the implementation ↗</a></section>
