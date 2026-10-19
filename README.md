@@ -49,7 +49,10 @@ The new companion experience is an **Aero-inspired browser desktop**, not a Micr
 | **Image → PDF composer** | Compose A4 PDF pages from local images with JPEG metadata removal, page-fitting and margins | Requires a browser with Canvas JPEG encoding; not OCR |
 | **Audio → WAV lab** | Decode compatible audio locally using Web Audio and generate 16-bit PCM WAV with waveform and gain controls | Browser codec compatibility and audio memory limits apply |
 
-The Studio is separated into `studio.html`, `studio.css`, `studio.js`, reusable/testable `studio-core.js`, `pdf-core.js`, `audio-core.js`, and the automated `studio.test.cjs` / `media.test.cjs` suites. Its page declares a strict **no-network Content Security Policy**. All image, CV, subtitle, color and export operations are executed locally within the browser.
+The Studio is separated into `studio.html`, `studio.css`, `studio.js`, reusable/testable `studio-core.js`, `pdf-core.js`, `audio-core.js`, `studio-i18n.js` and automated regression suites. The main navigation, tool explanations and core actions have hand-written **English, Spanish and Brazilian Portuguese** translations. Its page declares a strict **no-network Content Security Policy**. All image, CV, subtitle, color and export operations are executed locally within the browser.
+
+An installable offline app shell (`manifest.webmanifest` + `sw.js`) caches only allowlisted static application files and refreshes them when connectivity returns; it does not cache files visitors select or generate. Installation requires HTTPS or a supported localhost environment. **An installable implementation is not a claim of an existing public deployment.**
+
 
 If you own media to be transcribed or downloaded, use its original export or an authorized source. The studio does not claim to bypass copyright, DRM, login walls or social networks' download restrictions.
 
@@ -81,10 +84,10 @@ Open http://localhost:8000 in a modern browser. The local utility functions do n
 **Run the included quality checks:**
 
 ~~~bash
-node --test docs/living-machine/quality.test.cjs docs/living-machine/studio.test.cjs docs/living-machine/media.test.cjs
+node --test docs/living-machine/*.test.cjs
 ~~~
 
-The targeted GitHub Actions workflow is in .github/workflows/living-machine-ci.yml. Checks cover JavaScript syntax, caption round trips, ZIP structure and CRC-32, PDF cross-reference and page-tree integrity, WAV PCM format, CSV export safety, offline behavior, CV heuristics, accessibility markers and source references.
+The targeted GitHub Actions workflow is in .github/workflows/living-machine-ci.yml. The suite covers JavaScript syntax, captions, CSV safety, ZIP structure/CRC-32, PDF cross-references, WAV PCM, three-language localization, static-only offline caching, interface markers and project references. In an independent Node.js runtime it passed **25 of 25 automated tests**. PDF images, WAV audio and ZIP archives have additionally been read using independent software. Browser-specific codecs and end-to-end UI behavior still require real browser testing.
 
 > GitHub profiles render Markdown and images, not embedded JavaScript applications. The HTML must run on a website or a local server. SVG animation may vary by GitHub client; meaningful text also remains readable when motion is unavailable.
 
