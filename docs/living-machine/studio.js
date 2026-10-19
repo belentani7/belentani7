@@ -291,4 +291,22 @@ $("#audioGo").addEventListener("click",async()=>{
   finally{button.disabled=false;if(context)context.close().catch(()=>{});}
 });
 
+/* 08 VIDEO CONTACT SHEET — source stays in browser */
+$("#videoSheetGo").addEventListener("click",async()=>{
+ const file=$("#videoSheetFile").files[0],button=$("#videoSheetGo");
+ if(!file){toast("#videoSheetResult","Choose a video file first.",true);return}
+ if(!window.VideoSheet?.generateContactSheet){toast("#videoSheetResult","Video engine is unavailable.",true);return}
+ button.disabled=true;
+ try{
+   const count=Number($("#videoSheetCount").value);
+   const result=await window.VideoSheet.generateContactSheet(file,{
+     count,
+     onProgress:(n,total)=>toast("#videoSheetResult","Extracting local frame "+n+" of "+total+"…")
+   });
+   saveBlob(result.blob,Core.safeFilename(file.name.replace(/\.[^.]+$/,""))+"-contact-sheet.png");
+   toast("#videoSheetResult",result.frames+" frames exported · "+result.width+"×"+result.height+" px · "+fmtBytes(result.blob.size)+". No media uploaded.");
+ }catch(error){toast("#videoSheetResult",error.message||"Cannot decode or sample this local video.",true);}
+ finally{button.disabled=false;}
+});
+
 })();
