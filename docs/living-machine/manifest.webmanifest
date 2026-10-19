@@ -5,7 +5,7 @@
   "start_url": "./studio.html",
   "scope": "./",
   "display": "standalone",
-  "description": "A privacy-first browser utility studio for images, captions, CVs, audio, PDF and creative production.",
+  "description": "A privacy-first browser studio for images, captions, CVs, audio, PDFs, video contact sheets and creative production.",
   "theme_color": "#ff244c",
   "background_color": "#050407",
   "lang": "en",
