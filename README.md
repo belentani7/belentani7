@@ -57,6 +57,10 @@ An installable offline app shell (`manifest.webmanifest` + `sw.js`) caches only 
 
 If you own media to be transcribed or downloaded, use its original export or an authorized source. The studio does not claim to bypass copyright, DRM, login walls or social networks' download restrictions.
 
+### Check your browser — local diagnostics
+
+**[Run the diagnostic page from a local server](./docs/living-machine/diagnostics.html)** to verify the local ZIP, PDF, WAV and subtitle engines, available image encoders, Web Audio, Web Crypto and offline-app support. The page reports optional browser features separately, can export a JSON report, and sends no diagnostic data to an external service. It does not replace live end-to-end testing or a green GitHub Actions run.
+
 ### Real tools inside the machine
 
 | Tool | Working functionality | Explicit boundary |
