@@ -60,3 +60,12 @@ footer{border-top:1px solid #ffffff21;padding:22px 4vw;display:flex;justify-cont
 .nav button span[data-i18n]{font:inherit;min-width:0;color:inherit;flex:1}
 .lang-select{width:64px;min-width:64px;font:11px Consolas,monospace;padding:7px 9px;border-radius:11px;border:1px solid #ffbcd14a;background:#160b14;color:#ffe7ef}
 @media(max-width:540px){.lang-select{width:52px;min-width:52px;padding:7px}}
+
+/* Caption drafting: subtle raised glass controls without hiding workspaces. */
+.caption-generator{margin-top:22px;padding:22px;border:1px solid #ffd9e34a;border-radius:18px;background:linear-gradient(135deg,#ffffff16,#ff244c0c);box-shadow:inset 0 1px #ffffff24}
+.caption-generator .eyebrow{color:#ffd0dc}
+.caption-generator .hint{font-size:12px;color:#c7b2bf;line-height:1.8;margin:10px 0}
+.caption-generator button{margin-top:12px}
+#tab-video input[type=file]{margin-bottom:12px}
+#tab-video .result{font-size:12px}
+@media(max-width:660px){.caption-generator{padding:15px}}
