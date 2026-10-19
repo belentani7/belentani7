@@ -199,4 +199,82 @@ $("#paletteExport").addEventListener("click",()=>{
   const content="/* BELENTANI image palette, locally sampled */\n:root {\n"+palette.map((hex,i)=>"  --palette-"+(i+1)+": "+hex+";").join("\n")+"\n}\n";
   saveText(content,"belentani-palette.css","text/css");toast("#paletteResult","CSS variables exported.");
 });
+/* 06 IMAGE TO PDF — portable A4 PDF with JPEG XObjects */
+$("#pdfGo").addEventListener("click",async()=>{
+  const button=$("#pdfGo"),files=Array.from($("#pdfFiles").files||[]);
+  if(!files.length){toast("#pdfResult","Choose one or more images.",true);return;}
+  if(files.length>25||files.some(f=>f.size>20*1048576)||files.reduce((sum,f)=>sum+f.size,0)>100*1048576){toast("#pdfResult","Limits: 25 images, 20MB per file, 100MB combined.",true);return;}
+  button.disabled=true;
+  try{
+    if(!window.PDFCore?.imagePDF)throw Error("Local PDF engine is missing.");
+    const inputs=[],quality=Number($("#pdfQuality").value);
+    for(let i=0;i<files.length;i++){
+      const file=files[i];toast("#pdfResult","Reading page "+(i+1)+" of "+files.length+"…");
+      const bitmap=await createImageBitmap(file);
+      try{
+        const scale=Math.min(1,Math.sqrt(16000000/(bitmap.width*bitmap.height)),8000/Math.max(bitmap.width,bitmap.height));
+        const width=Math.max(1,Math.floor(bitmap.width*scale)),height=Math.max(1,Math.floor(bitmap.height*scale));
+        const canvas=document.createElement("canvas");canvas.width=width;canvas.height=height;
+        const ctx=canvas.getContext("2d");if(!ctx)throw Error("2D canvas unavailable.");
+        ctx.fillStyle="#fff";ctx.fillRect(0,0,width,height);ctx.drawImage(bitmap,0,0,width,height);
+        const jpg=await new Promise(resolve=>canvas.toBlob(resolve,"image/jpeg",quality));
+        if(!jpg||jpg.type!=="image/jpeg")throw Error("This browser cannot encode JPEG.");
+        inputs.push({width,height,data:new Uint8Array(await jpg.arrayBuffer())});
+        canvas.width=0;canvas.height=0;
+      }finally{bitmap.close();}
+    }
+    const pdf=window.PDFCore.imagePDF(inputs,{margin:Number($("#pdfMargin").value)});
+    saveBlob(pdf,"belentani-image-collection.pdf");
+    toast("#pdfResult","PDF generated: "+inputs.length+" page(s), "+fmtBytes(pdf.size)+". Local processing, no server upload.");
+  }catch(err){toast("#pdfResult",err.message||"PDF export failed.",true);}
+  finally{button.disabled=false;}
+});
+
+/* 07 AUDIO TO WAV — WebAudio decode, locally generated 16-bit WAV */
+$("#audioGo").addEventListener("click",async()=>{
+  const file=$("#audioFile").files[0],button=$("#audioGo");
+  if(!file){toast("#audioResult","Choose a local audio file.",true);return;}
+  if(file.size>60*1048576){toast("#audioResult","Audio input must be under 60MB.",true);return;}
+  if(!window.AudioCore?.wavFromChannels){toast("#audioResult","Audio engine missing.",true);return;}
+  if(!window.AudioContext&&!window.webkitAudioContext){toast("#audioResult","Web Audio is not supported in this browser.",true);return;}
+  button.disabled=true;let context;
+  try{
+    const AudioEngine=window.AudioContext||window.webkitAudioContext;
+    context=new AudioEngine();
+    toast("#audioResult","Decoding source locally…");
+    const buffer=await context.decodeAudioData(await file.arrayBuffer());
+    const len=buffer.length;
+    if(!len||len>12000000)throw Error("Audio duration exceeds the available WAV memory budget.");
+    const input=Array.from({length:buffer.numberOfChannels},(_,i)=>buffer.getChannelData(i));
+    if(!input.length)throw Error("No audio channels detected.");
+    let channels;
+    if($("#audioChannels").value==="mono"){
+      const mixed=new Float32Array(len);
+      for(const ch of input)for(let i=0;i<len;i++)mixed[i]+=ch[i]/input.length;
+      channels=[mixed];
+    }else{
+      channels=input.slice(0,2);
+      if(buffer.numberOfChannels>2)toast("#audioResult","Multichannel source: only first two channels used.");
+    }
+    const stats=window.AudioCore.channelSummary(channels,buffer.sampleRate);
+    const canvas=$("#waveCanvas"),ctx=canvas.getContext("2d");
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.fillStyle="#09060c";ctx.fillRect(0,0,canvas.width,canvas.height);
+    ctx.strokeStyle="#ff729b";ctx.lineWidth=1;ctx.beginPath();
+    const data=channels[0],mid=canvas.height/2,width=canvas.width;
+    for(let x=0;x<width;x++){
+      const start=Math.floor(x*len/width),end=Math.min(len,Math.ceil((x+1)*len/width));
+      let lo=0,hi=0;
+      for(let j=start;j<end;j++){lo=Math.min(lo,data[j]);hi=Math.max(hi,data[j]);}
+      ctx.moveTo(x,mid-lo*mid*.84);ctx.lineTo(x,mid-hi*mid*.84);
+    }
+    ctx.stroke();
+    toast("#audioResult","Encoding 16-bit PCM WAV locally…");
+    const result=window.AudioCore.wavFromChannels(channels,buffer.sampleRate,$("#audioNormalize").value==="yes");
+    saveBlob(result,Core.safeFilename(file.name.replace(/\.[^.]+$/,""))+"-belentani.wav");
+    toast("#audioResult","Saved WAV • "+stats.duration.toFixed(1)+"s • "+channels.length+" channel(s) • "+buffer.sampleRate+"Hz • peak "+stats.peak.toFixed(3)+" • RMS "+stats.rms.toFixed(3));
+  }catch(err){toast("#audioResult",err.message||"Audio conversion failed.",true);}
+  finally{button.disabled=false;if(context)context.close().catch(()=>{});}
+});
+
 })();
