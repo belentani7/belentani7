@@ -25,7 +25,7 @@ jobs:
         with:
           node-version: '22'
       - name: Test browser utilities, accessibility markers and source integrity
-        run: node --test docs/living-machine/quality.test.cjs docs/living-machine/studio.test.cjs docs/living-machine/media.test.cjs docs/living-machine/i18n.test.cjs
+        run: node --test docs/living-machine/quality.test.cjs docs/living-machine/studio.test.cjs docs/living-machine/media.test.cjs docs/living-machine/i18n.test.cjs docs/living-machine/offline.test.cjs
       - name: Validate source size and syntax
         run: |
           node --check docs/living-machine/quality.test.cjs
