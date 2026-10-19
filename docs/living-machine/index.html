@@ -461,7 +461,12 @@ footer{padding:100px 0 0;color:#9aaac1;font-size:12px;display:flex;justify-conte
           const ready=mediaEvent("loadedmetadata");vid.load();await ready;
         }
         const second=Math.max(0,Math.min(Math.max(0,vid.duration-.05),Number($("#frameTime",win).value)||0));
-        if(Math.abs(vid.currentTime-second)>.04 || vid.readyState<2){
+        if(vid.readyState<2){
+          const loaded=mediaEvent("loadeddata");
+          vid.load();
+          await loaded;
+        }
+        if(Math.abs(vid.currentTime-second)>.04){
           const ready=mediaEvent("seeked");
           vid.currentTime=second;
           await ready;
@@ -503,7 +508,7 @@ footer{padding:100px 0 0;color:#9aaac1;font-size:12px;display:flex;justify-conte
     if(!rows.length)return [];
     const fields=rows.shift();return rows.filter(r=>r.some(s=>s!=="")).map(r=>Object.fromEntries(fields.map((f,i)=>[f,r[i]||""])));
   }
-  function csvCell(value){let v=value==null?"":typeof value==="object"?JSON.stringify(value):String(value);if(/^[=+@]/.test(v)||/^-[=+@]/.test(v))v="\u0027"+v;return /[",\n\r]/.test(v)?'"'+v.replaceAll('"','""')+'"':v}
+  function csvCell(value){let v=value==null?"":typeof value==="object"?JSON.stringify(value):String(value);if(/^\s*[=+@]/.test(v)||/^\s*-(?!\d+([.,]\d+)?\s*$)/.test(v))v="\u0027"+v;return /[",\n\r]/.test(v)?'"'+v.replaceAll('"','""')+'"':v}
   function toCSV(records){
     if(!Array.isArray(records)||!records.every(r=>r&&typeof r==="object"&&!Array.isArray(r)))throw Error("Supply a JSON array of objects.");
     const headers=[...new Set(records.flatMap(Object.keys))];return [headers.map(csvCell).join(","),...records.map(r=>headers.map(k=>csvCell(r[k])).join(","))].join("\n");
