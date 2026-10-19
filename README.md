@@ -35,21 +35,22 @@ I approach a product through several complementary lenses.
 
 The new companion experience is an **Aero-inspired browser desktop**, not a Microsoft Windows Vista installation or virtual machine. It includes multiple draggable glass windows, a taskbar, Start menu, safe narrative terminal, code rain and local-first utilities.
 
-### Production Studio / seven working tools
+### Production Studio / eight working tools
 
 **[Open the professional Studio source](./docs/living-machine/studio.html)** — a separate, responsive, modular utility workspace integrated with the original Living Machine. It uses no external runtime packages, analytics scripts, paid APIs or remote file processing.
 
 | Studio | Implemented behavior | Limit |
 |:--|:--|:--|
 | **Batch image converter** | Convert up to 20 browser-readable images to JPEG, PNG or WebP and export a standards-compatible ZIP | Image decoding and encoding depend on the browser; 100 MB total input limit |
-| **Subtitle time studio** | SRT/VTT time-shifting, format conversion and plain transcript export | Needs existing subtitles, not automatic speech transcription |
+| **Subtitle time studio** | SRT/VTT time-shifting, format conversion, export to TXT and script-to-SRT drafting | Script-generated timing is an estimate that must be checked against the recording; not automatic transcription |
 | **CV clarity inspector** | Local structural checks for professional communication, sections and verifiable evidence | Heuristic review, deliberately **no fictitious ATS score** |
 | **Storyboard architect** | Plan editable camera shots, durations, movement, sound, export CSV or JSON | A planning utility, not a rendered video |
 | **Image color sampler** | Extract approximate dominant swatches from a local image and export reusable CSS variables | Not calibrated colorimetry |
 | **Image → PDF composer** | Compose A4 PDF pages from local images with JPEG metadata removal, page-fitting and margins | Requires a browser with Canvas JPEG encoding; not OCR |
 | **Audio → WAV lab** | Decode compatible audio locally using Web Audio and generate 16-bit PCM WAV with waveform and gain controls | Browser codec compatibility and audio memory limits apply |
+| **Video contact sheet** | Create a PNG contact sheet with 4, 9 or 16 timestamped frames from local video files | Decoding depends on browser codecs; does not fetch social media videos |
 
-The Studio is separated into `studio.html`, `studio.css`, `studio.js`, reusable/testable `studio-core.js`, `pdf-core.js`, `audio-core.js`, `studio-i18n.js` and automated regression suites. The main navigation, tool explanations and core actions have hand-written **English, Spanish and Brazilian Portuguese** translations. Its page declares a strict **no-network Content Security Policy**. All image, CV, subtitle, color and export operations are executed locally within the browser.
+The Studio is separated into `studio.html`, `studio.css`, `studio.js`, reusable/testable `studio-core.js`, `pdf-core.js`, `audio-core.js`, `video-sheet.js`, `studio-i18n.js` and automated regression suites. The main navigation, tool explanations and core actions have hand-written **English, Spanish and Brazilian Portuguese** translations. Its page declares a strict **no-network Content Security Policy**. All image, CV, subtitle, color and export operations are executed locally within the browser.
 
 An installable offline app shell (`manifest.webmanifest` + `sw.js`) caches only allowlisted static application files and refreshes them when connectivity returns; it does not cache files visitors select or generate. Installation requires HTTPS or a supported localhost environment. **An installable implementation is not a claim of an existing public deployment.**
 
@@ -87,7 +88,7 @@ Open http://localhost:8000 in a modern browser. The local utility functions do n
 node --test docs/living-machine/*.test.cjs
 ~~~
 
-The targeted GitHub Actions workflow is in .github/workflows/living-machine-ci.yml. The suite covers JavaScript syntax, captions, CSV safety, ZIP structure/CRC-32, PDF cross-references, WAV PCM, three-language localization, static-only offline caching, interface markers and project references. In an independent Node.js runtime it passed **25 of 25 automated tests**. PDF images, WAV audio and ZIP archives have additionally been read using independent software. Browser-specific codecs and end-to-end UI behavior still require real browser testing.
+The targeted GitHub Actions workflow is in .github/workflows/living-machine-ci.yml. The suite covers JavaScript syntax, captions, CSV safety, ZIP structure/CRC-32, PDF cross-references, WAV PCM, video frame timing, three-language localization, static-only offline caching, interface markers and project references. The earlier independent Node.js validation passed **25 of 25 tests**; the expanded caption/video suite requires a fresh complete run before reporting a new total. PDF images, WAV audio and ZIP archives have additionally been read using independent software. Browser-specific codecs and end-to-end UI behavior still require real browser testing.
 
 > GitHub profiles render Markdown and images, not embedded JavaScript applications. The HTML must run on a website or a local server. SVG animation may vary by GitHub client; meaningful text also remains readable when motion is unavailable.
 
