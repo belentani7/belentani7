@@ -7,7 +7,7 @@
 
 *Barcelona metro · Brazilian perspective · ES / PT-BR / EN*
 
-[**Professional portfolio**](https://belentani.es) · [**Living Machine — source**](./docs/living-machine/index.html) · [**Projects**](#selected-work) · [**Contact**](mailto:belentani7pedro@gmail.com)
+[**Professional portfolio**](https://belentani.es) · [**Living Machine**](./docs/living-machine/index.html) · [**Useful Studio**](./docs/living-machine/studio.html) · [**Projects**](#selected-work) · [**Contact**](mailto:belentani7pedro@gmail.com)
 
 </div>
 
@@ -34,6 +34,22 @@ I approach a product through several complementary lenses.
 <img src="./assets/terminal-header.svg" width="100%" alt="Code rain on a neon red command terminal">
 
 The new companion experience is an **Aero-inspired browser desktop**, not a Microsoft Windows Vista installation or virtual machine. It includes multiple draggable glass windows, a taskbar, Start menu, safe narrative terminal, code rain and local-first utilities.
+
+### Production Studio / five working tools
+
+**[Open the professional Studio source](./docs/living-machine/studio.html)** — a separate, responsive, modular utility workspace integrated with the original Living Machine. It uses no external runtime packages, analytics scripts, paid APIs or remote file processing.
+
+| Studio | Implemented behavior | Limit |
+|:--|:--|:--|
+| **Batch image converter** | Convert up to 20 browser-readable images to JPEG, PNG or WebP and export a standards-compatible ZIP | Image decoding and encoding depend on the browser; 100 MB total input limit |
+| **Subtitle time studio** | SRT/VTT time-shifting, format conversion and plain transcript export | Needs existing subtitles, not automatic speech transcription |
+| **CV clarity inspector** | Local structural checks for professional communication, sections and verifiable evidence | Heuristic review, deliberately **no fictitious ATS score** |
+| **Storyboard architect** | Plan editable camera shots, durations, movement, sound, export CSV or JSON | A planning utility, not a rendered video |
+| **Image color sampler** | Extract approximate dominant swatches from an uploaded local image and export reusable CSS variables | Not calibrated colorimetry |
+
+The Studio is separated into `studio.html`, `studio.css`, `studio.js`, a reusable/testable `studio-core.js` and automated `studio.test.cjs`. Its page declares a strict **no-network Content Security Policy**. All image, CV, subtitle, color and export operations are executed locally within the browser.
+
+If you own media to be transcribed or downloaded, use its original export or an authorized source. The studio does not claim to bypass copyright, DRM, login walls or social networks' download restrictions.
 
 ### Real tools inside the machine
 
@@ -63,10 +79,10 @@ Open http://localhost:8000 in a modern browser. The local utility functions do n
 **Run the included quality checks:**
 
 ~~~bash
-node --test docs/living-machine/quality.test.cjs
+node --test docs/living-machine/quality.test.cjs docs/living-machine/studio.test.cjs
 ~~~
 
-The targeted GitHub Actions workflow is in .github/workflows/living-machine-ci.yml. The checks cover JavaScript syntax, subtitle round trips, CSV parsing and formula safety, README references and interface structure.
+The targeted GitHub Actions workflow is in .github/workflows/living-machine-ci.yml. Checks cover JavaScript syntax, caption round trips, image ZIP structure and CRC-32, CSV export safety, offline behavior, CV heuristics, accessibility markers and source references.
 
 > GitHub profiles render Markdown and images, not embedded JavaScript applications. The HTML must run on a website or a local server. SVG animation may vary by GitHub client; meaningful text also remains readable when motion is unavailable.
 
