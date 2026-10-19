@@ -135,6 +135,16 @@ fieldset{border:0;margin:0;padding:0}
 .a11y-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .toast{position:fixed;z-index:99;right:22px;bottom:94px;border:1px solid #a9c8ff52;background:#101a2aea;box-shadow:var(--shadow);color:#eef5ff;border-radius:12px;padding:13px 16px;font-size:12px;max-width:300px}
 footer{padding:100px 0 0;color:#9aaac1;font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.vistascreen{position:relative;min-height:280px;border:1px solid #c8e8ff77;border-radius:19px;overflow:hidden;background:radial-gradient(ellipse at 65% 15%,#b5d8e65f,transparent 42%),linear-gradient(138deg,#162847,#11142a 49%,#00050e);box-shadow:inset 0 2px #ffffff33,0 14px 50px #0008}
+.vistascreen:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(128deg,transparent 10%,#fff1 26%,transparent 36%,transparent 60%,#fff1 72%,transparent 83%);filter:blur(18px)}
+.vista-top{position:relative;display:flex;justify-content:space-between;gap:12px;padding:12px;color:#e3f4ff;font:10px Consolas,monospace;border-bottom:1px solid #fff3;background:#ffffff13}
+.vista-icons{position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;width:min(450px,90%);padding:25px 18px 65px}
+.vista-icons button{text-align:left;border:1px solid #ffffff22;background:#ffffff10;border-radius:12px;padding:12px;color:#f2f8ff;font-size:12px}
+.vista-icons button:hover{background:#ffffff2b}
+.vista-icons button span{display:block;font-size:30px;color:#c8e8ff;margin-bottom:8px}
+.vista-bottom{position:absolute;left:0;bottom:0;right:0;display:flex;align-items:center;gap:12px;height:48px;padding:5px 13px;background:linear-gradient(#eaf6ff2e,#060b19dc);backdrop-filter:blur(16px);border-top:1px solid #fff5;font:11px Consolas,monospace}
+.vista-bottom span:last-child{margin-left:auto}.vista-orb{display:grid;place-items:center;border-radius:50%;width:34px;height:34px;background:radial-gradient(circle at 27% 22%,#e6f7ff,#6ea0c8,#173657);box-shadow:inset 0 1px #fff,0 0 10px #dff}
+.iris{transform:translate3d(var(--eye-x,0px),var(--eye-y,0px),0);transition:transform .4s ease-out}
 .lowmotion *, .lowmotion *:before,.lowmotion *:after{animation:none!important;transition:none!important}
 @media(max-width:900px){.hero{grid-template-columns:1fr}.visual{min-height:250px}.iris{width:160px}.orbit{width:210px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.workspace{grid-template-columns:1fr}.statusline{margin-top:35px}}
 @media(max-width:530px){h1{font-size:60px}.visual{display:none}.topmeta{display:none}.cards{grid-template-columns:1fr}.card{min-height:144px}.card .symbol{margin-bottom:14px}.sectionhead{display:block}.window{left:3%!important;top:10%!important;width:94%!important;min-width:0;max-height:76vh}#dock .dockname{display:none}#dock{justify-content:center}#dock button{min-width:34px}#dock .separator{margin:0}#clock{min-width:62px}}
@@ -177,6 +187,8 @@ footer{padding:100px 0 0;color:#9aaac1;font-size:12px;display:flex;justify-conte
     <button class="card" data-open="links"><div class="symbol">↗</div><strong>Reel research</strong><small>Organize public post references and context without bypassing platform restrictions.</small></button>
     <button class="card" data-open="notepad"><div class="symbol">▤</div><strong>Private notebook</strong><small>Write locally, export as TXT, return to your notes without signing in.</small></button>
     <button class="card" data-open="terminal"><div class="symbol">$_</div><strong>Command terminal</strong><small>A safe, local command simulation for exploring the professional ecosystem.</small></button>
+    <a class="card" href="./studio.html#pdf"><div class="symbol">▤</div><strong>Image to PDF</strong><small>Turn screenshots and photos into a paginated, locally composed PDF.</small></a>
+    <a class="card" href="./studio.html#audio"><div class="symbol">♫</div><strong>Audio to WAV</strong><small>Inspect, visualize and convert compatible audio on your own device.</small></a>
     <button class="card" data-open="system"><div class="symbol">✧</div><strong>Aero desktop</strong><small>Draggable glass windows, taskbar, start menu, settings and hidden commands.</small></button>
   </div>
   <div class="sectionhead" id="profile"><h2>Across disciplines.<br>One design language.</h2><p>A professional profile built around the systems, domains and constraints that make the work useful.</p></div>
@@ -222,7 +234,7 @@ footer{padding:100px 0 0;color:#9aaac1;font-size:12px;display:flex;justify-conte
     ["captions","Caption studio","≋"],["media","Media lab","◉"],
     ["data","Data workbench","{ }"],["links","Reel research","↗"],
     ["notepad","Private notebook","▤"],["terminal","Command terminal","$_"],
-    ["system","System settings","✧"]
+    ["system","System settings","✧"],["vista","Aero nostalgia","⊞"]
   ];
   const PROJECTS = [
     ["Belentani.cv-ai","CV generation, guardrails and practical AI tools","AI · PRODUCT","https://github.com/belentani7/Belentani.cv-ai"],
@@ -287,6 +299,7 @@ footer{padding:100px 0 0;color:#9aaac1;font-size:12px;display:flex;justify-conte
     case "links":return '<div class="mini">RESEARCH / RIGHTS-AWARE TOOL</div><h3>Reel & reference research</h3><p>Collect publicly available post references and create a small research note you can export. This tool does not bypass DRM, authentication, creator permissions or social-platform restrictions.</p><label for="reelLink">Public post URL</label><input id="reelLink" type="url" placeholder="https://www.instagram.com/reel/..."><label for="reelNotes">Context, creative analysis, transcript notes</label><textarea id="reelNotes" placeholder="Visual language, references, timing, editing notes..."></textarea><div class="fieldrow"><button class="btn small" id="reelSave">Save research note</button><button class="btn small" id="reelOpen">Open original post ↗</button></div><div class="result" id="reelResult">For media reuse, use original files or creator-authorized exports.</div>';
     case "notepad":return '<div class="mini">PRIVATE / LOCAL STORAGE</div><h3>Notepad</h3><p>Private scratchpad. Stored in this browser only; browser cleanup can erase it. Export important material.</p><label for="memo">Your note</label><textarea id="memo" style="min-height:220px" placeholder="Start writing..."></textarea><div class="fieldrow"><button class="btn small" id="saveMemo">Save locally</button><button class="btn small" id="exportMemo">Export .txt</button><button class="btn small" id="clearMemo">Clear editor</button></div><div class="result" id="memoResult">No account or remote storage.</div>';
     case "terminal":return '<div class="mini">BROWSER SHELL / READ-ONLY SIMULATOR</div><h3>Belentani terminal</h3><div class="terminal" id="console" role="log" aria-live="polite"></div><label for="terminalInput">Command — help / whoami / stack / projects / tools / ethics / date / clear / vista / contact</label><input class="code" id="terminalInput" type="text" autocomplete="off" spellcheck="false" placeholder="Type help then Enter"><p class="micro">A narrative terminal. Commands are interpreted locally and never executed on your operating system.</p>';
+    case "vista":return '<div class="mini">EASTER EGG / VISTA INSPIRED</div><h3>Aero nostalgia</h3><p>A tribute to the glass interfaces of the 2000s, built with CSS and accessible HTML. This is not a Microsoft Windows product or emulator.</p><div class="vistascreen"><div class="vista-top"><span>◉ BELENTANI COMPUTER</span><span>DEMO / 2007 → 2026</span></div><div class="vista-icons"><button data-launch="welcome"><span>⌂</span> My computer</button><button data-launch="notepad"><span>▤</span> Documents</button><button data-launch="converter"><span>◩</span> Pictures</button><button data-launch="terminal"><span>$_</span> Command prompt</button></div><div class="vista-bottom"><span class="vista-orb">◈</span><span>Belentani Aero Desktop</span><span>○ ◇ ▣</span></div></div><div class="linkrow"><a class="btn small" href="./studio.html">Open seven real utilities ↗</a><button class="btn small" data-launch="system">System options</button></div>';
     case "system":return '<div class="mini">AERO / HUMAN-CENTERED SETTINGS</div><h3>Living machine preferences</h3><p>Customize this local interface. System-like visuals are artistic simulation — not an operating system, emulator or actual Windows Vista.</p><label><input type="checkbox" id="motionToggle" style="width:auto;margin-right:10px" checked>Ambient animation and code rain</label><label><input type="checkbox" id="rainToggle" style="width:auto;margin-right:10px" checked>Matrix-style code rain</label><div class="timeline"><p>Processing: local Canvas, Web APIs and browser storage.</p><p>Data sent to this website: none by these utility operations.</p><p>Accessibility: keyboard-operated windows; system reduced-motion setting respected.</p><p>Copyright: independent Aero-inspired concept, not affiliated with Microsoft.</p></div><button class="btn small" id="openAbout">Professional profile</button>';
     default:return "<h3>Application not found.</h3>";
     }
@@ -586,6 +599,7 @@ footer{padding:100px 0 0;color:#9aaac1;font-size:12px;display:flex;justify-conte
       if(!cmd)return;print("B:\\\\> "+cmd);
       if(cmd==="clear"){term.textContent="";return}
       if(cmd==="date")print(new Date().toString());
+      if(cmd==="vista")openApp("vista");
       else print(outputs[cmd]||"Unknown command. Type help.");
     });
   }
@@ -625,6 +639,16 @@ footer{padding:100px 0 0;color:#9aaac1;font-size:12px;display:flex;justify-conte
     });
   }
   requestAnimationFrame(drawRain);
+  let eyeTick=0;
+  document.addEventListener("pointermove",event=>{
+    if(!motion||reduce.matches||eyeTick)return;
+    const x=((event.clientX/innerWidth)-.5)*18,y=((event.clientY/innerHeight)-.5)*15;
+    eyeTick=requestAnimationFrame(()=>{
+      const iris=document.querySelector(".iris");
+      if(iris){iris.style.setProperty("--eye-x",x.toFixed(2)+"px");iris.style.setProperty("--eye-y",y.toFixed(2)+"px")}
+      eyeTick=0;
+    });
+  },{passive:true});
   if(getStored("intro")==="")setStored("intro","seen");
   window.BELENTANI={openApp,version:"1.0",tools:APPS.map(a=>a[0])};
   // Accessibility: avoid motion when OS requests reduced animations.
