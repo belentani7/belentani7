@@ -35,6 +35,8 @@ test("service worker intercepts only same-origin GET and does not cache user fil
  assert.equal(intercept("https://elsewhere.test/apps/living-machine/studio.html"),undefined);
  assert.equal(intercept("https://example.test/outside/studio.html"),undefined);
  assert.equal(intercept("https://example.test/apps/living-machine/private","POST"),undefined);
- assert.doesNotMatch(sw,/caches\.put\s*\(/);
+ assert.match(sw,/ASSET_PATHS\.has\(url\.pathname\)/);
+ assert.match(sw,/cache\.put\(req,res\.clone\(\)\)/);
+ assert.doesNotMatch(sw,/event\.request\.body/);
  assert.doesNotMatch(sw,/indexedDB|localStorage/);
 });
