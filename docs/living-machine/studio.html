@@ -16,6 +16,7 @@
 <script src="./audio-core.js" defer></script>
 <script src="./studio.js" defer></script>
 <script src="./studio-i18n.js" defer></script>
+<script src="./video-sheet.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#workspace">Ir al contenido</a>
@@ -27,7 +28,7 @@
 </header>
 <div class="layout">
   <aside class="sidebar" aria-label="Herramientas">
-    <div class="menu-caption" data-i18n="apps">APPLICATIONS / 01—07</div>
+    <div class="menu-caption" data-i18n="apps">APPLICATIONS / 01—08</div>
     <nav class="nav" id="tabs" aria-label="Laboratory tools">
       <button data-tab="batch" class="chosen"><span>◩</span> <span data-i18n="navBatch">Image batch converter</span> <small>01</small></button>
       <button data-tab="subtitles"><span>≋</span> <span data-i18n="navSubtitles">Subtitle time studio</span> <small>02</small></button>
@@ -36,11 +37,12 @@
       <button data-tab="palette"><span>◉</span> <span data-i18n="navPalette">Image color sampler</span> <small>05</small></button>
       <button data-tab="pdf"><span>▤</span> <span data-i18n="navPDF">Image → PDF composer</span> <small>06</small></button>
       <button data-tab="audio"><span>♫</span> <span data-i18n="navAudio">Audio to WAV studio</span> <small>07</small></button>
+      <button data-tab="video"><span>▦</span> <span data-i18n="navVideo">Video contact sheet</span> <small>08</small></button>
     </nav>
     <div class="sidebar-bottom"><span>NO ACCOUNT</span><span>NO FILE UPLOAD</span><span>NO BACKEND API</span><p>Built to demonstrate useful engineering in public, with explicit operating boundaries.</p><a href="https://belentani.es">belentani.es ↗</a></div>
   </aside>
   <main id="workspace" tabindex="-1">
-    <div class="masthead"><div class="eyebrow">UTILITY SURFACE / LOCAL FIRST</div><h1 data-i18n="headline">Tools that<br><i>earn their place.</i></h1><p data-i18n="intro">Pixel-precise glass, practical software and honest limits. Your files stay in your browser. Each utility is designed as a self-contained operation, with no registration or third-party file service.</p><div class="meta"><span data-i18n="sevenTools">7 REAL TOOLS</span><span>FILES PROCESSED LOCALLY</span><span>ES · EN · PT CONTEXT</span></div></div>
+    <div class="masthead"><div class="eyebrow">UTILITY SURFACE / LOCAL FIRST</div><h1 data-i18n="headline">Tools that<br><i>earn their place.</i></h1><p data-i18n="intro">Pixel-precise glass, practical software and honest limits. Your files stay in your browser. Each utility is designed as a self-contained operation, with no registration or third-party file service.</p><div class="meta"><span data-i18n="sevenTools">8 REAL TOOLS</span><span>FILES PROCESSED LOCALLY</span><span>ES · EN · PT CONTEXT</span></div></div>
 
     <section class="panel active" id="tab-batch" aria-labelledby="batchTitle">
       <div class="panel-head"><div><div class="eyebrow">01 / IMAGING</div><h2 id="batchTitle" data-i18n="batchTitle">Batch image converter</h2><p data-i18n="batchDesc">Convert up to 20 local images into PNG, JPEG or WebP. Resize with aspect ratio preserved. Download individually or as a standards-compatible ZIP.</p></div><div class="mark">◩</div></div>
@@ -117,6 +119,14 @@
       <div class="image-preview"><canvas id="waveCanvas" width="760" height="170" role="img" aria-label="Waveform visual representation"></canvas></div>
       <div class="actionline"><button id="audioGo" class="cta" data-i18n="audioGo">Decode & download WAV ↗</button></div>
       <div id="audioResult" class="result" role="status" aria-live="polite">No audio selected. Sample count is limited to protect your device.</div>
+    </section>
+
+    <section class="panel" id="tab-video" aria-labelledby="videoTitle" hidden>
+      <div class="panel-head"><div><div class="eyebrow">08 / VIDEO TOOLS</div><h2 id="videoTitle" data-i18n="videoTitle">Video contact sheet</h2><p data-i18n="videoDesc">Extract evenly spaced still frames from your own local video and combine them into a labelled PNG contact sheet. Codec support depends on your browser; no media is uploaded.</p></div><div class="mark">▦</div></div>
+      <label for="videoSheetFile" data-i18n="videoFileLabel">Local video (max 500 MB)</label><input id="videoSheetFile" type="file" accept="video/*">
+      <div class="formline"><div><label for="videoSheetCount" data-i18n="videoCountLabel">Frames to sample</label><select id="videoSheetCount"><option value="4">4 (2 × 2)</option><option value="9" selected>9 (3 × 3)</option><option value="16">16 (4 × 4)</option></select></div></div>
+      <div class="actionline"><button id="videoSheetGo" class="cta" data-i18n="videoGo">Build contact sheet ↗</button></div>
+      <div id="videoSheetResult" class="result" role="status" aria-live="polite">Choose a video to export timed stills.</div>
     </section>
 
     <section class="bottom-note"><div class="eyebrow">EVIDENCE / NOT EMPTY PROMISES</div><p>All implemented utilities use native browser APIs and a small, auditable JavaScript core. Results vary with supported codecs, memory limits and browser permissions. No social-platform restrictions are bypassed.</p><a href="https://github.com/belentani7/belentani7" target="_blank" rel="noopener noreferrer">Review the implementation ↗</a></section>
