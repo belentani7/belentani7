@@ -35,7 +35,7 @@ I approach a product through several complementary lenses.
 
 The new companion experience is an **Aero-inspired browser desktop**, not a Microsoft Windows Vista installation or virtual machine. It includes multiple draggable glass windows, a taskbar, Start menu, safe narrative terminal, code rain and local-first utilities.
 
-### Production Studio / five working tools
+### Production Studio / seven working tools
 
 **[Open the professional Studio source](./docs/living-machine/studio.html)** — a separate, responsive, modular utility workspace integrated with the original Living Machine. It uses no external runtime packages, analytics scripts, paid APIs or remote file processing.
 
@@ -45,9 +45,11 @@ The new companion experience is an **Aero-inspired browser desktop**, not a Micr
 | **Subtitle time studio** | SRT/VTT time-shifting, format conversion and plain transcript export | Needs existing subtitles, not automatic speech transcription |
 | **CV clarity inspector** | Local structural checks for professional communication, sections and verifiable evidence | Heuristic review, deliberately **no fictitious ATS score** |
 | **Storyboard architect** | Plan editable camera shots, durations, movement, sound, export CSV or JSON | A planning utility, not a rendered video |
-| **Image color sampler** | Extract approximate dominant swatches from an uploaded local image and export reusable CSS variables | Not calibrated colorimetry |
+| **Image color sampler** | Extract approximate dominant swatches from a local image and export reusable CSS variables | Not calibrated colorimetry |
+| **Image → PDF composer** | Compose A4 PDF pages from local images with JPEG metadata removal, page-fitting and margins | Requires a browser with Canvas JPEG encoding; not OCR |
+| **Audio → WAV lab** | Decode compatible audio locally using Web Audio and generate 16-bit PCM WAV with waveform and gain controls | Browser codec compatibility and audio memory limits apply |
 
-The Studio is separated into `studio.html`, `studio.css`, `studio.js`, a reusable/testable `studio-core.js` and automated `studio.test.cjs`. Its page declares a strict **no-network Content Security Policy**. All image, CV, subtitle, color and export operations are executed locally within the browser.
+The Studio is separated into `studio.html`, `studio.css`, `studio.js`, reusable/testable `studio-core.js`, `pdf-core.js`, `audio-core.js`, and the automated `studio.test.cjs` / `media.test.cjs` suites. Its page declares a strict **no-network Content Security Policy**. All image, CV, subtitle, color and export operations are executed locally within the browser.
 
 If you own media to be transcribed or downloaded, use its original export or an authorized source. The studio does not claim to bypass copyright, DRM, login walls or social networks' download restrictions.
 
@@ -79,10 +81,10 @@ Open http://localhost:8000 in a modern browser. The local utility functions do n
 **Run the included quality checks:**
 
 ~~~bash
-node --test docs/living-machine/quality.test.cjs docs/living-machine/studio.test.cjs
+node --test docs/living-machine/quality.test.cjs docs/living-machine/studio.test.cjs docs/living-machine/media.test.cjs
 ~~~
 
-The targeted GitHub Actions workflow is in .github/workflows/living-machine-ci.yml. Checks cover JavaScript syntax, caption round trips, image ZIP structure and CRC-32, CSV export safety, offline behavior, CV heuristics, accessibility markers and source references.
+The targeted GitHub Actions workflow is in .github/workflows/living-machine-ci.yml. Checks cover JavaScript syntax, caption round trips, ZIP structure and CRC-32, PDF cross-reference and page-tree integrity, WAV PCM format, CSV export safety, offline behavior, CV heuristics, accessibility markers and source references.
 
 > GitHub profiles render Markdown and images, not embedded JavaScript applications. The HTML must run on a website or a local server. SVG animation may vary by GitHub client; meaningful text also remains readable when motion is unavailable.
 
