@@ -3,8 +3,8 @@
  * Network-first updates; cache only explicitly listed same-origin application resources.
  * Never stores the files users load, convert, record or export.
  */
-const CACHE="belentani-studio-v6";
-const ASSETS=["./","./index.html","./studio.html","./studio.css","./studio.js","./studio-core.js","./studio-i18n.js","./audio-core.js","./pdf-core.js","./video-sheet.js","./studio-icon.svg","./manifest.webmanifest"];
+const CACHE="belentani-studio-v7";
+const ASSETS=["./","./index.html","./studio.html","./studio.css","./studio.js","./studio-core.js","./studio-i18n.js","./audio-core.js","./pdf-core.js","./video-sheet.js","./diagnostics.html","./diagnostics.js","./studio-icon.svg","./manifest.webmanifest"];
 const ASSET_PATHS=new Set(ASSETS.map(x=>new URL(x,self.registration.scope).pathname));
 self.addEventListener("install",event=>{
  event.waitUntil((async()=>{
