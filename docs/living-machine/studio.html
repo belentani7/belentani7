@@ -65,6 +65,13 @@
       <label for="subtitleFile">Subtitle file (optional)</label><input id="subtitleFile" type="file" accept=".srt,.vtt,.txt,text/plain">
       <label for="subtitleInput">Paste captions</label><textarea id="subtitleInput" rows="11" spellcheck="false" placeholder="1&#10;00:00:01,000 --> 00:00:03,000&#10;First sentence"></textarea>
       <div class="formline"><div><label for="subtitleShift">Shift in milliseconds (+ / −)</label><input id="subtitleShift" type="number" min="-86400000" max="86400000" value="0"></div><div><label for="subtitleFormat">Export format</label><select id="subtitleFormat"><option value="srt">SRT</option><option value="vtt">VTT</option><option value="txt">TXT transcript</option></select></div></div>
+      <div class="caption-generator" aria-label="Text to draft subtitles">
+        <div class="eyebrow">TEXT → TIMED DRAFT</div>
+        <p class="hint">No audio recognition is performed. This creates estimated cue timings from a written script; correct the timings against your actual recording.</p>
+        <div class="formline"><div><label for="captionWpm">Estimated words per minute</label><input id="captionWpm" type="number" min="80" max="280" value="165"></div>
+        <div><label for="captionStart">Start at second</label><input id="captionStart" type="number" min="0" max="86400" step="0.1" value="0"></div></div>
+        <button class="secondary" id="captionDraft">Generate editable timed draft ↗</button>
+      </div>
       <div class="actionline"><button class="cta" id="subtitleGo" data-i18n="subtitleGo">Convert & export ↗</button><button class="secondary" id="subtitlePreview" data-i18n="subtitlePreview">Preview shifted text</button></div>
       <pre id="subtitleResult" class="result" role="status" aria-live="polite">No caption track loaded.</pre>
     </section>
