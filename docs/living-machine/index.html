@@ -68,7 +68,7 @@ h1 strong{font-weight:650;background:linear-gradient(135deg,#fff 5%,#f1f0ff 34%,
 .sectionhead p{max-width:440px;color:#9facbe;font-size:13px;line-height:1.6}
 .cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
 .card,.glass{border:1px solid var(--edge);background:linear-gradient(143deg,#ffffff17,#ffffff05 42%,#1d29411c);backdrop-filter:blur(var(--blur)) saturate(var(--saturate));-webkit-backdrop-filter:blur(var(--blur)) saturate(var(--saturate));box-shadow:inset 0 1px #fff2,var(--shadow)}
-.card{padding:24px 20px 22px;border-radius:var(--radius);min-height:200px;text-align:left;color:var(--txt);position:relative;overflow:hidden;transition:transform .2s,border-color .2s}
+.card{display:block;text-decoration:none;padding:24px 20px 22px;border-radius:var(--radius);min-height:200px;text-align:left;color:var(--txt);position:relative;overflow:hidden;transition:transform .2s,border-color .2s}
 .card:hover{transform:translateY(-5px);border-color:#d5e7ff67}
 .card:after{content:"↗";position:absolute;top:24px;right:20px;color:#fff8}
 .card .symbol{font:26px Consolas,monospace;color:#e0e4ff;margin-bottom:32px}
@@ -147,7 +147,7 @@ footer{padding:100px 0 0;color:#9aaac1;font-size:12px;display:flex;justify-conte
   <header class="top">
     <a class="brand" href="#home" aria-label="Belentani Home"><span class="logo">B</span><span>BELENTANI <span style="opacity:.42">/ SYSTEMS</span></span></a>
     <div class="topmeta"><div><span class="online"></span> BROWSER-LOCAL SYSTEM ONLINE</div><div id="dateline">Barcelona · ES / EN / PT</div></div>
-    <button class="pill" id="langBtn" aria-label="Change language">ES / EN / PT</button>
+    <button class="pill" id="langBtn" aria-label="Change language" title="Change hero language">ES / EN / PT</button>
   </header>
   <section class="hero" id="home" aria-labelledby="main-title">
     <div>
@@ -156,7 +156,8 @@ footer{padding:100px 0 0;color:#9aaac1;font-size:12px;display:flex;justify-conte
       <p class="subtitle" id="hero-copy">I design systems where engineering, applied AI, human insight and artistic direction meet. Not only interfaces to look at — tools you can open, test and use.</p>
       <div class="actions">
         <button class="btn primary" data-open="welcome" id="enter">Enter the living machine ↗</button>
-        <button class="btn" data-open="converter">Open tool laboratory</button>
+        <a class="btn" href="./studio.html">Enter Production Studio ↗</a>
+        <button class="btn" data-open="converter">Open classic tool</button>
         <a class="btn" href="https://github.com/belentani7" target="_blank" rel="noopener noreferrer">Explore GitHub ↗</a>
       </div>
     </div>
@@ -165,6 +166,10 @@ footer{padding:100px 0 0;color:#9aaac1;font-size:12px;display:flex;justify-conte
   <div class="statusline"><span>01 / <b>AI & AUTOMATION</b></span><span>02 / <b>FULL-STACK SYSTEMS</b></span><span>03 / <b>CREATIVE PRODUCTION</b></span><span>04 / <b>ACCESSIBLE TOOLS</b></span></div>
   <div class="sectionhead" id="tools"><h2>Useful by design.</h2><p>Interactive tools that run in the browser, with clear capability boundaries and no account required. Your files stay on this device.</p></div>
   <div class="cards">
+    <a class="card" href="./studio.html#batch"><div class="symbol">◩</div><strong>Batch image studio</strong><small>Convert multiple images to WebP, PNG or JPEG and export a real ZIP file.</small></a>
+    <a class="card" href="./studio.html#cv"><div class="symbol">◈</div><strong>CV clarity inspector</strong><small>Offline textual analysis that never invents an ATS score or uploads your document.</small></a>
+    <a class="card" href="./studio.html#storyboard"><div class="symbol">◇</div><strong>Storyboard architect</strong><small>Shot-by-shot planning and export for music videos, reels and campaigns.</small></a>
+    <a class="card" href="./studio.html#palette"><div class="symbol">◉</div><strong>Palette extractor</strong><small>Sample colors from your own photos and export CSS variables.</small></a>
     <button class="card" data-open="converter"><div class="symbol">◈</div><strong>Image conversion</strong><small>PNG · JPEG · WebP · Resize. Local canvas engine, no upload.</small></button>
     <button class="card" data-open="captions"><div class="symbol">≋</div><strong>Caption studio</strong><small>SRT / VTT / TXT subtitle conversion, transcript cleanup and speech notes.</small></button>
     <button class="card" data-open="media"><div class="symbol">◉</div><strong>Media lab</strong><small>Capture a frame from your own video. Record an audio note when supported.</small></button>
@@ -194,14 +199,14 @@ footer{padding:100px 0 0;color:#9aaac1;font-size:12px;display:flex;justify-conte
   </div>
   <footer><div>© 2026 Pedro Belentani · Built as a browser-based professional experiment.</div><div>LOCAL FIRST / NO TRACKERS / NO HIDDEN UPLOADS · <a href="https://belentani.es">belentani.es</a></div></footer>
 </div>
-<div id="stage" aria-live="off"></div>
+<div id="stage" aria-label="Aero style application windows" aria-live="off"></div>
 <div id="startmenu" class="glass" role="dialog" aria-label="Applications menu">
   <div class="mini">BELENTANI / LIVING MACHINE</div><h3 style="margin:10px 0">Launch an application</h3>
   <input id="startSearch" type="search" placeholder="Find a tool...">
   <div class="startgrid" id="startGrid"></div>
   <div class="micro">Aero-inspired web demo. This is not Microsoft Windows and cannot run Windows programs.</div>
 </div>
-<nav id="dock" aria-label="Desktop taskbar"><button class="start" id="startButton" title="Start menu" aria-label="Start menu">◈</button><div class="separator"></div><button title="Welcome" data-open="welcome">⌂</button><button title="Converter" data-open="converter">◧</button><button title="Captions" data-open="captions">≋</button><button title="Media" data-open="media">◉</button><button title="Terminal" data-open="terminal">$_</button><span class="dockname">BELENTANI // AERO LAB</span><span id="clock" aria-label="Local date and time"></span></nav>
+<nav id="dock" aria-label="Desktop taskbar"><button class="start" id="startButton" title="Start menu" aria-label="Start menu">◈</button><div class="separator"></div><button title="Welcome" data-open="welcome">⌂</button><button title="Converter" data-open="converter">◧</button><button title="Captions" data-open="captions">≋</button><button title="Media" data-open="media">◉</button><button title="Terminal" data-open="terminal">$_</button><a class="btn small" href="./studio.html" title="Open Production Studio" style="font-size:11px;padding:10px">STUDIO ↗</a><span class="dockname">BELENTANI // AERO LAB</span><span id="clock" aria-label="Local date and time"></span></nav>
 <div id="toast" class="toast" hidden role="status" aria-live="polite"></div>
 <script>
 "use strict";
@@ -288,7 +293,7 @@ footer{padding:100px 0 0;color:#9aaac1;font-size:12px;display:flex;justify-conte
   }
   function toggleStart(force){
     const m=$("#startmenu");const show=typeof force==="boolean"?force:!m.classList.contains("open");
-    m.classList.toggle("open",show);if(show)$("#startSearch").focus();
+    m.classList.toggle("open",show);$("#startButton").setAttribute("aria-expanded",String(show));if(show)$("#startSearch").focus();
   }
   function renderStart(query){
     const menu=$("#startGrid");menu.replaceChildren();
@@ -307,7 +312,7 @@ footer{padding:100px 0 0;color:#9aaac1;font-size:12px;display:flex;justify-conte
     if(windows.has(id)){const existing=windows.get(id);existing.classList.remove("hide");focus(existing);return}
     const name=APPS.find(a=>a[0]===id);if(!name)return;
     const win=document.createElement("section");win.className="window";win.setAttribute("role","dialog");win.setAttribute("aria-label",name[1]);
-    win.dataset.id=id;win.style.left=(12+windows.size*3.2)+"%";win.style.top=(12+windows.size*2.4)+"%";
+    win.dataset.id=id;win.setAttribute("aria-modal","false");win.style.left=(12+windows.size*3.2)+"%";win.style.top=(12+windows.size*2.4)+"%";
     win.innerHTML='<div class="titlebar"><span class="title">'+h(name[2]+"  "+name[1])+'</span><div class="controls"><button data-action="min" aria-label="Minimize window">−</button><button data-action="max" aria-label="Maximize window">□</button><button data-action="close" aria-label="Close window">×</button></div></div><main>'+appContent(id)+'</main>';
     $("#stage").append(win);windows.set(id,win);focus(win);wireWindow(win,id);
     if(window.matchMedia("(max-width:530px)").matches)win.style.left="3%";
@@ -365,6 +370,7 @@ footer{padding:100px 0 0;color:#9aaac1;font-size:12px;display:flex;justify-conte
         const q=Math.max(.01,Math.min(1,Number($("#imgQuality",win).value||90)/100));
         const blob=await new Promise(resolve=>canvas.toBlob(resolve,type,q));
         if(!blob)throw Error("Encoder unavailable in this browser");
+        if(blob.type!==type)throw Error("This browser does not support the requested output encoder.");
         const ext=blob.type==="image/png"?"png":blob.type==="image/webp"?"webp":"jpg";
         download(blob,stripExt(file.name)+"-belentani."+ext);
         setResult(win,"#imgResult","Converted "+width+" × "+height+" · "+Math.round(blob.size/1024)+" KB · "+blob.type);
@@ -443,12 +449,23 @@ footer{padding:100px 0 0;color:#9aaac1;font-size:12px;display:flex;justify-conte
     $("#frameGo",win).addEventListener("click",async()=>{
       try{
         if(!vid.src)throw Error("Select a video first.");
-        if(!Number.isFinite(vid.duration))await new Promise((yes,no)=>{vid.addEventListener("loadedmetadata",yes,{once:true});vid.addEventListener("error",()=>no(Error("Video cannot be decoded.")),{once:true})});
-        const second=Math.max(0,Math.min(Math.max(0,vid.duration-.01),Number($("#frameTime",win).value)||0));
-        vid.currentTime=second;await new Promise((resolve,reject)=>{
-          if(Math.abs(vid.currentTime-second)<.06&&vid.readyState>=2){resolve();return}
-          vid.addEventListener("seeked",resolve,{once:true});vid.addEventListener("error",()=>reject(Error("Cannot seek frame.")),{once:true});
-        });
+        async function mediaEvent(type,limit=8000){
+          return new Promise((resolve,reject)=>{
+            const done=(err)=>{clearTimeout(timer);vid.removeEventListener(type,ok);vid.removeEventListener("error",bad);err?reject(err):resolve()};
+            const ok=()=>done();const bad=()=>done(Error("Video could not be decoded."));
+            const timer=setTimeout(()=>done(Error("Video decoding timed out.")),limit);
+            vid.addEventListener(type,ok,{once:true});vid.addEventListener("error",bad,{once:true});
+          });
+        }
+        if(!Number.isFinite(vid.duration)){
+          const ready=mediaEvent("loadedmetadata");vid.load();await ready;
+        }
+        const second=Math.max(0,Math.min(Math.max(0,vid.duration-.05),Number($("#frameTime",win).value)||0));
+        if(Math.abs(vid.currentTime-second)>.04 || vid.readyState<2){
+          const ready=mediaEvent("seeked");
+          vid.currentTime=second;
+          await ready;
+        }
         const canvas=document.createElement("canvas");canvas.width=vid.videoWidth;canvas.height=vid.videoHeight;
         if(!canvas.width||!canvas.height)throw Error("Video dimensions unavailable.");
         canvas.getContext("2d").drawImage(vid,0,0);
