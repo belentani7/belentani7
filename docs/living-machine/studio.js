@@ -1,6 +1,9 @@
 /* BELENTANI STUDIO / Browser applications / zero runtime dependencies */
 (function(){
 "use strict";
+if("serviceWorker" in navigator && (location.protocol==="https:" || location.hostname==="localhost" || location.hostname==="127.0.0.1")){
+  window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js",{scope:"./"}).catch(()=>{}),{once:true});
+}
 const Core=window.StudioCore;
 if(!Core)throw Error("StudioCore missing; verify local script order.");
 const $=s=>document.querySelector(s),$$=s=>Array.from(document.querySelectorAll(s));
