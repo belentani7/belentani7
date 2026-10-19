@@ -43,7 +43,7 @@
     <div class="masthead"><div class="eyebrow">UTILITY SURFACE / LOCAL FIRST</div><h1 data-i18n="headline">Tools that<br><i>earn their place.</i></h1><p data-i18n="intro">Pixel-precise glass, practical software and honest limits. Your files stay in your browser. Each utility is designed as a self-contained operation, with no registration or third-party file service.</p><div class="meta"><span data-i18n="sevenTools">7 REAL TOOLS</span><span>FILES PROCESSED LOCALLY</span><span>ES · EN · PT CONTEXT</span></div></div>
 
     <section class="panel active" id="tab-batch" aria-labelledby="batchTitle">
-      <div class="panel-head"><div><div class="eyebrow">01 / IMAGING</div><h2 id="batchTitle" data-i18n="batchTitle">Batch image converter</h2><p>Convert up to 20 local images into PNG, JPEG or WebP. Resize with aspect ratio preserved. Download individually or as a standards-compatible ZIP.</p></div><div class="mark">◩</div></div>
+      <div class="panel-head"><div><div class="eyebrow">01 / IMAGING</div><h2 id="batchTitle" data-i18n="batchTitle">Batch image converter</h2><p data-i18n="batchDesc">Convert up to 20 local images into PNG, JPEG or WebP. Resize with aspect ratio preserved. Download individually or as a standards-compatible ZIP.</p></div><div class="mark">◩</div></div>
       <div class="drop" id="imageDrop">
         <input id="batchFiles" type="file" accept="image/png,image/jpeg,image/webp,image/avif,image/bmp,image/gif" multiple aria-describedby="batchLimits">
         <span class="drop-emblem">＋</span>
@@ -56,59 +56,59 @@
         <div><label for="batchQuality">Quality</label><select id="batchQuality"><option value=".95">95% · High</option><option value=".85" selected>85% · Balanced</option><option value=".7">70% · Compact</option><option value=".5">50% · Small</option></select></div>
       </div>
       <div id="batchList" class="filelist" aria-live="polite"></div>
-      <div class="actionline"><button id="batchGo" class="cta">Convert images <span>↗</span></button><button id="batchClear" class="secondary">Clear</button></div>
+      <div class="actionline"><button id="batchGo" class="cta" data-i18n="batchGo">Convert images <span>↗</span></button><button id="batchClear" class="secondary" data-i18n="batchClear">Clear</button></div>
       <div id="batchResult" class="result" role="status" aria-live="polite">Waiting for files.</div>
     </section>
 
     <section class="panel" id="tab-subtitles" aria-labelledby="subtitleTitle" hidden>
-      <div class="panel-head"><div><div class="eyebrow">02 / VIDEO POST-PRODUCTION</div><h2 id="subtitleTitle" data-i18n="subtitleTitle">Subtitle time studio</h2><p>Convert SRT/VTT, shift timestamps and export clean text. The tool processes existing captions — it does not invent speech recognition for local video files.</p></div><div class="mark">≋</div></div>
+      <div class="panel-head"><div><div class="eyebrow">02 / VIDEO POST-PRODUCTION</div><h2 id="subtitleTitle" data-i18n="subtitleTitle">Subtitle time studio</h2><p data-i18n="subtitleDesc">Convert SRT/VTT, shift timestamps and export clean text. The tool processes existing captions — it does not invent speech recognition for local video files.</p></div><div class="mark">≋</div></div>
       <label for="subtitleFile">Subtitle file (optional)</label><input id="subtitleFile" type="file" accept=".srt,.vtt,.txt,text/plain">
       <label for="subtitleInput">Paste captions</label><textarea id="subtitleInput" rows="11" spellcheck="false" placeholder="1&#10;00:00:01,000 --> 00:00:03,000&#10;First sentence"></textarea>
       <div class="formline"><div><label for="subtitleShift">Shift in milliseconds (+ / −)</label><input id="subtitleShift" type="number" min="-86400000" max="86400000" value="0"></div><div><label for="subtitleFormat">Export format</label><select id="subtitleFormat"><option value="srt">SRT</option><option value="vtt">VTT</option><option value="txt">TXT transcript</option></select></div></div>
-      <div class="actionline"><button class="cta" id="subtitleGo">Convert & export ↗</button><button class="secondary" id="subtitlePreview">Preview shifted text</button></div>
+      <div class="actionline"><button class="cta" id="subtitleGo" data-i18n="subtitleGo">Convert & export ↗</button><button class="secondary" id="subtitlePreview" data-i18n="subtitlePreview">Preview shifted text</button></div>
       <pre id="subtitleResult" class="result" role="status" aria-live="polite">No caption track loaded.</pre>
     </section>
 
     <section class="panel" id="tab-cv" aria-labelledby="cvTitle" hidden>
-      <div class="panel-head"><div><div class="eyebrow">03 / PROFESSIONAL COMMUNICATION</div><h2 id="cvTitle" data-i18n="cvTitle">CV clarity inspector</h2><p>A privacy-preserving, heuristic text review: structure, contact presence, readability length and evidence-oriented suggestions. Not an ATS score and not AI-generated hiring advice.</p></div><div class="mark">◈</div></div>
+      <div class="panel-head"><div><div class="eyebrow">03 / PROFESSIONAL COMMUNICATION</div><h2 id="cvTitle" data-i18n="cvTitle">CV clarity inspector</h2><p data-i18n="cvDesc">A privacy-preserving, heuristic text review: structure, contact presence, readability length and evidence-oriented suggestions. Not an ATS score and not AI-generated hiring advice.</p></div><div class="mark">◈</div></div>
       <label for="cvText">Paste resume text (no uploads)</label><textarea id="cvText" rows="12" placeholder="Professional summary, experience, projects, education, skills..."></textarea>
-      <div class="actionline"><button class="cta" id="cvGo">Inspect clarity ↗</button><button class="secondary" id="cvExport">Export report</button></div>
+      <div class="actionline"><button class="cta" id="cvGo" data-i18n="cvGo">Inspect clarity ↗</button><button class="secondary" id="cvExport" data-i18n="cvExport">Export report</button></div>
       <div id="cvResult" class="report" role="status" aria-live="polite">Your text is analyzed in memory when you press Inspect.</div>
       <p class="hint">Do not paste personal identifiers if you do not want them present in your browser. This page has no CV upload or analytics service.</p>
     </section>
 
     <section class="panel" id="tab-storyboard" aria-labelledby="storyTitle" hidden>
-      <div class="panel-head"><div><div class="eyebrow">04 / CREATIVE PRODUCTION</div><h2 id="storyTitle" data-i18n="storyTitle">Storyboard architect</h2><p>Plan and export real shot lists for reels, music videos and creative campaigns: duration, camera, movement, visual intention and sound.</p></div><div class="mark">◇</div></div>
+      <div class="panel-head"><div><div class="eyebrow">04 / CREATIVE PRODUCTION</div><h2 id="storyTitle" data-i18n="storyTitle">Storyboard architect</h2><p data-i18n="storyDesc">Plan and export real shot lists for reels, music videos and creative campaigns: duration, camera, movement, visual intention and sound.</p></div><div class="mark">◇</div></div>
       <div class="formline"><div><label for="filmTitle">Production title</label><input id="filmTitle" maxlength="100" placeholder="Judas — Midnight Sequence"></div><div><label for="filmTempo">Project tempo (BPM, optional)</label><input id="filmTempo" type="number" min="1" max="320" placeholder="128"></div></div>
       <div class="table-scroll"><table><thead><tr><th>Shot</th><th>Seconds</th><th>Camera</th><th>Movement</th><th>Visual</th><th>Audio</th><th>Notes</th><th></th></tr></thead><tbody id="shots"></tbody></table></div>
-      <div class="actionline"><button class="secondary" id="addShot">＋ Add shot</button><button class="cta" id="exportShots">Export CSV ↗</button><button class="secondary" id="exportShotsJson">Export JSON</button></div>
+      <div class="actionline"><button class="secondary" id="addShot" data-i18n="addShot">＋ Add shot</button><button class="cta" id="exportShots" data-i18n="exportShots">Export CSV ↗</button><button class="secondary" id="exportShotsJson" data-i18n="exportShotsJson">Export JSON</button></div>
       <div id="storyResult" class="result" role="status" aria-live="polite">A new storyboard is ready.</div>
     </section>
 
     <section class="panel" id="tab-palette" aria-labelledby="paletteTitle" hidden>
-      <div class="panel-head"><div><div class="eyebrow">05 / ART DIRECTION</div><h2 id="paletteTitle" data-i18n="paletteTitle">Image color sampler</h2><p>Derive a compact palette from the pixels in your own image. Sampled colors are approximate; export swatches as reusable CSS variables.</p></div><div class="mark">◉</div></div>
+      <div class="panel-head"><div><div class="eyebrow">05 / ART DIRECTION</div><h2 id="paletteTitle" data-i18n="paletteTitle">Image color sampler</h2><p data-i18n="paletteDesc">Derive a compact palette from the pixels in your own image. Sampled colors are approximate; export swatches as reusable CSS variables.</p></div><div class="mark">◉</div></div>
       <label for="paletteImage">Local image file</label><input id="paletteImage" type="file" accept="image/*">
       <div class="image-preview"><canvas id="paletteCanvas" width="420" height="240" aria-label="Color source image preview"></canvas></div>
-      <div class="actionline"><button class="cta" id="paletteGo">Extract palette ↗</button><button class="secondary" id="paletteExport">Export CSS</button></div>
+      <div class="actionline"><button class="cta" id="paletteGo" data-i18n="paletteGo">Extract palette ↗</button><button class="secondary" id="paletteExport" data-i18n="paletteExport">Export CSS</button></div>
       <div id="swatches" class="swatches" aria-live="polite"></div>
       <div id="paletteResult" class="result" role="status" aria-live="polite">Choose a local image to begin.</div>
     </section>
 
     <section class="panel" id="tab-pdf" aria-labelledby="pdfTitle" hidden>
-      <div class="panel-head"><div><div class="eyebrow">06 / DOCUMENT PROCESSING</div><h2 id="pdfTitle" data-i18n="pdfTitle">Images into PDF</h2><p>Combine photographs and screenshots into an A4 PDF without sending them to a server. Every input is rasterized locally as JPEG, removing source metadata. One page per image, with aspect ratio preserved.</p></div><div class="mark">▤</div></div>
+      <div class="panel-head"><div><div class="eyebrow">06 / DOCUMENT PROCESSING</div><h2 id="pdfTitle" data-i18n="pdfTitle">Images into PDF</h2><p data-i18n="pdfDesc">Combine photographs and screenshots into an A4 PDF without sending them to a server. Every input is rasterized locally as JPEG, removing source metadata. One page per image, with aspect ratio preserved.</p></div><div class="mark">▤</div></div>
       <label for="pdfFiles">Select 1–25 local images</label>
       <input type="file" id="pdfFiles" accept="image/*" multiple>
       <div class="formline"><div><label for="pdfQuality">JPEG fidelity</label><select id="pdfQuality"><option value=".92">High — 92%</option><option value=".80" selected>Balanced — 80%</option><option value=".65">Small — 65%</option></select></div><div><label for="pdfMargin">Page margins in points</label><select id="pdfMargin"><option value="0">Edge to edge</option><option value="24" selected>Standard</option><option value="48">Wide</option></select></div></div>
-      <div class="actionline"><button id="pdfGo" class="cta">Compose & download PDF ↗</button></div>
+      <div class="actionline"><button id="pdfGo" class="cta" data-i18n="pdfGo">Compose & download PDF ↗</button></div>
       <div id="pdfResult" class="result" role="status" aria-live="polite">No images selected.</div>
     </section>
 
     <section class="panel" id="tab-audio" aria-labelledby="audioTitle" hidden>
-      <div class="panel-head"><div><div class="eyebrow">07 / AUDIO PROCESSING</div><h2 id="audioTitle" data-i18n="audioTitle">Audio to WAV</h2><p>Decode compatible local audio formats, inspect duration, peak and RMS, then export 16-bit mono or stereo PCM WAV. Decoding happens in the browser's Web Audio engine.</p></div><div class="mark">♫</div></div>
+      <div class="panel-head"><div><div class="eyebrow">07 / AUDIO PROCESSING</div><h2 id="audioTitle" data-i18n="audioTitle">Audio to WAV</h2><p data-i18n="audioDesc">Decode compatible local audio formats, inspect duration, peak and RMS, then export 16-bit mono or stereo PCM WAV. Decoding happens in the browser's Web Audio engine.</p></div><div class="mark">♫</div></div>
       <label for="audioFile">Choose audio file</label><input id="audioFile" type="file" accept="audio/*">
       <div class="formline"><div><label for="audioChannels">Channels</label><select id="audioChannels"><option value="original">Keep original (up to stereo)</option><option value="mono">Mix to mono</option></select></div><div><label for="audioNormalize">Volume processing</label><select id="audioNormalize"><option value="no">Keep original peaks</option><option value="yes">Peak normalize (up to 16×)</option></select></div></div>
       <div class="image-preview"><canvas id="waveCanvas" width="760" height="170" role="img" aria-label="Waveform visual representation"></canvas></div>
-      <div class="actionline"><button id="audioGo" class="cta">Decode & download WAV ↗</button></div>
+      <div class="actionline"><button id="audioGo" class="cta" data-i18n="audioGo">Decode & download WAV ↗</button></div>
       <div id="audioResult" class="result" role="status" aria-live="polite">No audio selected. Sample count is limited to protect your device.</div>
     </section>
 
