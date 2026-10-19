@@ -55,3 +55,8 @@ footer{border-top:1px solid #ffffff21;padding:22px 4vw;display:flex;justify-cont
 @media(max-width:950px){.layout{grid-template-columns:1fr}.sidebar{border-right:0;border-bottom:1px solid var(--line);padding:15px 18px}.menu-caption,.sidebar-bottom{display:none}.nav{display:flex;overflow:auto}.nav button{flex:none;white-space:nowrap}.bar-links .ready{display:none}main{padding:32px 22px 70px}}
 @media(max-width:560px){.bar{padding:0 15px;height:68px}.bar-links{gap:9px;font-size:11px}.bar-links a:last-child{display:none}.wordmark{font-size:10px}.masthead h1{font-size:52px}.mark{display:none}.swatches{grid-template-columns:repeat(3,1fr)}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* Localized navigation must keep regular label typography. */
+.nav button span[data-i18n]{font:inherit;min-width:0;color:inherit;flex:1}
+.lang-select{width:64px;min-width:64px;font:11px Consolas,monospace;padding:7px 9px;border-radius:11px;border:1px solid #ffbcd14a;background:#160b14;color:#ffe7ef}
+@media(max-width:540px){.lang-select{width:52px;min-width:52px;padding:7px}}
