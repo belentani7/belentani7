@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#05060b">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./studio-icon.svg" type="image/svg+xml">
 <meta name="description" content="Pedro Belentani — AI systems, product engineering and creative technology. Explore a living browser desktop and privacy-first tools.">
 <meta name="color-scheme" content="dark">
 <title>BELENTANI // Living Machine — Interactive Professional Lab</title>
@@ -650,7 +652,10 @@ footer{padding:100px 0 0;color:#9aaac1;font-size:12px;display:flex;justify-conte
     });
   },{passive:true});
   if(getStored("intro")==="")setStored("intro","seen");
-  window.BELENTANI={openApp,version:"1.0",tools:APPS.map(a=>a[0])};
+  if("serviceWorker" in navigator && (location.protocol==="https:" || location.hostname==="localhost" || location.hostname==="127.0.0.1")){
+    window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js",{scope:"./"}).catch(()=>{}),{once:true});
+  }
+  window.BELENTANI={openApp,version:"2.0",tools:APPS.map(a=>a[0])};
   // Accessibility: avoid motion when OS requests reduced animations.
   reduce.addEventListener?.("change",()=>{if(reduce.matches)rainCtx.clearRect(0,0,rainWidth,rainHeight)});
 })();
