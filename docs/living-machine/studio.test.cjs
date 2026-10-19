@@ -74,3 +74,21 @@ test("Text metrics and basic HTML escaping work", () => {
   const m=core.getTextMetrics("One two\nThree");assert.equal(m.words,3);assert.equal(m.lines,2);
   assert.equal(core.escapeHTML('<a title="X">&</a>'),'&lt;a title=&quot;X&quot;&gt;&amp;&lt;/a&gt;');
 });
+
+
+test("Heuristic script-to-caption drafting is deterministic and round-trips", () => {
+  const transcript = "Hola soy Belentani. Esta es una demostración de subtítulos. Probamos palabras y puntuación.";
+  const cues=core.draftTimedCaptions(transcript,{wordsPerMinute:160,startMs:1500,maxCharacters:48});
+  assert.ok(cues.length>=2);
+  assert.equal(cues[0].start,1500);
+  assert.ok(cues.every((c,i)=>c.end>c.start&&(i===0||c.start>cues[i-1].end)));
+  const exported=core.subtitleExport(cues,"srt");
+  assert.equal(core.parseCaptions(exported).length,cues.length);
+});
+test("Timed draft rejects unsafe or absurd timing input",()=>{
+  assert.throws(()=>core.draftTimedCaptions(""));
+  assert.throws(()=>core.draftTimedCaptions("Hi",{wordsPerMinute:0}));
+  assert.throws(()=>core.draftTimedCaptions("Hi",{startMs:-1}));
+  assert.throws(()=>core.draftTimedCaptions("Hi",{maxCharacters:5}));
+  assert.throws(()=>core.draftTimedCaptions("A".repeat(35001)));
+});
