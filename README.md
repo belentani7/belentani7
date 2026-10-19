@@ -60,6 +60,14 @@ python -m http.server 8000 --directory docs/living-machine
 
 Open http://localhost:8000 in a modern browser. The local utility functions do not require a paid API, login or server-side file upload.
 
+**Run the included quality checks:**
+
+~~~bash
+node --test docs/living-machine/quality.test.cjs
+~~~
+
+The targeted GitHub Actions workflow is in .github/workflows/living-machine-ci.yml. The checks cover JavaScript syntax, subtitle round trips, CSV parsing and formula safety, README references and interface structure.
+
 > GitHub profiles render Markdown and images, not embedded JavaScript applications. The HTML must run on a website or a local server. SVG animation may vary by GitHub client; meaningful text also remains readable when motion is unavailable.
 
 ---
