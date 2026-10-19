@@ -26,7 +26,9 @@ jobs:
           node --check docs/living-machine/pdf-core.js
           node --check docs/living-machine/audio-core.js
           node --check docs/living-machine/studio-i18n.js
+          node --check docs/living-machine/sw.js
+          test -s docs/living-machine/manifest.webmanifest
           test -s docs/living-machine/pdf-core.js
           test -s docs/living-machine/audio-core.js
       - name: Run suite
-        run: node --test docs/living-machine/quality.test.cjs docs/living-machine/studio.test.cjs docs/living-machine/media.test.cjs docs/living-machine/i18n.test.cjs
+        run: node --test docs/living-machine/quality.test.cjs docs/living-machine/studio.test.cjs docs/living-machine/media.test.cjs docs/living-machine/i18n.test.cjs docs/living-machine/offline.test.cjs
