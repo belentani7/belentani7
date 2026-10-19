@@ -1,7 +1,27 @@
 name: Build
-on: [push]
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
 jobs:
-  build:
+  static-site:
     runs-on: ubuntu-latest
+    timeout-minutes: 8
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validate distributable static pages
+        run: |
+          test -s docs/index.html
+          test -s docs/living-machine/index.html
+          test -s docs/living-machine/studio.html
+          test -s docs/living-machine/studio.css
+          node --check docs/living-machine/studio.js
+          node --check docs/living-machine/studio-core.js
+      - name: Run suite
+        run: node --test docs/living-machine/quality.test.cjs docs/living-machine/studio.test.cjs
