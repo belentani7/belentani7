@@ -28,4 +28,4 @@ jobs:
         with:
           node-version: "22"
       - name: Validate JavaScript, captions, CSV and references
-        run: node --test docs/living-machine/quality.test.cjs docs/living-machine/studio.test.cjs
+        run: node --test docs/living-machine/quality.test.cjs docs/living-machine/studio.test.cjs docs/living-machine/media.test.cjs
