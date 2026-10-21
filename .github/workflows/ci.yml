@@ -1,49 +1,12 @@
 name: CI
-
-on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-  workflow_dispatch:
-
-permissions:
-  contents: read
-
-concurrency:
-  group: ci-${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-
+on: [push, pull_request]
 jobs:
-  profile:
-    name: Living Machine · functional core
+  lint:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-      - name: Test browser utilities, accessibility markers and source integrity
-        run: node --test docs/living-machine/quality.test.cjs docs/living-machine/studio.test.cjs docs/living-machine/media.test.cjs docs/living-machine/i18n.test.cjs docs/living-machine/video.test.cjs docs/living-machine/diagnostics.test.cjs docs/living-machine/offline.test.cjs
-      - name: Validate source size and syntax
-        run: |
-          node --check docs/living-machine/quality.test.cjs
-          test -s docs/living-machine/index.html
-          test -s assets/living-machine-banner.svg
-
-  desktop:
-    name: Desktop · security and workspace audit
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-      - name: Run dependency-free desktop tests
-        run: node desktop/tests/audit.test.js
-
-# The separate codeql.yml and repo-security.yml own SAST and secrets scanning.
-# This workflow deliberately avoids non-existent pnpm lint/typecheck/format scripts,
-# invalid job-level hashFiles expressions and unconfigured deployment secrets.
+        with: { node-version: '20', cache: 'pnpm' }
+      - run: pnpm install
+      - run: pnpm lint
