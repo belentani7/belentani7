@@ -1,28 +1,28 @@
 # Security Policy
 
-## Reporting a Vulnerability
-
-If you discover a security vulnerability in this project, please email
-[belentani7studio@proton.me](mailto:belentani7studio@proton.me)
-instead of using the issue tracker.
-
-Please include:
-
-- Description of the vulnerability
-- Steps to reproduce
-- Potential impact
-- Suggested fix (if available)
-
-## Security Best Practices
-
-- Keep dependencies up to date
-- Use environment variables for sensitive data
-- Review pull requests carefully
-- Never commit `.env` or credentials
-
 ## Supported Versions
 
 | Version | Supported |
-| ------- | --------- |
-| Latest  | Yes       |
-| Older   | As-is     |
+|---------|-----------|
+| 0.1.x   | Yes       |
+
+## Reporting a Vulnerability
+
+Please report security vulnerabilities by emailing **security@belentani.com** or using GitHub's [Private Vulnerability Reporting](https://github.com/belentani7/belentani7/security/advisories/new).
+
+Do NOT create public issues for security vulnerabilities.
+
+## Response Timeline
+
+- **Acknowledgment**: Within 48 hours
+- **Assessment**: Within 7 days
+- **Fix**: Within 30 days (critical), 90 days (non-critical)
+- **Disclosure**: Coordinated with reporter
+
+## Security Measures
+
+- Dependabot for dependency updates
+- CodeQL for static analysis
+- Secret scanning enabled
+- Signed commits required
+- Minimum 2 reviewers for merges
