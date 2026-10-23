@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+<title id="title">BELENTANI LIVING MACHINE — interactive profile terminal preview</title>
+<desc id="desc">An animated black-glass console introducing Pedro Belentani's AI systems, product engineering, trust and safety and creative technology. This is a preview; click the banner to explore the source and browser tools.</desc>
+<defs>
+<linearGradient id="bg" x2="1" y2="1"><stop stop-color="#05050b"/><stop offset=".55" stop-color="#0b0d15"/><stop offset="1" stop-color="#140510"/></linearGradient>
+<linearGradient id="frame" x2="1" y2="1"><stop stop-color="#f0f5ff" stop-opacity=".36"/><stop offset=".4" stop-color="#ef2a5f" stop-opacity=".66"/><stop offset="1" stop-color="#3a1828"/></linearGradient>
+<radialGradient id="glow"><stop stop-color="#fa2256" stop-opacity=".25"/><stop offset="1" stop-color="#fa2256" stop-opacity="0"/></radialGradient>
+<pattern id="grid" width="38" height="38" patternUnits="userSpaceOnUse"><path d="M38 0H0V38" fill="none" stroke="#fff" stroke-opacity=".025"/></pattern>
+<filter id="soft"><feGaussianBlur stdDeviation="18"/></filter>
+<style>
+text{font-family:ui-monospace,SFMono-Regular,Consolas,Menlo,monospace}
+.dash{fill:#ff4778}.cmd{fill:#e7efff}.out{fill:#9babc2}.key{fill:#ff8cab}.muted{fill:#617289}
+.cursor{animation:blink 1s step-end infinite}.pulse{animation:pulse 5s ease-in-out infinite}
+@keyframes blink{50%{opacity:0}}@keyframes pulse{50%{opacity:.6}}
+@media(prefers-reduced-motion:reduce){.cursor,.pulse{animation:none}}
+</style>
+</defs>
+<rect width="1200" height="520" rx="25" fill="url(#bg)"/>
+<rect width="1200" height="520" rx="25" fill="url(#grid)"/>
+<ellipse class="pulse" cx="1002" cy="320" rx="280" ry="200" fill="url(#glow)"/>
+<rect x="2" y="2" width="1196" height="516" rx="23" fill="none" stroke="url(#frame)" stroke-width="2"/>
+<rect x="23" y="22" width="1154" height="476" rx="17" fill="#03060c" fill-opacity=".87" stroke="#9caecc" stroke-opacity=".18"/>
+<path d="M23 69H1177" stroke="#c4d0e7" stroke-opacity=".15"/>
+<circle cx="50" cy="45" r="6" fill="#ff426c"/><circle cx="72" cy="45" r="6" fill="#ffb871" fill-opacity=".72"/><circle cx="94" cy="45" r="6" fill="#80bba8" fill-opacity=".74"/>
+<text x="123" y="51" font-size="15" fill="#dbe7fb" font-weight="bold" letter-spacing="2">BELENTANI / LIVING MACHINE</text>
+<text x="1144" y="51" text-anchor="end" font-size="12" fill="#9dacc5">LOCAL-FIRST • ENGLISH-FIRST • 2026</text>
+<text x="51" y="112" font-size="17" class="dash">belentani@living-machine:~$ <tspan class="cmd">whoami</tspan></text>
+<text x="51" y="143" font-size="18" fill="#f4f6ff">Pedro Belentani<tspan class="out"> // AI systems · product engineering · creative technology</tspan></text>
+<text x="51" y="195" font-size="17" class="dash">belentani@living-machine:~$ <tspan class="cmd">ls capabilities/</tspan></text>
+<text x="51" y="225" font-size="16" class="out">full-stack / AI agents / trust-and-safety / accessibility</text>
+<text x="51" y="250" font-size="16" class="out">creative computing / multilingual products / automation</text>
+<text x="51" y="302" font-size="17" class="dash">belentani@living-machine:~$ <tspan class="cmd">cat capabilities.json</tspan></text>
+<text x="51" y="330" font-size="15" class="out">{</text>
+<text x="75" y="356" font-size="15" class="out"><tspan class="key">"working"</tspan>: <tspan fill="#d8e2f4">"local browser tools, source projects, interactive UX"</tspan>,</text>
+<text x="75" y="381" font-size="15" class="out"><tspan class="key">"exploring"</tspan>: <tspan fill="#d8e2f4">"advanced AI orchestration, creative systems"</tspan></text>
+<text x="51" y="405" font-size="15" class="out">}</text>
+<text x="51" y="456" font-size="17" class="dash">belentani@living-machine:~$ <tspan class="cmd">open studio</tspan><tspan class="cursor" fill="#ff4778"> █</tspan></text>
+<rect x="925" y="418" width="205" height="52" rx="12" fill="#ff244c" fill-opacity=".13" stroke="#ff244c" stroke-opacity=".58"/>
+<text x="1027" y="449" font-size="12" fill="#f6e5f0" text-anchor="middle" font-weight="bold">CLICK TO EXPLORE →</text>
+<text x="51" y="487" font-size="10" class="muted">STATIC SVG PREVIEW • FULL TERMINAL REQUIRES A BROWSER PAGE • NO BACKEND SHELL</text>
+</svg>
