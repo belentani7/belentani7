@@ -159,11 +159,11 @@
       "repo": "belentani7/agentguard",
       "archived": false,
       "visibility": "private",
-      "stage": "discovered",
-      "last_worked_at": null,
-      "commit_or_pr": null,
-      "evidence": null,
-      "next_action": null
+      "stage": "improved",
+      "last_worked_at": "2026-10-23",
+      "commit_or_pr": "https://github.com/belentani7/agentguard/pull/5",
+      "evidence": "Draft PR #5, head 8d59c3b3b69caa73b8162cad89146bdbdcff1d2e, contains scoped authorization for POST /api/v1/billing/checkout in app/api/__init__.py and tests/test_checkout_tenant_isolation.py (5 test cases declared); workflow run 39907248016 failed with no reported steps in lint-and-test/security-scan, therefore tests are NOT verified.",
+      "next_action": "Investigate GitHub Actions runner/workflow failure; run pytest -v tests/test_checkout_tenant_isolation.py in actual environment, then review and merge PR only with gates passing. Later audit Stripe webhook idempotency and shared tenant access."
     },
     {
       "repo": "belentani7/ai-agent-complete",
