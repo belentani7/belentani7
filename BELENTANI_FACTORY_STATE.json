@@ -3249,11 +3249,11 @@
       "repo": "belentani7/manus-ai-skill-pack",
       "archived": false,
       "visibility": "private",
-      "stage": "discovered",
-      "last_worked_at": null,
-      "commit_or_pr": null,
-      "evidence": null,
-      "next_action": null
+      "stage": "improved",
+      "last_worked_at": "2026-10-23",
+      "commit_or_pr": "0dd89ee1d0e88ebc038ee1115ca1089ed93a6dde",
+      "evidence": "Confirmed scripts/find_skills.py and tests/test_find_skills.py on branch feat/offline-skill-finder-20261023, blob SHAs f120a0f7510c6cf69bcf4102f89182f1b21a4a32 and 978338fa2c72266e79c8193d9c3f0aa6cfa4041f. Earlier automation reports four local tests passing, but remote CI build failed; not validated remotely.",
+      "next_action": "Investigate remote CI failure; open PR from existing feature branch; validate tests in actual runner without inventing execution."
     },
     {
       "repo": "belentani7/manus-auditoria-chat-export-2026-08-21",
