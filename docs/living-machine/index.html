@@ -290,7 +290,7 @@ footer{padding:100px 0 0;color:#9aaac1;font-size:12px;display:flex;justify-conte
   $("#langBtn").addEventListener("click",()=>{
     lang=lang==="en"?"es":lang==="es"?"pt":"en";
     $("#hero-copy").textContent=I18N[lang].hero;$("#enter").textContent=I18N[lang].enter;
-    document.documentElement.lang=lang;toast("Interface: "+lang.toUpperCase());
+    $("#hero-copy").lang=lang==="pt"?"pt-BR":lang;$("#enter").lang=lang==="pt"?"pt-BR":lang;toast("Hero: "+lang.toUpperCase());
   });
   function appContent(id){
     switch(id){
@@ -614,6 +614,7 @@ footer{padding:100px 0 0;color:#9aaac1;font-size:12px;display:flex;justify-conte
       contact:"https://belentani.es  |  https://github.com/belentani7",
       github:"https://github.com/belentani7"
     };
+    function safeStorage(){try{return Boolean(window.localStorage)}catch{return false}}
     function print(line){term.textContent+=String(line)+"\n";term.scrollTop=term.scrollHeight}
     function run(raw){
       const cmd=raw.trim().toLowerCase().replace(/\s+/g," ");
@@ -623,7 +624,7 @@ footer{padding:100px 0 0;color:#9aaac1;font-size:12px;display:flex;justify-conte
       if(cmd==="date"){print(new Date().toString());return}
       if(cmd==="uptime"){print("Browser session: "+Math.floor((Date.now()-started)/1000)+" seconds. This is not a remote server.");return}
       if(cmd==="history"){print(history.map((c,i)=>(i+1)+": "+c).join("\n"));return}
-      if(cmd==="status"){print("Browser: "+navigator.userAgent+"\nSecure context: "+Boolean(window.isSecureContext)+"\nLocal storage: "+Boolean(window.localStorage)+"\nWeb Crypto: "+Boolean(window.crypto&&window.crypto.subtle)+"\nStatus: client-side demonstration, no backend session.");return}
+      if(cmd==="status"){print("Browser: "+navigator.userAgent+"\nSecure context: "+Boolean(window.isSecureContext)+"\nLocal storage: "+safeStorage()+"\nWeb Crypto: "+Boolean(window.crypto&&window.crypto.subtle)+"\nStatus: client-side demonstration, no backend session.");return}
       if(cmd==="ls"){print("about.txt  capabilities.json  projects/  tools/  contact.txt  vision.txt  [virtual read-only entries]");return}
       if(cmd==="cat about"){print(JSON.stringify(profile,null,2));return}
       if(cmd==="cat capabilities.json"){print(JSON.stringify(capabilities,null,2));return}
