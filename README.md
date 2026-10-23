@@ -1,15 +1,30 @@
 <div align="center">
 
-<a href="./docs/living-machine/index.html"><img src="./assets/living-machine-banner.svg" width="100%" alt="Pedro Belentani — neon red code rain, black glass and living machine eye"></a>
+<a href="./docs/living-machine/index.html"><img src="./assets/profile-terminal.svg" width="100%" alt="BELENTANI living machine — English-first interactive terminal preview. Click to inspect the app source."></a>
 
 # PEDRO BELENTANI
 **AI Systems · Product Engineering · Creative Technology**
 
 *Barcelona metro · Brazilian perspective · ES / PT-BR / EN*
 
-[**Professional portfolio**](https://belentani.es) · [**Living Machine**](./docs/living-machine/index.html) · [**Useful Studio**](./docs/living-machine/studio.html) · [**Projects**](#selected-work) · [**Contact**](mailto:belentani7pedro@gmail.com)
+[**Portfolio**](https://belentani.es) · [**Terminal source**](./docs/living-machine/index.html) · [**Studio source**](./docs/living-machine/studio.html) · [**Capabilities**](#technology--domains) · [**Selected work**](#selected-work) · [**Contact**](mailto:belentani7pedro@gmail.com)
 
 </div>
+
+---
+
+### Profile terminal — a working application, not a fake CLI
+
+The preview above is a GitHub-compatible SVG; **the real browser terminal** runs in the Living Machine application. It supports command history, simulated read-only navigation (`help`, `whoami`, `ls`, `cat capabilities.json`, `status`, `privacy`, `roadmap`), local JSON export and safe links to working tools. It cannot execute arbitrary system commands.
+
+**Run the full experience locally:**
+
+```bash
+python -m http.server 8000 --directory docs/living-machine
+# Open http://localhost:8000/index.html
+```
+
+**Publication boundary:** GitHub profile READMEs only appear publicly when the special repository named `belentani7` is public. This repository currently includes broader private project-management materials; do not make its entire commit history public without a privacy and secret review. GitHub also does not execute embedded HTML or JavaScript in README files. Deployment is a separate step and must be verified before calling the terminal live.
 
 ---
 
