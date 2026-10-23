@@ -1959,11 +1959,11 @@
       "repo": "belentani7/DEV-TOOLKIT",
       "archived": false,
       "visibility": "private",
-      "stage": "discovered",
-      "last_worked_at": null,
+      "stage": "blocked",
+      "last_worked_at": "2026-10-23",
       "commit_or_pr": null,
-      "evidence": null,
-      "next_action": null
+      "evidence": "Agent identified credential-scanner redaction issue; feature branch factory/secret-scanner-redaction-20261023 exists but same commit as main (0eca536dcd273feb839c31f75d5f49c5294221b6); no code committed or PR.",
+      "next_action": "Implement secret-scanner output redaction and tests in existing branch when GitHub write approvals permit."
     },
     {
       "repo": "belentani7/diamante-fotorealista",
@@ -4389,11 +4389,11 @@
       "repo": "belentani7/scroll-world",
       "archived": false,
       "visibility": "private",
-      "stage": "discovered",
-      "last_worked_at": null,
-      "commit_or_pr": null,
-      "evidence": null,
-      "next_action": null
+      "stage": "improved",
+      "last_worked_at": "2026-10-23",
+      "commit_or_pr": "https://github.com/belentani7/scroll-world/pull/1",
+      "evidence": "PR #1 has 3 changed files: URL validation in skills/scroll-world/references/scrub-engine.js, regression tests tests/scrub-engine-links.test.cjs, CI test workflow. GitHub Actions run 39905673489 concluded failure; do not call this validated.",
+      "next_action": "Investigate failing GitHub Actions jobs; confirm Node tests in runner; review PR before merge."
     },
     {
       "repo": "belentani7/secure-t",
