@@ -9,6 +9,7 @@ const root = path.resolve(__dirname, "../..");
 const html = fs.readFileSync(path.join(__dirname, "index.html"), "utf8");
 const readme = fs.readFileSync(path.join(root, "README.md"), "utf8");
 const svg = fs.readFileSync(path.join(root, "assets/living-machine-banner.svg"), "utf8");
+const terminalSvg = fs.readFileSync(path.join(root, "assets/profile-terminal.svg"), "utf8");
 const match = html.match(/<script>([\s\S]*?)<\/script>/);
 assert.ok(match, "HTML must include the app script");
 const js = match[1];
@@ -60,9 +61,11 @@ test("CSV export guards spreadsheet formula prefixes without breaking negatives"
   assert.equal(rows[0].value, "'=1+1");
   assert.equal(rows[1].value, "-25");
 });
-test("README references the real demo and animated asset", () => {
+test("README references a real demo and a GitHub-safe terminal preview", () => {
   assert.match(readme, /docs\/living-machine\/index\.html/);
-  assert.match(readme, /living-machine-banner\.svg/);
+  assert.match(readme, /assets\/profile-terminal\.svg/);
+  assert.match(terminalSvg, /<svg/);
+  assert.match(terminalSvg, /BELENTANI LIVING MACHINE/);
   assert.match(svg, /<svg/);
   assert.match(svg, /animateTransform/);
 });
