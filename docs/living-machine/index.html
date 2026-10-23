@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -254,7 +254,7 @@ footer{padding:100px 0 0;color:#9aaac1;font-size:12px;display:flex;justify-conte
     es:{hero:"Diseño sistemas donde convergen ingeniería, IA aplicada, criterio humano y dirección artística. No solo interfaces para mirar: herramientas que puedes abrir, probar y utilizar.",enter:"Entrar en la máquina viva ↗"},
     pt:{hero:"Crio sistemas onde engenharia, IA aplicada, sensibilidade humana e direção artística se encontram. Não apenas interfaces para olhar: ferramentas para abrir, testar e usar.",enter:"Entrar na máquina viva ↗"}
   };
-  let lang = "es",topZ=30,windows=new Map(),motion=true,recording=null;
+  let lang = "en",topZ=30,windows=new Map(),motion=true,recording=null;
   const setStored=(key,value)=>{try{localStorage.setItem(SAVEPREFIX+key,value)}catch(e){}};
   const getStored=(key)=>{try{return localStorage.getItem(SAVEPREFIX+key)||""}catch(e){return ""}};
   function toast(message,error){
@@ -288,7 +288,7 @@ footer{padding:100px 0 0;color:#9aaac1;font-size:12px;display:flex;justify-conte
   }
   renderProjects("");$("#projectSearch").addEventListener("input",e=>renderProjects(e.target.value));
   $("#langBtn").addEventListener("click",()=>{
-    lang=lang==="es"?"en":lang==="en"?"pt":"es";
+    lang=lang==="en"?"es":lang==="es"?"pt":"en";
     $("#hero-copy").textContent=I18N[lang].hero;$("#enter").textContent=I18N[lang].enter;
     document.documentElement.lang=lang;toast("Interface: "+lang.toUpperCase());
   });
@@ -583,27 +583,70 @@ footer{padding:100px 0 0;color:#9aaac1;font-size:12px;display:flex;justify-conte
   }
   function wireTerminal(win){
     const term=$("#console",win),entry=$("#terminalInput",win);
-    const outputs={
-      help:"Available: help, whoami, stack, projects, tools, ethics, date, clear, vista, contact, github, matrix",
-      whoami:"Pedro Belentani — AI systems · full-stack engineering · creative technology · Barcelona area · ES / PT-BR / EN.",
-      stack:"TypeScript / React / Node.js / Python / FastAPI / workflows / creative web / AI orchestration / human review.",
-      projects:"Explore the SELECTED WORK section on the main page. Some repositories are private or still being consolidated.",
-      tools:"Image converter | caption studio | media lab | JSON/CSV | SHA-256 | reel references | notes.",
-      ethics:"Principles: human oversight, explainable limits, privacy by design, accessibility, honest maturity labels.",
-      vista:"EASTER EGG: Aero-inspired floating window manager activated. This is a browser simulation, not Windows Vista.",
-      contact:"Portfolio: https://belentani.es | GitHub: https://github.com/belentani7",
-      github:"https://github.com/belentani7",
-      matrix:"The code rain is a visual layer. Press Ctrl+Alt+T to reopen this terminal."
+    const history=[];let cursor=0;const started=Date.now();
+    const profile={
+      name:"Pedro Belentani",
+      role:"AI systems · product engineering · creative technology",
+      location:"Barcelona area",
+      languages:["English","Spanish","Brazilian Portuguese"],
+      technologies:["TypeScript","JavaScript","React","Next.js","Node.js","Python","FastAPI","Docker","Git","CI","Three.js"],
+      domains:["Applied AI","Agent workflows","Trust & Safety","Education","Accessibility","Creative technology"],
+      status:"Working implementations, research and prototypes are distinguished; not all projects are public releases."
     };
-    function print(s){term.textContent+=s+"\n";term.scrollTop=term.scrollHeight}
-    print("BELENTANI LIVING MACHINE 1.0\nAero shell / local demo / no remote execution\nType 'help' to explore.\n");
-    entry.addEventListener("keydown",e=>{
-      if(e.key!=="Enter")return;const cmd=entry.value.toLowerCase().trim();entry.value="";
-      if(!cmd)return;print("B:\\\\> "+cmd);
+    const capabilities={
+      live_browser_tools:["Image conversion","Subtitle tools","CV clarity","Storyboard planning","Image to PDF","Audio to WAV","Video contact sheets","SHA-256"],
+      technical_practice:["Full-stack engineering","AI workflows","Human-in-the-loop design","Multilingual UX","Creative computing"],
+      explorations_not_certified_products:["Advanced agents","Creative pipelines","Autonomous operations","Large-scale orchestration"]
+    };
+    const commands={
+      help:"help | whoami | stack | skills | projects | tools | capabilities | status | privacy | roadmap | ethics | date | uptime | history | ls | cat about | cat capabilities.json | open studio | open portfolio | open github | open diagnostics | open projects | export profile | clear | vista | matrix",
+      whoami:profile.name+" — "+profile.role+" / "+profile.location+" / EN · ES · PT-BR.",
+      stack:profile.technologies.join(" / "),
+      skills:profile.domains.join(" / "),
+      projects:"Selected projects: Belentani.cv-ai, ManosAbiertas, open-school, lingua-aberta, Judas Experience and developer tools. Some source repositories are private.",
+      tools:"Live browser tools: "+capabilities.live_browser_tools.join(", ")+".",
+      capabilities:JSON.stringify(capabilities,null,2),
+      privacy:"Files are processed locally in the browser for the Studio tools. Microphone dictation, when used, may rely on the browser's speech provider. No remote shell or privileged system access.",
+      roadmap:"Vision: deeper AI orchestration, dependable integrations, real-life workflows and immersive creative tools. Roadmap items are not described as shipped.",
+      ethics:"Human oversight; testable software; accessibility; security; privacy; reversible changes; evidence before claims.",
+      matrix:"Code rain is a visual effect, not a real machine. Press Ctrl+Alt+T to open the terminal.",
+      vista:"Aero-inspired desktop: interactive web simulation, not Windows Vista.",
+      contact:"https://belentani.es  |  https://github.com/belentani7",
+      github:"https://github.com/belentani7"
+    };
+    function print(line){term.textContent+=String(line)+"\n";term.scrollTop=term.scrollHeight}
+    function run(raw){
+      const cmd=raw.trim().toLowerCase().replace(/\s+/g," ");
+      if(!cmd)return;
+      history.push(raw);cursor=history.length;print("B:\\> "+raw);
       if(cmd==="clear"){term.textContent="";return}
-      if(cmd==="date"){print(new Date().toString());return;}
-      if(cmd==="vista"){print(outputs.vista);openApp("vista");return;}
-      print(outputs[cmd]||"Unknown command. Type help.");
+      if(cmd==="date"){print(new Date().toString());return}
+      if(cmd==="uptime"){print("Browser session: "+Math.floor((Date.now()-started)/1000)+" seconds. This is not a remote server.");return}
+      if(cmd==="history"){print(history.map((c,i)=>(i+1)+": "+c).join("\n"));return}
+      if(cmd==="status"){print("Browser: "+navigator.userAgent+"\nSecure context: "+Boolean(window.isSecureContext)+"\nLocal storage: "+Boolean(window.localStorage)+"\nWeb Crypto: "+Boolean(window.crypto&&window.crypto.subtle)+"\nStatus: client-side demonstration, no backend session.");return}
+      if(cmd==="ls"){print("about.txt  capabilities.json  projects/  tools/  contact.txt  vision.txt  [virtual read-only entries]");return}
+      if(cmd==="cat about"){print(JSON.stringify(profile,null,2));return}
+      if(cmd==="cat capabilities.json"){print(JSON.stringify(capabilities,null,2));return}
+      if(cmd==="cat vision"){print(commands.roadmap);return}
+      if(cmd==="cat stack"){print(commands.stack);return}
+      if(cmd==="cat contact.txt"){print(commands.contact);return}
+      if(cmd==="open projects"){document.querySelector("#profile").scrollIntoView({behavior:"smooth"});print("Scrolling to selected projects.");return}
+      if(cmd.startsWith("open ")){
+        const destinations={studio:"./studio.html",diagnostics:"./diagnostics.html",portfolio:"https://belentani.es",github:"https://github.com/belentani7"};
+        const dest=destinations[cmd.slice(5)];
+        if(!dest){print("Unknown destination. Use: open studio | diagnostics | portfolio | github | projects");return}
+        window.open(dest,"_blank","noopener,noreferrer");print("Opening: "+dest);return;
+      }
+      if(cmd==="export profile"){downloadText(JSON.stringify({profile,capabilities,exported:new Date().toISOString()},null,2),"belentani-profile.json","application/json;charset=utf-8");print("Exported a local JSON profile snapshot.");return}
+      if(cmd==="vista"){print(commands.vista);openApp("vista");return}
+      print(commands[cmd]||"Unknown command. Type help.");
+    }
+    print("BELENTANI // LIVING MACHINE / OCT 2026\nLocal-first interactive profile. No real OS shell.\nType help; ArrowUp/ArrowDown navigate command history.\n");
+    entry.addEventListener("keydown",e=>{
+      if(e.key==="ArrowUp"&&history.length){e.preventDefault();cursor=Math.max(0,cursor-1);entry.value=history[cursor]||"";return}
+      if(e.key==="ArrowDown"&&history.length){e.preventDefault();cursor=Math.min(history.length,cursor+1);entry.value=history[cursor]||"";return}
+      if(e.key!=="Enter")return;
+      const raw=entry.value;entry.value="";run(raw);
     });
   }
   function wireSystem(win){
