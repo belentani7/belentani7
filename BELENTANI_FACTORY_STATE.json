@@ -149,11 +149,11 @@
       "repo": "belentani7/agentbox",
       "archived": false,
       "visibility": "private",
-      "stage": "discovered",
-      "last_worked_at": null,
-      "commit_or_pr": null,
-      "evidence": null,
-      "next_action": null
+      "stage": "improved",
+      "last_worked_at": "2026-10-23",
+      "commit_or_pr": "https://github.com/belentani7/agentbox/pull/3",
+      "evidence": "Draft PR #3, head f1600b30951a9de9e31fd76233a77f9c6a12888c: preserves same-name VM billing history; starts tracking immediately after Terraform apply; stops tracking only after successful destroy; adds 3 Go regression tests and CI go-tests job. Remote CI run 39907622861 failed with empty job steps, so tests NOT verified.",
+      "next_action": "Run go test ./... with Go 1.26 in a real available runner; investigate Actions no-steps failures; review draft PR. Separately audit orphan resource cleanup and cost rates."
     },
     {
       "repo": "belentani7/agentguard",
