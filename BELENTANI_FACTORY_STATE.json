@@ -1,0 +1,4929 @@
+{
+  "schema_version": 1,
+  "owner": "belentani7",
+  "generated_on": "2026-10-23",
+  "scope": "all GitHub repositories accessible under user:belentani7 at inventory time",
+  "definitions": {
+    "discovered": "Inventory only; not counted as touched",
+    "visited": "Project inspected with specific evidence and next-action recorded",
+    "improved": "Specific code/product change committed or PR opened (or justified no-change)",
+    "validated": "Test evidence documented; not necessarily shipped",
+    "archived_reviewed": "Read-only review, repository unchanged",
+    "blocked": "Specific actionable blocker and evidence recorded"
+  },
+  "policy": {
+    "new_repositories": false,
+    "archive_readonly": true,
+    "never_count_inventory_as_work": true,
+    "unique_repo_per_iteration": true,
+    "one_project_at_a_time": true,
+    "do_not_publish_secrets": true
+  },
+  "counts": {
+    "total": 490,
+    "archived": 218,
+    "active": 272
+  },
+  "repositories": [
+    {
+      "repo": "belentani7/03-DUCK-WEB-build-everything",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/03-DUCK-WEB-build-everything-drive",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/08-AION-WORKFORCE",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/11-PORTAL-CLIENTES-audited",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/20-demos",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/3d-portfolio",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/ace-step-extra",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/agent-control-plane",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/agent-linux",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/agent-orchestration-machine",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/agent-skills",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/agent-toolkit",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/agentbox",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/agentguard",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/ai-agent-complete",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/ai-command-center-level10",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/ai-fashion-app-frontend",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/ai-fashion-app-server",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/ai-gateway-lab",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/ai-music-production-lab-commerce-os",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/aider-project-extra",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/aion",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/aion-showcase",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/aion-unified",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/aion-workforce-enterprise",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/aPlan-de-Adquisici-n-de-Informaci-n-y-Ejecuci-n-Automatizada",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/aprende-brasil",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/archivo-fabi-privado",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/aReview-uploaded-workspace-archive",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/arte-que-veste",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/ArteQueVeste-Entrega-2026",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/artequeveste-store-audited",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/assurance-pvcu",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/audio-test-project",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/audio-visualizer",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/aurea3d-premium-archivo",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/AURUM-SHOES",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/automations",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/autonomous-flow",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/azul-forge",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/backend",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/barcelona-web-dev",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belent-cad",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/Belentani",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani_Omega",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani_omega-belentani7",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani_omega-live",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-01_proyectos",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-1000-canciones",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/Belentani-Agency-AI-Omega",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-archivo-zips-2026",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-artist-site-archive",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-artista-unified",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-atlas",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-audio-masters-privados",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-backup-privado",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-bucket",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-bucket-2",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/BELENTANI-BUILDAI-HTML-Y-FOTOS",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-chat-archive-2026",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-cloudcode-smoke",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-code-windows",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-complete-archive",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-conscious-machine",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-core",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/BELENTANI-CORP",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-cv-work",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-datos-abiertos",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-design-system",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-docs",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-ecosystem-assets",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-ecosystem-control",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-enterprise-machine",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-es-neon",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-estudi-digital-archive",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-experience",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-experience-tour",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-forge",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-gateway",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-github-catalogo-minimalista",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-infrastructure-core",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-java-lite",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-java-platform",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-judas-era-export",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/BELENTANI-JUDAS-ERA-FULLSTACK",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-judas-era-omega",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-judas-escape-mobile",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-judas-evolved",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-judas-experience",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-judas-monograph",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-judas-web",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-local",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-master-spec",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-max-potential",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-mcp-servers",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-monorepo",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-neural-icons",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-office-pack-2027",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-Omega",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-omega-core",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-omega-immersive-portal",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-omega-live",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-omega-master",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-omega-os-codex-07-31",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-omega-showcase",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-omega-template",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-omega-template-audited",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-omega-ultra",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-omega-versions-archive",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-omni-industrial",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-ops",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-os",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/BELENTANI-OS_2",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/BELENTANI-OS-canonical",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-platform",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-portfolio",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-portfolio-canon",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-python-template",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-saas-base",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-school-unificado",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/BELENTANI-SEPARACION",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-sovereign-core",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-space-portal",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-studio",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-studio-motion",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-studio-v2",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-the-experience",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-the-judas-experience",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-the-judas-experience-archive",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-unified-map",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-unified-master",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-unify",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-video-forge",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-video-forge-audited",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-video-lab",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-visual-engine",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-visual-engine-judas",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-voz",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-web",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-webgui-collections",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-webs-historicas",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani-workspace",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/Belentani.cv-ai",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani.es",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani.new",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani7",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani7-profile",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentani7.github.io",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentaniexperience",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/belentaniobjetos",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/Belentanislide",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/boutique-catalogo",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/bportal",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/BRAIN",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/build-everything",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/capacity-gate-autopilot",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/CARQUIDEC",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/carquidec-3",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/CARQUIDEC-ULTRA",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/cassandra-belentani-complex",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/cassandra-complex",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/catalonia-booking",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/caveman-skill",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/cinematic-prompt-formatter",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/circuit-ai-support",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/claude-skills",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/claude-skills-full",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/claude-skills-pack",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/claudecode-ritheshh",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/cli-that-thing",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/clon-manosabiertas",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/CODEX-OMEGA-SKILL",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/codigo-pdf-sepe",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/comfyui-json-compiler",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/Compa-ero-de-Windows-Similar-a-Widget-Flotante-en-Android",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/Construye-Belentani_-Coder-Local-Independiente-de-API-y-IA",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/contexto-repos",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/control-linux",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/coqui_tts",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/Crear-un-Prompt-para-Rellenar-Vac-os-en-el-Plan",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/creative-ai-hub",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/criba",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/Cruzando-el-charco",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/cruzando-el-charco-v2",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/cruzando-el-charco-web",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/ctg-psicologia-archive-2026",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/ctg-psicologia-next",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/cuidamar-privacidad-portable",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/cuidar-conecta-marcia",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/customer-agent",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/cv-ai-launch",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/deepseek-fix-verify",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/desktop",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/DEV-TOOLKIT",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/diamante-fotorealista",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/dict-academic-platform",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/docker-workforce",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-2000",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-2000-2",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-2026",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/DUCK-A-GEMA-1-LAB",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-apps",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-apps-web",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-belentani-os",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-docs",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-ecosystem",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-ecosystem-inspect",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-ecosystem-private",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-ecosystem-v2",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-full-studio-pro",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-hub",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-lab",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-lab-music-creator",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-lucas-artista",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-music-lab",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/DUCK-MUSIC-PRODUCER-v1.0.0",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/Duck-Omega",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-portfolio",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-producao-musical",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-producao-musical-conhecimento",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-repo-final",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-stdio",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-studio-delivery",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/DUCK-STUDIO-LOCAL-WIN11",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-studio-maker-export",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-studio-os-protected",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-studio-os-v2",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-studio-platform",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-studio-suite",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-studio-unified",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/DUCK-STUDIO-WIN11",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-unified-master",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-zion-apex-public",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-zion-ecosystem",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/DUCK-ZION-GITHUB",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-zion-portal-clientes",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/DUCK-ZION-PREMIUM",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-zion-premium-2",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-zion-studio",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duck-zion-studio-os",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/DuckHTML",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/duckweb-belentani-export",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/eau-noire",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/ecosistema-ia-pro-max-export-2026",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/edu-open-data",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/el-coste-de-descifrar",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/engine",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/entrenador-jorge-bcn",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/erosbot-whatsapp",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/escaneo-seguridad",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/eso-ai",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/evidence-ledger",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/failure-atlas",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/fashion-stylist-ai",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/fazluiz3d-ecosystem",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/fileforge-studio-export-20260822204142",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/firefly-studio-web",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/firelab",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/forge10",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/forja-enterprise",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/free-claude-code-alishahryar1",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/free-claude-code-simplesunny",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/fuera-del-relato",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/github-ai-terminal",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/google_translate",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/gpu-cost-optimizer",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/guia-ia-web",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/harmonia-hub",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/hbo-noir-icons",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/heyduck",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/heyduck-3",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/heyduck-belentani7",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/heyduck-github-12scripts",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/heyduck-rebuild",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/ia-creativa-lab",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/ilacaf-taller-ia",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/impeccable",
+      "archived": false,
+      "visibility": "public",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/infinita-visual-archive-10x",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/ivy-la-vie",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/joao-victor-portfolio",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/judas-access",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/judas-evolved",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/judas-experience",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/judas-experience-expanded",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/judas-experience-unificado",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/judas-experience-web",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/judas-omega-versiones",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/judas-scifi-experience",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/keyrotor",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/latam-europa",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/latent-consistency-bench",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/LEGACY-REVENUE-OS-2026",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/letra-office",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/LIBRO-2-INVESTIGACION",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/LIBRO-VIDA-CONDENSADO",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/lingua-aberta",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/lingua-aberta-empresa",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/linguaforge",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/linguaforge-v2",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/linux-power",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/lios-complete-conversation-archive",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/litellm-gateway",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/llm-vfx-orchestrator",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/local-agent",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/local-agent-2",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/local-agent-3",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/lumaquote",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/lumen-local-studio",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/lumena",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/lumina-ai-es",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/lupa",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/manos_abiertas_course_modules",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/manos-abiertas",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/manos-abiertas-2026",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/manos-abiertas-docs",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/manos-abiertas-release-netlify-20260812",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/ManosAbiertas",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/manosabiertas-38d5f",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/ManosAbiertas-backup-v1",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/manosabiertas-optimizacion-2",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/manosabiertas-repo",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/manosabiertas-vercel-20260813",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/manus-ai-skill-pack",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/manus-auditoria-chat-export-2026-08-21",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/maod-abertas",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/maos-abertas-linguaforge",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/marcia-os-v2",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/masajista-whatsapp-bot",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/mentorai-windows",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/meta-skill",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/MetaSkill",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/metricool-pvcu-dashboard-audited",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/michelle-relayze-web",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/mimo_patch",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/mimo-cli-auditoria",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/mimo-lh-archivo-completo",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/mimocode-skills",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/misaas",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/modern-creative-web",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/modern-creative-web-development",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/money-machine-24h",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/music-os",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/music-os-interface",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/music-os-interface-v2",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/music-os-pedro-belentani",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/MusicAI_Production",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/Myopenhands",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/n8n-instagram-automation",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/natalia-marinho-2",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/natalia-marinho-business",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/nataliamarinho",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/nataliamarinho-3",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/nataliamarinho-4",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/negocio-automatizacion",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/neon",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/Netlify",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/neural-git-tui",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/NEUROMARKETING-BRANDING-CIENTIFICO",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/nexus-chat",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/nexus-data",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/nexus-machine-ops",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/nexus-os",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/ngrok",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/niche-lang-app",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/NOIACORE",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/noiacore-art-lab",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/noiacore-lab",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/noiacore-lab-audited",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/noiacore-lab-consciousness",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/noiacore-labs",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/noiacore-model-guard",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/noiacore-private",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/noiacore-registry",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/noiacore-turbo-v2",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/noir-informatica-privada-barcelona",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/notebook-lite",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/ocr-legal-apex",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/Oculus-Tv",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/omega-core",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/omega-infinite-v4",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/omega-max-duck",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/omniagent",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/omniroute-opencode-provider",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/omniscraper",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/one",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/open-manus",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/open-school",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/open-school-private",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/opendesign",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/oss-compass",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/p30pro-camera",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/paea-enterprise",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/pbr-validator",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/pedro-audio",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/pedro-belentani-blog",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/pedro-belentani-blog-neural",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/pedro-premium-hub",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/phoneai",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/platform3-engine",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/powershell-session-bus",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/premium-effects",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/premium-effects-registry",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/presupuestador-fotografos-001",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/prisma26",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/PRIVATE-VOICE-LAB-2026-08-08",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/prometheus-omega-backup",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/proofmesh",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/ps-lm-local-powershell",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/PsychoDecode-AI",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/pvc-u-core",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/pvc-u-frontend",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/python-projects",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/qbp-core",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/qr-pro-enterprise",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/qwen-input-cache-max-context",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/qwencloud-ai",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/qwencloud-generator",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/raco-patricia-premium",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/reclamacion-openai-tokens-20260809",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/red-starfield-frontend",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/registro-proyectos-2026",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/replay",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/repopilot-gobernanza-repos",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/RESTAURANTE-CHINO-AGENTE",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/retro-belentani-os",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/Revisi-n-de-Herramientas-Python-en-GitHub-y-Locales",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/rh-fiscal-ultra-elite",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/rh-fiscal-ultra-web",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/rotakey",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/rotalog",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/saas-plasma",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/saas-plasma_2",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/saas-plasma-extracted",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/saas-starter",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/sabons-alejandra-site",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/safe-exec",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/scroll-world",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/secure-t",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/secure-t-audit-ready-kit",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/secure-t-platform",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/securetea-auditoria",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/sentinel-gates",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/skillforge",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/skills-registry",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/sonix-elite-ai-enterprise",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/SoulX-Singer",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/Steven-renovation",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/steven-renovation-2",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/strategic-agent",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/superpowers",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/superpowers-extra",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/superpowers-plan",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/swarm",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/system-one-local",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/system-one-local-belentani",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/system-one-local-portable",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/system-one-local-python-openclaw",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/system-one-unified",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/temporal-artifact-detector",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/tender-words-connect",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/tender-words-connect-main",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/tender-words-connect-v2",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/the-judas-experience",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/trama-trans-bcn",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/uaol-machine-realm",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/Unifica-y-Analiza-Mis-Repositorios-en-un-Nuevo-Privado",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/universal-impact-suite-index",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/universal-web-architecture-template",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/ux-academy-professional-program",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/vercel-ai-gateway",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/vertical-content-orchestrator",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/vibefix-1000",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/voice-ai-agency",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/voice-assistant",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/voice-bot-saas",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/voice-bot-saas-v2",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/voicebot-saas",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/voz-belentani",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/web",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/webcam-audio-visualizer",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/webs-lixo-archive",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/whatsapp-ai-simulator",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/william-game-cuarentena",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/william-recursos-educativos",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/william.game",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/WILLIAMSCHOOL",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/win11-workspace",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/workflow-orchestrator",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/xp",
+      "archived": false,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    },
+    {
+      "repo": "belentani7/zion-causal-intelligence",
+      "archived": true,
+      "visibility": "private",
+      "stage": "discovered",
+      "last_worked_at": null,
+      "commit_or_pr": null,
+      "evidence": null,
+      "next_action": null
+    }
+  ]
+}
