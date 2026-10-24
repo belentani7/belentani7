@@ -3,7 +3,7 @@
 <a href="./docs/living-machine/index.html"><img src="./assets/profile-terminal.svg" width="100%" alt="BELENTANI living machine — English-first interactive terminal preview. Click to inspect the app source."></a>
 
 # PEDRO BELENTANI
-**AI Systems · Product Engineering · Creative Technology**
+**AI-Augmented Product Engineering · Agentic Systems · Trust & Safety**
 
 *Barcelona metro · Brazilian perspective · ES / PT-BR / EN*
 
@@ -25,6 +25,27 @@ python -m http.server 8000 --directory docs/living-machine
 ```
 
 **Publication boundary:** GitHub profile READMEs only appear publicly when the special repository named `belentani7` is public. This repository currently includes broader private project-management materials; do not make its entire commit history public without a privacy and secret review. GitHub also does not execute embedded HTML or JavaScript in README files. Deployment is a separate step and must be verified before calling the terminal live.
+
+---
+
+## One-person, multi-discipline delivery · AI-augmented product engineering
+
+**Positioning:** AI-Augmented Full-Stack Product Engineer · Agentic Systems Orchestrator · Trust & Safety.  
+**Target role families:** Forward-Deployed Engineer (FDE), AI Solutions Engineer, AI Automation Engineer and Product Engineer. **Super IC** and **team-of-one** describe a working model, not a previously held corporate title or a claim that one human can replace every specialist.
+
+I take ownership of the path from an ambiguous problem to a testable product: discovery, technical scope, workflow mapping, interface, API, AI-agent coordination, human review, operational guardrails and practical delivery. I can learn unfamiliar tools quickly and select technologies for the task rather than impose one stack on every product. My prior professional experience in multilingual customer operations and Trust & Safety adds context about policies, exceptions, user needs and risk.
+
+| What I can cover in an AI-augmented engagement | Evidence & limits |
+| --- | --- |
+| Product discovery and scope | Independent planning, requirements and structured workflows; client-side FDE delivery outcomes must be demonstrated per engagement |
+| Full-stack product implementation | [Belentani CV Studio](https://github.com/belentani7/Belentani.cv-ai), React/TypeScript and API work; distinguish repo features from tested live deployment |
+| Agent and model orchestration | [Meta-Skill](https://github.com/belentani7/meta-skill), multi-model routing and cost-aware experimentation; no invented productivity ratios |
+| Safety, verification and deployment discipline | [SAFE-EXEC](https://github.com/belentani7/safe-exec) is a documented Python execution-safety prototype, **not** a certified production sandbox |
+| Multilingual education and product | [LinguaForge](https://github.com/belentani7/linguaforge) documents CEFR progression, SRS, source licensing and implementation limits |
+| Experience design and creative engineering | [Judas Experience](https://github.com/belentani7/judas-experience) combines WebGL, narrative interaction and testable static resources |
+| Human judgment, policy and escalations | Historical customer-service role at Sellbytel for Inditex; moderation and community work for TELUS/CCC (2018–2025) |
+
+**Operating promise:** broad technical ownership with clear scope, measurements and accountability. I will not claim 'replaced a 10-person team', 'fully production-ready', 'certified C1' or guaranteed ROI without supporting evidence.
 
 ---
 
