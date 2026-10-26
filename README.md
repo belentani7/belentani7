@@ -112,7 +112,7 @@ If you own media to be transcribed or downloaded, use its original export or an 
 | Terminal | Safe read-only command simulation and Easter eggs | Does not run operating-system commands |
 | Aero interface | Draggable, minimizable and maximizable windows | UI simulation, not a Windows emulator |
 
-**[Explore the actual application code](./docs/living-machine/index.html)** — 54 KB of HTML/CSS/JavaScript focused on usable local browser capabilities rather than fake download buttons.
+**[Explore the actual application code](./docs/living-machine/index.html)** — ~65 KB of HTML/CSS/JavaScript focused on usable local browser capabilities rather than fake download buttons.
 
 ### Run with local repository access
 
@@ -128,7 +128,7 @@ Open http://localhost:8000 in a modern browser. The local utility functions do n
 node --test docs/living-machine/*.test.cjs
 ~~~
 
-The targeted GitHub Actions workflow is in .github/workflows/living-machine-ci.yml. The suite covers JavaScript syntax, captions, CSV safety, ZIP structure/CRC-32, PDF cross-references, WAV PCM, video frame timing, three-language localization, static-only offline caching, interface markers and project references. The earlier independent Node.js validation passed **25 of 25 tests**; the expanded caption/video suite requires a fresh complete run before reporting a new total. PDF images, WAV audio and ZIP archives have additionally been read using independent software. Browser-specific codecs and end-to-end UI behavior still require real browser testing.
+The targeted GitHub Actions workflow is in .github/workflows/living-machine-ci.yml. The suite covers JavaScript syntax, captions, CSV safety, ZIP structure/CRC-32, PDF cross-references, WAV PCM, video frame timing, three-language localization, static-only offline caching, interface markers and project references. The current Node.js suite passes **39 of 39 tests** (verified locally with `node --test docs/living-machine/*.test.cjs`, 2026-10-25). PDF images, WAV audio and ZIP archives have additionally been read using independent software. Browser-specific codecs and end-to-end UI behavior still require real browser testing.
 
 > GitHub profiles render Markdown and images, not embedded JavaScript applications. The HTML must run on a website or a local server. SVG animation may vary by GitHub client; meaningful text also remains readable when motion is unavailable.
 

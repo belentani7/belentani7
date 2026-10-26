@@ -2,7 +2,9 @@
   "name": "belentani",
   "version": "0.6.0",
   "main": "desktop/src/main.js",
-  "bin": { "bellentani": "bellentani-cli.js" },
+  "bin": {
+    "bellentani": "bellentani-cli.js"
+  },
   "scripts": {
     "test": "cd desktop && node tests/audit.test.js && node bellentani-cli.js doctor && node bellentani-cli.js audit",
     "start": "electron .",
@@ -12,11 +14,16 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "packageManager": "pnpm@10.4.1",
   "description": "IDE agentico persistente y gobernado por PVC-U para Windows 11",
-  "repository": { "type": "git", "url": "https://github.com/belentani7/belentani7.git" },
-  "bugs": { "url": "https://github.com/belentani7/belentani7/issues" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/belentani7/belentani7.git"
+  },
+  "bugs": {
+    "url": "https://github.com/belentani7/belentani7/issues"
+  },
   "homepage": "https://github.com/belentani7/belentani7",
   "productName": "Bellentani",
   "devDependencies": {
@@ -29,14 +36,38 @@
   },
   "build": {
     "appId": "com.bellentani.desktop",
-    "files": ["desktop/src/**/*", "package.json", "node_modules/monaco-editor/min/**/*", "node_modules/monaco-editor/package.json", "node_modules/uuid/**/*", "node_modules/uuid/package.json"],
+    "files": [
+      "desktop/src/**/*",
+      "package.json",
+      "node_modules/monaco-editor/min/**/*",
+      "node_modules/monaco-editor/package.json",
+      "node_modules/uuid/**/*",
+      "node_modules/uuid/package.json"
+    ],
     "extraResources": [
-      { "from": "engine", "to": "engine", "filter": ["**/*", "!data/**", "!**/__pycache__/**"] },
-      { "from": "manos", "to": "manos" },
-      { "from": "windows", "to": "windows" }
+      {
+        "from": "engine",
+        "to": "engine",
+        "filter": [
+          "**/*",
+          "!data/**",
+          "!**/__pycache__/**"
+        ]
+      },
+      {
+        "from": "manos",
+        "to": "manos"
+      },
+      {
+        "from": "windows",
+        "to": "windows"
+      }
     ],
     "win": {
-      "target": ["nsis", "portable"],
+      "target": [
+        "nsis",
+        "portable"
+      ],
       "artifactName": "Bellentani-Setup-${version}-${arch}.${ext}"
     },
     "nsis": {
