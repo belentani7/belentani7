@@ -2,11 +2,11 @@ name: Deploy project landing page
 
 on:
   push:
-    branches:
-      - main
-      - master
+    branches: [main]
     paths:
       - "docs/**"
+      # Unit-test-only changes do not alter published website assets.
+      - "!docs/**/*.test.cjs"
       - ".github/workflows/deploy-pages.yml"
   workflow_dispatch:
 
@@ -16,22 +16,44 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: false
 
 jobs:
   deploy:
+    if: github.ref == 'refs/heads/main'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
+      - name: Require Pages to be enabled by a repository admin
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          if ! gh api "/repos/$GITHUB_REPOSITORY/pages" > "$RUNNER_TEMP/pages-site.json"; then
+            echo "::error title=GitHub Pages configuration required::Open Settings > Pages > Build and deployment > Source, and select GitHub Actions. The built-in GITHUB_TOKEN cannot create a Pages site."
+            {
+              echo "## Publication blocked: GitHub Pages is not configured"
+              echo "A repository administrator must open **Settings → Pages → Build and deployment → Source → GitHub Actions** once."
+              echo "Do not add extra PATs or deployment secrets to automate this one-time setting."
+              echo "After enabling Pages, run this workflow again using workflow_dispatch."
+            } >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi
+      - name: Checkout verified main
+        uses: actions/checkout@v5
         with:
-          enablement: true
+          persist-credentials: false
+      - name: Verify static site contents
+        run: |
+          test -s docs/index.html
+          test -s docs/living-machine/index.html
+          test -s docs/living-machine/studio.html
+      - name: Configure GitHub Pages without auto-enablement
+        uses: actions/configure-pages@v5
       - name: Upload static site
         uses: actions/upload-pages-artifact@v3
         with:

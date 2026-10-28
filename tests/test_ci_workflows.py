@@ -41,6 +41,16 @@ class WorkflowPolicyTests(unittest.TestCase):
             self.assertIn("persist-credentials: false", text)
             self.assertIn("head_repository.full_name == github.repository", text)
 
+    def test_pages_never_attempts_unauthorized_bootstrap(self):
+        text = workflow("deploy-pages.yml")
+        self.assertIn('gh api "/repos/$GITHUB_REPOSITORY/pages"', text)
+        self.assertNotIn("enablement: true", text)
+        self.assertIn("GitHub Pages configuration required", text)
+        self.assertIn("workflow_dispatch:", text)
+        self.assertIn("if: github.ref == 'refs/heads/main'", text)
+        self.assertIn('\"!docs/**/*.test.cjs\"', text)
+        self.assertIn("persist-credentials: false", text)
+
     def test_codeql_covers_python_without_duplicate_js_typescript_scans(self):
         text = workflow("codeql.yml")
         self.assertIn("language: [javascript-typescript, python]", text)
