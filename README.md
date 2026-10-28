@@ -7,7 +7,7 @@
 
 *Barcelona metro · Brazilian perspective · ES / PT-BR / EN*
 
-[**Portfolio**](https://belentani.es) · [**All 420 repositories**](https://belentani7.github.io/belentani-omg-portal/repos.html) · [**Terminal source**](./docs/living-machine/index.html) · [**Studio source**](./docs/living-machine/studio.html) · [**Capabilities**](#technology--domains) · [**Selected work**](#selected-work) · [**Contact**](mailto:belentani7pedro@gmail.com)
+[**Portfolio**](https://belentani.es) · [**All 420 repositories**](https://github.com/belentani7/belentani-omg-portal) · [**Terminal source**](./docs/living-machine/index.html) · [**Studio source**](./docs/living-machine/studio.html) · [**Capabilities**](#technology--domains) · [**Selected work**](#selected-work) · [**Contact**](mailto:belentani7pedro@gmail.com)
 
 </div>
 
@@ -15,7 +15,7 @@
 
 ## One index for all the code
 
-The **[Belentani Software Atlas](https://belentani7.github.io/belentani-omg-portal/)** is the single entry point: a curated atlas of the five mother repositories, the cloned engines and the working demos, plus a **[searchable index of all 420 repositories](https://belentani7.github.io/belentani-omg-portal/repos.html)** with category, language, visibility, live-demo and archive filters.
+The **[Belentani Software Atlas](https://github.com/belentani7/belentani-omg-portal)** is the single entry point: a curated atlas of the five mother repositories, the cloned engines and the working demos, plus a **[searchable index of all 420 repositories](https://github.com/belentani7/belentani-omg-portal)** with category, language, visibility, live-demo and archive filters.
 
 Use it to find the code, the demo or the context without guessing repository names. Private and archived repositories are listed honestly; access and status are shown, not implied.
 
