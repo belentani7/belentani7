@@ -7,7 +7,7 @@
 
 *Barcelona metro · Brazilian perspective · ES / PT-BR / EN*
 
-[**Portfolio**](https://belentani.es) · [**All 420 repositories**](https://github.com/belentani7/belentani-omg-portal) · [**Terminal source**](./docs/living-machine/index.html) · [**Studio source**](./docs/living-machine/studio.html) · [**Capabilities**](#technology--domains) · [**Selected work**](#selected-work) · [**Contact**](mailto:belentani7pedro@gmail.com)
+[**Portfolio**](https://belentani.es) · [**Repository atlas**](https://github.com/belentani7/belentani-omg-portal) · [**Terminal source**](./docs/living-machine/index.html) · [**Studio source**](./docs/living-machine/studio.html) · [**Capabilities**](#technology--domains) · [**Selected work**](#selected-work) · [**Contact**](mailto:belentani7pedro@gmail.com)
 
 </div>
 
@@ -15,7 +15,7 @@
 
 ## One index for all the code
 
-The **[Belentani Software Atlas](https://github.com/belentani7/belentani-omg-portal)** is the single entry point: a curated atlas of the five mother repositories, the cloned engines and the working demos, plus a **[searchable index of all 420 repositories](https://github.com/belentani7/belentani-omg-portal)** with category, language, visibility, live-demo and archive filters.
+The **[Belentani Software Atlas](https://github.com/belentani7/belentani-omg-portal)** is the single entry point: a curated atlas of the five mother repositories, the cloned engines and the working demos, plus a **[searchable repository index](https://github.com/belentani7/belentani-omg-portal)** with category, language, visibility, live-demo and archive filters.
 
 Use it to find the code, the demo or the context without guessing repository names. Private and archived repositories are listed honestly; access and status are shown, not implied.
 
@@ -32,7 +32,7 @@ python -m http.server 8000 --directory docs/living-machine
 # Open http://localhost:8000/index.html
 ```
 
-**Publication boundary:** GitHub profile READMEs only appear publicly when the special repository named `belentani7` is public. This repository currently includes broader private project-management materials; do not make its entire commit history public without a privacy and secret review. GitHub also does not execute embedded HTML or JavaScript in README files. Deployment is a separate step and must be verified before calling the terminal live.
+**Publication boundary:** This repository is already public. Never commit credentials, private project-management data or unreviewed personal materials here. GitHub renders profile Markdown and images, not executable HTML/JavaScript. A separate web deployment must be verified before any interactive terminal is described as publicly live.
 
 ---
 
@@ -239,6 +239,21 @@ Sou Pedro Belentani. Trabalho na interseção de desenvolvimento de software, si
 Minha abordagem combina **raciocínio técnico, sensibilidade cultural, atenção à experiência humana e direção audiovisual**. Tenho interesse especial em automação responsável, ferramentas práticas, educação acessível e experiências digitais que respeitem a intenção do usuário.
 
 Procuro criar sistemas que possam ser compreendidos, testados e utilizados — sem confundir experimentos com produtos finalizados.
+
+---
+
+## Profile integrity and continuous checks
+
+A lightweight, dependency-free [README health checker](./scripts/healthcheck.py) validates relative files and image alt text without pretending that external websites have been tested. Its [unit tests](./tests/test_healthcheck.py) and [weekly GitHub Actions workflow](./.github/workflows/profile-healthcheck.yml) publish a JSON artifact for review. External HTTPS probes are opt-in, bounded, allowlisted and reported as inconclusive rather than as broken when network access fails.
+
+```bash
+python -m unittest discover -s tests -p 'test_healthcheck.py' -v
+python scripts/healthcheck.py --json profile-health.json
+# Optional limited external availability hints:
+python scripts/healthcheck.py --links
+```
+
+Metrics and repository counts are not frozen into this profile. The [Software Atlas](https://github.com/belentani7/belentani-omg-portal) is the place to inspect the evolving inventory; access to private source is not implied.
 
 ---
 
