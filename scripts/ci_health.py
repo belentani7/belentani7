@@ -22,8 +22,8 @@ def at(value):
 
 
 def fetch_runs(repo, token, oldest, max_pages=5):
-    if not VALID_REPO.fullmatch(repo):
-        raise ValueError("Expected owner/name")
+    if not VALID_REPO.fullmatch(repo) or any(part in {".", ".."} for part in repo.split("/")):
+        raise ValueError("Expected safe owner/name")
     runs = []
     for page in range(1, max_pages + 1):
         query = urlencode({"branch": "main", "per_page": 100, "page": page})
@@ -131,7 +131,7 @@ def main(argv=None):
     p.add_argument("--markdown", type=Path, default=Path("ci-health.md"))
     p.add_argument("--fixture", type=Path, help="Offline test data: JSON with workflow_runs")
     args = p.parse_args(argv)
-    if not (1 <= args.days <= 30) or not VALID_REPO.fullmatch(args.repo):
+    if not (1 <= args.days <= 30) or not VALID_REPO.fullmatch(args.repo) or any(part in {".", ".."} for part in args.repo.split("/")):
         p.error("Expected --repo owner/name and --days in 1..30")
     now = datetime.now(timezone.utc)
     try:
