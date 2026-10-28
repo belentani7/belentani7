@@ -21,12 +21,14 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
       - uses: actions/setup-node@v5
         with:
           node-version: '22'
           package-manager-cache: false
       - name: Test browser utilities, accessibility markers and source integrity
-        run: node --test docs/living-machine/quality.test.cjs docs/living-machine/studio.test.cjs docs/living-machine/media.test.cjs docs/living-machine/i18n.test.cjs docs/living-machine/video.test.cjs docs/living-machine/diagnostics.test.cjs docs/living-machine/offline.test.cjs
+        run: node --test docs/living-machine/*.test.cjs
       - name: Validate source size and syntax
         run: |
           node --check docs/living-machine/quality.test.cjs
@@ -39,6 +41,8 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
       - uses: actions/setup-node@v5
         with:
           node-version: '22'
@@ -46,6 +50,43 @@ jobs:
       - name: Run dependency-free desktop tests
         run: node desktop/tests/audit.test.js
 
-# The separate codeql.yml and repo-security.yml own SAST and secrets scanning.
-# This workflow deliberately avoids non-existent pnpm lint/typecheck/format scripts,
-# invalid job-level hashFiles expressions and unconfigured deployment secrets.
+  profile-automation:
+    name: Python · profile automation and observability unit tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Run complete dependency-free Python test suite
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Validate Python source syntax
+        run: python -m compileall -q scripts tests
+
+  engine:
+    name: Mission Engine · API and integration tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+          cache-dependency-path: engine/requirements.txt
+      - name: Install locked runtime dependencies and API test client
+        run: |
+          python -m pip install -r engine/requirements.txt 'httpx==0.28.1'
+          python -m pip check
+      - name: Test local-only engine, REST API and packaging
+        run: |
+          python -m unittest discover -s engine/tests -p 'test_*.py' -v
+          python engine/tests/validate_distribution.py
+
+# No implicit pnpm cache or unconfigured deploy credentials.
+# CodeQL and secrets scanning remain separate required CI signals.
