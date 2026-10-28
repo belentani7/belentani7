@@ -1,0 +1,63 @@
+name: CI Recovery Observatory
+
+on:
+  workflow_run:
+    workflows: [CI, Build, Quality, CodeQL Analysis, Repository Security]
+    types: [completed]
+  schedule:
+    - cron: '37 */6 * * *'
+  workflow_dispatch:
+
+# workflow_run can be privileged: NEVER check out the triggering run's code,
+# download its artifacts, execute logs or grant any write permission here.
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: ci-observatory
+  cancel-in-progress: false
+
+jobs:
+  observe:
+    if: >-
+      github.event_name != 'workflow_run' ||
+      (
+        (github.event.workflow_run.conclusion == 'failure' ||
+         github.event.workflow_run.conclusion == 'timed_out') &&
+        github.event.workflow_run.head_branch == 'main' &&
+        github.event.workflow_run.head_repository.full_name == github.repository &&
+        (github.event.workflow_run.event == 'push' ||
+         github.event.workflow_run.event == 'schedule' ||
+         github.event.workflow_run.event == 'workflow_dispatch')
+      )
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout reviewed default branch only
+        uses: actions/checkout@v5
+        with:
+          ref: main
+          persist-credentials: false
+      - name: Setup Python for stdlib metrics
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Test observability invariants offline
+        run: python -m unittest discover -s tests -p test_ci_health.py -v
+      - name: Collect current and previous 7-day windows
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/ci_health.py --days 7 --json ci-health.json --markdown ci-health.md
+      - name: Publish actionable summary
+        run: cat ci-health.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Save evidence for inspection
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-health-report
+          path: |
+            ci-health.json
+            ci-health.md
+          if-no-files-found: warn
+          retention-days: 14
