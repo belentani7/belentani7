@@ -1,0 +1,45 @@
+name: Profile Readme Health
+on:
+  pull_request:
+    paths:
+      - README.md
+      - assets/**
+      - scripts/healthcheck.py
+      - tests/test_healthcheck.py
+      - .github/workflows/profile-healthcheck.yml
+  push:
+    branches: [main]
+    paths:
+      - README.md
+      - assets/**
+      - scripts/healthcheck.py
+      - tests/test_healthcheck.py
+      - .github/workflows/profile-healthcheck.yml
+  schedule:
+    - cron: '37 6 * * 1'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Unit tests
+        run: python -m unittest discover -s tests -p 'test_healthcheck.py' -v
+      - name: Static README health
+        run: python scripts/healthcheck.py --json profile-health.json
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: profile-health-report
+          path: profile-health.json
+          if-no-files-found: ignore
+          retention-days: 14
