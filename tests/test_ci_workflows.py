@@ -18,7 +18,7 @@ class WorkflowPolicyTests(unittest.TestCase):
                 count = len(re.findall(r"uses:\s*actions/setup-node@v5\b", text))
                 self.assertGreaterEqual(count, 1)
                 self.assertEqual(count, len(re.findall(r"package-manager-cache:\s*false\b", text)))
-                self.assertNotRegex(text, r"cache:\s*['\"]?pnpm['\"]?\s*$")
+                self.assertIsNone(re.search(r"^\s*cache:\s*['\"]?pnpm['\"]?\s*$", text, re.M))
 
     def test_manual_deployment_requires_reviewed_main(self):
         text = workflow("cd.yml")
