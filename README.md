@@ -253,6 +253,8 @@ python scripts/healthcheck.py --json profile-health.json
 python scripts/healthcheck.py --links
 ```
 
+**Review-only maintenance:** [Public metrics snapshot](./scripts/self_update.py), [repair recommendations](./scripts/self_repair.py) and [improvement proposals](./scripts/self_improve.py) run through the same read-only workflow. They produce dated JSON evidence, never fabricate metrics, never replace historical links automatically and never create GitHub issues without review. The public API snapshot excludes private repositories and may be unavailable during GitHub rate limiting.
+
 Metrics and repository counts are not frozen into this profile. The [Software Atlas](https://github.com/belentani7/belentani-omg-portal) is the place to inspect the evolving inventory; access to private source is not implied.
 
 ---

@@ -6,6 +6,8 @@ on:
       - assets/**
       - scripts/healthcheck.py
       - tests/test_healthcheck.py
+      - tests/test_profile_automation.py
+      - scripts/self_*.py
       - .github/workflows/profile-healthcheck.yml
   push:
     branches: [main]
@@ -14,6 +16,8 @@ on:
       - assets/**
       - scripts/healthcheck.py
       - tests/test_healthcheck.py
+      - tests/test_profile_automation.py
+      - scripts/self_*.py
       - .github/workflows/profile-healthcheck.yml
   schedule:
     - cron: '37 6 * * 1'
@@ -32,14 +36,25 @@ jobs:
         with:
           python-version: '3.13'
       - name: Unit tests
-        run: python -m unittest discover -s tests -p 'test_healthcheck.py' -v
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
       - name: Static README health
         run: python scripts/healthcheck.py --json profile-health.json
+      - name: Snapshot sourced public GitHub metrics
+        continue-on-error: true
+        run: python scripts/self_update.py --output profile-metrics.json
+      - name: Generate non-destructive review plans
+        run: |
+          python scripts/self_repair.py --input profile-health.json --output profile-repair-plan.json
+          python scripts/self_improve.py --health profile-health.json --metrics profile-metrics.json --output profile-improvement-plan.json
       - name: Upload report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: profile-health-report
-          path: profile-health.json
+          path: |
+            profile-health.json
+            profile-metrics.json
+            profile-repair-plan.json
+            profile-improvement-plan.json
           if-no-files-found: ignore
           retention-days: 14
