@@ -33,7 +33,7 @@ class RecoveryTests(unittest.TestCase):
 
     def test_retry_only_before_any_user_step(self):
         setup_failure = {"conclusion": "failure",
-                         "steps": [{"name": "Set up job", "conclusion": "failure"},
+                         "steps": [{"name": "Set up job", "conclusion": "failure", "number": 1},
                                    {"name": "Run tests", "conclusion": "skipped"}]}
         self.assertTrue(safe_to_retry([setup_failure]))
         self.assertFalse(safe_to_retry([{"conclusion": "failure", "steps": [
@@ -43,6 +43,9 @@ class RecoveryTests(unittest.TestCase):
             {"name": "Deploy", "conclusion": "failure"}]}]))
         self.assertFalse(safe_to_retry([{"conclusion": "timed_out", "steps": []}]))
         self.assertFalse(safe_to_retry([]))
+        # An attacker naming a user step "Set up job" cannot trigger retry.
+        self.assertFalse(safe_to_retry([{"conclusion": "failure", "steps": [
+            {"name": "Set up job", "conclusion": "failure", "number": 2}]}]))
 
 
 if __name__ == "__main__":
