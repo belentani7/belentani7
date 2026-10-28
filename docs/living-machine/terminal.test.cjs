@@ -75,5 +75,6 @@ test("terminal history navigation, safe links and JSON export work",()=>{
 test("README preview is static, not a false claim of public hosting",()=>{
   const readme=fs.readFileSync(path.resolve(__dirname,"../../README.md"),"utf8");
   assert.match(readme,/assets\/profile-terminal\.svg/);
-  assert.match(readme,/repository currently includes broader private/);
+  assert.match(readme,/Private and archived repositories are listed honestly/);
+  assert.match(readme,/GitHub profiles render Markdown and images, not embedded JavaScript applications/);
 });
