@@ -70,6 +70,23 @@ class CiHealthTests(unittest.TestCase):
             self.assertEqual(json.loads((root / "report.json").read_text())["status"], "unknown")
             self.assertIn("# CI observability", (root / "report.md").read_text())
 
+    def test_api_filters_workflow_events_server_side(self):
+        from contextlib import contextmanager
+        from io import BytesIO
+        urls = []
+
+        @contextmanager
+        def fake_open(request, timeout):
+            urls.append(request.full_url)
+            yield BytesIO(b'{"workflow_runs": []}')
+
+        with patch("ci_health.urlopen", fake_open):
+            runs, truncated = fetch_runs("belentani7/belentani7", "", NOW)
+        self.assertEqual(runs, [])
+        self.assertFalse(truncated)
+        self.assertEqual(len(urls), 3)
+        self.assertTrue(all("event=" in url and "branch=main" in url for url in urls))
+
     def test_api_rejects_invalid_repository_before_request(self):
         with patch("ci_health.urlopen") as opener:
             with self.assertRaises(ValueError):
