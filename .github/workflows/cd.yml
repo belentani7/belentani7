@@ -9,8 +9,13 @@ on:
         options: [staging, production]
 permissions:
   contents: read
+concurrency:
+  group: cd-reviewed-${{ inputs.environment }}
+  cancel-in-progress: false
 jobs:
   validate:
+    # Never deploy unreviewed workflow_dispatch refs with production secrets.
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
