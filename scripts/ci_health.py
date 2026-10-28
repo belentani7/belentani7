@@ -25,22 +25,30 @@ def fetch_runs(repo, token, oldest, max_pages=5):
     if not VALID_REPO.fullmatch(repo) or any(part in {".", ".."} for part in repo.split("/")):
         raise ValueError("Expected safe owner/name")
     runs = []
-    for page in range(1, max_pages + 1):
-        query = urlencode({"branch": "main", "per_page": 100, "page": page})
-        request = Request(
-            f"https://api.github.com/repos/{repo}/actions/runs?{query}",
-            headers={"Accept": "application/vnd.github+json",
-                     "User-Agent": "belentani-ci-health/1",
-                     **({"Authorization": f"Bearer {token}"} if token else {})},
-        )
-        with urlopen(request, timeout=20) as response:
-            batch = json.load(response)["workflow_runs"]
-        if not isinstance(batch, list):
-            raise ValueError("Invalid GitHub API response")
-        runs.extend(batch)
-        if len(batch) < 100 or (batch and at(batch[-1]["created_at"]) < oldest):
-            return runs, False
-    return runs, True
+    truncated = False
+    # Filter server-side to avoid unrelated Dependabot dynamic/PR runs exhausting
+    # the page budget. GitHub accepts one event filter per API request.
+    for event in sorted(EVENTS):
+        exhausted = True
+        for page in range(1, max_pages + 1):
+            query = urlencode({"branch": "main", "event": event,
+                               "per_page": 100, "page": page})
+            request = Request(
+                f"https://api.github.com/repos/{repo}/actions/runs?{query}",
+                headers={"Accept": "application/vnd.github+json",
+                         "User-Agent": "belentani-ci-health/1",
+                         **({"Authorization": f"Bearer {token}"} if token else {})},
+            )
+            with urlopen(request, timeout=20) as response:
+                batch = json.load(response)["workflow_runs"]
+            if not isinstance(batch, list):
+                raise ValueError("Invalid GitHub API response")
+            runs.extend(batch)
+            if len(batch) < 100 or (batch and at(batch[-1]["created_at"]) < oldest):
+                exhausted = False
+                break
+        truncated |= exhausted
+    return runs, truncated
 
 
 def metrics(runs, start, end):
