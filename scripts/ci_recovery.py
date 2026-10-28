@@ -35,7 +35,8 @@ def safe_to_retry(jobs):
         return False
     for job in failures:
         broken = [s for s in job.get("steps", []) if s.get("conclusion") == "failure"]
-        if len(broken) != 1 or broken[0].get("name") != "Set up job":
+        if (len(broken) != 1 or broken[0].get("name") != "Set up job"
+                or broken[0].get("number") != 1):
             return False
     return True
 
