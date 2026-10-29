@@ -11,14 +11,20 @@ def workflow(name):
 
 
 class WorkflowPolicyTests(unittest.TestCase):
-    def test_setup_node_v5_explicitly_disables_implicit_pnpm_cache(self):
-        for name in ("ci.yml", "cd.yml"):
+    def test_all_setup_node_steps_disable_unneeded_implicit_cache(self):
+        # Keep this invariant across future supported major action upgrades.
+        for name in ("ci.yml", "cd.yml", "build.yml", "quality.yml", "living-machine-ci.yml"):
             text = workflow(name)
             with self.subTest(workflow=name):
-                count = len(re.findall(r"uses:\s*actions/setup-node@v5\b", text))
-                self.assertGreaterEqual(count, 1)
-                self.assertEqual(count, len(re.findall(r"package-manager-cache:\s*false\b", text)))
-                self.assertIsNone(re.search(r"^\s*cache:\s*['\"]?pnpm['\"]?\s*$", text, re.M))
+                versions = re.findall(r"uses:\\s*actions/setup-node@v(\\d+)\\b", text)
+                self.assertGreaterEqual(len(versions), 1)
+                self.assertTrue(all(int(version) >= 5 for version in versions))
+                self.assertEqual(
+                    len(versions),
+                    len(re.findall(r"package-manager-cache:\\s*false\\b", text)),
+                    "Each dependency-free setup-node step must explicitly disable auto caching",
+                )
+                self.assertIsNone(re.search(r"^\\s*cache:\\s*['\\\"]?pnpm['\\\"]?\\s*$", text, re.M))
 
     def test_manual_deployment_requires_reviewed_main(self):
         text = workflow("cd.yml")
