@@ -48,7 +48,7 @@ class WorkflowPolicyTests(unittest.TestCase):
         self.assertIn("GitHub Pages configuration required", text)
         self.assertIn("workflow_dispatch:", text)
         self.assertIn("if: github.ref == 'refs/heads/main'", text)
-        self.assertIn('\"!docs/**/*.test.cjs\"', text)
+        self.assertIsNone(re.search(r"^\s*push:\s*$", text, re.M))
         self.assertIn("persist-credentials: false", text)
 
     def test_codeql_covers_python_without_duplicate_js_typescript_scans(self):
