@@ -51,6 +51,16 @@ class WorkflowPolicyTests(unittest.TestCase):
         self.assertIsNone(re.search(r"^\s*push:\s*$", text, re.M))
         self.assertIn("persist-credentials: false", text)
 
+    def test_secret_scanner_uses_supported_node24_actions_and_read_only_token(self):
+        text = workflow("repo-security.yml")
+        self.assertIn("uses: actions/checkout@v6", text)
+        self.assertIn("uses: gitleaks/gitleaks-action@v3", text)
+        self.assertIn("fetch-depth: 0", text)
+        self.assertIn("persist-credentials: false", text)
+        self.assertIn("contents: read", text)
+        self.assertNotIn("contents: write", text)
+        self.assertNotIn("pull_request_target", text)
+
     def test_codeql_covers_python_without_duplicate_js_typescript_scans(self):
         text = workflow("codeql.yml")
         self.assertIn("language: [javascript-typescript, python]", text)
