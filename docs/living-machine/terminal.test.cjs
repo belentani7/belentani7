@@ -72,9 +72,11 @@ test("terminal history navigation, safe links and JSON export work",()=>{
   h.type("anything","ArrowDown");
   assert.equal(h.entry.value,"");
 });
-test("README preview is static, not a false claim of public hosting",()=>{
+test("README editorial preview is static and links only the browser-tool sources",()=>{
   const readme=fs.readFileSync(path.resolve(__dirname,"../../README.md"),"utf8");
-  assert.match(readme,/assets\/profile-terminal\.svg/);
-  assert.match(readme,/Private and archived repositories are listed honestly/);
-  assert.match(readme,/GitHub profiles render Markdown and images, not embedded JavaScript applications/);
+  assert.match(readme,/assets\/profile-editorial-2026\.svg/);
+  assert.match(readme,/alt="Editorial cover for Pedro Belentani/);
+  assert.match(readme,/source links/);
+  assert.match(readme,/not proof of a public interactive deployment/);
+  assert.match(readme,/active products, research prototypes and archived experiments/);
 });

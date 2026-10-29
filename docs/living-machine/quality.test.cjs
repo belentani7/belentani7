@@ -10,6 +10,7 @@ const html = fs.readFileSync(path.join(__dirname, "index.html"), "utf8");
 const readme = fs.readFileSync(path.join(root, "README.md"), "utf8");
 const svg = fs.readFileSync(path.join(root, "assets/living-machine-banner.svg"), "utf8");
 const terminalSvg = fs.readFileSync(path.join(root, "assets/profile-terminal.svg"), "utf8");
+const heroSvg = fs.readFileSync(path.join(root, "assets/profile-editorial-2026.svg"), "utf8");
 const match = html.match(/<script>([\s\S]*?)<\/script>/);
 assert.ok(match, "HTML must include the app script");
 const js = match[1];
@@ -61,9 +62,14 @@ test("CSV export guards spreadsheet formula prefixes without breaking negatives"
   assert.equal(rows[0].value, "'=1+1");
   assert.equal(rows[1].value, "-25");
 });
-test("README references a real demo and a GitHub-safe terminal preview", () => {
+test("README links real local tools and an accessible static editorial cover", () => {
   assert.match(readme, /docs\/living-machine\/index\.html/);
-  assert.match(readme, /assets\/profile-terminal\.svg/);
+  assert.match(readme, /assets\/profile-editorial-2026\.svg/);
+  assert.match(readme, /not proof of a public interactive deployment/);
+  assert.match(heroSvg, /<svg/);
+  assert.match(heroSvg, /<title[^>]*>/);
+  assert.match(heroSvg, /<desc[^>]*>/);
+  // The historical terminal illustration remains available to the browser toolkit.
   assert.match(terminalSvg, /<svg/);
   assert.match(terminalSvg, /BELENTANI LIVING MACHINE/);
   assert.match(svg, /<svg/);
