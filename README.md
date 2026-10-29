@@ -1,268 +1,100 @@
 <div align="center">
 
-<a href="./docs/living-machine/index.html"><img src="./assets/profile-terminal.svg" width="100%" alt="BELENTANI living machine — English-first interactive terminal preview. Click to inspect the app source."></a>
+<img src="./assets/profile-editorial-2026.svg" width="100%" alt="Editorial cover for Pedro Belentani: AI product engineering, agentic systems, Trust and Safety, and creative computing on a dark, high-contrast background.">
 
-# PEDRO BELENTANI
-**AI-Augmented Product Engineering · Agentic Systems · Trust & Safety**
+# Pedro Belentani
 
-*Barcelona metro · Brazilian perspective · ES / PT-BR / EN*
+**AI-Augmented Product Engineering · Agentic Systems · Trust & Safety · Creative Technology**
 
-[**Portfolio**](https://belentani.es) · [**Repository atlas**](https://github.com/belentani7/belentani-omg-portal) · [**Terminal source**](./docs/living-machine/index.html) · [**Studio source**](./docs/living-machine/studio.html) · [**Capabilities**](#technology--domains) · [**Selected work**](#selected-work) · [**Contact**](mailto:belentani7pedro@gmail.com)
+*Independent builder · Brazilian perspective, Barcelona area · Português / Español / English / Català*
+
+[**Portfolio**](https://belentani.es) · [**Software atlas**](https://github.com/belentani7/belentani-omg-portal) · [**Selected work**](#selected-work) · [**Engineering evidence**](#engineering-evidence) · [**Contact**](#contact)
 
 </div>
 
 ---
 
-## One index for all the code
+## Engineering informed by human context
 
-The **[Belentani Software Atlas](https://github.com/belentani7/belentani-omg-portal)** is the single entry point: a curated atlas of the five mother repositories, the cloned engines and the working demos, plus a **[searchable repository index](https://github.com/belentani7/belentani-omg-portal)** with category, language, visibility, live-demo and archive filters.
+I design and build digital products at the intersection of **full-stack engineering, applied AI, operational safety and creative direction**. My work connects product research, accessible interfaces, APIs, agentic workflows, verification and documentation.
 
-Use it to find the code, the demo or the context without guessing repository names. Private and archived repositories are listed honestly; access and status are shown, not implied.
+Before building software independently, I worked in **multilingual customer operations and content moderation / Trust & Safety**. That experience shapes how I approach ambiguous requirements, international users, risk, policy constraints and recovery from failure.
 
----
+I work as an **AI-augmented multidisciplinary individual contributor**: defining scope, choosing technology, implementing, testing and refining products while keeping accountability and human judgment in the loop. The goal is useful, inspectable work—not volume for its own sake.
 
-### Profile terminal — a working application, not a fake CLI
+## Selected work
 
-The preview above is a GitHub-compatible SVG; **the real browser terminal** runs in the Living Machine application. It supports command history, simulated read-only navigation (`help`, `whoami`, `ls`, `cat capabilities.json`, `status`, `privacy`, `roadmap`), local JSON export and safe links to working tools. It cannot execute arbitrary system commands.
+Projects below link to source repositories. Features, testing evidence and publication status should always be checked in the corresponding repository.
 
-**Run the full experience locally:**
-
-```bash
-python -m http.server 8000 --directory docs/living-machine
-# Open http://localhost:8000/index.html
-```
-
-**Publication boundary:** This repository is already public. Never commit credentials, private project-management data or unreviewed personal materials here. GitHub renders profile Markdown and images, not executable HTML/JavaScript. A separate web deployment must be verified before any interactive terminal is described as publicly live.
-
----
-
-## One-person, multi-discipline delivery · AI-augmented product engineering
-
-**Positioning:** AI-Augmented Full-Stack Product Engineer · Agentic Systems Orchestrator · Trust & Safety.  
-**Target role families:** Forward-Deployed Engineer (FDE), AI Solutions Engineer, AI Automation Engineer and Product Engineer. **Super IC** and **team-of-one** describe a working model, not a previously held corporate title or a claim that one human can replace every specialist.
-
-I take ownership of the path from an ambiguous problem to a testable product: discovery, technical scope, workflow mapping, interface, API, AI-agent coordination, human review, operational guardrails and practical delivery. I can learn unfamiliar tools quickly and select technologies for the task rather than impose one stack on every product. My prior professional experience in multilingual customer operations and Trust & Safety adds context about policies, exceptions, user needs and risk.
-
-| What I can cover in an AI-augmented engagement | Evidence & limits |
+| Product | What it demonstrates |
 | --- | --- |
-| Product discovery and scope | Independent planning, requirements and structured workflows; client-side FDE delivery outcomes must be demonstrated per engagement |
-| Full-stack product implementation | [Belentani CV Studio](https://github.com/belentani7/Belentani.cv-ai), React/TypeScript and API work; distinguish repo features from tested live deployment |
-| Agent and model orchestration | [Meta-Skill](https://github.com/belentani7/meta-skill), multi-model routing and cost-aware experimentation; no invented productivity ratios |
-| Safety, verification and deployment discipline | [SAFE-EXEC](https://github.com/belentani7/safe-exec) is a documented Python execution-safety prototype, **not** a certified production sandbox |
-| Multilingual education and product | [LinguaForge](https://github.com/belentani7/linguaforge) documents CEFR progression, SRS, source licensing and implementation limits |
-| Experience design and creative engineering | [Judas Experience](https://github.com/belentani7/judas-experience) combines WebGL, narrative interaction and testable static resources |
-| Human judgment, policy and escalations | Historical customer-service role at Sellbytel for Inditex; moderation and community work for TELUS/CCC (2018–2025) |
+| **[Belentani CV Studio](https://github.com/belentani7/Belentani.cv-ai)** | React / Next.js document tooling, accessible editing, local drafts, consent-aware AI options, validation and private API safeguards. |
+| **[Manos Abiertas](https://github.com/belentani7/ManosAbiertas)** | Free practical education for people navigating digital and language barriers: courses, career tools, multilingual learning and accessible user journeys. |
+| **[Secure-T](https://github.com/belentani7/secure-t)** | An open cybersecurity and AI learning campus, with structured curricula, browser-based practice, offline-first considerations and regression tests. |
+| **[LinguaForge](https://github.com/belentani7/linguaforge)** | Language education architecture using CEFR/MCER progression, spaced repetition, multilingual routes and documented content provenance. |
+| **[Living Machine / Browser Studio](./docs/living-machine/studio.html)** | Browser-local media and productivity tools: image processing, subtitles, CV clarity checks, storyboards, audio and document utilities. [Application entry](./docs/living-machine/index.html). |
 
-**Operating promise:** broad technical ownership with clear scope, measurements and accountability. I will not claim 'replaced a 10-person team', 'fully production-ready', 'certified C1' or guaranteed ROI without supporting evidence.
+**Creative technology:** Alongside software, I develop original music, visual identities and interactive narrative experiences. This work informs my approach to typography, motion, storytelling and experiential UI. Explore the wider [BELENTANI portfolio](https://belentani.es).
 
----
+## Capabilities
 
-## A profile designed to be used, not only read
+| Product engineering | Applied AI & operations | Experience & creative computing |
+| --- | --- | --- |
+| React, Next.js, TypeScript, JavaScript | Agent workflows, model/tool orchestration | Interface systems, design direction |
+| Python, FastAPI, Node.js, SQL | Human review, safety boundaries, evaluation | Three.js, WebGL, browser media APIs |
+| Git, GitHub Actions, Docker, CI/CD | Privacy-aware flows, validation, automation | Accessible UX, multilingual content |
+| API contracts, testing, deployment gates | Trust & Safety, incident and policy context | Educational and audiovisual products |
 
-I build software and interactive experiences at the intersection of **engineering, applied artificial intelligence, human interpretation and artistic direction**.
+**Approach:** Understand the problem → map the user journey → define a bounded system → implement → test real paths → document limitations → publish only with evidence.
 
-My work spans full-stack product development, AI-agent workflows, automation, multilingual education, accessible interfaces and media-oriented tools. The common thread is not a framework: it is the ability to connect complex systems to the actual contexts of the people using them.
+## Experience behind the code
 
-I approach a product through several complementary lenses.
+**2026–present · Independent product builder & creative technologist — BELENTANI / NOIACORE.** Building and refining applied-AI, education, developer-tooling and creative-web projects. This is independent product work, not a claim of past enterprise engineering employment.
 
-- **Engineering:** architecture, interfaces, validation, tests, recovery paths and maintainability.
-- **AI systems:** orchestration, tool use, guardrails, practical automation and human oversight.
-- **Human analysis:** context, moderation, ambiguity, cultural interpretation and Trust & Safety.
-- **Creative production:** visual concepts, sound, audiovisual workflows, motion and immersive interfaces.
-- **Accessible communication:** clarity, language barriers, education and usable product behavior.
+**2018–2025 · Community management, content moderation & Trust & Safety.** Work with specialist digital-operations providers, including experience referenced in professional CV documentation for TELUS / CCC. Applied policy interpretation, contextual review, escalation and multicultural coordination.
 
-**My preferred outcome is a working product with honest limitations — not an impressive-looking promise that cannot be tested.**
+**2016–2018 · Multilingual customer support.** Customer operations through Sellbytel / Webhelp for Inditex group retail brands, dealing with purchases, after-sales questions and exceptions across Portuguese, Spanish and English.
 
-## ◈ Living Machine / The interactive tool laboratory
+**Languages:** Portuguese (native), Spanish (fluent), Catalan (professional), English (professional use; documented B2 certificate). My experience with language and cultural context informs product design beyond simple translation.
 
-<img src="./assets/terminal-header.svg" width="100%" alt="Code rain on a neon red command terminal">
+## Engineering evidence
 
-The new companion experience is an **Aero-inspired browser desktop**, not a Microsoft Windows Vista installation or virtual machine. It includes multiple draggable glass windows, a taskbar, Start menu, safe narrative terminal, code rain and local-first utilities.
+The strongest signal is not a large repository count; it is the **specific problems addressed and the changes available for inspection**.
 
-### Production Studio / eight working tools
+- **Privacy and product UX:** [private, accessible CV review](https://github.com/belentani7/Belentani.cv-ai/commit/258f0b3ff0ca40dcaf8f86bc537b48b6127b05e9) and [security header regression tests](https://github.com/belentani7/Belentani.cv-ai/commit/b1f67fdc7939dc26352bf75958da404a11aa5a61).
+- **Education and accessibility:** [accessible workshops](https://github.com/belentani7/ManosAbiertas/commit/8b97cd83223d494f13c87caed1b5e9ed0df1eede) and [browser journey checks](https://github.com/belentani7/ManosAbiertas/commit/b55ace590912cec8bc92f6e9e412283df48cfc32).
+- **Secure learning experience:** [institutional language and browser journeys](https://github.com/belentani7/secure-t/commit/45b07bf045e59f01efc931f2cf934110fdeb90e3).
+- **Engineering operations:** [measured observability and bounded recovery](https://github.com/belentani7/belentani7/commit/c2c21b608bc57fe7070d99aad4f6f59f4d5ac59c).
 
-**[Open the professional Studio source](./docs/living-machine/studio.html)** — a separate, responsive, modular utility workspace integrated with the original Living Machine. It uses no external runtime packages, analytics scripts, paid APIs or remote file processing.
+**[Read the commit evidence and methodology](./docs/engineering-evidence-2026-10-29.md).** A bounded review covered 110 recent GitHub commit entries across four public repositories. It examines chronology, feature work, tests, security and interface changes. Git timestamps **cannot** reliably measure human hours or prove deployment success, and the sample is not a count of all personal contributions.
 
-| Studio | Implemented behavior | Limit |
-|:--|:--|:--|
-| **Batch image converter** | Convert up to 20 browser-readable images to JPEG, PNG or WebP and export a standards-compatible ZIP | Image decoding and encoding depend on the browser; 100 MB total input limit |
-| **Subtitle time studio** | SRT/VTT time-shifting, format conversion, export to TXT and script-to-SRT drafting | Script-generated timing is an estimate that must be checked against the recording; not automatic transcription |
-| **CV clarity inspector** | Local structural checks for professional communication, sections and verifiable evidence | Heuristic review, deliberately **no fictitious ATS score** |
-| **Storyboard architect** | Plan editable camera shots, durations, movement, sound, export CSV or JSON | A planning utility, not a rendered video |
-| **Image color sampler** | Extract approximate dominant swatches from a local image and export reusable CSS variables | Not calibrated colorimetry |
-| **Image → PDF composer** | Compose A4 PDF pages from local images with JPEG metadata removal, page-fitting and margins | Requires a browser with Canvas JPEG encoding; not OCR |
-| **Audio → WAV lab** | Decode compatible audio locally using Web Audio and generate 16-bit PCM WAV with waveform and gain controls | Browser codec compatibility and audio memory limits apply |
-| **Video contact sheet** | Create a PNG contact sheet with 4, 9 or 16 timestamped frames from local video files | Decoding depends on browser codecs; does not fetch social media videos |
+## Working principles
 
-The Studio is separated into `studio.html`, `studio.css`, `studio.js`, reusable/testable `studio-core.js`, `pdf-core.js`, `audio-core.js`, `video-sheet.js`, `studio-i18n.js` and automated regression suites. The main navigation, tool explanations and core actions have hand-written **English, Spanish and Brazilian Portuguese** translations. Its page declares a strict **no-network Content Security Policy**. All image, CV, subtitle, color and export operations are executed locally within the browser.
+- **Product integrity:** a beautiful interface must serve a complete and understandable user journey.
+- **Verification:** use tests, source references and actual deployment checks; distinguish planned functionality from verified behavior.
+- **Accessibility and language:** support real reading, keyboard, mobile and international user needs.
+- **Safety and privacy:** handle consent, sensitive data, failure paths and automation boundaries deliberately.
+- **Craft and clarity:** cohesive design systems, readable code, maintainable documentation and reversible changes.
 
-An installable offline app shell (`manifest.webmanifest` + `sw.js`) caches only allowlisted static application files and refreshes them when connectivity returns; it does not cache files visitors select or generate. Installation requires HTTPS or a supported localhost environment. **An installable implementation is not a claim of an existing public deployment.**
+My repositories include active products, research prototypes and archived experiments. **Repository existence is not a claim of an audited, deployed or commercially adopted product.**
 
+## Explore further
 
-If you own media to be transcribed or downloaded, use its original export or an authorized source. The studio does not claim to bypass copyright, DRM, login walls or social networks' download restrictions.
+**[Software atlas](https://github.com/belentani7/belentani-omg-portal)** — a starting point for the broader code ecosystem, experiments and canonical project families.
 
-### Check your browser — local diagnostics
-
-**[Run the diagnostic page from a local server](./docs/living-machine/diagnostics.html)** to verify the local ZIP, PDF, WAV and subtitle engines, available image encoders, Web Audio, Web Crypto and offline-app support. The page reports optional browser features separately, can export a JSON report, and sends no diagnostic data to an external service. It does not replace live end-to-end testing or a green GitHub Actions run.
-
-### Real tools inside the machine
-
-| Tool | Working functionality | Explicit boundary |
-|:--|:--|:--|
-| Image converter | PNG, JPEG, WebP and resizing through Canvas | Browser codec and memory support vary |
-| Caption studio | Read and convert SRT / VTT subtitles and extract text | Not automatic transcription of uploaded video |
-| Microphone dictation | Browser speech recognition where available | Speech service may process audio remotely |
-| Media lab | Export video stills as PNG; record microphone audio | Local videos and supported Web APIs only |
-| Data workbench | JSON formatting, CSV conversion, text slugification | Designed for conventional tabular text |
-| File fingerprint | Local SHA-256 via Web Crypto | Requires supported secure browser context |
-| Reel research | Export organized references and creative research notes | Not an unauthorized reel downloader |
-| Private notebook | Browser-local notes and text exports | Clearing browser data also clears notes |
-| Terminal | Safe read-only command simulation and Easter eggs | Does not run operating-system commands |
-| Aero interface | Draggable, minimizable and maximizable windows | UI simulation, not a Windows emulator |
-
-**[Explore the actual application code](./docs/living-machine/index.html)** — ~65 KB of HTML/CSS/JavaScript focused on usable local browser capabilities rather than fake download buttons.
-
-### Run with local repository access
-
-~~~bash
-python -m http.server 8000 --directory docs/living-machine
-~~~
-
-Open http://localhost:8000 in a modern browser. The local utility functions do not require a paid API, login or server-side file upload.
-
-**Run the included quality checks:**
-
-~~~bash
-node --test docs/living-machine/*.test.cjs
-~~~
-
-The targeted GitHub Actions workflow is in .github/workflows/living-machine-ci.yml. The suite covers JavaScript syntax, captions, CSV safety, ZIP structure/CRC-32, PDF cross-references, WAV PCM, video frame timing, three-language localization, static-only offline caching, interface markers and project references. The current Node.js suite passes **39 of 39 tests** (verified locally with `node --test docs/living-machine/*.test.cjs`, 2026-10-25). PDF images, WAV audio and ZIP archives have additionally been read using independent software. Browser-specific codecs and end-to-end UI behavior still require real browser testing.
-
-> GitHub profiles render Markdown and images, not embedded JavaScript applications. The HTML must run on a website or a local server. SVG animation may vary by GitHub client; meaningful text also remains readable when motion is unavailable.
-
----
-
-<a id="selected-work"></a>
-## Selected work / evidence over repository volume
-
-I am consolidating many experiments, backups and prototypes into a coherent set of canonical projects. Repository existence alone does not demonstrate a finished release, commercial adoption or audited compliance. Below are **real repositories** and what their documented scope demonstrates.
-
-### Artificial intelligence, software engineering and safety
-
-**[Belentani.cv-ai](https://github.com/belentani7/Belentani.cv-ai)** — A Next.js / React document studio focused on CVs and other professional outputs. Its README describes Zod input validation, rate limiting and privacy-aware flow design.
-
-**[agentguard](https://github.com/belentani7/agentguard)** — A Trust & Safety-oriented architecture for AI agent policies, audit concepts, limits and observability. Architectural goals are deliberately distinguished from independently proven operational performance.
-
-**[agent-skills](https://github.com/belentani7/agent-skills)** — Developer workflow skills and tooling intended to make reusable capabilities easier to discover and operate.
-
-**[comfyui-json-compiler](https://github.com/belentani7/comfyui-json-compiler)** — Work connecting creative briefs with structured ComfyUI workflow generation and validation.
-
-### Education, accessibility and international context
-
-**[Open School](https://github.com/belentani7/open-school)** — An accessible educational frontend with locally stored progress, offline support and a documented optional backend. Its technical README separates working components from pending capabilities.
-
-**[ManosAbiertas](https://github.com/belentani7/ManosAbiertas)** — Practical education: AI, office skills, CV resources and guidance for people overcoming language and digital-access barriers.
-
-**[lingua-aberta](https://github.com/belentani7/lingua-aberta)** — Work around multilingual learning, progression and spaced repetition, informed by the difference between literal translation and real cultural interpretation.
-
-### Creative technology and audiovisual experiences
-
-**[The Judas Experience](https://github.com/belentani7/judas-experience-web)** — Immersive interface work with Three.js, shaders, creative direction and specification-driven development.
-
-**[Belentani Omega](https://github.com/belentani7/belentani_Omega)** — An experimental umbrella for interactive concepts, visual systems and the artistic universe; not equivalent to a single finished commercial product.
-
-**[Duck Studio Suite](https://github.com/belentani7/duck-studio-suite)** — Music-production related experimentation with tools and browser interfaces.
-
-*Some repositories are private, archived or currently being consolidated. Links show source identifiers, not guaranteed public access.*
-
----
-
-## Professional philosophy
-
-### Understanding systems before building systems
-
-My strength is often in the analytical layer before implementation: identifying the true requirement, distinguishing cause from symptom, seeing dependencies, and deciding how to keep a product understandable as its scope grows. That leads naturally to **recovery-oriented engineering, explicit state, smaller contracts and reversible changes**.
-
-### Trust & Safety is a human-context problem
-
-Experience in content moderation informs how I think about context, ambiguity, limits and review. AI assistance can accelerate operations, but accountability, meaningful consent, privacy and the ability to intervene remain design constraints.
-
-### Language is a product capability
-
-I work with **Spanish, Brazilian Portuguese and English**. Cross-cultural software needs more than translated labels. It requires attention to expectations, learning environments, trust, comprehension and different levels of digital literacy.
-
-### Audiovisual literacy matters in engineering
-
-Music, storytelling, motion and brand creation give me a different perspective on rhythm, attention, hierarchy and interaction. Creative tools work best when the system understands the intention of the creator and preserves meaningful control.
-
-### Ten practical principles
-
-1. Recover a project's original purpose before making architectural changes.
-2. Do not create repositories automatically from ideas or conversations.
-3. Distinguish canonical products, modules, experiments and backups.
-4. Treat functioning user journeys as more important than visual promises.
-5. Explain capability boundaries, external APIs and offline behavior.
-6. Minimize personal-data collection and avoid hidden uploads.
-7. Prefer inspectable, testable and reversible modifications.
-8. Build accessible, multilingual interfaces deliberately.
-9. Use automation and quality checks without eliminating human review.
-10. Label implementations honestly: **working / prototype / planned / unverified**.
-
----
-
-## Technology & domains
-
-**Engineering:** TypeScript, JavaScript, React, Next.js, Node.js, Vite, Python, FastAPI, Docker, Git and CI workflows.
-
-**AI & automation:** Agents and tool orchestration, input validation, human-in-the-loop controls, creative AI pipelines, local-model integrations and cost-conscious workflows.
-
-**Visual computing:** Three.js, browser graphics, responsive systems, motion direction, interaction prototyping, media APIs, sound and creative-production workflows.
-
-**Product thinking:** Accessibility, multilingual interfaces, Trust & Safety, educational technology, privacy-oriented design and practical documentation.
-
-I also explore Go, Java and broader backend architecture. These areas are not presented as having identical levels of depth or professional production experience.
-
----
-
-## En español
-
-Soy Pedro Belentani, desarrollador de software y sistemas de IA con intereses y trabajo en análisis contextual, moderación de contenido, automatización, educación accesible y producción audiovisual.
-
-Mi principal fortaleza es **conectar ámbitos que suelen tratarse por separado**: interpretar necesidades humanas, analizar su complejidad técnica, construir una arquitectura coherente y convertirla en una herramienta usable. Mi experiencia cultural y multilingüe influye en cómo diseño productos para personas con necesidades, contextos y conocimientos distintos.
-
-Mi objetivo no es presentar cientos de repositorios como cientos de productos terminados, sino mostrar con claridad **qué está construido, qué funciona y qué está en investigación**.
-
-## Em português brasileiro
-
-Sou Pedro Belentani. Trabalho na interseção de desenvolvimento de software, sistemas de inteligência artificial, análise contextual e tecnologia criativa.
-
-Minha abordagem combina **raciocínio técnico, sensibilidade cultural, atenção à experiência humana e direção audiovisual**. Tenho interesse especial em automação responsável, ferramentas práticas, educação acessível e experiências digitais que respeitem a intenção do usuário.
-
-Procuro criar sistemas que possam ser compreendidos, testados e utilizados — sem confundir experimentos com produtos finalizados.
-
----
-
-## Profile integrity and continuous checks
-
-A lightweight, dependency-free [README health checker](./scripts/healthcheck.py) validates relative files and image alt text without pretending that external websites have been tested. Its [unit tests](./tests/test_healthcheck.py) and [weekly GitHub Actions workflow](./.github/workflows/profile-healthcheck.yml) publish a JSON artifact for review. External HTTPS probes are opt-in, bounded, allowlisted and reported as inconclusive rather than as broken when network access fails.
+**[Living Machine source](./docs/living-machine/index.html)** · **[Browser Studio source](./docs/living-machine/studio.html)** — static, inspectable browser utilities. These repository file links are **source links**, not proof of a public interactive deployment. To run them locally:
 
 ```bash
-python -m unittest discover -s tests -p 'test_healthcheck.py' -v
-python scripts/healthcheck.py --json profile-health.json
-# Optional limited external availability hints:
-python scripts/healthcheck.py --links
+python -m http.server 8000 --directory docs/living-machine
+# Open http://localhost:8000/
 ```
 
-**Review-only maintenance:** [Public metrics snapshot](./scripts/self_update.py), [repair recommendations](./scripts/self_repair.py) and [improvement proposals](./scripts/self_improve.py) run through the same read-only workflow. They produce dated JSON evidence, never fabricate metrics, never replace historical links automatically and never create GitHub issues without review. The public API snapshot excludes private repositories and may be unavailable during GitHub rate limiting.
+**[Detailed historical profile (archive)](./docs/profile-archive-2026-10-29.md)** — preserved content and past technical descriptions; the root README is the current editorial entry point.
 
-Metrics and repository counts are not frozen into this profile. The [Software Atlas](https://github.com/belentani7/belentani-omg-portal) is the place to inspect the evolving inventory; access to private source is not implied.
+## Contact
 
----
+For product engineering, applied AI, accessible educational tools, workflow automation, Trust & Safety and creative computing:
 
-## Contact & collaboration
+[**belentani.es**](https://belentani.es) · [**GitHub**](https://github.com/belentani7) · [**Email**](mailto:belentani7pedro@gmail.com)
 
-For work involving AI systems, product architecture, multilingual accessibility, useful developer tools and ambitious creative technology:
-
-**[belentani.es](https://belentani.es)** · **[Email](mailto:belentani7pedro@gmail.com)** · **[GitHub](https://github.com/belentani7)**
-
-<div align="center"><sub>© 2026 Pedro Belentani · Context before code. Human purpose before automation. Design that earns its complexity.</sub></div>
+<sub>© 2026 Pedro Belentani · Systems thinking. Human context. Useful products.</sub>
