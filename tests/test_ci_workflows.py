@@ -11,14 +11,20 @@ def workflow(name):
 
 
 class WorkflowPolicyTests(unittest.TestCase):
-    def test_setup_node_v5_explicitly_disables_implicit_pnpm_cache(self):
-        for name in ("ci.yml", "cd.yml"):
+    def test_all_setup_node_steps_disable_unneeded_implicit_cache(self):
+        # Keep this invariant across future supported major action upgrades.
+        for name in ("ci.yml", "cd.yml", "build.yml", "quality.yml", "living-machine-ci.yml"):
             text = workflow(name)
             with self.subTest(workflow=name):
-                count = len(re.findall(r"uses:\s*actions/setup-node@v5\b", text))
-                self.assertGreaterEqual(count, 1)
-                self.assertEqual(count, len(re.findall(r"package-manager-cache:\s*false\b", text)))
-                self.assertIsNone(re.search(r"^\s*cache:\s*['\"]?pnpm['\"]?\s*$", text, re.M))
+                versions = re.findall(r"uses:\s*actions/setup-node@v(\d+)\b", text)
+                self.assertGreaterEqual(len(versions), 1)
+                self.assertTrue(all(int(version) >= 5 for version in versions))
+                self.assertEqual(
+                    len(versions),
+                    len(re.findall(r"package-manager-cache:\s*false\b", text)),
+                    "Each dependency-free setup-node step must explicitly disable auto caching",
+                )
+                self.assertIsNone(re.search(r"""^\s*cache:\s*['"]?pnpm['"]?\s*$""", text, re.M))
 
     def test_manual_deployment_requires_reviewed_main(self):
         text = workflow("cd.yml")
@@ -53,7 +59,9 @@ class WorkflowPolicyTests(unittest.TestCase):
 
     def test_secret_scanner_uses_supported_node24_actions_and_read_only_token(self):
         text = workflow("repo-security.yml")
-        self.assertIn("uses: actions/checkout@v6", text)
+        checkout_versions = re.findall(r"uses:\s*actions/checkout@v(\d+)\b", text)
+        self.assertEqual(len(checkout_versions), 1)
+        self.assertGreaterEqual(int(checkout_versions[0]), 6)
         self.assertIn("uses: gitleaks/gitleaks-action@v3", text)
         self.assertIn("fetch-depth: 0", text)
         self.assertIn("persist-credentials: false", text)
