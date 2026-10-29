@@ -42,10 +42,14 @@ class WorkflowPolicyTests(unittest.TestCase):
         self.assertIn("actions: write", retry)
         self.assertIn("contents: read", retry)
         self.assertNotIn("contents: write", retry)
+        self.assertNotIn("  workflow_run:", observe)
+        self.assertIn("  schedule:", observe)
+        self.assertIn("  workflow_dispatch:", observe)
+        self.assertIn("if: github.ref == 'refs/heads/main'", observe)
+        self.assertIn("head_repository.full_name == github.repository", retry)
         for text in (observe, retry):
             self.assertIn("ref: main", text)
             self.assertIn("persist-credentials: false", text)
-            self.assertIn("head_repository.full_name == github.repository", text)
 
     def test_pages_never_attempts_unauthorized_bootstrap(self):
         text = workflow("deploy-pages.yml")

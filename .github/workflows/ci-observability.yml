@@ -1,15 +1,13 @@
 name: CI Recovery Observatory
 
 on:
-  workflow_run:
-    workflows: [CI, Build, Quality, CodeQL Analysis, Repository Security]
-    types: [completed]
+  # Scheduled read-only metrics avoid a second workflow for each CI completion.
   schedule:
     - cron: '37 */6 * * *'
   workflow_dispatch:
 
-# workflow_run can be privileged: NEVER check out the triggering run's code,
-# download its artifacts, execute logs or grant any write permission here.
+# Operates only on scheduled/manual read-only GitHub metadata; no workflow_run
+# privilege or untrusted source checkout. Investigate failures in reports.
 permissions:
   contents: read
   actions: read
@@ -20,17 +18,7 @@ concurrency:
 
 jobs:
   observe:
-    if: >-
-      github.event_name != 'workflow_run' ||
-      (
-        (github.event.workflow_run.conclusion == 'failure' ||
-         github.event.workflow_run.conclusion == 'timed_out') &&
-        github.event.workflow_run.head_branch == 'main' &&
-        github.event.workflow_run.head_repository.full_name == github.repository &&
-        (github.event.workflow_run.event == 'push' ||
-         github.event.workflow_run.event == 'schedule' ||
-         github.event.workflow_run.event == 'workflow_dispatch')
-      )
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
