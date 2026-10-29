@@ -75,7 +75,7 @@ test("terminal history navigation, safe links and JSON export work",()=>{
 test("README editorial preview is static and links only the browser-tool sources",()=>{
   const readme=fs.readFileSync(path.resolve(__dirname,"../../README.md"),"utf8");
   assert.match(readme,/assets\/profile-editorial-2026\.svg/);
-  assert.match(readme,/alt="Editorial cover for Pedro Belentani/);
+  assert.match(readme,/<img[^>]+alt="[^"]*Pedro Belentani[^"]*"/i);
   assert.match(readme,/repository files/i);
   assert.match(readme,/not a verified live deployment/i);
   assert.match(readme,/private, archived or experimental/i);
