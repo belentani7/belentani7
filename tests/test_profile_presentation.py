@@ -79,6 +79,10 @@ class PublicProfilePresentationTests(unittest.TestCase):
         self.assertIn("cannot", self.readme.split("## Engineering evidence", 1)[1].lower())
         evidence = EVIDENCE.read_text(encoding="utf-8")
         self.assertIn("110 commit entries", evidence)
+        self.assertIn("8,199", evidence)
+        self.assertIn("7,034", evidence)
+        self.assertIn("1,033", evidence)
+        self.assertIn("not a distribution of hours", evidence)
         self.assertIn("not", evidence.lower())
 
     def test_professional_content_is_readable_and_bounded(self):
