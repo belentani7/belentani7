@@ -19,6 +19,9 @@ on:
       - assets/**
       - scripts/healthcheck.py
       - tests/test_healthcheck.py
+      - tests/test_profile_presentation.py
+      - docs/engineering-evidence-2026-10-29.md
+      - docs/profile-archive-2026-10-29.md
       - tests/test_profile_automation.py
       - scripts/self_*.py
       - .github/workflows/profile-healthcheck.yml
