@@ -43,13 +43,24 @@ class WorkflowPolicyTests(unittest.TestCase):
 
     def test_pages_never_attempts_unauthorized_bootstrap(self):
         text = workflow("deploy-pages.yml")
-        self.assertIn('gh api "/repos/$GITHUB_REPOSITORY/pages"', text)
-        self.assertNotIn("enablement: true", text)
-        self.assertIn("GitHub Pages configuration required", text)
+        preflight = (ROOT.parents[1] / "scripts" / "pages_preflight.py").read_text(encoding="utf-8")
         self.assertIn("workflow_dispatch:", text)
         self.assertIn("if: github.ref == 'refs/heads/main'", text)
-        self.assertIn('\"!docs/**/*.test.cjs\"', text)
+        self.assertIn("pages: read", text)
+        self.assertIn("pages: write", text)
+        self.assertIn("run: python scripts/pages_preflight.py", text)
+        self.assertIn("if: needs.preflight.outputs.ready == 'true'", text)
+        self.assertIn("ready: ${{ steps.pages.outputs.ready }}", text)
+        self.assertIn('"!docs/**/*.test.cjs"', text)
         self.assertIn("persist-credentials: false", text)
+        self.assertNotIn("enablement: true", text)
+        # Pages readiness must be a read-only API query; 404 is expected,
+        # while 403/5xx must not silently greenlight a deployment.
+        self.assertIn("request.Request(", preflight)
+        self.assertIn("if status == 404:", preflight)
+        self.assertIn("if status != 200:", preflight)
+        self.assertNotIn('method="POST"', preflight)
+        self.assertNotIn('method="PUT"', preflight)
 
     def test_codeql_covers_python_without_duplicate_js_typescript_scans(self):
         text = workflow("codeql.yml")
