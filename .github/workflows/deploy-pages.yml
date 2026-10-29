@@ -1,13 +1,9 @@
 name: Deploy project landing page
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - "docs/**"
-      # Unit-test-only changes do not alter published website assets.
-      - "!docs/**/*.test.cjs"
-      - ".github/workflows/deploy-pages.yml"
+  # Manual until repository Settings > Pages > Source is GitHub Actions.
+  # Vercel is the active site publisher for main; do not create failing Pages
+  # deployments automatically on unrelated docs / workflow changes.
   workflow_dispatch:
 
 permissions:
