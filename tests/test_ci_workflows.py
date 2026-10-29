@@ -59,7 +59,9 @@ class WorkflowPolicyTests(unittest.TestCase):
 
     def test_secret_scanner_uses_supported_node24_actions_and_read_only_token(self):
         text = workflow("repo-security.yml")
-        self.assertIn("uses: actions/checkout@v6", text)
+        checkout_versions = re.findall(r"uses:\s*actions/checkout@v(\d+)\b", text)
+        self.assertEqual(len(checkout_versions), 1)
+        self.assertGreaterEqual(int(checkout_versions[0]), 6)
         self.assertIn("uses: gitleaks/gitleaks-action@v3", text)
         self.assertIn("fetch-depth: 0", text)
         self.assertIn("persist-credentials: false", text)
