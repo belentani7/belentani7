@@ -24,7 +24,7 @@ class WorkflowPolicyTests(unittest.TestCase):
                     len(re.findall(r"package-manager-cache:\s*false\b", text)),
                     "Each dependency-free setup-node step must explicitly disable auto caching",
                 )
-                self.assertIsNone(re.search(r"^\s*cache:\s*['\\"]?pnpm['\\"]?\s*$", text, re.M))
+                self.assertIsNone(re.search(r"""^\s*cache:\s*['"]?pnpm['"]?\s*$""", text, re.M))
 
     def test_manual_deployment_requires_reviewed_main(self):
         text = workflow("cd.yml")
