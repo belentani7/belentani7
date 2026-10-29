@@ -65,7 +65,10 @@ test("CSV export guards spreadsheet formula prefixes without breaking negatives"
 test("README links real local tools and an accessible static editorial cover", () => {
   assert.match(readme, /docs\/living-machine\/index\.html/);
   assert.match(readme, /assets\/profile-editorial-2026\.svg/);
-  assert.match(readme, /not proof of a public interactive deployment/);
+  // Accept a clearly bounded local-source description without requiring
+  // identical editorial wording in every profile revision.
+  const toolsSection = readme.split("## Tools and experiments")[1] || "";
+  assert.match(toolsSection, /not[^.\\n]{0,120}(?:verified|live|deployment)/i);
   assert.match(heroSvg, /<svg/);
   assert.match(heroSvg, /<title[^>]*>/);
   assert.match(heroSvg, /<desc[^>]*>/);
