@@ -5,44 +5,55 @@ on:
     branches: [main]
     paths:
       - "docs/**"
-      # Unit-test-only changes do not alter published website assets.
       - "!docs/**/*.test.cjs"
+      - "scripts/pages_preflight.py"
+      - "tests/test_pages_preflight.py"
       - ".github/workflows/deploy-pages.yml"
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
   group: pages
   cancel-in-progress: false
 
 jobs:
-  deploy:
+  preflight:
     if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      pages: read
+    outputs:
+      ready: ${{ steps.pages.outputs.ready }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Verify publishing readiness without modifying repository settings
+        id: pages
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python scripts/pages_preflight.py
+
+  deploy:
+    needs: preflight
+    if: needs.preflight.outputs.ready == 'true'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     steps:
-      - name: Require Pages to be enabled by a repository admin
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          set -euo pipefail
-          if ! gh api "/repos/$GITHUB_REPOSITORY/pages" > "$RUNNER_TEMP/pages-site.json"; then
-            echo "::error title=GitHub Pages configuration required::Open Settings > Pages > Build and deployment > Source, and select GitHub Actions. The built-in GITHUB_TOKEN cannot create a Pages site."
-            {
-              echo "## Publication blocked: GitHub Pages is not configured"
-              echo "A repository administrator must open **Settings → Pages → Build and deployment → Source → GitHub Actions** once."
-              echo "Do not add extra PATs or deployment secrets to automate this one-time setting."
-              echo "After enabling Pages, run this workflow again using workflow_dispatch."
-            } >> "$GITHUB_STEP_SUMMARY"
-            exit 1
-          fi
       - name: Checkout verified main
         uses: actions/checkout@v5
         with:
