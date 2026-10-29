@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="394" viewBox="0 0 1200 394" role="img" aria-labelledby="title desc">
+<title id="title">Pedro Belentani — engineering, applied AI and creative technology</title>
+<desc id="desc">A restrained dark editorial banner identifying Pedro Belentani. AI product engineering, agentic systems, Trust and Safety, and creative computing.</desc>
+<defs>
+  <linearGradient id="back" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#101a22"/><stop offset="1" stop-color="#090f14"/>
+  </linearGradient>
+  <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#c6a27f"/><stop offset="1" stop-color="#76b6ad"/>
+  </linearGradient>
+</defs>
+<rect width="1200" height="394" rx="16" fill="url(#back)"/>
+<rect x="1" y="1" width="1198" height="392" rx="15" fill="none" stroke="#40505a"/>
+<rect x="48" y="47" width="36" height="4" fill="#c6a27f"/>
+<text x="101" y="54" fill="#b9c8ce" font-family="Arial,Helvetica,sans-serif" font-size="15" letter-spacing="4.5">BELENTANI  /  STUDIO &amp; ENGINEERING</text>
+<text x="1151" y="54" fill="#94aab2" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="14" letter-spacing="2">BARCELONA · 2026</text>
+<text x="49" y="175" fill="#faf5ed" font-family="Arial,Helvetica,sans-serif" font-size="82" letter-spacing="-4" font-weight="700">PEDRO</text>
+<text x="45" y="261" fill="#faf5ed" font-family="Arial,Helvetica,sans-serif" font-size="82" letter-spacing="-4" font-weight="700">BELENTANI</text>
+<text x="50" y="321" fill="#c8d6d9" font-family="Arial,Helvetica,sans-serif" font-size="20" letter-spacing=".5">Systems thinking. Human context. Useful products.</text>
+<line x1="769" y1="112" x2="769" y2="333" stroke="#52636d" stroke-width="1"/>
+<text x="807" y="137" fill="#c6a27f" font-family="Arial,Helvetica,sans-serif" font-size="14" letter-spacing="2.7">WORKING ACROSS</text>
+<text x="806" y="185" fill="#f6f1e9" font-family="Arial,Helvetica,sans-serif" font-size="20">AI PRODUCT ENGINEERING</text>
+<text x="806" y="225" fill="#f6f1e9" font-family="Arial,Helvetica,sans-serif" font-size="20">AGENTIC SYSTEMS</text>
+<text x="806" y="265" fill="#f6f1e9" font-family="Arial,Helvetica,sans-serif" font-size="20">TRUST &amp; SAFETY</text>
+<text x="806" y="305" fill="#f6f1e9" font-family="Arial,Helvetica,sans-serif" font-size="20">CREATIVE COMPUTING</text>
+<rect x="49" y="356" width="1102" height="2" fill="url(#accent)" opacity=".72"/>
+</svg>
