@@ -57,6 +57,22 @@ class WorkflowPolicyTests(unittest.TestCase):
         self.assertIsNone(re.search(r"^\s*push:\s*$", text, re.M))
         self.assertIn("persist-credentials: false", text)
 
+    def test_all_checkout_steps_use_supported_node24_action_without_persisted_credentials(self):
+        for name in (
+            "build.yml", "cd.yml", "ci-observability.yml", "ci-transient-recovery.yml",
+            "ci.yml", "codeql.yml", "deploy-pages.yml", "living-machine-ci.yml",
+            "profile-healthcheck.yml", "quality.yml", "repo-security.yml",
+        ):
+            text = workflow(name)
+            with self.subTest(workflow=name):
+                versions = re.findall(r"uses:\s*actions/checkout@v(\d+)\b", text)
+                self.assertGreaterEqual(len(versions), 1)
+                self.assertTrue(all(int(version) >= 6 for version in versions))
+                self.assertEqual(
+                    len(versions), len(re.findall(r"persist-credentials:\s*false\b", text))
+                )
+                self.assertNotIn("persist-credentials: true", text)
+
     def test_secret_scanner_uses_supported_node24_actions_and_read_only_token(self):
         text = workflow("repo-security.yml")
         checkout_versions = re.findall(r"uses:\s*actions/checkout@v(\d+)\b", text)
