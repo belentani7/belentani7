@@ -24,7 +24,7 @@ I work as an **AI-augmented multidisciplinary individual contributor**: defining
 
 ## Selected work
 
-Projects below link to source repositories. Features, testing evidence and publication status should always be checked in the corresponding repository.
+These six publicly accessible, unarchived repositories represent distinct areas of my work. The list is curated by product relevance and technical breadth, not GitHub stars or repository count. Features, tests and publication status should be checked in the corresponding source.
 
 | Product | What it demonstrates |
 | --- | --- |
@@ -32,7 +32,8 @@ Projects below link to source repositories. Features, testing evidence and publi
 | **[Manos Abiertas](https://github.com/belentani7/ManosAbiertas)** | Free practical education for people navigating digital and language barriers: courses, career tools, multilingual learning and accessible user journeys. |
 | **[Secure-T](https://github.com/belentani7/secure-t)** | An open cybersecurity and AI learning campus, with structured curricula, browser-based practice, offline-first considerations and regression tests. |
 | **[LinguaForge](https://github.com/belentani7/linguaforge)** | Language education architecture using CEFR/MCER progression, spaced repetition, multilingual routes and documented content provenance. |
-| **[Living Machine / Browser Studio](./docs/living-machine/studio.html)** | Browser-local media and productivity tools: image processing, subtitles, CV clarity checks, storyboards, audio and document utilities. [Application entry](./docs/living-machine/index.html). |
+| **[BELENTANI / Artist Experience](https://github.com/belentani7/belentani.es)** | Creative direction and engineering for an original music universe: a Three.js galaxy, interactive narrative chapters and browser-verified visual journeys documented in source. |
+| **[BELENTANI Software Atlas](https://github.com/belentani7/belentani-omg-portal)** | A navigation layer organizing product families, source references, repository discovery and project status without conflating experiments with releases. |
 
 **Creative technology:** Alongside software, I develop original music, visual identities and interactive narrative experiences. This work informs my approach to typography, motion, storytelling and experiential UI. Explore the wider [BELENTANI portfolio](https://belentani.es).
 
@@ -82,7 +83,7 @@ My repositories include active products, research prototypes and archived experi
 
 **[Software atlas](https://github.com/belentani7/belentani-omg-portal)** — a starting point for the broader code ecosystem, experiments and canonical project families.
 
-**[Living Machine source](./docs/living-machine/index.html)** · **[Browser Studio source](./docs/living-machine/studio.html)** — static, inspectable browser utilities. These repository file links are **source links**, not proof of a public interactive deployment. To run them locally:
+**[Living Machine source](./docs/living-machine/index.html)** · **[Browser Studio source](./docs/living-machine/studio.html)** — local-first media and productivity utilities including image conversion, subtitle timing, CV clarity review, storyboard planning and document/audio tooling. These repository file links are **source links**, not proof of a public interactive deployment. To run them locally:
 
 ```bash
 python -m http.server 8000 --directory docs/living-machine
