@@ -16,15 +16,15 @@ class WorkflowPolicyTests(unittest.TestCase):
         for name in ("ci.yml", "cd.yml", "build.yml", "quality.yml", "living-machine-ci.yml"):
             text = workflow(name)
             with self.subTest(workflow=name):
-                versions = re.findall(r"uses:\\s*actions/setup-node@v(\\d+)\\b", text)
+                versions = re.findall(r"uses:\s*actions/setup-node@v(\d+)\b", text)
                 self.assertGreaterEqual(len(versions), 1)
                 self.assertTrue(all(int(version) >= 5 for version in versions))
                 self.assertEqual(
                     len(versions),
-                    len(re.findall(r"package-manager-cache:\\s*false\\b", text)),
+                    len(re.findall(r"package-manager-cache:\s*false\b", text)),
                     "Each dependency-free setup-node step must explicitly disable auto caching",
                 )
-                self.assertIsNone(re.search(r"^\\s*cache:\\s*['\\\"]?pnpm['\\\"]?\\s*$", text, re.M))
+                self.assertIsNone(re.search(r"^\s*cache:\s*['\\"]?pnpm['\\"]?\s*$", text, re.M))
 
     def test_manual_deployment_requires_reviewed_main(self):
         text = workflow("cd.yml")
