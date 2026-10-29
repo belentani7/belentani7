@@ -67,7 +67,7 @@ The strongest signal is not a large repository count; it is the **specific probl
 - **Secure learning experience:** [institutional language and browser journeys](https://github.com/belentani7/secure-t/commit/45b07bf045e59f01efc931f2cf934110fdeb90e3).
 - **Engineering operations:** [measured observability and bounded recovery](https://github.com/belentani7/belentani7/commit/c2c21b608bc57fe7070d99aad4f6f59f4d5ac59c).
 
-**Activity with context (2026, through 29 October):** GitHub's account-level contribution calendar recorded **8,199 contributions**, including **7,034 commit contributions** and **1,033 pull-request contributions**. That activity reflects code, maintenance and AI-assisted or automated workflows; it **does not represent 8,199 completed features, verified production releases or human working hours**.
+**Activity with context (2026, through 29 October):** GitHub's account-level contribution calendar recorded **8,199 contributions**, including **7,034 commit contributions** and **1,033 pull-request contributions**. That activity reflects code, maintenance and AI-assisted or automated workflows; it **does not represent 8,199 completed features or verified production releases**. GitHub timestamps **cannot measure actual human working hours**.
 
 **[Inspect the engineering evidence and methodology](./docs/engineering-evidence-2026-10-29.md).** It combines this dated account-level snapshot with an independently reviewed sample of 110 commit records from four public repositories, documented technical improvements, limitations and source links.
 
