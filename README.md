@@ -18,7 +18,7 @@ I am a **Creative Technologist** working at the intersection of **full-stack eng
 
 My path runs through multilingual customer operations and Trust & Safety into product engineering, open learning and audiovisual art. My approach: **understand the problem, choose a proportionate architecture, build useful interactions and make limitations visible.** Technical breadth supports delivery; it does not replace real verification.
 
-[Read my personal story and five working principles (Spanish)](https://pedro-belentani-portfolio.honeybrook4.chatgpt.site/sobre-mi.html).
+[Read my personal story and five working principles (Spanish)](https://pedro-belentani-portfolio.honeybrook4.chatgpt.site/sobre-mi.html) · [Ten-point working manifesto](https://pedro-belentani-portfolio.honeybrook4.chatgpt.site/metodo.html#manifiesto).
 
 ## Selected work
 
