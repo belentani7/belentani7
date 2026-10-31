@@ -4,19 +4,21 @@
 
 # Pedro Belentani
 
-**AI-augmented product engineering · Agentic systems · Trust & Safety · Creative technology**
+**Creative Technologist · Applied AI · Open education · Creative computing · Trust & Safety**
 
 Brazilian perspective · Barcelona, Spain · English / Español / Português (BR)
 
-[Portfolio](https://belentani.es) · [Software atlas](https://github.com/belentani7/belentani-omg-portal) · [Selected work](#selected-work) · [Evidence](#engineering-evidence) · [Contact](#contact)
+[Professional portfolio](https://pedro-belentani-portfolio.honeybrook4.chatgpt.site) · [Artist universe](https://belentani.es) · [Software atlas](https://github.com/belentani7/belentani-omg-portal) · [Selected work](#selected-work) · [Evidence](#engineering-evidence) · [Contact](#contact)
 
 </div>
 
 ## What I build
 
-I design and develop tools at the intersection of **full-stack engineering, applied artificial intelligence, accessible education and creative direction**. My work connects product research, interfaces, typed APIs, AI-agent workflows, privacy, testing and the actual needs of the people using the software.
+I am a **Creative Technologist** working at the intersection of **full-stack engineering, applied artificial intelligence, accessible education and creative direction**. I make advanced technology easier to understand and use by connecting product research, interfaces, typed APIs, AI-agent workflows, privacy, testing and the actual needs of the people using the software.
 
-My approach: **understand the problem, choose a proportionate architecture, build useful interactions and make limitations visible.** Technical breadth supports delivery; it does not replace real verification.
+My path runs through multilingual customer operations and Trust & Safety into product engineering, open learning and audiovisual art. My approach: **understand the problem, choose a proportionate architecture, build useful interactions and make limitations visible.** Technical breadth supports delivery; it does not replace real verification.
+
+[Read my personal story and five working principles (Spanish)](https://pedro-belentani-portfolio.honeybrook4.chatgpt.site/sobre-mi.html).
 
 ## Selected work
 
