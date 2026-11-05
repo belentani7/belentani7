@@ -28,7 +28,7 @@
   "productName": "Bellentani",
   "devDependencies": {
     "electron": "^44.7.0",
-    "electron-builder": "^26.15.3"
+    "electron-builder": "^26.18.0"
   },
   "dependencies": {
     "monaco-editor": "^0.57.0",
