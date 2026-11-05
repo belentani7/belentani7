@@ -3,6 +3,7 @@ from __future__ import annotations
 import urllib.robotparser
 from urllib.parse import urlparse
 
+
 class CrawlPolicy:
     def __init__(self, user_agent: str, allow_external: bool = False):
         self.user_agent = user_agent; self.allow_external = allow_external; self._robots = {}

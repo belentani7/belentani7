@@ -5,6 +5,7 @@ import json
 import time
 from pathlib import Path
 
+
 class CacheStore:
     def __init__(self, root: str | Path, ttl: float = 86400):
         self.root = Path(root); self.root.mkdir(parents=True, exist_ok=True); self.ttl = ttl

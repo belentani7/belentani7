@@ -24,7 +24,7 @@ class WorkflowPolicyTests(unittest.TestCase):
                     len(re.findall(r"package-manager-cache:\s*false\b", text)),
                     "Each dependency-free setup-node step must explicitly disable auto caching",
                 )
-                self.assertIsNone(re.search(r"""^\s*cache:\s*['"]?pnpm['"]?\s*$""", text, re.M))
+                self.assertIsNone(re.search(r"""^\s*cache:\s*['"]?pnpm['"]?\s*$""", text, re.MULTILINE))
 
     def test_manual_deployment_requires_reviewed_main(self):
         text = workflow("cd.yml")
@@ -58,7 +58,7 @@ class WorkflowPolicyTests(unittest.TestCase):
         self.assertIn("GitHub Pages configuration required", text)
         self.assertIn("workflow_dispatch:", text)
         self.assertIn("if: github.ref == 'refs/heads/main'", text)
-        self.assertIsNone(re.search(r"^\s*push:\s*$", text, re.M))
+        self.assertIsNone(re.search(r"^\s*push:\s*$", text, re.MULTILINE))
         self.assertIn("persist-credentials: false", text)
 
     def test_all_checkout_steps_use_supported_node24_action_without_persisted_credentials(self):

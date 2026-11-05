@@ -3,14 +3,14 @@ import json
 import sys
 import tempfile
 import unittest
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 from ci_health import fetch_runs, main, markdown, metrics, summarize
 
-NOW = datetime(2026, 10, 28, 20, 0, tzinfo=timezone.utc)
+NOW = datetime(2026, 10, 28, 20, 0, tzinfo=UTC)
 
 
 def run(days_ago=1, outcome="success", event="push", branch="main", number=1):

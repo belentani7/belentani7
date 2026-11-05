@@ -7,7 +7,7 @@ from pathlib import Path
 
 from engine.core.mission import MissionEngine
 from engine.storage.database import Database
-from engine.storage.export import export_json, export_jsonl, export_csv
+from engine.storage.export import export_csv, export_json, export_jsonl
 
 ROOT = Path(__file__).resolve().parent
 DB = Database(os.getenv('BELLENTANI_DB', str(ROOT / 'data' / 'bellentani.db')))

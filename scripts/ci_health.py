@@ -5,7 +5,7 @@ import json
 import os
 import re
 import sys
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
@@ -18,7 +18,7 @@ TARGET = 95.0
 
 
 def at(value):
-    return datetime.fromisoformat(value.replace("Z", "+00:00")).astimezone(timezone.utc)
+    return datetime.fromisoformat(value.replace("Z", "+00:00")).astimezone(UTC)
 
 
 def fetch_runs(repo, token, oldest, max_pages=5):
@@ -141,7 +141,7 @@ def main(argv=None):
     args = p.parse_args(argv)
     if not (1 <= args.days <= 30) or not VALID_REPO.fullmatch(args.repo) or any(part in {".", ".."} for part in args.repo.split("/")):
         p.error("Expected --repo owner/name and --days in 1..30")
-    now = datetime.now(timezone.utc)
+    now = datetime.now(UTC)
     try:
         if args.fixture:
             payload = json.loads(args.fixture.read_text(encoding="utf-8"))

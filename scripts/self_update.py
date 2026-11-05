@@ -3,7 +3,7 @@
 import argparse
 import json
 import sys
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from urllib.request import Request, urlopen
 
@@ -15,7 +15,7 @@ def snapshot(username: str = 'belentani7') -> dict:
         raw = json.load(response)
     return {
         'source': endpoint,
-        'fetched_at_utc': datetime.now(timezone.utc).isoformat(),
+        'fetched_at_utc': datetime.now(UTC).isoformat(),
         'login': raw['login'], 'bio': raw.get('bio'),
         'public_repos': raw['public_repos'], 'followers': raw['followers'],
         'following': raw['following'],

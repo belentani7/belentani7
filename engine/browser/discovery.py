@@ -1,6 +1,7 @@
 from __future__ import annotations
 
-from urllib.parse import quote, urlparse, parse_qs
+from urllib.parse import parse_qs, quote, urlparse
+
 import requests
 from bs4 import BeautifulSoup
 

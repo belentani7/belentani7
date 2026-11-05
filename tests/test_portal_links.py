@@ -1,8 +1,8 @@
 """Regression tests for the branded public portal links; no external network."""
+import unittest
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit
-import unittest
 
 HTML = Path(__file__).resolve().parents[1] / "docs" / "index.html"
 

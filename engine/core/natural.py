@@ -3,7 +3,7 @@ from __future__ import annotations
 import re
 from urllib.parse import urlparse
 
-URL_RE = re.compile(r'https?://[^\s,;]+', re.I)
+URL_RE = re.compile(r'https?://[^\s,;]+', re.IGNORECASE)
 
 
 def parse_mission(text: str) -> dict:

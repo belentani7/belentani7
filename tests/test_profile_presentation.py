@@ -9,7 +9,6 @@ from pathlib import Path
 from urllib.parse import urlsplit
 from xml.etree import ElementTree as ET
 
-
 ROOT = Path(__file__).resolve().parents[1]
 README = ROOT / "README.md"
 HERO = ROOT / "assets" / "profile-editorial-2026.svg"
@@ -34,7 +33,7 @@ class PublicProfilePresentationTests(unittest.TestCase):
     def test_cover_is_local_accessible_and_not_a_tracker(self):
         self.assertTrue(HERO.is_file(), "The branded SVG file must exist")
         self.assertIn('src="./assets/profile-editorial-2026.svg"', self.readme)
-        img = re.search(r"<img\b[^>]+>", self.readme, re.I | re.S)
+        img = re.search(r"<img\b[^>]+>", self.readme, re.IGNORECASE | re.DOTALL)
         self.assertIsNotNone(img, "README needs its editorial image")
         self.assertRegex(img.group(0), r'\balt="[^"]{30,}"')
         self.assertNotRegex(img.group(0), r'\bsrc="https?://')

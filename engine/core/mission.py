@@ -1,16 +1,15 @@
 from __future__ import annotations
 
 import concurrent.futures
-import json
 import time
 from pathlib import Path
 from urllib.parse import urlparse
 
-from engine.browser.navigation import Navigator
 from engine.browser.discovery import discover
-from engine.scraper.extraction import extract
-from engine.intelligence.scoring import score_page
+from engine.browser.navigation import Navigator
 from engine.core.natural import parse_mission
+from engine.intelligence.scoring import score_page
+from engine.scraper.extraction import extract
 
 
 class MissionEngine:

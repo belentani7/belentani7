@@ -9,10 +9,10 @@ from urllib.parse import unquote, urlsplit
 from urllib.request import Request, urlopen
 
 MD_LINK = re.compile(r'!?\[[^\]]*\]\((<?[^)]+>?)\)')
-HTML_LINK = re.compile(r'\b(?:href|src)\s*=\s*["\']([^"\']+)["\']', re.I)
+HTML_LINK = re.compile(r'\b(?:href|src)\s*=\s*["\']([^"\']+)["\']', re.IGNORECASE)
 MD_IMAGE_MISSING_ALT = re.compile(r'!\[\s*\]\([^)]+\)')
-HTML_IMG = re.compile(r'<img\b[^>]*>', re.I | re.S)
-HTML_ALT = re.compile(r'\balt\s*=\s*["\']([^"\']*)["\']', re.I)
+HTML_IMG = re.compile(r'<img\b[^>]*>', re.IGNORECASE | re.DOTALL)
+HTML_ALT = re.compile(r'\balt\s*=\s*["\']([^"\']*)["\']', re.IGNORECASE)
 ALLOWED_EXTERNAL_HOSTS = {'github.com', 'belentani.es', 'www.belentani.es'}
 
 
@@ -23,7 +23,7 @@ def inspect(readme: Path, root: Path) -> dict:
     text = readme.read_text(encoding='utf-8')
     if not text.strip():
         findings.append({'severity': 'error', 'message': 'README is empty'})
-    if not re.search(r'^#\s+\S', text, re.M):
+    if not re.search(r'^#\s+\S', text, re.MULTILINE):
         findings.append({'severity': 'warning', 'message': 'No top-level Markdown heading'})
     if MD_IMAGE_MISSING_ALT.search(text):
         findings.append({'severity': 'error', 'message': 'Markdown image has empty alt text'})

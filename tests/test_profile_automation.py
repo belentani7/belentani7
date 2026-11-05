@@ -4,8 +4,8 @@ from pathlib import Path
 from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
-from self_repair import suggestions
 from self_improve import recommendations
+from self_repair import suggestions
 from self_update import snapshot
 
 
@@ -23,8 +23,8 @@ class ProfileAutomationTests(unittest.TestCase):
         self.assertTrue(any('do not invent' in p for p in proposal['proposals']))
 
     def test_snapshot_public_fields_and_source(self):
-        from io import BytesIO
         from contextlib import contextmanager
+        from io import BytesIO
         @contextmanager
         def fake_open(*args, **kwargs):
             yield BytesIO(b'{"login":"belentani7","public_repos":94,"followers":0,"following":0}')

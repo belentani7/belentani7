@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-import threading
 import tempfile
+import threading
 import unittest
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path

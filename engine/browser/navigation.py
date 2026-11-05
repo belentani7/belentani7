@@ -1,12 +1,12 @@
 from __future__ import annotations
 
-import asyncio
 import hashlib
 import time
-from dataclasses import dataclass, asdict
+from dataclasses import asdict, dataclass
 from urllib.parse import urljoin, urlparse
 
 import requests
+
 from engine.browser.policy import CrawlPolicy
 from engine.storage.cache import CacheStore
 
