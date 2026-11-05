@@ -19,7 +19,7 @@ export function ShaderAnimation({
     camera: THREE.Camera;
     scene: THREE.Scene;
     renderer: THREE.WebGLRenderer;
-    uniforms: any;
+    uniforms: unknown;
     animationId: number;
   } | null>(null);
 
