@@ -12,6 +12,18 @@ Brazilian perspective · Barcelona, Spain · English / Español / Português (BR
 
 </div>
 
+<!-- insignias: generado 2026-11-06 -->
+<p>
+  <img src="https://img.shields.io/website?url=https%3A%2F%2Fwww.belentani.es%2Fux-academy-professional-program%2F&label=UX%20Academy&style=flat-square" alt="UX Academy live">
+  <img src="https://img.shields.io/website?url=https%3A%2F%2Fwww.belentani.es%2Flingua-aberta%2F&label=Lingua%20Aberta&style=flat-square" alt="Lingua Aberta live">
+  <img src="https://img.shields.io/website?url=https%3A%2F%2Fmanos-abiertas-gwu4juveb-belentani7pedro-6758s-projects.vercel.app&label=Manos%20Abiertas&style=flat-square" alt="Manos Abiertas live">
+  <img src="https://img.shields.io/badge/despliegues-16%20productos%20en%20producci%C3%B3n-2bb673?style=flat-square" alt="16 despliegues">
+  <img src="https://img.shields.io/badge/repos%20activos-147-0e2035?style=flat-square" alt="repos activos">
+  <img src="https://img.shields.io/badge/quality%20baseline-premium--factory-1d45a5?style=flat-square" alt="premium-factory">
+  <img src="https://img.shields.io/badge/contacto-belentani7studio%40proton.me-8b5cf6?style=flat-square" alt="contacto">
+</p>
+
+
 ## What I build
 
 I am a **Creative Technologist** working at the intersection of **full-stack engineering, applied artificial intelligence, accessible education and creative direction**. I make advanced technology easier to understand and use by connecting product research, interfaces, typed APIs, AI-agent workflows, privacy, testing and the actual needs of the people using the software.
@@ -68,6 +80,28 @@ For technical details, inspect a project's current README, source history, tests
 The [Living Machine](./docs/living-machine/index.html) and [browser-based Production Studio](./docs/living-machine/studio.html) contain inspectable source for local-first media, document and creative utilities. These links open **repository files**, not a verified live deployment. Browser-specific features still need direct testing.
 
 The [previous extended profile](./docs/profile-archive-2026-10-29.md) is preserved for historical context, not for current availability claims.
+
+
+## GitHub en números
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=belentani7&show_icons=true&hide_border=true&bg_color=0e2035&title_color=6fd3a6&text_color=f4f7fb&icon_color=6fd3a6" height="165" alt="stats">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=belentani7&layout=compact&hide_border=true&bg_color=0e2035&title_color=6fd3a6&text_color=f4f7fb" height="165" alt="lenguajes">
+</div>
+<div align="center">
+  <img src="https://streak-stats.demolab.com?user=belentani7&hide_border=true&background=0E2035&ring=6FD3A6&currStreakLabel=6FD3A6&sideLabels=F4F7FB&currStreakNum=F4F7FB&sideNums=F4F7FB&dates=F4F7FB" width="95%" alt="racha">
+</div>
+<div align="center">
+  <a href="https://github.com/ryo-ma/github-profile-trophy">
+    <img src="https://github-profile-trophy.vercel.app/?username=belentani7&theme=algolia&no-frame=true&column=7" width="100%" alt="trofeos">
+  </a>
+</div>
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=belentani7&color=2bb673&style=flat-square&label=visitas" alt="visitas">
+  <img src="https://img.shields.io/github/followers/belentani7?style=flat-square&color=2bb673" alt="seguidores">
+  <img src="https://img.shields.io/github/stars/belentani7?affiliations=OWNER&style=flat-square&color=2bb673" alt="estrellas">
+</div>
+
 
 ## Contact
 
