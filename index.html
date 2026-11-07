@@ -1,94 +1,112 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Belentani — escaparate del ecosistema</title>
-<meta name="description" content="Portfolio del ecosistema Belentani: 38 productos auditados, 94.6% de cumplimiento normativo verificado.">
-<meta name="theme-color" content="#F5F2EC">
-<meta property="og:title" content="Belentani — escaparate del ecosistema">
-<meta property="og:description" content="Portfolio del ecosistema Belentani: 38 productos auditados, 94.6% de cumplimiento normativo verificado.">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="es_ES">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2314110F'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-size='19' fill='%23F5F2EC'%3EB%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Inter+Tight:wght@300..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pedro Belentani — productos con narrativa</title>
+  <meta name="description" content="Perfil de Pedro Belentani: productos completos con narrativa, web accesible y verificación reproducible.">
+  <meta name="theme-color" content="#0b0a09">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0a09'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='19' font-weight='700' fill='%23e0a35c' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+  <style>
+    :root{
+      --bg:#0b0a09; --bg-2:#131110; --ink:#f4efe7; --ink-dim:#a89f92;
+      --accent:#e0a35c; --accent-2:#7fa88b; --line:rgba(244,239,231,.14);
+      --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+      --sans:ui-sans-serif,"Segoe UI",Inter,system-ui,-apple-system,sans-serif;
+      --mono:ui-monospace,"Cascadia Mono",Consolas,monospace; --measure:62ch;
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased;background-image:radial-gradient(900px 520px at 82% -10%,rgba(224,163,92,.1),transparent 60%),radial-gradient(700px 480px at 5% 12%,rgba(127,168,139,.08),transparent 60%)}
+    body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E")}
+    a{color:var(--accent);text-underline-offset:4px}
+    a:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:2px}
+    .shell{position:relative;z-index:2;max-width:1120px;margin:0 auto;padding:0 24px}
+    .topbar{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-dim)}
+    .topbar a{text-decoration:none;color:var(--ink)}
+    .topbar nav{display:flex;gap:20px;flex-wrap:wrap}
+    .hero{min-height:78svh;display:grid;align-content:end;gap:28px;padding:clamp(72px,13vh,150px) 0 clamp(64px,10vh,120px);border-bottom:1px solid var(--line)}
+    .kicker{margin:0;font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+    h1,h2{font-family:var(--serif);font-weight:600;letter-spacing:-.03em}
+    h1{max-width:10ch;margin:0;font-size:clamp(3.2rem,10vw,7rem);line-height:.92}
+    h1 em{font-weight:400;color:var(--accent);font-style:normal}
+    .lede{max-width:var(--measure);margin:0;color:var(--ink-dim);font-size:clamp(1.08rem,1.7vw,1.32rem)}
+    .lede strong{color:var(--ink)}
+    .actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+    .button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;border:1px solid var(--accent);border-radius:999px;color:var(--bg);background:var(--accent);font-weight:700;text-decoration:none}
+    .button.secondary{color:var(--ink);background:transparent;border-color:var(--line)}
+    .button:hover{filter:brightness(1.08)}
+    section{padding:clamp(58px,9vh,104px) 0;border-bottom:1px solid var(--line)}
+    h2{max-width:16ch;margin:0 0 12px;font-size:clamp(2rem,4.5vw,4rem);line-height:1}
+    .section-copy{max-width:var(--measure);margin:0;color:var(--ink-dim)}
+    .story{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,8vw,112px);align-items:start}
+    .manifesto{display:grid;gap:0;margin:30px 0 0;padding:0;list-style:none;border-top:1px solid var(--line)}
+    .manifesto li{padding:18px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:10ch 1fr;gap:18px}
+    .manifesto b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-2)}
+    .release{background:var(--bg-2);padding:clamp(24px,4vw,48px);border:1px solid var(--line);border-radius:14px}
+    .release .label{margin:0 0 18px;font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-2)}
+    .release h3{margin:0 0 14px;font-family:var(--serif);font-size:clamp(1.8rem,3vw,3rem);line-height:1}
+    .release p{max-width:56ch;margin:0 0 22px;color:var(--ink-dim)}
+    .evidence{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:34px;background:var(--line);border:1px solid var(--line)}
+    .evidence div{min-height:150px;padding:22px;background:var(--bg)}
+    .evidence strong{display:block;margin-bottom:10px;color:var(--accent);font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+    .evidence span{color:var(--ink-dim);font-size:.95rem}
+    footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:48px 0 72px;color:var(--ink-dim);font-size:.9rem}
+    footer .mono{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+    .reveal{opacity:1;transform:none}
+    html.js .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+    html.js .reveal.in{opacity:1;transform:none}
+    @media (max-width:760px){.topbar{align-items:flex-start;gap:14px;flex-direction:column}.story{grid-template-columns:1fr}.evidence{grid-template-columns:1fr}.manifesto li{grid-template-columns:8ch 1fr}}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal,html.js .reveal{opacity:1;transform:none;transition:none}}
+    ::selection{background:var(--accent);color:var(--bg)}
+  </style>
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-<a class="skip" href="#main">Saltar al contenido</a>
-<header class="bar">
-  <div class="wrap bar__in">
-    <a class="mark" href="index.html">Belentani<span>.</span></a>
-    <nav class="nav" aria-label="Principal">
-      <a href="index.html" aria-current="page">Escaparate</a>
-      <a href="productos.html">Productos</a>
-      <a href="auditoria.html">Auditoría</a>
-      <a href="react.html">React</a>
-    </nav>
+  <div class="shell">
+    <header class="topbar">
+      <a href="index.html">Pedro Belentani</a>
+      <nav aria-label="Navegación principal"><a href="#release">Proyecto publicado</a><a href="#method">Criterio</a><a href="https://github.com/belentani7">GitHub</a></nav>
+    </header>
+    <main>
+      <section class="hero">
+        <p class="kicker reveal">Producto · narrativa · evidencia</p>
+        <h1 class="reveal">Lo completo se <em>puede recorrer.</em></h1>
+        <p class="lede reveal">Construyo productos donde la idea, la web y el repositorio cuentan la misma historia. Este perfil enseña <strong>un release público verificado</strong>, no una colección de promesas.</p>
+        <div class="actions reveal"><a class="button" href="#release">Entrar en el proyecto</a><a class="button secondary" href="https://github.com/belentani7">Ver GitHub</a></div>
+      </section>
+      <section id="release" aria-labelledby="release-title">
+        <div class="story">
+          <div class="reveal"><p class="kicker">Release 01</p><h2 id="release-title">Belentani — The Experience</h2><p class="section-copy">Un universo artístico interactivo donde Judas Era se convierte en una galaxia Three.js navegable. La experiencia reúne música, imagen y relato en cuatro capítulos: Genesis, Traicion, La deuda y Redencion.</p></div>
+          <article class="release reveal"><p class="label">Producto publicado</p><h3>Una obra que se entiende antes de explicarse.</h3><p>La entrada presenta el mundo; la galaxia ordena sus capítulos; cada escena mantiene el vínculo entre dirección creativa y navegación. El alcance público excluye masters, sesiones y material privado.</p><a class="button" href="https://github.com/belentani7/belentani.es">Abrir repositorio</a></article>
+        </div>
+      </section>
+      <section id="method" aria-labelledby="method-title">
+        <div class="story">
+          <div class="reveal"><p class="kicker">Criterio de publicación</p><h2 id="method-title">La calidad también se narra.</h2><p class="section-copy">Un producto entra en el escaparate cuando la superficie pública, el contenido y la evidencia técnica no se contradicen.</p></div>
+          <ul class="manifesto reveal">
+            <li><b>Narrativa</b><span>El usuario entiende qué es, para quién existe y qué puede recorrer.</span></li>
+            <li><b>Web</b><span>HTML semántico, responsive, accesible y sin dependencias accidentales.</span></li>
+            <li><b>Prueba</b><span>Instalación, tests, build y comprobaciones documentadas en el repositorio.</span></li>
+            <li><b>Límite</b><span>Lo privado, experimental o no verificado queda fuera del escaparate.</span></li>
+          </ul>
+        </div>
+        <div class="evidence reveal" aria-label="Evidencia del release">
+          <div><strong>Rama</strong><span>main limpio y alineado con origin/main.</span></div>
+          <div><strong>HTML</strong><span>Portada conforme al verificador local.</span></div>
+          <div><strong>Fuente</strong><span>README con instalación, pruebas, build y runtime.</span></div>
+        </div>
+      </section>
+    </main>
+    <footer><span>Barcelona · Pedro Belentani</span><span class="mono">Solo trabajo completo</span><a href="mailto:belentani7pedro@gmail.com">Contacto</a></footer>
   </div>
-</header>
-<main id="main">
-<section class="hero wrap">
-<p class="eyebrow reveal">Ecosistema Belentani · Barcelona</p>
-<h1 class="reveal">Arquitectura,<br>producto <em>y oficio</em>.</h1>
-<p class="hero__lead reveal">Un ecosistema de 38 productos donde cada repositorio se construye, se documenta y se audita con las mismas reglas: accesibilidad, semántica, rendimiento, seguridad y coherencia de marca. Este escaparate enseña el trabajo terminado, no la promesa.</p>
-<div class="hero__meta reveal"><span>Cumplimiento <b>94.6%</b></span><span>Productos <b>38</b></span><span>Archivos intervenidos <b>124</b></span><span>Tests en verde <b>7/7</b></span></div>
-</section>
-<section class="strip" aria-label="Cifras del ecosistema"><div class="wrap strip__in">
-<dl class="stat reveal"><dt>Cumplimiento normativo</dt><dd>94.6%<small>desde 76.8%</small></dd></dl>
-<dl class="stat reveal"><dt>Productos</dt><dd>38<small>8 al 100%</small></dd></dl>
-<dl class="stat reveal"><dt>Incumplimientos cerrados</dt><dd>124<small>remédidos uno a uno</small></dd></dl>
-<dl class="stat reveal"><dt>Archivos intervenidos</dt><dd>124<small>con copia y verificación</small></dd></dl>
-</div></section>
-<section class="sec wrap" id="destacados"><div class="sec__head">
-<p class="kicker reveal">Selección</p>
-<h2 class="reveal">Tres productos que explican el método.</h2>
-<p class="reveal">Cada uno resuelve un problema distinto con el mismo estándar: significado antes que decoración, movimiento solo cuando ayuda a entender.</p>
-</div><div class="feat">
-<article class="card reveal">
-<div class="card__top"><h3>belentani.es</h3><span class="card__cat">Arte y música</span></div>
-<p>Requires Node = 18.17 (engines in package.json) and pnpm pinned via packageManager (pnpm@10.17.1 — corepack enable resolves it).</p>
-<div class="card__foot"><span class="chip">HTML</span><span class="chip">React</span><span class="chip">TypeScript</span><span class="badge-score">97.6% cumplimiento</span></div>
-<a class="btn" href="https://github.com/belentani7/belentani.es" rel="noopener">Ver repositorio</a>
-</article>
-<article class="card reveal">
-<div class="card__top"><h3>CARQUIDEC</h3><span class="card__cat">Negocio y estudios</span></div>
-<p>Sitio del estudio de arquitectura y decoración de interiores CARQUIDEC (Hernando Carrillo — Barcelona · Colombia · Italia).</p>
-<div class="card__foot"><span class="chip">HTML</span><span class="chip">JavaScript</span><span class="chip">Python</span><span class="badge-score">76.2% cumplimiento</span></div>
-<a class="btn" href="https://github.com/belentani7/CARQUIDEC" rel="noopener">Ver repositorio</a>
-</article>
-<article class="card reveal">
-<div class="card__top"><h3>ManosAbiertas</h3><span class="card__cat">Educación</span></div>
-<p>Plataforma educativa gratuita: cursos de IA y Office, creador de CV y recursos para migrantes.</p>
-<div class="card__foot"><span class="chip">HTML</span><span class="chip">React</span><span class="chip">TypeScript</span><span class="badge-score">95.2% cumplimiento</span></div>
-<a class="btn" href="https://github.com/belentani7/ManosAbiertas" rel="noopener">Ver repositorio</a>
-</article>
-</div></section>
-<section class="sec wrap"><div class="sec__head">
-<p class="kicker reveal">Método</p>
-<h2 class="reveal">Auditar no es opinar: es medir y volver a medir.</h2>
-</div><div class="steps">
-<div class="step reveal"><h3>Medición</h3><p>Un motor de reglas objetivas recorre los 38 productos y devuelve cumple, incumple o no evaluable. Sin criterio subjetivo.</p></div>
-<div class="step reveal"><h3>Reparación</h3><p>Las reglas de criterio se editan con asistencia de modelo y revisión; las objetivas se cierran de forma determinista e idempotente.</p></div>
-<div class="step reveal"><h3>Verificación</h3><p>Cada cambio se vuelve a medir. Si un archivo empeora, se revierte solo. Resultado: 76.8% → 94.6%.</p></div>
-</div></section>
-<section class="cta wrap"><div class="reveal">
-<p class="kicker">Catálogo</p>
-<h2>Todo el ecosistema, producto a producto.</h2>
-<p>38 repositorios con su categoría, su stack real y su cumplimiento verificado.</p>
-<p style="margin-top:26px"><a class="btn btn--acc" href="productos.html">Abrir el catálogo →</a></p>
-</div></section></main>
-<footer>
-  <div class="wrap">
-    <span>© 2026 Pedro Belentani · ecosistema Belentani</span>
-    <span>38 productos auditados · 94.6% de cumplimiento normativo</span>
-  </div>
-</footer>
-<script src="data.js"></script>
-<script src="assets/site.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script>
+    (() => {
+      const items = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) { items.forEach((item) => item.classList.add('in')); return; }
+      const observer = new IntersectionObserver((entries) => entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('in'); observer.unobserve(entry.target); } }), { threshold: 0.12 });
+      items.forEach((item) => observer.observe(item));
+    })();
+  </script>
 </body>
 </html>

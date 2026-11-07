@@ -1,60 +1,55 @@
 ### Pedro Belentani
 
-**Senior Full-Stack AI Engineer & System Architect** · Barcelona
+**Creative Technologist · Applied AI · Product systems · Creative computing** · Barcelona
 
-Construyo sistemas completos —producto, infraestructura y criterio de calidad— y los dejo
-medidos. Este perfil no es una vitrina de experimentos: es un ecosistema de **38 productos** que comparten un mismo estándar verificable.
-
-> El trabajo terminado se demuestra con reglas, no con adjetivos: **94.6%** de cumplimiento medio sobre normativa propia, **124** archivos intervenidos y **7/7** tests en verde.
+Construyo productos completos: una idea con narrativa, una interfaz que se entiende y un
+repositorio que explica cómo se ejecuta y cómo se verifica. Este perfil muestra solo trabajo
+que ha pasado ese umbral público.
 
 ---
 
-## El escaparate
+## Proyecto publicado
 
-| | |
-|---|---|
-| **Productos en el ecosistema** | 38 |
-| **Cumplimiento verificado** | 94.6% (desde 76.8%) |
-| **Reglas aplicadas** | GH · WEB · ACC · SEO · COH · DEV · seguridad R6/R8 |
-| **Verificación** | motor de reglas propio, remidido tras cada reparación |
+| Producto | Qué es | Evidencia pública |
+|---|---|---|
+| [Belentani — The Experience](https://github.com/belentani7/belentani.es) | Universo artístico interactivo: una galaxia Three.js navegable, cuatro capítulos narrativos y un alcance público curado. | `main` limpio y alineado con `origin/main`; `index.html` conforme al verificador local; README con instalación, pruebas, build y comprobación de runtime. |
 
-## Productos
+### La narrativa
 
-Cada entrada es un producto con su propio README, su landing y su estado de cumplimiento.
+**Belentani — The Experience** convierte la era Judas en un espacio que se recorre, no en una
+colección de enlaces. La entrada presenta el mundo; la galaxia organiza sus capítulos; cada
+escena mantiene la relación entre música, imagen y relato. El producto público excluye masters,
+sesiones y material privado, y documenta qué se puede ejecutar y qué no se promete.
 
-| Producto | Disciplina | Stack | Cumple |
-|---|---|---|---|
-| [ArteQueVeste-Entrega-2026](https://github.com/belentani7/arte-que-veste) | Negocio y estudios | HTML, JavaScript | 100.0% |
-| [Belentani.cv-ai](https://github.com/belentani7/Belentani.cv-ai) | Herramientas | HTML, Python | 100.0% |
-| backend_aportaciones_software02 | Arte y música | Python | 100.0% |
-| backend_aportaciones_software03 | Arte y música | Python | 100.0% |
-| backend_aportaciones_software04 | Arte y música | Arte y música | 100.0% |
-| [ctg-psicologia-next](https://github.com/belentani7/ctg-psicologia-next) | Educación | React, JavaScript | 100.0% |
-| eso-ai | Varios | React, TypeScript | 100.0% |
-| [open-school](https://github.com/belentani7/open-school-private) | Plataformas | HTML, Python | 100.0% |
+[Abrir el proyecto](https://github.com/belentani7/belentani.es) · [Visitar el universo](https://belentani.es)
+
+## Criterio de publicación
+
+Un repositorio solo entra aquí cuando tiene, juntos:
+
+- narrativa de producto comprensible;
+- web completa y accesible, sin dependencias accidentales;
+- instrucciones reproducibles de instalación y uso;
+- pruebas o verificaciones ejecutadas;
+- límites, privacidad y estado público explicados sin exageraciones.
+
+El resto del ecosistema permanece fuera del escaparate hasta cumplir el mismo estándar. No
+presento código privado, prototipos, catálogos incompletos ni despliegues sin verificar como
+productos terminados.
 
 ## Cómo trabajo
 
-1. **Medir antes de opinar.** Toda superficie se contrasta contra reglas explícitas; lo no
-   evaluable se declara, no se aprueba por silencio.
-2. **Reparar con red.** Edición asistida por modelo con copia de seguridad, verificación por
-   regla y reversión automática cuando un cambio empeora el resultado.
-3. **Cerrar lo objetivo.** Longitudes, metadatos, semántica y sintaxis se resuelven de forma
-   determinista e idempotente; el criterio se reserva para lo que lo necesita.
-4. **No destruir.** Los duplicados van a cuarentena con manifiesto; nunca se borra evidencia.
+1. **Entender el producto.** La historia, el usuario y el límite público se escriben antes de
+   llamar terminado al código.
+2. **Construir la superficie.** La web es parte del producto: contenido real, responsive,
+   accesible y lista para ser leída sin contexto adicional.
+3. **Medir.** Tests, build, HTML, enlaces y ejecución se verifican con comandos reproducibles.
+4. **Publicar con criterio.** Solo `main`, solo proyectos completos y sin ocultar pendientes.
 
-## Stack
+## Tecnologías
 
-`TypeScript` · `React` · `Next.js` · `Node` · `Python` · `Astro` · `Three.js` · `GSAP` ·
-`Postgres` · `Docker` · `GitHub Actions` · agentes autónomos y LLM locales.
-
-## Escaparate
-
-- Portada: `index.html` — tesis, cifras y método.
-- Catálogo: `productos.html` — cada repositorio como producto.
-- Informe: `auditoria.html` — la auditoría completa, legible.
-- Variante: `react.html` — el catálogo como isla React 19.
+`TypeScript` · `React` · `Next.js` · `Node.js` · `Python` · `Three.js` · `GSAP` · `GitHub Actions`
 
 ---
 
-`Barcelona` · [GitHub](https://github.com/belentani7) · Disponible para arquitectura de producto y sistemas de IA en producción.
+`Barcelona` · [GitHub](https://github.com/belentani7) · [Contacto](mailto:belentani7pedro@gmail.com)
