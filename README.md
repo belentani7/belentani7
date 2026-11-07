@@ -1,112 +1,189 @@
 <div align="center">
 
-<img src="./assets/profile-editorial-2026.svg" width="100%" alt="Editorial banner for Pedro Belentani: AI product engineering, Trust and Safety, and creative computing.">
+<img src="./assets/profile-senior-systems-2026.svg" alt="Pedro Belentani — Senior Full-Stack AI Engineer and Systems Architect. Trust &amp; Safety, explainable AI and creative systems." width="100%" />
 
-# Pedro Belentani
+<br/>
 
-**Creative Technologist · Applied AI · Open education · Creative computing · Trust & Safety**
+### Senior Full-Stack AI Engineer & Systems Architect
 
-Brazilian perspective · Barcelona, Spain · English / Español / Português (BR)
+**Agentic Systems · Explainable AI · Trust & Safety · Creative Technology**
 
-[Professional portfolio](https://pedro-belentani-portfolio.honeybrook4.chatgpt.site) · [Artist universe](https://belentani.es) · [Software atlas](https://github.com/belentani7/belentani-omg-portal) · [Selected work](#selected-work) · [Evidence](#engineering-evidence) · [Contact](#contact)
+*Engineering with evidence. Intelligence with human context. Creativity with purpose.*
+
+**Barcelona, Spain** · English / Español / Português (BR) / Català
+
+[**Professional Portfolio**](https://pedro-belentani-portfolio.honeybrook4.chatgpt.site) · [**LinkedIn**](https://linkedin.com/in/pedro-b-09473598) · [**Creative Universe**](https://belentani.es) · [**Technical Evidence**](./docs/engineering-evidence-2026-10-29.md) · [**Contact**](#connect)
 
 </div>
 
-<!-- insignias: generado 2026-11-06 -->
-<p>
-  <img src="https://img.shields.io/website?url=https%3A%2F%2Fwww.belentani.es%2Fux-academy-professional-program%2F&label=UX%20Academy&style=flat-square" alt="UX Academy live">
-  <img src="https://img.shields.io/website?url=https%3A%2F%2Fwww.belentani.es%2Flingua-aberta%2F&label=Lingua%20Aberta&style=flat-square" alt="Lingua Aberta live">
-  <img src="https://img.shields.io/website?url=https%3A%2F%2Fmanos-abiertas-gwu4juveb-belentani7pedro-6758s-projects.vercel.app&label=Manos%20Abiertas&style=flat-square" alt="Manos Abiertas live">
-  <img src="https://img.shields.io/badge/despliegues-16%20productos%20en%20producci%C3%B3n-2bb673?style=flat-square" alt="16 despliegues">
-  <img src="https://img.shields.io/badge/repos%20activos-147-0e2035?style=flat-square" alt="repos activos">
-  <img src="https://img.shields.io/badge/quality%20baseline-premium--factory-1d45a5?style=flat-square" alt="premium-factory">
-  <img src="https://img.shields.io/badge/contacto-belentani7studio%40proton.me-8b5cf6?style=flat-square" alt="contacto">
-</p>
+---
 
+## The intersection I work in
 
-## What I build
+I build **AI infrastructure, explainable agent workflows, security-conscious developer tools, accessible digital products and immersive creative experiences**.
 
-I am a **Creative Technologist** working at the intersection of **full-stack engineering, applied artificial intelligence, accessible education and creative direction**. I make advanced technology easier to understand and use by connecting product research, interfaces, typed APIs, AI-agent workflows, privacy, testing and the actual needs of the people using the software.
+My background includes **multilingual Trust & Safety operations (2018–2025)**, where policy interpretation, ambiguity, escalation, risk and human judgment are everyday realities. I bring that context to applied AI engineering: define the boundary, test the edge case, make failure visible and keep a human in control.
 
-My path runs through multilingual customer operations and Trust & Safety into product engineering, open learning and audiovisual art. My approach: **understand the problem, choose a proportionate architecture, build useful interactions and make limitations visible.** Technical breadth supports delivery; it does not replace real verification.
-
-[Read my personal story and five working principles (Spanish)](https://pedro-belentani-portfolio.honeybrook4.chatgpt.site/sobre-mi.html) · [Ten-point working manifesto](https://pedro-belentani-portfolio.honeybrook4.chatgpt.site/metodo.html#manifiesto).
-
-## Selected work
-
-Six **public, accessible source repositories**, selected to represent distinct capabilities. A public repository is not automatically a live or production-ready service.
-
-| Project | Focus and currently documented boundary |
-| --- | --- |
-| [Manos Abiertas](https://github.com/belentani7/ManosAbiertas) | Free multilingual digital education: AI, office skills, CV resources, accessible course activities and learner progress. **Public code; publication pending per project README.** |
-| [Belentani CV Studio](https://github.com/belentani7/Belentani.cv-ai) | Next.js/React CV editing, letters, local drafts and optional AI-assisted workflows with privacy controls. **Deployment and complete user flows require verification.** |
-| [Secure-T](https://github.com/belentani7/secure-t) | Open cybersecurity and applied-AI campus, assessments and simulated workstation. **Educational software, not a certified security service.** |
-| [LinguaForge](https://github.com/belentani7/linguaforge) | Language-learning paths, spaced repetition, exercises and traceable content provenance. **The learning corpus is expanding.** |
-| [Belentani — Artist Experience](https://github.com/belentani7/belentani.es) | Interactive music and narrative universe built around Three.js and creative direction. **Source is public; live deployment status is separate.** |
-| [Belentani Software Atlas](https://github.com/belentani7/belentani-omg-portal) | Searchable index connecting a wider software ecosystem. **Catalogue inventory is a snapshot and may lag behind GitHub.** |
-
-Other projects are private, archived or experimental. I do not present inaccessible repositories as public deliverables, or repository volume as a measure of quality.
-
-## Capabilities
-
-| Discipline | Technologies and focus |
-| --- | --- |
-| **Product engineering** | TypeScript, React, Next.js, Vite, Node.js, Python, FastAPI, APIs, data models, Git and deployment workflows |
-| **Applied AI** | Tool-using agents, orchestration, human review, input validation, model integration, cost-aware automation and guardrails |
-| **Experience design** | Responsive interfaces, accessibility, multilingual content, product narrative and browser interaction |
-| **Trust & Safety** | Context-sensitive analysis, privacy, abuse prevention, policy interpretation and risk escalation |
-| **Creative technology** | Three.js, graphics, music and audiovisual workflows, storytelling and interactive systems |
-
-AI-assisted development is part of the workflow. **Commit volume does not substitute for code review, passing tests or a functioning user journey.**
-
-## Experience behind the code
-
-My engineering perspective also comes from multilingual professional operations and content-policy work:
-
-- **2016–2018:** multilingual customer support, including Sellbytel / Inditex-related work.
-- **2018–2025:** community and content moderation, including TELUS / CCC-related work, with human judgment and policy interpretation.
-- **2026:** independent software, educational, AI and creative projects; public source histories document iterations, not verified client outcomes.
-
-I combine **systems thinking, human context and creative direction** to make complex tools easier to understand and use.
-
-## Engineering evidence
-
-[Engineering evidence — reviewed GitHub activity (29 October 2026)](./docs/engineering-evidence-2026-10-29.md) records a bounded sample, dates, methods and explicit limitations. GitHub contribution events **cannot** measure human work hours, product adoption, production uptime or the quality of each repository. Historical figures are point-in-time records, not performance scores.
-
-For technical details, inspect a project's current README, source history, tests and documented release boundaries.
-
-## Tools and experiments
-
-The [Living Machine](./docs/living-machine/index.html) and [browser-based Production Studio](./docs/living-machine/studio.html) contain inspectable source for local-first media, document and creative utilities. These links open **repository files**, not a verified live deployment. Browser-specific features still need direct testing.
-
-The [previous extended profile](./docs/profile-archive-2026-10-29.md) is preserved for historical context, not for current availability claims.
-
-
-## GitHub en números
+**I work across the full chain:** product discovery → architecture → implementation → evaluation → delivery → improvement.
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=belentani7&show_icons=true&hide_border=true&bg_color=0e2035&title_color=6fd3a6&text_color=f4f7fb&icon_color=6fd3a6" height="165" alt="stats">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=belentani7&layout=compact&hide_border=true&bg_color=0e2035&title_color=6fd3a6&text_color=f4f7fb" height="165" alt="lenguajes">
+<img src="./assets/engineering-capabilities-2026.svg" alt="Engineering capability atlas: SAFE-EXEC, Meta-Skill, KEYROTOR, Belentani Forge, CARQUIDEC and LLM VFX Orchestrator." width="100%" />
 </div>
+
+## Selected systems
+
+The following are **public source repositories** selected for inspectable engineering depth, not repository count. A passing build, deployment record or polished interface is **not** by itself proof of production readiness.
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 01 — [SAFE-EXEC](https://github.com/belentani7/safe-exec)
+
+**Agent safety · Signed pre-execution decisions**
+
+A research prototype for inspecting exact file bytes before a proposed isolated execution: policy checks, independent signed evaluations, replay protection and a broker-issued one-use token.
+
+**Evidence:** [Protocol tests](https://github.com/belentani7/safe-exec/blob/main/tests/test_protocol.py) · [Static policy](https://github.com/belentani7/safe-exec/blob/main/safeexec/policy.py)
+
+**Boundary:** The full external sandbox / Docker integration is not validated end-to-end; its current CI does not yet run the test suite.
+
+</td>
+<td width="50%" valign="top">
+
+### 02 — [META-SKILL](https://github.com/belentani7/meta-skill)
+
+**Explainable AI · Routing & evaluation**
+
+Offline heuristic task router with abstention, budget-aware model recommendations and an independent evaluation harness with coverage and calibration checks.
+
+**Evidence:** [Evaluator source](https://github.com/belentani7/meta-skill/blob/main/evaluation-lab/evaluate.py) · [Routing tests](https://github.com/belentani7/meta-skill/blob/main/tests/test_router.py)
+
+**Boundary:** Synthetic fixtures demonstrate evaluation mechanics; they do not establish accuracy or token savings on real traffic.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+### 03 — [KEYROTOR](https://github.com/belentani7/keyrotor)
+
+**LLM infrastructure · Reliability patterns**
+
+A local-first, multi-provider API gateway with key rotation, retry/backoff, circuit breakers, TTL caching and secret redaction.
+
+**Evidence:** [Router implementation](https://github.com/belentani7/keyrotor/blob/main/keyrotor/router.py) · [Transport tests](https://github.com/belentani7/keyrotor/blob/main/tests/test_router.py)
+
+**Boundary:** Local development scope. An internet-facing gateway would require additional authentication, authorization and operational hardening.
+
+</td>
+<td valign="top">
+
+### 04 — [BELENTANI FORGE](https://github.com/belentani7/belentani-forge)
+
+**Developer automation · Quality operations**
+
+A Python project engine for inventory, diagnosis, controlled repairs, dependency maps, verification and reporting across local repositories.
+
+**Evidence:** [Safety controls](https://github.com/belentani7/belentani-forge/blob/main/forge/safety.py) · [Safety tests](https://github.com/belentani7/belentani-forge/blob/main/tests/test_safety.py) · [CI matrix](https://github.com/belentani7/belentani-forge/blob/main/.github/workflows/ci.yml)
+
+**Boundary:** Read-only by default; potentially destructive actions require explicit authorization.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+### 05 — [CARQUIDEC](https://github.com/belentani7/CARQUIDEC)
+
+**Product engineering · Accessibility & performance**
+
+A multilingual site with progressive enhancement, responsive media, self-hosted assets, automated quality checks and reproducible build rules.
+
+**Evidence:** [Before / after audit](https://github.com/belentani7/CARQUIDEC/blob/main/AUDITORIA.md) · [CI quality gates](https://github.com/belentani7/CARQUIDEC/blob/main/.github/workflows/ci.yml)
+
+**Project site:** [carquidec.vercel.app](https://carquidec.vercel.app)
+
+**Boundary:** Metrics are documented in the repository; independent browser-based validation remains a separate step.
+
+</td>
+<td valign="top">
+
+### 06 — [LLM VFX ORCHESTRATOR](https://github.com/belentani7/llm-vfx-orchestrator)
+
+**Creative AI · Reproducible production workflows**
+
+Two complementary layers: a local-first browser shot-planning workspace and a Python CLI for coordinating configurable LLM planning, ComfyUI rendering, QA and bounded retries.
+
+**Evidence:** [Architecture and quickstart](https://github.com/belentani7/llm-vfx-orchestrator) · [Python + web CI](https://github.com/belentani7/llm-vfx-orchestrator/blob/main/.github/workflows/ci.yml)
+
+**Boundary:** The browser planner works without model calls; full external rendering requires configured providers and ComfyUI.
+
+</td>
+</tr>
+</table>
+
+## Products built for people
+
+Technical ambition matters most when it reaches a person, a team or a real workflow.
+
+| Education & accessibility | Creative technology & audiovisual work |
+|:---|:---|
+| **[Manos Abiertas](https://github.com/belentani7/ManosAbiertas)** — free multilingual digital learning, practical AI, office skills and CV resources. Its documented build generates **832 lesson pages** in four language editions. The latest referenced release is not confirmed publicly available. | **[HEYDUCK](https://github.com/belentani7/heyduck)** — interactive music-production portfolio with Web Audio utilities, animations and multilingual experience. [Project-listed deployment](https://heyduck.vercel.app/). |
+| **Human context:** accessible pathways, progressive learning, transparent content provenance and privacy-aware design. | **[Belentani — The Experience](https://github.com/belentani7/belentani.es)** — a Three.js music and narrative universe that combines audiovisual authorship with interactive engineering. [Artist universe](https://belentani.es). |
+
+## Engineering evidence — not just claims
+
+| Practice | What you can inspect |
+|:---|:---|
+| **Evaluation & restraint** | [Meta-Skill's abstention tests](https://github.com/belentani7/meta-skill/blob/main/tests/test_router.py) and [metrics implementation](https://github.com/belentani7/meta-skill/blob/main/evaluation-lab/evaluate.py) |
+| **Security by design** | [SAFE-EXEC's signed-protocol tests](https://github.com/belentani7/safe-exec/blob/main/tests/test_protocol.py) and [Forge's safety layer](https://github.com/belentani7/belentani-forge/blob/main/forge/safety.py) |
+| **Repeatable delivery** | [CARQUIDEC's quality gates](https://github.com/belentani7/CARQUIDEC/blob/main/.github/workflows/ci.yml) and [VFX's dual-stack CI](https://github.com/belentani7/llm-vfx-orchestrator/blob/main/.github/workflows/ci.yml) |
+| **Documented trade-offs** | [Engineering evidence — reviewed sample, 29 Oct 2026](./docs/engineering-evidence-2026-10-29.md) |
+
+> **Operating principle:** A repository is not a product launch. A synthetic test is not a production benchmark. An automated commit is not a verified user outcome. Real engineering makes those distinctions legible.
+
+<details>
+<summary><strong>Technical breadth — explore my working domains</strong></summary>
+
+<br/>
+
+| Domain | Languages, frameworks and practices |
+|:---|:---|
+| **Systems & backend** | Python · TypeScript · Node.js · FastAPI · REST APIs · data modelling · CLI engineering |
+| **AI infrastructure** | LLM provider integration · agent orchestration · offline heuristics · evaluation harnesses · model routing · retries · fallbacks · cost-aware workflows |
+| **Trust, security & quality** | Trust & Safety operations · policy interpretation · threat-aware design · secret redaction · testing · CI/CD · failure-state analysis |
+| **Web & experience** | React · Next.js · accessible interfaces · responsive design · internationalization · progressive enhancement |
+| **Creative computing** | Three.js / WebGL · Web Audio · generative production workflows · ComfyUI integration · music and interactive storytelling |
+
+**Tools are selected to fit the system.** A long technology list is not a substitute for a documented design decision.
+
+</details>
+
+## How I approach complex work
+
+**01 / Understand.** Identify the user, failure modes, constraints and the real decision to support.
+
+**02 / Architect.** Prefer transparent interfaces, isolated responsibilities and proportionate infrastructure.
+
+**03 / Verify.** Write repeatable checks, make uncertainty visible and test abnormal conditions.
+
+**04 / Deliver.** Document what works, what is experimental and what would be required to operate it reliably.
+
+**05 / Create.** Bring artistic direction, human interpretation and accessibility into the engineering process.
+
+---
+
+## Connect
+
+Open to **senior AI engineering, trustworthy agent systems, developer tooling, accessible product engineering and creative technology collaborations**.
+
+[**Portfolio**](https://pedro-belentani-portfolio.honeybrook4.chatgpt.site) · [**GitHub**](https://github.com/belentani7) · [**LinkedIn**](https://linkedin.com/in/pedro-b-09473598) · [**Email**](mailto:belentani7pedro@gmail.com) · [**Music & creative universe**](https://belentani.es)
+
 <div align="center">
-  <img src="https://streak-stats.demolab.com?user=belentani7&hide_border=true&background=0E2035&ring=6FD3A6&currStreakLabel=6FD3A6&sideLabels=F4F7FB&currStreakNum=F4F7FB&sideNums=F4F7FB&dates=F4F7FB" width="95%" alt="racha">
+
+**PEDRO BELENTANI — SYSTEMS WITH EVIDENCE. TECHNOLOGY WITH PURPOSE.**
+
+<sub>Senior Full-Stack AI Engineer & Systems Architect · Barcelona</sub>
+
 </div>
-<div align="center">
-  <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=belentani7&theme=algolia&no-frame=true&column=7" width="100%" alt="trofeos">
-  </a>
-</div>
-<div align="center">
-  <img src="https://komarev.com/ghpvc/?username=belentani7&color=2bb673&style=flat-square&label=visitas" alt="visitas">
-  <img src="https://img.shields.io/github/followers/belentani7?style=flat-square&color=2bb673" alt="seguidores">
-  <img src="https://img.shields.io/github/stars/belentani7?affiliations=OWNER&style=flat-square&color=2bb673" alt="estrellas">
-</div>
-
-
-## Contact
-
-Open to thoughtful technical collaboration, open-source dialogue and creative partnerships.
-
-[Portfolio / artist universe](https://belentani.es) · [Email](mailto:belentani7pedro@gmail.com) · [GitHub](https://github.com/belentani7)
-
-<sub>Clarity, accessibility, traceable evidence and useful products over exaggerated claims.</sub>
