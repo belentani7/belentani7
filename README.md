@@ -4,6 +4,8 @@
 
 <br/>
 
+# Pedro Belentani
+
 ### Senior Full-Stack AI Engineer & Systems Architect
 
 **Agentic Systems · Explainable AI · Trust & Safety · Creative Technology**
