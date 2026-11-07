@@ -116,7 +116,7 @@ function apply(lang){
    const key=node.getAttribute("data-i18n");
    if(!Object.prototype.hasOwnProperty.call(copy[lang],key))return;
    const value=copy[lang][key];
-   if(key==="headline")node.innerHTML=value;
+   if(key==="headline")node.innerHTML=value.replace(/<(?!\/?(?:br|i)\b)[^>]*>/gi,"");
    else node.textContent=value;
  });
  try{localStorage.setItem("belentani-studio-lang",lang)}catch{}

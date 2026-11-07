@@ -1,0 +1,33 @@
+---
+description: Contexto, stack y convenciones base del proyecto
+globs: ["**/*"]
+alwaysApply: true
+---
+
+# Proyecto: belentani7__belentani7
+
+Stack detectado: ci, docker, frontend, node, python, static-html, tests, typescript.
+Gestores de paquetes: npm, pnpm.
+Tests: playwright, pytest.
+
+## Protocolo
+
+1. Spec-first: PRD → SRS → Design Doc → ADR → Plan → tests GWT.
+2. Cambios pequeños, reversibles y con verificación real.
+3. Conventional commits: `type(scope): summary`.
+4. No commitear secretos ni credenciales.
+5. No ejecutar TypeScript sin compilar en producción.
+
+## Comandos
+
+- `test`: `cd desktop && node tests/audit.test.js && node bellentani-cli.js doctor && node bellentani-cli.js audit`
+- `start`: `electron .`
+- `dev`: `electron .`
+- `build`: `electron-builder --win`
+- `build:win`: `electron-builder --win --x64`
+
+## Verificación mínima
+
+- Tests del stack en verde.
+- Build reproducible.
+- `gitleaks detect --source . --redact` limpio.

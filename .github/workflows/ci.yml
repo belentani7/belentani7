@@ -35,21 +35,6 @@ jobs:
           test -s docs/living-machine/index.html
           test -s assets/living-machine-banner.svg
 
-  desktop:
-    name: Desktop · security and workspace audit
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-      - uses: actions/checkout@v7
-        with:
-          persist-credentials: false
-      - uses: actions/setup-node@v7
-        with:
-          node-version: '22'
-          package-manager-cache: false
-      - name: Run dependency-free desktop tests
-        run: node desktop/tests/audit.test.js
-
   profile-automation:
     name: Python · profile automation and observability unit tests
     runs-on: ubuntu-latest

@@ -1,86 +1,113 @@
 <div align="center">
 
-<img src="./assets/profile-editorial-2026.svg" width="100%" alt="Editorial banner for Pedro Belentani: AI product engineering, Trust and Safety, and creative computing.">
+<img src="./assets/profile-editorial-2026.svg" width="100%" alt="Editorial banner for Pedro Belentani: a house of software products — AI product engineering, creative computing, Trust and Safety.">
 
 # Pedro Belentani
 
-**Creative Technologist · Applied AI · Open education · Creative computing · Trust & Safety**
+**A house of software products** — every piece in the window is verified: pushed, deployed, green.
+
+Creative Technologist · Applied AI · Creative computing · Trust & Safety
 
 Brazilian perspective · Barcelona, Spain · English / Español / Português (BR)
 
-[Professional portfolio](https://pedro-belentani-portfolio.honeybrook4.chatgpt.site) · [Artist universe](https://belentani.es) · [Software atlas](https://github.com/belentani7/belentani-omg-portal) · [Selected work](#selected-work) · [Evidence](#engineering-evidence) · [Contact](#contact)
+[Portfolio vitrine](https://belentani7.github.io/belentani7/) · [Catalogue — 115 products](https://belentani7.github.io/belentani7/catalogo.html) · [Unified audit 2026](https://belentani7.github.io/belentani7/auditoria.html) · [Artist universe](https://belentani.es) · [Contact](#contact)
 
 </div>
 
-<!-- insignias: generado 2026-11-06 -->
-<p>
-  <img src="https://img.shields.io/website?url=https%3A%2F%2Fwww.belentani.es%2Fux-academy-professional-program%2F&label=UX%20Academy&style=flat-square" alt="UX Academy live">
-  <img src="https://img.shields.io/website?url=https%3A%2F%2Fwww.belentani.es%2Flingua-aberta%2F&label=Lingua%20Aberta&style=flat-square" alt="Lingua Aberta live">
-  <img src="https://img.shields.io/website?url=https%3A%2F%2Fmanos-abiertas-gwu4juveb-belentani7pedro-6758s-projects.vercel.app&label=Manos%20Abiertas&style=flat-square" alt="Manos Abiertas live">
-  <img src="https://img.shields.io/badge/despliegues-16%20productos%20en%20producci%C3%B3n-2bb673?style=flat-square" alt="16 despliegues">
-  <img src="https://img.shields.io/badge/repos%20activos-147-0e2035?style=flat-square" alt="repos activos">
-  <img src="https://img.shields.io/badge/quality%20baseline-premium--factory-1d45a5?style=flat-square" alt="premium-factory">
+<!-- insignias: verificado 2026-11-07 -->
+<p align="center">
+  <img src="https://img.shields.io/badge/vitrinas%20verificadas-13%20live%20%C2%B7%20CI%20green-2bb673?style=flat-square" alt="13 vitrinas verificadas">
+  <img src="https://img.shields.io/badge/ecosistema-434%20%E2%86%92%20115%20curados-0e2035?style=flat-square" alt="434 a 115 repos">
+  <img src="https://img.shields.io/badge/auditor%C3%ADa-73%20artefactos%20%C2%B7%201%20documento-1d45a5?style=flat-square" alt="auditoria unificada">
+  <img src="https://img.shields.io/badge/superficie-100%25%20offline%20%C2%B7%20sin%20CDNs-8b5cf6?style=flat-square" alt="offline first">
   <img src="https://img.shields.io/badge/contacto-belentani7studio%40proton.me-8b5cf6?style=flat-square" alt="contacto">
 </p>
 
+## A house of products, not a list of repos
 
-## What I build
+I run my GitHub as a **product house**: each repository that completes full fabrication — the ecosystem's development rules applied, CI green, a deployment answering HTTP 200 — earns a lit vitrine in the [portfolio window](https://belentani7.github.io/belentani7/). Everything else (115 living repositories in total) stays in the [catalogue](https://belentani7.github.io/belentani7/catalogo.html), not in the shop window. A repository is not automatically a product; **verification is the difference**, and it was re-checked against the GitHub API on 7 November 2026.
 
-I am a **Creative Technologist** working at the intersection of **full-stack engineering, applied artificial intelligence, accessible education and creative direction**. I make advanced technology easier to understand and use by connecting product research, interfaces, typed APIs, AI-agent workflows, privacy, testing and the actual needs of the people using the software.
+My path runs through multilingual customer operations and Trust & Safety into product engineering, open learning and audiovisual art: **understand the problem, choose a proportionate architecture, build useful interactions, make limitations visible.** Technical breadth supports delivery; it never replaces real verification.
 
-My path runs through multilingual customer operations and Trust & Safety into product engineering, open learning and audiovisual art. My approach: **understand the problem, choose a proportionate architecture, build useful interactions and make limitations visible.** Technical breadth supports delivery; it does not replace real verification.
+## The verified line — 13 products, checked live
 
-[Read my personal story and five working principles (Spanish)](https://pedro-belentani-portfolio.honeybrook4.chatgpt.site/sobre-mi.html) · [Ten-point working manifesto](https://pedro-belentani-portfolio.honeybrook4.chatgpt.site/metodo.html#manifiesto).
+Every entry below was **pushed, deployed and CI-green** on 2026-11-07. Live URL included; open any of them.
 
-## Selected work
+**Stages / universes**
 
-Six **public, accessible source repositories**, selected to represent distinct capabilities. A public repository is not automatically a live or production-ready service.
+| Product | What it is | Verified live |
+| --- | --- | --- |
+| [belentani.es](https://github.com/belentani7/belentani.es) | Unified artist hub: immersive 3D portfolio, music catalog, narrative universe (Three.js) | [belentani.es](https://belentani.es) |
+| [nexus-os](https://github.com/belentani7/nexus-os) | Browser-based OS shell — 38+ apps, cyberpunk aesthetics, zero dependencies | [nexus-os-mocha-mu.vercel.app](https://nexus-os-mocha-mu.vercel.app) |
+| [heyduck](https://github.com/belentani7/heyduck) | Hub of the DUCK universe: apps, music and production tools | [heyduck.vercel.app](https://heyduck.vercel.app) |
+| [fazluiz3d-ecosystem](https://github.com/belentani7/fazluiz3d-ecosystem) | FAZLUIZ3D / ÁUREA 3D — standalone 3D ecosystem | [fazluiz3d-ecosystem.vercel.app](https://fazluiz3d-ecosystem.vercel.app) |
+| [ia-creativa-lab](https://github.com/belentani7/ia-creativa-lab) | 24 creative-AI projects unified: FireLab, Fashion Stylist AI, orchestration | [github.io/ia-creativa-lab](https://belentani7.github.io/ia-creativa-lab/) |
 
-| Project | Focus and currently documented boundary |
-| --- | --- |
-| [Manos Abiertas](https://github.com/belentani7/ManosAbiertas) | Free multilingual digital education: AI, office skills, CV resources, accessible course activities and learner progress. **Public code; publication pending per project README.** |
-| [Belentani CV Studio](https://github.com/belentani7/Belentani.cv-ai) | Next.js/React CV editing, letters, local drafts and optional AI-assisted workflows with privacy controls. **Deployment and complete user flows require verification.** |
-| [Secure-T](https://github.com/belentani7/secure-t) | Open cybersecurity and applied-AI campus, assessments and simulated workstation. **Educational software, not a certified security service.** |
-| [LinguaForge](https://github.com/belentani7/linguaforge) | Language-learning paths, spaced repetition, exercises and traceable content provenance. **The learning corpus is expanding.** |
-| [Belentani — Artist Experience](https://github.com/belentani7/belentani.es) | Interactive music and narrative universe built around Three.js and creative direction. **Source is public; live deployment status is separate.** |
-| [Belentani Software Atlas](https://github.com/belentani7/belentani-omg-portal) | Searchable index connecting a wider software ecosystem. **Catalogue inventory is a snapshot and may lag behind GitHub.** |
+**Product houses (web)**
 
-Other projects are private, archived or experimental. I do not present inaccessible repositories as public deliverables, or repository volume as a measure of quality.
+| Product | What it is | Verified live |
+| --- | --- | --- |
+| [ctg-psicologia-next](https://github.com/belentani7/ctg-psicologia-next) | Trilingual therapy-centre site (es/ca/en) — Next.js 15 + React 19 | [github.io/ctg-psicologia-next](https://belentani7.github.io/ctg-psicologia-next/) |
+| [el-raco-nuevo](https://github.com/belentani7/el-raco-nuevo) | Single-page web for El Racó, v2026 edition | [github.io/el-raco-nuevo](https://belentani7.github.io/el-raco-nuevo/) |
+| [arte-que-veste](https://github.com/belentani7/arte-que-veste) | Author fashion and wearable art — catalogue and creative shop | [arte-que-veste.vercel.app](https://arte-que-veste.vercel.app) |
+| [ace-step-ui](https://github.com/belentani7/ace-step-ui) | UI surface for the ACE Step audio model | [github.io/ace-step-ui](https://belentani7.github.io/ace-step-ui/) |
+
+**Engine & instruments**
+
+| Product | What it is | Verified live |
+| --- | --- | --- |
+| [omniagent](https://github.com/belentani7/omniagent) | One CLI to route AI tasks to the best model | [omniagent-chi.vercel.app](https://omniagent-chi.vercel.app) |
+| [gpu-cost-optimizer](https://github.com/belentani7/gpu-cost-optimizer) | Cut GPU compute costs in diffusion pipelines by up to 70% (Python) | [gpu-cost-optimizer-lemon.vercel.app](https://gpu-cost-optimizer-lemon.vercel.app) |
+| [keyrotor](https://github.com/belentani7/keyrotor) | API-key rotation utility (Python) — the answer to leaked keys in history | [keyrotor.vercel.app](https://keyrotor.vercel.app) |
+| [belentani7.github.io](https://github.com/belentani7/belentani7.github.io) | The root site — OMEGA CORE / JUDAS_OS organism | [belentani7.github.io](https://belentani7.github.io) |
+
+Client repositories exist in the catalogue but are **never exhibited here as my own products** — their code belongs to their owners.
+
+## How everything is built
+
+The same fabrication rules apply to all 115 living repositories, enforced by files, not promises:
+
+- **`.cursor/rules/00-core.mdc`** — the ecosystem's core development rules, present in 71/115 remotes (the rest are client repos I don't touch without authorization).
+- **`hygiene.yml` CI** — every push runs conflict-marker checks and secret scanning; green is a condition of the vitrine.
+- **`.gitleaks.toml`** — repo-local secret policy (75/115).
+- **Offline-first surfaces** — the portfolio and product pages embed GSAP 3 + ScrollTrigger inline: **zero CDNs, zero tracking**, they render with the cable unplugged.
+- **Human reading** — measure 65–75ch, body ≥17px, editorial serif over ink; motion with a `prefers-reduced-motion` static fallback.
+- **Borrowed from the best** — GSAP (MIT) for motion, three.js for worlds, shadcn/Radix patterns for accessible UI, and the ecosystem's own premium-effects registry for narratives.
+
+## Governance: an audited ecosystem
+
+On 2–7 November 2026 the whole account was audited end-to-end: inventory, context, security, conformance, line-level remediation and a forensic review of 74 AI-coder sessions. The result — **73 audit artefacts (.md, .csv, .html, .json) consolidated into one document**:
+
+- **434 → 115 repositories.** 314 duplicates retired with a three-layer safety net: every deletion keeps a local clone, 315/321 rescue bundles, and GitHub's restore window until **2027-02-05**.
+- **Conformance 99.9%**, quality gates 54/60 green, line-level remediation −37% defects (24,112 files in 347 repos, evidence only, no blind commits).
+- **Security triage**: 43 real high findings on day one → desensitized, hardened `.gitignore`, CI secret scanning; credential rotation flagged for the owner, secret values never published.
+
+Read the full story: **[Unified audit — 2026-11-02 → 07](https://belentani7.github.io/belentani7/auditoria.html)** (Spanish, self-contained HTML).
 
 ## Capabilities
 
 | Discipline | Technologies and focus |
 | --- | --- |
-| **Product engineering** | TypeScript, React, Next.js, Vite, Node.js, Python, FastAPI, APIs, data models, Git and deployment workflows |
-| **Applied AI** | Tool-using agents, orchestration, human review, input validation, model integration, cost-aware automation and guardrails |
-| **Experience design** | Responsive interfaces, accessibility, multilingual content, product narrative and browser interaction |
-| **Trust & Safety** | Context-sensitive analysis, privacy, abuse prevention, policy interpretation and risk escalation |
-| **Creative technology** | Three.js, graphics, music and audiovisual workflows, storytelling and interactive systems |
+| **Product engineering** | TypeScript, React, Next.js, Vite, Node.js, Python, FastAPI, typed APIs, data models, Git and deployment workflows |
+| **Applied AI** | Tool-using agents, orchestration, human review, guardrails, cost-aware automation, multi-provider routing (free-tier landscape verified for 2026) |
+| **Experience design** | Responsive interfaces, accessibility, multilingual content (es/en/ca/pt), product narrative, shop-window design |
+| **Trust & Safety** | Context-sensitive analysis, privacy, abuse prevention, policy interpretation, risk escalation |
+| **Creative technology** | Three.js, WebGL, music and audiovisual workflows, storytelling, interactive systems |
 
 AI-assisted development is part of the workflow. **Commit volume does not substitute for code review, passing tests or a functioning user journey.**
 
 ## Experience behind the code
 
-My engineering perspective also comes from multilingual professional operations and content-policy work:
+- **2016–2018** — multilingual customer support (Sellbytel / Inditex-related work).
+- **2018–2025** — community and content moderation (TELUS / CCC-related work): human judgment, policy interpretation, escalation.
+- **2026** — independent product engineering: this house. Public histories document iterations, not verified client outcomes.
 
-- **2016–2018:** multilingual customer support, including Sellbytel / Inditex-related work.
-- **2018–2025:** community and content moderation, including TELUS / CCC-related work, with human judgment and policy interpretation.
-- **2026:** independent software, educational, AI and creative projects; public source histories document iterations, not verified client outcomes.
+## Evidence
 
-I combine **systems thinking, human context and creative direction** to make complex tools easier to understand and use.
-
-## Engineering evidence
-
-[Engineering evidence — reviewed GitHub activity (29 October 2026)](./docs/engineering-evidence-2026-10-29.md) records a bounded sample, dates, methods and explicit limitations. GitHub contribution events **cannot** measure human work hours, product adoption, production uptime or the quality of each repository. Historical figures are point-in-time records, not performance scores.
-
-For technical details, inspect a project's current README, source history, tests and documented release boundaries.
-
-## Tools and experiments
-
-The [Living Machine](./docs/living-machine/index.html) and [browser-based Production Studio](./docs/living-machine/studio.html) contain inspectable source for local-first media, document and creative utilities. These links open **repository files**, not a verified live deployment. Browser-specific features still need direct testing.
-
-The [previous extended profile](./docs/profile-archive-2026-10-29.md) is preserved for historical context, not for current availability claims.
-
+- [Engineering evidence — reviewed GitHub activity (29 October 2026)](./docs/engineering-evidence-2026-10-29.md) — bounded sample, dates, methods, explicit limitations.
+- [Unified audit (2–7 November 2026)](https://belentani7.github.io/belentani7/auditoria.html) — the full accountability record.
+- [Living Machine](./docs/living-machine/index.html) and [Production Studio](./docs/living-machine/studio.html) — inspectable browser-based utilities (repository files, local-first).
+- [Previous extended profile](./docs/profile-archive-2026-10-29.md) — preserved for historical context.
 
 ## GitHub en números
 
@@ -92,21 +119,15 @@ The [previous extended profile](./docs/profile-archive-2026-10-29.md) is preserv
   <img src="https://streak-stats.demolab.com?user=belentani7&hide_border=true&background=0E2035&ring=6FD3A6&currStreakLabel=6FD3A6&sideLabels=F4F7FB&currStreakNum=F4F7FB&sideNums=F4F7FB&dates=F4F7FB" width="95%" alt="racha">
 </div>
 <div align="center">
-  <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=belentani7&theme=algolia&no-frame=true&column=7" width="100%" alt="trofeos">
-  </a>
-</div>
-<div align="center">
   <img src="https://komarev.com/ghpvc/?username=belentani7&color=2bb673&style=flat-square&label=visitas" alt="visitas">
   <img src="https://img.shields.io/github/followers/belentani7?style=flat-square&color=2bb673" alt="seguidores">
   <img src="https://img.shields.io/github/stars/belentani7?affiliations=OWNER&style=flat-square&color=2bb673" alt="estrellas">
 </div>
 
-
 ## Contact
 
 Open to thoughtful technical collaboration, open-source dialogue and creative partnerships.
 
-[Portfolio / artist universe](https://belentani.es) · [Email](mailto:belentani7pedro@gmail.com) · [GitHub](https://github.com/belentani7)
+[Portfolio vitrine](https://belentani7.github.io/belentani7/) · [Artist universe](https://belentani.es) · [Email](mailto:belentani7pedro@gmail.com) · [Studio email](mailto:belentani7studio@proton.me)
 
-<sub>Clarity, accessibility, traceable evidence and useful products over exaggerated claims.</sub>
+<sub>Clarity, accessibility, traceable evidence and verified products over exaggerated claims.</sub>

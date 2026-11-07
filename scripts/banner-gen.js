@@ -601,7 +601,9 @@ ${deckRows.join("\n")}
 
 /* ============ OUTPUT ============ */
 function inject(file, start, end, payload) {
-  const p = path.join(ROOT, file);
+  const rootResolved = path.resolve(ROOT);
+  const p = path.resolve(ROOT, file);
+  if (p !== rootResolved && !p.startsWith(rootResolved + path.sep)) throw new Error(`Ruta fuera del proyecto: ${file}`);
   const src = fs.readFileSync(p, "utf8");
   const s = src.indexOf(start);
   const e = src.indexOf(end);

@@ -8,13 +8,31 @@ import sys
 from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from urllib.error import HTTPError, URLError
-from urllib.parse import urlencode
+from urllib.parse import urlencode, urlparse
 from urllib.request import Request, urlopen
 
 VALID_REPO = re.compile(r"^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$")
 EVENTS = {"push", "workflow_dispatch", "schedule"}
 OUTCOMES = {"success", "failure", "timed_out"}
 TARGET = 95.0
+
+
+def assert_public_http(url: str) -> str:
+    """Rechaza esquemas no HTTP(S) y hosts internos (anti-SSRF)."""
+    import ipaddress
+    parsed = urlparse(url)
+    if parsed.scheme not in {"http", "https"}:
+        raise ValueError("Solo se permiten URLs HTTP(S)")
+    host = (parsed.hostname or "").lower()
+    if not host or host in {"localhost", "metadata.google.internal"}:
+        raise ValueError("Host interno o vacio no permitido")
+    try:
+        addr = ipaddress.ip_address(host.strip("[]"))
+    except ValueError:
+        return url
+    if addr.is_private or addr.is_loopback or addr.is_link_local or addr.is_reserved or addr.is_multicast:
+        raise ValueError("IP interna no permitida")
+    return url
 
 
 def at(value):
@@ -33,8 +51,11 @@ def fetch_runs(repo, token, oldest, max_pages=5):
         for page in range(1, max_pages + 1):
             query = urlencode({"branch": "main", "event": event,
                                "per_page": 100, "page": page})
+            endpoint = assert_public_http(f"https://api.github.com/repos/{repo}/actions/runs?{query}")
+            if urlparse(endpoint).hostname != "api.github.com":
+                raise ValueError("Endpoint inesperado; solo se permite api.github.com")
             request = Request(
-                f"https://api.github.com/repos/{repo}/actions/runs?{query}",
+                endpoint,
                 headers={"Accept": "application/vnd.github+json",
                          "User-Agent": "belentani-ci-health/1",
                          **({"Authorization": f"Bearer {token}"} if token else {})},

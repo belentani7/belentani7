@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catálogo — Belentani · 115 productos</title>
+<meta name="description" content="Catálogo completo del ecosistema Belentani: 115 repositorios vivos con búsqueda y filtros. 13 de ellos verificados en producción (CI verde + deploy vivo).">
+<meta name="theme-color" content="#0C0B10">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230C0B10'/%3E%3Cpath d='M16 6 L24 16 L16 26 L8 16 Z' fill='none' stroke='%23D9B36C' stroke-width='1.6'/%3E%3Ccircle cx='16' cy='16' r='2.4' fill='%23D9B36C'/%3E%3C/svg%3E">
+<style>
+:root{
+  --tinta:#0C0B10; --tinta2:#12111A; --tinta3:#181722;
+  --marfil:#F1EAD9; --marfil2:#C9C1AE; --marfil3:#8F887A;
+  --champan:#D9B36C; --champan-osc:#A8853F; --champan-borde:rgba(217,179,108,.26);
+  --serif:Georgia,'Times New Roman',Times,serif;
+  --sans:-apple-system,'Segoe UI',system-ui,'Helvetica Neue',sans-serif;
+  --mono:'Cascadia Code','JetBrains Mono',Consolas,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:var(--tinta); color:var(--marfil);
+  font-family:var(--sans); font-size:17px; line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--champan); color:var(--tinta)}
+:focus-visible{outline:2px solid var(--champan); outline-offset:3px; border-radius:2px}
+::-webkit-scrollbar{width:11px}
+::-webkit-scrollbar-track{background:var(--tinta)}
+::-webkit-scrollbar-thumb{background:#2A2836;border-radius:6px;border:2px solid var(--tinta)}
+::-webkit-scrollbar-thumb:hover{background:var(--champan-osc)}
+a{color:inherit}
+
+header{
+  position:sticky; top:0; z-index:40;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:16px clamp(20px,5vw,64px);
+  background:rgba(12,11,16,.94); backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(217,179,108,.14);
+}
+.marca{display:flex; align-items:center; gap:11px; text-decoration:none}
+.marca b{font-family:var(--serif); font-weight:400; letter-spacing:.34em; font-size:.82rem; text-transform:uppercase}
+nav{display:flex; gap:clamp(12px,3vw,30px)}
+nav a{text-decoration:none; font-size:.86rem; color:var(--marfil2); transition:color .3s}
+nav a:hover{color:var(--champan)}
+
+.cabecera{padding:clamp(48px,8vh,90px) clamp(20px,6vw,88px) 30px; max-width:1280px}
+.cabecera h1{
+  font-family:var(--serif); font-weight:400;
+  font-size:clamp(2rem,4.4vw,3.4rem); line-height:1.08; letter-spacing:-.02em;
+  max-width:18ch; margin-bottom:14px;
+}
+.cabecera h1 em{font-style:italic; color:var(--champan)}
+.cabecera p{color:var(--marfil2); max-width:68ch}
+.cabecera p a{color:var(--marfil); text-decoration:none; border-bottom:1px solid var(--champan-borde)}
+.cabecera p a:hover{color:var(--champan)}
+
+.controles{
+  position:sticky; top:65px; z-index:30;
+  padding:16px clamp(20px,6vw,88px);
+  background:rgba(12,11,16,.94); backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(217,179,108,.14);
+  display:flex; gap:14px; flex-wrap:wrap; align-items:center;
+}
+.buscar{
+  flex:1 1 260px; max-width:420px;
+  background:var(--tinta2); border:1px solid rgba(217,179,108,.18); border-radius:12px;
+  color:var(--marfil); font:inherit; font-size:.98rem;
+  padding:11px 16px; transition:border-color .3s;
+}
+.buscar::placeholder{color:var(--marfil3)}
+.buscar:focus{outline:none; border-color:var(--champan)}
+.fichas{display:flex; gap:8px; flex-wrap:wrap}
+.ficha{
+  font-family:var(--mono); font-size:.74rem; letter-spacing:.04em;
+  color:var(--marfil2); background:transparent;
+  border:1px solid rgba(217,179,108,.20); border-radius:999px;
+  padding:6px 14px; cursor:pointer; transition:all .3s;
+}
+.ficha:hover{color:var(--champan); border-color:var(--champan)}
+.ficha[aria-pressed="true"]{color:var(--tinta); background:var(--champan); border-color:var(--champan)}
+
+.listado{max-width:1280px; margin:0 auto; padding:26px clamp(20px,6vw,88px) 70px}
+.estado-lista{
+  font-family:var(--mono); font-size:.76rem; color:var(--marfil3);
+  margin-bottom:14px; font-variant-numeric:tabular-nums;
+}
+.producto{
+  display:grid; grid-template-columns:minmax(0,1.35fr) auto; gap:4px 30px;
+  align-items:center;
+  padding:19px 22px 20px; border-radius:13px; margin-bottom:9px;
+  background:var(--tinta2); border:1px solid rgba(217,179,108,.09);
+  opacity:0; transform:translateY(10px);
+  animation:sube .7s cubic-bezier(.2,.8,.2,1) forwards;
+  transition:border-color .35s, background .35s;
+}
+@keyframes sube{to{opacity:1; transform:none}}
+@media(prefers-reduced-motion:reduce){.producto{animation:none; opacity:1; transform:none}}
+.producto:hover{border-color:rgba(217,179,108,.30); background:var(--tinta3)}
+.producto.en-vitrina{border-color:rgba(217,179,108,.34)}
+.producto .caja{min-width:0}
+.producto .nombre{
+  font-family:var(--serif); font-size:1.16rem; letter-spacing:-.005em; line-height:1.25;
+  display:inline-flex; align-items:baseline; gap:10px; flex-wrap:wrap;
+}
+.producto .nombre a{text-decoration:none}
+.producto .nombre a:hover{color:var(--champan)}
+.luz{
+  display:inline-flex; align-items:center; gap:6px;
+  font-family:var(--mono); font-size:.68rem; letter-spacing:.05em; color:var(--champan);
+}
+.luz::before{content:""; width:6px; height:6px; border-radius:50%; background:var(--champan)}
+.producto .desc{color:var(--marfil2); font-size:.92rem; max-width:62ch; margin-top:2px}
+.producto .lado{display:flex; align-items:center; gap:13px; flex-wrap:wrap; justify-content:flex-end}
+.pila{
+  display:inline-flex; align-items:center; gap:7px;
+  font-family:var(--mono); font-size:.72rem; color:var(--marfil2);
+}
+.pila i{width:8px; height:8px; border-radius:50%; flex:none}
+.fecha{font-family:var(--mono); font-size:.7rem; color:var(--marfil3); font-variant-numeric:tabular-nums}
+.vacio{color:var(--marfil3); padding:40px 4px; font-size:.95rem}
+
+footer{
+  padding:44px clamp(20px,6vw,88px) 36px;
+  border-top:1px solid rgba(217,179,108,.13);
+  display:flex; justify-content:space-between; gap:24px; flex-wrap:wrap;
+}
+footer p{color:var(--marfil3); font-size:.9rem; max-width:60ch}
+footer nav{display:flex; gap:18px; flex-wrap:wrap}
+footer nav a{font-size:.9rem}
+@media(max-width:680px){
+  .producto{grid-template-columns:1fr}
+  .producto .lado{justify-content:flex-start}
+  .controles{top:61px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a class="marca" href="index.html" aria-label="Belentani — volver a la vitrina">
+    <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M16 5 L25 16 L16 27 L7 16 Z" fill="none" stroke="#D9B36C" stroke-width="1.6"/>
+      <circle cx="16" cy="16" r="2.4" fill="#D9B36C"/>
+    </svg>
+    <b>Belentani</b>
+  </a>
+  <nav aria-label="catálogo">
+    <a href="index.html">Vitrina</a>
+    <a href="index.html#linea">La línea</a>
+    <a href="auditoria.html">Auditoría</a>
+  </nav>
+</header>
+
+<section class="cabecera">
+  <h1>El almacén <em>completo</em>.</h1>
+  <p>
+    Los <strong>115 productos vivos</strong> del ecosistema, sin adornos: lo que
+    hay en el escaparate y lo que espera en la trastienda. Los marcados con luz
+    ámbar son las <a href="index.html#linea">13 vitrinas verificadas</a>
+    (CI verde y despliegue vivo, comprobados el 2026-11-07).
+  </p>
+</section>
+
+<div class="controles" role="group" aria-label="filtros del catálogo">
+  <input class="buscar" id="buscar" type="search"
+         placeholder="Buscar por nombre, descripción o pila…" aria-label="Buscar producto">
+  <div class="fichas" id="fichas">
+    <button class="ficha" data-f="todos" aria-pressed="true">todos</button>
+    <button class="ficha" data-f="vitrina" aria-pressed="false">en vitrina · 13</button>
+    <button class="ficha" data-f="publicos" aria-pressed="false">públicos</button>
+    <button class="ficha" data-f="privados" aria-pressed="false">privados</button>
+    <button class="ficha" data-f="l:TypeScript" aria-pressed="false">TypeScript</button>
+    <button class="ficha" data-f="l:Python" aria-pressed="false">Python</button>
+    <button class="ficha" data-f="l:HTML" aria-pressed="false">HTML</button>
+    <button class="ficha" data-f="l:JavaScript" aria-pressed="false">JavaScript</button>
+  </div>
+</div>
+
+<main class="listado">
+  <p class="estado-lista" id="estado" aria-live="polite"></p>
+  <div id="raiz"></div>
+</main>
+
+<footer>
+  <p>
+    Catálogo del ecosistema Belentani, verificado contra GitHub el 7 de
+    noviembre de 2026. Los enlaces de las vitrinas apuntan a despliegues
+    reales; el resto, a su repositorio.
+  </p>
+  <nav aria-label="pie">
+    <a href="index.html">Vitrina</a>
+    <a href="auditoria.html">Auditoría unificada</a>
+    <a href="https://github.com/belentani7" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</footer>
+
+<script>
+/* __DATOS__ se inyecta al construir: [{n:nombre, d:desc, p:privado, l:lenguaje, c:color, m:mes, v:vivo|null}] */
+(function () {
+  "use strict";
+  var DATOS = [{"n":"ace-step-ui","d":"Interfaz profesional para ACE-Step 1.5, generación musical con IA local e ilimitada.","p":false,"l":"JavaScript","c":"#f1e05a","m":"2026-11","v":"https://belentani7.github.io/ace-step-ui/"},{"n":"arte-que-veste","d":"Arte Que Veste - moda autoral y arte vestible; catalogo y tienda creativa.","p":false,"l":"HTML","c":"#e34c26","m":"2026-11","v":"https://arte-que-veste.vercel.app"},{"n":"belentani.es","d":"Belentani.es - Unified artist hub for Belentani: immersive 3D portfolio, music catalog, and narrative universe","p":false,"l":"HTML","c":"#e34c26","m":"2026-11","v":"https://belentani.es"},{"n":"belentani7.github.io","d":"BELENTANI // OMEGA CORE — JUDAS_OS v12.0 · organismo vivo · 432 Hz","p":false,"l":"HTML","c":"#e34c26","m":"2026-11","v":"https://belentani7.github.io/"},{"n":"ctg-psicologia-next","d":"Web trilingüe (es/ca/en) del centro cTg Psicología de L&#x27;Hospitalet: Next.js 15 + React 19, catálogo de terapias, equipo y OCR en el navegador","p":false,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":"https://belentani7.github.io/ctg-psicologia-next/"},{"n":"el-raco-nuevo","d":"Web estática de El Racó (edición v2026): página única HTML lista para publicar","p":false,"l":"HTML","c":"#e34c26","m":"2026-11","v":"https://belentani7.github.io/el-raco-nuevo/"},{"n":"fazluiz3d-ecosystem","d":"FAZLUIZ3D / ÁUREA 3D - Standalone Ecosystem 10/10 by Belentani","p":false,"l":"HTML","c":"#e34c26","m":"2026-11","v":"https://fazluiz3d-ecosystem.vercel.app"},{"n":"gpu-cost-optimizer","d":"Optimize GPU compute costs in diffusion pipelines by up to 70%.","p":false,"l":"Python","c":"#3572A5","m":"2026-11","v":"https://gpu-cost-optimizer-lemon.vercel.app"},{"n":"heyduck","d":"HEYDUCK - hub web del universo DUCK: apps, musica y herramientas de produccion.","p":false,"l":"HTML","c":"#e34c26","m":"2026-11","v":"https://heyduck.vercel.app"},{"n":"ia-creativa-lab","d":"Repositorio unificado de 24 proyectos de IA creativa: FireLab, Fashion Stylist AI, iconos y orquestacion de contenido.","p":false,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":"https://belentani7.github.io/ia-creativa-lab/"},{"n":"keyrotor","d":"Key rotation utility (Python) - API key management tools.","p":false,"l":"Python","c":"#3572A5","m":"2026-11","v":"https://keyrotor.vercel.app"},{"n":"nexus-os","d":"Neon Glass Operating System. Browser-based OS shell with 38+ apps, cyberpunk aesthetics, zero dependencies.","p":false,"l":"JavaScript","c":"#f1e05a","m":"2026-11","v":"https://nexus-os-mocha-mu.vercel.app"},{"n":"omniagent","d":"One CLI to route AI tasks to the best model.","p":false,"l":"Python","c":"#3572A5","m":"2026-11","v":"https://omniagent-chi.vercel.app"},{"n":"agent-linux","d":"Reproducible Ubuntu developer environment with PowerShell, Claude Code, OpenClaw, browser automation, MCP templates and repo editing tools.","p":false,"l":"Python","c":"#3572A5","m":"2026-11","v":null},{"n":"agent-skills","d":"Colección de 311 skills para agentes CLI (Claude Code, OpenCode, Codex, Cline, Qwen, Gemini, ZCode). PT&gt;ES&gt;EN&gt;CA.","p":true,"l":"Python","c":"#3572A5","m":"2026-11","v":null},{"n":"agentbox","d":"Disposable cloud sandboxes for AI agents. Spin up isolated VMs for Claude, Aider, Codex, Qwen. $4/month, Terraform-powered.","p":true,"l":"Go","c":"#00ADD8","m":"2026-11","v":null},{"n":"agentguard","d":"The firewall for your AI budget. Monitor spending, enforce limits, auto-pause agents, route overflow to cheaper models. Go daemon.","p":true,"l":"Python","c":"#3572A5","m":"2026-11","v":null},{"n":"agy-cli","d":"CLI en Node para tareas de código con la API de Gemini (agy): setup multiplataforma, guías de uso y configuración por entorno","p":true,"l":"JavaScript","c":"#f1e05a","m":"2026-11","v":null},{"n":"ai-coding-workspace","d":"Workspace unificado de configuración para asistentes de código IA (aider, continue, cursor, zcode): reglas, agentes y guías de instalación","p":true,"l":"Python","c":"#3572A5","m":"2026-11","v":null},{"n":"aion-unified","d":"AION Unified — plataforma SaaS enterprise de gestión de fuerza laboral (turnos, compliance, nóminas, IA)","p":true,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"assurance-pvcu","d":"Repositorio unificado de 10 proyectos de validacion continua y evidencia: PVC-U, ProofMesh, Evidence Ledger y mas.","p":false,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"belent-cad","d":"Open-source architectural CAD for architects: paper-sketch digitization to 3D, photorealistic renders and standards bank (PT/ES/EN). React 19 + Vite + Three.js.","p":true,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"belentani-atlas","d":"Atlas editorial público con procedencia explícita para el universo Belentani","p":true,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"belentani-audio-masters-privados","d":"Snapshot full-stack del ecosistema Belentani (2026-08-08) - preservacion.","p":true,"l":"HTML","c":"#e34c26","m":"2026-11","v":null},{"n":"belentani-design-system","d":"Belentani Design System: glass thick red-neon, glitch machine, coding rain. CSS+JS drop-in para todo el ecosistema.","p":true,"l":"CSS","c":"#663399","m":"2026-11","v":null},{"n":"belentani-docs","d":"Unified Starlight documentation portal for the Belentani ecosystem — all projects, APIs, guides, and design system","p":true,"l":"MDX","c":"#fcb32c","m":"2026-11","v":null},{"n":"belentani-forge","d":"Autonomous project engine — scan, classify, score, and manage the Belentani ecosystem","p":false,"l":"Python","c":"#3572A5","m":"2026-11","v":null},{"n":"belentani-gateway","d":"belentani-gateway - gateway de IA","p":true,"l":"HTML","c":"#e34c26","m":"2026-11","v":null},{"n":"belentani-java-platform","d":"Belentani Platform — enterprise-grade Java backend with JPA entities, security layers, and microservice architecture blueprint","p":true,"l":"Java","c":"#b07219","m":"2026-11","v":null},{"n":"belentani-local","d":"Belentani es una herramienta de ingeniería local y determinista. Su núcleo actual no usa modelos de IA, claves API, proveedores cloud ni solicitudes HTTP. En vez de prometer razonamiento autónomo, ofrece capacidades concretas y comprobables: inspeccionar un workspace local, cl...","p":true,"l":"JavaScript","c":"#f1e05a","m":"2026-11","v":null},{"n":"belentani-mcp-servers","d":"MCP (Model Context Protocol) servers for the Belentani ecosystem — audit, deploy, data, design-system tools","p":true,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"belentani-omni-industrial","d":"Generador de playlists con IA (Gemini) con modo Fiesta, memoria de sesión y empaquetado Android con Capacitor.","p":true,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"belentani-platform","d":"Prototipo de escritorio para Windows. Registra ideas de investigación por temas, formula hipótesis y ejecuta solo simulaciones matemáticas sobre datos sintéticos. Su interfaz organiza el recorrido en captura, profundización, resultados y propuesta de escala, con un widget flot...","p":true,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"belentani-portfolio","d":"Portfolio de Pedro Belentani - AI Systems, Trust &amp; Safety, creative tech.","p":true,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"belentani-python-template","d":"Canonical Python template for Belentani backend services — FastAPI + Pydantic + SQLModel + uv + Ruff + pytest + OpenTelemetry","p":true,"l":"Python","c":"#3572A5","m":"2026-11","v":null},{"n":"belentani-visual-engine","d":"Belentani Visual Engine — Lore/Code → Three.js Procedural Visual Experiences. SDD Level 2. Three.js r185 WebGPU/TSL, 6 procedural generators, FastAPI Studio CMS, Tauri v2 Desktop.","p":true,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"belentani-webs-historicas","d":"web-legacy - proyectos web historicos unificados","p":true,"l":"HTML","c":"#e34c26","m":"2026-11","v":null},{"n":"Belentani.cv-ai","d":"AI-powered document studio — CVs, cover letters, presentations. €0.99 one-time, GDPR compliant, AES-256","p":false,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"belentani.new","d":"Consola comercial y técnica para presentar servicios de arquitectura IA, AgentGuard, MetaSkill y activos profesionales reutilizados desde GitHub. · Construido con Manus","p":true,"l":"Go","c":"#00ADD8","m":"2026-11","v":null},{"n":"belentani7","d":"Perfil de Pedro Belentani: software e IA aplicada (NOIACORE), educación abierta y proyecto artístico Belentani.","p":false,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"Belentanislide","d":"App AI Studio (Gemini) con pack abierto de datos de modelos LLM (OpenRouter) y scripts de análisis — sin claves API.","p":true,"l":"HTML","c":"#e34c26","m":"2026-11","v":null},{"n":"bpmtoms","d":"bpmtoms — proyecto del ecosistema Belentani (categoría: varios).","p":true,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"CARQUIDEC","d":"Parametric architecture studio — AI-driven bioclimatic design and energy optimization","p":false,"l":"HTML","c":"#e34c26","m":"2026-11","v":null},{"n":"cassandra-complex","d":"Cassandra Complex","p":true,"l":"Python","c":"#3572A5","m":"2026-11","v":null},{"n":"catalonia-booking","d":"Catalonia Booking System","p":true,"l":"JavaScript","c":"#f1e05a","m":"2026-11","v":null},{"n":"cinematic-prompt-formatter","d":"Translate cinematic language into optimized prompts for Stable Diffusion, Flux, and SDXL models.","p":true,"l":"Python","c":"#3572A5","m":"2026-11","v":null},{"n":"cli-that-thing","d":"Unified CLI Launcher for Windows — Unifica todos tus CLIs de coding en un solo comando.","p":true,"l":"Python","c":"#3572A5","m":"2026-11","v":null},{"n":"comfyui-json-compiler","d":"Translate natural language creative briefs into valid ComfyUI JSON workflows using LLMs.","p":true,"l":"Python","c":"#3572A5","m":"2026-11","v":null},{"n":"cuidar-conecta-marcia","d":"cuidar-conecta-marcia","p":false,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"duck-ecosystem-private","d":"Ecosistema DUCK/BELENTANI unificado: DUCK-ZION-PREMIUM, heyduck, duck-2000, duck-studio-os, Duck-Omega. 43 repos aplanados en legacy/ (26 publicos, 17 privados).","p":true,"l":"HTML","c":"#e34c26","m":"2026-11","v":null},{"n":"eau-noire","d":"50 herramientas de código abierto para operaciones unipersonales en la nube","p":true,"l":"JavaScript","c":"#f1e05a","m":"2026-11","v":null},{"n":"edu-open-data","d":"Motor de enriquecimiento con datos abiertos para los 8 portales educativos","p":true,"l":"Python","c":"#3572A5","m":"2026-11","v":null},{"n":"el-coste-de-descifrar","d":"El coste de descifrar - ensayo largo sobre cognicion y sistemas.","p":true,"l":"Python","c":"#3572A5","m":"2026-11","v":null},{"n":"elracodepatricia-backend","d":"elracodepatricia-backend — proyecto del ecosistema Belentani (categoría: negocio).","p":true,"l":"Python","c":"#3572A5","m":"2026-11","v":null},{"n":"entrenador-jorge-bcn","d":"Entrenador personal en Barcelona: web de servicios, planes y contacto.","p":false,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"erosbot-whatsapp","d":"Bot de WhatsApp con investigación lingüística propia: atención automatizada y análisis del lenguaje.","p":true,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"firefly-studio-web","d":"Firefly Studio - web del estudio creativo audiovisual.","p":true,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"forja-enterprise","d":"FORJA es un control plane para la gobernanza de ingeniería asistida por IA. El runtime actual combina React 19, Express, tRPC 11, Drizzle y MySQL/TiDB para aislar organizaciones, imponer RBAC,...","p":true,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"fuera-del-relato","d":"Fuera del Relato - ensayo/proyecto literario de Pedro Belentani.","p":true,"l":"JavaScript","c":"#f1e05a","m":"2026-11","v":null},{"n":"git-autoheal","d":"git-autoheal — proyecto del ecosistema Belentani (categoría: herramientas).","p":true,"l":"Python","c":"#3572A5","m":"2026-11","v":null},{"n":"github-ai-terminal","d":"Terminal de IA en el navegador: cliente y servidor TypeScript sobre Drizzle.","p":true,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"hbo-noir-icons","d":"Pack de iconos noir inspirado en la estética HBO. Desplegado en Vercel.","p":false,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"heyduck-rebuild","d":"Portfolio web de Duck (Duck4x), produtor musical, beatmaker e engenheiro de som de Aracaju, Sergipe, Brasil.","p":true,"l":"JavaScript","c":"#f1e05a","m":"2026-11","v":null},{"n":"ivy-la-vie","d":"IVY LA VIE — queer photoshoot project and visual portfolio.","p":false,"l":"HTML","c":"#e34c26","m":"2026-11","v":null},{"n":"judas-experience-unificado","d":"Judas Experience unificado: la obra interactiva del universo Belentani reunida en una sola experiencia navegable.","p":true,"l":"HTML","c":"#e34c26","m":"2026-11","v":null},{"n":"llm-vfx-orchestrator","d":"Autonomous VFX pipeline orchestration using LLMs connected to ComfyUI APIs.","p":false,"l":"Python","c":"#3572A5","m":"2026-11","v":null},{"n":"lumena","d":"Estudio creativo local en español para generar composiciones visuales procedurales, cargar imágenes y aplicar herramientas básicas sin conexión a APIs. · Construido con Manus","p":true,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"ManosAbiertas","d":"Plataforma educativa gratuita: cursos IA/Office, creador CV, guías derechos y recursos para migrantes y comunidades.","p":false,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"mentorai-windows","d":"MentorAI es un profesor local de informática para Windows 10/11. Ayuda a comprender informática básica, CMD, PowerShell, Python, Git, Docker, Android, Termux y seguridad digital mediante...","p":false,"l":"Python","c":"#3572A5","m":"2026-11","v":null},{"n":"meta-skill","d":"Zero-token skill router for Claude Code and Qwen Code. Routes agent requests to the right skill without burning LLM tokens.","p":false,"l":"Python","c":"#3572A5","m":"2026-11","v":null},{"n":"michelle-relayze-web","d":"Web oficial de Michelle Relayze — portfolio y presencia artística","p":false,"l":"CSS","c":"#663399","m":"2026-11","v":null},{"n":"mimo_patch","d":"&gt; Fusión de: Fable 5.1 (XML structured prompts) + Pydantic strict typing + Jev AI (System One routing) + OpenCode MCP + Python glue code.","p":false,"l":"Python","c":"#3572A5","m":"2026-11","v":null},{"n":"music-os-pedro-belentani","d":"Music OS - sistema operativo musical conceptual de Pedro Belentani.","p":false,"l":"Python","c":"#3572A5","m":"2026-11","v":null},{"n":"nataliamarinho","d":"Plataforma educativa multilingue para la profesora Natalia Marinho.","p":true,"l":"HTML","c":"#e34c26","m":"2026-11","v":null},{"n":"neon","d":"Neon — cyberpunk visual experiment and generative art playground","p":true,"l":"Shell","c":"#89e051","m":"2026-11","v":null},{"n":"neural-git-tui","d":"TUI de visualizacion Git bio-inspirada: historial del repo como red neuronal (TypeScript + blessed)","p":false,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"NEUROMARKETING-BRANDING-CIENTIFICO","d":"Investigacion sobre neuromarketing y branding cientifico: 12 capitulos, 45+ estudios citados y el framework NEUROBRAND.","p":true,"l":"HTML","c":"#e34c26","m":"2026-11","v":null},{"n":"nexus-chat","d":"Chat Nexus: aplicación Next.js con Prisma y base de datos propia.","p":true,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"noiacore-lab-consciousness","d":"Experimento del laboratorio NOIACORE sobre conciencia y máquina.","p":true,"l":"JavaScript","c":"#f1e05a","m":"2026-11","v":null},{"n":"noiacore-model-guard","d":"NoiaCore Model Guard is a full-stack control plane for evaluating model inputs and outputs before they become production decisions. It turns model contracts, secret-leakage checks, response-shape...","p":true,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"noiacore-private","d":"Ecosistema NOIACORE unificado: LIOS V5 Event Horizon, AION, Nexus, System One, BRAIN. 28 repos aplanados en legacy/.","p":true,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"noir-informatica-privada-barcelona","d":"Informática privada en Barcelona: sitio de servicios con cliente y servidor.","p":true,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"ocr-legal-apex","d":"OCR Legal Apex es una estación de trabajo documental premium para convertir imágenes y PDFs multipágina en texto editable. El producto está diseñado con una identidad visual de precisión legal:...","p":true,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"omniscraper","d":"Motor híbrido de extracción de leads: Google Places API (búsqueda de negocios)","p":true,"l":"Python","c":"#3572A5","m":"2026-11","v":null},{"n":"open-manus","d":"OpenManus + Ollama en Windows 11, sin Docker y sin claves API.","p":false,"l":"PowerShell","c":"#012456","m":"2026-11","v":null},{"n":"open-school-private","d":"open-school unificado: secure-t, ManosAbiertas, Cruzando-el-charco, WILLIAMSCHOOL, linguaforge, aprende-brasil. 35 repos aplanados en legacy/ (18 publicos, 17 privados).","p":true,"l":"HTML","c":"#e34c26","m":"2026-11","v":null},{"n":"opendesign","d":"Recopilación abierta de sistemas de diseño y maquetas de referencia.","p":false,"l":"JavaScript","c":"#f1e05a","m":"2026-11","v":null},{"n":"p30pro-camera","d":"App de cámara para Huawei P30 Pro: análisis y control desde el móvil.","p":true,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"pbr-validator","d":"Validates PBR texture sets for correctness and compatibility with game engines.","p":true,"l":"Python","c":"#3572A5","m":"2026-11","v":null},{"n":"pedro-belentani-blog-neural","d":"Plataforma editorial de Pedro Belentani sobre tecnología, razón, sentimiento y vulnerabilidad. La portada convierte esos cuatro ámbitos en un organismo neural interactivo; el archivo publica seis...","p":true,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"premium-effects-registry","d":"Curated collection of 50+ GitHub repos for premium frontend visual effects — liquid logos, 3D/WebGL, GLSL shaders, GSAP, particles, cyberpunk UI","p":false,"l":"HTML","c":"#e34c26","m":"2026-11","v":null},{"n":"premium-factory-api","d":"premium-factory-api — proyecto del ecosistema Belentani (categoría: negocio).","p":false,"l":"Python","c":"#3572A5","m":"2026-11","v":null},{"n":"presupuestador-fotografos-001","d":"LumaQuote: presupuestador profesional para fotógrafos, auditado y listo para entregar","p":true,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"PRIVATE-VOICE-LAB-2026-08-08","d":"Laboratorio privado de produccion de voz: acapelas, referencias, mezclas y manifiestos con consentimiento.","p":true,"l":"Python","c":"#3572A5","m":"2026-11","v":null},{"n":"PsychoDecode-AI","d":"Analizador básico de conversaciones en TXT, DOCX y PDF para generar un informe PDF con:","p":true,"l":"Python","c":"#3572A5","m":"2026-11","v":null},{"n":"qr-pro-enterprise","d":"QR Pro Enterprise: generador de códigos QR para Android con API, personalización y auditoría técnica","p":false,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"qwen-input-cache-max-context","d":"Complemento independiente para Qwen Code y Alibaba Cloud Model Studio que reduce tokens de entrada y maximiza el contexto útil en repositorios frontend y full stack. Parte de una copia compatible...","p":true,"l":"Python","c":"#3572A5","m":"2026-11","v":null},{"n":"racoglass","d":"Módulo PrestaShop racoglass v1.0.5: fuente PHP y empaquetado","p":true,"l":"JavaScript","c":"#f1e05a","m":"2026-11","v":null},{"n":"rh-fiscal-ultra-web","d":"RH Fiscal Ultra Web: local fiscal and financial scenario simulator","p":true,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"rotalog","d":"RotáLog - sistema de gestao de entregas e rotas (Node 22 + SQLite nativo; codigo proprio). 15/15 testes.","p":true,"l":"JavaScript","c":"#f1e05a","m":"2026-11","v":null},{"n":"saas-plasma","d":"Plasma Audit — audita repositorios de GitHub con score documental y de producción (SDD, CI, tests, seguridad, deploy).","p":true,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"sabons-alejandra-site","d":"Sitio de jabones artesanos de Alejandra: catálogo y presentación.","p":true,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"safe-exec","d":"Descubres una CLI prometedora, un script compartido en un issue o una herramienta creada por un agente. Puede ahorrarte horas. También puede pedir acceso a tus repositorios, leer variables de...","p":false,"l":"Python","c":"#3572A5","m":"2026-11","v":null},{"n":"skills-registry","d":"Global CLI agent skill distribution system — discover, install, manage skills for Qwen Code, Claude Code, Cline, OpenCode","p":false,"l":"HTML","c":"#e34c26","m":"2026-11","v":null},{"n":"sonix-elite-ai-enterprise","d":"Sonix Elite AI - Billion-dollar enterprise music AI SaaS audited 10/10 across 6 dimensions","p":true,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"SoulX-Singer","d":"SoulX-Singer - sintesis de voz cantada (mirror privado).","p":true,"l":"Python","c":"#3572A5","m":"2026-11","v":null},{"n":"Steven-renovation","d":"Este proyecto contiene la estructura local de una web comercial para servicios de reformas. La carpeta agrupa variantes HTML, recursos visuales, vídeos y documentación breve preparada para organizar el material antes de subirlo a GitHub.","p":false,"l":"HTML","c":"#e34c26","m":"2026-11","v":null},{"n":"system-one-unified","d":"System One — motor de decisiones tipado, determinista y offline (POST /v1/systemone)","p":true,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"temporal-artifact-detector","d":"Python tool for detecting flickering and temporal artifacts in AI-generated videos.","p":true,"l":"Python","c":"#3572A5","m":"2026-11","v":null},{"n":"tender-words-connect","d":"Mapa de comprension y herramientas sobre TLP, vinculos y gestion emocional.","p":false,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"terratrack-isr","d":"TerraTrack ISR: plataforma de seguimiento táctico (ISR) en vanilla JS/Canvas, 100% autocontenida sin backend","p":false,"l":"JavaScript","c":"#f1e05a","m":"2026-11","v":null},{"n":"trama-trans-bcn","d":"Prototipo local de interés público para encontrar apoyo oficial, conservar memoria con límites y explicar cómo se verifican los datos. Construido con vinext sobre el starter de Sites.","p":false,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"vertical-content-orchestrator","d":"Orquestador de contenido vertical - pipeline para Reels/Shorts/TikTok.","p":true,"l":"TypeScript","c":"#3178c6","m":"2026-11","v":null},{"n":"webcam-audio-visualizer","d":"Respaldo local subido 2026-09-28","p":true,"l":"HTML","c":"#e34c26","m":"2026-11","v":null},{"n":"workflow-orchestrator","d":"Workflow orchestrator.","p":true,"l":"Python","c":"#3572A5","m":"2026-11","v":null},{"n":"xp","d":"XP — experience points tracker and gamified productivity system","p":false,"l":"Python","c":"#3572A5","m":"2026-11","v":null}];
+  var raiz = document.getElementById("raiz");
+  var estado = document.getElementById("estado");
+  var buscar = document.getElementById("buscar");
+  var fichas = Array.prototype.slice.call(document.querySelectorAll(".ficha"));
+  var filtro = "todos";
+
+  function plantilla(p, i) {
+    var vivo = p.v
+      ? '<a href="' + p.v + '" target="_blank" rel="noopener" class="luz" title="CI verde · deploy vivo">ver sitio</a>'
+      : "";
+    return '<article class="producto' + (p.v ? " en-vitrina" : "") + '" style="animation-delay:' + Math.min(i, 14) * 45 + 'ms">' +
+      '<div class="caja">' +
+        '<span class="nombre"><a href="https://github.com/belentani7/' + encodeURIComponent(p.n) + '" target="_blank" rel="noopener">' + p.n + "</a>" +
+        (p.v ? '<span class="luz">vitrina</span>' : "") + "</span>" +
+        '<p class="desc">' + p.d + "</p>" +
+      "</div>" +
+      '<div class="lado">' +
+        '<span class="pila"><i style="background:' + (p.c || "#555") + '"></i>' + (p.l || "—") + (p.p ? " · privado" : " · público") + "</span>" +
+        '<span class="fecha">' + p.m + "</span>" +
+        vivo +
+      "</div>" +
+    "</article>";
+  }
+
+  function visible(p) {
+    if (filtro === "vitrina" && !p.v) return false;
+    if (filtro === "publicos" && p.p) return false;
+    if (filtro === "privados" && !p.p) return false;
+    if (filtro.slice(0, 2) === "l:" && p.l !== filtro.slice(2)) return false;
+    var q = buscar.value.trim().toLowerCase();
+    if (!q) return true;
+    return (p.n + " " + p.d + " " + (p.l || "")).toLowerCase().indexOf(q) !== -1;
+  }
+
+  function render() {
+    var salida = DATOS.filter(visible);
+    raiz.innerHTML = salida.length
+      ? salida.map(plantilla).join("")
+      : '<p class="vacio">Nada en el almacén coincide con esa búsqueda.</p>';
+    estado.textContent = "mostrando " + salida.length + " de " + DATOS.length +
+      " productos" + (buscar.value.trim() ? " · búsqueda activa" : "");
+  }
+
+  fichas.forEach(function (f) {
+    f.addEventListener("click", function () {
+      fichas.forEach(function (o) { o.setAttribute("aria-pressed", "false"); });
+      f.setAttribute("aria-pressed", "true");
+      filtro = f.dataset.f;
+      render();
+    });
+  });
+  buscar.addEventListener("input", render);
+  render();
+})();
+</script>
+</body>
+</html>

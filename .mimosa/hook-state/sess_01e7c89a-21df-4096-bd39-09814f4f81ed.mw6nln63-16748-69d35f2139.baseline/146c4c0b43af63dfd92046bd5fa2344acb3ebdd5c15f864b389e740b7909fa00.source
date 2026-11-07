@@ -1,0 +1,34 @@
+name: Living Machine Quality
+
+on:
+  push:
+    paths:
+      - "docs/living-machine/**"
+      - "assets/living-machine-banner.svg"
+      - ".github/workflows/living-machine-ci.yml"
+  pull_request:
+    paths:
+      - "docs/living-machine/**"
+      - "assets/living-machine-banner.svg"
+      - ".github/workflows/living-machine-ci.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  local-first-quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Prepare Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          package-manager-cache: false
+      - name: Validate JavaScript, captions, CSV and references
+        run: node --test docs/living-machine/quality.test.cjs docs/living-machine/studio.test.cjs docs/living-machine/media.test.cjs docs/living-machine/i18n.test.cjs docs/living-machine/video.test.cjs docs/living-machine/diagnostics.test.cjs docs/living-machine/offline.test.cjs docs/living-machine/terminal.test.cjs
