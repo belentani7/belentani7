@@ -1,245 +1,708 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="belentani7 - Producto completo con hero shader y animaciones">
-  <title>Belentani7</title>
-  <link rel="theme-color" content="#6366f1">
-  <style>/* Hero Shader */
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#05060b">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./studio-icon.svg" type="image/svg+xml">
+<meta name="description" content="Pedro Belentani — AI systems, product engineering and creative technology. Explore a living browser desktop and privacy-first tools.">
+<meta name="color-scheme" content="dark">
+<title>BELENTANI // Living Machine — Interactive Professional Lab</title>
+<style>
 :root {
-  --primary: #6366f1;
-  --secondary: #818cf8;
-  --bg: #f8fafc;
-  --accent: #4f46e5;
-  --glow: 0 0 15px rgba(99, 102, 241, 0.3);
+  --bg:#030509;--panel:rgba(13,19,32,.76);--panel-hi:rgba(38,49,76,.5);
+  --edge:rgba(197,217,255,.15);--edge2:rgba(206,228,255,.32);
+  --txt:#eef4ff;--muted:#a8bad0;--cool:#ff9bbb;--accent:#ff244c;
+  --cyan:#ffdce5;--hot:#ff244c;--radius:22px;--shadow:0 24px 90px #000b;
+  --blur:24px;--saturate:140%;
 }
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-body {
-  margin: 0;
-  padding: 0;
-  background: var(--bg);
-  color: #ffffff;
-  font-family: system-ui, -apple-system, sans-serif;
-  overflow-x: hidden;
-}
-.hero {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: var(--bg);
-  overflow: hidden;
-}
-.hero-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-.hero-overlay {
-  position: relative;
-  z-index: 10;
-  text-align: center;
-  padding: 2rem;
-}
-.hero h1 {
-  font-size: clamp(2.5rem, 8vw, 5rem);
-  font-weight: 800;
-  margin-bottom: 1rem;
-  letter-spacing: -0.02em;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  filter: drop-shadow(0 0 15px rgba(99, 102, 241, 0.3));
-  animation: pulse 3s ease-in-out infinite;
-}
-.hero p {
-  font-size: clamp(1.1rem, 3vw, 1.5rem);
-  color: rgba(255,255,255,0.7);
-  margin-bottom: 2rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.hero-actions {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.btn-primary {
-  background: var(--primary);
-  color: #ffffff;
-  padding: 0.8rem 1.6rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 1rem;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 0 15px rgba(99, 102, 241, 0.3);
-}
-.btn-primary:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
-  filter: brightness(1.1);
-}
-.btn-secondary {
-  background: transparent;
-  color: var(--primary);
-  padding: 0.8rem 1.6rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 1rem;
-  border: 2px solid var(--primary);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.btn-secondary:hover {
-  background: var(--primary);
-  color: #ffffff;
-}
-@keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.8; transform: scale(1.05); }
-}
-@media (max-width: 768px) {
-  .hero h1 { font-size: 2rem; }
-  .hero p { font-size: 1rem; }
-  .hero-actions { flex-direction: column; align-items: center; }
-  .btn-primary, .btn-secondary { width: 100%; max-width: 250px; text-align: center; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .hero { animation: none; }
-  .hero h1 { animation: none; }
-}
-section {
-  padding: 4rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: var(--primary);
-  text-align: center;
-}
-section p {
-  font-size: 1.1rem;
-  color: #64748b;
-  max-width: 700px;
-  margin: 0 auto 2rem;
-  text-align: center;
-}
-.stack-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-}
-.stack-list li {
-  background: rgba(99, 102, 241, 0.1);
-  border: 1px solid rgba(99, 102, 241, 0.2);
-  border-radius: 2rem;
-  padding: 0.5rem 1rem;
-  font-size: 0.85rem;
-  color: #64748b;
-}
-footer {
-  padding: 3rem 2rem;
-  border-top: 1px solid rgba(128, 128, 128, 0.2);
-  text-align: center;
-  color: #64748b;
-  font-size: 0.9rem;
-}
-@media (max-width: 768px) {
-  .hero { min-height: 80vh; }
-  .hero h1 { font-size: 2rem; }
-  .hero p { font-size: 1rem; }
-  .hero-actions { flex-direction: column; align-items: center; }
-  .btn-primary, .btn-secondary { width: 100%; max-width: 250px; text-align: center; }
-  section { padding: 2rem 1rem; }
-}
+*{box-sizing:border-box}
+html,body{margin:0;min-width:320px;min-height:100%;font-family:"Segoe UI Variable","Segoe UI",Inter,Arial,sans-serif}
+body{color:var(--txt);background:var(--bg);overflow-x:hidden}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+button:disabled{opacity:.4;cursor:not-allowed}
+a{color:#c1d5ff;text-underline-offset:4px}
+::selection{background:#ff244c77}
+#rain{position:fixed;inset:0;width:100%;height:100%;z-index:0;opacity:.48;pointer-events:none}
+.ambient{position:fixed;inset:-16%;pointer-events:none;z-index:0;background:
+ radial-gradient(ellipse at 75% 22%,#8b0e4150,transparent 35%),
+ radial-gradient(ellipse at 21% 78%,#56224852,transparent 36%),
+ radial-gradient(ellipse at 48% 104%,#7a072d55,transparent 32%);
+ animation:ambient 15s ease-in-out infinite alternate}
+@keyframes ambient{to{transform:scale(1.1) translate(-2%,1%);filter:hue-rotate(15deg)}}
+.grain{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.14;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.62' numOctaves='3' seed='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E")}
+.shell{position:relative;z-index:1;max-width:1600px;margin:auto;padding:30px clamp(16px,4vw,66px) 130px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:clamp(60px,10vh,112px)}
+.brand{display:flex;align-items:center;gap:13px;text-decoration:none;color:var(--txt);font-size:12px;letter-spacing:.2em;font-weight:750}
+.logo{display:grid;place-items:center;width:40px;height:40px;border:1px solid #d9eaff50;border-radius:15px;box-shadow:inset 0 1px #fff6,0 0 45px #ff244c55;background:linear-gradient(135deg,#d3ecff22,#79193832);font-size:19px;letter-spacing:-.14em;padding-right:3px}
+.topmeta{font:11px/1.5 Consolas,monospace;color:#8d9caf;text-align:right}
+.online{display:inline-block;width:6px;height:6px;border-radius:100%;background:#9feac7;box-shadow:0 0 14px #9feac7;margin-right:8px}
+.pill{border:1px solid var(--edge2);padding:7px 12px;border-radius:999px;background:linear-gradient(110deg,#ffffff0f,#ffffff03);color:var(--muted);font:11px Consolas,monospace}
+.hero{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);gap:7vw;align-items:center;min-height:380px}
+.eyebrow{display:flex;gap:12px;align-items:center;color:#aab9dc;text-transform:uppercase;font:12px/1.4 Consolas,monospace;letter-spacing:.2em}
+.eyebrow:before{content:"";width:27px;height:1px;background:var(--cyan);box-shadow:0 0 15px var(--cyan)}
+h1{margin:22px 0 20px;max-width:900px;font-size:clamp(56px,9vw,142px);line-height:.91;font-weight:620;letter-spacing:-.085em}
+h1 strong{font-weight:650;background:linear-gradient(135deg,#fff 5%,#f1f0ff 34%,#a9a4d7 65%,#5b83bd);background-clip:text;-webkit-background-clip:text;color:transparent}
+.subtitle{max-width:690px;line-height:1.85;color:#b5c1d7;font-size:clamp(15px,1.15vw,18px)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{padding:13px 18px;border:1px solid var(--edge2);border-radius:14px;color:#f3f7ff;background:linear-gradient(170deg,#ffffff19,#ffffff08);text-decoration:none;transition:transform .2s,background .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);background:#ffffff1d;box-shadow:0 6px 28px #addcff21}
+.btn.primary{background:linear-gradient(120deg,#e5ecff,#bfcafa);color:#171b31;font-weight:700;border-color:#fff9;box-shadow:0 6px 40px #b1c7ff35}
+.btn.small{padding:9px 12px;font-size:12px}
+.visual{position:relative;min-height:360px;display:grid;place-items:center;isolation:isolate}
+.orbit{width:min(310px,75vw);aspect-ratio:1;border-radius:50%;border:1px solid #c3d8ff22;position:absolute;box-shadow:0 0 0 28px #ff244c06,0 0 0 60px #ff244c03;animation:spin 26s linear infinite}
+.orbit:after{content:"";width:7px;height:7px;background:#d6e9ff;border-radius:50%;box-shadow:0 0 22px #fff;position:absolute;top:15%;left:15%}
+@keyframes spin{to{transform:rotate(360deg)}}
+.iris{position:relative;width:230px;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;
+ background:radial-gradient(circle at 38% 36%,#e9f0ff26 0 4%,#aeb4ec42 7%,#121e35 25%,#03060b 55%,#e93f6456 58%,#10172d 65%,#fff1 66%,transparent 71%);
+ border:1px solid #d9e9ff52;box-shadow:0 0 55px #ff244c3c,inset 0 0 48px #ff244c3a}
+.iris:before{content:"";position:absolute;inset:13px;border-radius:50%;border:1px dashed #ffffff22;animation:spin 40s linear infinite reverse}
+.iris:after{content:"";width:64px;height:64px;border-radius:50%;background:#000;box-shadow:0 0 15px 9px #000,0 0 43px #9abafa50,inset 0 0 0 8px #192539}
+.iris .catch{position:absolute;top:54px;left:58px;width:53px;height:19px;border-radius:50%;transform:rotate(-34deg);background:#ffffffab;filter:blur(12px)}
+.orbit-tag{position:absolute;bottom:3px;right:0;min-width:190px;text-align:right;font:11px/1.65 Consolas,monospace;letter-spacing:.15em;color:#b3c5e4}
+.statusline{display:flex;flex-wrap:wrap;gap:10px;margin-top:80px;padding:18px 0;border-top:1px solid var(--edge);border-bottom:1px solid var(--edge);font:11px/1.8 Consolas,monospace;letter-spacing:.1em;color:#9aadc8}
+.statusline span{flex:1;min-width:170px}.statusline b{color:#e5f4ff;font-weight:500}
+.sectionhead{display:flex;align-items:end;justify-content:space-between;gap:18px;margin:92px 0 26px}
+.sectionhead h2{margin:0;letter-spacing:-.05em;font-size:clamp(26px,3vw,43px);font-weight:600}
+.sectionhead p{max-width:440px;color:#9facbe;font-size:13px;line-height:1.6}
+.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.card,.glass{border:1px solid var(--edge);background:linear-gradient(143deg,#ffffff17,#ffffff05 42%,#1d29411c);backdrop-filter:blur(var(--blur)) saturate(var(--saturate));-webkit-backdrop-filter:blur(var(--blur)) saturate(var(--saturate));box-shadow:inset 0 1px #fff2,var(--shadow)}
+.card{display:block;text-decoration:none;padding:24px 20px 22px;border-radius:var(--radius);min-height:200px;text-align:left;color:var(--txt);position:relative;overflow:hidden;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-5px);border-color:#d5e7ff67}
+.card:after{content:"↗";position:absolute;top:24px;right:20px;color:#fff8}
+.card .symbol{font:26px Consolas,monospace;color:#e0e4ff;margin-bottom:32px}
+.card strong{display:block;font-size:17px;letter-spacing:-.03em}
+.card small{display:block;color:var(--muted);margin-top:10px;line-height:1.6;font-size:12px}
+.mini{color:#a8b9d7;font:11px Consolas,monospace;letter-spacing:.15em}
+.workspace{display:grid;grid-template-columns:.45fr .55fr;gap:15px;margin-top:24px}
+.story{border-radius:var(--radius);padding:28px}
+.story h3{font-size:30px;letter-spacing:-.045em;font-weight:600;line-height:1.15;margin:10px 0 20px}
+.story p{color:#a8b7cb;line-height:1.8;font-size:14px}
+.story .subline{margin-top:27px;border-top:1px solid var(--edge);padding-top:20px;display:flex;flex-wrap:wrap;gap:8px}
+.story .subline span{font-size:11px;color:#cbd6f4;border:1px solid #fff2;border-radius:18px;padding:6px 9px}
+.projects{border-radius:var(--radius);padding:24px;min-height:350px}
+.projects .filter{width:100%;margin:14px 0}
+.project{border-top:1px solid #fff2;padding:14px 0;display:flex;gap:14px;justify-content:space-between;align-items:flex-start}
+.project strong{display:block;font-size:14px}.project small{display:block;color:#a6b4ca;line-height:1.65;font-size:12px;margin-top:5px}
+.project a{color:#b5d6ff;font-size:12px;white-space:nowrap}
+input,textarea,select{min-width:0;width:100%;border:1px solid #ffffff37;color:#eef3ff;border-radius:10px;padding:10px 12px;background:#030711a8}
+textarea{min-height:145px;resize:vertical}
+textarea::placeholder,input::placeholder{color:#77869b}
+select option{background:#141a29}
+input[type="range"]{accent-color:#aebfff}
+input[type="file"]{padding:15px 10px;border:1px dashed #9db8ff66}
+label{font-size:12px;color:#b2c1d8;display:block;margin:13px 0 6px}
+fieldset{border:0;margin:0;padding:0}
+#dock{position:fixed;bottom:18px;left:50%;z-index:40;transform:translateX(-50%);width:min(96%,810px);min-height:60px;border:1px solid #d8e7ff45;border-radius:20px;background:linear-gradient(#ffffff25,#ffffff0a),#0a111fe8;box-shadow:inset 0 1px #fff6,0 18px 70px #000c;backdrop-filter:blur(24px);display:flex;align-items:center;padding:7px;gap:5px}
+#dock button{color:#fff;background:transparent;border:0;border-radius:13px;min-width:40px;min-height:42px;display:grid;place-items:center;font-size:18px}
+#dock button:hover,#dock button.active{background:#f1f5ff25}
+#dock .start{background:radial-gradient(circle at 25% 20%,#e2edff,#7088bc);color:#111729;font-weight:950;box-shadow:inset 0 2px #fff9,0 0 25px #99b4ff44}
+#dock .separator{height:30px;width:1px;background:#fff3;margin:0 6px}
+#dock .dockname{font-size:10px;color:#9eafc5;margin-right:auto;min-width:100px}
+#clock{text-align:right;min-width:87px;font:11px/1.4 Consolas,monospace;color:#d8e8ff}
+#startmenu{position:fixed;z-index:45;bottom:86px;left:max(calc(50% - 405px),2%);width:min(410px,96%);border-radius:22px;padding:19px;display:none}
+#startmenu.open{display:block}
+.startgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:17px 0}
+.startgrid button{text-align:left;padding:13px;color:var(--txt);border:1px solid #fff2;border-radius:12px;background:#ffffff0f}
+.startgrid button:hover{background:#ffffff25}
+#stage{position:fixed;z-index:25;inset:0;pointer-events:none;overflow:hidden}
+.window{pointer-events:auto;position:absolute;top:calc(15% + 1px);left:calc(19% + 1px);width:min(690px,92vw);min-width:310px;max-height:78vh;border-radius:17px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 30px 90px #000d,0 0 0 1px #fff2;background:linear-gradient(145deg,#273753b3,#080d19ed 34%,#0b1121ee);backdrop-filter:blur(34px) saturate(165%);border:1px solid #cbddff66}
+.window.max{inset:20px 20px 94px!important;width:auto!important;max-height:none}
+.window.hide{display:none}
+.window .titlebar{touch-action:none;user-select:none;display:flex;align-items:center;gap:10px;flex:none;min-height:49px;padding:0 8px 0 17px;background:linear-gradient(#ffffff34,#ffffff07);border-bottom:1px solid #e1eaff29}
+.titlebar .title{flex:1;font-size:12px;color:#e1ecff;letter-spacing:.04em}
+.controls{display:flex;gap:4px}
+.controls button{height:28px;width:33px;background:#ffffff14;border:1px solid #ffffff22;border-radius:7px;color:#fff}
+.controls button:hover{background:#ffffff3b}
+.controls button[data-action="close"]:hover{background:#c23b68}
+.window main{padding:22px;overflow:auto;overscroll-behavior:contain;min-height:0;line-height:1.6}
+.window h3{font-size:22px;margin:0 0 10px;letter-spacing:-.035em}
+.window p{color:#b7c4d8;font-size:13px;line-height:1.7}
+.window .note{color:#a7b9d2;font:12px/1.65 Consolas,monospace}
+.fieldrow{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0}.fieldrow>*{flex:1;min-width:120px}
+.fieldrow .btn{flex:0}
+.result{min-height:46px;border:1px solid #ffffff25;border-radius:12px;padding:12px;margin-top:14px;background:#0609149e;font:12px/1.7 Consolas,monospace;color:#bdeecb;white-space:pre-wrap;overflow-wrap:anywhere}
+.result.error{color:#ffb6c4}
+.drop{border:1px dashed #cfe0ff50;border-radius:15px;padding:22px;text-align:center;background:#ffffff07}
+.linkrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.code{font-family:Consolas,"Courier New",monospace}
+.terminal{height:300px;max-height:40vh;overflow:auto;border:1px solid #ffffff1c;border-radius:12px;background:#02050ad9;padding:14px;font:12px/1.6 Consolas,monospace;white-space:pre-wrap;color:#a4e0cb}
+.terminal .accent{color:#d1d0ff}
+.timeline{border-left:1px solid #c7d2ed48;padding-left:16px;margin:20px 0}
+.timeline p{margin:12px 0}
+.micro{font-size:11px;color:#8598b2}
+.a11y-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.toast{position:fixed;z-index:99;right:22px;bottom:94px;border:1px solid #a9c8ff52;background:#101a2aea;box-shadow:var(--shadow);color:#eef5ff;border-radius:12px;padding:13px 16px;font-size:12px;max-width:300px}
+footer{padding:100px 0 0;color:#9aaac1;font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.vistascreen{position:relative;min-height:280px;border:1px solid #c8e8ff77;border-radius:19px;overflow:hidden;background:radial-gradient(ellipse at 65% 15%,#b5d8e65f,transparent 42%),linear-gradient(138deg,#162847,#11142a 49%,#00050e);box-shadow:inset 0 2px #ffffff33,0 14px 50px #0008}
+.vistascreen:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(128deg,transparent 10%,#fff1 26%,transparent 36%,transparent 60%,#fff1 72%,transparent 83%);filter:blur(18px)}
+.vista-top{position:relative;display:flex;justify-content:space-between;gap:12px;padding:12px;color:#e3f4ff;font:10px Consolas,monospace;border-bottom:1px solid #fff3;background:#ffffff13}
+.vista-icons{position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;width:min(450px,90%);padding:25px 18px 65px}
+.vista-icons button{text-align:left;border:1px solid #ffffff22;background:#ffffff10;border-radius:12px;padding:12px;color:#f2f8ff;font-size:12px}
+.vista-icons button:hover{background:#ffffff2b}
+.vista-icons button span{display:block;font-size:30px;color:#c8e8ff;margin-bottom:8px}
+.vista-bottom{position:absolute;left:0;bottom:0;right:0;display:flex;align-items:center;gap:12px;height:48px;padding:5px 13px;background:linear-gradient(#eaf6ff2e,#060b19dc);backdrop-filter:blur(16px);border-top:1px solid #fff5;font:11px Consolas,monospace}
+.vista-bottom span:last-child{margin-left:auto}.vista-orb{display:grid;place-items:center;border-radius:50%;width:34px;height:34px;background:radial-gradient(circle at 27% 22%,#e6f7ff,#6ea0c8,#173657);box-shadow:inset 0 1px #fff,0 0 10px #dff}
+.iris{transform:translate3d(var(--eye-x,0px),var(--eye-y,0px),0);transition:transform .4s ease-out}
+.lowmotion *, .lowmotion *:before,.lowmotion *:after{animation:none!important;transition:none!important}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.visual{min-height:250px}.iris{width:160px}.orbit{width:210px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.workspace{grid-template-columns:1fr}.statusline{margin-top:35px}}
+@media(max-width:530px){h1{font-size:60px}.visual{display:none}.topmeta{display:none}.cards{grid-template-columns:1fr}.card{min-height:144px}.card .symbol{margin-bottom:14px}.sectionhead{display:block}.window{left:3%!important;top:10%!important;width:94%!important;min-width:0;max-height:76vh}#dock .dockname{display:none}#dock{justify-content:center}#dock button{min-width:34px}#dock .separator{margin:0}#clock{min-width:62px}}
+@media(prefers-reduced-motion:reduce){.ambient,.orbit{animation:none}*,*:before,*:after{scroll-behavior:auto!important;transition-duration:0s!important}}
 </style>
 </head>
 <body>
-  <section class="hero">
-    <div class="hero-canvas"></div>
-    <div class="hero-overlay">
-      <h1>Belentani7</h1>
-      <p>Producto completo con home hero, shader WebGL animado, y stack moderno listo para producción.</p>
-      <div class="hero-actions">
-        <a href="#" class="btn-primary">Ver Características</a>
-        <a href="#stack" class="btn-secondary">Ver Stack</a>
+<canvas id="rain" aria-hidden="true"></canvas><div class="ambient" aria-hidden="true"></div><div class="grain" aria-hidden="true"></div>
+<div class="shell">
+  <header class="top">
+    <a class="brand" href="#home" aria-label="Belentani Home"><span class="logo">B</span><span>BELENTANI <span style="opacity:.42">/ SYSTEMS</span></span></a>
+    <div class="topmeta"><div><span class="online"></span> BROWSER-LOCAL SYSTEM ONLINE</div><div id="dateline">Barcelona · ES / EN / PT</div></div>
+    <button class="pill" id="langBtn" aria-label="Change language" title="Change hero language">ES / EN / PT</button>
+  </header>
+  <section class="hero" id="home" aria-labelledby="main-title">
+    <div>
+      <div class="eyebrow">AI SYSTEMS / HUMAN CONTEXT / CREATIVE ENGINEERING</div>
+      <h1 id="main-title">Pedro<br><strong>Belentani.</strong></h1>
+      <p class="subtitle" id="hero-copy">I design systems where engineering, applied AI, human insight and artistic direction meet. Not only interfaces to look at — tools you can open, test and use.</p>
+      <div class="actions">
+        <button class="btn primary" data-open="welcome" id="enter">Enter the living machine ↗</button>
+        <a class="btn" href="./studio.html">Enter Production Studio ↗</a>
+        <button class="btn" data-open="converter">Open classic tool</button>
+        <a class="btn" href="./diagnostics.html">Check this browser ↗</a>
+        <a class="btn" href="https://github.com/belentani7" target="_blank" rel="noopener noreferrer">Explore GitHub ↗</a>
       </div>
     </div>
+    <div class="visual" aria-hidden="true"><div class="orbit"></div><div class="iris"><span class="catch"></span></div><div class="orbit-tag">INTENTION → ARCHITECTURE<br>OBSERVE / REASON / BUILD</div></div>
   </section>
-  <section id="stack">
-    <h2>Stack Tecnológico</h2>
-    <p>Tecnologías utilizadas en este repositorio.</p>
-    <ul class="stack-list">
-      <li>HTML5</li>
-      <li>CSS3</li>
-      <li>JavaScript</li>
-      <li>WebGL Shader</li>
-      <li>Responsive Design</li>
-    </ul>
-  </section>
-  <footer><p>© 2026 Belentani7 - Parte del ecosistema Belentani</p></footer>
-/* Hero Shader WebGL */
-(function() {
-  const canvas = document.createElement('canvas');
-  canvas.id = 'hero-canvas';
-  canvas.style.position = 'absolute';
-  canvas.style.top = '0';
-  canvas.style.left = '0';
-  canvas.style.width = '100%';
-  canvas.style.height = '100%';
-  canvas.style.zIndex = '1';
-  document.body.insertBefore(canvas, document.body.firstChild);
-  const gl = canvas.getContext('webgl');
-  if (!gl) return;
-  const vs = gl.createShader(gl.VERTEX_SHADER);
-  gl.shaderSource(vs, 'attribute vec2 position; void main() { gl_Position = vec4(position, 0.0, 1.0); }');
-  gl.compileShader(vs);
-  const fs = gl.createShader(gl.FRAGMENT_SHADER);
-  gl.shaderSource(fs, 'precision mediump float; uniform vec2 u_resolution; uniform float u_time; uniform vec2 u_mouse; float hash(vec2 p) { p = fract(p * vec2(123.34, 456.21)); p += dot(p, p + 45.32); return fract(p.x * p.y * p.z); } float noise(vec2 p) { vec2 i = floor(p); vec2 f = fract(p); f = f * f * (3.0 - 2.0 * f); float a = hash(i); float b = hash(i + vec2(1.0, 0.0)); float c = hash(i + vec2(0.0, 1.0)); float d = hash(i + vec2(1.0, 1.0)); return mix(mix(a, b, f.x), mix(c, d, f.x), f.y); } float fbm(vec2 p) { float v = 0.0; float a = 0.5; vec2 shift = vec2(100.0); for (int i = 0; i < 5; ++i) { v += a * noise(p); p = p * 2.0 + shift; a *= 0.5; } return v; } void main() { vec2 uv = gl_FragCoord.xy / u_resolution.xy; uv.x *= u_resolution.x / u_resolution.y; vec2 m = uv - u_mouse; float n = fbm(uv * 3.0 + u_time * 0.5); n += fbm(uv * 6.0 - u_time * 0.3) * 0.5; n += length(m) * 0.1; n = mod(n, 1.0); vec3 color = mix(vec3(0.0, 0.5, 1.0), vec3(1.0, 0.0, 0.5), n); float vignette = 1.0 - length(uv * 2.0 - 1.0) * 0.4; color *= vignette; gl_FragColor = vec4(color, 1.0); }');
-  gl.compileShader(fs);
-  const program = gl.createProgram();
-  gl.attachShader(program, vs);
-  gl.attachShader(program, fs);
-  gl.linkProgram(program);
-  gl.useProgram(program);
-  const pb = gl.createBuffer();
-  gl.bindBuffer(gl.ARRAY_BUFFER, pb);
-  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1,1,-1,-1,1,-1,1,1,-1,1,1]), gl.STATIC_DRAW);
-  const pl = gl.getAttribLocation(program, 'position');
-  gl.enableVertexAttribArray(pl);
-  gl.vertexAttribPointer(pl, 2, gl.FLOAT, false, 0, 0);
-  const rl = gl.getUniformLocation(program, 'u_resolution');
-  const tl = gl.getUniformLocation(program, 'u_time');
-  const ml = gl.getUniformLocation(program, 'u_mouse');
-  let mouse = {x: 0.5, y: 0.5};
-  window.addEventListener('mousemove', (e) => { mouse.x = e.clientX / window.innerWidth; mouse.y = 1.0 - e.clientY / window.innerHeight; });
-  function resize() { canvas.width = canvas.clientWidth * window.devicePixelRatio; canvas.height = canvas.clientHeight * window.devicePixelRatio; gl.viewport(0, 0, canvas.width, canvas.height); gl.uniform2f(rl, canvas.width, canvas.height); }
-  window.addEventListener('resize', resize);
-  resize();
-  function render(time) { gl.uniform1f(tl, time * 0.001); gl.uniform2f(ml, mouse.x, mouse.y); gl.drawArrays(gl.TRIANGLES, 0, 6); requestAnimationFrame(render); }
-  requestAnimationFrame(render);
+  <div class="statusline"><span>01 / <b>AI & AUTOMATION</b></span><span>02 / <b>FULL-STACK SYSTEMS</b></span><span>03 / <b>CREATIVE PRODUCTION</b></span><span>04 / <b>ACCESSIBLE TOOLS</b></span></div>
+  <div class="sectionhead" id="tools"><h2>Useful by design.</h2><p>Interactive tools that run in the browser, with clear capability boundaries and no account required. Your files stay on this device.</p></div>
+  <div class="cards">
+    <a class="card" href="./studio.html#batch"><div class="symbol">◩</div><strong>Batch image studio</strong><small>Convert multiple images to WebP, PNG or JPEG and export a real ZIP file.</small></a>
+    <a class="card" href="./studio.html#cv"><div class="symbol">◈</div><strong>CV clarity inspector</strong><small>Offline textual analysis that never invents an ATS score or uploads your document.</small></a>
+    <a class="card" href="./studio.html#storyboard"><div class="symbol">◇</div><strong>Storyboard architect</strong><small>Shot-by-shot planning and export for music videos, reels and campaigns.</small></a>
+    <a class="card" href="./studio.html#palette"><div class="symbol">◉</div><strong>Palette extractor</strong><small>Sample colors from your own photos and export CSS variables.</small></a>
+    <button class="card" data-open="converter"><div class="symbol">◈</div><strong>Image conversion</strong><small>PNG · JPEG · WebP · Resize. Local canvas engine, no upload.</small></button>
+    <button class="card" data-open="captions"><div class="symbol">≋</div><strong>Caption studio</strong><small>SRT / VTT / TXT subtitle conversion, transcript cleanup and speech notes.</small></button>
+    <button class="card" data-open="media"><div class="symbol">◉</div><strong>Media lab</strong><small>Capture a frame from your own video. Record an audio note when supported.</small></button>
+    <button class="card" data-open="data"><div class="symbol">{ }</div><strong>Data workbench</strong><small>JSON validation, CSV conversion, hashing and text transformation.</small></button>
+    <button class="card" data-open="links"><div class="symbol">↗</div><strong>Reel research</strong><small>Organize public post references and context without bypassing platform restrictions.</small></button>
+    <button class="card" data-open="notepad"><div class="symbol">▤</div><strong>Private notebook</strong><small>Write locally, export as TXT, return to your notes without signing in.</small></button>
+    <button class="card" data-open="terminal"><div class="symbol">$_</div><strong>Command terminal</strong><small>A safe, local command simulation for exploring the professional ecosystem.</small></button>
+    <a class="card" href="./studio.html#pdf"><div class="symbol">▤</div><strong>Image to PDF</strong><small>Turn screenshots and photos into a paginated, locally composed PDF.</small></a>
+    <a class="card" href="./studio.html#audio"><div class="symbol">♫</div><strong>Audio to WAV</strong><small>Inspect, visualize and convert compatible audio on your own device.</small></a>
+    <button class="card" data-open="system"><div class="symbol">✧</div><strong>Aero desktop</strong><small>Draggable glass windows, taskbar, start menu, settings and hidden commands.</small></button>
+  </div>
+  <div class="sectionhead" id="profile"><h2>Across disciplines.<br>One design language.</h2><p>A professional profile built around the systems, domains and constraints that make the work useful.</p></div>
+  <div class="workspace">
+    <article class="glass story">
+      <div class="mini">01 — ENGINEERING + INTERPRETATION</div>
+      <h3>Making complexity understandable — then operational.</h3>
+      <p>Based in the Barcelona area, I work across AI orchestration, full-stack development, developer tools, accessible learning experiences and multimedia production. My approach combines technical architecture with the practical questions of who uses a product, how they understand it and what happens when it fails.</p>
+      <p>Experience in content moderation and Trust & Safety informs my attention to risk, clarity, context and human review. Work across Spanish, Brazilian Portuguese and English helps connect cultural interpretation with product delivery.</p>
+      <p>Creative direction is part of the engineering practice: storytelling, sound, motion and brand systems are treated as interfaces between technology and people, not decoration.</p>
+      <div class="subline"><span>TypeScript / React</span><span>Python / APIs</span><span>AI agents</span><span>Trust & Safety</span><span>Accessibility</span><span>Video / Sound</span><span>ES / EN / PT</span></div>
+    </article>
+    <div class="glass projects">
+      <div class="mini">02 — TRACEABLE WORK / SELECTED CODEBASES</div>
+      <label for="projectSearch">Search selected work</label>
+      <input class="filter" type="search" id="projectSearch" placeholder="AI, education, creative, tools..." autocomplete="off">
+      <div id="projectList"></div>
+      <p class="micro">GitHub repositories may be private or under revision; links are source references, not a claim that all products are public releases.</p>
+    </div>
+  </div>
+  <footer><div>© 2026 Pedro Belentani · Built as a browser-based professional experiment.</div><div>LOCAL FIRST / NO TRACKERS / NO HIDDEN UPLOADS · <a href="https://belentani.es">belentani.es</a></div></footer>
+</div>
+<div id="stage" aria-label="Aero style application windows" aria-live="off"></div>
+<div id="startmenu" class="glass" role="dialog" aria-label="Applications menu">
+  <div class="mini">BELENTANI / LIVING MACHINE</div><h3 style="margin:10px 0">Launch an application</h3>
+  <input id="startSearch" type="search" placeholder="Find a tool...">
+  <div class="startgrid" id="startGrid"></div>
+  <div class="micro">Aero-inspired web demo. This is not Microsoft Windows and cannot run Windows programs.</div>
+</div>
+<nav id="dock" aria-label="Desktop taskbar"><button class="start" id="startButton" title="Start menu" aria-label="Start menu">◈</button><div class="separator"></div><button title="Welcome" data-open="welcome">⌂</button><button title="Converter" data-open="converter">◧</button><button title="Captions" data-open="captions">≋</button><button title="Media" data-open="media">◉</button><button title="Terminal" data-open="terminal">$_</button><a class="btn small" href="./studio.html" title="Open Production Studio" style="font-size:11px;padding:10px">STUDIO ↗</a><span class="dockname">BELENTANI // AERO LAB</span><span id="clock" aria-label="Local date and time"></span></nav>
+<div id="toast" class="toast" hidden role="status" aria-live="polite"></div>
+<script>
+"use strict";
+(function(){
+  const $ = (s,root=document)=>root.querySelector(s);
+  const $$ = (s,root=document)=>Array.from(root.querySelectorAll(s));
+  const text = (value)=>String(value == null ? "" : value);
+  const h = (str)=>text(str).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;");
+  const sleep = (ms)=>new Promise(resolve=>setTimeout(resolve,ms));
+  const SAVEPREFIX = "belentani-living-";
+  const APPS = [
+    ["welcome","Welcome center","⌂"],["converter","Image converter","◈"],
+    ["captions","Caption studio","≋"],["media","Media lab","◉"],
+    ["data","Data workbench","{ }"],["links","Reel research","↗"],
+    ["notepad","Private notebook","▤"],["terminal","Command terminal","$_"],
+    ["system","System settings","✧"],["vista","Aero nostalgia","⊞"]
+  ];
+  const PROJECTS = [
+    ["Belentani.cv-ai","CV generation, guardrails and practical AI tools","AI · PRODUCT","https://github.com/belentani7/Belentani.cv-ai"],
+    ["ManosAbiertas","Accessible education and newcomer-oriented resources","EDUCATION","https://github.com/belentani7/ManosAbiertas"],
+    ["open-school","Offline-oriented learning experience","ACCESSIBILITY","https://github.com/belentani7/open-school"],
+    ["lingua-aberta","Multilingual learning and spaced repetition work","LANGUAGE","https://github.com/belentani7/lingua-aberta"],
+    ["judas-experience-web","Three.js / immersive artistic interface","CREATIVE TECH","https://github.com/belentani7/judas-experience-web"],
+    ["agentguard","Agent spending limits and safety-oriented routing","AI · SYSTEMS","https://github.com/belentani7/agentguard"],
+    ["comfyui-json-compiler","Validated creative pipeline workflow generation","MEDIA · AI","https://github.com/belentani7/comfyui-json-compiler"],
+    ["belentani7","Professional profile and browser tool laboratory","PORTFOLIO","https://github.com/belentani7/belentani7"]
+  ];
+  const I18N = {
+    en:{hero:"I design systems where engineering, applied AI, human insight and artistic direction meet. Not only interfaces to look at — tools you can open, test and use.",enter:"Enter the living machine ↗"},
+    es:{hero:"Diseño sistemas donde convergen ingeniería, IA aplicada, criterio humano y dirección artística. No solo interfaces para mirar: herramientas que puedes abrir, probar y utilizar.",enter:"Entrar en la máquina viva ↗"},
+    pt:{hero:"Crio sistemas onde engenharia, IA aplicada, sensibilidade humana e direção artística se encontram. Não apenas interfaces para olhar: ferramentas para abrir, testar e usar.",enter:"Entrar na máquina viva ↗"}
+  };
+  let lang = "en",topZ=30,windows=new Map(),motion=true,recording=null;
+  const setStored=(key,value)=>{try{localStorage.setItem(SAVEPREFIX+key,value)}catch(e){}};
+  const getStored=(key)=>{try{return localStorage.getItem(SAVEPREFIX+key)||""}catch(e){return ""}};
+  function toast(message,error){
+    const el=$("#toast");el.textContent=message;el.style.borderColor=error?"#ed3a6a":"#a9c8ff52";el.hidden=false;
+    clearTimeout(toast.timer);toast.timer=setTimeout(()=>el.hidden=true,4600);
+  }
+  function download(blob,name){
+    const url=URL.createObjectURL(blob);const a=document.createElement("a");
+    a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000);
+  }
+  function downloadText(content,name,type){
+    download(new Blob([content],{type:type||"text/plain;charset=utf-8"}),name);
+  }
+  function stripExt(name){return text(name||"file").replace(/\.[^.]+$/,"").slice(0,100).replace(/[^a-z0-9_.-]/gi,"_")}
+  function setResult(root,selector,message,error){
+    const el=$(selector,root);if(el){el.textContent=message;el.classList.toggle("error",!!error)}
+  }
+  function now(){const d=new Date();$("#clock").textContent=d.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})+"\n"+d.toLocaleDateString([],{day:"2-digit",month:"short"});}
+  now();setInterval(now,10000);
+  function renderProjects(query){
+    const q=text(query).toLowerCase().trim();const list=$("#projectList");list.replaceChildren();
+    const matches=PROJECTS.filter(p=>p.join(" ").toLowerCase().includes(q));
+    for(const p of matches){
+      const r=document.createElement("div");r.className="project";
+      const c=document.createElement("div");const strong=document.createElement("strong");strong.textContent=p[0];
+      const small=document.createElement("small");small.textContent=p[1]+"  /  "+p[2];c.append(strong,small);
+      const a=document.createElement("a");a.href=p[3];a.target="_blank";a.rel="noopener noreferrer";a.textContent="Source ↗";
+      r.append(c,a);list.append(r);
+    }
+    if(!matches.length){const p=document.createElement("p");p.textContent="No matching project.";list.append(p)}
+  }
+  renderProjects("");$("#projectSearch").addEventListener("input",e=>renderProjects(e.target.value));
+  $("#langBtn").addEventListener("click",()=>{
+    lang=lang==="en"?"es":lang==="es"?"pt":"en";
+    $("#hero-copy").textContent=I18N[lang].hero;$("#enter").textContent=I18N[lang].enter;
+    $("#hero-copy").lang=lang==="pt"?"pt-BR":lang;$("#enter").lang=lang==="pt"?"pt-BR":lang;toast("Hero: "+lang.toUpperCase());
+  });
+  function appContent(id){
+    switch(id){
+    case "welcome":return '<div class="mini">LIVING MACHINE / BUILD 2026.10</div><h3>Welcome to the working profile.</h3><p>This is the interactive layer behind a GitHub profile. The glass desktop is an intentional design demonstration; the file utilities are real, local browser tools.</p><div class="timeline"><p><strong>01 / Explore</strong> — Move windows, open the Start menu or use the taskbar.</p><p><strong>02 / Work</strong> — Convert an image, clean subtitles, inspect media, work with data.</p><p><strong>03 / Validate</strong> — Inspect selected codebases, professional scope and clear limitations.</p></div><div class="linkrow"><button class="btn small" data-launch="converter">Try image conversion</button><button class="btn small" data-launch="captions">Open captions</button><button class="btn small" data-launch="terminal">Discover hidden commands</button></div><p class="micro">No Windows executable runs here. This is a modern browser experience inspired by the glass interfaces of the 2000s.</p>';
+    case "converter":return '<div class="mini">LOCAL PROCESSING / CANVAS</div><h3>Image format converter</h3><p>Convert your own images into PNG, JPEG or WebP; optionally resize. Files do not leave your browser.</p><label for="imgFile">Source image</label><input id="imgFile" type="file" accept="image/*"><div class="fieldrow"><div><label for="imgFormat">Output</label><select id="imgFormat"><option value="image/png">PNG</option><option value="image/jpeg">JPEG</option><option value="image/webp">WebP</option></select></div><div><label for="imgWidth">Max width (px)</label><input id="imgWidth" type="number" min="1" max="12000" placeholder="Keep original"></div><div><label for="imgQuality">Quality %</label><input id="imgQuality" type="number" value="90" min="1" max="100"></div></div><button class="btn primary small" id="imgGo">Convert & download</button><div class="result" id="imgResult">Ready for an image.</div>';
+    case "captions":return '<div class="mini">SUBTITLE LAB / NO REMOTE MODEL</div><h3>Caption & transcript studio</h3><p>Paste or open SRT/VTT captions, convert formats or clean timestamped transcript text. Dictation uses your browser microphone only if its speech engine is available; it may use the browser provider.</p><label for="capFile">Import captions</label><input id="capFile" type="file" accept=".srt,.vtt,.txt,text/plain"><label for="capText">Transcript or subtitle source</label><textarea id="capText" placeholder="00:00:01,000 --> 00:00:03,000&#10;Your words here..."></textarea><div class="fieldrow"><button class="btn small" id="toSrt">Export SRT</button><button class="btn small" id="toVtt">Export VTT</button><button class="btn small" id="cleanCap">Extract plain text</button><button class="btn small" id="exportPlain">Export TXT</button><button class="btn small" id="dictate">Microphone dictation</button></div><div class="result" id="capResult">Supports subtitle conversion; not automatic transcription of uploaded videos.</div>';
+    case "media":return '<div class="mini">LOCAL VIDEO & AUDIO</div><h3>Media frame / audio note</h3><p>Take a still from a video file you own. Record a microphone note in browsers supporting MediaRecorder. No third-party download or remote processing.</p><label for="videoFile">Local video</label><input id="videoFile" type="file" accept="video/*"><div class="fieldrow"><div><label for="frameTime">Frame at second</label><input id="frameTime" type="number" value="0" step="0.5" min="0"></div><button class="btn small" id="frameGo">Export PNG frame</button></div><video id="videoPreview" style="width:100%;max-height:180px;display:none;margin:12px 0" controls playsinline></video><div class="fieldrow"><button class="btn small" id="recordStart">Record microphone</button><button class="btn small" id="recordStop" disabled>Stop & save</button></div><div class="result" id="mediaResult">Load a local video or start an audio note.</div>';
+    case "data":return '<div class="mini">TEXT & DATA TOOLKIT</div><h3>Data workbench</h3><p>Validate, format, minify or convert a JSON array of objects to CSV. Parse CSV back to JSON. Calculate SHA-256 of a local file.</p><label for="dataText">JSON / CSV</label><textarea id="dataText" spellcheck="false" placeholder="[{&quot;name&quot;:&quot;Ada&quot;,&quot;skill&quot;:&quot;Systems&quot;}]"></textarea><div class="fieldrow"><button class="btn small" data-transform="pretty">Pretty JSON</button><button class="btn small" data-transform="minify">Minify JSON</button><button class="btn small" data-transform="csv">JSON → CSV</button><button class="btn small" data-transform="json">CSV → JSON</button><button class="btn small" data-transform="slug">Slugify</button><button class="btn small" data-transform="upper">UPPER</button><button class="btn small" data-transform="lower">lower</button><button class="btn small" data-transform="encode">URL encode</button><button class="btn small" data-transform="decode">URL decode</button><button class="btn small" data-transform="base64">Base64 encode</button><button class="btn small" data-transform="unbase64">Base64 decode</button><button class="btn small" data-transform="stats">Text stats</button><button class="btn small" data-transform="download">Download</button></div><label for="hashFile">File fingerprint · SHA-256</label><input id="hashFile" type="file"><div class="result" id="dataResult">Operations happen locally.</div>';
+    case "links":return '<div class="mini">RESEARCH / RIGHTS-AWARE TOOL</div><h3>Reel & reference research</h3><p>Collect publicly available post references and create a small research note you can export. This tool does not bypass DRM, authentication, creator permissions or social-platform restrictions.</p><label for="reelLink">Public post URL</label><input id="reelLink" type="url" placeholder="https://www.instagram.com/reel/..."><label for="reelNotes">Context, creative analysis, transcript notes</label><textarea id="reelNotes" placeholder="Visual language, references, timing, editing notes..."></textarea><div class="fieldrow"><button class="btn small" id="reelSave">Save research note</button><button class="btn small" id="reelOpen">Open original post ↗</button></div><div class="result" id="reelResult">For media reuse, use original files or creator-authorized exports.</div>';
+    case "notepad":return '<div class="mini">PRIVATE / LOCAL STORAGE</div><h3>Notepad</h3><p>Private scratchpad. Stored in this browser only; browser cleanup can erase it. Export important material.</p><label for="memo">Your note</label><textarea id="memo" style="min-height:220px" placeholder="Start writing..."></textarea><div class="fieldrow"><button class="btn small" id="saveMemo">Save locally</button><button class="btn small" id="exportMemo">Export .txt</button><button class="btn small" id="clearMemo">Clear editor</button></div><div class="result" id="memoResult">No account or remote storage.</div>';
+    case "terminal":return '<div class="mini">BROWSER SHELL / READ-ONLY SIMULATOR</div><h3>Belentani terminal</h3><div class="terminal" id="console" role="log" aria-live="polite"></div><label for="terminalInput">Command — help / whoami / stack / projects / tools / ethics / date / clear / vista / contact</label><input class="code" id="terminalInput" type="text" autocomplete="off" spellcheck="false" placeholder="Type help then Enter"><p class="micro">A narrative terminal. Commands are interpreted locally and never executed on your operating system.</p>';
+    case "vista":return '<div class="mini">EASTER EGG / VISTA INSPIRED</div><h3>Aero nostalgia</h3><p>A tribute to the glass interfaces of the 2000s, built with CSS and accessible HTML. This is not a Microsoft Windows product or emulator.</p><div class="vistascreen"><div class="vista-top"><span>◉ BELENTANI COMPUTER</span><span>DEMO / 2007 → 2026</span></div><div class="vista-icons"><button data-launch="welcome"><span>⌂</span> My computer</button><button data-launch="notepad"><span>▤</span> Documents</button><button data-launch="converter"><span>◩</span> Pictures</button><button data-launch="terminal"><span>$_</span> Command prompt</button></div><div class="vista-bottom"><span class="vista-orb">◈</span><span>Belentani Aero Desktop</span><span>○ ◇ ▣</span></div></div><div class="linkrow"><a class="btn small" href="./studio.html">Open seven real utilities ↗</a><button class="btn small" data-launch="system">System options</button></div>';
+    case "system":return '<div class="mini">AERO / HUMAN-CENTERED SETTINGS</div><h3>Living machine preferences</h3><p>Customize this local interface. System-like visuals are artistic simulation — not an operating system, emulator or actual Windows Vista.</p><label><input type="checkbox" id="motionToggle" style="width:auto;margin-right:10px" checked>Ambient animation and code rain</label><label><input type="checkbox" id="rainToggle" style="width:auto;margin-right:10px" checked>Matrix-style code rain</label><div class="timeline"><p>Processing: local Canvas, Web APIs and browser storage.</p><p>Data sent to this website: none by these utility operations.</p><p>Accessibility: keyboard-operated windows; system reduced-motion setting respected.</p><p>Copyright: independent Aero-inspired concept, not affiliated with Microsoft.</p></div><button class="btn small" id="openAbout">Professional profile</button>';
+    default:return "<h3>Application not found.</h3>";
+    }
+  }
+  function toggleStart(force){
+    const m=$("#startmenu");const show=typeof force==="boolean"?force:!m.classList.contains("open");
+    m.classList.toggle("open",show);$("#startButton").setAttribute("aria-expanded",String(show));if(show)$("#startSearch").focus();
+  }
+  function renderStart(query){
+    const menu=$("#startGrid");menu.replaceChildren();
+    for(const [id,name,icon] of APPS.filter(a=>a[1].toLowerCase().includes(text(query).toLowerCase()))){
+      const b=document.createElement("button");b.textContent=icon+"  "+name;b.addEventListener("click",()=>{toggleStart(false);openApp(id)});menu.append(b);
+    }
+  }
+  renderStart("");$("#startSearch").addEventListener("input",e=>renderStart(e.target.value));
+  $("#startButton").addEventListener("click",()=>toggleStart());
+  document.addEventListener("keydown",e=>{
+    if(e.key==="Escape")toggleStart(false);
+    if(e.ctrlKey&&e.altKey&&e.key.toLowerCase()==="t"){e.preventDefault();openApp("terminal")}
+  });
+  document.addEventListener("pointerdown",e=>{if(!e.target.closest("#startmenu,#startButton"))toggleStart(false)});
+  function openApp(id){
+    if(windows.has(id)){const existing=windows.get(id);existing.classList.remove("hide");focus(existing);return}
+    const name=APPS.find(a=>a[0]===id);if(!name)return;
+    const win=document.createElement("section");win.className="window";win.setAttribute("role","dialog");win.setAttribute("aria-label",name[1]);
+    win.dataset.id=id;win.setAttribute("aria-modal","false");win.style.left=(12+windows.size*3.2)+"%";win.style.top=(12+windows.size*2.4)+"%";
+    win.innerHTML='<div class="titlebar"><span class="title">'+h(name[2]+"  "+name[1])+'</span><div class="controls"><button data-action="min" aria-label="Minimize window">−</button><button data-action="max" aria-label="Maximize window">□</button><button data-action="close" aria-label="Close window">×</button></div></div><main>'+appContent(id)+'</main>';
+    $("#stage").append(win);windows.set(id,win);focus(win);wireWindow(win,id);
+    if(window.matchMedia("(max-width:530px)").matches)win.style.left="3%";
+  }
+  function focus(el){el.style.zIndex=++topZ}
+  function wireWindow(win,id){
+    win.addEventListener("pointerdown",()=>focus(win));
+    $$(".controls button",win).forEach(b=>b.addEventListener("click",()=>{
+      if(b.dataset.action==="close"){cleanup(win);windows.delete(id);win.remove()}
+      if(b.dataset.action==="min")win.classList.add("hide");
+      if(b.dataset.action==="max")win.classList.toggle("max");
+    }));
+    const bar=$(".titlebar",win);let moving=null;
+    bar.addEventListener("pointerdown",e=>{
+      if(e.target.closest("button")||win.classList.contains("max")||window.innerWidth<530)return;
+      moving={x:e.clientX,y:e.clientY,left:win.offsetLeft,top:win.offsetTop};bar.setPointerCapture(e.pointerId);
+    });
+    bar.addEventListener("pointermove",e=>{
+      if(!moving)return;
+      const x=Math.min(window.innerWidth-80,Math.max(0,moving.left+e.clientX-moving.x));
+      const y=Math.min(window.innerHeight-80,Math.max(0,moving.top+e.clientY-moving.y));
+      win.style.left=x+"px";win.style.top=y+"px";
+    });
+    bar.addEventListener("pointerup",()=>moving=null);
+    bar.addEventListener("pointercancel",()=>moving=null);
+    $$("[data-launch]",win).forEach(b=>b.addEventListener("click",()=>openApp(b.dataset.launch)));
+    if(id==="converter")wireConvert(win);
+    if(id==="captions")wireCaptions(win);
+    if(id==="media")wireMedia(win);
+    if(id==="data")wireData(win);
+    if(id==="links")wireLinks(win);
+    if(id==="notepad")wireNotepad(win);
+    if(id==="terminal")wireTerminal(win);
+    if(id==="system")wireSystem(win);
+    setTimeout(()=>{const first=$("input,button,textarea",win);if(first)first.focus({preventScroll:true})},20);
+  }
+  function cleanup(win){
+    if(win.dataset.id==="media"&&recording&&recording.state==="recording")recording.stop();
+    if(win._sourceUrl)URL.revokeObjectURL(win._sourceUrl);
+  }
+  async function wireConvert(win){
+    $("#imgGo",win).addEventListener("click",async()=>{
+      const file=$("#imgFile",win).files[0];if(!file){setResult(win,"#imgResult","Select an image.",true);return}
+      if(file.size>50*1024*1024){setResult(win,"#imgResult","For stability, use an image under 50 MB.",true);return}
+      try{
+        const bmp=await createImageBitmap(file);
+        const w=parseInt($("#imgWidth",win).value,10);const width=w>0?Math.min(w,bmp.width):bmp.width;
+        const height=Math.max(1,Math.round(bmp.height*width/bmp.width));
+        if(width*height>40000000)throw Error("Image would exceed 40 megapixels.");
+        const canvas=document.createElement("canvas");canvas.width=width;canvas.height=height;
+        const ctx=canvas.getContext("2d");if(!ctx)throw Error("Canvas unavailable");
+        const type=$("#imgFormat",win).value;ctx.fillStyle="#ffffff";
+        if(type==="image/jpeg")ctx.fillRect(0,0,width,height);
+        ctx.drawImage(bmp,0,0,width,height);bmp.close();
+        const q=Math.max(.01,Math.min(1,Number($("#imgQuality",win).value||90)/100));
+        const blob=await new Promise(resolve=>canvas.toBlob(resolve,type,q));
+        if(!blob)throw Error("Encoder unavailable in this browser");
+        if(blob.type!==type)throw Error("This browser does not support the requested output encoder.");
+        const ext=blob.type==="image/png"?"png":blob.type==="image/webp"?"webp":"jpg";
+        download(blob,stripExt(file.name)+"-belentani."+ext);
+        setResult(win,"#imgResult","Converted "+width+" × "+height+" · "+Math.round(blob.size/1024)+" KB · "+blob.type);
+      }catch(err){setResult(win,"#imgResult",err.message||"Unable to convert image.",true)}
+    });
+  }
+  function normalizeTime(t){
+    const s=text(t).trim().replace(",",".");
+    const m=s.match(/^(?:(\d+):)?(\d{1,2}):(\d{2})(?:\.(\d{1,3}))?$/);
+    if(!m)throw Error("Invalid subtitle timestamp: "+s);
+    const hours=(m[1]||"0").padStart(2,"0");const mins=m[2].padStart(2,"0");
+    const secs=m[3].padStart(2,"0");const ms=(m[4]||"0").padEnd(3,"0");
+    return hours+":"+mins+":"+secs+"."+ms;
+  }
+  function parseCaptions(source){
+    let content=text(source).replace(/\r/g,"").replace(/^\uFEFF/,"").replace(/^WEBVTT[^\n]*\n?/,"").trim();
+    if(!content)return [];
+    const groups=content.split(/\n\s*\n/);const cues=[];
+    for(const group of groups){
+      let lines=group.split("\n").map(s=>s.trim()).filter(Boolean);
+      const index=lines.findIndex(line=>line.includes("-->"));
+      if(index<0)continue;
+      const parts=lines[index].split(/\s*-->\s*/);
+      const start=normalizeTime(parts[0]);const end=normalizeTime(parts[1].split(/\s+/)[0]);
+      const body=lines.slice(index+1).join("\n");
+      if(body)cues.push({start,end,body});
+    }
+    return cues;
+  }
+  function serializeCues(cues,mode){
+    const sep=mode==="srt"?",":".";const timestamp=t=>t.replace(".",sep);
+    const contents=cues.map((cue,i)=>(mode==="srt"?(i+1)+"\n":"")+timestamp(cue.start)+" --> "+timestamp(cue.end)+"\n"+cue.body);
+    return (mode==="vtt"?"WEBVTT\n\n":"")+contents.join("\n\n")+"\n";
+  }
+  function wireCaptions(win){
+    $("#capFile",win).addEventListener("change",async e=>{
+      const file=e.target.files[0];if(file){$("#capText",win).value=await file.text();setResult(win,"#capResult","Loaded "+file.name)}
+    });
+    ["srt","vtt"].forEach(format=>$("#to"+format[0].toUpperCase()+format.slice(1),win).addEventListener("click",()=>{
+      try{
+        const cues=parseCaptions($("#capText",win).value);
+        if(!cues.length)throw Error("No valid timestamped cues found.");
+        downloadText(serializeCues(cues,format),"belentani-captions."+format,"text/plain;charset=utf-8");
+        setResult(win,"#capResult","Exported "+cues.length+" cues as "+format.toUpperCase());
+      }catch(err){setResult(win,"#capResult",err.message,true)}
+    }));
+    $("#cleanCap",win).addEventListener("click",()=>{
+      const input=$("#capText",win).value;let output;
+      try{
+        const cues=parseCaptions(input);
+        output=cues.length?cues.map(c=>c.body).join("\n"):input.replace(/^\d+\s*$/gm,"").replace(/^(?:\d{1,2}:)?\d{2}:\d{2}[.,]\d{3}\s*-->\s*.+$/gm,"").trim();
+        $("#capText",win).value=output;setResult(win,"#capResult","Text extracted into editor. Export via the browser's copy function.");
+      }catch(err){setResult(win,"#capResult",err.message,true)}
+    });
+    $("#exportPlain",win).addEventListener("click",()=>{downloadText($("#capText",win).value,"belentani-transcript.txt");setResult(win,"#capResult","Transcript downloaded as TXT.")});
+    const speech=window.SpeechRecognition||window.webkitSpeechRecognition;
+    if(!speech){$("#dictate",win).disabled=true;$("#dictate",win).title="Speech recognition unavailable";return}
+    $("#dictate",win).addEventListener("click",()=>{
+      try{
+        const rec=new speech();rec.lang=lang==="pt"?"pt-BR":lang==="en"?"en-US":"es-ES";
+        rec.interimResults=false;rec.continuous=false;
+        rec.onresult=(ev)=>{const spoken=Array.from(ev.results).map(x=>x[0].transcript).join(" ");$("#capText",win).value+=($("#capText",win).value?"\n":"")+spoken;setResult(win,"#capResult","Dictation inserted. Browser speech services may process audio remotely.")};
+        rec.onerror=(e)=>setResult(win,"#capResult","Speech recognition: "+e.error,true);
+        rec.start();setResult(win,"#capResult","Listening with browser permission. Speech recognition can use your browser provider.");
+      }catch(err){setResult(win,"#capResult",err.message,true)}
+    });
+  }
+  function wireMedia(win){
+    const vid=$("#videoPreview",win);
+    $("#videoFile",win).addEventListener("change",e=>{
+      const file=e.target.files[0];if(!file)return;
+      if(win._sourceUrl)URL.revokeObjectURL(win._sourceUrl);
+      win._sourceUrl=URL.createObjectURL(file);vid.src=win._sourceUrl;vid.style.display="block";
+      setResult(win,"#mediaResult","Video loaded locally: "+file.name);
+    });
+    $("#frameGo",win).addEventListener("click",async()=>{
+      try{
+        if(!vid.src)throw Error("Select a video first.");
+        async function mediaEvent(type,limit=8000){
+          return new Promise((resolve,reject)=>{
+            const done=(err)=>{clearTimeout(timer);vid.removeEventListener(type,ok);vid.removeEventListener("error",bad);err?reject(err):resolve()};
+            const ok=()=>done();const bad=()=>done(Error("Video could not be decoded."));
+            const timer=setTimeout(()=>done(Error("Video decoding timed out.")),limit);
+            vid.addEventListener(type,ok,{once:true});vid.addEventListener("error",bad,{once:true});
+          });
+        }
+        if(!Number.isFinite(vid.duration)){
+          const ready=mediaEvent("loadedmetadata");vid.load();await ready;
+        }
+        const second=Math.max(0,Math.min(Math.max(0,vid.duration-.05),Number($("#frameTime",win).value)||0));
+        if(vid.readyState<2){
+          const loaded=mediaEvent("loadeddata");
+          vid.load();
+          await loaded;
+        }
+        if(Math.abs(vid.currentTime-second)>.04){
+          const ready=mediaEvent("seeked");
+          vid.currentTime=second;
+          await ready;
+        }
+        const canvas=document.createElement("canvas");canvas.width=vid.videoWidth;canvas.height=vid.videoHeight;
+        if(!canvas.width||!canvas.height)throw Error("Video dimensions unavailable.");
+        canvas.getContext("2d").drawImage(vid,0,0);
+        const blob=await new Promise(resolve=>canvas.toBlob(resolve,"image/png"));
+        if(!blob)throw Error("Frame export failed.");
+        download(blob,"belentani-frame-"+second.toFixed(2)+".png");
+        setResult(win,"#mediaResult","Saved "+canvas.width+" × "+canvas.height+" PNG frame.");
+      }catch(err){setResult(win,"#mediaResult",err.message,true)}
+    });
+    const start=$("#recordStart",win),stop=$("#recordStop",win);
+    start.addEventListener("click",async()=>{
+      try{
+        if(!navigator.mediaDevices?.getUserMedia||!window.MediaRecorder)throw Error("Microphone recording unsupported.");
+        const stream=await navigator.mediaDevices.getUserMedia({audio:true});
+        const chunks=[];recording=new MediaRecorder(stream);
+        recording.ondataavailable=e=>{if(e.data.size)chunks.push(e.data)};
+        recording.onstop=()=>{stream.getTracks().forEach(t=>t.stop());if(chunks.length)download(new Blob(chunks,{type:recording.mimeType||"audio/webm"}),"belentani-audio-note.webm");start.disabled=false;stop.disabled=true;setResult(win,"#mediaResult","Audio recording downloaded.")};
+        recording.start();start.disabled=true;stop.disabled=false;setResult(win,"#mediaResult","Recording. Click Stop & save.");
+      }catch(err){setResult(win,"#mediaResult",err.message,true)}
+    });
+    stop.addEventListener("click",()=>{if(recording?.state==="recording")recording.stop()});
+  }
+  function parseCSV(s){
+    const rows=[];let row=[],cell="",quote=false;
+    for(let i=0;i<s.length;i++){
+      const c=s[i];
+      if(quote){if(c==='"'&&s[i+1]==='"'){cell+='"';i++}else if(c==='"')quote=false;else cell+=c}
+      else if(c==='"')quote=true;
+      else if(c===","){row.push(cell);cell=""}
+      else if(c==="\n"){row.push(cell);rows.push(row);row=[];cell=""}
+      else if(c!=="\r")cell+=c;
+    }
+    if(quote)throw Error("Unclosed quote in CSV");
+    if(cell||row.length){row.push(cell);rows.push(row)}
+    if(!rows.length)return [];
+    const fields=rows.shift();return rows.filter(r=>r.some(s=>s!=="")).map(r=>Object.fromEntries(fields.map((f,i)=>[f,r[i]||""])));
+  }
+  function csvCell(value){let v=value==null?"":typeof value==="object"?JSON.stringify(value):String(value);if(/^\s*[=+@]/.test(v)||/^\s*-(?!\d+([.,]\d+)?\s*$)/.test(v))v="\u0027"+v;return /[",\n\r]/.test(v)?'"'+v.replaceAll('"','""')+'"':v}
+  function toCSV(records){
+    if(!Array.isArray(records)||!records.every(r=>r&&typeof r==="object"&&!Array.isArray(r)))throw Error("Supply a JSON array of objects.");
+    const headers=[...new Set(records.flatMap(Object.keys))];return [headers.map(csvCell).join(","),...records.map(r=>headers.map(k=>csvCell(r[k])).join(","))].join("\n");
+  }
+  function wireData(win){
+    $$("[data-transform]",win).forEach(button=>button.addEventListener("click",()=>{
+      try{
+        let val=$("#dataText",win).value;const op=button.dataset.transform;
+        if(op==="pretty")val=JSON.stringify(JSON.parse(val),null,2);
+        if(op==="minify")val=JSON.stringify(JSON.parse(val));
+        if(op==="csv")val=toCSV(JSON.parse(val));
+        if(op==="json")val=JSON.stringify(parseCSV(val),null,2);
+        if(op==="slug")val=val.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+        if(op==="upper")val=val.toUpperCase();
+        if(op==="lower")val=val.toLowerCase();
+        if(op==="encode")val=encodeURIComponent(val);
+        if(op==="decode")val=decodeURIComponent(val);
+        if(op==="base64")val=btoa(Array.from(new TextEncoder().encode(val),b=>String.fromCharCode(b)).join(""));
+        if(op==="unbase64")val=new TextDecoder("utf-8",{fatal:true}).decode(Uint8Array.from(atob(val.trim()),c=>c.charCodeAt(0)));
+        if(op==="stats"){setResult(win,"#dataResult","Characters: "+[...val].length+"\nWords: "+(val.match(/\S+/g)||[]).length+"\nLines: "+(val?val.split(/\r?\n/).length:0));return}
+        if(op==="download")downloadText(val,"belentani-data.txt");
+        else $("#dataText",win).value=val;
+        setResult(win,"#dataResult",op==="download"?"Text downloaded.":"Completed: "+op);
+      }catch(err){setResult(win,"#dataResult",err.message,true)}
+    }));
+    $("#hashFile",win).addEventListener("change",async e=>{
+      const file=e.target.files[0];if(!file)return;
+      try{
+        if(!crypto?.subtle)throw Error("Secure context required for SHA-256.");
+        if(file.size>150*1024*1024)throw Error("Large file: use a desktop checksum tool over 150MB.");
+        const data=await file.arrayBuffer();const digest=await crypto.subtle.digest("SHA-256",data);
+        const hex=Array.from(new Uint8Array(digest)).map(n=>n.toString(16).padStart(2,"0")).join("");
+        setResult(win,"#dataResult",file.name+"\nSHA-256: "+hex);
+      }catch(err){setResult(win,"#dataResult",err.message,true)}
+    });
+  }
+  function wireLinks(win){
+    $("#reelSave",win).addEventListener("click",()=>{
+      try{
+        const input=$("#reelLink",win).value.trim(),url=new URL(input);
+        if(!["https:","http:"].includes(url.protocol))throw Error("Only HTTP(S) links are supported.");
+        const note="# Reference research\n\nURL: "+url.href+"\nSaved: "+new Date().toISOString()+"\n\n"+$("#reelNotes",win).value+"\n";
+        downloadText(note,"belentani-reference.txt");setResult(win,"#reelResult","Research note exported locally.");
+      }catch(err){setResult(win,"#reelResult","Add a valid URL. "+err.message,true)}
+    });
+    $("#reelOpen",win).addEventListener("click",()=>{
+      try{const u=new URL($("#reelLink",win).value);if(!["https:","http:"].includes(u.protocol))throw Error("URL must be HTTP(S).");window.open(u.href,"_blank","noopener,noreferrer")}
+      catch(err){setResult(win,"#reelResult",err.message,true)}
+    });
+  }
+  function wireNotepad(win){
+    const memo=$("#memo",win);memo.value=getStored("note");
+    $("#saveMemo",win).addEventListener("click",()=>{setStored("note",memo.value);setResult(win,"#memoResult","Saved on this device.")});
+    $("#exportMemo",win).addEventListener("click",()=>{downloadText(memo.value,"belentani-note.txt");setResult(win,"#memoResult","Text exported.")});
+    $("#clearMemo",win).addEventListener("click",()=>{memo.value="";setResult(win,"#memoResult","Editor cleared (stored note preserved until Save).")});
+  }
+  function wireTerminal(win){
+    const term=$("#console",win),entry=$("#terminalInput",win);
+    const history=[];let cursor=0;const started=Date.now();
+    const profile={
+      name:"Pedro Belentani",
+      role:"AI systems · product engineering · creative technology",
+      location:"Barcelona area",
+      languages:["English","Spanish","Brazilian Portuguese"],
+      technologies:["TypeScript","JavaScript","React","Next.js","Node.js","Python","FastAPI","Docker","Git","CI","Three.js"],
+      domains:["Applied AI","Agent workflows","Trust & Safety","Education","Accessibility","Creative technology"],
+      status:"Working implementations, research and prototypes are distinguished; not all projects are public releases."
+    };
+    const capabilities={
+      live_browser_tools:["Image conversion","Subtitle tools","CV clarity","Storyboard planning","Image to PDF","Audio to WAV","Video contact sheets","SHA-256"],
+      technical_practice:["Full-stack engineering","AI workflows","Human-in-the-loop design","Multilingual UX","Creative computing"],
+      explorations_not_certified_products:["Advanced agents","Creative pipelines","Autonomous operations","Large-scale orchestration"]
+    };
+    const commands={
+      help:"help | whoami | stack | skills | projects | tools | capabilities | status | privacy | roadmap | ethics | date | uptime | history | ls | cat about | cat capabilities.json | open studio | open portfolio | open github | open diagnostics | open projects | export profile | clear | vista | matrix",
+      whoami:profile.name+" — "+profile.role+" / "+profile.location+" / EN · ES · PT-BR.",
+      stack:profile.technologies.join(" / "),
+      skills:profile.domains.join(" / "),
+      projects:"Selected projects: Belentani.cv-ai, ManosAbiertas, open-school, lingua-aberta, Judas Experience and developer tools. Some source repositories are private.",
+      tools:"Live browser tools: "+capabilities.live_browser_tools.join(", ")+".",
+      capabilities:JSON.stringify(capabilities,null,2),
+      privacy:"Files are processed locally in the browser for the Studio tools. Microphone dictation, when used, may rely on the browser's speech provider. No remote shell or privileged system access.",
+      roadmap:"Vision: deeper AI orchestration, dependable integrations, real-life workflows and immersive creative tools. Roadmap items are not described as shipped.",
+      ethics:"Human oversight; testable software; accessibility; security; privacy; reversible changes; evidence before claims.",
+      matrix:"Code rain is a visual effect, not a real machine. Press Ctrl+Alt+T to open the terminal.",
+      vista:"Aero-inspired desktop: interactive web simulation, not Windows Vista.",
+      contact:"https://belentani.es  |  https://github.com/belentani7",
+      github:"https://github.com/belentani7"
+    };
+    function safeStorage(){try{return Boolean(window.localStorage)}catch{return false}}
+    function print(line){term.textContent+=String(line)+"\n";term.scrollTop=term.scrollHeight}
+    function run(raw){
+      const cmd=raw.trim().toLowerCase().replace(/\s+/g," ");
+      if(!cmd)return;
+      history.push(raw);cursor=history.length;print("B:\\> "+raw);
+      if(cmd==="clear"){term.textContent="";return}
+      if(cmd==="date"){print(new Date().toString());return}
+      if(cmd==="uptime"){print("Browser session: "+Math.floor((Date.now()-started)/1000)+" seconds. This is not a remote server.");return}
+      if(cmd==="history"){print(history.map((c,i)=>(i+1)+": "+c).join("\n"));return}
+      if(cmd==="status"){print("Browser: "+navigator.userAgent+"\nSecure context: "+Boolean(window.isSecureContext)+"\nLocal storage: "+safeStorage()+"\nWeb Crypto: "+Boolean(window.crypto&&window.crypto.subtle)+"\nStatus: client-side demonstration, no backend session.");return}
+      if(cmd==="ls"){print("about.txt  capabilities.json  projects/  tools/  contact.txt  vision.txt  [virtual read-only entries]");return}
+      if(cmd==="cat about"){print(JSON.stringify(profile,null,2));return}
+      if(cmd==="cat capabilities.json"){print(JSON.stringify(capabilities,null,2));return}
+      if(cmd==="cat vision"){print(commands.roadmap);return}
+      if(cmd==="cat stack"){print(commands.stack);return}
+      if(cmd==="cat contact.txt"){print(commands.contact);return}
+      if(cmd==="open projects"){document.querySelector("#profile").scrollIntoView({behavior:"smooth"});print("Scrolling to selected projects.");return}
+      if(cmd.startsWith("open ")){
+        const destinations={studio:"./studio.html",diagnostics:"./diagnostics.html",portfolio:"https://belentani.es",github:"https://github.com/belentani7"};
+        const dest=destinations[cmd.slice(5)];
+        if(!dest){print("Unknown destination. Use: open studio | diagnostics | portfolio | github | projects");return}
+        window.open(dest,"_blank","noopener,noreferrer");print("Opening: "+dest);return;
+      }
+      if(cmd==="export profile"){downloadText(JSON.stringify({profile,capabilities,exported:new Date().toISOString()},null,2),"belentani-profile.json","application/json;charset=utf-8");print("Exported a local JSON profile snapshot.");return}
+      if(cmd==="vista"){print(commands.vista);openApp("vista");return}
+      print(commands[cmd]||"Unknown command. Type help.");
+    }
+    print("BELENTANI // LIVING MACHINE / OCT 2026\nLocal-first interactive profile. No real OS shell.\nType help; ArrowUp/ArrowDown navigate command history.\n");
+    entry.addEventListener("keydown",e=>{
+      if(e.key==="ArrowUp"&&history.length){e.preventDefault();cursor=Math.max(0,cursor-1);entry.value=history[cursor]||"";return}
+      if(e.key==="ArrowDown"&&history.length){e.preventDefault();cursor=Math.min(history.length,cursor+1);entry.value=history[cursor]||"";return}
+      if(e.key!=="Enter")return;
+      const raw=entry.value;entry.value="";run(raw);
+    });
+  }
+  function wireSystem(win){
+    $("#motionToggle",win).checked=motion;
+    $("#motionToggle",win).addEventListener("change",e=>{
+      motion=e.target.checked;document.body.classList.toggle("lowmotion",!motion);
+      toast(motion?"Motion enabled":"Reduced motion enabled");
+    });
+    $("#rainToggle",win).addEventListener("change",e=>{
+      rainEnabled=e.target.checked;if(!rainEnabled)rainCtx.clearRect(0,0,rainWidth,rainHeight);
+    });
+    $("#openAbout",win).addEventListener("click",()=>{win.classList.add("hide");document.querySelector("#profile").scrollIntoView({behavior:"smooth"})});
+  }
+  $$("[data-open]").forEach(b=>b.addEventListener("click",()=>openApp(b.dataset.open)));
+  const rain=$("#rain");const rainCtx=rain.getContext("2d");
+  let rainWidth=0,rainHeight=0,cols=[],rainEnabled=true,lastFrame=0;
+  const glyphs="01λ<>[]{};:⟐⌘∆";
+  function resizeRain(){
+    const ratio=Math.min(window.devicePixelRatio||1,2);rainWidth=rain.width=Math.round(innerWidth*ratio);
+    rainHeight=rain.height=Math.round(innerHeight*ratio);
+    rain.style.width=innerWidth+"px";rain.style.height=innerHeight+"px";
+    rainCtx.setTransform(ratio,0,0,ratio,0,0);
+    cols=Array.from({length:Math.ceil(innerWidth/18)},(_,i)=>({x:i*18,y:Math.random()*innerHeight,speed:.5+Math.random()*1.1}));
+  }
+  resizeRain();window.addEventListener("resize",resizeRain);
+  const reduce=matchMedia("(prefers-reduced-motion: reduce)");
+  function drawRain(time){
+    requestAnimationFrame(drawRain);
+    if(!rainEnabled||!motion||reduce.matches||document.hidden||time-lastFrame<65)return;
+    lastFrame=time;rainCtx.fillStyle="rgba(3,5,9,.095)";rainCtx.fillRect(0,0,innerWidth,innerHeight);
+    rainCtx.font="12px Consolas,monospace";
+    cols.forEach((c,i)=>{
+      rainCtx.fillStyle=i%7===0?"#ffd4e5":"#e03b70";
+      rainCtx.fillText(glyphs[Math.floor(Math.random()*glyphs.length)],c.x,c.y);
+      c.y+=c.speed*11;if(c.y>innerHeight+Math.random()*300)c.y=-Math.random()*130;
+    });
+  }
+  requestAnimationFrame(drawRain);
+  let eyeTick=0;
+  document.addEventListener("pointermove",event=>{
+    if(!motion||reduce.matches||eyeTick)return;
+    const x=((event.clientX/innerWidth)-.5)*18,y=((event.clientY/innerHeight)-.5)*15;
+    eyeTick=requestAnimationFrame(()=>{
+      const iris=document.querySelector(".iris");
+      if(iris){iris.style.setProperty("--eye-x",x.toFixed(2)+"px");iris.style.setProperty("--eye-y",y.toFixed(2)+"px")}
+      eyeTick=0;
+    });
+  },{passive:true});
+  if(getStored("intro")==="")setStored("intro","seen");
+  if("serviceWorker" in navigator && (location.protocol==="https:" || location.hostname==="localhost" || location.hostname==="127.0.0.1")){
+    window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js",{scope:"./"}).catch(()=>{}),{once:true});
+  }
+  window.BELENTANI={openApp,version:"2.0",tools:APPS.map(a=>a[0])};
+  // Accessibility: avoid motion when OS requests reduced animations.
+  reduce.addEventListener?.("change",()=>{if(reduce.matches)rainCtx.clearRect(0,0,rainWidth,rainHeight)});
 })();
-</body>
-</html>
+</script>
+</body></html>

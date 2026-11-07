@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+<title id="title">Pedro Belentani — Senior Full-Stack AI Engineer and Systems Architect</title>
+<desc id="desc">Editorial dark technology banner. Senior AI Engineering, trust and safety, explainable agents, creative computing. An abstract connected orbital system illustrates engineering disciplines.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111c25"/><stop offset=".48" stop-color="#0b131b"/><stop offset="1" stop-color="#17191f"/></linearGradient>
+ <linearGradient id="text" x1="0" y1="0" x2="1" y2=".14"><stop stop-color="#fff9f0"/><stop offset="1" stop-color="#e5ded7"/></linearGradient>
+ <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#d9b68e"/><stop offset=".58" stop-color="#6ed7c7"/><stop offset="1" stop-color="#97a4db"/></linearGradient>
+ <radialGradient id="aura"><stop stop-color="#72d4c7" stop-opacity=".18"/><stop offset="1" stop-color="#72d4c7" stop-opacity="0"/></radialGradient>
+ <pattern id="grid" width="35" height="35" patternUnits="userSpaceOnUse"><path d="M35 0H0V35" fill="none" stroke="#7d9fa3" stroke-width=".55" opacity=".14"/></pattern>
+</defs>
+<rect width="1200" height="420" rx="18" fill="url(#bg)"/>
+<rect width="1200" height="420" rx="18" fill="url(#grid)"/>
+<rect x="1" y="1" width="1198" height="418" rx="17" fill="none" stroke="#7c9696" stroke-opacity=".27"/>
+<circle cx="18" cy="22" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="108" cy="22" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="198" cy="22" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="288" cy="22" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="378" cy="22" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="468" cy="22" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="558" cy="22" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="648" cy="22" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="738" cy="22" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="828" cy="22" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="918" cy="22" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="1008" cy="22" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="1098" cy="22" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="18" cy="196" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="108" cy="196" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="198" cy="196" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="288" cy="196" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="378" cy="196" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="468" cy="196" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="558" cy="196" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="648" cy="196" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="738" cy="196" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="828" cy="196" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="918" cy="196" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="1008" cy="196" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="1098" cy="196" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="18" cy="370" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="108" cy="370" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="198" cy="370" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="288" cy="370" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="378" cy="370" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="468" cy="370" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="558" cy="370" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="648" cy="370" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="738" cy="370" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="828" cy="370" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="918" cy="370" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="1008" cy="370" r="1.15" fill="#94ada9" opacity=".23"/>
+<circle cx="1098" cy="370" r="1.15" fill="#94ada9" opacity=".23"/>
+<path d="M0 352 C260 330 360 380 600 328" fill="none" stroke="#87aca8" stroke-opacity=".16"/>
+<path d="M0 372 C220 340 420 420 690 352" fill="none" stroke="#d9b68e" stroke-opacity=".14"/>
+<rect x="48" y="36" width="29" height="3" rx="1.5" fill="#d9b68e"/>
+<text x="92" y="42" fill="#b5c6c8" font-family="Arial,Helvetica,sans-serif" font-size="14" letter-spacing="3.1" font-weight="700">BELENTANI / ENGINEERING STUDIO</text>
+<text x="1150" y="42" text-anchor="end" fill="#b5c6c8" font-family="Arial,Helvetica,sans-serif" font-size="13" letter-spacing="2.2">BARCELONA · 2026</text>
+<text x="48" y="164" fill="url(#text)" font-family="Arial,Helvetica,sans-serif" font-size="83" font-weight="700" letter-spacing="-3.8">PEDRO</text>
+<text x="45" y="246" fill="url(#text)" font-family="Arial,Helvetica,sans-serif" font-size="83" font-weight="700" letter-spacing="-3.8">BELENTANI</text>
+<rect x="49" y="271" width="505" height="37" rx="5" fill="#23333a" stroke="#7b8c8c" stroke-opacity=".38"/>
+<text x="66" y="295" fill="#e9f4ef" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" letter-spacing="1">SENIOR FULL-STACK AI ENGINEER</text>
+<text x="50" y="345" fill="#e3d0b5" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="600" letter-spacing=".3">SYSTEMS ARCHITECT  ·  TRUST &amp; SAFETY</text>
+<text x="50" y="381" fill="#9fb6bb" font-family="Arial,Helvetica,sans-serif" font-size="16" letter-spacing=".75">EXPLAINABLE AI  /  RELIABLE SYSTEMS  /  CREATIVE COMPUTING</text>
+<line x1="763" y1="88" x2="763" y2="371" stroke="#83999b" stroke-opacity=".35"/>
+<circle cx="968" cy="218" r="170" fill="url(#aura)"/>
+<circle cx="968" cy="218" r="118" fill="none" stroke="#6fd9cb" stroke-opacity=".32" stroke-width="1"/>
+<circle cx="968" cy="218" r="100" fill="none" stroke="#a3a0ba" stroke-opacity=".22" stroke-dasharray="2 11"/>
+<circle cx="968" cy="218" r="73" fill="none" stroke="#d9b68e" stroke-opacity=".45"/>
+<path d="M869 217H1069M968 145V291M905 166L1034 269M1034 166L905 269" stroke="#8bafaa" stroke-opacity=".26" stroke-width="1.2"/>
+<circle cx="969" cy="145" r="5" fill="#d9b68e"/><circle cx="969" cy="145" r="11" fill="none" stroke="#d9b68e" stroke-opacity=".24"/>
+<circle cx="1070" cy="217" r="5" fill="#6fd9cb"/><circle cx="1070" cy="217" r="11" fill="none" stroke="#6fd9cb" stroke-opacity=".24"/>
+<circle cx="969" cy="290" r="5" fill="#6fd9cb"/><circle cx="969" cy="290" r="11" fill="none" stroke="#6fd9cb" stroke-opacity=".24"/>
+<circle cx="869" cy="217" r="5" fill="#d9b68e"/><circle cx="869" cy="217" r="11" fill="none" stroke="#d9b68e" stroke-opacity=".24"/>
+<circle cx="1034" cy="166" r="5" fill="#99aee1"/><circle cx="1034" cy="166" r="11" fill="none" stroke="#99aee1" stroke-opacity=".24"/>
+<circle cx="1034" cy="269" r="5" fill="#9eacd1"/><circle cx="1034" cy="269" r="11" fill="none" stroke="#9eacd1" stroke-opacity=".24"/>
+<circle cx="905" cy="166" r="5" fill="#99aee1"/><circle cx="905" cy="166" r="11" fill="none" stroke="#99aee1" stroke-opacity=".24"/>
+<circle cx="904" cy="269" r="5" fill="#9eacd1"/><circle cx="904" cy="269" r="11" fill="none" stroke="#9eacd1" stroke-opacity=".24"/>
+<circle cx="968" cy="218" r="49" fill="#16272b" stroke="#7fe6d1" stroke-opacity=".56"/>
+<circle cx="968" cy="218" r="32" fill="#213b3d" stroke="#a6ded2" stroke-opacity=".35"/>
+<text x="968" y="215" text-anchor="middle" fill="#e5f9f4" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" letter-spacing="2">AI</text>
+<text x="968" y="232" text-anchor="middle" fill="#b2d9d0" font-family="Arial,Helvetica,sans-serif" font-size="9" letter-spacing="1.2">SYSTEMS</text>
+<rect x="782" y="352" width="370" height="37" rx="5" fill="#152126" stroke="#799492" stroke-opacity=".4"/>
+<text x="967" y="375" text-anchor="middle" fill="#d5dfdc" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" letter-spacing="2">DESIGN  ·  ENGINEER  ·  EVALUATE  ·  SHIP</text>
+<rect x="48" y="404" width="1104" height="2" rx="1" fill="url(#accent)" opacity=".95"/>
+</svg>

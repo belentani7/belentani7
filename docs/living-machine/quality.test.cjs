@@ -10,7 +10,7 @@ const html = fs.readFileSync(path.join(__dirname, "index.html"), "utf8");
 const readme = fs.readFileSync(path.join(root, "README.md"), "utf8");
 const svg = fs.readFileSync(path.join(root, "assets/living-machine-banner.svg"), "utf8");
 const terminalSvg = fs.readFileSync(path.join(root, "assets/profile-terminal.svg"), "utf8");
-const heroSvg = fs.readFileSync(path.join(root, "assets/profile-editorial-2026.svg"), "utf8");
+const heroSvg = fs.readFileSync(path.join(root, "assets/profile-senior-systems-2026.svg"), "utf8");
 const match = html.match(/<script>([\s\S]*?)<\/script>/);
 assert.ok(match, "HTML must include the app script");
 const js = match[1];
@@ -64,7 +64,7 @@ test("CSV export guards spreadsheet formula prefixes without breaking negatives"
 });
 test("README links real local tools and an accessible static editorial cover", () => {
   assert.match(readme, /docs\/living-machine\/index\.html/);
-  assert.match(readme, /assets\/profile-editorial-2026\.svg/);
+  assert.match(readme, /assets\/profile-senior-systems-2026\.svg/);
   // Accept a clearly bounded local-source description without requiring
   // identical editorial wording in every profile revision.
   const toolsSection = readme.split("## Tools and experiments")[1] || "";
