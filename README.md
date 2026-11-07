@@ -12,7 +12,7 @@
 
 **Barcelona, Spain** · English / Español / Português (BR) / Català
 
-[**Professional Portfolio**](https://pedro-belentani-portfolio.honeybrook4.chatgpt.site) · [**LinkedIn**](https://linkedin.com/in/pedro-b-09473598) · [**Creative Universe**](https://belentani.es) · [**Technical Evidence**](./docs/engineering-evidence-2026-10-29.md) · [**Contact**](#connect)
+[**Professional Portfolio**](https://pedro-belentani-portfolio.honeybrook4.chatgpt.site) · [**LinkedIn**](https://linkedin.com/in/pedro-b-09473598) · [**Creative Universe**](https://belentani.es) · [**Technical Evidence**](./docs/engineering-evidence-2026-10-29.md) · [**Contact**](#contact)
 
 </div>
 
@@ -32,93 +32,55 @@ My background includes **multilingual Trust & Safety operations (2018–2025)**,
 
 ## Selected systems
 
-The following are **public source repositories** selected for inspectable engineering depth, not repository count. A passing build, deployment record or polished interface is **not** by itself proof of production readiness.
+These six public source repositories represent complementary engineering disciplines. Explore the actual source, tests and implementation boundaries rather than using commit totals as a quality score.
 
 <table>
 <tr>
 <td width="50%" valign="top">
-
-### 01 — [SAFE-EXEC](https://github.com/belentani7/safe-exec)
-
-**Agent safety · Signed pre-execution decisions**
-
-A research prototype for inspecting exact file bytes before a proposed isolated execution: policy checks, independent signed evaluations, replay protection and a broker-issued one-use token.
-
-**Evidence:** [Protocol tests](https://github.com/belentani7/safe-exec/blob/main/tests/test_protocol.py) · [Static policy](https://github.com/belentani7/safe-exec/blob/main/safeexec/policy.py)
-
-**Boundary:** The full external sandbox / Docker integration is not validated end-to-end; its current CI does not yet run the test suite.
-
+<h3><a href="https://github.com/belentani7/safe-exec">01 / SAFE-EXEC</a></h3>
+<p><strong>Agent safety · Signed pre-execution decisions</strong></p>
+<p>A research prototype for checking exact file bytes before proposed isolated execution, with policy checks, independent signed evaluations, replay protection and one-use release tokens.</p>
+<p><a href="https://github.com/belentani7/safe-exec/blob/main/tests/test_protocol.py">Signed-protocol tests</a> · <a href="https://github.com/belentani7/safe-exec">Source</a></p>
+<p><sub><strong>Boundary:</strong> External sandbox / Docker integration remains unverified end-to-end; the current CI does not yet run the full test suite.</sub></p>
 </td>
 <td width="50%" valign="top">
-
-### 02 — [META-SKILL](https://github.com/belentani7/meta-skill)
-
-**Explainable AI · Routing & evaluation**
-
-Offline heuristic task router with abstention, budget-aware model recommendations and an independent evaluation harness with coverage and calibration checks.
-
-**Evidence:** [Evaluator source](https://github.com/belentani7/meta-skill/blob/main/evaluation-lab/evaluate.py) · [Routing tests](https://github.com/belentani7/meta-skill/blob/main/tests/test_router.py)
-
-**Boundary:** Synthetic fixtures demonstrate evaluation mechanics; they do not establish accuracy or token savings on real traffic.
-
+<h3><a href="https://github.com/belentani7/meta-skill">02 / META-SKILL</a></h3>
+<p><strong>Explainable AI · Routing and evaluation</strong></p>
+<p>Offline heuristic task routing with abstention, model-tier suggestions, budget-aware reporting and a reproducible evaluation harness.</p>
+<p><a href="https://github.com/belentani7/meta-skill/blob/main/evaluation-lab/evaluate.py">Evaluation implementation</a> · <a href="https://github.com/belentani7/meta-skill">Source</a></p>
+<p><sub><strong>Boundary:</strong> Synthetic fixtures validate mechanics, not production accuracy or measured savings.</sub></p>
 </td>
 </tr>
 <tr>
-<td valign="top">
-
-### 03 — [KEYROTOR](https://github.com/belentani7/keyrotor)
-
-**LLM infrastructure · Reliability patterns**
-
-A local-first, multi-provider API gateway with key rotation, retry/backoff, circuit breakers, TTL caching and secret redaction.
-
-**Evidence:** [Router implementation](https://github.com/belentani7/keyrotor/blob/main/keyrotor/router.py) · [Transport tests](https://github.com/belentani7/keyrotor/blob/main/tests/test_router.py)
-
-**Boundary:** Local development scope. An internet-facing gateway would require additional authentication, authorization and operational hardening.
-
+<td width="50%" valign="top">
+<h3><a href="https://github.com/belentani7/keyrotor">03 / KEYROTOR</a></h3>
+<p><strong>LLM infrastructure · Reliability patterns</strong></p>
+<p>A local-first multi-provider LLM gateway with key rotation, retries, circuit breakers, TTL caching, provider failover and secret redaction.</p>
+<p><a href="https://github.com/belentani7/keyrotor/blob/main/tests/test_router.py">Transport regression tests</a> · <a href="https://github.com/belentani7/keyrotor">Source</a></p>
+<p><sub><strong>Boundary:</strong> Local development scope; public deployment requires additional access controls and hardening.</sub></p>
 </td>
-<td valign="top">
-
-### 04 — [BELENTANI FORGE](https://github.com/belentani7/belentani-forge)
-
-**Developer automation · Quality operations**
-
-A Python project engine for inventory, diagnosis, controlled repairs, dependency maps, verification and reporting across local repositories.
-
-**Evidence:** [Safety controls](https://github.com/belentani7/belentani-forge/blob/main/forge/safety.py) · [Safety tests](https://github.com/belentani7/belentani-forge/blob/main/tests/test_safety.py) · [CI matrix](https://github.com/belentani7/belentani-forge/blob/main/.github/workflows/ci.yml)
-
-**Boundary:** Read-only by default; potentially destructive actions require explicit authorization.
-
+<td width="50%" valign="top">
+<h3><a href="https://github.com/belentani7/belentani-forge">04 / BELENTANI FORGE</a></h3>
+<p><strong>Developer automation · Quality operations</strong></p>
+<p>A Python project engine for inventory, diagnostics, verification, controlled repairs and cross-repository reporting.</p>
+<p><a href="https://github.com/belentani7/belentani-forge/blob/main/tests/test_safety.py">Safety tests</a> · <a href="https://github.com/belentani7/belentani-forge">Source</a></p>
+<p><sub><strong>Boundary:</strong> Read-only by default; potentially destructive actions require deliberate authorization.</sub></p>
 </td>
 </tr>
 <tr>
-<td valign="top">
-
-### 05 — [CARQUIDEC](https://github.com/belentani7/CARQUIDEC)
-
-**Product engineering · Accessibility & performance**
-
-A multilingual site with progressive enhancement, responsive media, self-hosted assets, automated quality checks and reproducible build rules.
-
-**Evidence:** [Before / after audit](https://github.com/belentani7/CARQUIDEC/blob/main/AUDITORIA.md) · [CI quality gates](https://github.com/belentani7/CARQUIDEC/blob/main/.github/workflows/ci.yml)
-
-**Project site:** [carquidec.vercel.app](https://carquidec.vercel.app)
-
-**Boundary:** Metrics are documented in the repository; independent browser-based validation remains a separate step.
-
+<td width="50%" valign="top">
+<h3><a href="https://github.com/belentani7/CARQUIDEC">05 / CARQUIDEC</a></h3>
+<p><strong>Product engineering · Accessibility and performance</strong></p>
+<p>A multilingual, progressively enhanced website with responsive media, self-hosted assets, automated accessibility and quality checks.</p>
+<p><a href="https://github.com/belentani7/CARQUIDEC/blob/main/AUDITORIA.md">Before-and-after audit</a> · <a href="https://github.com/belentani7/CARQUIDEC">Source</a></p>
+<p><sub><strong>Boundary:</strong> Repository reports document improvements; external browser validation remains a separate check.</sub></p>
 </td>
-<td valign="top">
-
-### 06 — [LLM VFX ORCHESTRATOR](https://github.com/belentani7/llm-vfx-orchestrator)
-
-**Creative AI · Reproducible production workflows**
-
-Two complementary layers: a local-first browser shot-planning workspace and a Python CLI for coordinating configurable LLM planning, ComfyUI rendering, QA and bounded retries.
-
-**Evidence:** [Architecture and quickstart](https://github.com/belentani7/llm-vfx-orchestrator) · [Python + web CI](https://github.com/belentani7/llm-vfx-orchestrator/blob/main/.github/workflows/ci.yml)
-
-**Boundary:** The browser planner works without model calls; full external rendering requires configured providers and ComfyUI.
-
+<td width="50%" valign="top">
+<h3><a href="https://github.com/belentani7/llm-vfx-orchestrator">06 / LLM VFX ORCHESTRATOR</a></h3>
+<p><strong>Creative AI · Reproducible production workflows</strong></p>
+<p>A local-first shot planner and Python orchestration CLI for configurable LLM planning, ComfyUI rendering, QA and bounded retries.</p>
+<p><a href="https://github.com/belentani7/llm-vfx-orchestrator/blob/main/.github/workflows/ci.yml">Python and web CI</a> · <a href="https://github.com/belentani7/llm-vfx-orchestrator">Source</a></p>
+<p><sub><strong>Boundary:</strong> Browser planning is offline; complete rendering requires external services and configuration.</sub></p>
 </td>
 </tr>
 </table>
@@ -141,7 +103,7 @@ Technical ambition matters most when it reaches a person, a team or a real workf
 | **Repeatable delivery** | [CARQUIDEC's quality gates](https://github.com/belentani7/CARQUIDEC/blob/main/.github/workflows/ci.yml) and [VFX's dual-stack CI](https://github.com/belentani7/llm-vfx-orchestrator/blob/main/.github/workflows/ci.yml) |
 | **Documented trade-offs** | [Engineering evidence — reviewed sample, 29 Oct 2026](./docs/engineering-evidence-2026-10-29.md) |
 
-> **Operating principle:** A repository is not a product launch. A synthetic test is not a production benchmark. An automated commit is not a verified user outcome. Real engineering makes those distinctions legible.
+> **Operating principle:** A repository is not a product launch. A synthetic test is not a production benchmark. An automated commit is not a verified user outcome. GitHub activity cannot prove product uptime or adoption. Real engineering makes those distinctions legible.
 
 <details>
 <summary><strong>Technical breadth — explore my working domains</strong></summary>
@@ -160,6 +122,16 @@ Technical ambition matters most when it reaches a person, a team or a real workf
 
 </details>
 
+## Experience behind the code
+
+**2016–2018:** multilingual customer support and service operations, including Inditex-related work. **2018–2025:** multilingual Trust & Safety, content moderation, policy interpretation and operational judgment. **2026:** independent software, educational, AI and creative projects.
+
+The [previous extended profile](./docs/profile-archive-2026-10-29.md) preserves older context without turning historical claims into current availability guarantees.
+
+## Tools and experiments
+
+The [Living Machine](./docs/living-machine/index.html) and [browser-based Production Studio](./docs/living-machine/studio.html) contain local-first browser utilities. These links point to **repository files**, not a verified live deployment. Some ecosystem projects are private, archived or experimental; browser features require direct testing.
+
 ## How I approach complex work
 
 **01 / Understand.** Identify the user, failure modes, constraints and the real decision to support.
@@ -174,7 +146,7 @@ Technical ambition matters most when it reaches a person, a team or a real workf
 
 ---
 
-## Connect
+## Contact
 
 Open to **senior AI engineering, trustworthy agent systems, developer tooling, accessible product engineering and creative technology collaborations**.
 
