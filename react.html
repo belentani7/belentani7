@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catálogo React — ecosistema Belentani</title>
+<meta name="description" content="Catálogo del ecosistema renderizado como isla React 19 sin compilación.">
+<meta name="theme-color" content="#F5F2EC">
+<meta property="og:title" content="Catálogo React — ecosistema Belentani">
+<meta property="og:description" content="Catálogo del ecosistema renderizado como isla React 19 sin compilación.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2314110F'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-size='19' fill='%23F5F2EC'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Inter+Tight:wght@300..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<header class="bar">
+  <div class="wrap bar__in">
+    <a class="mark" href="index.html">Belentani<span>.</span></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="index.html">Escaparate</a>
+      <a href="productos.html">Productos</a>
+      <a href="auditoria.html">Auditoría</a>
+      <a href="react.html" aria-current="page">React</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="hero wrap" style="padding-bottom:24px">
+<p class="eyebrow reveal">Variante React 19 · isla real</p>
+<h1 class="reveal">El catálogo,<br>en <em>React</em>.</h1>
+<p class="hero__lead reveal">La misma información del catálogo, renderizada como isla React desde CDN y sin paso de compilación. Si el CDN no está disponible, esta página lo dice y enlaza a la versión estática: nunca se queda en blanco.</p>
+</section><section class="sec wrap" style="padding-top:0">
+<noscript><p>Activa JavaScript o usa el <a href="productos.html">catálogo estático</a>.</p></noscript>
+<div id="app"><p id="fallback">Cargando catálogo React… si no aparece en unos segundos, usa el <a href="productos.html">catálogo estático</a>.</p></div>
+</section>
+<script src="https://unpkg.com/react@19/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@19/umd/react-dom.production.min.js" crossorigin></script>
+<script>window.addEventListener('error',function(e){
+  var f=document.getElementById('fallback');
+  if(f&&e.target&&/unpkg|react/.test(e.target.src||'')){
+    f.innerHTML='No se pudo cargar React desde el CDN. Usa el <a href="productos.html">catálogo estático</a>.';
+  }
+},true);</script>
+<script src="assets/react-catalogo.js"></script></main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 Pedro Belentani · ecosistema Belentani</span>
+    <span>38 productos auditados · 94.6% de cumplimiento normativo</span>
+  </div>
+</footer>
+<script src="data.js"></script>
+<script src="assets/site.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+</body>
+</html>
