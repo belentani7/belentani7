@@ -70,10 +70,13 @@ class PublicProfilePresentationTests(unittest.TestCase):
         # Verify the six prominent project cards, not incidental source links
         # in the broader README (which may legitimately repeat a URL).
         selected = self.readme.split("## Selected systems", 1)[1].split("## Products built for people", 1)[0]
-        headline_urls = re.findall(
-            r'<h3><a href="https://github\\.com/belentani7/([\\w.\\-]+)">0[1-6] / [^<]+</a></h3>',
-            selected,
-        )
+        headline_urls = [
+            url.rsplit("/", 1)[-1]
+            for url in re.findall(
+                r'<h3><a href="(https://github.com/belentani7/[^"]+)">0[1-6] / [^<]+</a></h3>',
+                selected,
+            )
+        ]
         self.assertEqual(len(headline_urls), 6, "Six actual project cards must be rendered")
         self.assertEqual(set(headline_urls), set(SELECTED_REPOSITORIES))
         self.assertEqual(len(set(headline_urls)), len(headline_urls))
