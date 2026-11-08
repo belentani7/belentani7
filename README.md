@@ -38,6 +38,18 @@ El resto del ecosistema permanece fuera del escaparate hasta cumplir el mismo es
 presento código privado, prototipos, catálogos incompletos ni despliegues sin verificar como
 productos terminados.
 
+## Laboratorio
+
+Espacios activos de experimentación. Cada uno declara su estado real; ninguno se presenta
+como producto final:
+
+- [CARQUIDEC](https://github.com/belentani7/CARQUIDEC) — arquitectura y diseño: proyectos residencial, hotelero, comercial y de oficina.
+- [Belentani Visual Engine](https://github.com/belentani7/belentani-visual-engine) — motor lore → escena Three.js con el que se construye The Experience.
+- [Belentani.CV AI](https://github.com/belentani7/Belentani.cv-ai) — currículum interactivo potenciado por IA.
+- [belentani.new](https://github.com/belentani7/belentani.new) — consola comercial y técnica del ecosistema.
+- [belentani-webs-historicas](https://github.com/belentani7/belentani-webs-historicas) — archivo unificado de las webs históricas.
+- [ivy-la-vie](https://github.com/belentani7/ivy-la-vie) — marca lifestyle en desarrollo.
+
 ## Cómo trabajo
 
 1. **Entender el producto.** La historia, el usuario y el límite público se escriben antes de
