@@ -33,6 +33,19 @@ As the creator of **BELENTANI**, I bring the same architectural thinking to inte
 
 **Evidence policy:** CI results, build artifacts, and production availability are separate checks. An unverified live experience is never presented as production-validated.
 
+## Run a real AI routing example
+
+Meta-Skill is a **local, dependency-free recommendation CLI**, not a hosted LLM or an inference proxy. Try it with Python 3.11+:
+
+```bash
+git clone https://github.com/belentani7/meta-skill.git
+cd meta-skill
+python3 meta-skill/scripts/route.py --json "Write pytest tests"
+python3 -m unittest discover -s tests -p 'test_*.py' -v
+```
+
+The router explains heuristic task matches and can abstain when the request is ambiguous; its confidence is **not** a calibrated success probability. [Source and reproducible evaluation](https://github.com/belentani7/meta-skill#pruebas-y-evaluaci%C3%B3n-reproducible) · [CI evidence](https://github.com/belentani7/meta-skill/actions/workflows/ci.yml).
+
 ## Three interconnected disciplines
 
 | AI Systems & Orchestration | Creative Web & Immersive Systems | Social Impact & Accessible Technology |
