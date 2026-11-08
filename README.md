@@ -12,9 +12,8 @@ que ha pasado ese umbral público.
 
 | Producto | Qué es | Evidencia pública |
 |---|---|---|
-| [Belentani — The Experience](https://github.com/belentani7/belentani.es) | Universo artístico interactivo: una galaxia Three.js navegable, cuatro capítulos narrativos y un alcance público curado. | `main` limpio y alineado con `origin/main`; `index.html` conforme al verificador local; 44 tests verdes; README con instalación, pruebas, build y comprobación de runtime. |
-| [Secure T](https://github.com/belentani7/secure-t) | Formación abierta en ciberseguridad, IA responsable y gobernanza. Cursos de veinte semanas, ejercicios y laboratorios simulados sin cadastro. | `main` limpio y alineado con `origin/main`; `index.html` conforme al verificador local; 54 tests verdes; README con instalación y pruebas. |
-| [Manos Abiertas](https://github.com/belentani7/ManosAbiertas) | Formación gratuita para avanzar con autonomía: competencias digitales, orientación laboral, idiomas y recursos contrastados. | `main` limpio y alineado con `origin/main`; `index.html` conforme al verificador local; 229 tests verdes; README con instalación y pruebas. |
+| [Belentani — The Experience](https://github.com/belentani7/belentani.es) | Universo artístico interactivo: una galaxia Three.js navegable, cuatro capítulos narrativos y un alcance público curado. | `main` limpio y alineado con `origin/main`; `index.html` conforme al verificador local; suite verde (47/47); README con instalación, pruebas, build y comprobación de runtime. |
+| [Secure T](https://github.com/belentani7/secure-t) | Formación abierta en ciberseguridad, IA responsable y gobernanza. Cursos de veinte semanas, ejercicios y laboratorios simulados sin registro. | `main` limpio y alineado con `origin/main`; `index.html` conforme al verificador local y sin recursos externos; suite verde (vitest 54/54); scripts de test y build reproducibles. |
 
 ### La narrativa
 
