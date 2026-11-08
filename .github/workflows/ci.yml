@@ -90,3 +90,34 @@ jobs:
 
 # No implicit pnpm cache or unconfigured deploy credentials.
 # CodeQL and secrets scanning remain separate required CI signals.
+
+
+  curated-profile:
+    name: Curated profile HTML · no external runtime
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+          package-manager-cache: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Verify self-contained profile and curated project links
+        run: python scripts/verify_standalone_profile.py index.html
+      - name: Check inline JavaScript syntax
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const vm = require('node:vm');
+          const html = fs.readFileSync('index.html', 'utf8');
+          const scripts = [...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)];
+          if (scripts.length !== 1) throw new Error('Expected one inline script');
+          for (const match of scripts) new vm.Script(match[1]);
+          NODE
+      - name: Run product's existing npm test gate
+        run: npm test
