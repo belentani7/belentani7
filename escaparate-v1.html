@@ -84,14 +84,14 @@
     .section-head{max-width:760px; margin-bottom:38px}
     h2{max-width:15ch; margin:0 0 14px; font-size:clamp(2.2rem,4.4vw,3.7rem); line-height:1.02; letter-spacing:-.05em}
     .section-head p{max-width:var(--measure); margin:0; color:var(--muted); font-size:1.02rem}
-    .work-grid{display:grid; grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr); gap:18px; align-items:stretch}
-    .project-stack{display:grid; gap:18px}
+    .work-grid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; align-items:start}
+    .project-stack{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; grid-column:1/-1}
     .project{position:relative; display:flex; flex-direction:column; overflow:hidden; padding:clamp(22px,3.3vw,34px); border:1px solid var(--line); border-radius:var(--radius); background:linear-gradient(145deg,var(--glass-2),var(--glass)); backdrop-filter:blur(18px); box-shadow:0 18px 60px rgba(0,0,0,.32); animation:rise .65s ease both}
     .project::before{content:""; position:absolute; inset:0; pointer-events:none; background:radial-gradient(520px 180px at 12% -10%,rgba(111,247,234,.13),transparent 70%); opacity:.8}
     .project:nth-child(2),.project-stack .project:nth-child(1){animation-delay:.08s}
     .project-stack .project:nth-child(2){animation-delay:.16s}
     .project:hover{border-color:rgba(111,247,234,.36); transform:translateY(-3px); transition:transform .22s ease,border-color .22s ease}
-    .project--featured{min-height:470px; justify-content:space-between}
+    .project--featured{grid-column:1/-1; min-height:0; justify-content:flex-start}
     .project-top{position:relative; display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:24px}
     .status{display:inline-flex; align-items:center; gap:8px; padding:7px 10px; border:1px solid rgba(111,247,234,.28); border-radius:999px; background:rgba(111,247,234,.07); color:var(--cyan); font-size:.76rem; font-weight:650; line-height:1.2}
     .status::before{content:""; width:7px; height:7px; flex:0 0 auto; border-radius:50%; background:var(--cyan)}
@@ -136,6 +136,7 @@
       .hero{grid-template-columns:1fr; min-height:auto; padding-top:clamp(48px,9vw,76px)}
       .signal{display:none}
       .work-grid{grid-template-columns:1fr}
+      .project-stack{grid-template-columns:1fr}
       .project--featured{min-height:0}
       .method-grid{grid-template-columns:1fr}
       .method-item{padding:24px 0}
