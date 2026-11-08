@@ -1,42 +1,40 @@
-### Pedro Belentani
+# Pedro Belentani
 
-**Creative Technologist · Applied AI · Product systems · Creative computing** · Barcelona
+**Creative Technologist · IA aplicada · sistemas de producto · Barcelona**
 
-Construyo productos completos: una idea con narrativa, una interfaz que se entiende y un
-repositorio que explica cómo se ejecuta y cómo se verifica. Este perfil muestra solo trabajo
-que ha pasado ese umbral público.
+Construyo productos donde la idea, la interfaz y el repositorio cuentan la misma historia. Este perfil reúne solo trabajo público que ha pasado pruebas, verificación HTML y revisión de privacidad.
 
----
+## Trabajo seleccionado
 
-## Proyecto publicado
+| Producto | Qué es | Stack | Evidencia | Estado |
+|---|---|---|---|---|
+| [Belentani — The Experience](https://github.com/belentani7/belentani.es) | Universo artístico interactivo: galaxia Three.js navegable y cuatro capítulos entre música, imagen y relato. El alcance público excluye masters, sesiones y material privado. | TypeScript · React · Three.js · Next.js | **47/47 tests** · HTML CONFORME | Repositorio verificado. El dominio `belentani.es` sirve actualmente una portada heredada; no se presenta como demo de este hub. |
+| [secure-t](https://github.com/belentani7/secure-t) | Instituto abierto de ciberseguridad e inteligencia artificial: cuatro programas de veinte semanas, en español y funcionales sin conexión. | HTML · React · TypeScript | **54/54 tests** · HTML CONFORME | Repositorio verificado. La disponibilidad de GitHub Pages no está comprobada. |
 
-| Producto | Qué es | Evidencia pública |
-|---|---|---|
-| [Belentani — The Experience](https://github.com/belentani7/belentani.es) | Universo artístico interactivo: una galaxia Three.js navegable, cuatro capítulos narrativos y un alcance público curado. | `main` limpio y alineado con `origin/main`; `index.html` conforme al verificador local; suite verde (47/47); README con instalación, pruebas, build y comprobación de runtime. |
-| [Secure T](https://github.com/belentani7/secure-t) | Formación abierta en ciberseguridad, IA responsable y gobernanza. Cursos de veinte semanas, ejercicios y laboratorios simulados sin registro. | `main` limpio y alineado con `origin/main`; `index.html` conforme al verificador local y sin recursos externos; suite verde (vitest 54/54); scripts de test y build reproducibles. |
+La tabla separa deliberadamente **código verificado** de **demo publicada**. Un repositorio público no demuestra por sí solo que una web esté activa.
 
-### La narrativa
+## Qué queda fuera
 
-**Belentani — The Experience** convierte la era Judas en un espacio que se recorre, no en una
-colección de enlaces. La entrada presenta el mundo; la galaxia organiza sus capítulos; cada
-escena mantiene la relación entre música, imagen y relato. El producto público excluye masters,
-sesiones y material privado, y documenta qué se puede ejecutar y qué no se promete.
+Prototipos, catálogos incompletos, repos experimentales y despliegues sin comprobar no se anuncian como producto terminado. El escaparate se actualiza cuando el trabajo pasa las mismas puertas, no cuando el repositorio existe. `ManosAbiertas` permanece fuera hasta que su suite esté verde.
 
-[Abrir el proyecto](https://github.com/belentani7/belentani.es) · [Visitar el universo](https://belentani.es)
+## Tools and experiments
 
-## Criterio de publicación
+La [Living Machine](docs/living-machine/index.html) es una herramienta local del repositorio para conversión de subtítulos, CSV, media y una terminal simulada. Se ejecuta con archivos locales y **not a verified live deployment**. Es un experimento de interfaz, no un producto del escaparate: el trabajo **private, archived or experimental** queda fuera de la selección.
 
-Un repositorio solo entra aquí cuando tiene, juntos:
+<img src="./assets/profile-editorial-2026.svg" alt="Pedro Belentani — retrato editorial" width="640" loading="lazy" decoding="async">
 
-- narrativa de producto comprensible;
-- web completa y accesible, sin dependencias accidentales;
-- instrucciones reproducibles de instalación y uso;
-- pruebas o verificaciones ejecutadas;
-- límites, privacidad y estado público explicados sin exageraciones.
+La herramienta vive en los **repository files** de `docs/living-machine/`; no se anuncia como demo publicada.
 
-El resto del ecosistema permanece fuera del escaparate hasta cumplir el mismo estándar. No
-presento código privado, prototipos, catálogos incompletos ni despliegues sin verificar como
-productos terminados.
+## Verificación aplicada
+
+- `npm test` en cada producto: 47/47 y 54/54.
+- `verificar_html.py` sobre las portadas: HTML CONFORME, sin recursos cargados desde terceros.
+- Revisión de privacidad: sin emails, secretos, tokens ni datos personales en la portada pública.
+- `git diff --check` antes de publicar.
+
+## Evidencia de ingeniería
+
+La [evidencia de ingeniería](./docs/engineering-evidence-2026-10-29.md) y el [archivo del perfil](./docs/profile-archive-2026-10-29.md) conservan el contexto y las cifras fechadas. Son material de consulta: **no convierten un repositorio público en una demo verificada** ni sustituyen `npm test` y la verificación HTML.
 
 ## Laboratorio
 
@@ -52,17 +50,15 @@ como producto final:
 
 ## Cómo trabajo
 
-1. **Entender el producto.** La historia, el usuario y el límite público se escriben antes de
-   llamar terminado al código.
-2. **Construir la superficie.** La web es parte del producto: contenido real, responsive,
-   accesible y lista para ser leída sin contexto adicional.
-3. **Medir.** Tests, build, HTML, enlaces y ejecución se verifican con comandos reproducibles.
-4. **Publicar con criterio.** Solo `main`, solo proyectos completos y sin ocultar pendientes.
+1. **Entender el producto.** La historia, el usuario y el límite público se escriben antes de llamar terminado al código.
+2. **Construir la superficie.** La web es parte del producto: contenido real, responsive, accesible y legible sin contexto adicional.
+3. **Medir.** Tests, HTML, enlaces y ejecución se comprueban con comandos reproducibles.
+4. **Publicar con criterio.** Solo `main`, solo trabajo completo y sin ocultar pendientes.
 
 ## Tecnologías
 
-`TypeScript` · `React` · `Next.js` · `Node.js` · `Python` · `Three.js` · `GSAP` · `GitHub Actions`
+`TypeScript` · `React` · `Next.js` · `Node.js` · `Python` · `Three.js` · `GitHub Actions`
 
 ---
 
-`Barcelona` · [GitHub](https://github.com/belentani7) · [Contacto](mailto:belentani7pedro@gmail.com)
+`Barcelona` · [GitHub](https://github.com/belentani7) · [Trabajo seleccionado](#trabajo-seleccionado)

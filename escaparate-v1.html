@@ -8,13 +8,13 @@
   <meta name="theme-color" content="#000000">
   <meta name="color-scheme" content="dark">
   <meta property="og:title" content="Pedro Belentani — productos completos, verificables">
-  <meta property="og:description" content="Tres repositorios públicos que pasan pruebas, verificación HTML y revisión de privacidad. Sin demos infladas.">
+  <meta property="og:description" content="Dos repositorios públicos que pasan pruebas, verificación HTML y revisión de privacidad. Sin demos infladas.">
   <meta property="og:type" content="profile">
   <meta property="og:locale" content="es_ES">
   <meta property="og:url" content="https://github.com/belentani7/belentani7">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Pedro Belentani — productos completos, verificables">
-  <meta name="twitter:description" content="Tres repositorios públicos que pasan pruebas, verificación HTML y revisión de privacidad.">
+  <meta name="twitter:description" content="Dos repositorios públicos que pasan pruebas, verificación HTML y revisión de privacidad.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23000000'/%3E%3Cpath d='M10 8h6.2c3.3 0 5.4 1.8 5.4 4.7 0 2.1-1.1 3.6-3 4.2 2.4.5 3.7 2.1 3.7 4.4 0 3.2-2.3 5.2-6 5.2H10zm4.1 3.2v4.2h1.8c1.4 0 2.2-.8 2.2-2.1s-.8-2.1-2.2-2.1zm0 7v4.7h2.2c1.7 0 2.7-.9 2.7-2.4s-1-2.3-2.7-2.3z' fill='%236ff7ea'/%3E%3C/svg%3E">
   <style>
     :root{
@@ -81,23 +81,32 @@
     .signal-core{position:absolute; inset:39%; display:grid; place-items:center; border:1px solid rgba(111,247,234,.8); border-radius:50%; color:var(--cyan); font:700 1.25rem/1 var(--mono)}
     .signal-label{position:absolute; left:50%; bottom:7%; translate:-50% 0; color:var(--faint); font:12px/1.4 var(--mono); letter-spacing:.12em; text-transform:uppercase; white-space:nowrap}
     .section{padding:clamp(64px,8vw,108px) 0}
+    .eyebrow{display:flex; align-items:center; gap:10px; margin:0 0 16px; color:var(--cyan); font:11px/1.3 var(--mono); letter-spacing:.16em; text-transform:uppercase}
+    .eyebrow::before{content:""; width:24px; height:1px; background:var(--cyan); opacity:.65}
+    .eyebrow span{color:var(--faint)}
     .section-head{max-width:760px; margin-bottom:38px}
     h2{max-width:15ch; margin:0 0 14px; font-size:clamp(2.2rem,4.4vw,3.7rem); line-height:1.02; letter-spacing:-.05em}
     .section-head p{max-width:var(--measure); margin:0; color:var(--muted); font-size:1.02rem}
+    .section-head .eyebrow{max-width:none; margin:0 0 16px; color:var(--cyan); font-size:11px}
     .work-grid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; align-items:start}
-    .project-stack{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; grid-column:1/-1}
-    .project{position:relative; display:flex; flex-direction:column; overflow:hidden; padding:clamp(22px,3.3vw,34px); border:1px solid var(--line); border-radius:var(--radius); background:linear-gradient(145deg,var(--glass-2),var(--glass)); backdrop-filter:blur(18px); box-shadow:0 18px 60px rgba(0,0,0,.32); animation:rise .65s ease both}
-    .project::before{content:""; position:absolute; inset:0; pointer-events:none; background:radial-gradient(520px 180px at 12% -10%,rgba(111,247,234,.13),transparent 70%); opacity:.8}
+    .project-stack{display:grid; grid-template-columns:1fr; gap:18px; grid-column:1/-1}
+    .project{--card-accent:var(--cyan); --card-glow:rgba(111,247,234,.13); position:relative; display:flex; flex-direction:column; overflow:hidden; padding:clamp(22px,3.3vw,34px); border:1px solid var(--line); border-radius:var(--radius); background:linear-gradient(145deg,var(--glass-2),var(--glass)); backdrop-filter:blur(18px); box-shadow:0 18px 60px rgba(0,0,0,.32); animation:rise .65s ease both}
+    .project-stack .project:nth-child(1){--card-accent:var(--violet); --card-glow:rgba(154,124,255,.12)}
+    .project-stack .project:nth-child(2){--card-accent:var(--gold); --card-glow:rgba(246,204,122,.1)}
+    .project::before{content:""; position:absolute; inset:0; pointer-events:none; background:radial-gradient(520px 180px at 12% -10%,var(--card-glow),transparent 70%); opacity:.8}
     .project:nth-child(2),.project-stack .project:nth-child(1){animation-delay:.08s}
     .project-stack .project:nth-child(2){animation-delay:.16s}
-    .project:hover{border-color:rgba(111,247,234,.36); transform:translateY(-3px); transition:transform .22s ease,border-color .22s ease}
-    .project--featured{grid-column:1/-1; min-height:0; justify-content:flex-start}
+    .project:hover{border-color:var(--card-accent); transform:translateY(-3px); transition:transform .22s ease,border-color .22s ease}
+    .project--featured{grid-column:1/-1; display:grid; grid-template-columns:minmax(0,1.08fr) minmax(260px,.72fr); grid-template-rows:auto auto 1fr; column-gap:clamp(26px,5vw,64px); align-items:start; min-height:0; justify-content:initial}
+    .project--featured .project-top{grid-column:1/-1}
+    .project--featured .project-body{grid-column:1; grid-row:2}
+    .project--featured .project-footer{grid-column:1; grid-row:3; align-self:end; width:100%}
     .project-top{position:relative; display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:24px}
     .status{display:inline-flex; align-items:center; gap:8px; padding:7px 10px; border:1px solid rgba(111,247,234,.28); border-radius:999px; background:rgba(111,247,234,.07); color:var(--cyan); font-size:.76rem; font-weight:650; line-height:1.2}
     .status::before{content:""; width:7px; height:7px; flex:0 0 auto; border-radius:50%; background:var(--cyan)}
     .status--pending{color:var(--gold); border-color:rgba(246,204,122,.3); background:rgba(246,204,122,.07)}
     .status--pending::before{background:var(--gold)}
-    .project-index{color:var(--faint); font:12px/1 var(--mono)}
+    .project-index{color:var(--card-accent); font:12px/1 var(--mono)}
     .project h3{position:relative; margin:0 0 12px; font-size:clamp(1.55rem,2.5vw,2.05rem); line-height:1.06; letter-spacing:-.045em}
     .project--featured h3{font-size:clamp(2rem,3.6vw,2.95rem); max-width:12ch}
     .project-copy{position:relative; max-width:58ch; margin:0 0 22px; color:var(--muted); font-size:.97rem; line-height:1.68}
@@ -107,8 +116,15 @@
     .project-evidence span{display:inline-flex; align-items:center; gap:7px}
     .project-evidence span::before{content:""; width:5px; height:5px; border-radius:50%; background:var(--cyan); opacity:.8}
     .project-evidence .evidence-pending::before{background:var(--gold)}
-    .project-link{position:relative; display:inline-flex; align-items:center; gap:8px; width:fit-content; min-height:44px; margin-top:16px; color:var(--ink); text-decoration:none; font-weight:700; font-size:.9rem; border-bottom:1px solid rgba(111,247,234,.55)}
-    .project-link:hover{color:var(--cyan); border-color:var(--cyan)}
+    .project-link{position:relative; display:inline-flex; align-items:center; gap:8px; width:fit-content; min-height:44px; margin-top:16px; color:var(--ink); text-decoration:none; font-weight:700; font-size:.9rem; border-bottom:1px solid var(--card-accent)}
+    .project-link:hover{color:var(--card-accent); border-color:var(--card-accent)}
+    .feature-visual{position:relative; grid-column:2; grid-row:2/4; display:flex; flex-direction:column; justify-content:space-between; gap:10px; min-height:392px; padding:16px; border:1px solid rgba(111,247,234,.18); border-radius:18px; background:radial-gradient(120% 100% at 20% 0%,rgba(111,247,234,.09),transparent 55%),linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,.012)); overflow:hidden}
+    .feature-visual::before{content:""; position:absolute; top:14%; bottom:14%; left:50%; z-index:0; width:1px; background:linear-gradient(180deg,transparent,rgba(111,247,234,.28),transparent); pointer-events:none}
+    .feature-visual-bar{position:relative; z-index:1; display:flex; justify-content:space-between; gap:12px; color:var(--faint); font:10px/1.4 var(--mono); letter-spacing:.12em; text-transform:uppercase}
+    .feature-visual-bar span:first-child{color:var(--cyan)}
+    .feature-orbit{position:relative; z-index:1; display:block; width:100%; max-width:300px; height:auto; margin:auto; filter:drop-shadow(0 0 20px rgba(111,247,234,.12))}
+    .feature-orbit .orbit-spin{transform-origin:180px 180px; animation:spin 32s linear infinite}
+    .feature-orbit .orbit-spin-reverse{transform-origin:180px 180px; animation:spin 24s linear infinite reverse}
     .work-note{max-width:76ch; margin:20px 0 0; color:var(--faint); font-size:.84rem; line-height:1.65}
     .method-grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:0; margin-top:6px; border-top:1px solid var(--line)}
     .method-item{padding:28px 28px 8px 0}
@@ -118,6 +134,7 @@
     .method-item code{display:inline-block; margin-top:16px; padding:8px 10px; border:1px solid var(--line); border-radius:7px; background:#050507; color:var(--cyan); font:12px/1.3 var(--mono)}
     .limits{display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); gap:clamp(24px,5vw,64px); align-items:start; padding:clamp(26px,4vw,42px); border:1px solid var(--line); border-radius:var(--radius); background:linear-gradient(135deg,rgba(255,77,147,.055),rgba(255,255,255,.035))}
     .limits h2,.limits p{padding:8px}
+    .limits .eyebrow{grid-column:1/-1; max-width:none; margin:0; padding:8px 8px 0; color:var(--cyan); font-size:11px}
     .limits h2{max-width:13ch; margin:0; font-size:clamp(1.9rem,3.4vw,2.8rem)}
     .limits p{max-width:var(--measure); margin:0; color:var(--muted); font-size:1rem}
     .limits strong{color:var(--ink)}
@@ -137,7 +154,8 @@
       .signal{display:none}
       .work-grid{grid-template-columns:1fr}
       .project-stack{grid-template-columns:1fr}
-      .project--featured{min-height:0}
+      .project--featured{display:flex; flex-direction:column; min-height:0}
+      .feature-visual{display:none}
       .method-grid{grid-template-columns:1fr}
       .method-item{padding:24px 0}
       .method-item + .method-item{padding-left:0; border-left:0; border-top:1px solid var(--line)}
@@ -191,8 +209,8 @@
           <a class="btn btn-ghost" href="https://github.com/belentani7" rel="noopener">Abrir GitHub <span aria-hidden="true">↗</span></a>
         </div>
         <dl class="hero-facts" aria-label="Datos de la selección">
-          <div><dt>Repositorios</dt><dd>03</dd></div>
-          <div><dt>Tests verdes</dt><dd>327</dd></div>
+          <div><dt>Repositorios</dt><dd>02</dd></div>
+          <div><dt>Tests verdes</dt><dd>101</dd></div>
           <div><dt>CDN externos</dt><dd>00</dd></div>
         </dl>
       </div>
@@ -204,7 +222,8 @@
 
     <section class="section wrap" id="work" aria-labelledby="work-title">
       <div class="section-head">
-        <h2 id="work-title">Tres repositorios, ninguna demo inventada.</h2>
+        <p class="eyebrow"><span>02</span> / Trabajo seleccionado</p>
+        <h2 id="work-title">Dos repositorios, ninguna demo inventada.</h2>
         <p>Productos públicos que hoy pasan las puertas. La presencia en GitHub no equivale a un despliegue activo: cada ficha declara lo que está verificado y lo que sigue pendiente.</p>
       </div>
       <div class="work-grid">
@@ -213,18 +232,53 @@
             <span class="status">Repositorio verificado</span>
             <span class="project-index">01 / arte + tecnología</span>
           </div>
-          <div>
+          <div class="project-body">
             <h3>Belentani — The Experience</h3>
             <p class="project-copy">Universo artístico interactivo: una galaxia Three.js navegable y cuatro capítulos que unen música, imagen y relato. El alcance público excluye masters, sesiones y material privado.</p>
             <ul class="tags" aria-label="Stack">
               <li>TypeScript</li><li>React</li><li>Three.js</li><li>Next.js</li>
             </ul>
           </div>
-          <div>
+          <div class="project-footer">
             <div class="project-evidence">
-              <span>44 tests</span><span>HTML CONFORME</span><span>repo público</span>
+              <span>47/47 tests</span><span>HTML CONFORME</span><span>repo público</span>
             </div>
             <a class="project-link" href="https://github.com/belentani7/belentani.es" rel="noopener">Ver repositorio <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="feature-visual" aria-hidden="true">
+            <div class="feature-visual-bar"><span>signal / 01</span><span>04 capítulos</span></div>
+            <svg class="feature-orbit" viewBox="0 0 360 360" aria-hidden="true" focusable="false">
+              <defs>
+                <radialGradient id="feature-core" cx="50%" cy="50%" r="50%">
+                  <stop offset="0" stop-color="#6ff7ea" stop-opacity=".42"/>
+                  <stop offset="1" stop-color="#6ff7ea" stop-opacity="0"/>
+                </radialGradient>
+                <linearGradient id="feature-line" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#9a7cff" stop-opacity=".75"/>
+                  <stop offset=".55" stop-color="#6ff7ea" stop-opacity=".55"/>
+                  <stop offset="1" stop-color="#ff4d93" stop-opacity=".22"/>
+                </linearGradient>
+              </defs>
+              <circle cx="180" cy="180" r="150" fill="none" stroke="url(#feature-line)" stroke-opacity=".55"/>
+              <g class="orbit-spin"><circle cx="180" cy="180" r="116" fill="none" stroke="url(#feature-line)" stroke-dasharray="2 9" stroke-opacity=".78"/></g>
+              <g class="orbit-spin-reverse"><circle cx="180" cy="180" r="92" fill="none" stroke="#6ff7ea" stroke-opacity=".24" stroke-dasharray="1 7"/></g>
+              <path d="M180 30 330 180 180 330 30 180Z" fill="none" stroke="url(#feature-line)" stroke-opacity=".2"/>
+              <path d="M180 30V330M30 180H330" stroke="#6ff7ea" stroke-opacity=".1"/>
+              <circle cx="180" cy="180" r="62" fill="url(#feature-core)"/>
+              <circle cx="180" cy="30" r="4" fill="#6ff7ea"/>
+              <circle cx="330" cy="180" r="4" fill="#9a7cff"/>
+              <circle cx="180" cy="330" r="4" fill="#ff4d93"/>
+              <circle cx="30" cy="180" r="4" fill="#f6cc7a"/>
+              <g fill="#8a859d" font-family="Cascadia Mono, SFMono-Regular, Consolas, monospace" font-size="11" letter-spacing="2" text-anchor="middle">
+                <text x="180" y="18">I</text>
+                <text x="344" y="184">II</text>
+                <text x="180" y="352">III</text>
+                <text x="16" y="184">IV</text>
+              </g>
+              <circle cx="180" cy="180" r="32" fill="#030405" stroke="#6ff7ea" stroke-opacity=".8"/>
+              <text x="180" y="187" fill="#6ff7ea" font-family="Cascadia Mono, SFMono-Regular, Consolas, monospace" font-size="18" font-weight="700" text-anchor="middle">B</text>
+            </svg>
+            <div class="feature-visual-bar"><span>the experience</span><span>three.js / next.js</span></div>
           </div>
         </article>
 
@@ -240,26 +294,11 @@
               <li>HTML</li><li>React</li><li>TypeScript</li>
             </ul>
             <div class="project-evidence">
-              <span>54 tests</span><span>HTML CONFORME</span><span class="evidence-pending">Pages no verificado</span>
+              <span>54/54 tests</span><span>HTML CONFORME</span><span class="evidence-pending">Pages no verificado</span>
             </div>
             <a class="project-link" href="https://github.com/belentani7/secure-t" rel="noopener">Ver repositorio <span aria-hidden="true">↗</span></a>
           </article>
 
-          <article class="project">
-            <div class="project-top">
-              <span class="status status--pending">Repositorio · despliegue pendiente</span>
-              <span class="project-index">03 / bien público</span>
-            </div>
-            <h3>ManosAbiertas</h3>
-            <p class="project-copy">Plataforma educativa gratuita para personas migrantes: cursos de IA y ofimática, creación de currículum y guías de derechos.</p>
-            <ul class="tags" aria-label="Stack">
-              <li>TypeScript</li><li>React</li><li>Next.js</li>
-            </ul>
-            <div class="project-evidence">
-              <span>229 tests</span><span>HTML CONFORME</span><span class="evidence-pending">publicación pendiente</span>
-            </div>
-            <a class="project-link" href="https://github.com/belentani7/ManosAbiertas" rel="noopener">Ver repositorio <span aria-hidden="true">↗</span></a>
-          </article>
         </div>
       </div>
       <p class="work-note">Los enlaces llevan al código, no a una landing promocional. Si un despliegue no está comprobado, se dice; no se convierte en una captura o en una promesa.</p>
@@ -267,13 +306,14 @@
 
     <section class="section wrap" id="method" aria-labelledby="method-title">
       <div class="section-head">
+        <p class="eyebrow"><span>03</span> / Método</p>
         <h2 id="method-title">El estándar es la evidencia.</h2>
         <p>Un producto entra cuando las tres puertas pasan a la vez. No hay una cuarta puerta llamada “confía en mí”.</p>
       </div>
       <div class="method-grid">
         <div class="method-item">
           <h3>Pruebas ejecutadas</h3>
-          <p>La suite de cada repositorio se ejecuta antes de anunciarlo. En la última pasada: 44/44, 54/54 y 229/229.</p>
+          <p>La suite de cada repositorio se ejecuta antes de anunciarlo. En la última pasada: 47/47 y 54/54.</p>
           <code>npm test</code>
         </div>
         <div class="method-item">
@@ -291,6 +331,7 @@
 
     <section class="section wrap" id="limits" aria-labelledby="limits-title">
       <div class="limits">
+        <p class="eyebrow"><span>04</span> / Límites</p>
         <h2 id="limits-title">Lo que no verás aquí.</h2>
         <p><strong>Prototipos, catálogos incompletos, repos experimentales y despliegues sin comprobar</strong> quedan fuera. Un repositorio público no demuestra por sí solo que una web esté activa; por eso separo “código verificado” de “demo publicada”. Esa distinción es parte del producto.</p>
       </div>
