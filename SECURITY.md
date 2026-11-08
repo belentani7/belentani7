@@ -9,7 +9,7 @@
 
 ## Reporting a Vulnerability
 
-Please report security vulnerabilities by emailing security@belentani.com or by opening a private security advisory on GitHub.
+Please report security vulnerabilities by opening a private security advisory on GitHub: https://github.com/belentani7/belentani7/security/advisories/new. Do not open a public issue.
 
 We will acknowledge receipt within 48 hours and provide a timeline for resolution within 5 business days.
 
