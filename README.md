@@ -2,73 +2,71 @@
 
 # PEDRO BELENTANI
 
-**AI Systems Engineer · Full-Stack Developer · Creative Technologist**
+### Senior Full-Stack AI Engineer · Systems Architect · Creative Technologist
 
-Barcelona, Spain · [BELENTANI — The Experience](https://github.com/belentani7/belentani.es) · [GitHub](https://github.com/belentani7)
+**Engineering × Art × Intelligent Systems**
 
-*I build intelligent systems and immersive digital experiences — from architecture to interface.*
+Barcelona, Spain
+
+[Portfolio & creative engineering](https://github.com/belentani7/belentani.es) · [Repositories](https://github.com/belentani7?tab=repositories)
 
 </div>
 
 ---
 
-## About
+## Architecting intelligent systems. Crafting immersive experiences.
 
-I work across **AI systems, full-stack engineering, Trust & Safety, and creative technology**. My approach connects technical architecture, thoughtful product design, accessibility, and measurable engineering quality.
+I build intelligent systems and immersive digital experiences — **from systems architecture to cinematic interfaces**.
 
-My creative work as **BELENTANI** explores interactive storytelling, music, WebGL, and cinematic interfaces.
+My work spans **AI orchestration, local-first tooling, full-stack product engineering, Trust & Safety, and creative technology**. I approach engineering as a complete discipline: robust foundations, intentional interaction design, operational security, and measurable performance.
 
-## Selected work
+As the creator of **BELENTANI**, I bring the same architectural thinking to interactive storytelling, audiovisual systems, and experimental WebGL environments.
 
-### [BELENTANI — The Experience](https://github.com/belentani7/belentani.es)
+> **Design with purpose. Engineer with evidence. Ship what can be verified.**
 
-An interactive artistic universe combining music, narrative, and immersive interfaces.
+## Three interconnected disciplines
 
-**Stack:** Next.js · React · TypeScript · Three.js
+| AI Systems & Orchestration | Creative Web & Immersive Systems | Social Impact & Accessible Technology |
+| :--- | :--- | :--- |
+| Agent workflows, local LLM integration, CLI tools, model routing, and automation. | WebGL, Three.js, React, immersive interfaces, real-time visuals, and digital storytelling. | Learning platforms, cybersecurity education, inclusive product design, and practical technology. |
+| [Meta-Skill](https://github.com/belentani7/meta-skill) · [AI Lab](https://github.com/belentani7?tab=repositories&q=agent) | [BELENTANI](https://github.com/belentani7/belentani.es) · [Visual Engine](https://github.com/belentani7/belentani-visual-engine) · [Unified OS v2](https://github.com/belentani7/unified-os-v2) | [Secure-T](https://github.com/belentani7/secure-t) · [ManosAbiertas](https://github.com/belentani7/manosabiertas) |
 
-**Status:** Active development. Repository and deployment status should be checked independently; a successful build is not proof that the public domain serves the latest version.
+*These links point to source repositories and research initiatives. They do not imply that every project is deployed or production-ready.*
 
-### [Secure-T](https://github.com/belentani7/secure-t)
+## Selected engineering directions
 
-An educational project focused on cybersecurity, artificial intelligence, and accessible learning experiences.
+**AI infrastructure & developer tooling** — Python, FastAPI, TypeScript, CLI automation, agent orchestration, local model workflows, and reproducible evaluation.
 
-**Stack:** TypeScript · React · HTML
+**Full-stack systems** — Next.js, React, Node.js, PostgreSQL, APIs, authentication, testing, CI/CD, and deployment architecture.
 
-**Status:** In development. Course completeness and live availability are not claimed here.
+**Creative technology** — Three.js, WebGL, real-time rendering, motion design, accessibility, performance budgets, and responsive interfaces.
 
-## Engineering and creative lab
+**Trust & Safety** — operational rigor, risk-aware systems, privacy, human-centered review, and accountable automation.
 
-- [BELENTANI Visual Engine](https://github.com/belentani7/belentani-visual-engine) — interactive scenes and visual storytelling.
-- [Unified OS v2](https://github.com/belentani7/unified-os-v2) — interconnected creative and technical experiences.
-- [Belentani Webs Históricas](https://github.com/belentani7/belentani-webs-historicas) — historical website archive.
-- [ManosAbiertas](https://github.com/belentani7/manosabiertas) — social-impact project; verify its current readiness in the repository.
+## Architecture principles
 
-These are **repositories and ongoing initiatives**, not a claim that every application is production-ready.
+**01 / Technological sovereignty**  
+Prefer portable, inspectable systems and local-first execution when appropriate. Minimize unnecessary vendor lock-in; use external services deliberately, not by default.
 
-## Core technologies
+**02 / Intentional design**  
+Visual complexity must improve meaning, not obscure it. Clear information hierarchy, accessible interactions, and carefully controlled motion matter as much as visual ambition.
 
-**Languages:** Python · TypeScript · JavaScript · SQL
+**03 / Production truth**  
+A repository, a passing test suite, a successful build, and a functioning public deployment are **different levels of evidence**. Do not call a system production-ready without verifying its behavior.
 
-**Application development:** React · Next.js · Node.js · FastAPI · PostgreSQL
+**04 / Sustainable scale**  
+Favor shared standards, deterministic CI/CD, reusable components, documented boundaries, and small, reversible changes over uncontrolled repository proliferation.
 
-**Creative web:** Three.js · WebGL · CSS · Accessible UI
+## Technology
 
-**Engineering:** Git · GitHub Actions · Docker · Testing · CI/CD
-
-## Working principles
-
-**Build what the product actually needs.** Keep architecture understandable, design intentional, and functionality testable.
-
-**Separate code from deployment.** A passing test suite, a green build, and a working public website are three different kinds of evidence.
-
-**Protect users and maintainers.** Accessibility, privacy, security, and graceful degradation are part of the implementation.
+`Python` · `TypeScript` · `JavaScript` · `React` · `Next.js` · `Node.js` · `FastAPI` · `PostgreSQL` · `Docker` · `Three.js` · `WebGL` · `GitHub Actions`
 
 ---
 
 <div align="center">
 
-**Engineering × Art × Intelligent Systems**
+**Build systems that work. Create experiences that matter.**
 
-[Explore repositories](https://github.com/belentani7?tab=repositories)
+[Explore the code](https://github.com/belentani7?tab=repositories)
 
 </div>
