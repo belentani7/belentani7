@@ -1,55 +1,33 @@
-### Pedro Belentani
+# Pedro Belentani · NOIACORE LAB
 
-**Creative Technologist · Applied AI · Product systems · Creative computing** · Barcelona
+**Creative Technologist · Applied AI · Product systems · Creative computing**
 
-Construyo productos completos: una idea con narrativa, una interfaz que se entiende y un
-repositorio que explica cómo se ejecuta y cómo se verifica. Este perfil muestra solo trabajo
-que ha pasado ese umbral público.
+Construyo productos digitales que unen narrativa, tecnología y dirección creativa. Este perfil presenta trabajo público terminado y respaldado por una experiencia y un repositorio accesibles.
 
----
+## Release público
 
-## Proyecto publicado
+### [Belentani: The Experience](https://belentani.es)
 
-| Producto | Qué es | Evidencia pública |
-|---|---|---|
-| [Belentani — The Experience](https://github.com/belentani7/belentani.es) | Universo artístico interactivo: una galaxia Three.js navegable, cuatro capítulos narrativos y un alcance público curado. | `main` limpio y alineado con `origin/main`; `index.html` conforme al verificador local; README con instalación, pruebas, build y comprobación de runtime. |
+Una galaxia interactiva en Three.js convierte Judas Era en un recorrido visual y sonoro. La experiencia reúne música, imagen y relato en cuatro capítulos: Genesis, Traicion, La deuda y Redencion. Está pensada para quienes quieren entrar en un universo artístico y explorarlo a su propio ritmo.
 
-### La narrativa
+- [Abrir la experiencia](https://belentani.es)
+- [Consultar el repositorio](https://github.com/belentani7/belentani.es)
+- **Estado:** release público verificado.
+- **Tecnología:** Three.js · Web.
 
-**Belentani — The Experience** convierte la era Judas en un espacio que se recorre, no en una
-colección de enlaces. La entrada presenta el mundo; la galaxia organiza sus capítulos; cada
-escena mantiene la relación entre música, imagen y relato. El producto público excluye masters,
-sesiones y material privado, y documenta qué se puede ejecutar y qué no se promete.
+El repositorio del producto documenta instalación, comandos de verificación, construcción y comprobación de la experiencia. El alcance público excluye audio privado, masters, stems y sesiones.
 
-[Abrir el proyecto](https://github.com/belentani7/belentani.es) · [Visitar el universo](https://belentani.es)
+## Qué aparece aquí
 
-## Criterio de publicación
+Un producto entra en este perfil cuando su propuesta se entiende, la experiencia pública se puede recorrer y su repositorio documenta cómo ejecutarlo y comprobarlo. Las ideas, prototipos y proyectos que aún no tienen esa evidencia quedan fuera del escaparate.
 
-Un repositorio solo entra aquí cuando tiene, juntos:
+## Forma de trabajo
 
-- narrativa de producto comprensible;
-- web completa y accesible, sin dependencias accidentales;
-- instrucciones reproducibles de instalación y uso;
-- pruebas o verificaciones ejecutadas;
-- límites, privacidad y estado público explicados sin exageraciones.
-
-El resto del ecosistema permanece fuera del escaparate hasta cumplir el mismo estándar. No
-presento código privado, prototipos, catálogos incompletos ni despliegues sin verificar como
-productos terminados.
-
-## Cómo trabajo
-
-1. **Entender el producto.** La historia, el usuario y el límite público se escriben antes de
-   llamar terminado al código.
-2. **Construir la superficie.** La web es parte del producto: contenido real, responsive,
-   accesible y lista para ser leída sin contexto adicional.
-3. **Medir.** Tests, build, HTML, enlaces y ejecución se verifican con comandos reproducibles.
-4. **Publicar con criterio.** Solo `main`, solo proyectos completos y sin ocultar pendientes.
-
-## Tecnologías
-
-`TypeScript` · `React` · `Next.js` · `Node.js` · `Python` · `Three.js` · `GSAP` · `GitHub Actions`
+1. Dar una forma clara a la idea y a la experiencia.
+2. Construir con contenido real y límites públicos definidos.
+3. Documentar cómo ejecutar y verificar el producto.
+4. Presentar solo los releases que cumplen ese estándar.
 
 ---
 
-`Barcelona` · [GitHub](https://github.com/belentani7) · [Contacto](mailto:belentani7pedro@gmail.com)
+[GitHub](https://github.com/belentani7) · Barcelona
