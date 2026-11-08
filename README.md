@@ -24,6 +24,15 @@ As the creator of **BELENTANI**, I bring the same architectural thinking to inte
 
 > **Design with purpose. Engineer with evidence. Ship what can be verified.**
 
+## Featured systems
+
+- **[Meta-Skill](https://github.com/belentani7/meta-skill)** — offline, explainable routing of AI tasks with explicit abstention and reproducible evaluation. [CI](https://github.com/belentani7/meta-skill/actions).
+- **[BELENTANI — The Experience](https://github.com/belentani7/belentani.es)** — full-stack creative web and interactive storytelling; deployment status is verified separately from source.
+- **[Secure-T](https://github.com/belentani7/secure-t)** — cybersecurity and accessible learning technology.
+- **[BELENTANI Visual Engine](https://github.com/belentani7/belentani-visual-engine)** — Three.js/WebGL research and immersive scene engineering.
+
+**Evidence policy:** CI results, build artifacts, and production availability are separate checks. An unverified live experience is never presented as production-validated.
+
 ## Three interconnected disciplines
 
 | AI Systems & Orchestration | Creative Web & Immersive Systems | Social Impact & Accessible Technology |
