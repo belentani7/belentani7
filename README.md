@@ -66,6 +66,16 @@ A repository, a passing test suite, a successful build, and a functioning public
 **04 / Sustainable scale**  
 Favor shared standards, deterministic CI/CD, reusable components, documented boundaries, and small, reversible changes over uncontrolled repository proliferation.
 
+## Evidence & operational governance
+
+The portfolio follows a **claim → evidence → status** policy. Each highlighted system should link to its own reproducible tests, build artifacts, and production checks where available. Missing evidence is labeled **not verified**, not silently treated as success.
+
+- **AI quality:** maintain labeled evaluation cases, document abstention and failure modes, and compare model/router changes against an explicit baseline. Statistical significance alone is not proof of safety or production readiness.
+- **Privacy & compliance:** document personal-data processing, retention, subprocessors, incident response, and applicable AI transparency obligations per product. Documentation is not a legal certification.
+- **Supply chain:** use least-privilege CI, dependency review, pinned releases, and provenance verification where implemented; never claim an SLSA level without supporting attestation.
+- **Operations:** separate source status, CI status, artifact integrity, and real production availability. Record incident response and rollback paths before high-impact releases.
+- **Portfolio lifecycle:** classify projects as flagship, active, experimental, or archived, with explicit verification dates rather than inferred readiness.
+
 ## Technology
 
 `Python` · `TypeScript` · `JavaScript` · `React` · `Next.js` · `Node.js` · `FastAPI` · `PostgreSQL` · `Docker` · `Three.js` · `WebGL` · `GitHub Actions`
