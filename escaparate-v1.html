@@ -93,6 +93,27 @@
     .project{--card-accent:var(--cyan); --card-glow:rgba(111,247,234,.13); position:relative; display:flex; flex-direction:column; overflow:hidden; padding:clamp(22px,3.3vw,34px); border:1px solid var(--line); border-radius:var(--radius); background:linear-gradient(145deg,var(--glass-2),var(--glass)); backdrop-filter:blur(18px); box-shadow:0 18px 60px rgba(0,0,0,.32); animation:rise .65s ease both}
     .project-stack .project:nth-child(1){--card-accent:var(--violet); --card-glow:rgba(154,124,255,.12)}
     .project-stack .project:nth-child(2){--card-accent:var(--gold); --card-glow:rgba(246,204,122,.1)}
+    .project-stack .project{display:grid; grid-template-columns:minmax(0,1.08fr) minmax(280px,.72fr); grid-template-areas:"top top" "title panel" "copy panel" "tags panel" "evidence panel" "link panel"; column-gap:clamp(26px,5vw,64px); align-items:start}
+    .project-stack .project .project-top{grid-area:top}
+    .project-stack .project h3{grid-area:title}
+    .project-stack .project .project-copy{grid-area:copy}
+    .project-stack .project .tags{grid-area:tags}
+    .project-stack .project .project-evidence{grid-area:evidence; width:100%; margin-top:0}
+    .project-stack .project .project-link{grid-area:link}
+    .secure-panel{position:relative; grid-area:panel; align-self:stretch; display:flex; flex-direction:column; justify-content:space-between; gap:14px; min-height:320px; padding:16px; border:1px solid rgba(154,124,255,.2); border-radius:18px; background:radial-gradient(120% 100% at 80% 0%,rgba(154,124,255,.13),transparent 55%),linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,.012)); overflow:hidden}
+    .secure-panel::before{content:""; position:absolute; top:14%; bottom:14%; left:50%; z-index:0; width:1px; background:linear-gradient(180deg,transparent,rgba(154,124,255,.28),transparent); pointer-events:none}
+    .secure-panel-head,.secure-panel-meta{position:relative; z-index:1; display:flex; justify-content:space-between; gap:12px; color:var(--faint); font:10px/1.4 var(--mono); letter-spacing:.12em; text-transform:uppercase}
+    .secure-panel-head span:first-child{color:var(--violet)}
+    .secure-matrix{position:relative; z-index:1; display:grid; grid-template-columns:repeat(20,minmax(0,1fr)); align-items:end; gap:4px; width:100%; height:190px; margin:auto 0; padding:16px 0}
+    .secure-matrix span{display:block; height:34%; border:1px solid rgba(154,124,255,.12); border-radius:2px; background:linear-gradient(180deg,rgba(111,247,234,.62),rgba(154,124,255,.06))}
+    .secure-matrix span:nth-child(3n){height:56%}
+    .secure-matrix span:nth-child(4n){height:78%}
+    .secure-matrix span:nth-child(5n){height:92%}
+    .secure-matrix span:nth-child(7n){height:48%}
+    .secure-matrix span:nth-child(11n){height:68%}
+    .secure-panel-meta{justify-content:flex-start; flex-wrap:wrap; gap:8px 16px; letter-spacing:.06em}
+    .secure-panel-meta span{display:inline-flex; align-items:center; gap:7px}
+    .secure-panel-meta span::before{content:""; width:5px; height:5px; border-radius:50%; background:var(--violet); opacity:.8}
     .project::before{content:""; position:absolute; inset:0; pointer-events:none; background:radial-gradient(520px 180px at 12% -10%,var(--card-glow),transparent 70%); opacity:.8}
     .project:nth-child(2),.project-stack .project:nth-child(1){animation-delay:.08s}
     .project-stack .project:nth-child(2){animation-delay:.16s}
@@ -154,6 +175,9 @@
       .signal{display:none}
       .work-grid{grid-template-columns:1fr}
       .project-stack{grid-template-columns:1fr}
+      .project-stack .project{display:flex; flex-direction:column}
+      .secure-panel{display:none}
+      .project-stack .project .project-evidence{margin-top:auto}
       .project--featured{display:flex; flex-direction:column; min-height:0}
       .feature-visual{display:none}
       .method-grid{grid-template-columns:1fr}
@@ -297,6 +321,13 @@
               <span>54/54 tests</span><span>HTML CONFORME</span><span class="evidence-pending">Pages no verificado</span>
             </div>
             <a class="project-link" href="https://github.com/belentani7/secure-t" rel="noopener">Ver repositorio <span aria-hidden="true">↗</span></a>
+            <div class="secure-panel" aria-hidden="true">
+              <div class="secure-panel-head"><span>secure / signal</span><span>02</span></div>
+              <div class="secure-matrix" role="presentation">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <div class="secure-panel-meta"><span>04 programas</span><span>20 semanas</span><span>offline</span></div>
+            </div>
           </article>
 
         </div>
