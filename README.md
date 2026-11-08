@@ -8,15 +8,14 @@ Construyo productos donde la idea, la interfaz y el repositorio cuentan la misma
 
 | Producto | Qué es | Stack | Evidencia | Estado |
 |---|---|---|---|---|
-| [Belentani — The Experience](https://github.com/belentani7/belentani.es) | Universo artístico interactivo: galaxia Three.js navegable y cuatro capítulos entre música, imagen y relato. El alcance público excluye masters, sesiones y material privado. | TypeScript · React · Three.js · Next.js | **44/44 tests** · HTML CONFORME | Repositorio verificado. El dominio `belentani.es` sirve actualmente una portada heredada; no se presenta como demo de este hub. |
+| [Belentani — The Experience](https://github.com/belentani7/belentani.es) | Universo artístico interactivo: galaxia Three.js navegable y cuatro capítulos entre música, imagen y relato. El alcance público excluye masters, sesiones y material privado. | TypeScript · React · Three.js · Next.js | **47/47 tests** · HTML CONFORME | Repositorio verificado. El dominio `belentani.es` sirve actualmente una portada heredada; no se presenta como demo de este hub. |
 | [secure-t](https://github.com/belentani7/secure-t) | Instituto abierto de ciberseguridad e inteligencia artificial: cuatro programas de veinte semanas, en español y funcionales sin conexión. | HTML · React · TypeScript | **54/54 tests** · HTML CONFORME | Repositorio verificado. La disponibilidad de GitHub Pages no está comprobada. |
-| [ManosAbiertas](https://github.com/belentani7/ManosAbiertas) | Plataforma educativa gratuita para personas migrantes: cursos de IA y ofimática, creación de currículum y guías de derechos. | TypeScript · React · Next.js | **229/229 tests** · HTML CONFORME | Repositorio verificado. La publicación del despliegue sigue pendiente. |
 
 La tabla separa deliberadamente **código verificado** de **demo publicada**. Un repositorio público no demuestra por sí solo que una web esté activa.
 
 ## Qué queda fuera
 
-Prototipos, catálogos incompletos, repos experimentales y despliegues sin comprobar no se anuncian como producto terminado. El escaparate se actualiza cuando el trabajo pasa las mismas puertas, no cuando el repositorio existe.
+Prototipos, catálogos incompletos, repos experimentales y despliegues sin comprobar no se anuncian como producto terminado. El escaparate se actualiza cuando el trabajo pasa las mismas puertas, no cuando el repositorio existe. `ManosAbiertas` permanece fuera hasta que su suite esté verde.
 
 ## Tools and experiments
 
@@ -28,7 +27,7 @@ La herramienta vive en los **repository files** de `docs/living-machine/`; no se
 
 ## Verificación aplicada
 
-- `npm test` en cada producto: 44/44, 54/54 y 229/229.
+- `npm test` en cada producto: 47/47 y 54/54.
 - `verificar_html.py` sobre las portadas: HTML CONFORME, sin recursos cargados desde terceros.
 - Revisión de privacidad: sin emails, secretos, tokens ni datos personales en la portada pública.
 - `git diff --check` antes de publicar.

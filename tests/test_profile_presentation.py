@@ -17,7 +17,6 @@ EVIDENCE = ROOT / "docs" / "engineering-evidence-2026-10-29.md"
 SELECTED_REPOSITORIES = (
     "belentani.es",
     "secure-t",
-    "ManosAbiertas",
 )
 EXCLUDED_REPOSITORIES = (
     "Belentani.cv-ai",
@@ -25,6 +24,7 @@ EXCLUDED_REPOSITORIES = (
     "CARQUIDEC",
     "linguaforge",
     "belentani-omg-portal",
+    "ManosAbiertas",
 )
 SVG_NS = "{http://www.w3.org/2000/svg}"
 
@@ -64,7 +64,7 @@ class PublicProfilePresentationTests(unittest.TestCase):
                     self.assertFalse(urlsplit(value).scheme, f"Remote SVG asset: {value}")
         self.assertLess(HERO.stat().st_size, 30_000)
 
-    def test_three_verified_public_repositories_are_distinct(self):
+    def test_two_verified_public_repositories_are_distinct(self):
         selected = self.readme.split("## Trabajo seleccionado", 1)[1].split("## Qué queda fuera", 1)[0]
         for repo in SELECTED_REPOSITORIES:
             self.assertIn(f"https://github.com/belentani7/{repo}", selected, repo)
