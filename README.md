@@ -22,7 +22,7 @@ Prototipos, catálogos incompletos, repos experimentales y despliegues sin compr
 
 La [Living Machine](docs/living-machine/index.html) es una herramienta local del repositorio para conversión de subtítulos, CSV, media y una terminal simulada. Se ejecuta con archivos locales y **not a verified live deployment**. Es un experimento de interfaz, no un producto del escaparate: el trabajo **private, archived or experimental** queda fuera de la selección.
 
-<img src="assets/profile-editorial-2026.svg" alt="Pedro Belentani — retrato editorial" width="640" loading="lazy" decoding="async">
+<img src="./assets/profile-editorial-2026.svg" alt="Pedro Belentani — retrato editorial" width="640" loading="lazy" decoding="async">
 
 La herramienta vive en los **repository files** de `docs/living-machine/`; no se anuncia como demo publicada.
 
@@ -32,6 +32,10 @@ La herramienta vive en los **repository files** de `docs/living-machine/`; no se
 - `verificar_html.py` sobre las portadas: HTML CONFORME, sin recursos cargados desde terceros.
 - Revisión de privacidad: sin emails, secretos, tokens ni datos personales en la portada pública.
 - `git diff --check` antes de publicar.
+
+## Evidencia de ingeniería
+
+La [evidencia de ingeniería](./docs/engineering-evidence-2026-10-29.md) y el [archivo del perfil](./docs/profile-archive-2026-10-29.md) conservan el contexto y las cifras fechadas. Son material de consulta: **no convierten un repositorio público en una demo verificada** ni sustituyen `npm test` y la verificación HTML.
 
 ## Cómo trabajo
 

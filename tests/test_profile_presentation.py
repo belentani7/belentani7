@@ -15,11 +15,15 @@ HERO = ROOT / "assets" / "profile-editorial-2026.svg"
 HISTORY = ROOT / "docs" / "profile-archive-2026-10-29.md"
 EVIDENCE = ROOT / "docs" / "engineering-evidence-2026-10-29.md"
 SELECTED_REPOSITORIES = (
-    "Belentani.cv-ai",
-    "ManosAbiertas",
-    "secure-t",
-    "linguaforge",
     "belentani.es",
+    "secure-t",
+    "ManosAbiertas",
+)
+EXCLUDED_REPOSITORIES = (
+    "Belentani.cv-ai",
+    "ivy-la-vie",
+    "CARQUIDEC",
+    "linguaforge",
     "belentani-omg-portal",
 )
 SVG_NS = "{http://www.w3.org/2000/svg}"
@@ -60,8 +64,8 @@ class PublicProfilePresentationTests(unittest.TestCase):
                     self.assertFalse(urlsplit(value).scheme, f"Remote SVG asset: {value}")
         self.assertLess(HERO.stat().st_size, 30_000)
 
-    def test_six_verified_public_repositories_are_distinct(self):
-        selected = self.readme.split("## Selected work", 1)[1].split("## Capabilities", 1)[0]
+    def test_three_verified_public_repositories_are_distinct(self):
+        selected = self.readme.split("## Trabajo seleccionado", 1)[1].split("## Qué queda fuera", 1)[0]
         for repo in SELECTED_REPOSITORIES:
             self.assertIn(f"https://github.com/belentani7/{repo}", selected, repo)
         github_links = re.findall(
@@ -69,13 +73,17 @@ class PublicProfilePresentationTests(unittest.TestCase):
         )
         self.assertEqual(set(github_links), set(SELECTED_REPOSITORIES))
         self.assertEqual(len(github_links), len(SELECTED_REPOSITORIES))
+        for repo in EXCLUDED_REPOSITORIES:
+            self.assertNotIn(f"https://github.com/belentani7/{repo}", selected, repo)
 
     def test_evidence_and_history_are_traceable(self):
         self.assertTrue(EVIDENCE.is_file())
         self.assertTrue(HISTORY.is_file())
+        self.assertIn("## Evidencia de ingeniería", self.readme)
         self.assertIn("./docs/engineering-evidence-2026-10-29.md", self.readme)
         self.assertIn("./docs/profile-archive-2026-10-29.md", self.readme)
-        self.assertIn("cannot", self.readme.split("## Engineering evidence", 1)[1].lower())
+        section = self.readme.split("## Evidencia de ingeniería", 1)[1].lower()
+        self.assertIn("no convierten", section)
         evidence = EVIDENCE.read_text(encoding="utf-8")
         self.assertIn("110 commit entries", evidence)
         self.assertIn("8,199", evidence)
@@ -86,11 +94,12 @@ class PublicProfilePresentationTests(unittest.TestCase):
 
     def test_professional_content_is_readable_and_bounded(self):
         self.assertIn("# Pedro Belentani", self.readme)
-        self.assertIn("## Experience behind the code", self.readme)
-        self.assertIn("## Contact", self.readme)
-        self.assertIn("Trust & Safety", self.readme)
-        self.assertIn("2018–2025", self.readme)
-        self.assertIn("2016–2018", self.readme)
+        self.assertIn("## Trabajo seleccionado", self.readme)
+        self.assertIn("## Qué queda fuera", self.readme)
+        self.assertIn("## Evidencia de ingeniería", self.readme)
+        self.assertIn("## Verificación aplicada", self.readme)
+        self.assertIn("## Cómo trabajo", self.readme)
+        self.assertIn("## Tecnologías", self.readme)
         self.assertLess(len(self.readme), 12_000)
         self.assertNotIn("replaced a 10-person team", self.readme.lower())
         self.assertNotIn("99.2% accuracy", self.readme.lower())
