@@ -100,6 +100,83 @@ The portfolio follows a **claim → evidence → status** policy. Each highlight
 
 </div>
 
+<!-- repo-forge:readme:inicio -->
+## Qué es
+
+**Pedro Belentani** — perfil profesional y puerta del ecosistema.
+
+Una herramienta que se puede auditar: dice qué hace, lo hace, y deja rastro de lo que hizo.
+
+## Estado medido
+
+| Dato | Valor |
+|---|---|
+| Lenguajes | JSON, HTML, JavaScript, Markdown, TypeScript, Python |
+| Archivos / líneas | 238 / 37061 |
+| Páginas HTML | 17 |
+| Tests detectados | 20 |
+| Cumplimiento de reglas | 36/37 (97.3%) |
+
+Todo lo anterior se midió en disco el 2026-11-10; no es una estimación.
+
+## Uso
+
+```bash
+python scripts/doctor.py   # verificación sin dependencias
+```
+
+## Estructura
+
+```
+assets/
+brand/
+client/
+data/
+desktop/
+docs/
+e2e/
+engine/
+magic/
+plataforma/
+```
+
+## Diseño de plataforma
+
+- Presentación
+- Catálogo de productos
+- Estado verificado
+- Contacto
+
+La ficha completa —máximo potencial, marca, fases de monetización y recursos— vive en
+[`plataforma/FICHA.md`](plataforma/FICHA.md). Los tokens de marca están en
+[`brand/tokens.css`](brand/tokens.css).
+
+## Reglas del proyecto
+
+Este repositorio sigue el catálogo oficial del ecosistema (`GH-*`, `WEB-*`, `ACC-*`,
+`SEO-*`, `COH-*`, `DEV-*`). El gate se ejecuta con:
+
+```bash
+python scripts/doctor.py
+```
+
+## Licencia
+
+MIT. Ver [`LICENSE`](LICENSE).
+<!-- repo-forge:readme:fin -->
+<!-- repo-forge:readme:fin -->
+<!-- repo-forge:readme:fin -->
+<!-- repo-forge:readme:fin -->
+
+## Resumen en español
+
+Pedro Belentani — perfil profesional y puerta del ecosistema.
+
+el índice vivo del ecosistema: qué construye, qué funciona hoy, con demos enlazadas y estado real de cada producto
+
+Este resumen se añadió para que el repositorio se pueda leer en el idioma del ecosistema.
+El contenido técnico completo sigue en el resto del documento.
 
 ## Producto
-Véase `plataforma/OFERTA.md`, `plataforma/precios.json`, `plataforma/ONEPAGER.md`.
+
+Oferta, precio y cobro: [`producto/OFERTA.md`](producto/OFERTA.md) · [`producto/precios.json`](producto/precios.json) · [`producto/landing.html`](producto/landing.html)

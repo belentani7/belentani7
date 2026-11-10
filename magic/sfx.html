@@ -1,52 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Belentani7</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forja de efectos de sonido · Pedro Belentani</title>
+<meta name="description" content="Sintetizador de efectos de sonido procedural con WebAudio: clic, hover, éxito, error y whoosh. Sin archivos de audio, sin registro y sin dependencias.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Forja de efectos de sonido · Pedro Belentani">
+<meta property="og:description" content="Cinco efectos sintetizados en el navegador con WebAudio. Sin binarios, sin descargas y sin cuentas.">
+<meta property="og:image" content="../brand/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<style>
+  :root {
+    --bg:#0f1419; --surface:#191e23; --ink:#e8eef6; --muted:#969ba2;
+    --accent:#38bdf8; --line:#243040; --radius:12px;
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif; }
+  header, main, footer { padding: clamp(1rem, 4vw, 2.5rem); }
+  header { border-bottom:1px solid var(--line); }
+  h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); margin:0 0 .4rem; line-height:1.1; }
+  p.lead { color:var(--muted); max-width:60ch; margin:0; }
+  .grid { display:grid; gap:.8rem; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); margin-top:1.4rem; }
+  button {
+    background:var(--surface); color:var(--ink); border:1px solid var(--line);
+    border-radius:var(--radius); padding:1.1rem; font:inherit; cursor:pointer;
+    display:flex; flex-direction:column; gap:.3rem; text-align:left;
+  }
+  button strong { font-size:1rem; }
+  button span { color:var(--muted); font-size:.82rem; }
+  button:hover { border-color:var(--accent); }
+  button:focus-visible { outline:3px solid var(--accent); outline-offset:2px; }
+  button[aria-pressed="true"] { border-color:var(--accent); box-shadow:0 0 0 1px var(--accent) inset; }
+  .panel { margin-top:1.6rem; background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:1rem; }
+  label { display:block; margin:.5rem 0 .2rem; color:var(--muted); font-size:.85rem; }
+  input[type="range"] { width:100%; accent-color:var(--accent); }
+  output { font-variant-numeric: tabular-nums; }
+  footer { color:var(--muted); font-size:.85rem; border-top:1px solid var(--line); }
+  a { color:var(--accent); }
+  @media (prefers-reduced-motion: reduce) { * { transition:none !important; animation:none !important; } }
+</style>
 </head>
-<!DOCTYPE html>
-import type { Plugin } from "opencode"
-
-/**
- * BELENTANI // MAGIC PLUGIN
- * signature: belentani.eu / noiacore.com
- *
- * Adds an /immersive command that points the user to the magic layer,
- * and a session hook that keeps the signature in mind.
- */
-export const magic: Plugin = async ({ project, hooks }) => {
-  const repo = project.directory.split(/[\\/]/).pop() ?? "node"
-
-  project.command("immersive", {
-    description: "Open the BELENTANI magic experience for this node",
-    async run() {
-      const { exec } = await import("node:child_process")
-      const { promisify } = await import("node:util")
-      const pex = promisify(exec)
-      const target = "magic/immersive.html"
-      try {
-        if (process.platform === "win32") {
-          await pex(`start "" "${target}"`)
-        } else if (process.platform === "darwin") {
-          await pex(`open "${target}"`)
-        } else {
-          await pex(`xdg-open "${target}"`)
-        }
-      } catch (e) {
-        return `Unable to open ${target}: ${String(e)}`
-      }
-      return `Immersed in ${repo}. belentani.eu / noiacore.com`
-    },
-  })
-
-  hooks.notify = async (event) => {
-    if (event.type === "session.idle") {
-      // keep the signature warm
-    }
-  }
-
-  return () => {}
-}
-<style>
-    :focus-visible{outline:2px solid #ff073a;outline-offset:3px;border-radius:4px}</style>
-
-<h1>Belentani7</h1>
+<body>
+<header>
+  <h1>Forja de efectos de sonido</h1>
+  <p class="lead">Cinco efectos sintetizados en tu navegador con WebAudio. No hay archivos de audio, no se descarga nada y no se guarda nada.</p>
+</header>
+<main>
+  <section aria-labelledby="catalogo">
+    <h2 id="catalogo">Catálogo</h2>
+    <div class="grid" id="botones">
+      <button type="button" data-sfx="click"><strong>Clic</strong><span>Toque seco, 40 ms</span></button>
+      <button type="button" data-sfx="hover"><strong>Hover</strong><span>Barrido suave, 80 ms</span></button>
+      <button type="button" data-sfx="success"><strong>Éxito</strong><span>Dos notas ascendentes</span></button>
+      <button type="button" data-sfx="error"><strong>Error</strong><span>Dos notas graves</span></button>
+      <button type="button" data-sfx="whoosh"><strong>Whoosh</strong><span>Ruido filtrado, 350 ms</span></button>
+    </div>
+  </section>
+  <section class="panel" aria-labelledby="ajustes">
+    <h2 id="ajustes">Ajustes</h2>
+    <label for="vol">Volumen: <output id="vol-out" for="vol">60%</output></label>
+    <input id="vol" type="range" min="0" max="100" value="60" aria-label="range">
+    <label for="tono">Tono base: <output id="tono-out" for="tono">440 Hz</output></label>
+    <input id="tono" type="range" min="120" max="880" step="10" value="440" aria-label="range">
+  </section>
+  <p id="aviso" role="status" aria-live="polite"></p>
+</main>
+<footer><p>© 2026 Pedro Belentani · Parte del ecosistema Belentani · <a href="../index.html">Volver</a></p></footer>
+<script>
+(() => {
+  "use strict";
+  let ctx = null;
+  const vol = document.getElementById("vol");
+  const tono = document.getElementById("tono");
+  const volOut = document.getElementById("vol-out");
+  const tonoOut = document.getElementById("tono-out");
+  const aviso = document.getElementById("aviso");
+
+  const audio = () => {
+    if (!ctx) {
+      const AC = window.AudioContext || window.webkitAudioContext;
+      if (!AC) return null;
+      ctx = new AC();
+    }
+    if (ctx.state === "suspended") ctx.resume();
+    return ctx;
+  };
+
+  const gain = (c, from, to, dur) => {
+    const g = c.createGain();
+    const t = c.currentTime;
+    g.gain.setValueAtTime(from, t);
+    g.gain.exponentialRampToValueAtTime(Math.max(to, 0.0001), t + dur);
+    return g;
+  };
+
+  const osc = (c, type, freq, dur, peak) => {
+    const o = c.createOscillator();
+    o.type = type;
+    o.frequency.setValueAtTime(freq, c.currentTime);
+    o.connect(gain(c, peak, 0.0001, dur)).connect(c.destination);
+    o.start();
+    o.stop(c.currentTime + dur);
+  };
+
+  const ruido = (c, dur, peak) => {
+    const frames = Math.floor(c.sampleRate * dur);
+    const buf = c.createBuffer(1, frames, c.sampleRate);
+    const data = buf.getChannelData(0);
+    for (let i = 0; i < frames; i++) data[i] = (Math.random() * 2 - 1) * (1 - i / frames);
+    const src = c.createBufferSource();
+    src.buffer = buf;
+    const filtro = c.createBiquadFilter();
+    filtro.type = "bandpass";
+    filtro.frequency.setValueAtTime(900, c.currentTime);
+    filtro.frequency.exponentialRampToValueAtTime(2400, c.currentTime + dur);
+    src.connect(filtro).connect(gain(c, peak, 0.0001, dur)).connect(c.destination);
+    src.start();
+  };
+
+  const efectos = {
+    click(c, f, v) { osc(c, "square", f * 2, 0.04, v * 0.25); },
+    hover(c, f, v) { osc(c, "sine", f * 1.5, 0.08, v * 0.15); },
+    success(c, f, v) { osc(c, "sine", f, 0.12, v * 0.3); setTimeout(() => osc(c, "sine", f * 1.5, 0.18, v * 0.3), 90); },
+    error(c, f, v) { osc(c, "sawtooth", f * 0.5, 0.14, v * 0.25); setTimeout(() => osc(c, "sawtooth", f * 0.4, 0.2, v * 0.25), 110); },
+    whoosh(c, f, v) { ruido(c, 0.35, v * 0.5); }
+  };
+
+  document.querySelectorAll("[data-sfx]").forEach((b) => {
+    b.addEventListener("click", () => {
+      const c = audio();
+      const tipo = b.dataset.sfx;
+      if (!c) { aviso.textContent = "Tu navegador no soporta WebAudio."; return; }
+      const v = Number(vol.value) / 100;
+      efectos[tipo](c, Number(tono.value), v);
+      aviso.textContent = "Reproducido: " + tipo;
+    });
+  });
+
+  vol.addEventListener("input", () => { volOut.textContent = vol.value + "%"; });
+  tono.addEventListener("input", () => { tonoOut.textContent = tono.value + " Hz"; });
+})();
+</script>
+<!-- page-fix:1 -->
+</body>
+</html>
