@@ -22,8 +22,8 @@ async function startServer() {
 
   // API: Health check
   app.get("/api/health", (_req, res) => {
-    res.json({ 
-      status: "ok", 
+    res.json({
+      status: "ok",
       engine: "Belentani Mission Engine",
       version: "0.2.0",
       timestamp: new Date().toISOString()
@@ -93,7 +93,7 @@ except Exception as e:
   // API: Create and run mission
   app.post("/api/missions", (req, res) => {
     const { objective, urls, max_pages = 3 } = req.body;
-    
+
     if (!objective || objective.length < 3) {
       return res.status(400).json({ error: "Objective must be at least 3 characters" });
     }
@@ -131,7 +131,7 @@ print(results)
   app.get("/api/missions/:id/export/:format", (req, res) => {
     const { id, format } = req.params;
     const allowedFormats = ["csv", "json"];
-    
+
     if (!allowedFormats.includes(format)) {
       return res.status(400).json({ error: `Format must be one of: ${allowedFormats.join(", ")}` });
     }

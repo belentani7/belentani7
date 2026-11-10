@@ -99,3 +99,7 @@ The portfolio follows a **claim → evidence → status** policy. Each highlight
 [Explore the code](https://github.com/belentani7?tab=repositories)
 
 </div>
+
+
+## Producto
+Véase `plataforma/OFERTA.md`, `plataforma/precios.json`, `plataforma/ONEPAGER.md`.
