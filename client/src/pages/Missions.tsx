@@ -42,7 +42,7 @@ export default function Missions() {
 
   const createMission = async () => {
     if (!objective.trim()) return;
-    
+
     setLoading(true);
     try {
       const urlArray = urls.split("\n").filter(u => u.trim()).map(u => u.trim());

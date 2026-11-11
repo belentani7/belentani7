@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="./assets/profile-editorial-2026.svg" alt="Pedro Belentani — editorial cover: dark background with the name and the engineering-through-art thesis" width="880">
+
 # PEDRO BELENTANI
 
 ### Senior Full-Stack AI Engineer · Systems Architect · Creative Technologist
@@ -32,6 +34,13 @@ As the creator of **BELENTANI**, I bring the same architectural thinking to inte
 - **[BELENTANI Visual Engine](https://github.com/belentani7/belentani-visual-engine)** — Three.js/WebGL research and immersive scene engineering.
 
 **Evidence policy:** CI results, build artifacts, and production availability are separate checks. An unverified live experience is never presented as production-validated.
+
+## Tools and experiments
+
+- **[Living Machine](docs/living-machine/index.html)** — dependency-free browser toolkit with its own quality suite; the artwork stays inspectable in the repository files, not only in a screenshot.
+- **[BELENTANI Visual Engine](https://github.com/belentani7/belentani-visual-engine)** — Three.js and WebGL scene research, kept as an experiment until its runtime checks are published.
+
+The cover above is editorial artwork: this page is not a verified live deployment, and nothing private, archived or experimental is presented as production-ready.
 
 ## Three interconnected disciplines
 
@@ -75,6 +84,7 @@ The portfolio follows a **claim → evidence → status** policy. Each highlight
 - **Supply chain:** use least-privilege CI, dependency review, pinned releases, and provenance verification where implemented; never claim an SLSA level without supporting attestation.
 - **Operations:** separate source status, CI status, artifact integrity, and real production availability. Record incident response and rollback paths before high-impact releases.
 - **Portfolio lifecycle:** classify projects as flagship, active, experimental, or archived, with explicit verification dates rather than inferred readiness.
+- **Evidence trail:** [engineering evaluation](./docs/engineering-evidence-2026-10-29.md) · [profile history](./docs/profile-archive-2026-10-29.md). Counts and history are recorded there so this page can stay short.
 
 ## Technology
 
