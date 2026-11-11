@@ -10,7 +10,7 @@ Creative Technologist · Applied AI · Creative computing · Trust & Safety
 
 Brazilian perspective · Barcelona, Spain · English / Español / Português (BR)
 
-[Portfolio vitrine](https://belentani7.github.io/belentani7/) · [Catalogue — 115 products](https://belentani7.github.io/belentani7/catalogo.html) · [Unified audit 2026](https://belentani7.github.io/belentani7/auditoria.html) · [Artist universe](https://belentani.es) · [Contact](#contact)
+[Portfolio vitrine](https://belentani7.github.io/belentani7/) · [Catalogue — 115 products](https://belentani7.github.io/belentani7/productos.html) · [Unified audit 2026](https://belentani7.github.io/belentani7/auditoria.html) · [Artist universe](https://belentani.es) · [Contact](#contact)
 
 </div>
 
@@ -25,7 +25,7 @@ Brazilian perspective · Barcelona, Spain · English / Español / Português (BR
 
 ## A house of products, not a list of repos
 
-I run my GitHub as a **product house**: each repository that completes full fabrication — the ecosystem's development rules applied, CI green, a deployment answering HTTP 200 — earns a lit vitrine in the [portfolio window](https://belentani7.github.io/belentani7/). Everything else (115 living repositories in total) stays in the [catalogue](https://belentani7.github.io/belentani7/catalogo.html), not in the shop window. A repository is not automatically a product; **verification is the difference**, and it was re-checked against the GitHub API on 7 November 2026.
+I run my GitHub as a **product house**: each repository that completes full fabrication — the ecosystem's development rules applied, CI green, a deployment answering HTTP 200 — earns a lit vitrine in the [portfolio window](https://belentani7.github.io/belentani7/). Everything else (115 living repositories in total) stays in the [catalogue](https://belentani7.github.io/belentani7/productos.html), not in the shop window. A repository is not automatically a product; **verification is the difference**, and it was re-checked against the GitHub API on 7 November 2026.
 
 My path runs through multilingual customer operations and Trust & Safety into product engineering, open learning and audiovisual art: **understand the problem, choose a proportionate architecture, build useful interactions, make limitations visible.** Technical breadth supports delivery; it never replaces real verification.
 
@@ -101,6 +101,13 @@ AI-assisted development is part of the workflow. **Commit volume does not substi
 - **2016–2018** — multilingual customer support (Sellbytel / Inditex-related work).
 - **2018–2025** — community and content moderation (TELUS / CCC-related work): human judgment, policy interpretation, escalation.
 - **2026** — independent product engineering: this house. Public histories document iterations, not verified client outcomes.
+
+## Tools and experiments
+
+- **[Living Machine](docs/living-machine/index.html)** - dependency-free browser toolkit (captions, CSV, media, PDF and audio helpers) with its own quality suite; every file stays inspectable in the repository.
+- **[Production Studio](docs/living-machine/studio.html)** - local-first batch conversion, subtitles, CV readability, storyboard and palette tools, localized in English, Spanish and Portuguese.
+
+These are experiments kept in the repository, not a verified live deployment: nothing is uploaded and no remote processing endpoint is claimed.
 
 ## Evidence
 

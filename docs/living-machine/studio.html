@@ -1,113 +1,32 @@
 <!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BELENTANI STUDIO / Free Browser Tools</title>
+    <meta charset="UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#050407">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; media-src 'self' blob:; connect-src 'none'; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
 <meta name="description" content="BELENTANI Studio: privacy-first image batch conversion, subtitles, CV readability, visual storytelling and palette extraction.">
-<meta name="generator" content="repo-superpowers-audit-v1">
-<meta property="og:title" content="BELENTANI STUDIO / Free Browser Tools">
-<meta property="og:description" content="BELENTANI Studio: privacy-first image batch conversion, subtitles, CV readability, visual storytelling and palette extraction.">
-<meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0a09'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%2383b3d5'/%3E%3C/svg%3E">
-<style>
-:root{--bg:#0b0a09;--bg2:#131110;--ink:#f4efe7;--dim:#a89f92;--accent:#e0a35c;
---accent2:#7fa88b;--line:rgba(244,239,231,.14);--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
---sans:ui-sans-serif,"Segoe UI",Inter,system-ui,-apple-system,sans-serif;
---mono:ui-monospace,"Cascadia Mono",Consolas,monospace;--measure:62ch;--radius:14px}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.65;
--webkit-font-smoothing:antialiased}
-.wrap{max-width:1080px;margin:0 auto;padding:0 clamp(18px,4vw,40px);position:relative;z-index:1}
-a{color:var(--accent)}
-a:focus-visible,button:focus-visible{outline:3px solid var(--accent2);outline-offset:3px;border-radius:6px}
-.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#12100e;padding:10px 16px;z-index:9}
-.skip:focus{left:12px;top:12px}
-header.site{border-bottom:1px solid var(--line);padding:22px 0;display:flex;gap:18px;
-align-items:baseline;justify-content:space-between;flex-wrap:wrap}
-.brand{font-family:var(--serif);font-size:1.05rem;letter-spacing:.01em}
-.brand span{color:var(--dim)}
-nav.site{display:flex;gap:18px;flex-wrap:wrap;font-family:var(--mono);font-size:.72rem;
-letter-spacing:.14em;text-transform:uppercase}
-nav.site a{color:var(--dim);text-decoration:none}
-nav.site a:hover,nav.site a[aria-current=page]{color:var(--ink)}
-main{padding:clamp(48px,9vh,104px) 0}
-.eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;
-color:var(--accent);margin:0 0 18px}
-h1{font-family:var(--serif);font-size:clamp(2.4rem,7vw,5.2rem);line-height:.95;
-letter-spacing:-.03em;margin:0 0 24px;font-weight:500;text-wrap:balance}
-h2{font-family:var(--serif);font-size:clamp(1.4rem,3vw,2.1rem);line-height:1.15;
-letter-spacing:-.02em;margin:64px 0 18px;font-weight:500}
-h3{font-size:1.02rem;margin:28px 0 10px;letter-spacing:-.01em}
-p,li{max-width:var(--measure);color:var(--ink)}
-.lead{font-size:clamp(1.05rem,2vw,1.28rem);color:var(--dim);max-width:56ch}
-hr{border:0;border-top:1px solid var(--line);margin:clamp(40px,8vh,80px) 0}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;
-background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin:32px 0}
-.cell{background:var(--bg2);padding:22px 20px}
-.cell h3{margin-top:0}
-.cell p{font-size:.9rem;color:var(--dim);margin:0}
-code,kbd{font-family:var(--mono);font-size:.86em;background:rgba(244,239,231,.07);
-padding:2px 6px;border-radius:5px}
-pre{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);
-padding:18px;overflow:auto;max-width:100%}
-pre code{background:none;padding:0}
-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:.92rem}
-th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
-th{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
-.pill{display:inline-block;font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;
-text-transform:uppercase;border:1px solid var(--line);color:var(--dim);padding:3px 9px;border-radius:999px}
-footer.site{border-top:1px solid var(--line);padding:28px 0 44px;color:var(--dim);font-size:.8rem}
-.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
-.reveal.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}
-.reveal{opacity:1;transform:none;transition:none}}
-::selection{background:var(--accent);color:#12100e}
-.webgl-canvas{width:100%;height:400px;background:var(--bg2);border:1px solid var(--line);
-border-radius:var(--radius);margin:24px 0;display:block}
-.superpowers-badge{display:inline-block;font-family:var(--mono);font-size:.65rem;
-letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--accent2);
-color:var(--accent2);padding:4px 10px;border-radius:999px;margin:10px 0}
-</style>
+<title>BELENTANI STUDIO / Free Browser Tools</title>
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./studio-icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./studio.css">
+<script src="./studio-core.js" defer></script>
+<script src="./pdf-core.js" defer></script>
+<script src="./audio-core.js" defer></script>
+<script src="./studio.js" defer></script>
+<script src="./studio-i18n.js" defer></script>
+<script src="./video-sheet.js" defer></script>
 </head>
 <body>
-<a class="skip" href="#contenido">Saltar al contenido</a>
-<header class="site"><div class="wrap" style="display:flex;justify-content:space-between;align-items:baseline;gap:18px;flex-wrap:wrap">
-<div class="brand">living-machine <span>· ecosistema Belentani · WebGL online</span></div>
-<nav class="site" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="docs.html">Documentación</a><a href="accesibilidad.html">Accesibilidad</a><a href="privacidad.html">Privacidad</a><a href="404.html">404</a></nav>
-</div></header>
-<main id="contenido"><div class="wrap">
-<a class="skip" href="#contenido">Saltar al contenido</a>
-<header class="site"><div class="wrap" style="display:flex;justify-content:space-between;align-items:baseline;gap:18px;flex-wrap:wrap">
-<div class="brand">living-machine <span>· ecosistema Belentani · WebGL online</span></div>
-<nav class="site" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="docs.html">Documentación</a><a href="accesibilidad.html">Accesibilidad</a><a href="privacidad.html">Privacidad</a><a href="404.html">404</a></nav>
-</div></header>
-<main id="contenido"><div class="wrap">
-<a class="skip" href="#contenido">Saltar al contenido</a>
-<header class="site"><div class="wrap" style="display:flex;justify-content:space-between;align-items:baseline;gap:18px;flex-wrap:wrap">
-<div class="brand">living-machine <span>· ecosistema Belentani · WebGL online</span></div>
-<nav class="site" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="docs.html">Documentación</a><a href="accesibilidad.html">Accesibilidad</a><a href="privacidad.html">Privacidad</a><a href="404.html">404</a></nav>
-</div></header>
-<main id="contenido"><div class="wrap">
-<a class="skip" href="#contenido">Saltar al contenido</a>
-<header class="site"><div class="wrap" style="display:flex;justify-content:space-between;align-items:baseline;gap:18px;flex-wrap:wrap">
-<div class="brand">living-machine <span>· ecosistema Belentani · WebGL online</span></div>
-<nav class="site" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="docs.html">Documentación</a><a href="accesibilidad.html">Accesibilidad</a><a href="privacidad.html">Privacidad</a><a href="404.html">404</a></nav>
-</div></header>
-<main id="contenido"><div class="wrap">
-<a class="skip" href="#contenido">Saltar al contenido</a>
-<header class="site"><div class="wrap" style="display:flex;justify-content:space-between;align-items:baseline;gap:18px;flex-wrap:wrap">
-<div class="brand">living-machine <span>· ecosistema Belentani · WebGL online</span></div>
-<nav class="site" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="docs.html">Documentación</a><a href="accesibilidad.html">Accesibilidad</a><a href="privacidad.html">Privacidad</a><a href="404.html">404</a></nav>
-</div></header>
-<main id="contenido"><div class="wrap">
 <a class="skip" href="#workspace">Ir al contenido</a>
 <div class="noise" aria-hidden="true"></div>
 <div class="bloom" aria-hidden="true"></div>
 <header class="bar">
   <a class="wordmark" href="./index.html"><span class="sigil">B</span><span>BELENTANI <em>/ STUDIO</em></span></a>
-  <div class="bar-links"><select class="lang-select" id="interfaceLanguage" aria-label="Interface language"><option value="en">EN</option><option value="es">ES</option><option value="pt">PT</option></select><span class="ready" data-i18n="engine">● LOCAL ENGINE</span><a href="./index.html">Living Machine ↗</a><a  target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+  <div class="bar-links"><select class="lang-select" id="interfaceLanguage" aria-label="Interface language"><option value="en">EN</option><option value="es">ES</option><option value="pt">PT</option></select><span class="ready" data-i18n="engine">● LOCAL ENGINE</span><a href="./index.html">Living Machine ↗</a><a href="https://github.com/belentani7" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
 </header>
 <div class="layout">
   <aside class="sidebar" aria-label="Herramientas">
@@ -122,7 +41,7 @@ color:var(--accent2);padding:4px 10px;border-radius:999px;margin:10px 0}
       <button data-tab="audio"><span>♫</span> <span data-i18n="navAudio">Audio to WAV studio</span> <small>07</small></button>
       <button data-tab="video"><span>▦</span> <span data-i18n="navVideo">Video contact sheet</span> <small>08</small></button>
     </nav>
-    <div class="sidebar-bottom"><span>NO ACCOUNT</span><span>NO FILE UPLOAD</span><span>NO BACKEND API</span><p>Built to demonstrate useful engineering in public, with explicit operating boundaries.</p><a >belentani.es ↗</a></div>
+    <div class="sidebar-bottom"><span>NO ACCOUNT</span><span>NO FILE UPLOAD</span><span>NO BACKEND API</span><p>Built to demonstrate useful engineering in public, with explicit operating boundaries.</p><a href="https://belentani.es">belentani.es ↗</a></div>
   </aside>
   <main id="workspace" tabindex="-1">
     <div class="masthead"><div class="eyebrow">UTILITY SURFACE / LOCAL FIRST</div><h1 data-i18n="headline">Tools that<br><i>earn their place.</i></h1><p data-i18n="intro">Pixel-precise glass, practical software and honest limits. Your files stay in your browser. Each utility is designed as a self-contained operation, with no registration or third-party file service.</p><div class="meta"><span data-i18n="sevenTools">8 REAL TOOLS</span><span>FILES PROCESSED LOCALLY</span><span>ES · EN · PT CONTEXT</span></div></div>
@@ -130,14 +49,14 @@ color:var(--accent2);padding:4px 10px;border-radius:999px;margin:10px 0}
     <section class="panel active" id="tab-batch" aria-labelledby="batchTitle">
       <div class="panel-head"><div><div class="eyebrow">01 / IMAGING</div><h2 id="batchTitle" data-i18n="batchTitle">Batch image converter</h2><p data-i18n="batchDesc">Convert up to 20 local images into PNG, JPEG or WebP. Resize with aspect ratio preserved. Download individually or as a standards-compatible ZIP.</p></div><div class="mark">◩</div></div>
       <div class="drop" id="imageDrop">
-        <input id="batchFiles" type="file" accept="image/png,image/jpeg,image/webp,image/avif,image/bmp,image/gif" multiple aria-describedby="batchLimits" aria-label="file">
+        <input id="batchFiles" type="file" accept="image/png,image/jpeg,image/webp,image/avif,image/bmp,image/gif" multiple aria-describedby="batchLimits">
         <span class="drop-emblem">＋</span>
         <strong>Drop images here or choose files</strong>
         <small id="batchLimits">20 files maximum · 20 MB each · 100 MB combined · 24 MP output cap</small>
       </div>
       <div class="formline">
         <div><label for="batchFormat">Output format</label><select id="batchFormat"><option value="image/webp">WebP</option><option value="image/jpeg">JPEG</option><option value="image/png">PNG</option></select></div>
-        <div><label for="batchWidth">Maximum width</label><input id="batchWidth" type="number" min="1" max="12000" placeholder="Original size" aria-label="Original size"></div>
+        <div><label for="batchWidth">Maximum width</label><input id="batchWidth" type="number" min="1" max="12000" placeholder="Original size"></div>
         <div><label for="batchQuality">Quality</label><select id="batchQuality"><option value=".95">95% · High</option><option value=".85" selected>85% · Balanced</option><option value=".7">70% · Compact</option><option value=".5">50% · Small</option></select></div>
       </div>
       <div id="batchList" class="filelist" aria-live="polite"></div>
@@ -147,14 +66,14 @@ color:var(--accent2);padding:4px 10px;border-radius:999px;margin:10px 0}
 
     <section class="panel" id="tab-subtitles" aria-labelledby="subtitleTitle" hidden>
       <div class="panel-head"><div><div class="eyebrow">02 / VIDEO POST-PRODUCTION</div><h2 id="subtitleTitle" data-i18n="subtitleTitle">Subtitle time studio</h2><p data-i18n="subtitleDesc">Convert SRT/VTT, shift timestamps and export clean text. The tool processes existing captions — it does not invent speech recognition for local video files.</p></div><div class="mark">≋</div></div>
-      <label for="subtitleFile">Subtitle file (optional)</label><input id="subtitleFile" type="file" accept=".srt,.vtt,.txt,text/plain" aria-label="file">
+      <label for="subtitleFile">Subtitle file (optional)</label><input id="subtitleFile" type="file" accept=".srt,.vtt,.txt,text/plain">
       <label for="subtitleInput">Paste captions</label><textarea id="subtitleInput" rows="11" spellcheck="false" placeholder="1&#10;00:00:01,000 --> 00:00:03,000&#10;First sentence"></textarea>
-      <div class="formline"><div><label for="subtitleShift">Shift in milliseconds (+ / −)</label><input id="subtitleShift" type="number" min="-86400000" max="86400000" value="0" aria-label="number"></div><div><label for="subtitleFormat">Export format</label><select id="subtitleFormat"><option value="srt">SRT</option><option value="vtt">VTT</option><option value="txt">TXT transcript</option></select></div></div>
+      <div class="formline"><div><label for="subtitleShift">Shift in milliseconds (+ / −)</label><input id="subtitleShift" type="number" min="-86400000" max="86400000" value="0"></div><div><label for="subtitleFormat">Export format</label><select id="subtitleFormat"><option value="srt">SRT</option><option value="vtt">VTT</option><option value="txt">TXT transcript</option></select></div></div>
       <div class="caption-generator" aria-label="Text to draft subtitles">
         <div class="eyebrow">TEXT → TIMED DRAFT</div>
         <p class="hint">No audio recognition is performed. This creates estimated cue timings from a written script; correct the timings against your actual recording.</p>
-        <div class="formline"><div><label for="captionWpm">Estimated words per minute</label><input id="captionWpm" type="number" min="80" max="280" value="165" aria-label="number"></div>
-        <div><label for="captionStart">Start at second</label><input id="captionStart" type="number" min="0" max="86400" step="0.1" value="0" aria-label="number"></div></div>
+        <div class="formline"><div><label for="captionWpm">Estimated words per minute</label><input id="captionWpm" type="number" min="80" max="280" value="165"></div>
+        <div><label for="captionStart">Start at second</label><input id="captionStart" type="number" min="0" max="86400" step="0.1" value="0"></div></div>
         <button class="secondary" id="captionDraft">Generate editable timed draft ↗</button>
       </div>
       <div class="actionline"><button class="cta" id="subtitleGo" data-i18n="subtitleGo">Convert & export ↗</button><button class="secondary" id="subtitlePreview" data-i18n="subtitlePreview">Preview shifted text</button></div>
@@ -171,7 +90,7 @@ color:var(--accent2);padding:4px 10px;border-radius:999px;margin:10px 0}
 
     <section class="panel" id="tab-storyboard" aria-labelledby="storyTitle" hidden>
       <div class="panel-head"><div><div class="eyebrow">04 / CREATIVE PRODUCTION</div><h2 id="storyTitle" data-i18n="storyTitle">Storyboard architect</h2><p data-i18n="storyDesc">Plan and export real shot lists for reels, music videos and creative campaigns: duration, camera, movement, visual intention and sound.</p></div><div class="mark">◇</div></div>
-      <div class="formline"><div><label for="filmTitle">Production title</label><input id="filmTitle" maxlength="100" placeholder="Judas — Midnight Sequence" aria-label="Judas — Midnight Sequence"></div><div><label for="filmTempo">Project tempo (BPM, optional)</label><input id="filmTempo" type="number" min="1" max="320" placeholder="128" aria-label="128"></div></div>
+      <div class="formline"><div><label for="filmTitle">Production title</label><input id="filmTitle" maxlength="100" placeholder="Judas — Midnight Sequence"></div><div><label for="filmTempo">Project tempo (BPM, optional)</label><input id="filmTempo" type="number" min="1" max="320" placeholder="128"></div></div>
       <div class="table-scroll"><table><thead><tr><th>Shot</th><th>Seconds</th><th>Camera</th><th>Movement</th><th>Visual</th><th>Audio</th><th>Notes</th><th></th></tr></thead><tbody id="shots"></tbody></table></div>
       <div class="actionline"><button class="secondary" id="addShot" data-i18n="addShot">＋ Add shot</button><button class="cta" id="exportShots" data-i18n="exportShots">Export CSV ↗</button><button class="secondary" id="exportShotsJson" data-i18n="exportShotsJson">Export JSON</button></div>
       <div id="storyResult" class="result" role="status" aria-live="polite">A new storyboard is ready.</div>
@@ -179,7 +98,7 @@ color:var(--accent2);padding:4px 10px;border-radius:999px;margin:10px 0}
 
     <section class="panel" id="tab-palette" aria-labelledby="paletteTitle" hidden>
       <div class="panel-head"><div><div class="eyebrow">05 / ART DIRECTION</div><h2 id="paletteTitle" data-i18n="paletteTitle">Image color sampler</h2><p data-i18n="paletteDesc">Derive a compact palette from the pixels in your own image. Sampled colors are approximate; export swatches as reusable CSS variables.</p></div><div class="mark">◉</div></div>
-      <label for="paletteImage">Local image file</label><input id="paletteImage" type="file" accept="image/*" aria-label="file">
+      <label for="paletteImage">Local image file</label><input id="paletteImage" type="file" accept="image/*">
       <div class="image-preview"><canvas id="paletteCanvas" width="420" height="240" aria-label="Color source image preview"></canvas></div>
       <div class="actionline"><button class="cta" id="paletteGo" data-i18n="paletteGo">Extract palette ↗</button><button class="secondary" id="paletteExport" data-i18n="paletteExport">Export CSS</button></div>
       <div id="swatches" class="swatches" aria-live="polite"></div>
@@ -189,7 +108,7 @@ color:var(--accent2);padding:4px 10px;border-radius:999px;margin:10px 0}
     <section class="panel" id="tab-pdf" aria-labelledby="pdfTitle" hidden>
       <div class="panel-head"><div><div class="eyebrow">06 / DOCUMENT PROCESSING</div><h2 id="pdfTitle" data-i18n="pdfTitle">Images into PDF</h2><p data-i18n="pdfDesc">Combine photographs and screenshots into an A4 PDF without sending them to a server. Every input is rasterized locally as JPEG, removing source metadata. One page per image, with aspect ratio preserved.</p></div><div class="mark">▤</div></div>
       <label for="pdfFiles">Select 1–25 local images</label>
-      <input type="file" id="pdfFiles" accept="image/*" multiple aria-label="file">
+      <input type="file" id="pdfFiles" accept="image/*" multiple>
       <div class="formline"><div><label for="pdfQuality">JPEG fidelity</label><select id="pdfQuality"><option value=".92">High — 92%</option><option value=".80" selected>Balanced — 80%</option><option value=".65">Small — 65%</option></select></div><div><label for="pdfMargin">Page margins in points</label><select id="pdfMargin"><option value="0">Edge to edge</option><option value="24" selected>Standard</option><option value="48">Wide</option></select></div></div>
       <div class="actionline"><button id="pdfGo" class="cta" data-i18n="pdfGo">Compose & download PDF ↗</button></div>
       <div id="pdfResult" class="result" role="status" aria-live="polite">No images selected.</div>
@@ -197,7 +116,7 @@ color:var(--accent2);padding:4px 10px;border-radius:999px;margin:10px 0}
 
     <section class="panel" id="tab-audio" aria-labelledby="audioTitle" hidden>
       <div class="panel-head"><div><div class="eyebrow">07 / AUDIO PROCESSING</div><h2 id="audioTitle" data-i18n="audioTitle">Audio to WAV</h2><p data-i18n="audioDesc">Decode compatible local audio formats, inspect duration, peak and RMS, then export 16-bit mono or stereo PCM WAV. Decoding happens in the browser's Web Audio engine.</p></div><div class="mark">♫</div></div>
-      <label for="audioFile">Choose audio file</label><input id="audioFile" type="file" accept="audio/*" aria-label="file">
+      <label for="audioFile">Choose audio file</label><input id="audioFile" type="file" accept="audio/*">
       <div class="formline"><div><label for="audioChannels">Channels</label><select id="audioChannels"><option value="original">Keep original (up to stereo)</option><option value="mono">Mix to mono</option></select></div><div><label for="audioNormalize">Volume processing</label><select id="audioNormalize"><option value="no">Keep original peaks</option><option value="yes">Peak normalize (up to 16×)</option></select></div></div>
       <div class="image-preview"><canvas id="waveCanvas" width="760" height="170" role="img" aria-label="Waveform visual representation"></canvas></div>
       <div class="actionline"><button id="audioGo" class="cta" data-i18n="audioGo">Decode & download WAV ↗</button></div>
@@ -206,177 +125,16 @@ color:var(--accent2);padding:4px 10px;border-radius:999px;margin:10px 0}
 
     <section class="panel" id="tab-video" aria-labelledby="videoTitle" hidden>
       <div class="panel-head"><div><div class="eyebrow">08 / VIDEO TOOLS</div><h2 id="videoTitle" data-i18n="videoTitle">Video contact sheet</h2><p data-i18n="videoDesc">Extract evenly spaced still frames from your own local video and combine them into a labelled PNG contact sheet. Codec support depends on your browser; no media is uploaded.</p></div><div class="mark">▦</div></div>
-      <label for="videoSheetFile" data-i18n="videoFileLabel">Local video (max 500 MB)</label><input id="videoSheetFile" type="file" accept="video/*" aria-label="file">
+      <label for="videoSheetFile" data-i18n="videoFileLabel">Local video (max 500 MB)</label><input id="videoSheetFile" type="file" accept="video/*">
       <div class="formline"><div><label for="videoSheetCount" data-i18n="videoCountLabel">Frames to sample</label><select id="videoSheetCount"><option value="4">4 (2 × 2)</option><option value="9" selected>9 (3 × 3)</option><option value="16">16 (4 × 4)</option></select></div></div>
       <div class="actionline"><button id="videoSheetGo" class="cta" data-i18n="videoGo">Build contact sheet ↗</button></div>
       <div id="videoSheetResult" class="result" role="status" aria-live="polite">Choose a video to export timed stills.</div>
     </section>
 
-    <section class="bottom-note"><p><a href="./diagnostics.html" style="color:#ffd8e4">Run local system diagnostics ↗</a> — inspect browser capabilities and core utility checks without uploading a file.</p><div class="eyebrow">EVIDENCE / NOT EMPTY PROMISES</div><p>All implemented utilities use native browser APIs and a small, auditable JavaScript core. Results vary with supported codecs, memory limits and browser permissions. No social-platform restrictions are bypassed.</p><a  target="_blank" rel="noopener noreferrer">Review the implementation ↗</a></section>
+    <section class="bottom-note"><p><a href="./diagnostics.html" style="color:#ffd8e4">Run local system diagnostics ↗</a> — inspect browser capabilities and core utility checks without uploading a file.</p><div class="eyebrow">EVIDENCE / NOT EMPTY PROMISES</div><p>All implemented utilities use native browser APIs and a small, auditable JavaScript core. Results vary with supported codecs, memory limits and browser permissions. No social-platform restrictions are bypassed.</p><a href="https://github.com/belentani7/belentani7" target="_blank" rel="noopener noreferrer">Review the implementation ↗</a></section>
   </main>
 </div>
 <footer><span>© 2026 Pedro Belentani — Engineering + Human Context</span><span>STUDIO / LOCAL-BY-DESIGN / v2</span></footer>
-</div></main>
-<footer class="site"><div class="wrap">
-<p>living-machine · WebGL listo para servir online · <a href="index.html">Inicio</a> · <a href="accesibilidad.html">Accesibilidad</a> · <a href="privacidad.html">Privacidad</a></p>
-</div></footer>
-<script>
-(function(){
-  var canvas = document.createElement('canvas');
-  canvas.className = 'webgl-canvas';
-  var container = document.getElementById('contenido');
-  if(container){ container.appendChild(canvas); }
-  try{
-    var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
-    if(!gl){ canvas.innerHTML = '<p style="color:var(--dim);font-family:var(--mono);padding:12px">WebGL no disponible en este navegador.</p>'; return; }
-    gl.clearColor(0.047,0.043,0.039,1);
-    gl.clear(gl.COLOR_BUFFER_BIT);
-    var vs = gl.createShader(gl.VERTEX_SHADER);
-    gl.shaderSource(vs, 'attribute vec2 p;void main(){gl_Position=vec4(p,0.0,1.0);}');
-    gl.compileShader(vs);
-    var fs = gl.createShader(gl.FRAGMENT_SHADER);
-    gl.shaderSource(fs, 'precision mediump float;uniform vec4 c;void main(){gl_FragColor=c;}');
-    gl.compileShader(fs);
-    var prog = gl.createProgram();
-    gl.attachShader(prog,vs); gl.attachShader(prog,fs); gl.linkProgram(prog);
-    gl.useProgram(prog);
-    var loc = gl.getUniformLocation(prog,'c');
-    gl.uniform4f(loc, 0.549, 0.659, 0.545, 1.0);
-    var buf = gl.createBuffer();
-    gl.bindBuffer(gl.ARRAY_BUFFER,buf);
-    gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
-    var attr = gl.getAttribLocation(prog,'p');
-    gl.enableVertexAttribArray(attr);
-    gl.vertexAttribPointer(attr,2,gl.FLOAT,false,0,0);
-    gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
-  }catch(e){ console.log('WebGL init:', e.message); }
-})();
-</script>
-</div></main>
-<footer class="site"><div class="wrap">
-<p>living-machine · WebGL listo para servir online · <a href="index.html">Inicio</a> · <a href="accesibilidad.html">Accesibilidad</a> · <a href="privacidad.html">Privacidad</a></p>
-</div></footer>
-<script>
-(function(){
-  var canvas = document.createElement('canvas');
-  canvas.className = 'webgl-canvas';
-  var container = document.getElementById('contenido');
-  if(container){ container.appendChild(canvas); }
-  try{
-    var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
-    if(!gl){ canvas.innerHTML = '<p style="color:var(--dim);font-family:var(--mono);padding:12px">WebGL no disponible en este navegador.</p>'; return; }
-    gl.clearColor(0.047,0.043,0.039,1);
-    gl.clear(gl.COLOR_BUFFER_BIT);
-    var vs = gl.createShader(gl.VERTEX_SHADER);
-    gl.shaderSource(vs, 'attribute vec2 p;void main(){gl_Position=vec4(p,0.0,1.0);}');
-    gl.compileShader(vs);
-    var fs = gl.createShader(gl.FRAGMENT_SHADER);
-    gl.shaderSource(fs, 'precision mediump float;uniform vec4 c;void main(){gl_FragColor=c;}');
-    gl.compileShader(fs);
-    var prog = gl.createProgram();
-    gl.attachShader(prog,vs); gl.attachShader(prog,fs); gl.linkProgram(prog);
-    gl.useProgram(prog);
-    var loc = gl.getUniformLocation(prog,'c');
-    gl.uniform4f(loc, 0.549, 0.659, 0.545, 1.0);
-    var buf = gl.createBuffer();
-    gl.bindBuffer(gl.ARRAY_BUFFER,buf);
-    gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
-    var attr = gl.getAttribLocation(prog,'p');
-    gl.enableVertexAttribArray(attr);
-    gl.vertexAttribPointer(attr,2,gl.FLOAT,false,0,0);
-    gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
-  }catch(e){ console.log('WebGL init:', e.message); }
-})();
-</script>
-</div></main>
-<footer class="site"><div class="wrap">
-<p>living-machine · WebGL listo para servir online · <a href="index.html">Inicio</a> · <a href="accesibilidad.html">Accesibilidad</a> · <a href="privacidad.html">Privacidad</a></p>
-</div></footer>
-<script>
-(function(){
-  var canvas = document.createElement('canvas');
-  canvas.className = 'webgl-canvas';
-  var container = document.getElementById('contenido');
-  if(container){ container.appendChild(canvas); }
-  try{
-    var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
-    if(!gl){ canvas.innerHTML = '<p style="color:var(--dim);font-family:var(--mono);padding:12px">WebGL no disponible en este navegador.</p>'; return; }
-    gl.clearColor(0.047,0.043,0.039,1);
-    gl.clear(gl.COLOR_BUFFER_BIT);
-    var vs = gl.createShader(gl.VERTEX_SHADER);
-    gl.shaderSource(vs, 'attribute vec2 p;void main(){gl_Position=vec4(p,0.0,1.0);}');
-    gl.compileShader(vs);
-    var fs = gl.createShader(gl.FRAGMENT_SHADER);
-    gl.shaderSource(fs, 'precision mediump float;uniform vec4 c;void main(){gl_FragColor=c;}');
-    gl.compileShader(fs);
-    var prog = gl.createProgram();
-    gl.attachShader(prog,vs); gl.attachShader(prog,fs); gl.linkProgram(prog);
-    gl.useProgram(prog);
-    var loc = gl.getUniformLocation(prog,'c');
-    gl.uniform4f(loc, 0.549, 0.659, 0.545, 1.0);
-    var buf = gl.createBuffer();
-    gl.bindBuffer(gl.ARRAY_BUFFER,buf);
-    gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
-    var attr = gl.getAttribLocation(prog,'p');
-    gl.enableVertexAttribArray(attr);
-    gl.vertexAttribPointer(attr,2,gl.FLOAT,false,0,0);
-    gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
-  }catch(e){ console.log('WebGL init:', e.message); }
-})();
-</script>
-</div></main>
-<footer class="site"><div class="wrap">
-<p>living-machine · WebGL listo para servir online · <a href="index.html">Inicio</a> · <a href="accesibilidad.html">Accesibilidad</a> · <a href="privacidad.html">Privacidad</a></p>
-</div></footer>
-<script>
-(function(){
-  var canvas = document.createElement('canvas');
-  canvas.className = 'webgl-canvas';
-  var container = document.getElementById('contenido');
-  if(container){ container.appendChild(canvas); }
-  try{
-    var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
-    if(!gl){ canvas.innerHTML = '<p style="color:var(--dim);font-family:var(--mono);padding:12px">WebGL no disponible en este navegador.</p>'; return; }
-    gl.clearColor(0.047,0.043,0.039,1);
-    gl.clear(gl.COLOR_BUFFER_BIT);
-    var vs = gl.createShader(gl.VERTEX_SHADER);
-    gl.shaderSource(vs, 'attribute vec2 p;void main(){gl_Position=vec4(p,0.0,1.0);}');
-    gl.compileShader(vs);
-    var fs = gl.createShader(gl.FRAGMENT_SHADER);
-    gl.shaderSource(fs, 'precision mediump float;uniform vec4 c;void main(){gl_FragColor=c;}');
-    gl.compileShader(fs);
-    var prog = gl.createProgram();
-    gl.attachShader(prog,vs); gl.attachShader(prog,fs); gl.linkProgram(prog);
-    gl.useProgram(prog);
-    var loc = gl.getUniformLocation(prog,'c');
-    gl.uniform4f(loc, 0.549, 0.659, 0.545, 1.0);
-    var buf = gl.createBuffer();
-    gl.bindBuffer(gl.ARRAY_BUFFER,buf);
-    gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
-    var attr = gl.getAttribLocation(prog,'p');
-    gl.enableVertexAttribArray(attr);
-    gl.vertexAttribPointer(attr,2,gl.FLOAT,false,0,0);
-    gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
-  }catch(e){ console.log('WebGL init:', e.message); }
-})();
-</script>
-</div></main>
-<footer class="site"><div class="wrap">
-<p>living-machine · WebGL listo para servir online · <a href="index.html">Inicio</a> · <a href="accesibilidad.html">Accesibilidad</a> · <a href="privacidad.html">Privacidad</a></p>
-</div></footer>
-<script>
-(function(){
-  var canvas = document.createElement('canvas');
-  canvas.className = 'webgl-canvas';
-  var container = document.getElementById('contenido');
-  if(container){ container.appendChild(canvas); }
-  try{
-    var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
-    if(!gl){ canvas.innerHTML = '<p style="color:var(--dim);font-family:var(--mono);padding:12px">WebGL no disponible.</p>'; return; }
-    gl.clearColor(0.047,0.043,0.039,1);
-    gl.clear(gl.COLOR_BUFFER_BIT);
-  }catch(e){ console.log('WebGL:', e.message); }
-})();
-</script>
 </body>
-</html>
+</html><style>
+    :focus-visible{outline:2px solid #ff073a;outline-offset:3px;border-radius:4px}</style>
