@@ -42,3 +42,7 @@ El renderer no tiene acceso directo a Node.js. El proceso principal valida rutas
 ## Licencia
 
 Bellentani se distribuye bajo MIT. Consulta `SECURITY.md` para reportar vulnerabilidades y `CONTRIBUTING.md` para cambios de código.
+
+
+## Producto
+Véase `plataforma/OFERTA.md`.

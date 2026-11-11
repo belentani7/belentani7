@@ -42,3 +42,7 @@ docker compose up --build
 ```
 
 Los datos se conservan en `engine/data`. La interfaz Electron/Web no participa en la ejecución del engine.
+
+
+## Producto
+Véase `plataforma/OFERTA.md`.
