@@ -5,145 +5,103 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Catálogo — Belentani · 115 productos</title>
 <meta name="description" content="Catálogo completo del ecosistema Belentani: 115 repositorios vivos con búsqueda y filtros. 13 de ellos verificados en producción (CI verde + deploy vivo).">
-<meta name="theme-color" content="#0C0B10">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230C0B10'/%3E%3Cpath d='M16 6 L24 16 L16 26 L8 16 Z' fill='none' stroke='%23D9B36C' stroke-width='1.6'/%3E%3Ccircle cx='16' cy='16' r='2.4' fill='%23D9B36C'/%3E%3C/svg%3E">
+<meta name="generator" content="repo-superpowers-audit-v1">
+<meta property="og:title" content="Catálogo — Belentani · 115 productos">
+<meta property="og:description" content="Catálogo completo del ecosistema Belentani: 115 repositorios vivos con búsqueda y filtros. 13 de ellos verificados en producción (CI verde + deploy vivo).">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0a09'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%2346b42b'/%3E%3C/svg%3E">
 <style>
-:root{
-  --tinta:#0C0B10; --tinta2:#12111A; --tinta3:#181722;
-  --marfil:#F1EAD9; --marfil2:#C9C1AE; --marfil3:#8F887A;
-  --champan:#D9B36C; --champan-osc:#A8853F; --champan-borde:rgba(217,179,108,.26);
-  --serif:Georgia,'Times New Roman',Times,serif;
-  --sans:-apple-system,'Segoe UI',system-ui,'Helvetica Neue',sans-serif;
-  --mono:'Cascadia Code','JetBrains Mono',Consolas,monospace;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-  background:var(--tinta); color:var(--marfil);
-  font-family:var(--sans); font-size:17px; line-height:1.7;
-  -webkit-font-smoothing:antialiased;
-}
-::selection{background:var(--champan); color:var(--tinta)}
-:focus-visible{outline:2px solid var(--champan); outline-offset:3px; border-radius:2px}
-::-webkit-scrollbar{width:11px}
-::-webkit-scrollbar-track{background:var(--tinta)}
-::-webkit-scrollbar-thumb{background:#2A2836;border-radius:6px;border:2px solid var(--tinta)}
-::-webkit-scrollbar-thumb:hover{background:var(--champan-osc)}
-a{color:inherit}
-
-header{
-  position:sticky; top:0; z-index:40;
-  display:flex; align-items:center; justify-content:space-between;
-  padding:16px clamp(20px,5vw,64px);
-  background:rgba(12,11,16,.94); backdrop-filter:blur(8px);
-  border-bottom:1px solid rgba(217,179,108,.14);
-}
-.marca{display:flex; align-items:center; gap:11px; text-decoration:none}
-.marca b{font-family:var(--serif); font-weight:400; letter-spacing:.34em; font-size:.82rem; text-transform:uppercase}
-nav{display:flex; gap:clamp(12px,3vw,30px)}
-nav a{text-decoration:none; font-size:.86rem; color:var(--marfil2); transition:color .3s}
-nav a:hover{color:var(--champan)}
-
-.cabecera{padding:clamp(48px,8vh,90px) clamp(20px,6vw,88px) 30px; max-width:1280px}
-.cabecera h1{
-  font-family:var(--serif); font-weight:400;
-  font-size:clamp(2rem,4.4vw,3.4rem); line-height:1.08; letter-spacing:-.02em;
-  max-width:18ch; margin-bottom:14px;
-}
-.cabecera h1 em{font-style:italic; color:var(--champan)}
-.cabecera p{color:var(--marfil2); max-width:68ch}
-.cabecera p a{color:var(--marfil); text-decoration:none; border-bottom:1px solid var(--champan-borde)}
-.cabecera p a:hover{color:var(--champan)}
-
-.controles{
-  position:sticky; top:65px; z-index:30;
-  padding:16px clamp(20px,6vw,88px);
-  background:rgba(12,11,16,.94); backdrop-filter:blur(8px);
-  border-bottom:1px solid rgba(217,179,108,.14);
-  display:flex; gap:14px; flex-wrap:wrap; align-items:center;
-}
-.buscar{
-  flex:1 1 260px; max-width:420px;
-  background:var(--tinta2); border:1px solid rgba(217,179,108,.18); border-radius:12px;
-  color:var(--marfil); font:inherit; font-size:.98rem;
-  padding:11px 16px; transition:border-color .3s;
-}
-.buscar::placeholder{color:var(--marfil3)}
-.buscar:focus{outline:none; border-color:var(--champan)}
-.fichas{display:flex; gap:8px; flex-wrap:wrap}
-.ficha{
-  font-family:var(--mono); font-size:.74rem; letter-spacing:.04em;
-  color:var(--marfil2); background:transparent;
-  border:1px solid rgba(217,179,108,.20); border-radius:999px;
-  padding:6px 14px; cursor:pointer; transition:all .3s;
-}
-.ficha:hover{color:var(--champan); border-color:var(--champan)}
-.ficha[aria-pressed="true"]{color:var(--tinta); background:var(--champan); border-color:var(--champan)}
-
-.listado{max-width:1280px; margin:0 auto; padding:26px clamp(20px,6vw,88px) 70px}
-.estado-lista{
-  font-family:var(--mono); font-size:.76rem; color:var(--marfil3);
-  margin-bottom:14px; font-variant-numeric:tabular-nums;
-}
-.producto{
-  display:grid; grid-template-columns:minmax(0,1.35fr) auto; gap:4px 30px;
-  align-items:center;
-  padding:19px 22px 20px; border-radius:13px; margin-bottom:9px;
-  background:var(--tinta2); border:1px solid rgba(217,179,108,.09);
-  opacity:0; transform:translateY(10px);
-  animation:sube .7s cubic-bezier(.2,.8,.2,1) forwards;
-  transition:border-color .35s, background .35s;
-}
-@keyframes sube{to{opacity:1; transform:none}}
-@media(prefers-reduced-motion:reduce){.producto{animation:none; opacity:1; transform:none}}
-.producto:hover{border-color:rgba(217,179,108,.30); background:var(--tinta3)}
-.producto.en-vitrina{border-color:rgba(217,179,108,.34)}
-.producto .caja{min-width:0}
-.producto .nombre{
-  font-family:var(--serif); font-size:1.16rem; letter-spacing:-.005em; line-height:1.25;
-  display:inline-flex; align-items:baseline; gap:10px; flex-wrap:wrap;
-}
-.producto .nombre a{text-decoration:none}
-.producto .nombre a:hover{color:var(--champan)}
-.luz{
-  display:inline-flex; align-items:center; gap:6px;
-  font-family:var(--mono); font-size:.68rem; letter-spacing:.05em; color:var(--champan);
-}
-.luz::before{content:""; width:6px; height:6px; border-radius:50%; background:var(--champan)}
-.producto .desc{color:var(--marfil2); font-size:.92rem; max-width:62ch; margin-top:2px}
-.producto .lado{display:flex; align-items:center; gap:13px; flex-wrap:wrap; justify-content:flex-end}
-.pila{
-  display:inline-flex; align-items:center; gap:7px;
-  font-family:var(--mono); font-size:.72rem; color:var(--marfil2);
-}
-.pila i{width:8px; height:8px; border-radius:50%; flex:none}
-.fecha{font-family:var(--mono); font-size:.7rem; color:var(--marfil3); font-variant-numeric:tabular-nums}
-.vacio{color:var(--marfil3); padding:40px 4px; font-size:.95rem}
-
-footer{
-  padding:44px clamp(20px,6vw,88px) 36px;
-  border-top:1px solid rgba(217,179,108,.13);
-  display:flex; justify-content:space-between; gap:24px; flex-wrap:wrap;
-}
-footer p{color:var(--marfil3); font-size:.9rem; max-width:60ch}
-footer nav{display:flex; gap:18px; flex-wrap:wrap}
-footer nav a{font-size:.9rem}
-@media(max-width:680px){
-  .producto{grid-template-columns:1fr}
-  .producto .lado{justify-content:flex-start}
-  .controles{top:61px}
-}
+:root{--bg:#0b0a09;--bg2:#131110;--ink:#f4efe7;--dim:#a89f92;--accent:#e0a35c;
+--accent2:#7fa88b;--line:rgba(244,239,231,.14);--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+--sans:ui-sans-serif,"Segoe UI",Inter,system-ui,-apple-system,sans-serif;
+--mono:ui-monospace,"Cascadia Mono",Consolas,monospace;--measure:62ch;--radius:14px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.65;
+-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 clamp(18px,4vw,40px);position:relative;z-index:1}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent2);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#12100e;padding:10px 16px;z-index:9}
+.skip:focus{left:12px;top:12px}
+header.site{border-bottom:1px solid var(--line);padding:22px 0;display:flex;gap:18px;
+align-items:baseline;justify-content:space-between;flex-wrap:wrap}
+.brand{font-family:var(--serif);font-size:1.05rem;letter-spacing:.01em}
+.brand span{color:var(--dim)}
+nav.site{display:flex;gap:18px;flex-wrap:wrap;font-family:var(--mono);font-size:.72rem;
+letter-spacing:.14em;text-transform:uppercase}
+nav.site a{color:var(--dim);text-decoration:none}
+nav.site a:hover,nav.site a[aria-current=page]{color:var(--ink)}
+main{padding:clamp(48px,9vh,104px) 0}
+.eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;
+color:var(--accent);margin:0 0 18px}
+h1{font-family:var(--serif);font-size:clamp(2.4rem,7vw,5.2rem);line-height:.95;
+letter-spacing:-.03em;margin:0 0 24px;font-weight:500;text-wrap:balance}
+h2{font-family:var(--serif);font-size:clamp(1.4rem,3vw,2.1rem);line-height:1.15;
+letter-spacing:-.02em;margin:64px 0 18px;font-weight:500}
+h3{font-size:1.02rem;margin:28px 0 10px;letter-spacing:-.01em}
+p,li{max-width:var(--measure);color:var(--ink)}
+.lead{font-size:clamp(1.05rem,2vw,1.28rem);color:var(--dim);max-width:56ch}
+hr{border:0;border-top:1px solid var(--line);margin:clamp(40px,8vh,80px) 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;
+background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin:32px 0}
+.cell{background:var(--bg2);padding:22px 20px}
+.cell h3{margin-top:0}
+.cell p{font-size:.9rem;color:var(--dim);margin:0}
+code,kbd{font-family:var(--mono);font-size:.86em;background:rgba(244,239,231,.07);
+padding:2px 6px;border-radius:5px}
+pre{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);
+padding:18px;overflow:auto;max-width:100%}
+pre code{background:none;padding:0}
+table{width:100%;border-collapse:collapse;margin:24px 0;font-size:.92rem}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+.pill{display:inline-block;font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;
+text-transform:uppercase;border:1px solid var(--line);color:var(--dim);padding:3px 9px;border-radius:999px}
+footer.site{border-top:1px solid var(--line);padding:28px 0 44px;color:var(--dim);font-size:.8rem}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}
+.reveal{opacity:1;transform:none;transition:none}}
+::selection{background:var(--accent);color:#12100e}
+.webgl-canvas{width:100%;height:400px;background:var(--bg2);border:1px solid var(--line);
+border-radius:var(--radius);margin:24px 0;display:block}
+.superpowers-badge{display:inline-block;font-family:var(--mono);font-size:.65rem;
+letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--accent2);
+color:var(--accent2);padding:4px 10px;border-radius:999px;margin:10px 0}
 </style>
-  <!-- ux-kit v1 :: mejora progresiva (GSAP+Lenis CDN con fallback; seguro offline) -->
-  <script>document.documentElement.classList.add('uxjs')</script>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="stylesheet" href="../assets/ux/ux-enhance.css">
-  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15.1/gsap/dist/gsap.min.js" onerror="this.onerror=null;this.src='https://unpkg.com/gsap@3.15.1/gsap/dist/gsap.min.js'"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15.1/gsap/dist/ScrollTrigger.min.js" onerror="this.onerror=null;this.src='https://unpkg.com/gsap@3.15.1/gsap/dist/ScrollTrigger.min.js'"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.27/dist/lenis.min.js" onerror="this.onerror=null;this.src='https://unpkg.com/lenis@1.3.27/dist/lenis.min.js'"></script>
-  <script defer src="../assets/ux/ux-kit.js"></script>
 </head>
 <body>
-
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="site"><div class="wrap" style="display:flex;justify-content:space-between;align-items:baseline;gap:18px;flex-wrap:wrap">
+<div class="brand">docs <span>· ecosistema Belentani · WebGL online</span></div>
+<nav class="site" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="docs.html">Documentación</a><a href="accesibilidad.html">Accesibilidad</a><a href="privacidad.html">Privacidad</a><a href="404.html">404</a></nav>
+</div></header>
+<main id="contenido"><div class="wrap">
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="site"><div class="wrap" style="display:flex;justify-content:space-between;align-items:baseline;gap:18px;flex-wrap:wrap">
+<div class="brand">docs <span>· ecosistema Belentani · WebGL online</span></div>
+<nav class="site" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="docs.html">Documentación</a><a href="accesibilidad.html">Accesibilidad</a><a href="privacidad.html">Privacidad</a><a href="404.html">404</a></nav>
+</div></header>
+<main id="contenido"><div class="wrap">
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="site"><div class="wrap" style="display:flex;justify-content:space-between;align-items:baseline;gap:18px;flex-wrap:wrap">
+<div class="brand">docs <span>· ecosistema Belentani · WebGL online</span></div>
+<nav class="site" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="docs.html">Documentación</a><a href="accesibilidad.html">Accesibilidad</a><a href="privacidad.html">Privacidad</a><a href="404.html">404</a></nav>
+</div></header>
+<main id="contenido"><div class="wrap">
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="site"><div class="wrap" style="display:flex;justify-content:space-between;align-items:baseline;gap:18px;flex-wrap:wrap">
+<div class="brand">docs <span>· ecosistema Belentani · WebGL online</span></div>
+<nav class="site" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="docs.html">Documentación</a><a href="accesibilidad.html">Accesibilidad</a><a href="privacidad.html">Privacidad</a><a href="404.html">404</a></nav>
+</div></header>
+<main id="contenido"><div class="wrap">
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="site"><div class="wrap" style="display:flex;justify-content:space-between;align-items:baseline;gap:18px;flex-wrap:wrap">
+<div class="brand">docs <span>· ecosistema Belentani · WebGL online</span></div>
+<nav class="site" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="docs.html">Documentación</a><a href="accesibilidad.html">Accesibilidad</a><a href="privacidad.html">Privacidad</a><a href="404.html">404</a></nav>
+</div></header>
+<main id="contenido"><div class="wrap">
 <header>
   <a class="marca" href="index.html" aria-label="Belentani — volver a la vitrina">
     <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true">
@@ -198,7 +156,7 @@ footer nav a{font-size:.9rem}
   <nav aria-label="pie">
     <a href="index.html">Vitrina</a>
     <a href="auditoria.html">Auditoría unificada</a>
-    <a href="https://github.com/belentani7" target="_blank" rel="noopener">GitHub</a>
+    <a  target="_blank" rel="noopener">GitHub</a>
   </nav>
 </footer>
 
@@ -219,7 +177,7 @@ footer nav a{font-size:.9rem}
       : "";
     return '<article class="producto' + (p.v ? " en-vitrina" : "") + '" style="animation-delay:' + Math.min(i, 14) * 45 + 'ms">' +
       '<div class="caja">' +
-        '<span class="nombre"><a href="https://github.com/belentani7/' + encodeURIComponent(p.n) + '" target="_blank" rel="noopener">' + p.n + "</a>" +
+        '<span class="nombre"><a  + encodeURIComponent(p.n) + '" target="_blank" rel="noopener">' + p.n + "</a>" +
         (p.v ? '<span class="luz">vitrina</span>' : "") + "</span>" +
         '<p class="desc">' + p.d + "</p>" +
       "</div>" +
@@ -260,6 +218,168 @@ footer nav a{font-size:.9rem}
   });
   buscar.addEventListener("input", render);
   render();
+})();
+</script>
+</div></main>
+<footer class="site"><div class="wrap">
+<p>docs · WebGL listo para servir online · <a href="index.html">Inicio</a> · <a href="accesibilidad.html">Accesibilidad</a> · <a href="privacidad.html">Privacidad</a></p>
+</div></footer>
+<script>
+(function(){
+  var canvas = document.createElement('canvas');
+  canvas.className = 'webgl-canvas';
+  var container = document.getElementById('contenido');
+  if(container){ container.appendChild(canvas); }
+  try{
+    var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+    if(!gl){ canvas.innerHTML = '<p style="color:var(--dim);font-family:var(--mono);padding:12px">WebGL no disponible en este navegador.</p>'; return; }
+    gl.clearColor(0.047,0.043,0.039,1);
+    gl.clear(gl.COLOR_BUFFER_BIT);
+    var vs = gl.createShader(gl.VERTEX_SHADER);
+    gl.shaderSource(vs, 'attribute vec2 p;void main(){gl_Position=vec4(p,0.0,1.0);}');
+    gl.compileShader(vs);
+    var fs = gl.createShader(gl.FRAGMENT_SHADER);
+    gl.shaderSource(fs, 'precision mediump float;uniform vec4 c;void main(){gl_FragColor=c;}');
+    gl.compileShader(fs);
+    var prog = gl.createProgram();
+    gl.attachShader(prog,vs); gl.attachShader(prog,fs); gl.linkProgram(prog);
+    gl.useProgram(prog);
+    var loc = gl.getUniformLocation(prog,'c');
+    gl.uniform4f(loc, 0.549, 0.659, 0.545, 1.0);
+    var buf = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER,buf);
+    gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
+    var attr = gl.getAttribLocation(prog,'p');
+    gl.enableVertexAttribArray(attr);
+    gl.vertexAttribPointer(attr,2,gl.FLOAT,false,0,0);
+    gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
+  }catch(e){ console.log('WebGL init:', e.message); }
+})();
+</script>
+</div></main>
+<footer class="site"><div class="wrap">
+<p>docs · WebGL listo para servir online · <a href="index.html">Inicio</a> · <a href="accesibilidad.html">Accesibilidad</a> · <a href="privacidad.html">Privacidad</a></p>
+</div></footer>
+<script>
+(function(){
+  var canvas = document.createElement('canvas');
+  canvas.className = 'webgl-canvas';
+  var container = document.getElementById('contenido');
+  if(container){ container.appendChild(canvas); }
+  try{
+    var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+    if(!gl){ canvas.innerHTML = '<p style="color:var(--dim);font-family:var(--mono);padding:12px">WebGL no disponible en este navegador.</p>'; return; }
+    gl.clearColor(0.047,0.043,0.039,1);
+    gl.clear(gl.COLOR_BUFFER_BIT);
+    var vs = gl.createShader(gl.VERTEX_SHADER);
+    gl.shaderSource(vs, 'attribute vec2 p;void main(){gl_Position=vec4(p,0.0,1.0);}');
+    gl.compileShader(vs);
+    var fs = gl.createShader(gl.FRAGMENT_SHADER);
+    gl.shaderSource(fs, 'precision mediump float;uniform vec4 c;void main(){gl_FragColor=c;}');
+    gl.compileShader(fs);
+    var prog = gl.createProgram();
+    gl.attachShader(prog,vs); gl.attachShader(prog,fs); gl.linkProgram(prog);
+    gl.useProgram(prog);
+    var loc = gl.getUniformLocation(prog,'c');
+    gl.uniform4f(loc, 0.549, 0.659, 0.545, 1.0);
+    var buf = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER,buf);
+    gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
+    var attr = gl.getAttribLocation(prog,'p');
+    gl.enableVertexAttribArray(attr);
+    gl.vertexAttribPointer(attr,2,gl.FLOAT,false,0,0);
+    gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
+  }catch(e){ console.log('WebGL init:', e.message); }
+})();
+</script>
+</div></main>
+<footer class="site"><div class="wrap">
+<p>docs · WebGL listo para servir online · <a href="index.html">Inicio</a> · <a href="accesibilidad.html">Accesibilidad</a> · <a href="privacidad.html">Privacidad</a></p>
+</div></footer>
+<script>
+(function(){
+  var canvas = document.createElement('canvas');
+  canvas.className = 'webgl-canvas';
+  var container = document.getElementById('contenido');
+  if(container){ container.appendChild(canvas); }
+  try{
+    var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+    if(!gl){ canvas.innerHTML = '<p style="color:var(--dim);font-family:var(--mono);padding:12px">WebGL no disponible en este navegador.</p>'; return; }
+    gl.clearColor(0.047,0.043,0.039,1);
+    gl.clear(gl.COLOR_BUFFER_BIT);
+    var vs = gl.createShader(gl.VERTEX_SHADER);
+    gl.shaderSource(vs, 'attribute vec2 p;void main(){gl_Position=vec4(p,0.0,1.0);}');
+    gl.compileShader(vs);
+    var fs = gl.createShader(gl.FRAGMENT_SHADER);
+    gl.shaderSource(fs, 'precision mediump float;uniform vec4 c;void main(){gl_FragColor=c;}');
+    gl.compileShader(fs);
+    var prog = gl.createProgram();
+    gl.attachShader(prog,vs); gl.attachShader(prog,fs); gl.linkProgram(prog);
+    gl.useProgram(prog);
+    var loc = gl.getUniformLocation(prog,'c');
+    gl.uniform4f(loc, 0.549, 0.659, 0.545, 1.0);
+    var buf = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER,buf);
+    gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
+    var attr = gl.getAttribLocation(prog,'p');
+    gl.enableVertexAttribArray(attr);
+    gl.vertexAttribPointer(attr,2,gl.FLOAT,false,0,0);
+    gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
+  }catch(e){ console.log('WebGL init:', e.message); }
+})();
+</script>
+</div></main>
+<footer class="site"><div class="wrap">
+<p>docs · WebGL listo para servir online · <a href="index.html">Inicio</a> · <a href="accesibilidad.html">Accesibilidad</a> · <a href="privacidad.html">Privacidad</a></p>
+</div></footer>
+<script>
+(function(){
+  var canvas = document.createElement('canvas');
+  canvas.className = 'webgl-canvas';
+  var container = document.getElementById('contenido');
+  if(container){ container.appendChild(canvas); }
+  try{
+    var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+    if(!gl){ canvas.innerHTML = '<p style="color:var(--dim);font-family:var(--mono);padding:12px">WebGL no disponible en este navegador.</p>'; return; }
+    gl.clearColor(0.047,0.043,0.039,1);
+    gl.clear(gl.COLOR_BUFFER_BIT);
+    var vs = gl.createShader(gl.VERTEX_SHADER);
+    gl.shaderSource(vs, 'attribute vec2 p;void main(){gl_Position=vec4(p,0.0,1.0);}');
+    gl.compileShader(vs);
+    var fs = gl.createShader(gl.FRAGMENT_SHADER);
+    gl.shaderSource(fs, 'precision mediump float;uniform vec4 c;void main(){gl_FragColor=c;}');
+    gl.compileShader(fs);
+    var prog = gl.createProgram();
+    gl.attachShader(prog,vs); gl.attachShader(prog,fs); gl.linkProgram(prog);
+    gl.useProgram(prog);
+    var loc = gl.getUniformLocation(prog,'c');
+    gl.uniform4f(loc, 0.549, 0.659, 0.545, 1.0);
+    var buf = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER,buf);
+    gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
+    var attr = gl.getAttribLocation(prog,'p');
+    gl.enableVertexAttribArray(attr);
+    gl.vertexAttribPointer(attr,2,gl.FLOAT,false,0,0);
+    gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
+  }catch(e){ console.log('WebGL init:', e.message); }
+})();
+</script>
+</div></main>
+<footer class="site"><div class="wrap">
+<p>docs · WebGL listo para servir online · <a href="index.html">Inicio</a> · <a href="accesibilidad.html">Accesibilidad</a> · <a href="privacidad.html">Privacidad</a></p>
+</div></footer>
+<script>
+(function(){
+  var canvas = document.createElement('canvas');
+  canvas.className = 'webgl-canvas';
+  var container = document.getElementById('contenido');
+  if(container){ container.appendChild(canvas); }
+  try{
+    var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+    if(!gl){ canvas.innerHTML = '<p style="color:var(--dim);font-family:var(--mono);padding:12px">WebGL no disponible.</p>'; return; }
+    gl.clearColor(0.047,0.043,0.039,1);
+    gl.clear(gl.COLOR_BUFFER_BIT);
+  }catch(e){ console.log('WebGL:', e.message); }
 })();
 </script>
 </body>

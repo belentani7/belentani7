@@ -19,7 +19,7 @@ class PortalParser(HTMLParser):
         values = dict(attrs)
         if "portal-btn" in values.get("class", "").split():
             self.active = {"attrs": values, "label": ""}
-    
+
     def handle_data(self, data):
         if self.active is not None:
             self.active["label"] += data

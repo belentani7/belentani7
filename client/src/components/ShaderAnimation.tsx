@@ -89,7 +89,7 @@ export function ShaderAnimation({
             color += getColor(float(i) * 0.2, colorMode) * lineWidth*float(i*i) / (dist + 0.01);
           }
         }
-        
+
         gl_FragColor = vec4(color, 1.0);
       }
     `;
