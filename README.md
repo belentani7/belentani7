@@ -107,7 +107,7 @@ AI-assisted development is part of the workflow. **Commit volume does not substi
 - **[Living Machine](docs/living-machine/index.html)** - dependency-free browser toolkit (captions, CSV, media, PDF and audio helpers) with its own quality suite; every file stays inspectable in the repository.
 - **[Production Studio](docs/living-machine/studio.html)** - local-first batch conversion, subtitles, CV readability, storyboard and palette tools, localized in English, Spanish and Portuguese.
 
-These are experiments kept in the repository, not a verified live deployment: nothing is uploaded and no remote processing endpoint is claimed.
+These are experiments kept in the repository, not a verified live deployment: nothing is uploaded and no remote processing endpoint is claimed. They are private, archived or experimental utilities, not products.
 
 ## Evidence
 
