@@ -18,165 +18,74 @@ Barcelona, Spain
 
 ## Architecting intelligent systems. Crafting immersive experiences.
 
-I build intelligent systems and immersive digital experiences — **from systems architecture to cinematic interfaces**.
+I build AI systems, developer tools and immersive digital experiences, connecting
+systems architecture with clear interfaces and human context.
 
-My work spans **AI orchestration, local-first tooling, full-stack product engineering, Trust & Safety, and creative technology**. I approach engineering as a complete discipline: robust foundations, intentional interaction design, operational security, and measurable performance.
-
-As the creator of **BELENTANI**, I bring the same architectural thinking to interactive storytelling, audiovisual systems, and experimental WebGL environments.
-
-> **Design with purpose. Engineer with evidence. Ship what can be verified.**
+My practice spans **AI orchestration, full-stack engineering, Trust & Safety and
+creative technology**. My background in content moderation and community operations
+informs how I approach human review, accountable automation and product design.
+As **BELENTANI**, I also explore music, interactive storytelling and real-time visuals.
 
 ## Featured systems
 
-- **[Meta-Skill](https://github.com/belentani7/meta-skill)** — offline, explainable routing of AI tasks with explicit abstention and reproducible evaluation. [CI](https://github.com/belentani7/meta-skill/actions).
-- **[BELENTANI — The Experience](https://github.com/belentani7/belentani.es)** — full-stack creative web and interactive storytelling; deployment status is verified separately from source.
-- **[Secure-T](https://github.com/belentani7/secure-t)** — cybersecurity and accessible learning technology.
-- **[BELENTANI Visual Engine](https://github.com/belentani7/belentani-visual-engine)** — Three.js/WebGL research and immersive scene engineering.
+| System | Engineering focus | Source & validation |
+| :--- | :--- | :--- |
+| **Meta-Skill** | Offline task routing, explainable decisions, abstention and reproducible evaluation. | [Repository](https://github.com/belentani7/meta-skill) · [CI](https://github.com/belentani7/meta-skill/actions) |
+| **BELENTANI — The Experience** | Creative web, full-stack interfaces and interactive storytelling. | [Repository](https://github.com/belentani7/belentani.es) |
+| **Secure-T** | Cybersecurity education and accessible learning technology. | [Repository](https://github.com/belentani7/secure-t) |
+| **LLM VFX Orchestrator** | Shot planning, continuity prompts and local production manifests. | [Repository](https://github.com/belentani7/llm-vfx-orchestrator) |
 
-**Evidence policy:** CI results, build artifacts, and production availability are separate checks. An unverified live experience is never presented as production-validated.
+These links identify source projects. Each repository's checks and release history
+provide its implementation status; a source link alone does not establish a working deployment.
+
+## Capability atlas
+
+| Discipline | Focus |
+| :--- | :--- |
+| **AI systems** | Task routing, agent workflows, local model integration, evaluation and CLI automation. |
+| **Full-stack architecture** | Python, FastAPI, TypeScript, React, Next.js, Node.js, PostgreSQL and APIs. |
+| **Creative technology** | Three.js, WebGL, real-time rendering, accessible interaction and motion design. |
+| **Trust & Safety** | Content operations, human review, privacy and accountable automation. |
 
 ## Tools and experiments
 
-- **[Living Machine](docs/living-machine/index.html)** — dependency-free browser toolkit with its own quality suite; the artwork stays inspectable in the repository files, not only in a screenshot.
-- **[BELENTANI Visual Engine](https://github.com/belentani7/belentani-visual-engine)** — Three.js and WebGL scene research, kept as an experiment until its runtime checks are published.
+**[Living Machine](docs/living-machine/index.html)** brings browser utilities,
+media tools and diagnostics into an inspectable, dependency-free experiment.
+The tools remain inspectable in the repository files. This page is not a verified live deployment;
+private, archived or experimental work is not presented as production-ready.
+Its [functional suite](docs/living-machine/quality.test.cjs) lives beside its source.
 
-The cover above is editorial artwork: this page is not a verified live deployment, and nothing private, archived or experimental is presented as production-ready.
+## Working principles
 
-## Three interconnected disciplines
-
-| AI Systems & Orchestration | Creative Web & Immersive Systems | Social Impact & Accessible Technology |
-| :--- | :--- | :--- |
-| Agent workflows, local LLM integration, CLI tools, model routing, and automation. | WebGL, Three.js, React, immersive interfaces, real-time visuals, and digital storytelling. | Learning platforms, cybersecurity education, inclusive product design, and practical technology. |
-| [Meta-Skill](https://github.com/belentani7/meta-skill) · [AI Lab](https://github.com/belentani7?tab=repositories&q=agent) | [BELENTANI](https://github.com/belentani7/belentani.es) · [Visual Engine](https://github.com/belentani7/belentani-visual-engine) · [Unified OS v2](https://github.com/belentani7/unified-os-v2) | [Secure-T](https://github.com/belentani7/secure-t) · [ManosAbiertas](https://github.com/belentani7/manosabiertas) |
-
-*These links point to source repositories and research initiatives. They do not imply that every project is deployed or production-ready.*
-
-## Selected engineering directions
-
-**AI infrastructure & developer tooling** — Python, FastAPI, TypeScript, CLI automation, agent orchestration, local model workflows, and reproducible evaluation.
-
-**Full-stack systems** — Next.js, React, Node.js, PostgreSQL, APIs, authentication, testing, CI/CD, and deployment architecture.
-
-**Creative technology** — Three.js, WebGL, real-time rendering, motion design, accessibility, performance budgets, and responsive interfaces.
-
-**Trust & Safety** — operational rigor, risk-aware systems, privacy, human-centered review, and accountable automation.
-
-## Architecture principles
-
-**01 / Technological sovereignty**  
-Prefer portable, inspectable systems and local-first execution when appropriate. Minimize unnecessary vendor lock-in; use external services deliberately, not by default.
-
-**02 / Intentional design**  
-Visual complexity must improve meaning, not obscure it. Clear information hierarchy, accessible interactions, and carefully controlled motion matter as much as visual ambition.
-
-**03 / Production truth**  
-A repository, a passing test suite, a successful build, and a functioning public deployment are **different levels of evidence**. Do not call a system production-ready without verifying its behavior.
-
-**04 / Sustainable scale**  
-Favor shared standards, deterministic CI/CD, reusable components, documented boundaries, and small, reversible changes over uncontrolled repository proliferation.
+- **Architecture with purpose.** Define boundaries, failure modes and recovery paths.
+- **Intentional interfaces.** Make interaction accessible, readable and responsive.
+- **Portable systems.** Prefer inspectable tools and deliberate service dependencies.
+- **Measured delivery.** Validate behavior and document the limits of each release.
 
 ## Evidence & operational governance
 
-The portfolio follows a **claim → evidence → status** policy. Each highlighted system should link to its own reproducible tests, build artifacts, and production checks where available. Missing evidence is labeled **not verified**, not silently treated as success.
+The portfolio uses **claim → evidence → status**: source, tests, build artifacts and
+production availability are separate checks. Evidence that has not been executed
+or refreshed is **not verified**.
 
-- **AI quality:** maintain labeled evaluation cases, document abstention and failure modes, and compare model/router changes against an explicit baseline. Statistical significance alone is not proof of safety or production readiness.
-- **Privacy & compliance:** document personal-data processing, retention, subprocessors, incident response, and applicable AI transparency obligations per product. Documentation is not a legal certification.
-- **Supply chain:** use least-privilege CI, dependency review, pinned releases, and provenance verification where implemented; never claim an SLSA level without supporting attestation.
-- **Operations:** separate source status, CI status, artifact integrity, and real production availability. Record incident response and rollback paths before high-impact releases.
-- **Portfolio lifecycle:** classify projects as flagship, active, experimental, or archived, with explicit verification dates rather than inferred readiness.
-- **Evidence trail:** [engineering evaluation](./docs/engineering-evidence-2026-10-29.md) · [profile history](./docs/profile-archive-2026-10-29.md). Counts and history are recorded there so this page can stay short.
+[Engineering evaluation](./docs/engineering-evidence-2026-10-29.md) ·
+[Profile history](./docs/profile-archive-2026-10-29.md) ·
+[Product specification](plataforma/FICHA.md) ·
+[Local validation](./docs/profile-repair-2026-11-11.md)
 
 ## Technology
 
-`Python` · `TypeScript` · `JavaScript` · `React` · `Next.js` · `Node.js` · `FastAPI` · `PostgreSQL` · `Docker` · `Three.js` · `WebGL` · `GitHub Actions`
+`Python` · `TypeScript` · `JavaScript` · `React` · `Next.js` · `Node.js` ·
+`FastAPI` · `PostgreSQL` · `Docker` · `Three.js` · `WebGL` · `GitHub Actions`
+
+## En español
+
+Soy Pedro Belentani, artista y tecnólogo creativo en Barcelona. Desarrollo sistemas
+de IA, herramientas y experiencias digitales, combinando arquitectura de software,
+diseño de interacción y experiencia en Trust & Safety.
 
 ---
-
-<div align="center">
 
 **Build systems that work. Create experiences that matter.**
 
 [Explore the code](https://github.com/belentani7?tab=repositories)
-
-</div>
-
-<!-- repo-forge:readme:inicio -->
-## Qué es
-
-**Pedro Belentani** — perfil profesional y puerta del ecosistema.
-
-Una herramienta que se puede auditar: dice qué hace, lo hace, y deja rastro de lo que hizo.
-
-## Estado medido
-
-| Dato | Valor |
-|---|---|
-| Lenguajes | JSON, HTML, JavaScript, Markdown, TypeScript, Python |
-| Archivos / líneas | 238 / 37061 |
-| Páginas HTML | 17 |
-| Tests detectados | 20 |
-| Cumplimiento de reglas | 36/37 (97.3%) |
-
-Todo lo anterior se midió en disco el 2026-11-10; no es una estimación.
-
-## Uso
-
-```bash
-python scripts/doctor.py   # verificación sin dependencias
-```
-
-## Estructura
-
-```
-assets/
-brand/
-client/
-data/
-desktop/
-docs/
-e2e/
-engine/
-magic/
-plataforma/
-```
-
-## Diseño de plataforma
-
-- Presentación
-- Catálogo de productos
-- Estado verificado
-- Contacto
-
-La ficha completa —máximo potencial, marca, fases de monetización y recursos— vive en
-[`plataforma/FICHA.md`](plataforma/FICHA.md). Los tokens de marca están en
-[`brand/tokens.css`](brand/tokens.css).
-
-## Reglas del proyecto
-
-Este repositorio sigue el catálogo oficial del ecosistema (`GH-*`, `WEB-*`, `ACC-*`,
-`SEO-*`, `COH-*`, `DEV-*`). El gate se ejecuta con:
-
-```bash
-python scripts/doctor.py
-```
-
-## Licencia
-
-MIT. Ver [`LICENSE`](LICENSE).
-<!-- repo-forge:readme:fin -->
-<!-- repo-forge:readme:fin -->
-<!-- repo-forge:readme:fin -->
-<!-- repo-forge:readme:fin -->
-
-## Resumen en español
-
-Pedro Belentani — perfil profesional y puerta del ecosistema.
-
-el índice vivo del ecosistema: qué construye, qué funciona hoy, con demos enlazadas y estado real de cada producto
-
-Este resumen se añadió para que el repositorio se pueda leer en el idioma del ecosistema.
-El contenido técnico completo sigue en el resto del documento.
-
-## Producto
-
-Oferta, precio y cobro: [`producto/OFERTA.md`](producto/OFERTA.md) · [`producto/precios.json`](producto/precios.json) · [`producto/landing.html`](producto/landing.html)
