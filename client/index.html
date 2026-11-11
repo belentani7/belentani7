@@ -88,59 +88,212 @@ color:var(--accent2);padding:4px 10px;border-radius:999px;margin:10px 0}
         <a href="#stack" class="btn-secondary">Ver Stack</a>
       </div>
     </div>
-  </section>
-  <section id="stack">
-    <h2>Stack Tecnológico</h2>
-    <p>Tecnologías utilizadas en este repositorio.</p>
-    <ul class="stack-list">
-      <li>HTML5</li>
-      <li>CSS3</li>
-      <li>JavaScript</li>
-      <li>WebGL Shader</li>
-      <li>Responsive Design</li>
-    </ul>
-  </section>
-  <footer><p>© 2026 Belentani7 - Parte del ecosistema Belentani</p></footer>
-/* Hero Shader WebGL */
-(function() {
-  const canvas = document.createElement('canvas');
-  canvas.id = 'hero-canvas';
-  canvas.style.position = 'absolute';
-  canvas.style.top = '0';
-  canvas.style.left = '0';
-  canvas.style.width = '100%';
-  canvas.style.height = '100%';
-  canvas.style.zIndex = '1';
-  document.body.insertBefore(canvas, document.body.firstChild);
-  const gl = canvas.getContext('webgl');
-  if (!gl) return;
-  const vs = gl.createShader(gl.VERTEX_SHADER);
-  gl.shaderSource(vs, 'attribute vec2 position; void main() { gl_Position = vec4(position, 0.0, 1.0); }');
-  gl.compileShader(vs);
-  const fs = gl.createShader(gl.FRAGMENT_SHADER);
-  gl.shaderSource(fs, 'precision mediump float; uniform vec2 u_resolution; uniform float u_time; uniform vec2 u_mouse; float hash(vec2 p) { p = fract(p * vec2(123.34, 456.21)); p += dot(p, p + 45.32); return fract(p.x * p.y * p.z); } float noise(vec2 p) { vec2 i = floor(p); vec2 f = fract(p); f = f * f * (3.0 - 2.0 * f); float a = hash(i); float b = hash(i + vec2(1.0, 0.0)); float c = hash(i + vec2(0.0, 1.0)); float d = hash(i + vec2(1.0, 1.0)); return mix(mix(a, b, f.x), mix(c, d, f.x), f.y); } float fbm(vec2 p) { float v = 0.0; float a = 0.5; vec2 shift = vec2(100.0); for (int i = 0; i < 5; ++i) { v += a * noise(p); p = p * 2.0 + shift; a *= 0.5; } return v; } void main() { vec2 uv = gl_FragCoord.xy / u_resolution.xy; uv.x *= u_resolution.x / u_resolution.y; vec2 m = uv - u_mouse; float n = fbm(uv * 3.0 + u_time * 0.5); n += fbm(uv * 6.0 - u_time * 0.3) * 0.5; n += length(m) * 0.1; n = mod(n, 1.0); vec3 color = mix(vec3(0.0, 0.5, 1.0), vec3(1.0, 0.0, 0.5), n); float vignette = 1.0 - length(uv * 2.0 - 1.0) * 0.4; color *= vignette; gl_FragColor = vec4(color, 1.0); }');
-  gl.compileShader(fs);
-  const program = gl.createProgram();
-  gl.attachShader(program, vs);
-  gl.attachShader(program, fs);
-  gl.linkProgram(program);
-  gl.useProgram(program);
-  const pb = gl.createBuffer();
-  gl.bindBuffer(gl.ARRAY_BUFFER, pb);
-  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1,1,-1,-1,1,-1,1,1,-1,1,1]), gl.STATIC_DRAW);
-  const pl = gl.getAttribLocation(program, 'position');
-  gl.enableVertexAttribArray(pl);
-  gl.vertexAttribPointer(pl, 2, gl.FLOAT, false, 0, 0);
-  const rl = gl.getUniformLocation(program, 'u_resolution');
-  const tl = gl.getUniformLocation(program, 'u_time');
-  const ml = gl.getUniformLocation(program, 'u_mouse');
-  let mouse = {x: 0.5, y: 0.5};
-  window.addEventListener('mousemove', (e) => { mouse.x = e.clientX / window.innerWidth; mouse.y = 1.0 - e.clientY / window.innerHeight; });
-  function resize() { canvas.width = canvas.clientWidth * window.devicePixelRatio; canvas.height = canvas.clientHeight * window.devicePixelRatio; gl.viewport(0, 0, canvas.width, canvas.height); gl.uniform2f(rl, canvas.width, canvas.height); }
-  window.addEventListener('resize', resize);
-  resize();
-  function render(time) { gl.uniform1f(tl, time * 0.001); gl.uniform2f(ml, mouse.x, mouse.y); gl.drawArrays(gl.TRIANGLES, 0, 6); requestAnimationFrame(render); }
-  requestAnimationFrame(render);
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div>
+        <h1 id="hero-title">Lo que existe,<br><em>se puede verificar.</em></h1>
+        <p class="hero-lede">Construyo productos donde la idea, la interfaz y el repositorio cuentan la misma historia. Esta portada reúne <strong>solo trabajo que pasó pruebas, verificación HTML y revisión de privacidad</strong>.</p>
+        <p class="hero-context">Barcelona · Creative Technologist · IA aplicada</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#work">Ver trabajo seleccionado <span aria-hidden="true">↓</span></a>
+          <a class="btn btn-ghost"  rel="noopener">Abrir GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+        <dl class="hero-facts" aria-label="Datos de la selección">
+          <div><dt>Repositorios</dt><dd>02</dd></div>
+          <div><dt>Tests verdes</dt><dd>101</dd></div>
+          <div><dt>CDN externos</dt><dd>00</dd></div>
+        </dl>
+      </div>
+      <div class="signal" aria-hidden="true">
+        <span class="signal-core">B</span>
+        <span class="signal-label">señal · noiacore</span>
+      </div>
+    </section>
+
+    <section class="section wrap" id="work" aria-labelledby="work-title">
+      <div class="section-head">
+        <p class="eyebrow"><span>02</span> / Trabajo seleccionado</p>
+        <h2 id="work-title">Dos repositorios, ninguna demo inventada.</h2>
+        <p>Productos públicos que hoy pasan las puertas. La presencia en GitHub no equivale a un despliegue activo: cada ficha declara lo que está verificado y lo que sigue pendiente.</p>
+      </div>
+      <div class="work-grid">
+        <article class="project project--featured">
+          <div class="project-top">
+            <span class="status">Repositorio verificado</span>
+            <span class="project-index">01 / arte + tecnología</span>
+          </div>
+          <div class="project-body">
+            <h3>Belentani — The Experience</h3>
+            <p class="project-copy">Universo artístico interactivo: una galaxia Three.js navegable y cuatro capítulos que unen música, imagen y relato. El alcance público excluye masters, sesiones y material privado.</p>
+            <ul class="tags" aria-label="Stack">
+              <li>TypeScript</li><li>React</li><li>Three.js</li><li>Next.js</li>
+            </ul>
+          </div>
+          <div class="project-footer">
+            <div class="project-evidence">
+              <span>47/47 tests</span><span>HTML CONFORME</span><span>repo público</span>
+            </div>
+            <a class="project-link"  rel="noopener">Ver repositorio <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="feature-visual" aria-hidden="true">
+            <div class="feature-visual-bar"><span>signal / 01</span><span>04 capítulos</span></div>
+            <svg class="feature-orbit" viewBox="0 0 360 360" aria-hidden="true" focusable="false">
+              <defs>
+                <radialGradient id="feature-core" cx="50%" cy="50%" r="50%">
+                  <stop offset="0" stop-color="#6ff7ea" stop-opacity=".42"/>
+                  <stop offset="1" stop-color="#6ff7ea" stop-opacity="0"/>
+                </radialGradient>
+                <linearGradient id="feature-line" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#9a7cff" stop-opacity=".75"/>
+                  <stop offset=".55" stop-color="#6ff7ea" stop-opacity=".55"/>
+                  <stop offset="1" stop-color="#ff4d93" stop-opacity=".22"/>
+                </linearGradient>
+              </defs>
+              <circle cx="180" cy="180" r="150" fill="none" stroke="url(#feature-line)" stroke-opacity=".55"/>
+              <g class="orbit-spin"><circle cx="180" cy="180" r="116" fill="none" stroke="url(#feature-line)" stroke-dasharray="2 9" stroke-opacity=".78"/></g>
+              <g class="orbit-spin-reverse"><circle cx="180" cy="180" r="92" fill="none" stroke="#6ff7ea" stroke-opacity=".24" stroke-dasharray="1 7"/></g>
+              <path d="M180 30 330 180 180 330 30 180Z" fill="none" stroke="url(#feature-line)" stroke-opacity=".2"/>
+              <path d="M180 30V330M30 180H330" stroke="#6ff7ea" stroke-opacity=".1"/>
+              <circle cx="180" cy="180" r="62" fill="url(#feature-core)"/>
+              <circle cx="180" cy="30" r="4" fill="#6ff7ea"/>
+              <circle cx="330" cy="180" r="4" fill="#9a7cff"/>
+              <circle cx="180" cy="330" r="4" fill="#ff4d93"/>
+              <circle cx="30" cy="180" r="4" fill="#f6cc7a"/>
+              <g fill="#8a859d" font-family="Cascadia Mono, SFMono-Regular, Consolas, monospace" font-size="11" letter-spacing="2" text-anchor="middle">
+                <text x="180" y="18">I</text>
+                <text x="344" y="184">II</text>
+                <text x="180" y="352">III</text>
+                <text x="16" y="184">IV</text>
+              </g>
+              <circle cx="180" cy="180" r="32" fill="#030405" stroke="#6ff7ea" stroke-opacity=".8"/>
+              <text x="180" y="187" fill="#6ff7ea" font-family="Cascadia Mono, SFMono-Regular, Consolas, monospace" font-size="18" font-weight="700" text-anchor="middle">B</text>
+            </svg>
+            <div class="feature-visual-bar"><span>the experience</span><span>three.js / next.js</span></div>
+          </div>
+        </article>
+
+        <div class="project-stack">
+          <article class="project">
+            <div class="project-top">
+              <span class="status">Repositorio verificado</span>
+              <span class="project-index">02 / educación</span>
+            </div>
+            <h3>secure-t</h3>
+            <p class="project-copy">Instituto abierto de ciberseguridad e inteligencia artificial: cuatro programas de veinte semanas, en español y funcionales sin conexión.</p>
+            <ul class="tags" aria-label="Stack">
+              <li>HTML</li><li>React</li><li>TypeScript</li>
+            </ul>
+            <div class="project-evidence">
+              <span>54/54 tests</span><span>HTML CONFORME</span><span class="evidence-pending">Pages no verificado</span>
+            </div>
+            <a class="project-link"  rel="noopener">Ver repositorio <span aria-hidden="true">↗</span></a>
+            <div class="secure-panel" aria-hidden="true">
+              <div class="secure-panel-head"><span>secure / signal</span><span>02</span></div>
+              <div class="secure-matrix" role="presentation">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <div class="secure-panel-meta"><span>04 programas</span><span>20 semanas</span><span>offline</span></div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+      <p class="work-note">Los enlaces llevan al código, no a una landing promocional. Si un despliegue no está comprobado, se dice; no se convierte en una captura o en una promesa.</p>
+    </section>
+
+    <section class="section wrap" id="method" aria-labelledby="method-title">
+      <div class="section-head">
+        <p class="eyebrow"><span>03</span> / Método</p>
+        <h2 id="method-title">El estándar es la evidencia.</h2>
+        <p>Un producto entra cuando las tres puertas pasan a la vez. No hay una cuarta puerta llamada “confía en mí”.</p>
+      </div>
+      <div class="method-grid">
+        <div class="method-item">
+          <h3>Pruebas ejecutadas</h3>
+          <p>La suite de cada repositorio se ejecuta antes de anunciarlo. En la última pasada: 47/47 y 54/54.</p>
+          <code>npm test</code>
+        </div>
+        <div class="method-item">
+          <h3>HTML conforme</h3>
+          <p>Portadas semánticas, con foco visible, contraste y <code>prefers-reduced-motion</code>. Sin recursos cargados desde terceros.</p>
+          <code>verificar_html.py</code>
+        </div>
+        <div class="method-item">
+          <h3>Límites explícitos</h3>
+          <p>Sin secretos, emails ni claims que el repositorio no pueda sostener. Lo incompleto queda fuera del escaparate.</p>
+          <code>git diff --check</code>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="limits" aria-labelledby="limits-title">
+      <div class="limits">
+        <p class="eyebrow"><span>04</span> / Límites</p>
+        <h2 id="limits-title">Lo que no verás aquí.</h2>
+        <p><strong>Prototipos, catálogos incompletos, repos experimentales y despliegues sin comprobar</strong> quedan fuera. Un repositorio público no demuestra por sí solo que una web esté activa; por eso separo “código verificado” de “demo publicada”. Esa distinción es parte del producto.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <div>
+      <p class="footer-mark">Pedro Belentani · NOIACORE LAB</p>
+      <p>Barcelona · trabajo público seleccionado</p>
+    </div>
+    <div class="footer-links">
+      <a  rel="noopener">GitHub</a>
+      <a href="#work">Trabajo</a>
+      <a href="#method">Método</a>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Pedro Belentani",
+    "jobTitle": "Creative Technologist",
+    "worksFor": {"@type": "Organization", "name": "NOIACORE LAB"},
+    "url": "https://github.com/belentani7",
+    "sameAs": ["https://github.com/belentani7"]
+  }
+  </script>
+</div></main>
+<footer class="site"><div class="wrap">
+<p>client · WebGL listo para servir online · <a href="index.html">Inicio</a> · <a href="accesibilidad.html">Accesibilidad</a> · <a href="privacidad.html">Privacidad</a></p>
+</div></footer>
+<script>
+(function(){
+  var canvas = document.createElement('canvas');
+  canvas.className = 'webgl-canvas';
+  var container = document.getElementById('contenido');
+  if(container){ container.appendChild(canvas); }
+  try{
+    var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+    if(!gl){ canvas.innerHTML = '<p style="color:var(--dim);font-family:var(--mono);padding:12px">WebGL no disponible en este navegador.</p>'; return; }
+    gl.clearColor(0.047,0.043,0.039,1);
+    gl.clear(gl.COLOR_BUFFER_BIT);
+    var vs = gl.createShader(gl.VERTEX_SHADER);
+    gl.shaderSource(vs, 'attribute vec2 p;void main(){gl_Position=vec4(p,0.0,1.0);}');
+    gl.compileShader(vs);
+    var fs = gl.createShader(gl.FRAGMENT_SHADER);
+    gl.shaderSource(fs, 'precision mediump float;uniform vec4 c;void main(){gl_FragColor=c;}');
+    gl.compileShader(fs);
+    var prog = gl.createProgram();
+    gl.attachShader(prog,vs); gl.attachShader(prog,fs); gl.linkProgram(prog);
+    gl.useProgram(prog);
+    var loc = gl.getUniformLocation(prog,'c');
+    gl.uniform4f(loc, 0.549, 0.659, 0.545, 1.0);
+    var buf = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER,buf);
+    gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
+    var attr = gl.getAttribLocation(prog,'p');
+    gl.enableVertexAttribArray(attr);
+    gl.vertexAttribPointer(attr,2,gl.FLOAT,false,0,0);
+    gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
+  }catch(e){ console.log('WebGL init:', e.message); }
 })();
 </div></main>
 <footer class="site"><div class="wrap">
