@@ -130,14 +130,14 @@ color:var(--accent2);padding:4px 10px;border-radius:999px;margin:10px 0}
     <section class="panel active" id="tab-batch" aria-labelledby="batchTitle">
       <div class="panel-head"><div><div class="eyebrow">01 / IMAGING</div><h2 id="batchTitle" data-i18n="batchTitle">Batch image converter</h2><p data-i18n="batchDesc">Convert up to 20 local images into PNG, JPEG or WebP. Resize with aspect ratio preserved. Download individually or as a standards-compatible ZIP.</p></div><div class="mark">◩</div></div>
       <div class="drop" id="imageDrop">
-        <input id="batchFiles" type="file" accept="image/png,image/jpeg,image/webp,image/avif,image/bmp,image/gif" multiple aria-describedby="batchLimits">
+        <input id="batchFiles" type="file" accept="image/png,image/jpeg,image/webp,image/avif,image/bmp,image/gif" multiple aria-describedby="batchLimits" aria-label="file">
         <span class="drop-emblem">＋</span>
         <strong>Drop images here or choose files</strong>
         <small id="batchLimits">20 files maximum · 20 MB each · 100 MB combined · 24 MP output cap</small>
       </div>
       <div class="formline">
         <div><label for="batchFormat">Output format</label><select id="batchFormat"><option value="image/webp">WebP</option><option value="image/jpeg">JPEG</option><option value="image/png">PNG</option></select></div>
-        <div><label for="batchWidth">Maximum width</label><input id="batchWidth" type="number" min="1" max="12000" placeholder="Original size"></div>
+        <div><label for="batchWidth">Maximum width</label><input id="batchWidth" type="number" min="1" max="12000" placeholder="Original size" aria-label="Original size"></div>
         <div><label for="batchQuality">Quality</label><select id="batchQuality"><option value=".95">95% · High</option><option value=".85" selected>85% · Balanced</option><option value=".7">70% · Compact</option><option value=".5">50% · Small</option></select></div>
       </div>
       <div id="batchList" class="filelist" aria-live="polite"></div>
@@ -147,14 +147,14 @@ color:var(--accent2);padding:4px 10px;border-radius:999px;margin:10px 0}
 
     <section class="panel" id="tab-subtitles" aria-labelledby="subtitleTitle" hidden>
       <div class="panel-head"><div><div class="eyebrow">02 / VIDEO POST-PRODUCTION</div><h2 id="subtitleTitle" data-i18n="subtitleTitle">Subtitle time studio</h2><p data-i18n="subtitleDesc">Convert SRT/VTT, shift timestamps and export clean text. The tool processes existing captions — it does not invent speech recognition for local video files.</p></div><div class="mark">≋</div></div>
-      <label for="subtitleFile">Subtitle file (optional)</label><input id="subtitleFile" type="file" accept=".srt,.vtt,.txt,text/plain">
+      <label for="subtitleFile">Subtitle file (optional)</label><input id="subtitleFile" type="file" accept=".srt,.vtt,.txt,text/plain" aria-label="file">
       <label for="subtitleInput">Paste captions</label><textarea id="subtitleInput" rows="11" spellcheck="false" placeholder="1&#10;00:00:01,000 --> 00:00:03,000&#10;First sentence"></textarea>
-      <div class="formline"><div><label for="subtitleShift">Shift in milliseconds (+ / −)</label><input id="subtitleShift" type="number" min="-86400000" max="86400000" value="0"></div><div><label for="subtitleFormat">Export format</label><select id="subtitleFormat"><option value="srt">SRT</option><option value="vtt">VTT</option><option value="txt">TXT transcript</option></select></div></div>
+      <div class="formline"><div><label for="subtitleShift">Shift in milliseconds (+ / −)</label><input id="subtitleShift" type="number" min="-86400000" max="86400000" value="0" aria-label="number"></div><div><label for="subtitleFormat">Export format</label><select id="subtitleFormat"><option value="srt">SRT</option><option value="vtt">VTT</option><option value="txt">TXT transcript</option></select></div></div>
       <div class="caption-generator" aria-label="Text to draft subtitles">
         <div class="eyebrow">TEXT → TIMED DRAFT</div>
         <p class="hint">No audio recognition is performed. This creates estimated cue timings from a written script; correct the timings against your actual recording.</p>
-        <div class="formline"><div><label for="captionWpm">Estimated words per minute</label><input id="captionWpm" type="number" min="80" max="280" value="165"></div>
-        <div><label for="captionStart">Start at second</label><input id="captionStart" type="number" min="0" max="86400" step="0.1" value="0"></div></div>
+        <div class="formline"><div><label for="captionWpm">Estimated words per minute</label><input id="captionWpm" type="number" min="80" max="280" value="165" aria-label="number"></div>
+        <div><label for="captionStart">Start at second</label><input id="captionStart" type="number" min="0" max="86400" step="0.1" value="0" aria-label="number"></div></div>
         <button class="secondary" id="captionDraft">Generate editable timed draft ↗</button>
       </div>
       <div class="actionline"><button class="cta" id="subtitleGo" data-i18n="subtitleGo">Convert & export ↗</button><button class="secondary" id="subtitlePreview" data-i18n="subtitlePreview">Preview shifted text</button></div>
@@ -171,7 +171,7 @@ color:var(--accent2);padding:4px 10px;border-radius:999px;margin:10px 0}
 
     <section class="panel" id="tab-storyboard" aria-labelledby="storyTitle" hidden>
       <div class="panel-head"><div><div class="eyebrow">04 / CREATIVE PRODUCTION</div><h2 id="storyTitle" data-i18n="storyTitle">Storyboard architect</h2><p data-i18n="storyDesc">Plan and export real shot lists for reels, music videos and creative campaigns: duration, camera, movement, visual intention and sound.</p></div><div class="mark">◇</div></div>
-      <div class="formline"><div><label for="filmTitle">Production title</label><input id="filmTitle" maxlength="100" placeholder="Judas — Midnight Sequence"></div><div><label for="filmTempo">Project tempo (BPM, optional)</label><input id="filmTempo" type="number" min="1" max="320" placeholder="128"></div></div>
+      <div class="formline"><div><label for="filmTitle">Production title</label><input id="filmTitle" maxlength="100" placeholder="Judas — Midnight Sequence" aria-label="Judas — Midnight Sequence"></div><div><label for="filmTempo">Project tempo (BPM, optional)</label><input id="filmTempo" type="number" min="1" max="320" placeholder="128" aria-label="128"></div></div>
       <div class="table-scroll"><table><thead><tr><th>Shot</th><th>Seconds</th><th>Camera</th><th>Movement</th><th>Visual</th><th>Audio</th><th>Notes</th><th></th></tr></thead><tbody id="shots"></tbody></table></div>
       <div class="actionline"><button class="secondary" id="addShot" data-i18n="addShot">＋ Add shot</button><button class="cta" id="exportShots" data-i18n="exportShots">Export CSV ↗</button><button class="secondary" id="exportShotsJson" data-i18n="exportShotsJson">Export JSON</button></div>
       <div id="storyResult" class="result" role="status" aria-live="polite">A new storyboard is ready.</div>
@@ -179,7 +179,7 @@ color:var(--accent2);padding:4px 10px;border-radius:999px;margin:10px 0}
 
     <section class="panel" id="tab-palette" aria-labelledby="paletteTitle" hidden>
       <div class="panel-head"><div><div class="eyebrow">05 / ART DIRECTION</div><h2 id="paletteTitle" data-i18n="paletteTitle">Image color sampler</h2><p data-i18n="paletteDesc">Derive a compact palette from the pixels in your own image. Sampled colors are approximate; export swatches as reusable CSS variables.</p></div><div class="mark">◉</div></div>
-      <label for="paletteImage">Local image file</label><input id="paletteImage" type="file" accept="image/*">
+      <label for="paletteImage">Local image file</label><input id="paletteImage" type="file" accept="image/*" aria-label="file">
       <div class="image-preview"><canvas id="paletteCanvas" width="420" height="240" aria-label="Color source image preview"></canvas></div>
       <div class="actionline"><button class="cta" id="paletteGo" data-i18n="paletteGo">Extract palette ↗</button><button class="secondary" id="paletteExport" data-i18n="paletteExport">Export CSS</button></div>
       <div id="swatches" class="swatches" aria-live="polite"></div>
@@ -189,7 +189,7 @@ color:var(--accent2);padding:4px 10px;border-radius:999px;margin:10px 0}
     <section class="panel" id="tab-pdf" aria-labelledby="pdfTitle" hidden>
       <div class="panel-head"><div><div class="eyebrow">06 / DOCUMENT PROCESSING</div><h2 id="pdfTitle" data-i18n="pdfTitle">Images into PDF</h2><p data-i18n="pdfDesc">Combine photographs and screenshots into an A4 PDF without sending them to a server. Every input is rasterized locally as JPEG, removing source metadata. One page per image, with aspect ratio preserved.</p></div><div class="mark">▤</div></div>
       <label for="pdfFiles">Select 1–25 local images</label>
-      <input type="file" id="pdfFiles" accept="image/*" multiple>
+      <input type="file" id="pdfFiles" accept="image/*" multiple aria-label="file">
       <div class="formline"><div><label for="pdfQuality">JPEG fidelity</label><select id="pdfQuality"><option value=".92">High — 92%</option><option value=".80" selected>Balanced — 80%</option><option value=".65">Small — 65%</option></select></div><div><label for="pdfMargin">Page margins in points</label><select id="pdfMargin"><option value="0">Edge to edge</option><option value="24" selected>Standard</option><option value="48">Wide</option></select></div></div>
       <div class="actionline"><button id="pdfGo" class="cta" data-i18n="pdfGo">Compose & download PDF ↗</button></div>
       <div id="pdfResult" class="result" role="status" aria-live="polite">No images selected.</div>
@@ -197,7 +197,7 @@ color:var(--accent2);padding:4px 10px;border-radius:999px;margin:10px 0}
 
     <section class="panel" id="tab-audio" aria-labelledby="audioTitle" hidden>
       <div class="panel-head"><div><div class="eyebrow">07 / AUDIO PROCESSING</div><h2 id="audioTitle" data-i18n="audioTitle">Audio to WAV</h2><p data-i18n="audioDesc">Decode compatible local audio formats, inspect duration, peak and RMS, then export 16-bit mono or stereo PCM WAV. Decoding happens in the browser's Web Audio engine.</p></div><div class="mark">♫</div></div>
-      <label for="audioFile">Choose audio file</label><input id="audioFile" type="file" accept="audio/*">
+      <label for="audioFile">Choose audio file</label><input id="audioFile" type="file" accept="audio/*" aria-label="file">
       <div class="formline"><div><label for="audioChannels">Channels</label><select id="audioChannels"><option value="original">Keep original (up to stereo)</option><option value="mono">Mix to mono</option></select></div><div><label for="audioNormalize">Volume processing</label><select id="audioNormalize"><option value="no">Keep original peaks</option><option value="yes">Peak normalize (up to 16×)</option></select></div></div>
       <div class="image-preview"><canvas id="waveCanvas" width="760" height="170" role="img" aria-label="Waveform visual representation"></canvas></div>
       <div class="actionline"><button id="audioGo" class="cta" data-i18n="audioGo">Decode & download WAV ↗</button></div>
@@ -206,7 +206,7 @@ color:var(--accent2);padding:4px 10px;border-radius:999px;margin:10px 0}
 
     <section class="panel" id="tab-video" aria-labelledby="videoTitle" hidden>
       <div class="panel-head"><div><div class="eyebrow">08 / VIDEO TOOLS</div><h2 id="videoTitle" data-i18n="videoTitle">Video contact sheet</h2><p data-i18n="videoDesc">Extract evenly spaced still frames from your own local video and combine them into a labelled PNG contact sheet. Codec support depends on your browser; no media is uploaded.</p></div><div class="mark">▦</div></div>
-      <label for="videoSheetFile" data-i18n="videoFileLabel">Local video (max 500 MB)</label><input id="videoSheetFile" type="file" accept="video/*">
+      <label for="videoSheetFile" data-i18n="videoFileLabel">Local video (max 500 MB)</label><input id="videoSheetFile" type="file" accept="video/*" aria-label="file">
       <div class="formline"><div><label for="videoSheetCount" data-i18n="videoCountLabel">Frames to sample</label><select id="videoSheetCount"><option value="4">4 (2 × 2)</option><option value="9" selected>9 (3 × 3)</option><option value="16">16 (4 × 4)</option></select></div></div>
       <div class="actionline"><button id="videoSheetGo" class="cta" data-i18n="videoGo">Build contact sheet ↗</button></div>
       <div id="videoSheetResult" class="result" role="status" aria-live="polite">Choose a video to export timed stills.</div>

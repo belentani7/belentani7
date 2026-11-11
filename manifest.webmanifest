@@ -1,0 +1,17 @@
+{
+  "name": "Pedro Belentani",
+  "short_name": "Pedro Belent",
+  "description": "perfil profesional y puerta del ecosistema",
+  "lang": "es",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f1419",
+  "theme_color": "#4bd0ff",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

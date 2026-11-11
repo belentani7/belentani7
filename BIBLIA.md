@@ -52,3 +52,51 @@ Proveer valor a través de tecnología moderna, código mantenible y experiencia
 - Monorepo o repositorio independiente según el producto
 - Despliegue por copia de archivos (cero build) salvo que se especifique lo contrario
 - Working trees respetados: no se sobrescriben cambios sin restaurar desde HEAD
+
+<!-- repo-forge:biblia:inicio -->
+# BIBLIA.md — belentani7
+
+Doctrina del producto del repositorio `belentani7` del ecosistema belentani7.
+
+## Visión
+
+el índice vivo del ecosistema: qué construye, qué funciona hoy, con demos enlazadas y estado real de cada producto
+
+## Misión
+
+Una herramienta que se puede auditar: dice qué hace, lo hace, y deja rastro de lo que hizo.
+
+## Público
+
+reclutadores, clientes y colaboradores
+
+## Stack
+
+sitio estático publicable tal cual · JSON, HTML, JavaScript, Markdown, TypeScript, Python
+
+## Módulos que la promesa exige
+
+- Presentación
+- Catálogo de productos
+- Estado verificado
+- Contacto
+
+## Reglas de desarrollo
+
+- Protocolo spec-first: PRD → SRS → Design Doc → ADR → Plan → Tests.
+- Un cambio, un resultado verificable.
+- Nada se afirma sin ejecución; lo no probado se declara como no probado.
+- Escritura solo con confirmación; nada destructivo.
+- Idioma del producto: español, salvo el público del repositorio.
+- Secreto fuera de disco, logs y manifiestos.
+
+## Lo que este repositorio no va a hacer
+
+métricas infladas
+
+## Convenciones
+
+`type(scope): resumen` — feat, fix, docs, chore, refactor, test, perf.
+
+<!-- repo-forge:biblia -->
+<!-- repo-forge:biblia:fin -->
