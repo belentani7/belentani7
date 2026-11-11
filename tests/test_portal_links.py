@@ -10,6 +10,7 @@ ROOT_HTML = ROOT / "index.html"
 EXPECTED_DESTINATIONS = {
     "Belentani — The Experience": "https://github.com/belentani7/belentani.es",
     "secure-t": "https://github.com/belentani7/secure-t",
+    "ManosAbiertas": "https://github.com/belentani7/ManosAbiertas",
 }
 EXCLUDED_DESTINATIONS = (
     "https://github.com/belentani7/Belentani.cv-ai",
@@ -17,7 +18,6 @@ EXCLUDED_DESTINATIONS = (
     "https://github.com/belentani7/CARQUIDEC",
     "https://github.com/belentani7/linguaforge",
     "https://github.com/belentani7/belentani-omg-portal",
-    "https://github.com/belentani7/ManosAbiertas",
     "https://judas-experience-13898.buildaispace.app/",
     "https://belentani7-profile.vercel.app/",
     "http://www.belentani.es/",
@@ -55,8 +55,8 @@ class PublicPortalTests(unittest.TestCase):
         parser.feed(self.source)
         self.items = parser.anchors
 
-    def test_exactly_two_verified_project_links(self):
-        self.assertEqual(len(self.items), 2)
+    def test_current_source_project_links(self):
+        self.assertEqual(len(self.items), len(EXPECTED_DESTINATIONS))
         for item in self.items:
             with self.subTest(label=item["label"].strip()):
                 attrs = item["attrs"]
