@@ -7,6 +7,8 @@ on:
       - 'README.md'
       - 'index.html'
       - 'scripts/publish_project_sites.py'
+      - 'scripts/wait_legacy_pages.py'
+      - 'tests/test_pages_order.py'
       - '.github/workflows/deploy-pages.yml'
   pull_request:
     paths:
@@ -14,6 +16,8 @@ on:
       - 'README.md'
       - 'index.html'
       - 'scripts/publish_project_sites.py'
+      - 'scripts/wait_legacy_pages.py'
+      - 'tests/test_pages_order.py'
       - 'tests/test_project_publication.py'
       - '.github/workflows/deploy-pages.yml'
   workflow_dispatch:
@@ -67,12 +71,24 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:
+      contents: read
+      actions: read
       pages: write
       id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Let the legacy branch deployment finish before publishing the complete artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/wait_legacy_pages.py --repository "$GITHUB_REPOSITORY" --head "$GITHUB_SHA"
       - name: Require the existing Pages site
         env:
           GH_TOKEN: ${{ github.token }}
