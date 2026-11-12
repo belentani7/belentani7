@@ -1,59 +1,87 @@
 name: Deploy project landing page
-
 on:
-  # Manual until repository Settings > Pages > Source is GitHub Actions.
-  # Vercel is the active site publisher for main; do not create failing Pages
-  # deployments automatically on unrelated docs / workflow changes.
+  push:
+    branches: [main]
+    paths:
+      - 'docs/**'
+      - 'README.md'
+      - 'index.html'
+      - 'scripts/publish_project_sites.py'
+      - '.github/workflows/deploy-pages.yml'
+  pull_request:
+    paths:
+      - 'docs/**'
+      - 'README.md'
+      - 'index.html'
+      - 'scripts/publish_project_sites.py'
+      - 'tests/test_project_publication.py'
+      - '.github/workflows/deploy-pages.yml'
   workflow_dispatch:
-
 permissions:
   contents: read
-  pages: write
-  id-token: write
-
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: false
-
 jobs:
-  deploy:
-    if: github.ref == 'refs/heads/main'
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - name: Require Pages to be enabled by a repository admin
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          set -euo pipefail
-          if ! gh api "/repos/$GITHUB_REPOSITORY/pages" > "$RUNNER_TEMP/pages-site.json"; then
-            echo "::error title=GitHub Pages configuration required::Open Settings > Pages > Build and deployment > Source, and select GitHub Actions. The built-in GITHUB_TOKEN cannot create a Pages site."
-            {
-              echo "## Publication blocked: GitHub Pages is not configured"
-              echo "A repository administrator must open **Settings → Pages → Build and deployment → Source → GitHub Actions** once."
-              echo "Do not add extra PATs or deployment secrets to automate this one-time setting."
-              echo "After enabling Pages, run this workflow again using workflow_dispatch."
-            } >> "$GITHUB_STEP_SUMMARY"
-            exit 1
-          fi
-      - name: Checkout verified main
-        uses: actions/checkout@v7
+      - uses: actions/checkout@v7
         with:
           persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify profile and publication contracts
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Checkout verified Secure-T source
+        uses: actions/checkout@v7
+        with:
+          repository: belentani7/secure-t
+          ref: bdeea94019cd3ac4e776c682da8f84ebcc784c80
+          path: .published-sources/secure-t
+          persist-credentials: false
+      - name: Checkout verified MUSIC OS source
+        uses: actions/checkout@v7
+        with:
+          repository: belentani7/music-os-pedro-belentani
+          ref: fd252485824efb2140b2230c587038d1da751447
+          path: .published-sources/music-os
+          persist-credentials: false
+      - name: Assemble public artifacts without copying repositories or local history
+        run: python scripts/publish_project_sites.py --sources-root .published-sources
       - name: Verify static site contents
         run: |
           test -s docs/index.html
           test -s docs/living-machine/index.html
           test -s docs/living-machine/studio.html
-      - name: Configure GitHub Pages without auto-enablement
-        uses: actions/configure-pages@v5
-      - name: Upload static site
-        uses: actions/upload-pages-artifact@v5
+          test -s docs/projects/secure-t/campus/index.html
+          test -s docs/projects/music-os/index.html
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: docs
-      - name: Deploy
-        id: deployment
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Require the existing Pages site
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if ! gh api "/repos/$GITHUB_REPOSITORY/pages" --silent; then
+            echo "::error title=GitHub Pages configuration required::Enable Pages in repository settings, then rerun workflow_dispatch. No extra deployment secrets are required."
+            exit 1
+          fi
+      - name: Configure GitHub Pages without auto-enablement
+        uses: actions/configure-pages@v5
+      - id: deployment
         uses: actions/deploy-pages@v4
