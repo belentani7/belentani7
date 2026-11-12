@@ -15,3 +15,6 @@ La publicación solicitada activa el build automático para los cambios del perf
 
 ## Prueba de motor incompatible con el guard SSRF
 El CI reveló una prueba antigua que esperaba completar un crawl de loopback, ahora prohibido por el guard existente. Se verifica el recorrido de misión con una respuesta HTTP controlada y se añade una comprobación explícita de que los destinos internos se rechazan antes de llamar a cualquier transporte. No se cambia el guard ni se añade una excepción de red en producción.
+
+## Verificación pública y orden de publicación
+El artefacto desplegado contenía las 497 páginas del campus, pero un despliegue nativo de la rama terminó seis segundos después y las rutas nuevas devolvieron 404. Se coordina la promoción: el workflow espera a que termine el publicador nativo del mismo commit y publica después el artefacto completo. No se intenta cambiar la configuración administrativa de Pages ni se amplían credenciales. Las pruebas cubren runs en cola, activos, completados y de otros commits.
