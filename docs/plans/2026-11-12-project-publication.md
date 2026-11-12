@@ -12,3 +12,6 @@ Un manifiesto fija repositorio y commit. Checkout en CI descarga únicamente esa
 Pruebas de presentación del perfil, contratos del ensamblador, construcción real de ambos artefactos, recursos locales, doctor y Gitleaks. El despliegue usa los permisos existentes de Pages y se verifica al finalizar; no se añaden credenciales ni se presupone disponibilidad de los servicios de IA.
 
 La publicación solicitada activa el build automático para los cambios del perfil en main. Se actualiza el contrato anterior de ejecución exclusivamente manual: se mantiene el guard de Pages preexistente y los PR nunca ejecutan deploy. No se activa Pages ni se añaden tokens automáticamente.
+
+## Prueba de motor incompatible con el guard SSRF
+El CI reveló una prueba antigua que esperaba completar un crawl de loopback, ahora prohibido por el guard existente. Se verifica el recorrido de misión con una respuesta HTTP controlada y se añade una comprobación explícita de que los destinos internos se rechazan antes de llamar a cualquier transporte. No se cambia el guard ni se añade una excepción de red en producción.
