@@ -31,3 +31,7 @@ Un producto entra en este perfil cuando su propuesta se entiende, la experiencia
 ---
 
 [GitHub](https://github.com/belentani7) · Barcelona
+
+
+## Producto
+Véase `plataforma/OFERTA.md`, `plataforma/precios.json`, `plataforma/ONEPAGER.md`.

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from pathlib import Path
 
 text = Path(__file__).parents[1].joinpath('docker-compose.yml').read_text()

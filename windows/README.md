@@ -45,3 +45,7 @@ El script usa `electron-builder` y genera NSIS y portable para Windows x64. Para
 ## Limitaciones verificadas
 
 La compilación del EXE no puede validarse ejecutándolo dentro del sandbox Linux. Los EXE históricos de `dist/` son binarios PE/NSIS existentes, pero el instalador de esta configuración debe recompilarse después de sincronizar estos cambios. La ejecución final debe probarse en una máquina Windows 11 real.
+
+
+## Producto
+Véase `plataforma/OFERTA.md`.
