@@ -92,4 +92,4 @@ diseño de interacción y experiencia en Trust & Safety.
 
 ## Project publications
 
-[Static project demonstrations](./docs/projects/index.html) · [Publication sources](./docs/projects/sources.json) · [Platform scope](./plataforma/FICHA.md). A published demonstration is not a claim that every service is complete.
+[Static project demonstrations](https://www.belentani.es/belentani7/projects/) · [Publication sources](./docs/projects/sources.json) · [Platform scope](./plataforma/FICHA.md). A published demonstration is not a claim that every service is complete.
