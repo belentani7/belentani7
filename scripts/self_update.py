@@ -2,14 +2,41 @@
 """Read-only, sourced GitHub public metric snapshot; never edits a profile."""
 import argparse
 import json
+import re
 import sys
 from datetime import UTC, datetime
 from pathlib import Path
+from urllib.parse import urlparse
 from urllib.request import Request, urlopen
+
+SAFE_USERNAME = re.compile(r'^[A-Za-z0-9](?:[A-Za-z0-9-]{0,37}[A-Za-z0-9])?$')
+
+
+def assert_public_http(url: str) -> str:
+    """Rechaza esquemas no HTTP(S) y hosts internos (anti-SSRF)."""
+    import ipaddress
+    parsed = urlparse(url)
+    if parsed.scheme not in {'http', 'https'}:
+        raise ValueError('Solo se permiten URLs HTTP(S)')
+    host = (parsed.hostname or '').lower()
+    if not host or host in {'localhost', 'metadata.google.internal'}:
+        raise ValueError('Host interno o vacio no permitido')
+    try:
+        addr = ipaddress.ip_address(host.strip('[]'))
+    except ValueError:
+        return url
+    if addr.is_private or addr.is_loopback or addr.is_link_local or addr.is_reserved or addr.is_multicast:
+        raise ValueError('IP interna no permitida')
+    return url
 
 
 def snapshot(username: str = 'belentani7') -> dict:
-    endpoint = f'https://api.github.com/users/{username}'
+    if not SAFE_USERNAME.fullmatch(username):
+        raise ValueError('Expected a safe GitHub username (alphanumeric and hyphens)')
+    endpoint = assert_public_http(f'https://api.github.com/users/{username}')
+    parsed = urlparse(endpoint)
+    if parsed.scheme != 'https' or parsed.hostname != 'api.github.com':
+        raise ValueError('Endpoint inesperado; solo se permite api.github.com')
     req = Request(endpoint, headers={'Accept': 'application/vnd.github+json', 'User-Agent': 'Belentani-Profile-Maintenance/1.0'})
     with urlopen(req, timeout=10) as response:
         raw = json.load(response)

@@ -9,7 +9,7 @@
 
 *Barcelona metro · Brazilian perspective · ES / PT-BR / EN*
 
-[**Portfolio**](https://belentani.es) · [**Repository atlas**](https://github.com/belentani7/belentani-omg-portal) · [**Terminal source**](./docs/living-machine/index.html) · [**Studio source**](./docs/living-machine/studio.html) · [**Capabilities**](#technology--domains) · [**Selected work**](#selected-work) · [**Contact**](mailto:belentani7pedro@gmail.com)
+[**Portfolio**](https://belentani.es) · [**Repository atlas**](https://github.com/belentani7/belentani-omg-portal) · [**Terminal source**](./docs/living-machine/index.html) · [**Studio source**](./docs/living-machine/studio.html) · [**Capabilities**](#technology--domains) · [**Selected work**](#selected-work) · [**GitHub**](https://github.com/belentani7)
 
 </div>
 
@@ -265,6 +265,6 @@ Metrics and repository counts are not frozen into this profile. The [Software At
 
 For work involving AI systems, product architecture, multilingual accessibility, useful developer tools and ambitious creative technology:
 
-**[belentani.es](https://belentani.es)** · **[Email](mailto:belentani7pedro@gmail.com)** · **[GitHub](https://github.com/belentani7)**
+**[belentani.es](https://belentani.es)** · **[GitHub](https://github.com/belentani7)** · **[GitHub](https://github.com/belentani7)**
 
 <div align="center"><sub>© 2026 Pedro Belentani · Context before code. Human purpose before automation. Design that earns its complexity.</sub></div>

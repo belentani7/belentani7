@@ -1,13 +1,31 @@
-"""Regression tests for the branded public portal links; no external network."""
+"""Regression tests for the public project showcase; no external network."""
 import unittest
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit
 
-HTML = Path(__file__).resolve().parents[1] / "docs" / "index.html"
+ROOT = Path(__file__).resolve().parents[1]
+HTML = ROOT / "docs" / "index.html"
+ROOT_HTML = ROOT / "index.html"
+EXPECTED_DESTINATIONS = {
+    "Belentani — The Experience": "https://github.com/belentani7/belentani.es",
+    "secure-t": "https://github.com/belentani7/secure-t",
+    "ManosAbiertas": "https://github.com/belentani7/ManosAbiertas",
+}
+EXCLUDED_DESTINATIONS = (
+    "https://github.com/belentani7/Belentani.cv-ai",
+    "https://github.com/belentani7/ivy-la-vie",
+    "https://github.com/belentani7/CARQUIDEC",
+    "https://github.com/belentani7/linguaforge",
+    "https://github.com/belentani7/belentani-omg-portal",
+    "https://judas-experience-13898.buildaispace.app/",
+    "https://belentani7-profile.vercel.app/",
+    "http://www.belentani.es/",
+    "http://www.belentani.eu/",
+)
 
 
-class PortalParser(HTMLParser):
+class ProjectLinkParser(HTMLParser):
     def __init__(self):
         super().__init__()
         self.anchors = []
@@ -17,9 +35,9 @@ class PortalParser(HTMLParser):
         if tag != "a":
             return
         values = dict(attrs)
-        if "portal-btn" in values.get("class", "").split():
+        if "project-link" in values.get("class", "").split():
             self.active = {"attrs": values, "label": ""}
-    
+
     def handle_data(self, data):
         if self.active is not None:
             self.active["label"] += data
@@ -33,38 +51,31 @@ class PortalParser(HTMLParser):
 class PublicPortalTests(unittest.TestCase):
     def setUp(self):
         self.source = HTML.read_text(encoding="utf-8")
-        parser = PortalParser()
+        parser = ProjectLinkParser()
         parser.feed(self.source)
         self.items = parser.anchors
 
-    def test_all_portal_buttons_have_safe_https_destinations(self):
-        self.assertGreaterEqual(len(self.items), 6)
+    def test_current_source_project_links(self):
+        self.assertEqual(len(self.items), len(EXPECTED_DESTINATIONS))
         for item in self.items:
             with self.subTest(label=item["label"].strip()):
                 attrs = item["attrs"]
                 url = urlsplit(attrs.get("href", ""))
                 self.assertEqual(url.scheme, "https")
-                self.assertTrue(url.netloc)
-                self.assertEqual(attrs.get("target"), "_blank")
-                self.assertTrue({"noopener", "noreferrer"} <= set(attrs.get("rel", "").split()))
+                self.assertEqual(url.netloc, "github.com")
+                self.assertTrue(url.path.startswith("/belentani7/"))
+                self.assertIn("Ver repositorio", item["label"])
+        hrefs = [item["attrs"]["href"] for item in self.items]
+        self.assertEqual(set(hrefs), set(EXPECTED_DESTINATIONS.values()))
+        self.assertEqual(len(hrefs), len(set(hrefs)))
 
-    def test_each_project_points_to_its_own_verified_destination(self):
-        expected = {
-            "Judas Exp": "https://judas-experience-13898.buildaispace.app/",
-            "Portfolio": "https://belentani7-profile.vercel.app/",
-            "NOIACORE": "https://github.com/belentani7/noiacore",
-        }
-        for label, href in expected.items():
-            with self.subTest(label=label):
-                matches = [item for item in self.items if label in item["label"]]
-                self.assertEqual(len(matches), 1, f"Missing or duplicated {label} button")
-                self.assertEqual(matches[0]["attrs"]["href"], href)
+    def test_excluded_destinations_are_absent(self):
+        hrefs = [item["attrs"].get("href") for item in self.items]
+        for destination in EXCLUDED_DESTINATIONS:
+            self.assertNotIn(destination, hrefs)
 
-    def test_no_brand_name_reuses_an_unrelated_project(self):
-        urls = [item["attrs"].get("href") for item in self.items]
-        self.assertEqual(len(urls), len(set(urls)))
-        self.assertNotIn("http://www.belentani.es/", urls)
-        self.assertNotIn("http://www.belentani.eu/", urls)
+    def test_docs_mirror_is_byte_identical_to_root(self):
+        self.assertEqual(self.source, ROOT_HTML.read_text(encoding="utf-8"))
 
 
 if __name__ == "__main__":

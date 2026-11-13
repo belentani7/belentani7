@@ -1,0 +1,78 @@
+{
+  "esquema": "repo-forge/ficha/1",
+  "nombre": "belentani7",
+  "remoto": "https://github.com/belentani7/belentani7",
+  "arquetipo": "web-static",
+  "stack": "JSON",
+  "modelo": "perfil profesional y puerta del ecosistema",
+  "publico": "reclutadores, clientes y colaboradores",
+  "techo": "el índice vivo del ecosistema: qué construye, qué funciona hoy, con demos enlazadas y estado real de cada producto",
+  "modulos": [
+    "Presentación",
+    "Catálogo de productos",
+    "Estado verificado",
+    "Contacto"
+  ],
+  "no_go": "métricas infladas",
+  "marca": {
+    "nombre": "Pedro Belentani",
+    "familia": "herramienta",
+    "paleta": {
+      "familia": "herramienta",
+      "bg": "#0f1419",
+      "surface": "#191e23",
+      "ink": "#e8eef6",
+      "muted": "#969ba2",
+      "accent": "#4bd0ff",
+      "accent2": "#a3e635",
+      "ok": "#15803d",
+      "warn": "#b45309",
+      "danger": "#b91c1c",
+      "contraste_ink_bg": 15.86,
+      "contraste_accent_bg": 10.37,
+      "accent_sobre_bg_ok": true
+    },
+    "narrativa": "Menos ceremonia, más resultado"
+  },
+  "paywall": {
+    "principio": "el binario es libre; se cobra el servicio, no el código",
+    "fases": 4
+  },
+  "medido": {
+    "archivos": 238,
+    "lineas": 37061,
+    "html": 17,
+    "tests": 20,
+    "bytes": 2288478,
+    "lenguajes": {
+      "JSON": 46.1,
+      "HTML": 16.6,
+      "JavaScript": 10.1,
+      "Markdown": 9.6,
+      "TypeScript": 7.4,
+      "Python": 4.0
+    },
+    "fecha": "2026-11-10"
+  },
+  "gate": {
+    "pass": 36,
+    "fail": 1,
+    "skip": 12,
+    "cumplimiento": 97.3,
+    "fallos": [
+      "GH-10"
+    ]
+  },
+  "ajustes": {
+    "total": 61,
+    "aplicados": 52,
+    "ya_estaban": 9,
+    "fallos": 0
+  },
+  "esfuerzo_dias": 41,
+  "doctor": {
+    "ok": true,
+    "detalle": "50/50 comprobaciones en verde"
+  },
+  "huella": "c9db5bf58389cff4"
+}

@@ -107,6 +107,6 @@ The [previous extended profile](./docs/profile-archive-2026-10-29.md) is preserv
 
 Open to thoughtful technical collaboration, open-source dialogue and creative partnerships.
 
-[Portfolio / artist universe](https://belentani.es) · [Email](mailto:belentani7pedro@gmail.com) · [GitHub](https://github.com/belentani7)
+[Portfolio / artist universe](https://belentani.es) · [GitHub](https://github.com/belentani7) · [GitHub](https://github.com/belentani7)
 
 <sub>Clarity, accessibility, traceable evidence and useful products over exaggerated claims.</sub>

@@ -6,6 +6,7 @@ import re
 import sys
 from pathlib import Path
 from urllib.error import HTTPError, URLError
+from urllib.parse import urlparse
 from urllib.request import Request, urlopen
 
 SAFE_REPO = re.compile(r"^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$")
@@ -41,7 +42,31 @@ def safe_to_retry(jobs):
     return True
 
 
+GITHUB_API_ROOT = "https://api.github.com/"
+
+
+def assert_public_http(url: str) -> str:
+    """Rechaza esquemas no HTTP(S) y hosts internos (anti-SSRF)."""
+    import ipaddress
+    parsed = urlparse(url)
+    if parsed.scheme not in {"http", "https"}:
+        raise ValueError("Solo se permiten URLs HTTP(S)")
+    host = (parsed.hostname or "").lower()
+    if not host or host in {"localhost", "metadata.google.internal"}:
+        raise ValueError("Host interno o vacio no permitido")
+    try:
+        addr = ipaddress.ip_address(host.strip("[]"))
+    except ValueError:
+        return url
+    if addr.is_private or addr.is_loopback or addr.is_link_local or addr.is_reserved or addr.is_multicast:
+        raise ValueError("IP interna no permitida")
+    return url
+
+
 def api(url, token, method="GET"):
+    url = assert_public_http(url)
+    if not url.startswith(GITHUB_API_ROOT) or urlparse(url).hostname != "api.github.com":
+        raise ValueError("Solo se permiten URLs bajo https://api.github.com/")
     request = Request(
         url, method=method, data=b"{}" if method == "POST" else None,
         headers={"Authorization": f"Bearer {token}",

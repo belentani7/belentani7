@@ -1,22 +1,12 @@
 {
-  "name": "belentani",
-  "version": "0.6.0",
-  "main": "desktop/src/main.js",
-  "bin": {
-    "bellentani": "bellentani-cli.js"
-  },
+  "name": "belentani7-profile",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The product house — portfolio vitrine, catalogue of 115 products and the unified audit. Every vitrine verified: pushed, deployed, green.",
   "scripts": {
-    "test": "cd desktop && node tests/audit.test.js && node bellentani-cli.js doctor && node bellentani-cli.js audit",
-    "start": "electron .",
-    "dev": "electron .",
-    "build": "electron-builder --win",
-    "build:win": "electron-builder --win --x64"
+    "test": "node --test docs/living-machine/quality.test.cjs docs/living-machine/studio.test.cjs docs/living-machine/media.test.cjs docs/living-machine/i18n.test.cjs docs/living-machine/video.test.cjs docs/living-machine/diagnostics.test.cjs docs/living-machine/offline.test.cjs"
   },
-  "keywords": [],
-  "author": "",
   "license": "MIT",
-  "packageManager": "pnpm@10.4.1",
-  "description": "IDE agentico persistente y gobernado por PVC-U para Windows 11",
   "repository": {
     "type": "git",
     "url": "https://github.com/belentani7/belentani7.git"
@@ -24,58 +14,7 @@
   "bugs": {
     "url": "https://github.com/belentani7/belentani7/issues"
   },
-  "homepage": "https://github.com/belentani7/belentani7",
-  "productName": "Bellentani",
-  "devDependencies": {
-    "electron": "^44.7.0",
-    "electron-builder": "^26.15.3"
-  },
-  "dependencies": {
-    "monaco-editor": "^0.57.0",
-    "uuid": "^14.0.3"
-  },
-  "build": {
-    "appId": "com.bellentani.desktop",
-    "files": [
-      "desktop/src/**/*",
-      "package.json",
-      "node_modules/monaco-editor/min/**/*",
-      "node_modules/monaco-editor/package.json",
-      "node_modules/uuid/**/*",
-      "node_modules/uuid/package.json"
-    ],
-    "extraResources": [
-      {
-        "from": "engine",
-        "to": "engine",
-        "filter": [
-          "**/*",
-          "!data/**",
-          "!**/__pycache__/**"
-        ]
-      },
-      {
-        "from": "manos",
-        "to": "manos"
-      },
-      {
-        "from": "windows",
-        "to": "windows"
-      }
-    ],
-    "win": {
-      "target": [
-        "nsis",
-        "portable"
-      ],
-      "artifactName": "Bellentani-Setup-${version}-${arch}.${ext}"
-    },
-    "nsis": {
-      "oneClick": "false",
-      "perMachine": "false",
-      "allowToChangeInstallationDirectory": "true"
-    }
-  },
+  "homepage": "https://belentani7.github.io/belentani7/",
   "engines": {
     "node": ">=18"
   }

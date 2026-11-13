@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auditoría unificada — Ecosistema belentani7 · 2026-11-02 → 07</title>
+<meta name="description" content="La auditoría completa del ecosistema belentani7 consolidada en un solo documento: 73 artefactos (.md, .csv, .html, .json) fusionados. 434→115 repositorios, correcciones con estado real, seguridad, gates y gobernanza.">
+<meta name="generator" content="repo-superpowers-audit-v1">
+<meta property="og:title" content="Auditoría unificada — Ecosistema belentani7 · 2026-11-02 → 07">
+<meta property="og:description" content="La auditoría completa del ecosistema belentani7 consolidada en un solo documento: 73 artefactos (.md, .csv, .html, .json) fusionados. 434→115 repositorios, correcciones con estado real, seguridad, gates y gobernanza.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0a09'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%2346b42b'/%3E%3C/svg%3E">
+<style>
+:root{--bg:#0b0a09;--bg2:#131110;--ink:#f4efe7;--dim:#a89f92;--accent:#e0a35c;
+--accent2:#7fa88b;--line:rgba(244,239,231,.14);--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+--sans:ui-sans-serif,"Segoe UI",Inter,system-ui,-apple-system,sans-serif;
+--mono:ui-monospace,"Cascadia Mono",Consolas,monospace;--measure:62ch;--radius:14px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.65;
+-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 clamp(18px,4vw,40px);position:relative;z-index:1}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent2);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#12100e;padding:10px 16px;z-index:9}
+.skip:focus{left:12px;top:12px}
+header.site{border-bottom:1px solid var(--line);padding:22px 0;display:flex;gap:18px;
+align-items:baseline;justify-content:space-between;flex-wrap:wrap}
+.brand{font-family:var(--serif);font-size:1.05rem;letter-spacing:.01em}
+.brand span{color:var(--dim)}
+nav.site{display:flex;gap:18px;flex-wrap:wrap;font-family:var(--mono);font-size:.72rem;
+letter-spacing:.14em;text-transform:uppercase}
+nav.site a{color:var(--dim);text-decoration:none}
+nav.site a:hover,nav.site a[aria-current=page]{color:var(--ink)}
+main{padding:clamp(48px,9vh,104px) 0}
+.eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;
+color:var(--accent);margin:0 0 18px}
+h1{font-family:var(--serif);font-size:clamp(2.4rem,7vw,5.2rem);line-height:.95;
+letter-spacing:-.03em;margin:0 0 24px;font-weight:500;text-wrap:balance}
+h2{font-family:var(--serif);font-size:clamp(1.4rem,3vw,2.1rem);line-height:1.15;
+letter-spacing:-.02em;margin:64px 0 18px;font-weight:500}
+h3{font-size:1.02rem;margin:28px 0 10px;letter-spacing:-.01em}
+p,li{max-width:var(--measure);color:var(--ink)}
+.lead{font-size:clamp(1.05rem,2vw,1.28rem);color:var(--dim);max-width:56ch}
+hr{border:0;border-top:1px solid var(--line);margin:clamp(40px,8vh,80px) 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;
+background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin:32px 0}
+.cell{background:var(--bg2);padding:22px 20px}
+.cell h3{margin-top:0}
+.cell p{font-size:.9rem;color:var(--dim);margin:0}
+code,kbd{font-family:var(--mono);font-size:.86em;background:rgba(244,239,231,.07);
+padding:2px 6px;border-radius:5px}
+pre{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);
+padding:18px;overflow:auto;max-width:100%}
+pre code{background:none;padding:0}
+table{width:100%;border-collapse:collapse;margin:24px 0;font-size:.92rem}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+.pill{display:inline-block;font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;
+text-transform:uppercase;border:1px solid var(--line);color:var(--dim);padding:3px 9px;border-radius:999px}
+footer.site{border-top:1px solid var(--line);padding:28px 0 44px;color:var(--dim);font-size:.8rem}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}
+.reveal{opacity:1;transform:none;transition:none}}
+::selection{background:var(--accent);color:#12100e}
+.webgl-canvas{width:100%;height:400px;background:var(--bg2);border:1px solid var(--line);
+border-radius:var(--radius);margin:24px 0;display:block}
+.superpowers-badge{display:inline-block;font-family:var(--mono);font-size:.65rem;
+letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--accent2);
+color:var(--accent2);padding:4px 10px;border-radius:999px;margin:10px 0}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="site"><div class="wrap" style="display:flex;justify-content:space-between;align-items:baseline;gap:18px;flex-wrap:wrap">
+<div class="brand">docs <span>· ecosistema Belentani · WebGL online</span></div>
+<nav class="site" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="docs.html">Documentación</a><a href="accesibilidad.html">Accesibilidad</a><a href="privacidad.html">Privacidad</a><a href="404.html">404</a></nav>
+</div></header>
+<main id="contenido"><div class="wrap">
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="site"><div class="wrap" style="display:flex;justify-content:space-between;align-items:baseline;gap:18px;flex-wrap:wrap">
+<div class="brand">docs <span>· ecosistema Belentani · WebGL online</span></div>
+<nav class="site" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="docs.html">Documentación</a><a href="accesibilidad.html">Accesibilidad</a><a href="privacidad.html">Privacidad</a><a href="404.html">404</a></nav>
+</div></header>
+<main id="contenido"><div class="wrap">
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="site"><div class="wrap" style="display:flex;justify-content:space-between;align-items:baseline;gap:18px;flex-wrap:wrap">
+<div class="brand">docs <span>· ecosistema Belentani · WebGL online</span></div>
+<nav class="site" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="docs.html">Documentación</a><a href="accesibilidad.html">Accesibilidad</a><a href="privacidad.html">Privacidad</a><a href="404.html">404</a></nav>
+</div></header>
+<main id="contenido"><div class="wrap">
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="site"><div class="wrap" style="display:flex;justify-content:space-between;align-items:baseline;gap:18px;flex-wrap:wrap">
+<div class="brand">docs <span>· ecosistema Belentani · WebGL online</span></div>
+<nav class="site" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="docs.html">Documentación</a><a href="accesibilidad.html">Accesibilidad</a><a href="privacidad.html">Privacidad</a><a href="404.html">404</a></nav>
+</div></header>
+<main id="contenido"><div class="wrap">
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="site"><div class="wrap" style="display:flex;justify-content:space-between;align-items:baseline;gap:18px;flex-wrap:wrap">
+<div class="brand">docs <span>· ecosistema Belentani · WebGL online</span></div>
+<nav class="site" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="docs.html">Documentación</a><a href="accesibilidad.html">Accesibilidad</a><a href="privacidad.html">Privacidad</a><a href="404.html">404</a></nav>
+</div></header>
+<main id="contenido"><div class="wrap">
+<header>
+  <a class="marca" href="index.html">
+    <svg width="24" height="24" viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M16 5 L25 16 L16 27 L7 16 Z" fill="none" stroke="#D9B36C" stroke-width="1.6"/>
+      <circle cx="16" cy="16" r="2.4" fill="#D9B36C"/>
+    </svg>
+    <b>Belentani · Auditoría</b>
+  </a>
+  <nav>
+    <a href="index.html">Vitrina</a>
+    <a href="catalogo.html">Catálogo</a>
+    <a  target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</header>
+
+<section class="portada">
+  <h1>Auditoría <em>unificada</em> del ecosistema.</h1>
+  <p class="sub">
+    Un solo documento en lugar de setenta y tres: todo lo que la auditoría del
+    2 al 7 de noviembre de 2026 descubrió, reparó y dejó pendiente en la cuenta
+    <strong>belentani7</strong> — consolidado desde los informes en Markdown,
+    CSV, HTML y JSON dispersos por el entorno, con las cifras re-verificadas
+    contra GitHub el día de su emisión.
+  </p>
+  <span class="sello">emitido 2026-11-07 · 73 artefactos consolidados · 434 → 115 repos</span>
+</section>
+
+<div class="cuerpo">
+  <nav class="indice" aria-label="índice">
+    <div class="titulo-i">Contenido</div>
+    <a href="#resumen">1 · Resumen ejecutivo</a>
+    <a href="#cronologia">2 · Cronología</a>
+    <a href="#correcciones">3 · Correcciones y estado</a>
+    <a href="#verificacion">4 · Verificación del 07-11</a>
+    <a href="#deduplicacion">5 · Deduplicación</a>
+    <a href="#seguridad">6 · Seguridad</a>
+    <a href="#calidad">7 · Calidad y gates</a>
+    <a href="#agentes">8 · Sesiones de agentes</a>
+    <a href="#entorno">9 · Entorno y proveedores</a>
+    <a href="#fuentes">10 · Fuentes consolidadas</a>
+  </nav>
+
+  <main>
+
+  <section id="resumen">
+    <h2>1 · Resumen ejecutivo</h2>
+    <p>
+      Entre el 2 y el 7 de noviembre de 2026, el ecosistema belentani7 pasó de
+      <strong>434 repositorios</strong> (105 públicos, 329 privados, 79
+      archivados, 76 vacíos) a <strong>115 vivos</strong> tras una
+      deduplicación deliberada con red de seguridad completa. La auditoría
+      cubrió inventario, contexto, seguridad, conformidad, remediación
+      línea a línea, gates de calidad y el análisis forense de 74 sesiones de
+      agentes de código. Todas las correcciones automáticas aplicables sin
+      intervención humana se aplicaron; las que exigen decisión humana quedan
+      identificadas una a una.
+    </p>
+    <div class="tabla-scroll">
+    <table>
+      <thead><tr><th>Área</th><th>Métrica</th><th class="num">Valor</th></tr></thead>
+      <tbody>
+        <tr><td>Repos</td><td>Vivos hoy (públicos + privados)</td><td class="num"><strong>115</strong> (42 + 73)</td></tr>
+        <tr><td>Repos</td><td>Eliminados en dedup (restaurables hasta 2027-02-05)</td><td class="num">314</td></tr>
+        <tr><td>Repos</td><td>Clones de seguridad en disco</td><td class="num">436 (434 + 2)</td></tr>
+        <tr><td>Repos</td><td>Bundles de rescate generados el 07-11</td><td class="num">315 / 321</td></tr>
+        <tr><td>Conformidad</td><td>Media del universo original (425)</td><td class="num">99,9%</td></tr>
+        <tr><td>Gates</td><td>Ejecutados / verdes / rojos</td><td class="num">60 / 54 / 6</td></tr>
+        <tr><td>Producción</td><td>Vitrinas verificadas (CI verde + deploy vivo)</td><td class="num"><strong>13</strong></td></tr>
+        <tr><td>Producción</td><td>URLs respondiendo (Pages + dominios + Vercel)</td><td class="num">26</td></tr>
+        <tr><td>Seguridad</td><td>Hallazgos T3 re-escaneo (28 altos)</td><td class="num">149</td></tr>
+        <tr><td>Seguridad</td><td>Hallazgos en historial git (35 repos)</td><td class="num">1.158</td></tr>
+        <tr><td>Agentes</td><td>Sesiones analizadas / afirmaciones sin evidencia</td><td class="num">74 / 128</td></tr>
+        <tr><td>Remediación</td><td>Defectos reducidos por fixline (11-05)</td><td class="num">10.698 → 6.717 (−37%)</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <section id="cronologia">
+    <h2>2 · Cronología</h2>
+    <ul class="crono">
+      <li><span class="dia">2026-11-02</span>
+        <p>Plan de auditoría y pipeline T0–T5 sobre 425 repos (14,38 GB): playbook con 1.561 peticiones únicas de coders, plan de acción de seguridad (43 hallazgos altos), conformidad 99,9% (80 altos / 251 medios / 96 bajos sobre 111.531 archivos). Se aplican el pack de conformidad (4.609 archivos nuevos), el endurecimiento de .gitignore y la desindexación de 8 archivos sensibles, con idempotencia verificada (64 tests OK).</p></li>
+      <li><span class="dia">2026-11-03</span>
+        <p>Reparación de los 425: mojibake corregido en 17 archivos (7 repos), 00-core.mdc creado en 424, hygiene.yml en 356; 103 commits locales. Push masivo: 60 OK, 79 divergentes, 203 archivados, 82 sin remoto — los bloqueos quedan documentados.</p></li>
+      <li><span class="dia">2026-11-04</span>
+        <p>Entorno saneado: configuración de Codex reducida (35→28 proyectos, 21 elementos retirados), 6 pendientes-push protegidos con bundles y belentani.es reconciliado (merge d18f29d). 4 plataformas confirmadas live. Python saneado.</p></li>
+      <li><span class="dia">2026-11-05</span>
+        <p>Remediación línea a línea (fixline F1–F4): 84.704 archivos leídos, 24.112 modificados en 347 repos, defectos −37%, secure-t gate VERDE, muestra de 10/12 verdes. Nada se commitea: solo evidencia.</p></li>
+      <li><span class="dia">2026-11-06</span>
+        <p>Auditoría dedicada a judas-experience (tests + gitleaks en árbol, historial y estado final: sin hallazgos). Plan de refuerzo senior con aider definido.</p></li>
+      <li><span class="dia">2026-11-07</span>
+        <p>Re-ejecución completa sobre 436 clones: inventario, hallazgos git, índice de contexto (1.426 peticiones), estado git profundo (44 repos del workspace). <strong>Deduplicación: 314 repos borrados (0 fallos)</strong>, quedan 120 en la cuenta (115 keepers + 5 de audio excluidos). Re-escaneo de seguridad, regeneración de CSV y verificación final.</p></li>
+      <li><span class="dia">2026-11-07 (tarde)</span>
+        <p>Esta consolidación: los 73 artefactos se fusionan en un único documento, las cifras se re-verifican contra la API de GitHub y las correcciones pendientes se reagrupan por responsable (humano / máquina / bloqueado por regla).</p></li>
+    </ul>
+  </section>
+
+  <section id="correcciones">
+    <h2>3 · Correcciones y su estado</h2>
+    <p>
+      Cada corrección propuesta por cualquier informe del corpus, con el estado
+      verificado — no el prometido. «Bloqueada por regla» significa que una
+      política vigente del workspace lo impide sin autorización expresa
+      (p. ej. no modificar repositorios de clientes).
+    </p>
+    <ul class="lista">
+      <li><span class="etiqueta e-ok">aplicada</span> <strong>Desindexar archivos sensibles</strong> — 8 archivos (.env, .npmrc, .user_env) fuera del índice con git rm --cached; locales conservados (02-11, idempotente).</li>
+      <li><span class="etiqueta e-ok">aplicada</span> <strong>Pack de conformidad</strong> — 4.609 archivos nuevos en 425 repos + .gitleaks.toml al pack; segunda pasada en 0 (02-11).</li>
+      <li><span class="etiqueta e-ok">aplicada</span> <strong>Endurecer .gitignore</strong> — 425 repos endurecidos, 12 .gitignore nuevos, idempotente (02-11).</li>
+      <li><span class="etiqueta e-ok">aplicada</span> <strong>Reparar mojibake</strong> — 17 archivos en 7 repos a UTF-8 limpio; 1 UTF-16 legítimo respetado (03-11).</li>
+      <li><span class="etiqueta e-ok">aplicada</span> <strong>00-core.mdc + hygiene.yml</strong> — 425/425 en su momento (03-11); cobertura remota actual: 71/115 vivos (ver §4).</li>
+      <li><span class="etiqueta e-ok">aplicada</span> <strong>Fixline F1–F4</strong> — 24.112 archivos en 347 repos, defectos −37%, sin commit (05-11, por diseño).</li>
+      <li><span class="etiqueta e-ok">aplicada</span> <strong>Saneamiento del entorno</strong> — Codex 35→28, 21 elementos fuera; Python saneado; 6 worktrees archivados (04-11).</li>
+      <li><span class="etiqueta e-ok">aplicada</span> <strong>Deduplicación de la cuenta</strong> — 314 borrados, 0 fallos, 314/314 con clon local (07-11).</li>
+      <li><span class="etiqueta e-ok">aplicada</span> <strong>Bundles de rescate post-dedup</strong> — 315/321 generados el 07-11 en workspace\archivo\bundles-dedup-20261107 (6 fallos: clones sin objetos empaquetables, listados en el estado del lote).</li>
+      <li><span class="etiqueta e-ok">aplicada</span> <strong>Re-escaneo de seguridad</strong> — T3 149 / clones 138 / historial 1.158 (07-11).</li>
+      <li><span class="etiqueta e-medio">humano</span> <strong>Rotar credenciales</strong> — claves AWS/GitHub/OpenAI/Google/Anthropic comprometidas en historial: la rotación solo puede hacerla el dueño; ubicaciones redactadas conservadas.</li>
+      <li><span class="etiqueta e-medio">humano</span> <strong>Marcadores de conflicto</strong> — 3 restantes (decisión semántica por archivo).</li>
+      <li><span class="etiqueta e-medio">humano</span> <strong>6.717 defectos semánticos</strong> — clasificados requiere-humano (BLE001, PLW1510, S110…).</li>
+      <li><span class="etiqueta e-medio">humano</span> <strong>141 .js con sintaxis TypeScript</strong> — renombrar o transpilar repo por repo.</li>
+      <li><span class="etiqueta e-info">regla</span> <strong>Cerrar carencias remotas en 44 repos</strong> — 44 sin 00-core, 44 sin hygiene, 40 sin gitleaks, 3 sin README: pack listo, push bloqueado porque la mayoría son repos de clientes.</li>
+      <li><span class="etiqueta e-info">regla</span> <strong>Push de 79 divergentes / 203 archivados / 82 sin remoto</strong> — requieren decisión por repo; push-final.py preparado y bloqueado a propósito.</li>
+      <li><span class="etiqueta e-ok">descartada</span> <strong>Inventar READMEs ausentes</strong> — decisión registrada: no se fabrica contenido de producto.</li>
+    </ul>
+  </section>
+
+  <section id="verificacion">
+    <h2>4 · Verificación del 07-11 contra GitHub</h2>
+    <p>
+      Re-verificación directa vía API el día de emisión de este documento,
+      sobre los <strong>115 repositorios vivos</strong> (fuente de verdad: GitHub).
+    </p>
+    <div class="tabla-scroll">
+    <table>
+      <thead><tr><th>Check remoto</th><th class="num">Cobertura</th><th class="num">Faltan</th></tr></thead>
+      <tbody>
+        <tr><td>.cursor/rules/00-core.mdc (reglas de núcleo)</td><td class="num ok">71 / 115</td><td class="num">44</td></tr>
+        <tr><td>.github/workflows/hygiene.yml (CI de higiene)</td><td class="num ok">71 / 115</td><td class="num">44</td></tr>
+        <tr><td>.gitleaks.toml (config de secretos)</td><td class="num ok">75 / 115</td><td class="num">40</td></tr>
+        <tr><td>README.md</td><td class="num ok">112 / 115</td><td class="num">3</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <h3>Despliegues vivos</h3>
+    <p>
+      26 URLs responden HTTP 200: 25 GitHub Pages (de 25 repos con Pages
+      activo) más <strong>www.belentani.es</strong>. Las 4 plataformas
+      históricas del dominio raíz (secure-t, open-school, linguaforge,
+      cv-studio) dieron 404: su contenido vive hoy dentro de los repos
+      unificados (open-school-private, noiacore-private).
+    </p>
+    <h3>Integración continua de los 25 con Pages</h3>
+    <p>
+      <strong class="ok">13 verdes</strong> — ace-step-ui, arte-que-veste,
+      belentani.es, belentani7.github.io, ctg-psicologia-next, el-raco-nuevo,
+      fazluiz3d-ecosystem, gpu-cost-optimizer, heyduck, ia-creativa-lab,
+      keyrotor, nexus-os, omniagent: son las 13 vitrinas del portfolio.
+      <strong class="mal">12 en rojo o sin señal</strong> — 11 con fallo
+      (Belentani.cv-ai, CARQUIDEC, Steven-renovation, entrenador-jorge-bcn,
+      ivy-la-vie, llm-vfx-orchestrator, meta-skill, michelle-relayze-web,
+      opendesign, tender-words-connect, terratrack-isr) y ManosAbiertas con
+      run omitida. Reparación en curso el mismo día para los repos propios
+      (meta-skill, keyrotor, opendesign, llm-vfx-orchestrator,
+      terratrack-isr); los de clientes no se tocan sin autorización.
+    </p>
+  </section>
+
+  <section id="deduplicacion">
+    <h2>5 · Deduplicación: 434 → 115</h2>
+    <p>
+      El 07-11 se ejecutó la deduplicación planificada de la cuenta:
+      <strong>314 repositorios eliminados con gh repo delete (0 fallos)</strong>,
+      con lista por familias y registro completo. Quedan 120 en la cuenta:
+      los 115 keepers y 5 excluidos por contener audio/voz privado.
+    </p>
+    <div class="aviso">
+      <p><strong>Red de seguridad (tres capas):</strong> ① los 314/314
+      conservan clon local verificado en <code>_audit\work\repos</code>;
+      ② 315/321 bundles git generados el 07-11 en
+      <code>workspace\archivo\bundles-dedup-20261107</code>; ③ ventana de
+      restauración de GitHub hasta el <strong>5 de febrero de 2027</strong>
+      (Settings → Deleted repositories).</p>
+    </div>
+    <p>
+      Riesgo residual declarado: 6 clones no generaron bundle (objetos
+      corruptos o vacíos en origen) y la cuenta quedó 2 clones por debajo del
+      total teórico (321 = 314 borrados + 5 audio + 2 renombrados); ambos
+      listados en el estado del lote de bundles.
+    </p>
+  </section>
+
+  <section id="seguridad">
+    <h2>6 · Seguridad</h2>
+    <p>Valores redactados; ubicaciones exactas en los JSON de origen.</p>
+    <div class="tabla-scroll">
+    <table>
+      <thead><tr><th>Fuente</th><th>Ámbito</th><th class="num">Hallazgos</th><th>Reglas dominantes</th></tr></thead>
+      <tbody>
+        <tr><td>Escaneo 02-11</td><td>425 repos originales</td><td class="num">427 (80 altos, 43 reales)</td><td>client-exposed-secret 218, jwt 63, generic-secret 59</td></tr>
+        <tr><td>T3 re-escaneo 07-11</td><td>425 repos</td><td class="num">149 (28 altos)</td><td>client-exposed-secret 111, openai-deepseek 8, aws 8</td></tr>
+        <tr><td>Clones nuevos 07-11</td><td>398 escaneados</td><td class="num">138 en 27 repos</td><td>generic-secret mayoritario (225 con falsos positivos)</td></tr>
+        <tr><td>Historial git 07-11</td><td>35 repos</td><td class="num mal">1.158</td><td>jwt 1.051, private-key 32, openai-key 24, aws 19, stripe 14</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>
+      Acción inmediata que sigue siendo humana: <strong>rotar toda credencial
+      que apareció en historial</strong>. La desindexación, los .gitignore
+      endurecidos, la CI de higiene (gitleaks + marcadores de conflicto) y el
+      barrido de assets publicado ya están aplicados y son idempotentes.
+    </p>
+    <h3>Barrido del equipo</h3>
+    <p>
+      dns_hijack = falso · proxy MITM = falso · 14 extensiones de alto riesgo
+      identificadas · 0 descargas sospechosas · 0 hosts sospechosos.
+    </p>
+  </section>
+
+  <section id="calidad">
+    <h2>7 · Calidad y gates</h2>
+    <div class="tabla-scroll">
+    <table>
+      <thead><tr><th>Programa</th><th>Resultado</th><th class="num">Cifra</th></tr></thead>
+      <tbody>
+        <tr><td>Gates de calidad</td><td>Verdes / ejecutados (07-11)</td><td class="num ok">54 / 60</td></tr>
+        <tr><td>Gates rojos con causa</td><td>judas-experience-expanded/unificado, creative-ai-hub, lingua-aberta-empresa, diamante-fotorealista, duck-unified-master</td><td class="num mal">6</td></tr>
+        <tr><td>Readiness medio</td><td>Alto ≥70: 241 · medio 40-69: 94 · bajo &lt;40: 99</td><td class="num">58,9 / 100</td></tr>
+        <tr><td>Conformidad</td><td>Universo original (brecha única: README en 9, decisión deliberada)</td><td class="num ok">99,9%</td></tr>
+        <tr><td>Fixline</td><td>Archivos tocados / repos · defectos restantes</td><td class="num">24.112 / 347 · 6.717</td></tr>
+        <tr><td>Plataformas live 04-11</td><td>secure-t, open-school, linguaforge, cv-studio (hoy integradas en los unificados)</td><td class="num">4</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <section id="agentes">
+    <h2>8 · Sesiones de agentes de código</h2>
+    <p>
+      Análisis forense de 74 sesiones de CLI coders (22.276 líneas): 911
+      afirmaciones de éxito, de las cuales <strong class="mal">128 sin
+      evidencia</strong>; 92 comandos destructivos o de publicación
+      (git reset --hard 48, git push 31, git commit 8, rm -rf 5); 661
+      resultados fallidos con 26 fallos ignorados y claim posterior; 4 secretos
+      redactados. Sesión de mayor riesgo: 37,6/100. Los scripts con capacidad
+      de aplicar cambios masivos (ship.py, push_all.py, clone_all.py,
+      push-final.py…) quedaron bloqueados a propósito en el toolkit.
+    </p>
+  </section>
+
+  <section id="entorno">
+    <h2>9 · Entorno y proveedores</h2>
+    <p>
+      19 proveedores LLM con clave configurada: 9 responden HTTP 200 (nvidia
+      84 modelos, vercel-ai 498, gemini 50, groq 11, morph 22, deepseek 2,
+      cerebras 2, github, huggingface), 6 con 401 (rotación pendiente de
+      clave), 1 con 404 y 3 sin endpoint. Disco: 28,8 MB de caché liberados en
+      255 elementos; la reconstrucción del 03-11 dejó el disco en 78% con 55 GB
+      libres — tras los bundles de rescate del 07-11 quedan ~9,5 GB libres.
+    </p>
+    <p>
+      El workspace canónico es <code>C:\Users\USER\workspace\</code> (índice
+      maestro INDICE.md); las rutas antiguas son junctions de compatibilidad y
+      no reciben contenido nuevo.
+    </p>
+  </section>
+
+  <section id="fuentes">
+    <h2>10 · Fuentes consolidadas</h2>
+    <p>
+      Este documento fusiona los 73 artefactos del directorio de informes
+      (más los planes raíz), verificados contra las salidas originales:
+    </p>
+    <div class="tabla-scroll">
+    <table>
+      <thead><tr><th>Tipo</th><th>Fuentes principales</th></tr></thead>
+      <tbody>
+        <tr><td>Markdown</td><td>AUDIT-MASTER, EXECUTIVE-SUMMARY, SECURITY-ACTION-PLAN, REMEDIATION-PLAN, PUSH-FINAL, CONFORMANCE, GIT-FINDINGS, GIT-STATE-DEEP, INVENTORY, PLAYBOOK, CONTEXT-INDEX, LEDGER, PLAN-AUDIT, ESTADO-AGENTE-PENDIENTES, ESTADO-ENTORNO-CODEX, planes superpowers (2)</td></tr>
+        <tr><td>CSV</td><td>AGENT-SESSIONS (74), REPO-READINESS (434), AUDIT-METRICS (49), GATE-RESULTS (60), SECURITY-RULES (26), DESTRUCTIVE-COMMANDS (4), PROVIDER-HEALTH (19), HISTORY-SECRETS (1.158), AUDIT-ARTIFACTS-INVENTORY (1.436)</td></tr>
+        <tr><td>JSON</td><td>inventory, git-repos, git-findings, duplicates, security, history-secrets, context-index, recovery-map, verificacion-final, FINAL_AUDIT_SUMMARY_20261104, judas-audit/gitleaks (4), estado del lote de bundles</td></tr>
+        <tr><td>HTML</td><td>AUDIT-MASTER.html (predecesor de este documento)</td></tr>
+        <tr><td>Nuevos 07-11</td><td>CORRECCIONES-115.json, repos-vivos, repos-con-pages, urls-live, ci-status, meta de repos (GraphQL) — verificación fresca contra la API</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="margin-top:26px">
+      Inconsistencias conocidas y resueltas en la fusión: el censo varía por
+      corpus y fecha (425 auditados / 434 en GitHub / 436 clones / 115 vivos)
+      — cada cifra conserva su ámbito explícito; los hallazgos del 02-11 (80
+      altos) y del re-escaneo T3 (28 altos) usan reglas distintas
+      (reclasificación high→medium de VITE_*_API_KEY, ruling R7); el plan de
+      mojibake preveía 18 archivos y el resultado real fue 17 + 1 legítimo.
+    </p>
+  </section>
+
+  </main>
+</div>
+
+<footer>
+  <p>
+    Emitido el 7 de noviembre de 2026 consolidando la auditoría del 2 al 7 de
+    noviembre. Cifras re-verificadas contra la API de GitHub el día de
+    emisión. Documento offline: sin CDNs, sin rastreo.
+  </p>
+  <nav>
+    <a href="index.html">Vitrina</a>
+    <a href="catalogo.html">Catálogo</a>
+    <a  target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</footer>
+</div></main>
+<footer class="site"><div class="wrap">
+<p>docs · WebGL listo para servir online · <a href="index.html">Inicio</a> · <a href="accesibilidad.html">Accesibilidad</a> · <a href="privacidad.html">Privacidad</a></p>
+</div></footer>
+<script>
+(function(){
+  var canvas = document.createElement('canvas');
+  canvas.className = 'webgl-canvas';
+  var container = document.getElementById('contenido');
+  if(container){ container.appendChild(canvas); }
+  try{
+    var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+    if(!gl){ canvas.innerHTML = '<p style="color:var(--dim);font-family:var(--mono);padding:12px">WebGL no disponible en este navegador.</p>'; return; }
+    gl.clearColor(0.047,0.043,0.039,1);
+    gl.clear(gl.COLOR_BUFFER_BIT);
+    var vs = gl.createShader(gl.VERTEX_SHADER);
+    gl.shaderSource(vs, 'attribute vec2 p;void main(){gl_Position=vec4(p,0.0,1.0);}');
+    gl.compileShader(vs);
+    var fs = gl.createShader(gl.FRAGMENT_SHADER);
+    gl.shaderSource(fs, 'precision mediump float;uniform vec4 c;void main(){gl_FragColor=c;}');
+    gl.compileShader(fs);
+    var prog = gl.createProgram();
+    gl.attachShader(prog,vs); gl.attachShader(prog,fs); gl.linkProgram(prog);
+    gl.useProgram(prog);
+    var loc = gl.getUniformLocation(prog,'c');
+    gl.uniform4f(loc, 0.549, 0.659, 0.545, 1.0);
+    var buf = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER,buf);
+    gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
+    var attr = gl.getAttribLocation(prog,'p');
+    gl.enableVertexAttribArray(attr);
+    gl.vertexAttribPointer(attr,2,gl.FLOAT,false,0,0);
+    gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
+  }catch(e){ console.log('WebGL init:', e.message); }
+})();
+</script>
+</div></main>
+<footer class="site"><div class="wrap">
+<p>docs · WebGL listo para servir online · <a href="index.html">Inicio</a> · <a href="accesibilidad.html">Accesibilidad</a> · <a href="privacidad.html">Privacidad</a></p>
+</div></footer>
+<script>
+(function(){
+  var canvas = document.createElement('canvas');
+  canvas.className = 'webgl-canvas';
+  var container = document.getElementById('contenido');
+  if(container){ container.appendChild(canvas); }
+  try{
+    var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+    if(!gl){ canvas.innerHTML = '<p style="color:var(--dim);font-family:var(--mono);padding:12px">WebGL no disponible en este navegador.</p>'; return; }
+    gl.clearColor(0.047,0.043,0.039,1);
+    gl.clear(gl.COLOR_BUFFER_BIT);
+    var vs = gl.createShader(gl.VERTEX_SHADER);
+    gl.shaderSource(vs, 'attribute vec2 p;void main(){gl_Position=vec4(p,0.0,1.0);}');
+    gl.compileShader(vs);
+    var fs = gl.createShader(gl.FRAGMENT_SHADER);
+    gl.shaderSource(fs, 'precision mediump float;uniform vec4 c;void main(){gl_FragColor=c;}');
+    gl.compileShader(fs);
+    var prog = gl.createProgram();
+    gl.attachShader(prog,vs); gl.attachShader(prog,fs); gl.linkProgram(prog);
+    gl.useProgram(prog);
+    var loc = gl.getUniformLocation(prog,'c');
+    gl.uniform4f(loc, 0.549, 0.659, 0.545, 1.0);
+    var buf = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER,buf);
+    gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
+    var attr = gl.getAttribLocation(prog,'p');
+    gl.enableVertexAttribArray(attr);
+    gl.vertexAttribPointer(attr,2,gl.FLOAT,false,0,0);
+    gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
+  }catch(e){ console.log('WebGL init:', e.message); }
+})();
+</script>
+</div></main>
+<footer class="site"><div class="wrap">
+<p>docs · WebGL listo para servir online · <a href="index.html">Inicio</a> · <a href="accesibilidad.html">Accesibilidad</a> · <a href="privacidad.html">Privacidad</a></p>
+</div></footer>
+<script>
+(function(){
+  var canvas = document.createElement('canvas');
+  canvas.className = 'webgl-canvas';
+  var container = document.getElementById('contenido');
+  if(container){ container.appendChild(canvas); }
+  try{
+    var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+    if(!gl){ canvas.innerHTML = '<p style="color:var(--dim);font-family:var(--mono);padding:12px">WebGL no disponible en este navegador.</p>'; return; }
+    gl.clearColor(0.047,0.043,0.039,1);
+    gl.clear(gl.COLOR_BUFFER_BIT);
+    var vs = gl.createShader(gl.VERTEX_SHADER);
+    gl.shaderSource(vs, 'attribute vec2 p;void main(){gl_Position=vec4(p,0.0,1.0);}');
+    gl.compileShader(vs);
+    var fs = gl.createShader(gl.FRAGMENT_SHADER);
+    gl.shaderSource(fs, 'precision mediump float;uniform vec4 c;void main(){gl_FragColor=c;}');
+    gl.compileShader(fs);
+    var prog = gl.createProgram();
+    gl.attachShader(prog,vs); gl.attachShader(prog,fs); gl.linkProgram(prog);
+    gl.useProgram(prog);
+    var loc = gl.getUniformLocation(prog,'c');
+    gl.uniform4f(loc, 0.549, 0.659, 0.545, 1.0);
+    var buf = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER,buf);
+    gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
+    var attr = gl.getAttribLocation(prog,'p');
+    gl.enableVertexAttribArray(attr);
+    gl.vertexAttribPointer(attr,2,gl.FLOAT,false,0,0);
+    gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
+  }catch(e){ console.log('WebGL init:', e.message); }
+})();
+</script>
+</div></main>
+<footer class="site"><div class="wrap">
+<p>docs · WebGL listo para servir online · <a href="index.html">Inicio</a> · <a href="accesibilidad.html">Accesibilidad</a> · <a href="privacidad.html">Privacidad</a></p>
+</div></footer>
+<script>
+(function(){
+  var canvas = document.createElement('canvas');
+  canvas.className = 'webgl-canvas';
+  var container = document.getElementById('contenido');
+  if(container){ container.appendChild(canvas); }
+  try{
+    var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+    if(!gl){ canvas.innerHTML = '<p style="color:var(--dim);font-family:var(--mono);padding:12px">WebGL no disponible en este navegador.</p>'; return; }
+    gl.clearColor(0.047,0.043,0.039,1);
+    gl.clear(gl.COLOR_BUFFER_BIT);
+    var vs = gl.createShader(gl.VERTEX_SHADER);
+    gl.shaderSource(vs, 'attribute vec2 p;void main(){gl_Position=vec4(p,0.0,1.0);}');
+    gl.compileShader(vs);
+    var fs = gl.createShader(gl.FRAGMENT_SHADER);
+    gl.shaderSource(fs, 'precision mediump float;uniform vec4 c;void main(){gl_FragColor=c;}');
+    gl.compileShader(fs);
+    var prog = gl.createProgram();
+    gl.attachShader(prog,vs); gl.attachShader(prog,fs); gl.linkProgram(prog);
+    gl.useProgram(prog);
+    var loc = gl.getUniformLocation(prog,'c');
+    gl.uniform4f(loc, 0.549, 0.659, 0.545, 1.0);
+    var buf = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER,buf);
+    gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
+    var attr = gl.getAttribLocation(prog,'p');
+    gl.enableVertexAttribArray(attr);
+    gl.vertexAttribPointer(attr,2,gl.FLOAT,false,0,0);
+    gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
+  }catch(e){ console.log('WebGL init:', e.message); }
+})();
+</script>
+</div></main>
+<footer class="site"><div class="wrap">
+<p>docs · WebGL listo para servir online · <a href="index.html">Inicio</a> · <a href="accesibilidad.html">Accesibilidad</a> · <a href="privacidad.html">Privacidad</a></p>
+</div></footer>
+<script>
+(function(){
+  var canvas = document.createElement('canvas');
+  canvas.className = 'webgl-canvas';
+  var container = document.getElementById('contenido');
+  if(container){ container.appendChild(canvas); }
+  try{
+    var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+    if(!gl){ canvas.innerHTML = '<p style="color:var(--dim);font-family:var(--mono);padding:12px">WebGL no disponible.</p>'; return; }
+    gl.clearColor(0.047,0.043,0.039,1);
+    gl.clear(gl.COLOR_BUFFER_BIT);
+  }catch(e){ console.log('WebGL:', e.message); }
+})();
+</script>
+</body>
+</html>

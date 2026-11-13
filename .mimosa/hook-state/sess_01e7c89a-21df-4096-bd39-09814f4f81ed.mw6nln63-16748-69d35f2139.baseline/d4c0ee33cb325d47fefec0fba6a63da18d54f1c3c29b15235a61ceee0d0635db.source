@@ -1,0 +1,51 @@
+name: CI Recovery Observatory
+
+on:
+  # Scheduled read-only metrics avoid a second workflow for each CI completion.
+  schedule:
+    - cron: '37 */6 * * *'
+  workflow_dispatch:
+
+# Operates only on scheduled/manual read-only GitHub metadata; no workflow_run
+# privilege or untrusted source checkout. Investigate failures in reports.
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: ci-observatory
+  cancel-in-progress: false
+
+jobs:
+  observe:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout reviewed default branch only
+        uses: actions/checkout@v7
+        with:
+          ref: main
+          persist-credentials: false
+      - name: Setup Python for stdlib metrics
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Test observability invariants offline
+        run: python -m unittest discover -s tests -p test_ci_health.py -v
+      - name: Collect current and previous 7-day windows
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/ci_health.py --days 7 --json ci-health.json --markdown ci-health.md
+      - name: Publish actionable summary
+        run: cat ci-health.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Save evidence for inspection
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-health-report
+          path: |
+            ci-health.json
+            ci-health.md
+          if-no-files-found: warn
+          retention-days: 14

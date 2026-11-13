@@ -58,7 +58,10 @@ class WorkflowPolicyTests(unittest.TestCase):
         self.assertIn("GitHub Pages configuration required", text)
         self.assertIn("workflow_dispatch:", text)
         self.assertIn("if: github.ref == 'refs/heads/main'", text)
-        self.assertIsNone(re.search(r"^\s*push:\s*$", text, re.MULTILINE))
+        # Explicitly authorized publication now builds on main changes;
+        # PR artifacts must never be promoted and Pages must already exist.
+        self.assertIn("branches: [main]", text)
+        self.assertIn("github.event_name != 'pull_request'", text)
         self.assertIn("persist-credentials: false", text)
 
     def test_all_checkout_steps_use_supported_node24_action_without_persisted_credentials(self):

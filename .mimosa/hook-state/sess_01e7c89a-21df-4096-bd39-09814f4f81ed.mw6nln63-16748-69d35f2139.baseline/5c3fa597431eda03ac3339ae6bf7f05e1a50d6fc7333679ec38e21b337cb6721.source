@@ -1,0 +1,40 @@
+name: Build
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  static-site:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          package-manager-cache: false
+      - name: Validate distributable static pages
+        run: |
+          test -s docs/index.html
+          test -s docs/living-machine/index.html
+          test -s docs/living-machine/studio.html
+          test -s docs/living-machine/studio.css
+          node --check docs/living-machine/studio.js
+          node --check docs/living-machine/studio-core.js
+          node --check docs/living-machine/pdf-core.js
+          node --check docs/living-machine/audio-core.js
+          node --check docs/living-machine/studio-i18n.js
+          node --check docs/living-machine/video-sheet.js
+          node --check docs/living-machine/diagnostics.js
+          test -s docs/living-machine/diagnostics.html
+          node --check docs/living-machine/sw.js
+          test -s docs/living-machine/manifest.webmanifest
+          test -s docs/living-machine/pdf-core.js
+          test -s docs/living-machine/audio-core.js
+      - name: Run suite
+        run: node --test docs/living-machine/quality.test.cjs docs/living-machine/studio.test.cjs docs/living-machine/media.test.cjs docs/living-machine/i18n.test.cjs docs/living-machine/video.test.cjs docs/living-machine/diagnostics.test.cjs docs/living-machine/offline.test.cjs

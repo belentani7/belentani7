@@ -1,0 +1,77 @@
+name: CD - Manual Vercel (reviewed)
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Deployment target; production is staged without domain promotion'
+        required: true
+        type: choice
+        options: [staging, production]
+permissions:
+  contents: read
+concurrency:
+  group: cd-reviewed-${{ inputs.environment }}
+  cancel-in-progress: false
+jobs:
+  validate:
+    # Never deploy unreviewed workflow_dispatch refs with production secrets.
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+          package-manager-cache: false
+      - name: Verify static site and offline tools
+        run: |
+          test -s docs/index.html
+          test -s docs/living-machine/index.html
+          test -s docs/living-machine/studio.html
+          node --test docs/living-machine/quality.test.cjs docs/living-machine/studio.test.cjs docs/living-machine/media.test.cjs docs/living-machine/i18n.test.cjs docs/living-machine/video.test.cjs docs/living-machine/diagnostics.test.cjs docs/living-machine/offline.test.cjs
+  deploy:
+    needs: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment: ${{ inputs.environment }}
+    env:
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+      VERCEL_CLI_VERSION: ${{ vars.VERCEL_CLI_VERSION }}
+      TARGET_ENV: ${{ inputs.environment }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+          package-manager-cache: false
+      - name: Require configured credentials and reviewed CLI version
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          test -n "$VERCEL_TOKEN" || { echo 'VERCEL_TOKEN not configured'; exit 1; }
+          test -n "$VERCEL_ORG_ID" || { echo 'VERCEL_ORG_ID not configured'; exit 1; }
+          test -n "$VERCEL_PROJECT_ID" || { echo 'VERCEL_PROJECT_ID not configured'; exit 1; }
+          [[ "$VERCEL_CLI_VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]] || { echo 'Set VERCEL_CLI_VERSION to a reviewed exact semver'; exit 1; }
+          case "$TARGET_ENV" in staging|production) ;; *) echo 'Invalid target'; exit 1;; esac
+      - name: Install pinned Vercel CLI
+        run: npm install --global "vercel@$VERCEL_CLI_VERSION"
+      - name: Build and stage deployment
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ "$TARGET_ENV" = 'production' ]; then
+            vercel pull --yes --environment=production
+            vercel build --prod
+            vercel deploy --prebuilt --prod --skip-domain
+          else
+            vercel pull --yes --environment=preview
+            vercel build
+            vercel deploy --prebuilt
+          fi

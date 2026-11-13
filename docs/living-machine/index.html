@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -88,59 +89,535 @@ color:var(--accent2);padding:4px 10px;border-radius:999px;margin:10px 0}
         <a href="#stack" class="btn-secondary">Ver Stack</a>
       </div>
     </div>
+    <div class="visual" aria-hidden="true"><div class="orbit"></div><div class="iris"><span class="catch"></span></div><div class="orbit-tag">INTENTION → ARCHITECTURE<br>OBSERVE / REASON / BUILD</div></div>
   </section>
-  <section id="stack">
-    <h2>Stack Tecnológico</h2>
-    <p>Tecnologías utilizadas en este repositorio.</p>
-    <ul class="stack-list">
-      <li>HTML5</li>
-      <li>CSS3</li>
-      <li>JavaScript</li>
-      <li>WebGL Shader</li>
-      <li>Responsive Design</li>
-    </ul>
-  </section>
-  <footer><p>© 2026 Belentani7 - Parte del ecosistema Belentani</p></footer>
-/* Hero Shader WebGL */
-(function() {
-  const canvas = document.createElement('canvas');
-  canvas.id = 'hero-canvas';
-  canvas.style.position = 'absolute';
-  canvas.style.top = '0';
-  canvas.style.left = '0';
-  canvas.style.width = '100%';
-  canvas.style.height = '100%';
-  canvas.style.zIndex = '1';
-  document.body.insertBefore(canvas, document.body.firstChild);
-  const gl = canvas.getContext('webgl');
-  if (!gl) return;
-  const vs = gl.createShader(gl.VERTEX_SHADER);
-  gl.shaderSource(vs, 'attribute vec2 position; void main() { gl_Position = vec4(position, 0.0, 1.0); }');
-  gl.compileShader(vs);
-  const fs = gl.createShader(gl.FRAGMENT_SHADER);
-  gl.shaderSource(fs, 'precision mediump float; uniform vec2 u_resolution; uniform float u_time; uniform vec2 u_mouse; float hash(vec2 p) { p = fract(p * vec2(123.34, 456.21)); p += dot(p, p + 45.32); return fract(p.x * p.y * p.z); } float noise(vec2 p) { vec2 i = floor(p); vec2 f = fract(p); f = f * f * (3.0 - 2.0 * f); float a = hash(i); float b = hash(i + vec2(1.0, 0.0)); float c = hash(i + vec2(0.0, 1.0)); float d = hash(i + vec2(1.0, 1.0)); return mix(mix(a, b, f.x), mix(c, d, f.x), f.y); } float fbm(vec2 p) { float v = 0.0; float a = 0.5; vec2 shift = vec2(100.0); for (int i = 0; i < 5; ++i) { v += a * noise(p); p = p * 2.0 + shift; a *= 0.5; } return v; } void main() { vec2 uv = gl_FragCoord.xy / u_resolution.xy; uv.x *= u_resolution.x / u_resolution.y; vec2 m = uv - u_mouse; float n = fbm(uv * 3.0 + u_time * 0.5); n += fbm(uv * 6.0 - u_time * 0.3) * 0.5; n += length(m) * 0.1; n = mod(n, 1.0); vec3 color = mix(vec3(0.0, 0.5, 1.0), vec3(1.0, 0.0, 0.5), n); float vignette = 1.0 - length(uv * 2.0 - 1.0) * 0.4; color *= vignette; gl_FragColor = vec4(color, 1.0); }');
-  gl.compileShader(fs);
-  const program = gl.createProgram();
-  gl.attachShader(program, vs);
-  gl.attachShader(program, fs);
-  gl.linkProgram(program);
-  gl.useProgram(program);
-  const pb = gl.createBuffer();
-  gl.bindBuffer(gl.ARRAY_BUFFER, pb);
-  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1,1,-1,-1,1,-1,1,1,-1,1,1]), gl.STATIC_DRAW);
-  const pl = gl.getAttribLocation(program, 'position');
-  gl.enableVertexAttribArray(pl);
-  gl.vertexAttribPointer(pl, 2, gl.FLOAT, false, 0, 0);
-  const rl = gl.getUniformLocation(program, 'u_resolution');
-  const tl = gl.getUniformLocation(program, 'u_time');
-  const ml = gl.getUniformLocation(program, 'u_mouse');
-  let mouse = {x: 0.5, y: 0.5};
-  window.addEventListener('mousemove', (e) => { mouse.x = e.clientX / window.innerWidth; mouse.y = 1.0 - e.clientY / window.innerHeight; });
-  function resize() { canvas.width = canvas.clientWidth * window.devicePixelRatio; canvas.height = canvas.clientHeight * window.devicePixelRatio; gl.viewport(0, 0, canvas.width, canvas.height); gl.uniform2f(rl, canvas.width, canvas.height); }
-  window.addEventListener('resize', resize);
-  resize();
-  function render(time) { gl.uniform1f(tl, time * 0.001); gl.uniform2f(ml, mouse.x, mouse.y); gl.drawArrays(gl.TRIANGLES, 0, 6); requestAnimationFrame(render); }
-  requestAnimationFrame(render);
+  <div class="statusline"><span>01 / <b>AI & AUTOMATION</b></span><span>02 / <b>FULL-STACK SYSTEMS</b></span><span>03 / <b>CREATIVE PRODUCTION</b></span><span>04 / <b>ACCESSIBLE TOOLS</b></span></div>
+  <div class="sectionhead" id="tools"><h2>Useful by design.</h2><p>Interactive tools that run in the browser, with clear capability boundaries and no account required. Your files stay on this device.</p></div>
+  <div class="cards">
+    <a class="card" href="./studio.html#batch"><div class="symbol">◩</div><strong>Batch image studio</strong><small>Convert multiple images to WebP, PNG or JPEG and export a real ZIP file.</small></a>
+    <a class="card" href="./studio.html#cv"><div class="symbol">◈</div><strong>CV clarity inspector</strong><small>Offline textual analysis that never invents an ATS score or uploads your document.</small></a>
+    <a class="card" href="./studio.html#storyboard"><div class="symbol">◇</div><strong>Storyboard architect</strong><small>Shot-by-shot planning and export for music videos, reels and campaigns.</small></a>
+    <a class="card" href="./studio.html#palette"><div class="symbol">◉</div><strong>Palette extractor</strong><small>Sample colors from your own photos and export CSS variables.</small></a>
+    <button class="card" data-open="converter"><div class="symbol">◈</div><strong>Image conversion</strong><small>PNG · JPEG · WebP · Resize. Local canvas engine, no upload.</small></button>
+    <button class="card" data-open="captions"><div class="symbol">≋</div><strong>Caption studio</strong><small>SRT / VTT / TXT subtitle conversion, transcript cleanup and speech notes.</small></button>
+    <button class="card" data-open="media"><div class="symbol">◉</div><strong>Media lab</strong><small>Capture a frame from your own video. Record an audio note when supported.</small></button>
+    <button class="card" data-open="data"><div class="symbol">{ }</div><strong>Data workbench</strong><small>JSON validation, CSV conversion, hashing and text transformation.</small></button>
+    <button class="card" data-open="links"><div class="symbol">↗</div><strong>Reel research</strong><small>Organize public post references and context without bypassing platform restrictions.</small></button>
+    <button class="card" data-open="notepad"><div class="symbol">▤</div><strong>Private notebook</strong><small>Write locally, export as TXT, return to your notes without signing in.</small></button>
+    <button class="card" data-open="terminal"><div class="symbol">$_</div><strong>Command terminal</strong><small>A safe, local command simulation for exploring the professional ecosystem.</small></button>
+    <a class="card" href="./studio.html#pdf"><div class="symbol">▤</div><strong>Image to PDF</strong><small>Turn screenshots and photos into a paginated, locally composed PDF.</small></a>
+    <a class="card" href="./studio.html#audio"><div class="symbol">♫</div><strong>Audio to WAV</strong><small>Inspect, visualize and convert compatible audio on your own device.</small></a>
+    <button class="card" data-open="system"><div class="symbol">✧</div><strong>Aero desktop</strong><small>Draggable glass windows, taskbar, start menu, settings and hidden commands.</small></button>
+  </div>
+  <div class="sectionhead" id="profile"><h2>Across disciplines.<br>One design language.</h2><p>A professional profile built around the systems, domains and constraints that make the work useful.</p></div>
+  <div class="workspace">
+    <article class="glass story">
+      <div class="mini">01 — ENGINEERING + INTERPRETATION</div>
+      <h3>Making complexity understandable — then operational.</h3>
+      <p>Based in the Barcelona area, I work across AI orchestration, full-stack development, developer tools, accessible learning experiences and multimedia production. My approach combines technical architecture with the practical questions of who uses a product, how they understand it and what happens when it fails.</p>
+      <p>Experience in content moderation and Trust & Safety informs my attention to risk, clarity, context and human review. Work across Spanish, Brazilian Portuguese and English helps connect cultural interpretation with product delivery.</p>
+      <p>Creative direction is part of the engineering practice: storytelling, sound, motion and brand systems are treated as interfaces between technology and people, not decoration.</p>
+      <div class="subline"><span>TypeScript / React</span><span>Python / APIs</span><span>AI agents</span><span>Trust & Safety</span><span>Accessibility</span><span>Video / Sound</span><span>ES / EN / PT</span></div>
+    </article>
+    <div class="glass projects">
+      <div class="mini">02 — TRACEABLE WORK / SELECTED CODEBASES</div>
+      <label for="projectSearch">Search selected work</label>
+      <input class="filter" type="search" id="projectSearch" placeholder="AI, education, creative, tools..." autocomplete="off">
+      <div id="projectList"></div>
+      <p class="micro">GitHub repositories may be private or under revision; links are source references, not a claim that all products are public releases.</p>
+    </div>
+  </div>
+  <footer><div>© 2026 Pedro Belentani · Built as a browser-based professional experiment.</div><div>LOCAL FIRST / NO TRACKERS / NO HIDDEN UPLOADS · <a href="https://belentani.es">belentani.es</a></div></footer>
+</div>
+<div id="stage" aria-label="Aero style application windows" aria-live="off"></div>
+<div id="startmenu" class="glass" role="dialog" aria-label="Applications menu">
+  <div class="mini">BELENTANI / LIVING MACHINE</div><h3 style="margin:10px 0">Launch an application</h3>
+  <input id="startSearch" type="search" placeholder="Find a tool...">
+  <div class="startgrid" id="startGrid"></div>
+  <div class="micro">Aero-inspired web demo. This is not Microsoft Windows and cannot run Windows programs.</div>
+</div>
+<nav id="dock" aria-label="Desktop taskbar"><button class="start" id="startButton" title="Start menu" aria-label="Start menu">◈</button><div class="separator"></div><button title="Welcome" data-open="welcome">⌂</button><button title="Converter" data-open="converter">◧</button><button title="Captions" data-open="captions">≋</button><button title="Media" data-open="media">◉</button><button title="Terminal" data-open="terminal">$_</button><a class="btn small" href="./studio.html" title="Open Production Studio" style="font-size:11px;padding:10px">STUDIO ↗</a><span class="dockname">BELENTANI // AERO LAB</span><span id="clock" aria-label="Local date and time"></span></nav>
+<div id="toast" class="toast" hidden role="status" aria-live="polite"></div>
+<script>
+"use strict";
+(function(){
+  const $ = (s,root=document)=>root.querySelector(s);
+  const $$ = (s,root=document)=>Array.from(root.querySelectorAll(s));
+  const text = (value)=>String(value == null ? "" : value);
+  const h = (str)=>text(str).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;");
+  const sleep = (ms)=>new Promise(resolve=>setTimeout(resolve,ms));
+  const SAVEPREFIX = "belentani-living-";
+  const APPS = [
+    ["welcome","Welcome center","⌂"],["converter","Image converter","◈"],
+    ["captions","Caption studio","≋"],["media","Media lab","◉"],
+    ["data","Data workbench","{ }"],["links","Reel research","↗"],
+    ["notepad","Private notebook","▤"],["terminal","Command terminal","$_"],
+    ["system","System settings","✧"],["vista","Aero nostalgia","⊞"]
+  ];
+  const PROJECTS = [
+    ["Belentani.cv-ai","CV generation, guardrails and practical AI tools","AI · PRODUCT","https://github.com/belentani7/Belentani.cv-ai"],
+    ["ManosAbiertas","Accessible education and newcomer-oriented resources","EDUCATION","https://github.com/belentani7/ManosAbiertas"],
+    ["open-school","Offline-oriented learning experience","ACCESSIBILITY","https://github.com/belentani7/open-school"],
+    ["lingua-aberta","Multilingual learning and spaced repetition work","LANGUAGE","https://github.com/belentani7/lingua-aberta"],
+    ["judas-experience-web","Three.js / immersive artistic interface","CREATIVE TECH","https://github.com/belentani7/judas-experience-web"],
+    ["agentguard","Agent spending limits and safety-oriented routing","AI · SYSTEMS","https://github.com/belentani7/agentguard"],
+    ["comfyui-json-compiler","Validated creative pipeline workflow generation","MEDIA · AI","https://github.com/belentani7/comfyui-json-compiler"],
+    ["belentani7","Professional profile and browser tool laboratory","PORTFOLIO","https://github.com/belentani7/belentani7"]
+  ];
+  const I18N = {
+    en:{hero:"I design systems where engineering, applied AI, human insight and artistic direction meet. Not only interfaces to look at — tools you can open, test and use.",enter:"Enter the living machine ↗"},
+    es:{hero:"Diseño sistemas donde convergen ingeniería, IA aplicada, criterio humano y dirección artística. No solo interfaces para mirar: herramientas que puedes abrir, probar y utilizar.",enter:"Entrar en la máquina viva ↗"},
+    pt:{hero:"Crio sistemas onde engenharia, IA aplicada, sensibilidade humana e direção artística se encontram. Não apenas interfaces para olhar: ferramentas para abrir, testar e usar.",enter:"Entrar na máquina viva ↗"}
+  };
+  let lang = "en",topZ=30,windows=new Map(),motion=true,recording=null;
+  const setStored=(key,value)=>{try{localStorage.setItem(SAVEPREFIX+key,value)}catch(e){}};
+  const getStored=(key)=>{try{return localStorage.getItem(SAVEPREFIX+key)||""}catch(e){return ""}};
+  function toast(message,error){
+    const el=$("#toast");el.textContent=message;el.style.borderColor=error?"#ed3a6a":"#a9c8ff52";el.hidden=false;
+    clearTimeout(toast.timer);toast.timer=setTimeout(()=>el.hidden=true,4600);
+  }
+  function download(blob,name){
+    const url=URL.createObjectURL(blob);const a=document.createElement("a");
+    a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000);
+  }
+  function downloadText(content,name,type){
+    download(new Blob([content],{type:type||"text/plain;charset=utf-8"}),name);
+  }
+  function stripExt(name){return text(name||"file").replace(/\.[^.]+$/,"").slice(0,100).replace(/[^a-z0-9_.-]/gi,"_")}
+  function setResult(root,selector,message,error){
+    const el=$(selector,root);if(el){el.textContent=message;el.classList.toggle("error",!!error)}
+  }
+  function now(){const d=new Date();$("#clock").textContent=d.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})+"\n"+d.toLocaleDateString([],{day:"2-digit",month:"short"});}
+  now();setInterval(now,10000);
+  function renderProjects(query){
+    const q=text(query).toLowerCase().trim();const list=$("#projectList");list.replaceChildren();
+    const matches=PROJECTS.filter(p=>p.join(" ").toLowerCase().includes(q));
+    for(const p of matches){
+      const r=document.createElement("div");r.className="project";
+      const c=document.createElement("div");const strong=document.createElement("strong");strong.textContent=p[0];
+      const small=document.createElement("small");small.textContent=p[1]+"  /  "+p[2];c.append(strong,small);
+      const a=document.createElement("a");a.href=p[3];a.target="_blank";a.rel="noopener noreferrer";a.textContent="Source ↗";
+      r.append(c,a);list.append(r);
+    }
+    if(!matches.length){const p=document.createElement("p");p.textContent="No matching project.";list.append(p)}
+  }
+  renderProjects("");$("#projectSearch").addEventListener("input",e=>renderProjects(e.target.value));
+  $("#langBtn").addEventListener("click",()=>{
+    lang=lang==="en"?"es":lang==="es"?"pt":"en";
+    $("#hero-copy").textContent=I18N[lang].hero;$("#enter").textContent=I18N[lang].enter;
+    $("#hero-copy").lang=lang==="pt"?"pt-BR":lang;$("#enter").lang=lang==="pt"?"pt-BR":lang;toast("Hero: "+lang.toUpperCase());
+  });
+  function appContent(id){
+    switch(id){
+    case "welcome":return '<div class="mini">LIVING MACHINE / BUILD 2026.10</div><h3>Welcome to the working profile.</h3><p>This is the interactive layer behind a GitHub profile. The glass desktop is an intentional design demonstration; the file utilities are real, local browser tools.</p><div class="timeline"><p><strong>01 / Explore</strong> — Move windows, open the Start menu or use the taskbar.</p><p><strong>02 / Work</strong> — Convert an image, clean subtitles, inspect media, work with data.</p><p><strong>03 / Validate</strong> — Inspect selected codebases, professional scope and clear limitations.</p></div><div class="linkrow"><button class="btn small" data-launch="converter">Try image conversion</button><button class="btn small" data-launch="captions">Open captions</button><button class="btn small" data-launch="terminal">Discover hidden commands</button></div><p class="micro">No Windows executable runs here. This is a modern browser experience inspired by the glass interfaces of the 2000s.</p>';
+    case "converter":return '<div class="mini">LOCAL PROCESSING / CANVAS</div><h3>Image format converter</h3><p>Convert your own images into PNG, JPEG or WebP; optionally resize. Files do not leave your browser.</p><label for="imgFile">Source image</label><input id="imgFile" type="file" accept="image/*"><div class="fieldrow"><div><label for="imgFormat">Output</label><select id="imgFormat"><option value="image/png">PNG</option><option value="image/jpeg">JPEG</option><option value="image/webp">WebP</option></select></div><div><label for="imgWidth">Max width (px)</label><input id="imgWidth" type="number" min="1" max="12000" placeholder="Keep original"></div><div><label for="imgQuality">Quality %</label><input id="imgQuality" type="number" value="90" min="1" max="100"></div></div><button class="btn primary small" id="imgGo">Convert & download</button><div class="result" id="imgResult">Ready for an image.</div>';
+    case "captions":return '<div class="mini">SUBTITLE LAB / NO REMOTE MODEL</div><h3>Caption & transcript studio</h3><p>Paste or open SRT/VTT captions, convert formats or clean timestamped transcript text. Dictation uses your browser microphone only if its speech engine is available; it may use the browser provider.</p><label for="capFile">Import captions</label><input id="capFile" type="file" accept=".srt,.vtt,.txt,text/plain"><label for="capText">Transcript or subtitle source</label><textarea id="capText" placeholder="00:00:01,000 --> 00:00:03,000&#10;Your words here..."></textarea><div class="fieldrow"><button class="btn small" id="toSrt">Export SRT</button><button class="btn small" id="toVtt">Export VTT</button><button class="btn small" id="cleanCap">Extract plain text</button><button class="btn small" id="exportPlain">Export TXT</button><button class="btn small" id="dictate">Microphone dictation</button></div><div class="result" id="capResult">Supports subtitle conversion; not automatic transcription of uploaded videos.</div>';
+    case "media":return '<div class="mini">LOCAL VIDEO & AUDIO</div><h3>Media frame / audio note</h3><p>Take a still from a video file you own. Record a microphone note in browsers supporting MediaRecorder. No third-party download or remote processing.</p><label for="videoFile">Local video</label><input id="videoFile" type="file" accept="video/*"><div class="fieldrow"><div><label for="frameTime">Frame at second</label><input id="frameTime" type="number" value="0" step="0.5" min="0"></div><button class="btn small" id="frameGo">Export PNG frame</button></div><video id="videoPreview" style="width:100%;max-height:180px;display:none;margin:12px 0" controls playsinline></video><div class="fieldrow"><button class="btn small" id="recordStart">Record microphone</button><button class="btn small" id="recordStop" disabled>Stop & save</button></div><div class="result" id="mediaResult">Load a local video or start an audio note.</div>';
+    case "data":return '<div class="mini">TEXT & DATA TOOLKIT</div><h3>Data workbench</h3><p>Validate, format, minify or convert a JSON array of objects to CSV. Parse CSV back to JSON. Calculate SHA-256 of a local file.</p><label for="dataText">JSON / CSV</label><textarea id="dataText" spellcheck="false" placeholder="[{&quot;name&quot;:&quot;Ada&quot;,&quot;skill&quot;:&quot;Systems&quot;}]"></textarea><div class="fieldrow"><button class="btn small" data-transform="pretty">Pretty JSON</button><button class="btn small" data-transform="minify">Minify JSON</button><button class="btn small" data-transform="csv">JSON → CSV</button><button class="btn small" data-transform="json">CSV → JSON</button><button class="btn small" data-transform="slug">Slugify</button><button class="btn small" data-transform="upper">UPPER</button><button class="btn small" data-transform="lower">lower</button><button class="btn small" data-transform="encode">URL encode</button><button class="btn small" data-transform="decode">URL decode</button><button class="btn small" data-transform="base64">Base64 encode</button><button class="btn small" data-transform="unbase64">Base64 decode</button><button class="btn small" data-transform="stats">Text stats</button><button class="btn small" data-transform="download">Download</button></div><label for="hashFile">File fingerprint · SHA-256</label><input id="hashFile" type="file"><div class="result" id="dataResult">Operations happen locally.</div>';
+    case "links":return '<div class="mini">RESEARCH / RIGHTS-AWARE TOOL</div><h3>Reel & reference research</h3><p>Collect publicly available post references and create a small research note you can export. This tool does not bypass DRM, authentication, creator permissions or social-platform restrictions.</p><label for="reelLink">Public post URL</label><input id="reelLink" type="url" placeholder="https://www.instagram.com/reel/..."><label for="reelNotes">Context, creative analysis, transcript notes</label><textarea id="reelNotes" placeholder="Visual language, references, timing, editing notes..."></textarea><div class="fieldrow"><button class="btn small" id="reelSave">Save research note</button><button class="btn small" id="reelOpen">Open original post ↗</button></div><div class="result" id="reelResult">For media reuse, use original files or creator-authorized exports.</div>';
+    case "notepad":return '<div class="mini">PRIVATE / LOCAL STORAGE</div><h3>Notepad</h3><p>Private scratchpad. Stored in this browser only; browser cleanup can erase it. Export important material.</p><label for="memo">Your note</label><textarea id="memo" style="min-height:220px" placeholder="Start writing..."></textarea><div class="fieldrow"><button class="btn small" id="saveMemo">Save locally</button><button class="btn small" id="exportMemo">Export .txt</button><button class="btn small" id="clearMemo">Clear editor</button></div><div class="result" id="memoResult">No account or remote storage.</div>';
+    case "terminal":return '<div class="mini">BROWSER SHELL / READ-ONLY SIMULATOR</div><h3>Belentani terminal</h3><div class="terminal" id="console" role="log" aria-live="polite"></div><label for="terminalInput">Command — help / whoami / stack / projects / tools / ethics / date / clear / vista / contact</label><input class="code" id="terminalInput" type="text" autocomplete="off" spellcheck="false" placeholder="Type help then Enter"><p class="micro">A narrative terminal. Commands are interpreted locally and never executed on your operating system.</p>';
+    case "vista":return '<div class="mini">EASTER EGG / VISTA INSPIRED</div><h3>Aero nostalgia</h3><p>A tribute to the glass interfaces of the 2000s, built with CSS and accessible HTML. This is not a Microsoft Windows product or emulator.</p><div class="vistascreen"><div class="vista-top"><span>◉ BELENTANI COMPUTER</span><span>DEMO / 2007 → 2026</span></div><div class="vista-icons"><button data-launch="welcome"><span>⌂</span> My computer</button><button data-launch="notepad"><span>▤</span> Documents</button><button data-launch="converter"><span>◩</span> Pictures</button><button data-launch="terminal"><span>$_</span> Command prompt</button></div><div class="vista-bottom"><span class="vista-orb">◈</span><span>Belentani Aero Desktop</span><span>○ ◇ ▣</span></div></div><div class="linkrow"><a class="btn small" href="./studio.html">Open seven real utilities ↗</a><button class="btn small" data-launch="system">System options</button></div>';
+    case "system":return '<div class="mini">AERO / HUMAN-CENTERED SETTINGS</div><h3>Living machine preferences</h3><p>Customize this local interface. System-like visuals are artistic simulation — not an operating system, emulator or actual Windows Vista.</p><label><input type="checkbox" id="motionToggle" style="width:auto;margin-right:10px" checked>Ambient animation and code rain</label><label><input type="checkbox" id="rainToggle" style="width:auto;margin-right:10px" checked>Matrix-style code rain</label><div class="timeline"><p>Processing: local Canvas, Web APIs and browser storage.</p><p>Data sent to this website: none by these utility operations.</p><p>Accessibility: keyboard-operated windows; system reduced-motion setting respected.</p><p>Copyright: independent Aero-inspired concept, not affiliated with Microsoft.</p></div><button class="btn small" id="openAbout">Professional profile</button>';
+    default:return "<h3>Application not found.</h3>";
+    }
+  }
+  function toggleStart(force){
+    const m=$("#startmenu");const show=typeof force==="boolean"?force:!m.classList.contains("open");
+    m.classList.toggle("open",show);$("#startButton").setAttribute("aria-expanded",String(show));if(show)$("#startSearch").focus();
+  }
+  function renderStart(query){
+    const menu=$("#startGrid");menu.replaceChildren();
+    for(const [id,name,icon] of APPS.filter(a=>a[1].toLowerCase().includes(text(query).toLowerCase()))){
+      const b=document.createElement("button");b.textContent=icon+"  "+name;b.addEventListener("click",()=>{toggleStart(false);openApp(id)});menu.append(b);
+    }
+  }
+  renderStart("");$("#startSearch").addEventListener("input",e=>renderStart(e.target.value));
+  $("#startButton").addEventListener("click",()=>toggleStart());
+  document.addEventListener("keydown",e=>{
+    if(e.key==="Escape")toggleStart(false);
+    if(e.ctrlKey&&e.altKey&&e.key.toLowerCase()==="t"){e.preventDefault();openApp("terminal")}
+  });
+  document.addEventListener("pointerdown",e=>{if(!e.target.closest("#startmenu,#startButton"))toggleStart(false)});
+  function openApp(id){
+    if(windows.has(id)){const existing=windows.get(id);existing.classList.remove("hide");focus(existing);return}
+    const name=APPS.find(a=>a[0]===id);if(!name)return;
+    const win=document.createElement("section");win.className="window";win.setAttribute("role","dialog");win.setAttribute("aria-label",name[1]);
+    win.dataset.id=id;win.setAttribute("aria-modal","false");win.style.left=(12+windows.size*3.2)+"%";win.style.top=(12+windows.size*2.4)+"%";
+    win.innerHTML='<div class="titlebar"><span class="title">'+h(name[2]+"  "+name[1])+'</span><div class="controls"><button data-action="min" aria-label="Minimize window">−</button><button data-action="max" aria-label="Maximize window">□</button><button data-action="close" aria-label="Close window">×</button></div></div><main>'+appContent(id)+'</main>';
+    $("#stage").append(win);windows.set(id,win);focus(win);wireWindow(win,id);
+    if(window.matchMedia("(max-width:530px)").matches)win.style.left="3%";
+  }
+  function focus(el){el.style.zIndex=++topZ}
+  function wireWindow(win,id){
+    win.addEventListener("pointerdown",()=>focus(win));
+    $$(".controls button",win).forEach(b=>b.addEventListener("click",()=>{
+      if(b.dataset.action==="close"){cleanup(win);windows.delete(id);win.remove()}
+      if(b.dataset.action==="min")win.classList.add("hide");
+      if(b.dataset.action==="max")win.classList.toggle("max");
+    }));
+    const bar=$(".titlebar",win);let moving=null;
+    bar.addEventListener("pointerdown",e=>{
+      if(e.target.closest("button")||win.classList.contains("max")||window.innerWidth<530)return;
+      moving={x:e.clientX,y:e.clientY,left:win.offsetLeft,top:win.offsetTop};bar.setPointerCapture(e.pointerId);
+    });
+    bar.addEventListener("pointermove",e=>{
+      if(!moving)return;
+      const x=Math.min(window.innerWidth-80,Math.max(0,moving.left+e.clientX-moving.x));
+      const y=Math.min(window.innerHeight-80,Math.max(0,moving.top+e.clientY-moving.y));
+      win.style.left=x+"px";win.style.top=y+"px";
+    });
+    bar.addEventListener("pointerup",()=>moving=null);
+    bar.addEventListener("pointercancel",()=>moving=null);
+    $$("[data-launch]",win).forEach(b=>b.addEventListener("click",()=>openApp(b.dataset.launch)));
+    if(id==="converter")wireConvert(win);
+    if(id==="captions")wireCaptions(win);
+    if(id==="media")wireMedia(win);
+    if(id==="data")wireData(win);
+    if(id==="links")wireLinks(win);
+    if(id==="notepad")wireNotepad(win);
+    if(id==="terminal")wireTerminal(win);
+    if(id==="system")wireSystem(win);
+    setTimeout(()=>{const first=$("input,button,textarea",win);if(first)first.focus({preventScroll:true})},20);
+  }
+  function cleanup(win){
+    if(win.dataset.id==="media"&&recording&&recording.state==="recording")recording.stop();
+    if(win._sourceUrl)URL.revokeObjectURL(win._sourceUrl);
+  }
+  async function wireConvert(win){
+    $("#imgGo",win).addEventListener("click",async()=>{
+      const file=$("#imgFile",win).files[0];if(!file){setResult(win,"#imgResult","Select an image.",true);return}
+      if(file.size>50*1024*1024){setResult(win,"#imgResult","For stability, use an image under 50 MB.",true);return}
+      try{
+        const bmp=await createImageBitmap(file);
+        const w=parseInt($("#imgWidth",win).value,10);const width=w>0?Math.min(w,bmp.width):bmp.width;
+        const height=Math.max(1,Math.round(bmp.height*width/bmp.width));
+        if(width*height>40000000)throw Error("Image would exceed 40 megapixels.");
+        const canvas=document.createElement("canvas");canvas.width=width;canvas.height=height;
+        const ctx=canvas.getContext("2d");if(!ctx)throw Error("Canvas unavailable");
+        const type=$("#imgFormat",win).value;ctx.fillStyle="#ffffff";
+        if(type==="image/jpeg")ctx.fillRect(0,0,width,height);
+        ctx.drawImage(bmp,0,0,width,height);bmp.close();
+        const q=Math.max(.01,Math.min(1,Number($("#imgQuality",win).value||90)/100));
+        const blob=await new Promise(resolve=>canvas.toBlob(resolve,type,q));
+        if(!blob)throw Error("Encoder unavailable in this browser");
+        if(blob.type!==type)throw Error("This browser does not support the requested output encoder.");
+        const ext=blob.type==="image/png"?"png":blob.type==="image/webp"?"webp":"jpg";
+        download(blob,stripExt(file.name)+"-belentani."+ext);
+        setResult(win,"#imgResult","Converted "+width+" × "+height+" · "+Math.round(blob.size/1024)+" KB · "+blob.type);
+      }catch(err){setResult(win,"#imgResult",err.message||"Unable to convert image.",true)}
+    });
+  }
+  function normalizeTime(t){
+    const s=text(t).trim().replace(",",".");
+    const m=s.match(/^(?:(\d+):)?(\d{1,2}):(\d{2})(?:\.(\d{1,3}))?$/);
+    if(!m)throw Error("Invalid subtitle timestamp: "+s);
+    const hours=(m[1]||"0").padStart(2,"0");const mins=m[2].padStart(2,"0");
+    const secs=m[3].padStart(2,"0");const ms=(m[4]||"0").padEnd(3,"0");
+    return hours+":"+mins+":"+secs+"."+ms;
+  }
+  function parseCaptions(source){
+    let content=text(source).replace(/\r/g,"").replace(/^\uFEFF/,"").replace(/^WEBVTT[^\n]*\n?/,"").trim();
+    if(!content)return [];
+    const groups=content.split(/\n\s*\n/);const cues=[];
+    for(const group of groups){
+      let lines=group.split("\n").map(s=>s.trim()).filter(Boolean);
+      const index=lines.findIndex(line=>line.includes("-->"));
+      if(index<0)continue;
+      const parts=lines[index].split(/\s*-->\s*/);
+      const start=normalizeTime(parts[0]);const end=normalizeTime(parts[1].split(/\s+/)[0]);
+      const body=lines.slice(index+1).join("\n");
+      if(body)cues.push({start,end,body});
+    }
+    return cues;
+  }
+  function serializeCues(cues,mode){
+    const sep=mode==="srt"?",":".";const timestamp=t=>t.replace(".",sep);
+    const contents=cues.map((cue,i)=>(mode==="srt"?(i+1)+"\n":"")+timestamp(cue.start)+" --> "+timestamp(cue.end)+"\n"+cue.body);
+    return (mode==="vtt"?"WEBVTT\n\n":"")+contents.join("\n\n")+"\n";
+  }
+  function wireCaptions(win){
+    $("#capFile",win).addEventListener("change",async e=>{
+      const file=e.target.files[0];if(file){$("#capText",win).value=await file.text();setResult(win,"#capResult","Loaded "+file.name)}
+    });
+    ["srt","vtt"].forEach(format=>$("#to"+format[0].toUpperCase()+format.slice(1),win).addEventListener("click",()=>{
+      try{
+        const cues=parseCaptions($("#capText",win).value);
+        if(!cues.length)throw Error("No valid timestamped cues found.");
+        downloadText(serializeCues(cues,format),"belentani-captions."+format,"text/plain;charset=utf-8");
+        setResult(win,"#capResult","Exported "+cues.length+" cues as "+format.toUpperCase());
+      }catch(err){setResult(win,"#capResult",err.message,true)}
+    }));
+    $("#cleanCap",win).addEventListener("click",()=>{
+      const input=$("#capText",win).value;let output;
+      try{
+        const cues=parseCaptions(input);
+        output=cues.length?cues.map(c=>c.body).join("\n"):input.replace(/^\d+\s*$/gm,"").replace(/^(?:\d{1,2}:)?\d{2}:\d{2}[.,]\d{3}\s*-->\s*.+$/gm,"").trim();
+        $("#capText",win).value=output;setResult(win,"#capResult","Text extracted into editor. Export via the browser's copy function.");
+      }catch(err){setResult(win,"#capResult",err.message,true)}
+    });
+    $("#exportPlain",win).addEventListener("click",()=>{downloadText($("#capText",win).value,"belentani-transcript.txt");setResult(win,"#capResult","Transcript downloaded as TXT.")});
+    const speech=window.SpeechRecognition||window.webkitSpeechRecognition;
+    if(!speech){$("#dictate",win).disabled=true;$("#dictate",win).title="Speech recognition unavailable";return}
+    $("#dictate",win).addEventListener("click",()=>{
+      try{
+        const rec=new speech();rec.lang=lang==="pt"?"pt-BR":lang==="en"?"en-US":"es-ES";
+        rec.interimResults=false;rec.continuous=false;
+        rec.onresult=(ev)=>{const spoken=Array.from(ev.results).map(x=>x[0].transcript).join(" ");$("#capText",win).value+=($("#capText",win).value?"\n":"")+spoken;setResult(win,"#capResult","Dictation inserted. Browser speech services may process audio remotely.")};
+        rec.onerror=(e)=>setResult(win,"#capResult","Speech recognition: "+e.error,true);
+        rec.start();setResult(win,"#capResult","Listening with browser permission. Speech recognition can use your browser provider.");
+      }catch(err){setResult(win,"#capResult",err.message,true)}
+    });
+  }
+  function wireMedia(win){
+    const vid=$("#videoPreview",win);
+    $("#videoFile",win).addEventListener("change",e=>{
+      const file=e.target.files[0];if(!file)return;
+      if(win._sourceUrl)URL.revokeObjectURL(win._sourceUrl);
+      win._sourceUrl=URL.createObjectURL(file);vid.src=win._sourceUrl;vid.style.display="block";
+      setResult(win,"#mediaResult","Video loaded locally: "+file.name);
+    });
+    $("#frameGo",win).addEventListener("click",async()=>{
+      try{
+        if(!vid.src)throw Error("Select a video first.");
+        async function mediaEvent(type,limit=8000){
+          return new Promise((resolve,reject)=>{
+            const done=(err)=>{clearTimeout(timer);vid.removeEventListener(type,ok);vid.removeEventListener("error",bad);err?reject(err):resolve()};
+            const ok=()=>done();const bad=()=>done(Error("Video could not be decoded."));
+            const timer=setTimeout(()=>done(Error("Video decoding timed out.")),limit);
+            vid.addEventListener(type,ok,{once:true});vid.addEventListener("error",bad,{once:true});
+          });
+        }
+        if(!Number.isFinite(vid.duration)){
+          const ready=mediaEvent("loadedmetadata");vid.load();await ready;
+        }
+        const second=Math.max(0,Math.min(Math.max(0,vid.duration-.05),Number($("#frameTime",win).value)||0));
+        if(vid.readyState<2){
+          const loaded=mediaEvent("loadeddata");
+          vid.load();
+          await loaded;
+        }
+        if(Math.abs(vid.currentTime-second)>.04){
+          const ready=mediaEvent("seeked");
+          vid.currentTime=second;
+          await ready;
+        }
+        const canvas=document.createElement("canvas");canvas.width=vid.videoWidth;canvas.height=vid.videoHeight;
+        if(!canvas.width||!canvas.height)throw Error("Video dimensions unavailable.");
+        canvas.getContext("2d").drawImage(vid,0,0);
+        const blob=await new Promise(resolve=>canvas.toBlob(resolve,"image/png"));
+        if(!blob)throw Error("Frame export failed.");
+        download(blob,"belentani-frame-"+second.toFixed(2)+".png");
+        setResult(win,"#mediaResult","Saved "+canvas.width+" × "+canvas.height+" PNG frame.");
+      }catch(err){setResult(win,"#mediaResult",err.message,true)}
+    });
+    const start=$("#recordStart",win),stop=$("#recordStop",win);
+    start.addEventListener("click",async()=>{
+      try{
+        if(!navigator.mediaDevices?.getUserMedia||!window.MediaRecorder)throw Error("Microphone recording unsupported.");
+        const stream=await navigator.mediaDevices.getUserMedia({audio:true});
+        const chunks=[];recording=new MediaRecorder(stream);
+        recording.ondataavailable=e=>{if(e.data.size)chunks.push(e.data)};
+        recording.onstop=()=>{stream.getTracks().forEach(t=>t.stop());if(chunks.length)download(new Blob(chunks,{type:recording.mimeType||"audio/webm"}),"belentani-audio-note.webm");start.disabled=false;stop.disabled=true;setResult(win,"#mediaResult","Audio recording downloaded.")};
+        recording.start();start.disabled=true;stop.disabled=false;setResult(win,"#mediaResult","Recording. Click Stop & save.");
+      }catch(err){setResult(win,"#mediaResult",err.message,true)}
+    });
+    stop.addEventListener("click",()=>{if(recording?.state==="recording")recording.stop()});
+  }
+  function parseCSV(s){
+    const rows=[];let row=[],cell="",quote=false;
+    for(let i=0;i<s.length;i++){
+      const c=s[i];
+      if(quote){if(c==='"'&&s[i+1]==='"'){cell+='"';i++}else if(c==='"')quote=false;else cell+=c}
+      else if(c==='"')quote=true;
+      else if(c===","){row.push(cell);cell=""}
+      else if(c==="\n"){row.push(cell);rows.push(row);row=[];cell=""}
+      else if(c!=="\r")cell+=c;
+    }
+    if(quote)throw Error("Unclosed quote in CSV");
+    if(cell||row.length){row.push(cell);rows.push(row)}
+    if(!rows.length)return [];
+    const fields=rows.shift();return rows.filter(r=>r.some(s=>s!=="")).map(r=>Object.fromEntries(fields.map((f,i)=>[f,r[i]||""])));
+  }
+  function csvCell(value){let v=value==null?"":typeof value==="object"?JSON.stringify(value):String(value);if(/^\s*[=+@]/.test(v)||/^\s*-(?!\d+([.,]\d+)?\s*$)/.test(v))v="\u0027"+v;return /[",\n\r]/.test(v)?'"'+v.replaceAll('"','""')+'"':v}
+  function toCSV(records){
+    if(!Array.isArray(records)||!records.every(r=>r&&typeof r==="object"&&!Array.isArray(r)))throw Error("Supply a JSON array of objects.");
+    const headers=[...new Set(records.flatMap(Object.keys))];return [headers.map(csvCell).join(","),...records.map(r=>headers.map(k=>csvCell(r[k])).join(","))].join("\n");
+  }
+  function wireData(win){
+    $$("[data-transform]",win).forEach(button=>button.addEventListener("click",()=>{
+      try{
+        let val=$("#dataText",win).value;const op=button.dataset.transform;
+        if(op==="pretty")val=JSON.stringify(JSON.parse(val),null,2);
+        if(op==="minify")val=JSON.stringify(JSON.parse(val));
+        if(op==="csv")val=toCSV(JSON.parse(val));
+        if(op==="json")val=JSON.stringify(parseCSV(val),null,2);
+        if(op==="slug")val=val.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+        if(op==="upper")val=val.toUpperCase();
+        if(op==="lower")val=val.toLowerCase();
+        if(op==="encode")val=encodeURIComponent(val);
+        if(op==="decode")val=decodeURIComponent(val);
+        if(op==="base64")val=btoa(Array.from(new TextEncoder().encode(val),b=>String.fromCharCode(b)).join(""));
+        if(op==="unbase64")val=new TextDecoder("utf-8",{fatal:true}).decode(Uint8Array.from(atob(val.trim()),c=>c.charCodeAt(0)));
+        if(op==="stats"){setResult(win,"#dataResult","Characters: "+[...val].length+"\nWords: "+(val.match(/\S+/g)||[]).length+"\nLines: "+(val?val.split(/\r?\n/).length:0));return}
+        if(op==="download")downloadText(val,"belentani-data.txt");
+        else $("#dataText",win).value=val;
+        setResult(win,"#dataResult",op==="download"?"Text downloaded.":"Completed: "+op);
+      }catch(err){setResult(win,"#dataResult",err.message,true)}
+    }));
+    $("#hashFile",win).addEventListener("change",async e=>{
+      const file=e.target.files[0];if(!file)return;
+      try{
+        if(!crypto?.subtle)throw Error("Secure context required for SHA-256.");
+        if(file.size>150*1024*1024)throw Error("Large file: use a desktop checksum tool over 150MB.");
+        const data=await file.arrayBuffer();const digest=await crypto.subtle.digest("SHA-256",data);
+        const hex=Array.from(new Uint8Array(digest)).map(n=>n.toString(16).padStart(2,"0")).join("");
+        setResult(win,"#dataResult",file.name+"\nSHA-256: "+hex);
+      }catch(err){setResult(win,"#dataResult",err.message,true)}
+    });
+  }
+  function wireLinks(win){
+    $("#reelSave",win).addEventListener("click",()=>{
+      try{
+        const input=$("#reelLink",win).value.trim(),url=new URL(input);
+        if(!["https:","http:"].includes(url.protocol))throw Error("Only HTTP(S) links are supported.");
+        const note="# Reference research\n\nURL: "+url.href+"\nSaved: "+new Date().toISOString()+"\n\n"+$("#reelNotes",win).value+"\n";
+        downloadText(note,"belentani-reference.txt");setResult(win,"#reelResult","Research note exported locally.");
+      }catch(err){setResult(win,"#reelResult","Add a valid URL. "+err.message,true)}
+    });
+    $("#reelOpen",win).addEventListener("click",()=>{
+      try{const u=new URL($("#reelLink",win).value);if(!["https:","http:"].includes(u.protocol))throw Error("URL must be HTTP(S).");window.open(u.href,"_blank","noopener,noreferrer")}
+      catch(err){setResult(win,"#reelResult",err.message,true)}
+    });
+  }
+  function wireNotepad(win){
+    const memo=$("#memo",win);memo.value=getStored("note");
+    $("#saveMemo",win).addEventListener("click",()=>{setStored("note",memo.value);setResult(win,"#memoResult","Saved on this device.")});
+    $("#exportMemo",win).addEventListener("click",()=>{downloadText(memo.value,"belentani-note.txt");setResult(win,"#memoResult","Text exported.")});
+    $("#clearMemo",win).addEventListener("click",()=>{memo.value="";setResult(win,"#memoResult","Editor cleared (stored note preserved until Save).")});
+  }
+  function wireTerminal(win){
+    const term=$("#console",win),entry=$("#terminalInput",win);
+    const history=[];let cursor=0;const started=Date.now();
+    const profile={
+      name:"Pedro Belentani",
+      role:"AI systems · product engineering · creative technology",
+      location:"Barcelona area",
+      languages:["English","Spanish","Brazilian Portuguese"],
+      technologies:["TypeScript","JavaScript","React","Next.js","Node.js","Python","FastAPI","Docker","Git","CI","Three.js"],
+      domains:["Applied AI","Agent workflows","Trust & Safety","Education","Accessibility","Creative technology"],
+      status:"Working implementations, research and prototypes are distinguished; not all projects are public releases."
+    };
+    const capabilities={
+      live_browser_tools:["Image conversion","Subtitle tools","CV clarity","Storyboard planning","Image to PDF","Audio to WAV","Video contact sheets","SHA-256"],
+      technical_practice:["Full-stack engineering","AI workflows","Human-in-the-loop design","Multilingual UX","Creative computing"],
+      explorations_not_certified_products:["Advanced agents","Creative pipelines","Autonomous operations","Large-scale orchestration"]
+    };
+    const commands={
+      help:"help | whoami | stack | skills | projects | tools | capabilities | status | privacy | roadmap | ethics | date | uptime | history | ls | cat about | cat capabilities.json | open studio | open portfolio | open github | open diagnostics | open projects | export profile | clear | vista | matrix",
+      whoami:profile.name+" — "+profile.role+" / "+profile.location+" / EN · ES · PT-BR.",
+      stack:profile.technologies.join(" / "),
+      skills:profile.domains.join(" / "),
+      projects:"Selected projects: Belentani.cv-ai, ManosAbiertas, open-school, lingua-aberta, Judas Experience and developer tools. Some source repositories are private.",
+      tools:"Live browser tools: "+capabilities.live_browser_tools.join(", ")+".",
+      capabilities:JSON.stringify(capabilities,null,2),
+      privacy:"Files are processed locally in the browser for the Studio tools. Microphone dictation, when used, may rely on the browser's speech provider. No remote shell or privileged system access.",
+      roadmap:"Vision: deeper AI orchestration, dependable integrations, real-life workflows and immersive creative tools. Roadmap items are not described as shipped.",
+      ethics:"Human oversight; testable software; accessibility; security; privacy; reversible changes; evidence before claims.",
+      matrix:"Code rain is a visual effect, not a real machine. Press Ctrl+Alt+T to open the terminal.",
+      vista:"Aero-inspired desktop: interactive web simulation, not Windows Vista.",
+      contact:"https://belentani.es  |  https://github.com/belentani7",
+      github:"https://github.com/belentani7"
+    };
+    function safeStorage(){try{return Boolean(window.localStorage)}catch{return false}}
+    function print(line){term.textContent+=String(line)+"\n";term.scrollTop=term.scrollHeight}
+    function run(raw){
+      const cmd=raw.trim().toLowerCase().replace(/\s+/g," ");
+      if(!cmd)return;
+      history.push(raw);cursor=history.length;print("B:\\> "+raw);
+      if(cmd==="clear"){term.textContent="";return}
+      if(cmd==="date"){print(new Date().toString());return}
+      if(cmd==="uptime"){print("Browser session: "+Math.floor((Date.now()-started)/1000)+" seconds. This is not a remote server.");return}
+      if(cmd==="history"){print(history.map((c,i)=>(i+1)+": "+c).join("\n"));return}
+      if(cmd==="status"){print("Browser: "+navigator.userAgent+"\nSecure context: "+Boolean(window.isSecureContext)+"\nLocal storage: "+safeStorage()+"\nWeb Crypto: "+Boolean(window.crypto&&window.crypto.subtle)+"\nStatus: client-side demonstration, no backend session.");return}
+      if(cmd==="ls"){print("about.txt  capabilities.json  projects/  tools/  contact.txt  vision.txt  [virtual read-only entries]");return}
+      if(cmd==="cat about"){print(JSON.stringify(profile,null,2));return}
+      if(cmd==="cat capabilities.json"){print(JSON.stringify(capabilities,null,2));return}
+      if(cmd==="cat vision"){print(commands.roadmap);return}
+      if(cmd==="cat stack"){print(commands.stack);return}
+      if(cmd==="cat contact.txt"){print(commands.contact);return}
+      if(cmd==="open projects"){document.querySelector("#profile").scrollIntoView({behavior:"smooth"});print("Scrolling to selected projects.");return}
+      if(cmd.startsWith("open ")){
+        const destinations={studio:"./studio.html",diagnostics:"./diagnostics.html",portfolio:"https://belentani.es",github:"https://github.com/belentani7"};
+        const dest=destinations[cmd.slice(5)];
+        if(!dest){print("Unknown destination. Use: open studio | diagnostics | portfolio | github | projects");return}
+        window.open(dest,"_blank","noopener,noreferrer");print("Opening: "+dest);return;
+      }
+      if(cmd==="export profile"){downloadText(JSON.stringify({profile,capabilities,exported:new Date().toISOString()},null,2),"belentani-profile.json","application/json;charset=utf-8");print("Exported a local JSON profile snapshot.");return}
+      if(cmd==="vista"){print(commands.vista);openApp("vista");return}
+      print(commands[cmd]||"Unknown command. Type help.");
+    }
+    print("BELENTANI // LIVING MACHINE / OCT 2026\nLocal-first interactive profile. No real OS shell.\nType help; ArrowUp/ArrowDown navigate command history.\n");
+    entry.addEventListener("keydown",e=>{
+      if(e.key==="ArrowUp"&&history.length){e.preventDefault();cursor=Math.max(0,cursor-1);entry.value=history[cursor]||"";return}
+      if(e.key==="ArrowDown"&&history.length){e.preventDefault();cursor=Math.min(history.length,cursor+1);entry.value=history[cursor]||"";return}
+      if(e.key!=="Enter")return;
+      const raw=entry.value;entry.value="";run(raw);
+    });
+  }
+  function wireSystem(win){
+    $("#motionToggle",win).checked=motion;
+    $("#motionToggle",win).addEventListener("change",e=>{
+      motion=e.target.checked;document.body.classList.toggle("lowmotion",!motion);
+      toast(motion?"Motion enabled":"Reduced motion enabled");
+    });
+    $("#rainToggle",win).addEventListener("change",e=>{
+      rainEnabled=e.target.checked;if(!rainEnabled)rainCtx.clearRect(0,0,rainWidth,rainHeight);
+    });
+    $("#openAbout",win).addEventListener("click",()=>{win.classList.add("hide");document.querySelector("#profile").scrollIntoView({behavior:"smooth"})});
+  }
+  $$("[data-open]").forEach(b=>b.addEventListener("click",()=>openApp(b.dataset.open)));
+  const rain=$("#rain");const rainCtx=rain.getContext("2d");
+  let rainWidth=0,rainHeight=0,cols=[],rainEnabled=true,lastFrame=0;
+  const glyphs="01λ<>[]{};:⟐⌘∆";
+  function resizeRain(){
+    const ratio=Math.min(window.devicePixelRatio||1,2);rainWidth=rain.width=Math.round(innerWidth*ratio);
+    rainHeight=rain.height=Math.round(innerHeight*ratio);
+    rain.style.width=innerWidth+"px";rain.style.height=innerHeight+"px";
+    rainCtx.setTransform(ratio,0,0,ratio,0,0);
+    cols=Array.from({length:Math.ceil(innerWidth/18)},(_,i)=>({x:i*18,y:Math.random()*innerHeight,speed:.5+Math.random()*1.1}));
+  }
+  resizeRain();window.addEventListener("resize",resizeRain);
+  const reduce=matchMedia("(prefers-reduced-motion: reduce)");
+  function drawRain(time){
+    requestAnimationFrame(drawRain);
+    if(!rainEnabled||!motion||reduce.matches||document.hidden||time-lastFrame<65)return;
+    lastFrame=time;rainCtx.fillStyle="rgba(3,5,9,.095)";rainCtx.fillRect(0,0,innerWidth,innerHeight);
+    rainCtx.font="12px Consolas,monospace";
+    cols.forEach((c,i)=>{
+      rainCtx.fillStyle=i%7===0?"#ffd4e5":"#e03b70";
+      rainCtx.fillText(glyphs[Math.floor(Math.random()*glyphs.length)],c.x,c.y);
+      c.y+=c.speed*11;if(c.y>innerHeight+Math.random()*300)c.y=-Math.random()*130;
+    });
+  }
+  requestAnimationFrame(drawRain);
+  let eyeTick=0;
+  document.addEventListener("pointermove",event=>{
+    if(!motion||reduce.matches||eyeTick)return;
+    const x=((event.clientX/innerWidth)-.5)*18,y=((event.clientY/innerHeight)-.5)*15;
+    eyeTick=requestAnimationFrame(()=>{
+      const iris=document.querySelector(".iris");
+      if(iris){iris.style.setProperty("--eye-x",x.toFixed(2)+"px");iris.style.setProperty("--eye-y",y.toFixed(2)+"px")}
+      eyeTick=0;
+    });
+  },{passive:true});
+  if(getStored("intro")==="")setStored("intro","seen");
+  if("serviceWorker" in navigator && (location.protocol==="https:" || location.hostname==="localhost" || location.hostname==="127.0.0.1")){
+    window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js",{scope:"./"}).catch(()=>{}),{once:true});
+  }
+  window.BELENTANI={openApp,version:"2.0",tools:APPS.map(a=>a[0])};
+  // Accessibility: avoid motion when OS requests reduced animations.
+  reduce.addEventListener?.("change",()=>{if(reduce.matches)rainCtx.clearRect(0,0,rainWidth,rainHeight)});
 })();
 </div></main>
 <footer class="site"><div class="wrap">
