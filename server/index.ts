@@ -112,6 +112,7 @@ async function startServer() {
 
   // API: Create and run mission
   app.post("/api/missions", (req, res) => {
+<<<<<<< HEAD
     const body = req.body ?? {};
     const objective = body.objective;
     const urls = body.urls ?? [];
@@ -123,6 +124,12 @@ async function startServer() {
       objective.length > 2000
     ) {
       return res.status(400).json({ error: "Objective must be between 3 and 2000 characters" });
+=======
+    const { objective, urls, max_pages = 3 } = req.body;
+
+    if (!objective || objective.length < 3) {
+      return res.status(400).json({ error: "Objective must be at least 3 characters" });
+>>>>>>> 94a6e99 (chore: consolidar estado del proyecto (28 archivos))
     }
 
     if (
@@ -177,8 +184,13 @@ async function startServer() {
     const { id, format } = req.params;
     const allowedFormats = ["csv", "json"];
 
+<<<<<<< HEAD
     if (!isSafeMissionId(id)) {
       return res.status(400).json({ error: "Invalid mission id" });
+=======
+    if (!allowedFormats.includes(format)) {
+      return res.status(400).json({ error: `Format must be one of: ${allowedFormats.join(", ")}` });
+>>>>>>> 94a6e99 (chore: consolidar estado del proyecto (28 archivos))
     }
 
     if (!allowedFormats.includes(format)) {
