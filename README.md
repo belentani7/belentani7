@@ -4,9 +4,9 @@
 
 **Barcelona** — L'Hospitalet de Llobregat
 
-### Senior Full-Stack AI Engineer & Systems Architect
+### AI Product Engineering · Python · TypeScript
 
-*"El mejor GitHub de Barcelona" no es un título que me haya dado nadie: es lo que estoy construyendo, en público y con evidencia.*
+Construyo herramientas para agentes, automatización y aplicaciones web. Me interesa que una persona pueda entender una decisión técnica, ejecutar el código y completar una tarea útil.
 
 [belentani.es](https://belentani.es) · [Email](mailto:belentani7pedro@gmail.com) · [Repositorios](https://github.com/belentani7?tab=repositories)
 
@@ -14,9 +14,9 @@
 
 ---
 
-## The Big Six
+## Proyectos seleccionados
 
-Seis proyectos con código propio, en producción y comprobables ahora mismo.
+Trabajo centrado en tres líneas: herramientas para desarrolladores, educación accesible y aplicaciones de empleabilidad. Los repositorios documentan su implementación y sus límites; las herramientas CLI se prueban desde el código.
 
 | Proyecto | Qué resuelve | Stack | Dónde verlo |
 | --- | --- | --- | --- |
@@ -24,34 +24,29 @@ Seis proyectos con código propio, en producción y comprobables ahora mismo.
 | **[llm-vfx-orchestrator](https://github.com/belentani7/llm-vfx-orchestrator)** | Pipelines VFX autónomos: el LLM planifica y ComfyUI ejecuta | Python, LLM, ComfyUI | repositorio |
 | **[gpu-cost-optimizer](https://github.com/belentani7/gpu-cost-optimizer)** | Programa difusión por coste real en lugar de por orden de llegada | Python, scheduling | repositorio |
 | **[ManosAbiertas](https://github.com/belentani7/ManosAbiertas)** | Educación gratuita: cursos de IA y Office, creador de CV, guías de derechos | Next.js, TypeScript | [belentani7.github.io/ManosAbiertas](https://belentani7.github.io/ManosAbiertas/) |
-| **[belentani.es](https://github.com/belentani7/belentani.es)** | Hub artístico 3D: cuatro capítulos, escenas procedurales, catálogo musical | Next.js, Three.js, R3F, GSAP | [belentani.es](https://belentani.es) |
+| **[Belentani.cv-ai](https://github.com/belentani7/Belentani.cv-ai)** | Editor de CV, borradores locales y cartas de presentación; asistencia IA opcional | TypeScript, React, Next.js | repositorio |
 | **[secure-t](https://github.com/belentani7/secure-t)** | Campus abierto de ciberseguridad y IA responsable, con matrícula anónima | Next.js, TypeScript | [secure-t.netlify.app](https://secure-t.netlify.app) |
 
-## En producción, verificado hoy
+## Casos de ingeniería
 
-| Producto | Estado |
-| --- | --- |
-| [belentani.es](https://belentani.es) | HTTP 200 · hub 3D y música |
-| [secure-t.netlify.app](https://secure-t.netlify.app) | HTTP 200 · campus de ciberseguridad |
-| [arte-que-veste.vercel.app](https://arte-que-veste.vercel.app) | HTTP 200 · moda de autor |
-| [omniagent-chi.vercel.app](https://omniagent-chi.vercel.app) | HTTP 200 · router de modelos |
-| [keyrotor.vercel.app](https://keyrotor.vercel.app) | HTTP 200 · rotación de claves API |
-| [d4ck.netlify.app](https://d4ck.netlify.app) | HTTP 200 · laboratorio de audio |
+- **Meta-Skill:** decisiones de routing explícitas, abstención ante incertidumbre y evaluación reproducible. Las métricas sintéticas no equivalen a precisión o ahorro en producción.
+- **ManosAbiertas:** contenido multilingüe, práctica y progreso local. El recorrido educativo y el acceso al contenido son el centro del producto.
+- **CV Studio:** edición, recuperación de borradores y exportación. La asistencia de IA requiere proveedor configurado; pagos no se presentan como función terminada.
 
 ## Qué hago
 
 - **Infraestructura de agentes.** Routing de skills, selección de modelo, MCP y orquestación que sobrevive a Windows, a no tener GPU y a las cuotas gratuitas.
-- **Productos de IA con precio y política.** Cifrado, RGPD, pago único, cero rastreo, cero patrones oscuros.
+- **Aplicaciones de IA.** Integraciones con APIs, validación de entradas y alternativas cuando el proveedor no está disponible.
 - **Educación abierta.** Currículos multiidioma pensados para funcionar sin conexión, con accesibilidad como requisito y no como fase final.
-- **Ingeniería creativa.** 3D, audio y generativo donde el código forma parte de la obra.
+- **Desarrollo web.** TypeScript, React, Next.js y Node.js para interfaces y flujos de aplicación.
 
 ## Cómo trabajo
 
 - **Evidencia antes que afirmaciones.** Algo está hecho cuando lo dice un comando, una URL o un test, no un README.
 - **Test antes del refactor.** Primero se reproduce el fallo, después se arregla la causa.
 - **Accesibilidad y movimiento reducido por defecto**, no en una auditoría tardía.
-- **Cero rastreadores de terceros** en todo lo que publico.
-- **PT > ES > EN > CA.** Escribo y publico en los cuatro.
+- **Documentación útil:** instalación, ejemplos, decisiones y limitaciones en cada producto.
+- **Contenido multilingüe** adaptado al público de cada aplicación.
 
 ## Barcelona
 
@@ -63,6 +58,6 @@ Si estás en la ciudad y trabajas en agentes, infraestructura o IA aplicada, esc
 
 <div align="center">
 
-*Reconstruyendo y verificando un catálogo de 296 proyectos recuperados de una década de trabajo local.*
+[Alcance del perfil y catálogo](plataforma/FICHA.md). Cada producto mantiene su propio estado y documentación.
 
 </div>
