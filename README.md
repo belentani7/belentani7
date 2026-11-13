@@ -4,7 +4,9 @@
 
 **Barcelona** — L'Hospitalet de Llobregat
 
-### AI Product Engineering · Python · TypeScript
+**Senior Full-Stack AI Engineer & Systems Architect & Creative Technologist**
+
+AI Systems · Trust & Safety · Python · TypeScript
 
 Construyo herramientas para agentes, automatización y aplicaciones web. Me interesa que una persona pueda entender una decisión técnica, ejecutar el código y completar una tarea útil.
 
@@ -34,6 +36,8 @@ Trabajo centrado en tres líneas: herramientas para desarrolladores, educación 
 - **CV Studio:** edición, recuperación de borradores y exportación. La asistencia de IA requiere proveedor configurado; pagos no se presentan como función terminada.
 
 ## Qué hago
+
+Mi experiencia en Trust & Safety aporta una perspectiva poco habitual al desarrollo: evaluar comportamientos adversariales, diseñar rutas de escalado, documentar decisiones revisables y pensar en el impacto humano de los fallos. Distingo esa experiencia operativa de las capacidades de ingeniería que puedo demostrar en código.
 
 - **Infraestructura de agentes.** Routing de skills, selección de modelo, MCP y orquestación que sobrevive a Windows, a no tener GPU y a las cuotas gratuitas.
 - **Aplicaciones de IA.** Integraciones con APIs, validación de entradas y alternativas cuando el proveedor no está disponible.
