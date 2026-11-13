@@ -117,6 +117,15 @@ try {
     } else {
         Write-Warning "No hay package.json; no se han ejecutado tests npm."
     }
+    if (Test-Path -LiteralPath "tests" -PathType Container) {
+        if (Get-Command "python" -ErrorAction SilentlyContinue) {
+            Invoke-Checked "python" @("-m", "unittest", "discover", "-s", "tests", "-v")
+        } elseif (Get-Command "py" -ErrorAction SilentlyContinue) {
+            Invoke-Checked "py" @("-3", "-m", "unittest", "discover", "-s", "tests", "-v")
+        } else {
+            throw "Hay tests Python, pero no se encontró Python 3."
+        }
+    }
     Invoke-Checked "git" @("diff", "--check")
     if (-not $Publish) {
         Write-Host "[OK] Auditoría finalizada. No se ha escrito nada en GitHub."
