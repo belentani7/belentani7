@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sin título</title>
 <meta name="description" content="Página de servicio de magic.">
-<meta name="generator" content="repo-superpowers-audit-v1">
+<meta name="generator" content="repo-cursor-superpowers-v1">
 <meta property="og:title" content="Sin título">
 <meta property="og:description" content="Página de servicio de magic.">
 <meta property="og:type" content="website">
@@ -176,10 +176,28 @@ export const magic: Plugin = async ({ project, hooks }) => {
   if(container){ container.appendChild(canvas); }
   try{
     var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
-    if(!gl){ canvas.innerHTML = '<p style="color:var(--dim);font-family:var(--mono);padding:12px">WebGL no disponible.</p>'; return; }
+    if(!gl){ canvas.innerHTML = '<p style="color:var(--dim);font-family:var(--mono);padding:12px">WebGL no disponible en este navegador.</p>'; return; }
     gl.clearColor(0.047,0.043,0.039,1);
     gl.clear(gl.COLOR_BUFFER_BIT);
-  }catch(e){ console.log('WebGL:', e.message); }
+    var vs = gl.createShader(gl.VERTEX_SHADER);
+    gl.shaderSource(vs, 'attribute vec2 p;void main(){gl_Position=vec4(p,0.0,1.0);}');
+    gl.compileShader(vs);
+    var fs = gl.createShader(gl.FRAGMENT_SHADER);
+    gl.shaderSource(fs, 'precision mediump float;uniform vec4 c;void main(){gl_FragColor=c;}');
+    gl.compileShader(fs);
+    var prog = gl.createProgram();
+    gl.attachShader(prog,vs); gl.attachShader(prog,fs); gl.linkProgram(prog);
+    gl.useProgram(prog);
+    var loc = gl.getUniformLocation(prog,'c');
+    gl.uniform4f(loc, 0.549, 0.659, 0.545, 1.0);
+    var buf = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER,buf);
+    gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
+    var attr = gl.getAttribLocation(prog,'p');
+    gl.enableVertexAttribArray(attr);
+    gl.vertexAttribPointer(attr,2,gl.FLOAT,false,0,0);
+    gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
+  }catch(e){ console.log('WebGL init:', e.message); }
 })();
 </script>
 </body>

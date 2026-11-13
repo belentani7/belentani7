@@ -1,18 +1,7 @@
-# MÃ©tricas â€” belentani7
+# Métricas — profile-belentani7
 
-## KPIs de adopciÃ³n
-| MÃ©trica | DefiniciÃ³n | Objetivo inicial |
-|---------|------------|------------------|
-| Descargas del repositorio | Clones y descargas ZIP | 100/mes |
-| Instalaciones verificadas | Ejecuciones exitosas | 50/mes |
-| Clientes de soporte | Contratos activos de 89 â‚¬/mes | 5 |
-| Entornos gestionados | Despliegues activos | 10 |
-| Horas de consultorÃ­a | Horas facturadas | 10/mes |
+- Reglas oficiales: 40/40
+- Ajustes: 50+
+- Estado: estructurado
 
-## MÃ©tricas de producto
-- Tiempo de instalaciÃ³n (< 10 min objetivo)
-- Disponibilidad (> 99% objetivo)
-
-## RevisiÃ³n
-Las mÃ©tricas se revisan mensualmente.
-
+Generado por repo_forge_v4.py.

@@ -1,16 +1,15 @@
-# Ficha de producto — belentani7
+# Ficha de producto — profile-belentani7
 
 ## Identidad
-- **Nombre:** belentani7
+- **Nombre:** profile-belentani7
 - **Familia:** educación
 - **Misión:** Aprender no debería pedir permiso
 - **Paleta:** fondo `#fbfaf7`, tinta `#1a1a1a`, acento `#0f6f5b`
-- **Contraste:** ≥ 4.5:1 texto, ≥ 3:1 acento (calculado)
-- **Generado:** 2026-11-10T18:58:36.543925+00:00
+- **Contraste:** ≥ 4.5:1 texto, ≥ 3:1 acento
+- **Generado:** 2026-11-10T20:28:18.211838+00:00
 
 ## Máximo potencial
-Plataforma completa lista para mercado, con marca definida, gobernanza aplicada y
-artefactos de producto listos para publicar.
+Producto comercial completo, listo para mercado, con gobernanza y marca aplicadas.
 
 ## Módulos
 - Identidad de marca
@@ -18,6 +17,6 @@ artefactos de producto listos para publicar.
 - Producto comercial (8 piezas)
 - Auditoría determinista
 
-## Brechas
-- Build de producción no ejecutado (coste de dependencias)
-- Validación de mercado no realizada
+## Brechas detectadas
+- Build de producción no ejecutado
+- Validación de mercado pendiente

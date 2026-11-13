@@ -2,4 +2,4 @@
 
 Familia: creativo
 Tono: Menos ceremonia, más resultado
-Generado: 2026-11-10T20:42:34.770650+00:00
+Generado: 2026-11-10T20:41:51.656185+00:00

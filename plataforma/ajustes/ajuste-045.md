@@ -1,3 +1,3 @@
 # Ajuste 045
 
-Ajuste de gobernanza aplicado a belentani7.
+Ajuste de gobernanza para profile-belentani7.

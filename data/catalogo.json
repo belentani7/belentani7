@@ -1,31 +1,6 @@
 {
-  "nombre": "belentani7",
-  "remoto": "https://github.com/belentani7/belentani7",
-  "tipo": "web-static",
-  "modelo": "perfil profesional y puerta del ecosistema",
-  "publico": "reclutadores, clientes y colaboradores",
-  "licencia": "MIT",
-  "medido": {
-    "archivos": 238,
-    "lineas": 37061,
-    "bytes": 2288478,
-    "html": 17,
-    "tests": 20
-  },
-  "modulos": [
-    "Presentación",
-    "Catálogo de productos",
-    "Estado verificado",
-    "Contacto"
-  ],
-  "paleta": {
-    "bg": "#0f1419",
-    "ink": "#e8eef6",
-    "accent": "#4bd0ff"
-  },
-  "fuente": {
-    "ruta": "repos\\belentani7",
-    "fecha": "2026-11-10"
-  },
-  "generado_por": "repo-forge"
+  "repo": "profile-belentani7",
+  "familia": "educación",
+  "estado": "estructurado",
+  "generado": "2026-11-10T20:28:18.333145+00:00"
 }

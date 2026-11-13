@@ -1,22 +1,8 @@
-# catalogo.py — belentani7
-# Generado por repo_forge.py (create-only)
-
-REPO = "belentani7"
+# catalogo.py — profile-belentani7
+REPO = "profile-belentani7"
 FAMILIA = "educación"
-AJUSTES_APLICADOS = 50
-REGLAS_OFICIALES_OK = 40
 ESTADO = "estructurado"
-PRODUCTO_COMPLETO = False
-GENERADO = "2026-11-10T18:58:36.595108+00:00"
-
+GENERADO = "2026-11-10T20:28:18.337278+00:00"
 
 def info() -> dict:
-    return {
-        "repo": REPO,
-        "familia": FAMILIA,
-        "ajustes_aplicados": AJUSTES_APLICADOS,
-        "reglas_oficiales_ok": REGLAS_OFICIALES_OK,
-        "estado": ESTADO,
-        "producto_completo": PRODUCTO_COMPLETO,
-        "generado": GENERADO,
-    }
+    return {"repo": REPO, "familia": FAMILIA, "estado": ESTADO, "generado": GENERADO}

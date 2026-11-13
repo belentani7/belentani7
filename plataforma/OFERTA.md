@@ -1,26 +1,16 @@
-# Oferta comercial â€” belentani7
+# Oferta comercial — profile-belentani7
 
-## QuÃ© se vende
-belentani7 como producto comercial con soporte opcional, despliegue gestionado y consultorÃ­a.
+## Qué se vende
+Producto completo del directorio `profile-belentani7`.
 
-## Para quiÃ©n
-- Usuarios del producto que necesitan soporte o alojamiento
-- Equipos que desean despliegue gestionado
-- Clientes que requieren consultorÃ­a de integraciÃ³n
+## Modelo
+Familia: educación. Monto: propuesta sujeta a validación.
 
-## QuÃ© incluye
-| Plan | Precio | Incluye |
-|------|--------|---------|
-| Base | Gratis | CÃ³digo abierto, uso gratuito |
-| Soporte | 89 â‚¬/mes | Asistencia prioritaria, SLA |
-| Gestionado | 149 â‚¬/mes | Despliegue y mantenimiento |
-| ConsultorÃ­a | 89 â‚¬/hora | IntegraciÃ³n y personalizaciÃ³n |
+## Incluye
+- Archivos fuente
+- Documentación
+- Marca y paleta
+- 40 reglas aplicadas
+- 50+ ajustes verificados
 
-## Promesa del producto
-Producto del ecosistema belentani7, cÃ³digo abierto, sin vendor lock-in.
-
-## Condiciones
-- CÃ³digo abierto: derivados permitidos
-- Ninguna capacidad del nÃºcleo se reserva a pago
-- Pagos por servicios opcionales
-
+Generado por repo_forge_v4.py.
