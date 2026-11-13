@@ -9,10 +9,10 @@ class ServerInputSafetyTests(unittest.TestCase):
         )
 
         for forbidden in (
-            'DB.get_mission("\${missionId}")',
-            'DB.get_results("\${id}")',
-            "spec = \${spec}",
-            'if "\${format}" == "csv"',
+            'DB.get_mission("' + "$" + '{missionId}")',
+            'DB.get_results("' + "$" + '{id}")',
+            "spec = " + "$" + "{spec}",
+            'if "' + "$" + '{format}" == "csv"',
         ):
             self.assertNotIn(forbidden, source)
 
