@@ -215,7 +215,7 @@ async function startServer() {
     python.on("close", () => {
       if (format === "csv") {
         res.setHeader("Content-Type", "text/csv");
-        res.setHeader("Content-Disposition", "attachment; filename="mission-" + id + ".csv"");
+        res.setHeader("Content-Disposition", "attachment; filename=mission-" + id + ".csv");
       }
       return res.send(output);
     });
