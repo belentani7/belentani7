@@ -64,9 +64,10 @@ Every claim on this page links to a repository, a test or a measurement — or i
 - Profile archive: ./docs/profile-archive-2026-10-29.md — previous versions of this page.
 - Product sheet: ./plataforma/FICHA.md — measured scope, stack and known gaps.
 - Doctrine: ./BIBLIA.md — vision, mission, rules and design tokens.
+- Living Machine: ./docs/living-machine/index.html — browser tools that run on repository files, with no upload; a local demo, not a verified live deployment.
 - Proof: ./PROOF.md - what the page can prove, claim by claim, and what would falsify it.
 
-If a link is marked as repository files, it points at source you can read, not a verified live deployment. Work that is private, archived or experimental is described and never counted as evidence. Browser toolkit: ./docs/living-machine/index.html.
+Private, archived or experimental work stays out of this page.
 
 Source and reproduction: `scripts/profile_evidence.py` runs nine machine checks and exits non-zero on drift. The same checks run in CI on every push.
 
