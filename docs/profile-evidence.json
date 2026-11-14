@@ -1,5 +1,6 @@
 {
-  "generated_at": "2026-11-14T22:55:04Z",
+  "mode": "online",
+  "generated_at": "2026-11-14T22:56:42Z",
   "readme_bytes": 5734,
   "readme_words": 795,
   "hero_bytes": 4896,
@@ -31,8 +32,8 @@
     "no_missing_relative_links": true,
     "at_least_three_systems": true,
     "at_least_three_distinct_repos": true,
-    "featured_repositories_public": true,
-    "proof_document_exists": true
+    "proof_document_exists": true,
+    "featured_repositories_public": true
   },
   "ok": true
 }

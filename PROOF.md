@@ -70,6 +70,8 @@ node --test docs/living-machine/quality.test.cjs docs/living-machine/terminal.te
 
 The same commands run in [`.github/workflows/profile-evidence.yml`](./.github/workflows/profile-evidence.yml) on every push.
 
+Unit tests run the audit with `--offline`, so they stay hermetic. The workflow runs the live public-visibility check with a scoped token.
+
 A dated snapshot lives in [`docs/profile-evidence.json`](./docs/profile-evidence.json). It is generated, not hand-edited.
 
 ## What would falsify this page

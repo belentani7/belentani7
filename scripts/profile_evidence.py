@@ -84,7 +84,7 @@ def _public_visibility(repositories: list[str]) -> dict[str, bool]:
     return results
 
 
-def audit() -> dict:
+def audit(offline: bool = False) -> dict:
     text = README.read_text(encoding="utf-8")
     readme_bytes = len(text.encode("utf-8"))
     hero_bytes = HERO.stat().st_size if HERO.is_file() else 0
@@ -106,7 +106,7 @@ def audit() -> dict:
     selected = text.split("## Selected systems", 1)[1].split("\n## ", 1)[0] if "## Selected systems" in text else ""
     system_count = len(SYSTEM_HEADING.findall(selected))
     github_links = sorted(set(re.findall(r"https://github\.com/belentani7/([\w.\-]+)", selected)))
-    visibility = _public_visibility(github_links)
+    visibility = {} if offline else _public_visibility(github_links)
 
     checks = {
         "readme_under_12k": readme_bytes < 12_000,
@@ -116,11 +116,13 @@ def audit() -> dict:
         "no_missing_relative_links": not missing_links,
         "at_least_three_systems": system_count >= 3,
         "at_least_three_distinct_repos": len(github_links) >= 3,
-        "featured_repositories_public": bool(visibility) and all(visibility.values()),
         "proof_document_exists": PROOF.is_file(),
     }
+    if not offline:
+        checks["featured_repositories_public"] = bool(visibility) and all(visibility.values())
 
     return {
+        "mode": "offline" if offline else "online",
         "generated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
         "readme_bytes": readme_bytes,
         "readme_words": len(text.split()),
@@ -145,9 +147,14 @@ def main() -> int:
     group = parser.add_mutually_exclusive_group()
     group.add_argument("--json", action="store_true", help="print the evidence as JSON")
     group.add_argument("--write", action="store_true", help=f"write {OUTPUT.relative_to(ROOT)}")
+    parser.add_argument(
+        "--offline",
+        action="store_true",
+        help="skip the live public-visibility check (hermetic runs and unit tests)",
+    )
     args = parser.parse_args()
 
-    evidence = audit()
+    evidence = audit(offline=args.offline)
 
     if args.write:
         OUTPUT.parent.mkdir(parents=True, exist_ok=True)
