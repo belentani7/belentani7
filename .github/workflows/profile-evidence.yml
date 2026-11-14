@@ -1,0 +1,42 @@
+name: Profile evidence
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: profile-evidence-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    name: Reproducible profile evidence
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Audit the evidence contract
+        run: python scripts/profile_evidence.py
+      - name: Run the presentation contract
+        run: python tests/test_profile_presentation.py -v
+      - name: Run the evidence contract
+        run: python tests/test_profile_evidence.py -v
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          package-manager-cache: false
+      - name: Check the browser-toolkit README guarantees
+        run: node --test docs/living-machine/quality.test.cjs docs/living-machine/terminal.test.cjs

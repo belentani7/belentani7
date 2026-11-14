@@ -1,0 +1,32 @@
+{
+  "generated_at": "2026-11-14T22:51:16Z",
+  "readme_bytes": 5344,
+  "readme_words": 736,
+  "hero_bytes": 4896,
+  "images": {
+    "total": 1,
+    "external": 0,
+    "local": 1
+  },
+  "external_images": [],
+  "relative_links": 8,
+  "missing_relative_links": [],
+  "selected_systems": 3,
+  "featured_repositories": [
+    "agent-skills",
+    "forja-enterprise",
+    "noiacore-model-guard"
+  ],
+  "presentation_tests": 6,
+  "checks": {
+    "readme_under_12k": true,
+    "hero_is_local_and_small": true,
+    "no_external_images": true,
+    "at_least_one_local_image": true,
+    "no_missing_relative_links": true,
+    "at_least_three_systems": true,
+    "at_least_three_distinct_repos": true,
+    "proof_document_exists": true
+  },
+  "ok": true
+}

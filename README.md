@@ -78,6 +78,16 @@ Anything here that is not backed by a repo, a test or a measurement is labelled 
 
 The numbers in the evidence file describe activity recorded in the repositories, not a distribution of hours. No metric on this page is a guarantee of outcome.
 
+## Verify this page
+
+This page is audited, not asserted.
+
+- [PROOF.md](./PROOF.md) — the rubric, claim-by-claim evidence, and the conditions that would falsify it.
+- [Evidence snapshot](./docs/profile-evidence.json) — machine-generated metrics with a timestamp.
+- [Evidence workflow](./.github/workflows/profile-evidence.yml) — runs the audit and the presentation tests on every push.
+
+`8/8 checks` · `0 external images` · `1 local SVG` · `6 presentation tests`
+
 ## Contact
 
 [Website](https://belentani.es) · [LinkedIn](https://www.linkedin.com/in/pedro-b-09473598/) · [Email](mailto:belentani7studio@proton.me) · Barcelona
