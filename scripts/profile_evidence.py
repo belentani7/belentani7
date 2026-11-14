@@ -19,6 +19,8 @@ import json
 import os
 import re
 import sys
+import urllib.error
+import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -38,6 +40,7 @@ SYSTEM_HEADING = re.compile(r"^###\s+\d{2}\s+—\s+", re.MULTILINE)
 TEST_DEF = re.compile(r"^\s*def test_", re.MULTILINE)
 # The audit writes this file; it should not fail the link check on a clean run.
 GENERATED = {"docs/profile-evidence.json"}
+API_ROOT = "https://api.github.com/repos/belentani7/"
 
 
 def _is_external(target: str) -> bool:
@@ -52,6 +55,33 @@ def _local_target(target: str) -> str | None:
     if parsed.scheme or parsed.netloc or target.startswith("mailto:"):
         return None
     return parsed.path
+
+
+def _public_visibility(repositories: list[str]) -> dict[str, bool]:
+    """Ask the public GitHub API whether each featured repository is public.
+
+    Uses GITHUB_TOKEN when available to avoid anonymous rate limits; the
+    ``private`` field is authoritative either way.
+    """
+    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+    results: dict[str, bool] = {}
+    for repo in repositories:
+        request = urllib.request.Request(
+            API_ROOT + repo,
+            headers={
+                "Accept": "application/vnd.github+json",
+                "User-Agent": "profile-evidence-audit",
+            },
+        )
+        if token:
+            request.add_header("Authorization", f"Bearer {token}")
+        try:
+            with urllib.request.urlopen(request, timeout=12) as response:
+                payload = json.load(response)
+                results[repo] = response.status == 200 and payload.get("private") is False
+        except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, ValueError):
+            results[repo] = False
+    return results
 
 
 def audit() -> dict:
@@ -76,6 +106,7 @@ def audit() -> dict:
     selected = text.split("## Selected systems", 1)[1].split("\n## ", 1)[0] if "## Selected systems" in text else ""
     system_count = len(SYSTEM_HEADING.findall(selected))
     github_links = sorted(set(re.findall(r"https://github\.com/belentani7/([\w.\-]+)", selected)))
+    visibility = _public_visibility(github_links)
 
     checks = {
         "readme_under_12k": readme_bytes < 12_000,
@@ -85,6 +116,7 @@ def audit() -> dict:
         "no_missing_relative_links": not missing_links,
         "at_least_three_systems": system_count >= 3,
         "at_least_three_distinct_repos": len(github_links) >= 3,
+        "featured_repositories_public": bool(visibility) and all(visibility.values()),
         "proof_document_exists": PROOF.is_file(),
     }
 
@@ -99,6 +131,7 @@ def audit() -> dict:
         "missing_relative_links": missing_links,
         "selected_systems": system_count,
         "featured_repositories": github_links,
+        "featured_visibility": visibility,
         "presentation_tests": len(TEST_DEF.findall(PRESENTATION_TESTS.read_text(encoding="utf-8")))
         if PRESENTATION_TESTS.is_file()
         else 0,

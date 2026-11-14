@@ -45,6 +45,11 @@ class ProfileEvidenceTests(unittest.TestCase):
     def test_relative_links_resolve(self):
         self.assertEqual(self.evidence["missing_relative_links"], [])
 
+    def test_featured_repositories_are_public(self):
+        self.assertTrue(self.evidence["checks"]["featured_repositories_public"])
+        self.assertTrue(all(self.evidence["featured_visibility"].values()))
+        self.assertEqual(len(self.evidence["featured_repositories"]), 3)
+
     def test_proof_states_rubric_and_falsifiers(self):
         text = PROOF.read_text(encoding="utf-8")
         self.assertIn("## The rubric", text)

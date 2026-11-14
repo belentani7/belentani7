@@ -21,35 +21,37 @@ Barcelona. Open to senior AI engineering roles and selected collaborations.
 
 ## Selected systems
 
-Three systems that show the range: model evaluation, engineering governance, and developer tooling. All three repositories are private: they are described here, and opened on request.
+Three public systems, chosen because a stranger can open them, run them and check the claims.
 
-### 01 — NoiaCore Model Guard
+### 01 — Belentani.es
 
-Evaluation gate that blocks unsafe model input and output before it becomes a production decision. Contracts, secret-leakage checks, drift signals and a `ready / review / not_ready` envelope.
+Live creative platform: an interactive Three.js galaxy, a music catalog and the Judas narrative universe in one deployable system. 273 source files and 26 test files in the public repository.
 
-`React 19` · `tRPC 11` · `Drizzle` · `MySQL` · Private, available on request — `https://github.com/belentani7/noiacore-model-guard`
+`TypeScript` · `React` · `Three.js` · **[Live](https://belentani.es)** · **[Repository →](https://github.com/belentani7/belentani.es)**
 
-### 02 — FORJA
+### 02 — Meta-Skill
 
-Governance control plane for AI-assisted engineering: organisation isolation, RBAC, SHA-256/Ed25519 audit ledger and per-agent limits. Verified with 25 tests across 10 files.
+A local, explainable router for agent tasks. It recommends a tier, estimates cost only when rates exist, and abstains when confidence is low instead of inventing an answer. It never calls a model and sends no prompt to a provider.
 
-`React 19` · `Express` · `tRPC` · `Drizzle` · Private, available on request — `https://github.com/belentani7/forja-enterprise`
+`Python` · `stdlib only` · **[Demo](https://meta-skill-theta.vercel.app)** · **[Repository →](https://github.com/belentani7/meta-skill)**
 
-### 03 — Agent Skills
+### 03 — secure-t
 
-311 installable skills for 7 CLI agents (Claude Code, Codex, OpenCode, Cline, Qwen, Gemini, ZCode), behind one registry and one installer.
+Open school for cybersecurity, responsible AI and governance. 28 pages, anonymous enrollment, no paywall and no data collection.
 
-`Python` · `PowerShell` · `Bash` · Private, available on request — `https://github.com/belentani7/agent-skills`
+`HTML` · `JavaScript` · `Markdown` · **[Repository →](https://github.com/belentani7/secure-t)**
 
 **Evidence → status.** Every claim here is tied to a repository, a test or a measurement — or it is labelled unverified. The label is part of the product, not a disclaimer.
 
+## Private work
+
+NoiaCore Model Guard (evaluation gates), FORJA (RBAC and a SHA-256/Ed25519 audit ledger) and Agent Skills (311 installable skills) are private repositories. Architecture and test evidence can be walked through on a call. They are described here, and deliberately **not** counted as public evidence.
+
 ## Also in the open
 
-Public, and one click away:
-
-- **[secure-t](https://github.com/belentani7/secure-t)** — open school for cybersecurity, responsible AI and governance. 28 pages, no signup, no paywall.
 - **[trama-trans-bcn](https://github.com/belentani7/trama-trans-bcn)** — public-interest prototype that shows where its data comes from and how it is verified.
 - **[belentani-portfolio](https://github.com/belentani7/belentani-portfolio)** — the system behind [belentani.es](https://belentani.es): music, narrative and AI lab in one platform.
+- **[neural-git-tui](https://github.com/belentani7/neural-git-tui)** — a Git history visualised as a neural network, in the terminal.
 
 ## How I work
 
@@ -86,7 +88,7 @@ This page is audited, not asserted.
 - [Evidence snapshot](./docs/profile-evidence.json) — machine-generated metrics with a timestamp.
 - [Evidence workflow](./.github/workflows/profile-evidence.yml) — runs the audit and the presentation tests on every push.
 
-`8/8 checks` · `0 external images` · `1 local SVG` · `6 presentation tests`
+`9/9 checks` · `0 external images` · `1 local SVG` · `6 presentation tests`
 
 ## Contact
 

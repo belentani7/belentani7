@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-14T22:51:16Z",
-  "readme_bytes": 5344,
-  "readme_words": 736,
+  "generated_at": "2026-11-14T22:55:04Z",
+  "readme_bytes": 5734,
+  "readme_words": 795,
   "hero_bytes": 4896,
   "images": {
     "total": 1,
@@ -13,10 +13,15 @@
   "missing_relative_links": [],
   "selected_systems": 3,
   "featured_repositories": [
-    "agent-skills",
-    "forja-enterprise",
-    "noiacore-model-guard"
+    "belentani.es",
+    "meta-skill",
+    "secure-t"
   ],
+  "featured_visibility": {
+    "belentani.es": true,
+    "meta-skill": true,
+    "secure-t": true
+  },
   "presentation_tests": 6,
   "checks": {
     "readme_under_12k": true,
@@ -26,6 +31,7 @@
     "no_missing_relative_links": true,
     "at_least_three_systems": true,
     "at_least_three_distinct_repos": true,
+    "featured_repositories_public": true,
     "proof_document_exists": true
   },
   "ok": true

@@ -29,6 +29,8 @@ jobs:
         with:
           python-version: "3.13"
       - name: Audit the evidence contract
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/profile_evidence.py
       - name: Run the presentation contract
         run: python tests/test_profile_presentation.py -v
