@@ -2,7 +2,7 @@
 
 <img src="./assets/hero-2026.svg" alt="Pedro Belentani — AI systems with the safety rails built in, editorial cover" width="100%">
 
-**AI systems with the safety rails built in.** Agents, evaluation gates, local LLMs and the interfaces that make them auditable. L'Hospitalet de Llobregat · Barcelona
+**AI systems with the safety rails built in, proven by public evidence.** Agents, evaluation gates, local LLMs and the interfaces that make them auditable. L'Hospitalet de Llobregat · Barcelona
 
 ![Profile metrics generated from the GitHub API](assets/profile-stats.svg)
 
@@ -29,6 +29,13 @@ Open campus for cybersecurity and responsible AI, anonymous enrolment, automated
 - Stack: Next.js · TypeScript
 - Demo: 28 HTML pages in the repository
 
+### 04 — gpu-cost-optimizer
+GPU compute cost optimizer for diffusion pipelines, up to 70% savings. Public, verified.
+
+- Repo: https://github.com/belentani7/gpu-cost-optimizer
+- Stack: Python · ComfyUI · ML
+- Demo: repository with documented execution
+
 A system enters this list when its purpose is understandable, the public experience can be walked through, and the repository explains how to run and verify it. Ideas, prototypes and projects without that evidence stay out.
 
 Private work is described but never counted as evidence: model evaluation guard, governance control plane and a registry of 311 installable skills for 7 CLI agents live in private repositories.
@@ -41,6 +48,7 @@ Every claim on this page links to a repository, a test or a measurement — or i
 - Profile archive: ./docs/profile-archive-2026-10-29.md — previous versions of this page.
 - Product sheet: ./plataforma/FICHA.md — measured scope, stack and known gaps.
 - Doctrine: ./BIBLIA.md — vision, mission, rules and design tokens.
+- Proof rubric: ./PROOF.md — definition of "best", claim → evidence → status table, and falsifiers.
 
 Source and reproduction: `scripts/profile_evidence.py` runs nine machine checks and exits non-zero on drift. The same checks run in CI on every push.
 
