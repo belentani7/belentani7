@@ -84,4 +84,4 @@ The fastest way to start: send the problem and the failure mode that keeps you a
 
 ---
 
-<sub>Barcelona · AI infrastructure, evaluation and trust &amp; safety</sub>
+<sub>Barcelona · AI infrastructure, evaluation and trust &amp; safety · Updated: 2026-11</sub>
