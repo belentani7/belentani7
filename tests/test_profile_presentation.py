@@ -21,11 +21,14 @@ HERO = ROOT / "assets" / "hero-2026.svg"
 HISTORY = ROOT / "docs" / "profile-archive-2026-10-29.md"
 EVIDENCE = ROOT / "docs" / "engineering-evidence-2026-10-29.md"
 SELECTED_REPOSITORIES = (
+    "belentani.es",
+    "meta-skill",
+    "secure-t",
+)
+EXCLUDED_REPOSITORIES = (
     "noiacore-model-guard",
     "forja-enterprise",
     "agent-skills",
-)
-EXCLUDED_REPOSITORIES = (
     "Belentani.cv-ai",
     "ivy-la-vie",
     "CARQUIDEC",
