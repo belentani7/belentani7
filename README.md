@@ -21,29 +21,31 @@ Barcelona. Open to senior AI engineering roles and selected collaborations.
 
 ## Selected systems
 
-Three systems that show the range: model evaluation, engineering governance, and developer tooling.
+Three systems that show the range: model evaluation, engineering governance, and developer tooling. All three repositories are private: they are described here, and opened on request.
 
 ### 01 — NoiaCore Model Guard
 
 Evaluation gate that blocks unsafe model input and output before it becomes a production decision. Contracts, secret-leakage checks, drift signals and a `ready / review / not_ready` envelope.
 
-`React 19` · `tRPC 11` · `Drizzle` · `MySQL` · **[Repository →](https://github.com/belentani7/noiacore-model-guard)**
+`React 19` · `tRPC 11` · `Drizzle` · `MySQL` · Private, available on request — `https://github.com/belentani7/noiacore-model-guard`
 
 ### 02 — FORJA
 
 Governance control plane for AI-assisted engineering: organisation isolation, RBAC, SHA-256/Ed25519 audit ledger and per-agent limits. Verified with 25 tests across 10 files.
 
-`React 19` · `Express` · `tRPC` · `Drizzle` · **[Repository →](https://github.com/belentani7/forja-enterprise)**
+`React 19` · `Express` · `tRPC` · `Drizzle` · Private, available on request — `https://github.com/belentani7/forja-enterprise`
 
 ### 03 — Agent Skills
 
 311 installable skills for 7 CLI agents (Claude Code, Codex, OpenCode, Cline, Qwen, Gemini, ZCode), behind one registry and one installer.
 
-`Python` · `PowerShell` · `Bash` · **[Repository →](https://github.com/belentani7/agent-skills)**
+`Python` · `PowerShell` · `Bash` · Private, available on request — `https://github.com/belentani7/agent-skills`
 
 **Evidence → status.** Every claim here is tied to a repository, a test or a measurement — or it is labelled unverified. The label is part of the product, not a disclaimer.
 
 ## Also in the open
+
+Public, and one click away:
 
 - **[secure-t](https://github.com/belentani7/secure-t)** — open school for cybersecurity, responsible AI and governance. 28 pages, no signup, no paywall.
 - **[trama-trans-bcn](https://github.com/belentani7/trama-trans-bcn)** — public-interest prototype that shows where its data comes from and how it is verified.
