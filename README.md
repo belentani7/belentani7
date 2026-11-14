@@ -66,6 +66,8 @@ Every claim on this page links to a repository, a test or a measurement — or i
 - Doctrine: ./BIBLIA.md — vision, mission, rules and design tokens.
 - Proof rubric: ./PROOF.md — definition of "best", claim → evidence → status table, and falsifiers.
 
+If a link is marked as repository files, it points at source you can read, not a verified live deployment. Work that is private, archived or experimental is described and never counted as evidence. Browser toolkit: ./docs/living-machine/index.html.
+
 Source and reproduction: `scripts/profile_evidence.py` runs nine machine checks and exits non-zero on drift. The same checks run in CI on every push.
 
 ## Stack
