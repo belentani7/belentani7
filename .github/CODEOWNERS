@@ -1,31 +1,17 @@
-# CODEOWNERS - belentani7 monorepo
-# Cada merge requiere revisión del propietario del área afectada
+# repo-forge
+* @belentani7
+/.github/ @belentani7
+/plataforma/ @belentani7
 
-# Raíz del monorepo
-/  @belentani7
-
-# Documentación
-/docs/*  @belentani7
-/AGENTS.md  @belentani7
+# Áreas de responsabilidad (ampliación 2026-11-14, sin sustituir las reglas anteriores)
+/docs/            @belentani7
+/engine/          @belentani7
+/client/          @belentani7
+/magic/           @belentani7
+/brand/           @belentani7
+/scripts/         @belentani7
+/tests/           @belentani7
+/.github/workflows/ @belentani7
+/SECURITY.md      @belentani7
 /CONTRIBUTING.md  @belentani7
-/SECURITY.md  @belentani7
-/LICENSES.md  @belentani7
-
-# Front-end / Three.js / SPA
-/client/*  @belentani7
-/magic/*  @belentani7
-
-# Back-end / API
-/engine/*  @belentani7
-/plataforma/*  @belentani7
-/server/*  @belentani7
-
-# Producto / OFertas / DEMO
-/producto/*  @belentani7
-/brand/*  @belentani7
-
-# Ajustes / Configuraciones
-/plataforma/ajustes/*  @belentani7
-
-# Scripts / CI
-/.github/*  @belentani7
+/LICENSE*         @belentani7

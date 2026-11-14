@@ -1,37 +1,54 @@
-# Pedro Belentani · NOIACORE LAB
+# Pedro Belentani
 
-**Creative Technologist · Applied AI · Product systems · Creative computing**
+<img src="./assets/profile-editorial-2026.svg" alt="Pedro Belentani — retrato editorial: ingeniería de sistemas, IA aplicada y tecnología creativa" width="100%">
 
-Construyo productos digitales que unen narrativa, tecnología y dirección creativa. Este perfil presenta trabajo público terminado y respaldado por una experiencia y un repositorio accesibles.
+**Senior Full-Stack AI Engineer · System Architect · Creative Technologist**
 
-## Release público
+Construyo productos digitales que unen narrativa, ingeniería y dirección creativa: agentes de IA, LLMs locales, interfaces WebGL y sistemas en producción. Este perfil documenta solo trabajo con evidencia verificable.
 
-### [Belentani: The Experience](https://belentani.es)
+## Featured systems
 
-Una galaxia interactiva en Three.js convierte Judas Era en un recorrido visual y sonoro. La experiencia reúne música, imagen y relato en cuatro capítulos: Genesis, Traicion, La deuda y Redencion. Está pensada para quienes quieren entrar en un universo artístico y explorarlo a su propio ritmo.
+Sistemas públicos con repositorio, ejecución documentada y estado comprobable:
 
-- [Abrir la experiencia](https://belentani.es)
-- [Consultar el repositorio](https://github.com/belentani7/belentani.es)
-- **Estado:** release público verificado.
-- **Tecnología:** Three.js · Web.
+- **[Belentani: The Experience](https://github.com/belentani7/belentani.es)** — galaxia interactiva en Three.js que convierte Judas Era en un recorrido visual y sonoro en cuatro capítulos. Publicado en [belentani.es](https://belentani.es).
+- **[secure-t](https://github.com/belentani7/secure-t)** — utilidades de seguridad y verificación de integridad, con pruebas automatizadas y alcance acotado.
 
-El repositorio del producto documenta instalación, comandos de verificación, construcción y comprobación de la experiencia. El alcance público excluye audio privado, masters, stems y sesiones.
+Un sistema entra en esta lista cuando su propuesta se entiende, la experiencia pública se puede recorrer y el repositorio explica cómo ejecutarlo y comprobarlo. Las ideas, prototipos y proyectos sin esa evidencia quedan fuera.
 
-## Qué aparece aquí
+## Technology
 
-Un producto entra en este perfil cuando su propuesta se entiende, la experiencia pública se puede recorrer y su repositorio documenta cómo ejecutarlo y comprobarlo. Las ideas, prototipos y proyectos que aún no tienen esa evidencia quedan fuera del escaparate.
+TypeScript · Python · React · Three.js · WebGL · Node.js · FastAPI · GitHub Actions · Docker · LLMs locales · agentes y orquestación · infraestructura de producción
 
-## Forma de trabajo
+Forma de trabajo:
 
-1. Dar una forma clara a la idea y a la experiencia.
+1. Dar forma clara a la idea y a la experiencia.
 2. Construir con contenido real y límites públicos definidos.
 3. Documentar cómo ejecutar y verificar el producto.
-4. Presentar solo los releases que cumplen ese estándar.
+4. Publicar solo lo que cumple ese estándar.
 
----
+## Evidence & operational governance
 
-[GitHub](https://github.com/belentani7) · Barcelona
+Cada afirmación de este perfil sigue el mismo contrato: **claim → evidence → status**. Lo que no tiene evidencia se declara explícitamente como **not verified**.
 
+- [Evidencia de ingeniería](./docs/engineering-evidence-2026-10-29.md) — commits, recuentos y límites del trabajo registrado.
+- [Archivo del perfil](./docs/profile-archive-2026-10-29.md) — historial de las versiones anteriores de esta página.
+
+Los números publicados describen actividad registrada en el repositorio, no una distribución de horas. Ninguna métrica de este perfil se presenta como garantía de resultado.
+
+## Tools and experiments
+
+Herramientas de navegador que funcionan sobre los **repository files** de este repositorio, sin subir nada a un servidor: conversión de imágenes, subtítulos, lectura de CV y extracción de paletas.
+
+- [Living Machine — escritorio de herramientas](docs/living-machine/index.html)
+- [Studio — conversión y subtítulos](docs/living-machine/studio.html)
+- [Diagnóstico del entorno](docs/living-machine/diagnostics.html)
+
+Este escaparate es una demostración local sobre repository files: **not a verified live deployment**. Algunas piezas permanecen **private, archived or experimental** y se excluyen deliberadamente del catálogo público.
+
+## Contact
+
+[GitHub](https://github.com/belentani7) · [LinkedIn](https://www.linkedin.com/in/pedro-b-09473598) · Barcelona
 
 ## Producto
+
 Véase `plataforma/OFERTA.md`, `plataforma/precios.json`, `plataforma/ONEPAGER.md`.
