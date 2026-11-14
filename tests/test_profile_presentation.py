@@ -1,10 +1,10 @@
 """Regression checks for the public GitHub profile's credibility and presentation.
 
-The profile page is now an English, evidence-led résumé. The guarantees this
-suite protects are unchanged in intent — one verified brand asset, local-only
-imagery, traceable evidence, two distinct verified repositories, a bounded page
-and no third-party widgets — so the checks follow the current carrier instead of
-the retired Spanish layout.
+The profile page is an English, evidence-led engineering profile. The guarantees
+this suite protects are unchanged in intent — one verified brand asset, local-only
+imagery, traceable evidence, at least three distinct verified repositories, a
+bounded page and no third-party widgets — so the checks follow the current
+carrier instead of the retired layout.
 
 Run: python -m unittest discover -s tests -p 'test_profile_presentation.py' -v
 No API key, external network or third-party Python package is required.
@@ -17,12 +17,13 @@ from xml.etree import ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 README = ROOT / "README.md"
-HERO = ROOT / "assets" / "profile-editorial-2026.svg"
+HERO = ROOT / "assets" / "hero-2026.svg"
 HISTORY = ROOT / "docs" / "profile-archive-2026-10-29.md"
 EVIDENCE = ROOT / "docs" / "engineering-evidence-2026-10-29.md"
 SELECTED_REPOSITORIES = (
-    "belentani.es",
-    "secure-t",
+    "noiacore-model-guard",
+    "forja-enterprise",
+    "agent-skills",
 )
 EXCLUDED_REPOSITORIES = (
     "Belentani.cv-ai",
@@ -32,8 +33,9 @@ EXCLUDED_REPOSITORIES = (
     "belentani-omg-portal",
     "ManosAbiertas",
 )
-FEATURED_SECTION = "## Featured systems"
-EVIDENCE_SECTION = "## Evidence & operational governance"
+FEATURED_SECTION = "## Selected systems"
+EVIDENCE_SECTION = "## Writing & evidence"
+TECHNOLOGY_SECTION = "## Stack"
 SVG_NS = "{http://www.w3.org/2000/svg}"
 
 
@@ -56,7 +58,7 @@ class PublicProfilePresentationTests(unittest.TestCase):
         for img in images:
             self.assertRegex(img, r'\balt="[^"]{30,}"')
             self.assertNotRegex(img, r'\bsrc="https?://')
-        self.assertIn('src="./assets/profile-editorial-2026.svg"', self.readme)
+        self.assertIn('src="./assets/hero-2026.svg"', self.readme)
 
     def test_svg_is_static_safe_and_described(self):
         root = ET.parse(HERO).getroot()
@@ -80,16 +82,15 @@ class PublicProfilePresentationTests(unittest.TestCase):
                     self.assertFalse(urlsplit(value).scheme, f"Remote SVG asset: {value}")
         self.assertLess(HERO.stat().st_size, 30_000)
 
-    def test_two_verified_public_repositories_are_distinct(self):
+    def test_three_verified_public_repositories_are_distinct(self):
         featured = section(self.readme, FEATURED_SECTION)
         for repo in SELECTED_REPOSITORIES:
             self.assertIn(f"https://github.com/belentani7/{repo}", featured, repo)
         github_links = re.findall(r"https://github\.com/belentani7/([\w.\-]+)", featured)
         self.assertGreaterEqual(
-            len(set(github_links)), 2, "at least two distinct verified repositories must be featured"
+            len(set(github_links)), 3, "at least three distinct verified repositories must be featured"
         )
         for repo in EXCLUDED_REPOSITORIES:
-            self.assertNotIn(f"https://github.com/belentani7/{repo}", featured, repo)
             self.assertNotIn(f"https://github.com/belentani7/{repo}", self.readme, repo)
 
     def test_evidence_and_history_are_traceable(self):
@@ -98,9 +99,7 @@ class PublicProfilePresentationTests(unittest.TestCase):
         governance = section(self.readme, EVIDENCE_SECTION)
         self.assertIn("./docs/engineering-evidence-2026-10-29.md", governance)
         self.assertIn("./docs/profile-archive-2026-10-29.md", governance)
-        lowered = governance.lower()
-        self.assertIn("not verified", lowered)
-        self.assertIn("claim → evidence → status", governance)
+        self.assertIn("labelled unverified", governance.lower())
         evidence = EVIDENCE.read_text(encoding="utf-8")
         self.assertIn("110 commit entries", evidence)
         self.assertIn("8,199", evidence)
@@ -110,7 +109,7 @@ class PublicProfilePresentationTests(unittest.TestCase):
 
     def test_professional_content_is_readable_and_bounded(self):
         self.assertIn("pedro belentani", self.readme.lower())
-        for heading in (FEATURED_SECTION, EVIDENCE_SECTION, "## Technology"):
+        for heading in (FEATURED_SECTION, EVIDENCE_SECTION, TECHNOLOGY_SECTION):
             self.assertIn(heading, self.readme)
         self.assertLess(len(self.readme), 12_000)
         for claim in ("replaced a 10-person team", "99.2% accuracy", "10x faster", "world-class"):

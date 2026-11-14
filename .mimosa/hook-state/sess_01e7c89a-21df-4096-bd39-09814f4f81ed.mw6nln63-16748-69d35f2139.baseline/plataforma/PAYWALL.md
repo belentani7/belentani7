@@ -1,2 +1,0 @@
-# PAYWALL — desktop
-Familia: seguridad

@@ -86,3 +86,6 @@ secrets.json
 __pycache__/
 *.pyc
 .venv/
+
+# Local hook state (never public)
+.mimosa/

@@ -1,2 +1,0 @@
-REPO = "desktop"
-FAMILIA = "seguridad"

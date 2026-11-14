@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="420" viewBox="0 0 1280 420" role="img" aria-labelledby="heroTitle heroDesc">
+  <title id="heroTitle">Pedro Belentani — AI systems that can be audited</title>
+  <desc id="heroDesc">Dark editorial banner. Pedro Belentani builds AI systems with evaluation gates, contracts and audit trails, plus the interfaces that make them usable.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d151c"/>
+      <stop offset="1" stop-color="#080e13"/>
+    </linearGradient>
+    <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c6a27f" stop-opacity="0.9"/>
+      <stop offset="0.55" stop-color="#76b6ad" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#76b6ad" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#15212a" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1280" height="420" rx="14" fill="url(#bg)"/>
+  <rect width="1280" height="420" rx="14" fill="url(#grid)" opacity="0.55"/>
+  <rect x="1" y="1" width="1278" height="418" rx="13" fill="none" stroke="#2a3a44"/>
+
+  <rect x="56" y="38" width="30" height="3" fill="#c6a27f"/>
+  <text x="56" y="70" fill="#93a7b0" font-family="Arial, Helvetica, sans-serif" font-size="12.5" letter-spacing="3.4">PEDRO BELENTANI</text>
+  <text x="1224" y="70" fill="#6f828c" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="11.5" letter-spacing="2.4">BARCELONA · 2026</text>
+
+  <text x="54" y="158" fill="#f5f0e8" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="700" letter-spacing="-2.6">AI SYSTEMS</text>
+  <text x="54" y="220" fill="#f5f0e8" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="700" letter-spacing="-2.6">THAT CAN BE</text>
+  <text x="54" y="282" fill="#c6a27f" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="700" letter-spacing="-2.6">AUDITED.</text>
+
+  <text x="56" y="330" fill="#a9bac1" font-family="Arial, Helvetica, sans-serif" font-size="16.5">Agents, evaluation gates and creative interfaces —</text>
+  <text x="56" y="354" fill="#a9bac1" font-family="Arial, Helvetica, sans-serif" font-size="16.5">built to survive production.</text>
+
+  <line x1="690" y1="96" x2="690" y2="372" stroke="#24323b" stroke-width="1"/>
+
+  <text x="744" y="98" fill="#c6a27f" font-family="Arial, Helvetica, sans-serif" font-size="10.5" letter-spacing="2.3">EVALUATION IS ARCHITECTURE</text>
+
+  <line x1="758" y1="124" x2="758" y2="309" stroke="#33454f" stroke-width="1.4"/>
+
+  <circle cx="758" cy="138" r="4" fill="#76b6ad"/>
+  <text x="784" y="134" fill="#e8eef0" font-family="Arial, Helvetica, sans-serif" font-size="14.5" font-weight="700" letter-spacing="0.6">INPUT</text>
+  <text x="784" y="153" fill="#7f939d" font-family="Arial, Helvetica, sans-serif" font-size="12">prompt · tool output · model response</text>
+
+  <circle cx="758" cy="198" r="4" fill="#76b6ad"/>
+  <text x="784" y="194" fill="#e8eef0" font-family="Arial, Helvetica, sans-serif" font-size="14.5" font-weight="700" letter-spacing="0.6">CONTRACT</text>
+  <text x="784" y="213" fill="#7f939d" font-family="Arial, Helvetica, sans-serif" font-size="12">schema · policy · provenance</text>
+
+  <circle cx="758" cy="258" r="4" fill="#76b6ad"/>
+  <text x="784" y="254" fill="#e8eef0" font-family="Arial, Helvetica, sans-serif" font-size="14.5" font-weight="700" letter-spacing="0.6">EVAL GATE</text>
+  <text x="784" y="273" fill="#7f939d" font-family="Arial, Helvetica, sans-serif" font-size="12">deterministic checks before the model decides</text>
+
+  <circle cx="758" cy="309" r="4" fill="#4c6270"/>
+  <path d="M758 309h12v-6h14M770 309v25h14" fill="none" stroke="#3d525e" stroke-width="1.2"/>
+
+  <rect x="784" y="286" width="186" height="34" rx="4" fill="#0f2a2a" stroke="#76b6ad"/>
+  <text x="877" y="308" fill="#9fded2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="1.4">PASS · SHIP</text>
+
+  <rect x="784" y="330" width="186" height="34" rx="4" fill="#2a1f14" stroke="#d99a5f"/>
+  <text x="877" y="352" fill="#e8b98a" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="1.4">BLOCK · REVIEW</text>
+
+  <text x="986" y="308" fill="#6f828c" font-family="Arial, Helvetica, sans-serif" font-size="11.5">to production</text>
+  <text x="986" y="352" fill="#6f828c" font-family="Arial, Helvetica, sans-serif" font-size="11.5">to a human</text>
+
+  <text x="744" y="392" fill="#5f727c" font-family="Arial, Helvetica, sans-serif" font-size="10.5" letter-spacing="1.1">EVERY DECISION LEAVES A TRACE</text>
+
+  <rect x="56" y="404" width="1168" height="2" fill="url(#rule)"/>
+</svg>
