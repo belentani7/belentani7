@@ -64,7 +64,7 @@ Every claim on this page links to a repository, a test or a measurement — or i
 - Profile archive: ./docs/profile-archive-2026-10-29.md — previous versions of this page.
 - Product sheet: ./plataforma/FICHA.md — measured scope, stack and known gaps.
 - Doctrine: ./BIBLIA.md — vision, mission, rules and design tokens.
-- Proof rubric: ./PROOF.md — definition of "best", claim → evidence → status table, and falsifiers.
+- Proof: ./PROOF.md - what the page can prove, claim by claim, and what would falsify it.
 
 If a link is marked as repository files, it points at source you can read, not a verified live deployment. Work that is private, archived or experimental is described and never counted as evidence. Browser toolkit: ./docs/living-machine/index.html.
 

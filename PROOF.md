@@ -1,27 +1,23 @@
 # PROOF
 
-**What this profile claims, and how each claim is checked.**
+**What this page can prove, and what it cannot.**
 
-Most profiles ask you to trust adjectives. This one publishes the rubric, the evidence and the failure conditions. If a claim here cannot be checked, it is marked **unverified** instead of being dressed up.
+Most profiles ask you to trust adjectives. This one lists the claims a stranger can check, separates what is documented from what was re-run, and marks the rest as unverified.
 
 ---
 
-## The definition of “best” used here
+## What this page cannot prove
 
-“Best profile in the world” is not a measurable property. Followers and stars measure distribution and time on the platform, not engineering quality — a profile with 300k followers can still make claims nobody can check.
+It cannot prove it is the best profile. “Best” is not a property a page can assign to itself: followers measure distribution, stars measure audience and time on the platform, and neither measures engineering quality. A self-scored rubric is still a self-score.
 
-So this page uses a narrower, falsifiable definition:
+What it can do is narrower: make the page falsifiable. The checks below show that the page is honest about its own claims. They do not show that the work is better than anyone else's.
 
-> **Best = the profile that makes the fewest unverifiable claims, and proves the rest.**
+## What is checked
 
-On that axis, the rubric below is the whole argument. It is intentionally small enough to be checked by a stranger in a few minutes.
-
-## The rubric
-
-| # | Criterion | How it is checked | Result |
+| # | Check | How | Result |
 |---|---|---|---|
-| 1 | One-sentence positioning | README opens with a single thesis, not a list of labels | **Pass** — “AI systems with the safety rails built in” |
-| 2 | Public curation over volume | 3 featured systems, all public; private work is separated and never counted as evidence | **Pass** — public API check + `selected_systems` |
+| 1 | A single thesis, not a list of labels | README opens with one claim | **Pass** — “AI systems with the safety rails built in” |
+| 2 | Public curation over volume | 3 featured systems, all public; private work separated and never counted as evidence | **Pass** — public API check + `selected_systems` |
 | 3 | Claim traceability | Every claim links to a repository, a test or a measurement — or says “unverified” | **Pass** — enforced by `tests/test_profile_presentation.py` |
 | 4 | Presentation contract | Regression tests for cover, SVG safety, links, size and external widgets | **Pass** — 6/6 |
 | 5 | Reproducible evidence | `scripts/profile_evidence.py` emits machine-readable evidence and exits non-zero on drift | **Pass** — 9/9 checks |
@@ -29,7 +25,7 @@ On that axis, the rubric below is the whole argument. It is intentionally small 
 | 7 | Mobile-readable | System cards instead of a wide table; no horizontal scrolling in the main narrative | **Pass** — reviewed at 394 px |
 | 8 | Continuous verification | Dedicated GitHub Actions workflow runs the audit and the tests on every push | **Pass** — `profile-evidence` workflow |
 
-**Score: 8/8 on the stated axis.** That is the entire claim. It does not claim the most followers, the most stars or the most repositories.
+**These are honesty checks, not a ranking.** A page can pass all of them and still be unremarkable. Passing them is the floor, not the trophy.
 
 ## Claim → evidence → status
 
@@ -76,7 +72,7 @@ A dated snapshot lives in [`docs/profile-evidence.json`](./docs/profile-evidence
 
 ## What would falsify this page
 
-This profile would fail its own contract if any of the following became true:
+This page would fail its own contract if any of the following became true:
 
 1. A featured repository turns private or its link 404s.
 2. An external image, stats widget or visitor counter is added.
@@ -87,11 +83,17 @@ This profile would fail its own contract if any of the following became true:
 ## Limits
 
 - Stars and followers are deliberately not used as quality evidence.
-- The audit checks structure and traceability, not whether a third-party repository's internal claims are true.
+- The audit checks structure and traceability, not whether the work is good.
 - Public visibility is checked at audit time; a repository can change visibility later, which is exactly why the check runs on every push.
-- “Best” is bounded by the rubric above. A different definition would require different evidence.
 - The evidence snapshot is dated; freshness is visible, not assumed.
+- **No ranking claim.** If another profile is better, these checks will not say otherwise.
+
+## What would actually count
+
+External verification: someone using a repository, an outside contributor, a benchmark reproduced on another machine, a stranger citing the work.
+
+None of that exists yet in measurable form. When it does, it replaces the checks above as the primary evidence.
 
 ---
 
-<sub>Generated and checked by [`scripts/profile_evidence.py`](./scripts/profile_evidence.py). Last manual review: 2026-11-14.</sub>
+<sub>Generated and checked by [`scripts/profile_evidence.py`](./scripts/profile_evidence.py). Last manual review: 2026-11-15.</sub>

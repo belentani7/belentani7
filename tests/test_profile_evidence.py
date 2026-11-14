@@ -52,10 +52,11 @@ class ProfileEvidenceTests(unittest.TestCase):
 
     def test_proof_states_rubric_and_falsifiers(self):
         text = PROOF.read_text(encoding="utf-8")
-        self.assertIn("## The rubric", text)
+        self.assertIn("## What is checked", text)
         self.assertIn("## Claim → evidence → status", text)
         self.assertIn("## What would falsify this page", text)
         self.assertIn("unverified", text.lower())
+        self.assertIn("not a ranking", text.lower())
 
     def test_snapshot_is_generated(self):
         output = ROOT / "docs" / "profile-evidence.json"
