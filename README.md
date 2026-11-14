@@ -9,7 +9,33 @@ L'Hospitalet de Llobregat · Barcelona
 [![GitHub Stats](https://github-readme-stats.vercel.app/api?username=belentani7&show_icons=true&theme=tokyonight&count_private=true)](https://github.com/belentani7)
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=belentani7&layout=compact&theme=tokyonight)](https://github.com/belentani7)
 
-> Construyo productos digitales que unen narrativa, ingeniería y dirección creativa: agentes de IA, LLMs locales, interfaces WebGL y sistemas en producción. Este perfil documenta **solo trabajo con evidencia verificable**. Cada afirmación sigue el contrato **claim → evidence → status**.
+> Construyo productos digitales que unen narrativa, ingeniería y dirección creativa: agentes de IA, LLMs locales, interfaces WebGL y sistemas en producción. Este perfil documenta **solo trabajo con evidencia verificable**. Cada afirmación sigue el contrato **claim → evidence → status**. Las métricas son datos de GitHub con fecha, no horas de trabajo ni garantía de resultado.
+
+---
+
+## Evidencia de ingeniería (2026)
+
+Datos obtenidos de GitHub vía GraphQL el **29 de octubre de 2026** (rango 2026-01-01 → 2026-10-29). Son registros de la plataforma, no estimaciones.
+
+| Métrica de actividad (GitHub) | Total registrado |
+|---|---:|
+| Contribuciones del calendario (todas las categorías) | **8.199** |
+| Commits atribuidos a la cuenta | **7.034** |
+| Pull requests atribuidas | **1.033** |
+| Issues abiertas | **31** |
+| Días con al menos una contribución | **99** |
+
+**Muestra revisada:** 110 entradas de commit en 4 repos públicos (profile, Belentani.cv-ai, secure-t, ManosAbiertas), 23–29 Oct 2026. Señales: CI modernización, seguridad, gates de test, documentación, observabilidad, privacidad, accesibilidad, internacionalización.
+
+> Interpretación: GitHub registra fechas y veces, no horas humanas productivas. Varios commits por minuto pueden reflejar automatización, merges o publicación por lotes. La cantidad no es prueba de calidad. Fuente y reproducción: [docs/engineering-evidence-2026-10-29.md](./docs/engineering-evidence-2026-10-29.md).
+
+**Ejemplos públicos inspeccionables:**
+- [Accessible and private pre-submission review — CV Studio](https://github.com/belentani7/Belentani.cv-ai/commit/258f0b3ff0ca40dcaf8f86bc537b48b6127b05e9)
+- [Security header regression coverage — CV Studio](https://github.com/belentani7/Belentani.cv-ai/commit/b1f67fdc7939dc26352bf75958da404a11aa5a61)
+- [Institutional language and browser journeys — Secure-T](https://github.com/belentani7/secure-t/commit/45b07bf045e59f01efc931f2cf934110fdeb90e3)
+- [Accessible learning workshops — Manos Abiertas](https://github.com/belentani7/ManosAbiertas/commit/8b97cd83223d494f13c87caed1b5e9ed0df1eede)
+- [Browser CI for institutional journeys — Manos Abiertas](https://github.com/belentani7/ManosAbiertas/commit/b55ace590912cec8bc92f6e9e412283df48cfc32)
+- [Profile observability and bounded recovery — perfil](https://github.com/belentani7/belentani7/commit/c2c21b608bc57fe7070d99aad4f6f59f4d5ac59c)
 
 ---
 
@@ -42,6 +68,17 @@ Cada repositorio del ecosistema belentani7 referencia a los demás. Catálogo vi
 
 ---
 
+## Cumplimiento y gobernanza
+
+- **Cumplimiento de reglas del ecosistema:** 36/37 (97,3 %) — [`plataforma/FICHA.md`](./plataforma/FICHA.md)
+- **Doctrina del producto:** [`BIBLIA.md`](./BIBLIA.md) — visión, misión, reglas y tokens de diseño
+- **Contrato de evidencia:** claim → evidence → status. Lo que no tiene evidencia se declara como no verificado.
+- **No métricas infladas:** ningún número se presenta como garantía de resultado
+- **Seguridad:** `SECURITY.md`, `CODEOWNERS` (@belentani7), `gitleaks` antes de cada push
+- **Commits:** conventional commits `type(scope): resumen`
+
+---
+
 ## Tecnología
 
 TypeScript · Python · React · Three.js · WebGL · Node.js · FastAPI · GitHub Actions · Docker · LLMs locales · agentes y orquestación · infraestructura de producción
@@ -52,19 +89,6 @@ Forma de trabajo:
 2. **Contenido real** y límites públicos definidos; nada se afirma sin ejecución.
 3. **Documentar** cómo ejecutar y verificar el producto.
 4. **Publicar solo** lo que cumple ese estándar de evidencia.
-
----
-
-## Gobernanza operativa y evidencia
-
-Cada afirmación de este perfil sigue el contrato **claim → evidence → status**. Lo que no tiene evidencia se declara explícitamente como **no verificado**.
-
-- [Evidencia de ingeniería](./docs/engineering-evidence-2026-10-29.md) — commits, recuentos y límites del trabajo registrado.
-- [Archivo del perfil](./docs/profile-archive-2026-10-29.md) — historial de versiones anteriores de esta página.
-- [Ficha del producto](./plataforma/FICHA.md) — alcance, stack medido, cumplimiento de reglas y brechas conocidas.
-- [BIBLIA.md](./BIBLIA.md) — doctrina del producto: visión, misión, reglas y tokens de diseño.
-
-Los números publicados describen actividad registrada en el repositorio, no una distribución de horas. Ninguna métrica de este perfil se presenta como garantía de resultado.
 
 ---
 
@@ -92,6 +116,6 @@ Escríbeme si trabajas en agentes, infraestructura o IA aplicada desde Barcelona
 
 [Alcance del perfil y catálogo](./plataforma/FICHA.md). Cada producto mantiene su propio estado y documentación.
 
-*Hecho en Barcelona · Powered by AI agents · MIT/Apache-2.0 · Actualizado: 2026-11-14*
+*Hecho en Barcelona · Powered by AI agents · MIT/Apache-2.0 · Actualizado: 2026-11-14 · Evidencia: 2026-10-29*
 
 </div>
