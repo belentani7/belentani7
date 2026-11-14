@@ -18,7 +18,7 @@ class ProfileEvidenceTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         result = subprocess.run(
-            [sys.executable, str(SCRIPT), "--json"],
+            [sys.executable, str(SCRIPT), "--json", "--offline"],
             capture_output=True,
             text=True,
             encoding="utf-8",
@@ -45,10 +45,10 @@ class ProfileEvidenceTests(unittest.TestCase):
     def test_relative_links_resolve(self):
         self.assertEqual(self.evidence["missing_relative_links"], [])
 
-    def test_featured_repositories_are_public(self):
-        self.assertTrue(self.evidence["checks"]["featured_repositories_public"])
-        self.assertTrue(all(self.evidence["featured_visibility"].values()))
-        self.assertEqual(len(self.evidence["featured_repositories"]), 3)
+    def test_offline_mode_is_hermetic(self):
+        self.assertEqual(self.evidence["mode"], "offline")
+        self.assertEqual(self.evidence["featured_visibility"], {})
+        self.assertNotIn("featured_repositories_public", self.evidence["checks"])
 
     def test_proof_states_rubric_and_falsifiers(self):
         text = PROOF.read_text(encoding="utf-8")
