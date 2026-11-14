@@ -6,8 +6,10 @@
 L'Hospitalet de Llobregat · Barcelona
 
 [![Follow](https://img.shields.io/github/followers/belentani7?label=Follow&style=social)](https://github.com/belentani7)
-[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=belentani7&show_icons=true&theme=tokyonight&count_private=true)](https://github.com/belentani7)
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=belentani7&layout=compact&theme=tokyonight)](https://github.com/belentani7)
+
+[![Racha de contribuciones de belentani7](https://github-readme-streak-stats.herokuapp.com/?user=belentani7)](https://github.com/belentani7)
+
+![Datos reales del perfil, generados desde la API de GitHub](assets/profile-stats.svg)
 
 > Construyo productos digitales que unen narrativa, ingeniería y dirección creativa: agentes de IA, LLMs locales, interfaces WebGL y sistemas en producción. Este perfil documenta **solo trabajo con evidencia verificable**. Cada afirmación sigue el contrato **claim → evidence → status**. Las métricas son datos de GitHub con fecha, no horas de trabajo ni garantía de resultado.
 
@@ -134,6 +136,8 @@ Cualquier cosa aquí que no esté respaldada por un repo, un test o una medició
 - [Product sheet](./plataforma/FICHA.md) — alcance, stack medido y brechas conocidas.
 - [Doctrine](./BIBLIA.md) — visión, misión, reglas y tokens de diseño.
 
+Mantenimiento: `assets/profile-stats.svg` se regenera con `python scripts/generar-stats-perfil.py` (datos de api.github.com, fecha dentro del SVG). Los widgets de terceros que no responden se retiran en lugar de publicarlos rotos: ninguna métrica de esta página se afirma sin poder comprobarla.
+
 Los números del archivo de evidencia describen actividad registrada en los repositorios, no una distribución de horas. Ninguna métrica de esta página es una garantía de resultado.
 
 ---
@@ -162,6 +166,6 @@ Escríbeme si trabajas en agentes, infraestructura o IA aplicada desde Barcelona
 
 [Alcance del perfil y catálogo](./plataforma/FICHA.md). Cada producto mantiene su propio estado y documentación.
 
-*Hecho en Barcelona · Powered by AI agents · MIT/Apache-2.0 · Actualizado: 2026-11-14 · Evidencia: 2026-10-29*
+*Hecho en Barcelona · Powered by AI agents · MIT/Apache-2.0 · Actualizado: 2026-11-15 · Evidencia: 2026-10-29*
 
 </div>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" font-family="monospace">
+<rect width="640" height="400" rx="12" fill="#0d1117"/>
+<rect x="1" y="1" width="638" height="398" rx="11" fill="none" stroke="#30363d"/>
+<text x="24" y="38" fill="#e6edf3" font-size="16" font-weight="bold">@belentani7 — datos reales del perfil</text>
+<text x="24" y="60" fill="#8b949e" font-size="12">generado el 2026-11-14 desde api.github.com · scripts/generar-stats-perfil.py</text>
+<rect x="24" y="92" width="190" height="64" rx="8" fill="#161b22" stroke="#30363d"/>
+<text x="38" y="122" fill="#8b949e" font-size="12" font-family="monospace">Repos públicos</text>
+<text x="38" y="148" fill="#e6edf3" font-size="20" font-weight="bold" font-family="monospace">52</text>
+<rect x="224" y="92" width="190" height="64" rx="8" fill="#161b22" stroke="#30363d"/>
+<text x="238" y="122" fill="#8b949e" font-size="12" font-family="monospace">Stars</text>
+<text x="238" y="148" fill="#e6edf3" font-size="20" font-weight="bold" font-family="monospace">1</text>
+<rect x="424" y="92" width="190" height="64" rx="8" fill="#161b22" stroke="#30363d"/>
+<text x="438" y="122" fill="#8b949e" font-size="12" font-family="monospace">Forks</text>
+<text x="438" y="148" fill="#e6edf3" font-size="20" font-weight="bold" font-family="monospace">0</text>
+<rect x="24" y="166" width="190" height="64" rx="8" fill="#161b22" stroke="#30363d"/>
+<text x="38" y="196" fill="#8b949e" font-size="12" font-family="monospace">Seguidores</text>
+<text x="38" y="222" fill="#e6edf3" font-size="20" font-weight="bold" font-family="monospace">1</text>
+<rect x="224" y="166" width="190" height="64" rx="8" fill="#161b22" stroke="#30363d"/>
+<text x="238" y="196" fill="#8b949e" font-size="12" font-family="monospace">Siguiendo</text>
+<text x="238" y="222" fill="#e6edf3" font-size="20" font-weight="bold" font-family="monospace">0</text>
+<rect x="424" y="166" width="190" height="64" rx="8" fill="#161b22" stroke="#30363d"/>
+<text x="438" y="196" fill="#8b949e" font-size="12" font-family="monospace">Miembro desde</text>
+<text x="438" y="222" fill="#e6edf3" font-size="20" font-weight="bold" font-family="monospace">2025-09-07</text>
+<text x="24" y="244" fill="#8b949e" font-size="12" font-family="monospace">Lenguajes detectados por GitHub (51 repos sin fork, 2026-11-14)</text>
+<text x="24" y="276" fill="#c9d1d9" font-size="12" font-family="monospace">HTML</text><rect x="134" y="264" width="337" height="12" rx="2" fill="#e34c26"/><text x="479" y="275" fill="#8b949e" font-size="12" font-family="monospace">29 · 57%</text>
+<text x="24" y="300" fill="#c9d1d9" font-size="12" font-family="monospace">Python</text><rect x="134" y="288" width="116" height="12" rx="2" fill="#3572A5"/><text x="258" y="299" fill="#8b949e" font-size="12" font-family="monospace">10 · 20%</text>
+<text x="24" y="324" fill="#c9d1d9" font-size="12" font-family="monospace">TypeScript</text><rect x="134" y="312" width="104" height="12" rx="2" fill="#3178c6"/><text x="246" y="323" fill="#8b949e" font-size="12" font-family="monospace">9 · 18%</text>
+<text x="24" y="348" fill="#c9d1d9" font-size="12" font-family="monospace">JavaScript</text><rect x="134" y="336" width="35" height="12" rx="2" fill="#f1e05a"/><text x="177" y="347" fill="#8b949e" font-size="12" font-family="monospace">3 · 6%</text>
+<text x="24" y="386" fill="#484f58" font-size="11">Los números son la respuesta de la API en el momento de generar; no son garantía de resultado.</text>
+</svg>
