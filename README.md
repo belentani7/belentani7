@@ -28,7 +28,7 @@ Open campus for cybersecurity and responsible AI, anonymous enrolment, automated
 
 - Repo: https://github.com/belentani7/secure-t
 - Stack: Next.js · TypeScript
-- Demo: 425 HTML pages in the repository (git tree count, 2026-11-15)
+- Demo: 398 HTML pages in the repository (git tree count, 2026-11-15)
 
 ### 04 — gpu-cost-optimizer
 GPU compute cost optimizer for diffusion pipelines, up to 70% savings. Public, verified.
