@@ -2,7 +2,8 @@
 
 <img src="./assets/hero-2026.svg" alt="Pedro Belentani — AI systems with the safety rails built in, editorial cover" width="100%">
 
-**AI systems with the safety rails built in, proven by public evidence.** Agents, evaluation gates, local LLMs and the interfaces that make them auditable. L'Hospitalet de Llobregat · Barcelona
+**I build AI systems you can audit — evaluation gates, local LLMs, agent routing.**
+TypeScript · Python · Barcelona · L'Hospitalet de Llobregat
 
 ![Profile metrics generated from the GitHub API](assets/profile-stats.svg)
 
