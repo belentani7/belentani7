@@ -48,7 +48,7 @@ projects without that evidence stay out.
 - [Engineering evidence](./docs/engineering-evidence-2026-10-29.md) — commit counts, review
   windows, and the limits of what activity metrics actually measure.
 - [Profile archive](./docs/profile-archive-2026-10-29.md) — previous versions of this page.
-- [Product sheet](./platforma/FICHA.md) — measured scope, stack and known gaps.
+- [Product sheet](./plataforma/FICHA.md) — measured scope, stack and known gaps.
 - [Doctrine](./BIBLIA.md) — vision, mission, rules and design tokens.
 - [Living Machine](./docs/living-machine/index.html) — browser tools that run on repository
   files with no upload. A local demo, not a verified live deployment.
