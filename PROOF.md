@@ -16,8 +16,8 @@ What it can do is narrower: make the page falsifiable. The checks below show tha
 
 | # | Check | How | Result |
 |---|---|---|---|
-| 1 | A single thesis, not a list of labels | README opens with one claim | **Pass** — “AI systems with the safety rails built in” |
-| 2 | Public curation over volume | 3 featured systems, all public; private work separated and never counted as evidence | **Pass** — public API check + `selected_systems` |
+| 1 | One-sentence positioning | README opens with a single thesis, not a list of labels | **Pass** — “AI systems with the safety rails built in” |
+| 2 | Public curation over volume | 6 featured systems, all public; private work is separated and never counted as evidence | **Pass** — public API check + `selected_systems` |
 | 3 | Claim traceability | Every claim links to a repository, a test or a measurement — or says “unverified” | **Pass** — enforced by `tests/test_profile_presentation.py` |
 | 4 | Presentation contract | Regression tests for cover, SVG safety, links, size and external widgets | **Pass** — 6/6 |
 | 5 | Reproducible evidence | `scripts/profile_evidence.py` emits machine-readable evidence and exits non-zero on drift | **Pass** — 9/9 checks |
@@ -31,15 +31,16 @@ What it can do is narrower: make the page falsifiable. The checks below show tha
 
 | Claim on the profile | Evidence | Status |
 |---|---|---|
-| The three featured repositories are public | `profile_evidence.py` → `featured_visibility` (GitHub API, `private: false`) | **Verified** (machine) |
+| The six featured repositories are public | `profile_evidence.py` → `featured_visibility` (GitHub API, `private: false`) | **Verified** (machine) |
 | The page has one local cover and no external images | [`assets/hero-2026.svg`](./assets/hero-2026.svg) · `profile_evidence.py` | **Verified** (machine) |
 | All relative links resolve | `profile_evidence.py` → `missing_relative_links` | **Verified** (machine) |
 | The README stays under 12 KB | `profile_evidence.py` → `readme_bytes` | **Verified** (machine) |
-| Three featured systems, three distinct repos | `profile_evidence.py` → `selected_systems`, `featured_repositories` | **Verified** (machine) |
+| Six featured systems, six distinct repos | `profile_evidence.py` → `selected_systems`, `featured_repositories` | **Verified** (machine) |
 | Presentation cannot silently regress | [`tests/test_profile_presentation.py`](./tests/test_profile_presentation.py) | **Verified** (6 tests) |
 | Belentani.es is live | HTTP 200 at [belentani.es](https://belentani.es) | **Verified** (HTTP) |
 | Meta-Skill demo is live | HTTP 200 at [meta-skill-theta.vercel.app](https://meta-skill-theta.vercel.app) | **Verified** (HTTP) |
-| secure-t publishes 28 HTML pages | [repository](https://github.com/belentani7/secure-t) · measured 2026-11-10 | **Documented** by the repo, not re-run here |
+| secure-t publishes 425 HTML pages | [repository](https://github.com/belentani7/secure-t) · git tree count 2026-11-15 | **Documented** by the repo, recounted here via the GitHub API |
+| GPU Cost Optimizer saves up to 70% on GPU compute | [repository](https://github.com/belentani7/gpu-cost-optimizer) · its own description | **Documented** by the repo, not re-measured here |
 | Language stats reflect TypeScript/Python, not demo HTML | commits on `belentani-portfolio`, `belentani-python-template`, `comfyui-json-compiler`, `neural-git-tui` | **Verified** (commit) |
 | The profile repo no longer ships local hook state | commit `feat(profile): lead with auditable AI systems…` | **Verified** (diff) |
 

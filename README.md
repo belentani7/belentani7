@@ -27,7 +27,7 @@ Open campus for cybersecurity and responsible AI, anonymous enrolment, automated
 
 - Repo: https://github.com/belentani7/secure-t
 - Stack: Next.js · TypeScript
-- Demo: 28 HTML pages in the repository
+- Demo: 425 HTML pages in the repository (git tree count, 2026-11-15)
 
 ### 04 — gpu-cost-optimizer
 GPU compute cost optimizer for diffusion pipelines, up to 70% savings. Public, verified.
@@ -76,5 +76,15 @@ Source and reproduction: `scripts/profile_evidence.py` runs nine machine checks 
 `TypeScript` `Python` `React 19` `Next.js` `Vite` `Tailwind` `Three.js` `Node.js` `Express` `FastAPI` `tRPC 11` `PostgreSQL` `MySQL` `Drizzle` `Docker` `GitHub Actions` `Vercel` `MCP`
 
 No third-party stats widgets, no visitor counters, no external tracking images. One local SVG cover; everything else is text and local links.
+
+## Tools and experiments
+
+Browser tools that run on the **repository files** of this repo, uploading nothing: image conversion, subtitles, CV reading, palette extraction.
+
+- [Living Machine — tool desktop](./docs/living-machine/index.html)
+- [Studio — conversion and subtitles](./docs/living-machine/studio.html)
+- [Environment diagnostics](./docs/living-machine/diagnostics.html)
+
+This showcase is a local demo over repository files: **not a verified live deployment**. Some pieces stay private, archived or experimental and are deliberately excluded from the public catalogue.
 
 *Made in Barcelona · Built with AI agents · MIT/Apache-2.0 · Updated: 2026-11-15*
