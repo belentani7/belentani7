@@ -16,6 +16,10 @@ artist. The same world has two complementary tools: [Belentani Studio Motion](ht
 develops kinetic components, while [Belentani Visual Engine](https://github.com/belentani7/belentani-visual-engine)
 explores procedural Three.js scenes from lore and code. These are distinct projects with distinct purposes.
 
+Not every project here stands alone. [ECOSISTEMA.md](./ECOSISTEMA.md) groups the six clusters that
+only make sense read together — the three entrances to Omega, the Judas canon, the router and the
+registry that need each other, open education, Barcelona community work, and the inspection tools.
+
 ## Selected systems
 
 ### 01 — belentani.es
@@ -104,6 +108,8 @@ Every claim on this page links to a repository, a test or a measurement — or i
 - Living Machine: ./docs/living-machine/index.html — browser tools that run on repository files, with
   no upload; a local demo, not a verified live deployment.
 - Proof: ./PROOF.md - what the page can prove, claim by claim, and what would falsify it.
+- Ecosystem map: ./ECOSISTEMA.md — which projects only make sense connected, and the entry point of
+  each, checked with curl.
 
 Private, archived or experimental work stays out of this page.
 
