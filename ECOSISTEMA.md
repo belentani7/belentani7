@@ -73,6 +73,8 @@ el registro necesita que alguien lo consulte.
 que alguien puede recorrer hoy, sin pagar y sin dar datos). Por separado parecen cuatro webs
 educativas sueltas; juntos son un currículum con un caso local.
 
+**Carta, alcance medido y lo que cada una declara:** [EDUCACION.md](./EDUCACION.md).
+
 ## 5. Barcelona comunitaria
 
 | Pieza | Rol | Enlace |
