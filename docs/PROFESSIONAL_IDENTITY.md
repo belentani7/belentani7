@@ -8,7 +8,7 @@
 - **Core evidence:** developer tools, agent routing, LLM evaluation, full-stack delivery, operational safety and accessible products.
 - **Music:** BELENTANI is a separate artistic identity and a secondary reference on engineering hiring surfaces. Never use JUDAS or singer as the lead technical headline.
 - **Seniority:** Apply senior engineering methodology; do not imply an unverified contracted Staff/Senior role.
-- **Career history:** Multilingual Trust & Safety through TELUS Digital / CCC (2018–2025), not direct Meta employment.
+- **Career history:** TELUS (2018–2025), described strictly as employer-level Trust & Safety experience. Public descriptions do not name clients, internal projects, tools, cases, policies or confidential performance figures.
 
 ## The Gestalt architecture
 
