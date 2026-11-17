@@ -67,3 +67,9 @@ Public claims should link to a repository, test or measurement, or be **labelled
 I also write and release music as **BELENTANI**. My [artist website](https://belentani.es) is a creative practice and a hands-on example of immersive web design—not my primary professional positioning.
 
 *Independent work · Barcelona · Edited 2026-11-17. No automatic visitor counters or third-party statistics widgets.*
+
+## Local browser tools (experiments)
+
+The [Living Machine toolkit](./docs/living-machine/index.html) includes browser utilities for working with **repository files** locally: conversion, captions and diagnostics. See the [Studio](./docs/living-machine/studio.html) and [browser diagnostics](./docs/living-machine/diagnostics.html).
+
+These are demonstrations over repository files, **not a verified live deployment**. **Private, archived or experimental** components are not represented as public, production-ready systems.
