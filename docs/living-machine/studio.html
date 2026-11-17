@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!doctype html>
-<html lang="en">
+<html dir="ltr" lang="en">
 <head>
     <meta charset="UTF-8">
 <meta charset="utf-8">
@@ -25,6 +25,10 @@
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:title" content="BELENTANI STUDIO / Free Browser Tools">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
 </head>
 <body>
 <a class="skip" href="#workspace">Ir al contenido</a>
@@ -38,14 +42,14 @@
   <aside class="sidebar" aria-label="Herramientas">
     <div class="menu-caption" data-i18n="apps">APPLICATIONS / 01—08</div>
     <nav class="nav" id="tabs" aria-label="Laboratory tools">
-      <button data-tab="batch" class="chosen"><span>◩</span> <span data-i18n="navBatch">Image batch converter</span> <small>01</small></button>
-      <button data-tab="subtitles"><span>≋</span> <span data-i18n="navSubtitles">Subtitle time studio</span> <small>02</small></button>
-      <button data-tab="cv"><span>◈</span> <span data-i18n="navCV">CV clarity inspector</span> <small>03</small></button>
-      <button data-tab="storyboard"><span>◇</span> <span data-i18n="navShots">Storyboard architect</span> <small>04</small></button>
-      <button data-tab="palette"><span>◉</span> <span data-i18n="navPalette">Image color sampler</span> <small>05</small></button>
-      <button data-tab="pdf"><span>▤</span> <span data-i18n="navPDF">Image → PDF composer</span> <small>06</small></button>
-      <button data-tab="audio"><span>♫</span> <span data-i18n="navAudio">Audio to WAV studio</span> <small>07</small></button>
-      <button data-tab="video"><span>▦</span> <span data-i18n="navVideo">Video contact sheet</span> <small>08</small></button>
+      <button data-tab="batch" class="chosen" type="button"><span>◩</span> <span data-i18n="navBatch">Image batch converter</span> <small>01</small></button>
+      <button data-tab="subtitles" type="button"><span>≋</span> <span data-i18n="navSubtitles">Subtitle time studio</span> <small>02</small></button>
+      <button data-tab="cv" type="button"><span>◈</span> <span data-i18n="navCV">CV clarity inspector</span> <small>03</small></button>
+      <button data-tab="storyboard" type="button"><span>◇</span> <span data-i18n="navShots">Storyboard architect</span> <small>04</small></button>
+      <button data-tab="palette" type="button"><span>◉</span> <span data-i18n="navPalette">Image color sampler</span> <small>05</small></button>
+      <button data-tab="pdf" type="button"><span>▤</span> <span data-i18n="navPDF">Image → PDF composer</span> <small>06</small></button>
+      <button data-tab="audio" type="button"><span>♫</span> <span data-i18n="navAudio">Audio to WAV studio</span> <small>07</small></button>
+      <button data-tab="video" type="button"><span>▦</span> <span data-i18n="navVideo">Video contact sheet</span> <small>08</small></button>
     </nav>
     <div class="sidebar-bottom"><span>NO ACCOUNT</span><span>NO FILE UPLOAD</span><span>NO BACKEND API</span><p>Built to demonstrate useful engineering in public, with explicit operating boundaries.</p><a href="https://belentani.es">belentani.es ↗</a></div>
   </aside>
@@ -66,7 +70,7 @@
         <div><label for="batchQuality">Quality</label><select id="batchQuality"><option value=".95">95% · High</option><option value=".85" selected>85% · Balanced</option><option value=".7">70% · Compact</option><option value=".5">50% · Small</option></select></div>
       </div>
       <div id="batchList" class="filelist" aria-live="polite"></div>
-      <div class="actionline"><button id="batchGo" class="cta" data-i18n="batchGo">Convert images <span>↗</span></button><button id="batchClear" class="secondary" data-i18n="batchClear">Clear</button></div>
+      <div class="actionline"><button id="batchGo" class="cta" data-i18n="batchGo" type="button">Convert images <span>↗</span></button><button id="batchClear" class="secondary" data-i18n="batchClear" type="button">Clear</button></div>
       <div id="batchResult" class="result" role="status" aria-live="polite">Waiting for files.</div>
     </section>
 
@@ -80,16 +84,16 @@
         <p class="hint">No audio recognition is performed. This creates estimated cue timings from a written script; correct the timings against your actual recording.</p>
         <div class="formline"><div><label for="captionWpm">Estimated words per minute</label><input id="captionWpm" type="number" min="80" max="280" value="165"></div>
         <div><label for="captionStart">Start at second</label><input id="captionStart" type="number" min="0" max="86400" step="0.1" value="0"></div></div>
-        <button class="secondary" id="captionDraft">Generate editable timed draft ↗</button>
+        <button class="secondary" id="captionDraft" type="button">Generate editable timed draft ↗</button>
       </div>
-      <div class="actionline"><button class="cta" id="subtitleGo" data-i18n="subtitleGo">Convert & export ↗</button><button class="secondary" id="subtitlePreview" data-i18n="subtitlePreview">Preview shifted text</button></div>
+      <div class="actionline"><button class="cta" id="subtitleGo" data-i18n="subtitleGo" type="button">Convert & export ↗</button><button class="secondary" id="subtitlePreview" data-i18n="subtitlePreview" type="button">Preview shifted text</button></div>
       <pre id="subtitleResult" class="result" role="status" aria-live="polite">No caption track loaded.</pre>
     </section>
 
     <section class="panel" id="tab-cv" aria-labelledby="cvTitle" hidden>
       <div class="panel-head"><div><div class="eyebrow">03 / PROFESSIONAL COMMUNICATION</div><h2 id="cvTitle" data-i18n="cvTitle">CV clarity inspector</h2><p data-i18n="cvDesc">A privacy-preserving, heuristic text review: structure, contact presence, readability length and evidence-oriented suggestions. Not an ATS score and not AI-generated hiring advice.</p></div><div class="mark">◈</div></div>
       <label for="cvText">Paste resume text (no uploads)</label><textarea id="cvText" rows="12" placeholder="Professional summary, experience, projects, education, skills..."></textarea>
-      <div class="actionline"><button class="cta" id="cvGo" data-i18n="cvGo">Inspect clarity ↗</button><button class="secondary" id="cvExport" data-i18n="cvExport">Export report</button></div>
+      <div class="actionline"><button class="cta" id="cvGo" data-i18n="cvGo" type="button">Inspect clarity ↗</button><button class="secondary" id="cvExport" data-i18n="cvExport" type="button">Export report</button></div>
       <div id="cvResult" class="report" role="status" aria-live="polite">Your text is analyzed in memory when you press Inspect.</div>
       <p class="hint">Do not paste personal identifiers if you do not want them present in your browser. This page has no CV upload or analytics service.</p>
     </section>
@@ -98,7 +102,7 @@
       <div class="panel-head"><div><div class="eyebrow">04 / CREATIVE PRODUCTION</div><h2 id="storyTitle" data-i18n="storyTitle">Storyboard architect</h2><p data-i18n="storyDesc">Plan and export real shot lists for reels, music videos and creative campaigns: duration, camera, movement, visual intention and sound.</p></div><div class="mark">◇</div></div>
       <div class="formline"><div><label for="filmTitle">Production title</label><input id="filmTitle" maxlength="100" placeholder="Judas — Midnight Sequence"></div><div><label for="filmTempo">Project tempo (BPM, optional)</label><input id="filmTempo" type="number" min="1" max="320" placeholder="128"></div></div>
       <div class="table-scroll"><table><thead><tr><th>Shot</th><th>Seconds</th><th>Camera</th><th>Movement</th><th>Visual</th><th>Audio</th><th>Notes</th><th></th></tr></thead><tbody id="shots"></tbody></table></div>
-      <div class="actionline"><button class="secondary" id="addShot" data-i18n="addShot">＋ Add shot</button><button class="cta" id="exportShots" data-i18n="exportShots">Export CSV ↗</button><button class="secondary" id="exportShotsJson" data-i18n="exportShotsJson">Export JSON</button></div>
+      <div class="actionline"><button class="secondary" id="addShot" data-i18n="addShot" type="button">＋ Add shot</button><button class="cta" id="exportShots" data-i18n="exportShots" type="button">Export CSV ↗</button><button class="secondary" id="exportShotsJson" data-i18n="exportShotsJson" type="button">Export JSON</button></div>
       <div id="storyResult" class="result" role="status" aria-live="polite">A new storyboard is ready.</div>
     </section>
 
@@ -106,7 +110,7 @@
       <div class="panel-head"><div><div class="eyebrow">05 / ART DIRECTION</div><h2 id="paletteTitle" data-i18n="paletteTitle">Image color sampler</h2><p data-i18n="paletteDesc">Derive a compact palette from the pixels in your own image. Sampled colors are approximate; export swatches as reusable CSS variables.</p></div><div class="mark">◉</div></div>
       <label for="paletteImage">Local image file</label><input id="paletteImage" type="file" accept="image/*">
       <div class="image-preview"><canvas id="paletteCanvas" width="420" height="240" aria-label="Color source image preview"></canvas></div>
-      <div class="actionline"><button class="cta" id="paletteGo" data-i18n="paletteGo">Extract palette ↗</button><button class="secondary" id="paletteExport" data-i18n="paletteExport">Export CSS</button></div>
+      <div class="actionline"><button class="cta" id="paletteGo" data-i18n="paletteGo" type="button">Extract palette ↗</button><button class="secondary" id="paletteExport" data-i18n="paletteExport" type="button">Export CSS</button></div>
       <div id="swatches" class="swatches" aria-live="polite"></div>
       <div id="paletteResult" class="result" role="status" aria-live="polite">Choose a local image to begin.</div>
     </section>
@@ -116,7 +120,7 @@
       <label for="pdfFiles">Select 1–25 local images</label>
       <input type="file" id="pdfFiles" accept="image/*" multiple>
       <div class="formline"><div><label for="pdfQuality">JPEG fidelity</label><select id="pdfQuality"><option value=".92">High — 92%</option><option value=".80" selected>Balanced — 80%</option><option value=".65">Small — 65%</option></select></div><div><label for="pdfMargin">Page margins in points</label><select id="pdfMargin"><option value="0">Edge to edge</option><option value="24" selected>Standard</option><option value="48">Wide</option></select></div></div>
-      <div class="actionline"><button id="pdfGo" class="cta" data-i18n="pdfGo">Compose & download PDF ↗</button></div>
+      <div class="actionline"><button id="pdfGo" class="cta" data-i18n="pdfGo" type="button">Compose & download PDF ↗</button></div>
       <div id="pdfResult" class="result" role="status" aria-live="polite">No images selected.</div>
     </section>
 
@@ -125,7 +129,7 @@
       <label for="audioFile">Choose audio file</label><input id="audioFile" type="file" accept="audio/*">
       <div class="formline"><div><label for="audioChannels">Channels</label><select id="audioChannels"><option value="original">Keep original (up to stereo)</option><option value="mono">Mix to mono</option></select></div><div><label for="audioNormalize">Volume processing</label><select id="audioNormalize"><option value="no">Keep original peaks</option><option value="yes">Peak normalize (up to 16×)</option></select></div></div>
       <div class="image-preview"><canvas id="waveCanvas" width="760" height="170" role="img" aria-label="Waveform visual representation"></canvas></div>
-      <div class="actionline"><button id="audioGo" class="cta" data-i18n="audioGo">Decode & download WAV ↗</button></div>
+      <div class="actionline"><button id="audioGo" class="cta" data-i18n="audioGo" type="button">Decode & download WAV ↗</button></div>
       <div id="audioResult" class="result" role="status" aria-live="polite">No audio selected. Sample count is limited to protect your device.</div>
     </section>
 
@@ -133,7 +137,7 @@
       <div class="panel-head"><div><div class="eyebrow">08 / VIDEO TOOLS</div><h2 id="videoTitle" data-i18n="videoTitle">Video contact sheet</h2><p data-i18n="videoDesc">Extract evenly spaced still frames from your own local video and combine them into a labelled PNG contact sheet. Codec support depends on your browser; no media is uploaded.</p></div><div class="mark">▦</div></div>
       <label for="videoSheetFile" data-i18n="videoFileLabel">Local video (max 500 MB)</label><input id="videoSheetFile" type="file" accept="video/*">
       <div class="formline"><div><label for="videoSheetCount" data-i18n="videoCountLabel">Frames to sample</label><select id="videoSheetCount"><option value="4">4 (2 × 2)</option><option value="9" selected>9 (3 × 3)</option><option value="16">16 (4 × 4)</option></select></div></div>
-      <div class="actionline"><button id="videoSheetGo" class="cta" data-i18n="videoGo">Build contact sheet ↗</button></div>
+      <div class="actionline"><button id="videoSheetGo" class="cta" data-i18n="videoGo" type="button">Build contact sheet ↗</button></div>
       <div id="videoSheetResult" class="result" role="status" aria-live="polite">Choose a video to export timed stills.</div>
     </section>
 

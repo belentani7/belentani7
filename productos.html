@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html dir="ltr" lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -74,6 +74,11 @@ color:var(--accent2);padding:4px 10px;border-radius:999px;margin:10px 0}
 <meta name="color-scheme" content="light dark">
 <meta name="robots" content="index,follow">
 <meta name="twitter:card" content="summary_large_image">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:title" content="Productos — ecosistema Belentani">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
 </head>
 <body>
 <a class="skip" href="#contenido">Saltar al contenido</a>
@@ -126,14 +131,14 @@ color:var(--accent2);padding:4px 10px;border-radius:999px;margin:10px 0}
 </section>
 <section class="sec wrap" style="padding-top:0">
 <div class="filters" role="group" aria-label="Filtrar por categoría">
-<button data-filter="all" aria-pressed="true">Todas · <span data-count>38</span></button>
-<button data-filter="Arte y música" aria-pressed="false">Arte y música · 10</button>
-<button data-filter="Educación" aria-pressed="false">Educación · 5</button>
-<button data-filter="Herramientas" aria-pressed="false">Herramientas · 4</button>
-<button data-filter="Infraestructura y docs" aria-pressed="false">Infraestructura y docs · 5</button>
-<button data-filter="Negocio y estudios" aria-pressed="false">Negocio y estudios · 5</button>
-<button data-filter="Plataformas" aria-pressed="false">Plataformas · 4</button>
-<button data-filter="Varios" aria-pressed="false">Varios · 5</button>
+<button data-filter="all" aria-pressed="true" type="button">Todas · <span data-count>38</span></button>
+<button data-filter="Arte y música" aria-pressed="false" type="button">Arte y música · 10</button>
+<button data-filter="Educación" aria-pressed="false" type="button">Educación · 5</button>
+<button data-filter="Herramientas" aria-pressed="false" type="button">Herramientas · 4</button>
+<button data-filter="Infraestructura y docs" aria-pressed="false" type="button">Infraestructura y docs · 5</button>
+<button data-filter="Negocio y estudios" aria-pressed="false" type="button">Negocio y estudios · 5</button>
+<button data-filter="Plataformas" aria-pressed="false" type="button">Plataformas · 4</button>
+<button data-filter="Varios" aria-pressed="false" type="button">Varios · 5</button>
 </div><div class="grid">
 <article class="prod reveal" data-cat="Negocio y estudios">
 <a  rel="noopener"><h3 class="long">ArteQueVeste-Entrega-2026</h3></a>
@@ -471,8 +476,8 @@ color:var(--accent2);padding:4px 10px;border-radius:999px;margin:10px 0}
     <span>38 productos auditados · 94.6% de cumplimiento normativo</span>
   </div>
 </footer>
-<script src="data.js"></script>
-<script src="assets/site.js"></script>
+<script src="data.js" defer></script>
+<script src="assets/site.js" defer></script>
 
 
 </div></main>
