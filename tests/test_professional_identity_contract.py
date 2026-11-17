@@ -44,7 +44,6 @@ class ProfessionalIdentityContract(unittest.TestCase):
         self.assertIn("./docs/PROFESSIONAL_IDENTITY.md", self.readme)
         self.assertIn("professional-identity.json", POLICY.read_text(encoding="utf-8"))
         self.assertIn("not direct employment at Meta", self.readme)
-        self.assertIn("Human", self.readme) if False else None
 
     def test_no_inflated_seniority_claim(self):
         self.assertNotIn("Staff Engineer", self.readme)
