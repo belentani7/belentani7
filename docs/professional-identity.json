@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-11-17",
+  "canonical_owner": "Pedro Marcos Santos Belentani",
+  "public_name": "Pedro Belentani",
+  "role_statement": "AI Systems Engineer · Full-Stack Developer · Trust & Safety",
+  "supporting_specialties": [
+    "Agent tooling",
+    "LLM evaluation",
+    "Applied AI automation",
+    "Python",
+    "TypeScript",
+    "Safety-aware product engineering"
+  ],
+  "professional_bio_short": "AI Systems Engineer · Full-Stack Developer · Trust & Safety. Agent tooling, LLM evaluation, Python & TypeScript. Barcelona.",
+  "professional_bio_about": "I build practical AI tooling and full-stack products with explainable decisions, explicit limits and human oversight. My experience in multilingual Trust & Safety operations informs how I approach complex workflows, reliability and safety.",
+  "creative_identity": {
+    "name": "BELENTANI",
+    "placement": "secondary_on_professional_surfaces",
+    "description": "Independent music and immersive-web practice; not the lead professional headline."
+  },
+  "architecture": {
+    "github": "inspectable code, documented limitations and reproducible evidence",
+    "linkedin": "career, skills, employment history and selected verified outcomes",
+    "portfolio": "professional engineering showcase first; optional creative technology case studies",
+    "artist_web": "music and narrative universe as a separate purpose",
+    "drive": "living editorial strategy and historical source archive",
+    "notion": "reference or decision log, if connected",
+    "vercel": "deployment ownership/status only; never alter production to change identity"
+  },
+  "featured_public_repositories": [
+    "meta-skill",
+    "profile-lint",
+    "secure-t",
+    "kepler",
+    "Cruzando-el-charco",
+    "belentani.es"
+  ],
+  "claim_policy": {
+    "employment": "TELUS (2018–2025) only. Do not publicly identify clients, internal projects, internal tools, policies, cases, confidential metrics or confidential operational details.",
+    "title": "Descriptions of responsibility are not proof of a contractual Staff or Senior Engineer title.",
+    "measurements": "Treat author-reported benchmarks, estimated cost savings, checks and production results as distinct evidence levels.",
+    "exposure": "No private repositories, client data, credential values, or personal identifiers in public presentation."
+  },
+  "design_system": {
+    "model": "Gestalt: hierarchy, proximity, similarity, continuity, figure-ground, restraint",
+    "background": "#05070D",
+    "deep_blue": "#10284F",
+    "foreground": "#EAF2FF",
+    "carmine_accent": "#B61F38",
+    "performance": "motion optional, reduced-motion respected, keyboard navigation, WebGL progressive enhancement"
+  },
+  "governance": {
+    "method": "inspect -> propose -> branch -> test -> review -> merge",
+    "merge_policy": "No unreviewed main changes and no production deploy without validation",
+    "maintenance": "Link to canonical source instead of diverging copies. Update downstream documents deliberately with dates."
+  }
+}

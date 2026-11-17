@@ -40,7 +40,7 @@ function terminalHarness(){
 }
 
 test("English page defaults and translated hero do not mislabel whole document",()=>{
-  assert.match(html,/<html lang="en">/);
+  assert.match(html,/<html\b[^>]*\blang="en"[^>]*>/);
   assert.match(js,/\$\("#hero-copy"\)\.lang=/);
   assert.doesNotMatch(js,/document\.documentElement\.lang\s*=\s*lang/);
 });
