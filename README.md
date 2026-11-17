@@ -53,6 +53,7 @@ I build practical AI tooling and full-stack products with explainable decisions,
 
 Public claims should link to a repository, test or measurement, or be **labelled unverified**. Documentation, passing tests, HTTP reachability and independent reproduction are different kinds of evidence.
 
+- [Professional identity](./docs/PROFESSIONAL_IDENTITY.md) — canonical career-first brand hierarchy, Gestalt design and cross-platform rules.
 - [PROOF.md](./PROOF.md) — evidence policy and historical checks; some counts are historical and should not be interpreted as a current live audit.
 - [Engineering evidence](./docs/engineering-evidence-2026-10-29.md) — methodology and limits of contribution counters.
 - [Profile archive](./docs/profile-archive-2026-10-29.md) — earlier versions.
