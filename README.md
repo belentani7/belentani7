@@ -6,6 +6,8 @@ I compose music and build the digital worlds around it. My artist practice joins
 motion and WebGL; my engineering work spans agent systems, evaluation gates, local LLMs and MCP
 tools. São Paulo · Barcelona · TypeScript · Python.
 
+<img src="./assets/hero-2026.svg" alt="Pedro Belentani editorial banner presenting auditable AI systems, evaluation gates, and creative engineering interfaces." width="1280" height="420">
+
 ![Profile metrics generated from the GitHub API](assets/profile-stats.svg)
 
 ## Artist universe
