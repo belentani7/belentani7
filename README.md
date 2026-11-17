@@ -139,3 +139,10 @@ This showcase is a local demo over repository files: **not a verified live deplo
 stay private, archived or experimental and are deliberately excluded from the public catalogue.
 
 *Made in Barcelona · Built with AI agents · MIT/Apache-2.0 · Updated: 2026-11-16*
+
+## Verificacion
+
+```bash
+npm install
+npm test
+```
