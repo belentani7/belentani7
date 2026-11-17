@@ -43,11 +43,13 @@ class ProfessionalIdentityContract(unittest.TestCase):
     def test_source_and_provenance_linked(self):
         self.assertIn("./docs/PROFESSIONAL_IDENTITY.md", self.readme)
         self.assertIn("professional-identity.json", POLICY.read_text(encoding="utf-8"))
-        self.assertIn("not direct employment at Meta", self.readme)
+        self.assertIn("TELUS — Trust & Safety operations", self.readme)
+        self.assertNotIn("TELUS Digital / CCC", self.readme)
+        self.assertNotIn("client brands", self.readme.lower())
 
     def test_no_inflated_seniority_claim(self):
         self.assertNotIn("Staff Engineer", self.readme)
-        self.assertNotIn("Meta employee", self.readme)
+        self.assertNotIn("client identity", self.readme.lower())
         self.assertNotIn("70% savings", self.readme)
 
 if __name__ == "__main__":
