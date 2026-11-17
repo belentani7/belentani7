@@ -43,9 +43,9 @@ I build practical AI tooling and full-stack products with explainable decisions,
 
 ## Professional background
 
-**2018–2025 · TELUS Digital / CCC — Content moderation and community operations.** Multilingual Trust & Safety work involving content policies, edge cases, escalation and operational quality. This was employment through a service provider, **not direct employment at Meta**.
+**2018–2025 · TELUS — Trust & Safety operations.** Multilingual digital operations, content-review responsibilities and quality-focused teamwork.
 
-**2016–2018 · Sellbytel / Webhelp — Multilingual customer support.** Customer service and post-sales operations for Inditex brands.
+**2016–2018 · Sellbytel / Webhelp — Multilingual customer support.** Customer service and post-sales operations.
 
 **2026–present · Independent software work.** Applied AI, developer tools, accessible web products and creative technology. Public repositories document scope; prototypes are not described as proven enterprise deployments.
 
