@@ -1,6 +1,6 @@
 # Pedro Belentani · `belentani7`
 
-Artist, composer and creative technologist · Staff Engineer — AI Systems
+Artist, composer and creative technologist · AI systems and Trust & Safety projects
 
 I compose music and build the digital worlds around it. My artist practice joins voice, narrative,
 motion and WebGL; my engineering work spans agent systems, evaluation gates, local LLMs and MCP
@@ -15,92 +15,64 @@ tools. São Paulo · Barcelona · TypeScript · Python.
 **[Belentani: The Experience](https://belentani.es)** is the front door to the music and JUDAS
 narrative. Its interactive galaxy lets visitors enter the lore, listen to the work and discover the
 artist. The same world has two complementary tools: [Belentani Studio Motion](https://github.com/belentani7/belentani-studio-motion)
-develops kinetic components, while [Belentani Visual Engine](https://github.com/belentani7/belentani-visual-engine)
-explores procedural Three.js scenes from lore and code. These are distinct projects with distinct purposes.
+develops kinetic components, while the private Belentani Visual Engine project explores procedural Three.js scenes from lore and code. Its source is not publicly accessible.
 
 Not every project here stands alone. [ECOSISTEMA.md](./ECOSISTEMA.md) groups the six clusters that
 only make sense read together — the three entrances to Omega, the Judas canon, the router and the
 registry that need each other, open education, Barcelona community work, and the inspection tools.
 
-## Selected systems
+## Selected projects — public scope, not inflated production claims
+
+These projects have different maturity levels. A public repository, a successful build, or a Vercel Ready deployment is **not** proof that an application is a finished, independently verified product. Numbers below describe repository contents or dated checks, not customers, impact, savings or certifications.
 
 ### 01 — belentani.es
-Immersive artist hub: Three.js galaxy, music catalogue and narrative universe (Judas Era in four
-chapters). Public, verified.
-
-- Repo: https://github.com/belentani7/belentani.es
-- Stack: Next.js · Three.js · WebGL
-- Demo: https://belentani.es (HTTP 200)
+Artist website and experimental interactive narrative. Active work in progress; experience and navigation are still being reviewed.
+- Source: https://github.com/belentani7/belentani.es
+- Site: https://belentani.es (availability and visual behaviour not independently validated here)
 
 ### 02 — meta-skill
-Zero-token skill router for Claude Code and Qwen Code. Public, verified.
-
-- Repo: https://github.com/belentani7/meta-skill
-- Stack: Python · TypeScript · CLI
-- Demo: https://meta-skill-theta.vercel.app (HTTP 200)
+Offline Python heuristic router for agent tasks. A small browser demo can classify text locally; it does not invoke a language model or guarantee savings.
+- Source: https://github.com/belentani7/meta-skill
+- Demo: https://meta-skill-theta.vercel.app (deployment reported Ready; external browser access not separately verified)
 
 ### 03 — secure-t
-Open campus for cybersecurity and responsible AI, anonymous enrolment, automated tests. Public,
-verified.
-
-- Repo: https://github.com/belentani7/secure-t
-- Stack: Next.js · TypeScript
-- Demo: 398 HTML pages in the repository (git tree count, 2026-11-15)
+Cybersecurity and responsible-AI learning material with a static campus. This is educational software and content, not an accredited university.
+- Source: https://github.com/belentani7/secure-t
+- Publication evidence: https://github.com/belentani7/secure-t/actions/runs/44302696476
+- Site configured for https://www.belentani.es/secure-t/ (DNS/browser delivery requires separate validation)
 
 ### 04 — gpu-cost-optimizer
-GPU compute cost optimizer for diffusion pipelines, up to 70% savings. Public, verified.
-
-- Repo: https://github.com/belentani7/gpu-cost-optimizer
-- Stack: Python · ComfyUI · ML
-- Demo: repository with documented execution
+Python and browser-based heuristic estimator for diffusion workflow runtime, VRAM and approximate GPU spend. Its bundled rate data are historical, not live quotes. No percentage of real-world savings is established.
+- Source: https://github.com/belentani7/gpu-cost-optimizer
+- Browser calculator restored in commit 715831b853aa; deployment reported Ready by Vercel.
 
 ### 05 — kepler
-A galaxy of 200,000 particles in a single WebGL2 file: one draw call, no dependencies, no network
-requests. Built to answer a measurable question rather than an aesthetic one.
-
-- Repo: https://github.com/belentani7/kepler
-- Stack: WebGL2 · GLSL · Vanilla JS
-- Demo: https://belentani7.github.io/kepler (HTTP 200)
-- Measured: 200k particles at 59.9 fps, median frame 16.7 ms, p95 17.5 ms, 0.1 ms of CPU per
-  frame on an Intel UHD 620. Ceiling is 280k at a solid 60 fps; above that the p95 degrades before
-  the median does.
+Self-contained WebGL2 particle-galaxy experiment. The README documents measurements on one Intel UHD 620 configuration; they are not universal performance benchmarks.
+- Source: https://github.com/belentani7/kepler
+- GitHub Pages is configured for https://www.belentani.es/kepler/; public rendering needs independent checking.
 
 ### 06 — profile-lint
-A linter for GitHub profile READMEs: dead links, missing alt text, remote assets and claims nobody
-can check. Standard library only, tested on three Python versions in CI.
+Python command-line linter for GitHub README content and optionally external links. **CLI tool, not a published web application.**
+- Source: https://github.com/belentani7/profile-lint
+- Evidence: 16 local unit tests passed on 18 November 2026; no external impact claim is made.
 
-- Repo: https://github.com/belentani7/profile-lint
-- Stack: Python · CLI · GitHub Actions
-- Usage: `profile-lint README.md --root . --links`
-- Measured: 85 images without alt text across 7 profile READMEs belonging to accounts with 26,000
-  to 60,000 followers.
-
-### 07 — Cruzando el charco
-A multilingual, accessibility-first guide for LGTBIQ+ migrants in Barcelona and Sitges: 72 reviewed
-resources and emergency phone numbers that render without JavaScript.
-
-- Repo: https://github.com/belentani7/Cruzando-el-charco
-- Stack: JavaScript · Static HTML
-- Demo: https://belentani7.github.io/Cruzando-el-charco (HTTP 200)
+### 07 — Cruzando el Charco
+Static multilingual community resource guide for LGTBIQ+ migrants, visitors and residents in Barcelona and Sitges. Contains a news/feed feature, but is **not** presented as an operating newsroom.
+- Source: https://github.com/belentani7/Cruzando-el-charco
+- Publication evidence: https://github.com/belentani7/Cruzando-el-charco/actions/runs/44348736537
+- GitHub Pages configured for https://www.belentani.es/Cruzando-el-charco/; public browser access requires separate checking.
 
 ### 08 — open-school
-An open curriculum published as a static site: 5,639 HTML pages across lessons, modules and routes,
-verifiable with a script that reports broken relative links and missing assets.
+Static educational catalogue. On 18 November 2026, Git tracked 440 HTML files, with 420 educational pages linked from the searchable homepage; **not** the previously claimed 5,639 currently published pages. Not a university or a verified course accreditation.
+- Source: https://github.com/belentani7/open-school
+- Catalogue commit: https://github.com/belentani7/open-school/commit/b4277ab82ac5
+- GitHub Pages reported built; visual delivery not independently checked.
 
-- Repo: https://github.com/belentani7/open-school
-- Stack: HTML · Python
-- Demo: https://belentani7.github.io/open-school (HTTP 200)
-
-A system enters this list when its purpose is understandable, the public experience can be walked
-through, and the repository explains how to run and verify it. Ideas, prototypes and projects without
-that evidence stay out.
-
-Private work is described but never counted as evidence: model evaluation guard, governance control
-plane and a registry of 311 installable skills for 7 CLI agents live in private repositories.
+Private experiments, prototypes, scripts and internal counts are not included as public-product evidence.
 
 ## Writing & evidence
 
-Every claim on this page links to a repository, a test or a measurement — or is labelled unverified.
+Project descriptions are scoped to what the repositories and dated checks support. Deployment status, a unit test and a README measurement are different kinds of evidence.
 
 - Engineering evidence: ./docs/engineering-evidence-2026-10-29.md — commit counts, review windows and
   the limits of what activity metrics measure.
@@ -113,7 +85,7 @@ Every claim on this page links to a repository, a test or a measurement — or i
 - Ecosystem map: ./ECOSISTEMA.md — which projects only make sense connected, and the entry point of
   each, checked with curl.
 
-Private, archived or experimental work stays out of this page.
+Private and experimental work is labeled and does not count as independent public-product evidence.
 
 Source and reproduction: `scripts/profile_evidence.py` runs nine machine checks and exits non-zero
 on drift. The same checks run in CI on every push.
@@ -138,7 +110,7 @@ subtitles, CV reading, palette extraction.
 This showcase is a local demo over repository files: **not a verified live deployment**. Some pieces
 stay private, archived or experimental and are deliberately excluded from the public catalogue.
 
-*Made in Barcelona · Built with AI agents · MIT/Apache-2.0 · Updated: 2026-11-16*
+*Made in Barcelona · Built with AI agents · project licences vary · Updated: 2026-11-18*
 
 ## Verificacion
 
