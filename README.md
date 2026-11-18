@@ -14,8 +14,7 @@ tools. São Paulo · Barcelona · TypeScript · Python.
 
 **[Belentani: The Experience](https://belentani.es)** is the front door to the music and JUDAS
 narrative. Its interactive galaxy lets visitors enter the lore, listen to the work and discover the
-artist. The same world has two complementary tools: [Belentani Studio Motion](https://github.com/belentani7/belentani-studio-motion)
-develops kinetic components, while the private Belentani Visual Engine project explores procedural Three.js scenes from lore and code. Its source is not publicly accessible.
+artist. The same world has two complementary tools: the private Belentani Studio Motion project develops kinetic components, while the private Belentani Visual Engine project explores procedural Three.js scenes from lore and code. Its source is not publicly accessible.
 
 Not every project here stands alone. [ECOSISTEMA.md](./ECOSISTEMA.md) groups the six clusters that
 only make sense read together — the three entrances to Omega, the Judas canon, the router and the
