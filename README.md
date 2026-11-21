@@ -1,5 +1,10 @@
 # Pedro Belentani · `belentani7`
 
+[Artist website](https://belentani.es)
+
+**Education and community**  
+[Open School (source)](https://github.com/belentani7/open-school) ? [Cruzando el charco](https://belentani7.github.io/Cruzando-el-charco/) ? [Manos Abiertas (source)](https://github.com/belentani7/ManosAbiertas) ? [Aprende Brasil (source)](https://github.com/belentani7/aprende-brasil)
+
 Artist, composer and creative technologist · AI systems and Trust & Safety projects
 
 I compose music and build the digital worlds around it. My artist practice joins voice, narrative,
