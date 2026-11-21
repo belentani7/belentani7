@@ -1,3 +1,9 @@
+# Generated operating-system metadata and Python bytecode
+Desktop.ini
+desktop.ini
+._*
+__MACOSX/
+
 # Dependencies
 node_modules/
 .pnpm-store/
