@@ -48,3 +48,21 @@
 17 November 2026 — identity changed from music-led hybrid hero to professional AI/Full-Stack/Trust & Safety-first. The underlying creative work remains accessible but is not the entry point for recruiters.
 
 **Related PR:** https://github.com/belentani7/belentani7/pull/78
+
+## CV, public profile and evidence policy · 23 November 2026
+
+**Publish when relevant:** public professional name, Barcelona-area location, role-specific headline, professional contact, current portfolio/GitHub/LinkedIn links, accurately dated experience, demonstrable project work, verified training and languages, technologies used in practice, and outcomes supported by evidence. A professional phone number belongs in a targeted application, not automatically in a public repository.
+
+**Keep private by default:** full street address, personal identity numbers, birth date, health and family details, passwords/tokens, nonpublic compensation, private communications, client or employer-confidential materials, personal data about others, and private repository internals. Photograph is market-dependent and optional, not an ATS requirement.
+
+**What a claim must demonstrate:** relevant problem → personal contribution → implementation or process → reproducible evidence/observable result → known limits. Separate a prototype from a deployed service, an author-reported benchmark from an independently reproduced result, and a tested change from measurable business impact. No invented percentage improvements, roles or certifications.
+
+**What recruiters can assess:** relevance to the vacancy; real work history; engineering execution; sound judgment on security, accessibility and responsible AI; clear communication; collaborative work; maintained and inspectable projects. A large repository or technology count is not a quality measure.
+
+**CV delivery rules:** single-column, selectable-text ATS version; one A4 page by default, extending to two when relevant evidence requires it; conventional section headings; readable typography; no QR, rating bars or decorative skill meters; use market-appropriate contact and photo conventions. Tailor keywords naturally to each vacancy. Keep a private, evidence-backed master profile and derive role-specific versions.
+
+**Confidential employment description:** TELUS only for the 2018–2025 operations period, with no client identifiers or internal workflows. Use contractual titles only when checked against employment records.
+
+**Cross-platform scope:** GitHub = verifiable work; LinkedIn/ATS CV = employment and fit; Drive = living editorial reference; Notion = private decision history; Vercel = deployment evidence rather than a biography; BELENTANI music channels remain artist-led. A connector's read permission does not imply permission to write.
+
+**Review date:** 23 November 2026. No third-party validation or fresh external recruiting research is claimed in this revision.
