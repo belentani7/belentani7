@@ -43,11 +43,11 @@ I build practical AI tooling and full-stack products with explainable decisions,
 
 ## Professional background
 
-**2018–2025 · TELUS — Trust & Safety operations.** Multilingual digital operations, content-review responsibilities and quality-focused teamwork.
+**2026–present · Independent software work (Belentani / NOIACORE).** Applied AI tooling, full-stack interfaces and APIs, accessible web projects and creative technology. Repositories document actual scope; prototypes are not presented as enterprise deployments.
 
-**2016–2018 · Sellbytel / Webhelp — Multilingual customer support.** Customer service and post-sales operations.
+**2018–2025 · TELUS — Trust & Safety / digital operations.** Multilingual content and community operations, quality-minded review and professional judgment. Customer identities, internal processes and confidential metrics are intentionally omitted.
 
-**2026–present · Independent software work.** Applied AI, developer tools, accessible web products and creative technology. Public repositories document scope; prototypes are not described as proven enterprise deployments.
+**2016–2018 · Sellbytel / Webhelp — Multilingual customer support.** Customer service, post-sales operations and issue resolution.
 
 ## Writing & evidence
 
@@ -67,7 +67,7 @@ Public claims should link to a repository, test or measurement, or be **labelled
 
 I also write and release music as **BELENTANI**. My [artist website](https://belentani.es) is a creative practice and a hands-on example of immersive web design—not my primary professional positioning.
 
-*Independent work · Barcelona · Edited 2026-11-17. No automatic visitor counters or third-party statistics widgets.*
+*Independent work · Barcelona · Edited 2026-11-23. No automatic visitor counters or third-party statistics widgets.*
 
 ## Local browser tools (experiments)
 
