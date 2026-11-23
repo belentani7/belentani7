@@ -29,6 +29,12 @@ registry that need each other, open education, Barcelona community work, and the
 
 These projects have different maturity levels. A public repository, a successful build, or a Vercel Ready deployment is **not** proof that an application is a finished, independently verified product. Numbers below describe repository contents or dated checks, not customers, impact, savings or certifications.
 
+### 00 — zion (Protocolo Omega · Galaxia 3D & Planeta Bioeléctrico)
+Interactive Three.js WebGL2 living cosmos with real-time GLSL bioelectric shaders, Solfeggio 432 Hz drone & 76 BPM audio synthesis, and 44-node spiral galaxy with WASD space flight & cinematic camera navigation.
+- Source: https://github.com/belentani7/zion
+- Release: https://github.com/belentani7/zion/releases
+- Live Site: https://belentani.es (Omega Core / Dimension Zion)
+
 ### 01 — belentani.es
 Artist website and experimental interactive narrative. Active work in progress; experience and navigation are still being reviewed.
 - Source: https://github.com/belentani7/belentani.es
