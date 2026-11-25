@@ -40,7 +40,11 @@ function terminalHarness(){
 }
 
 test("English page defaults and translated hero do not mislabel whole document",()=>{
-  assert.match(html,/<html lang="en">/);
+  // The static document defaults to English; extra attributes (e.g. dir="ltr")
+  // are allowed as long as lang="en" is the declared default.
+  const htmlTag=html.match(/<html\b[^>]*>/)?.[0]||"";
+  assert.match(htmlTag,/\blang="en"/);
+  assert.doesNotMatch(htmlTag,/\bdir="rtl"/);
   assert.match(js,/\$\("#hero-copy"\)\.lang=/);
   assert.doesNotMatch(js,/document\.documentElement\.lang\s*=\s*lang/);
 });

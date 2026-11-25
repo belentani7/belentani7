@@ -25,7 +25,7 @@ Not every project here stands alone. [ECOSISTEMA.md](./ECOSISTEMA.md) groups the
 only make sense read together — the three entrances to Omega, the Judas canon, the router and the
 registry that need each other, open education, Barcelona community work, and the inspection tools.
 
-## Selected projects — public scope, not inflated production claims
+## Selected systems — public scope, not inflated production claims
 
 These projects have different maturity levels. A public repository, a successful build, or a Vercel Ready deployment is **not** proof that an application is a finished, independently verified product. Numbers below describe repository contents or dated checks, not customers, impact, savings or certifications.
 
@@ -95,7 +95,9 @@ Project descriptions are scoped to what the repositories and dated checks suppor
 - Ecosystem map: ./ECOSISTEMA.md — which projects only make sense connected, and the entry point of
   each, checked with curl.
 
-Private and experimental work is labeled and does not count as independent public-product evidence.
+Private, archived and experimental work is **labelled unverified** in this page and does not count as
+independent public-product evidence. Repository visibility is checked by `scripts/profile_evidence.py`
+against the public GitHub API; a private or unavailable project is never presented here.
 
 Source and reproduction: `scripts/profile_evidence.py` runs nine machine checks and exits non-zero
 on drift. The same checks run in CI on every push.
@@ -122,9 +124,26 @@ stay private, archived or experimental and are deliberately excluded from the pu
 
 *Made in Barcelona · Built with AI agents · project licences vary · Updated: 2026-11-18*
 
-## Verificacion
+## Verification
+
+Every gate below runs offline, without third-party services and without a build
+step for the published site:
 
 ```bash
-npm install
-npm test
+node --test docs/living-machine/*.test.cjs          # 39 browser-toolkit tests
+python3 -m unittest discover -s tests -p 'test_*.py' # 95 contract tests (HTTP, mirrors, a11y)
+python3 scripts/audit_site.py --include-root --strict  # accessibility, SEO, hygiene, weight
+python3 scripts/doctor.py                            # repository structure rules
+python3 scripts/serve_docs.py --port 4173             # serve the published artifact
 ```
+
+`npm test` runs the Node and Python suites. `npm run verify` adds ESLint, the
+TypeScript type check, the Vitest component suite and the site audit. The
+React/Vite project in `src/` is a component playground for prototyping; `docs/`
+is deployed as-is (`vercel.json` keeps install and build commands empty).
+
+Guarantees the CI enforces on every push: one `<h1>` per page, declared `lang`,
+labelled form controls, resolvable links, a 300 kB budget per document, zero
+third-party requests, byte-identical root/`docs/` mirrors and a sitemap that
+only lists published documents. A green check is evidence that these hold — not
+evidence that the products described here are finished.
