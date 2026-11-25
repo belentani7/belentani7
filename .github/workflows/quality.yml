@@ -18,6 +18,7 @@ permissions:
 
 jobs:
   validation:
+    name: Browser toolkits · Node tests
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -29,4 +30,52 @@ jobs:
           node-version: "22"
           package-manager-cache: false
       - name: Test standalone browser toolkits
-        run: node --test docs/living-machine/quality.test.cjs docs/living-machine/studio.test.cjs docs/living-machine/media.test.cjs docs/living-machine/i18n.test.cjs docs/living-machine/video.test.cjs docs/living-machine/diagnostics.test.cjs docs/living-machine/offline.test.cjs
+        run: node --test docs/living-machine/*.test.cjs
+      - name: Validate JavaScript syntax
+        run: |
+          for file in docs/living-machine/*.js assets/*.js; do
+            node --check "$file"
+          done
+
+  site:
+    name: Published site · audit, doctor and Python contracts
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Repository doctor
+        run: python scripts/doctor.py
+      - name: Python dependency-free contract suite
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Accessibility, SEO, hygiene and weight audit
+        run: python scripts/audit_site.py --include-root --strict
+      - name: Serve and verify the published artifact over HTTP
+        run: python scripts/serve_docs.py --root docs --check
+
+  playground:
+    name: Component playground · lint, types, unit tests, build
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          package-manager-cache: false
+      - name: Install locked dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Lint
+        run: npm run lint
+      - name: Type check
+        run: npm run typecheck
+      - name: Unit tests
+        run: npm run test:unit
+      - name: Build the playground bundle
+        run: npm run build

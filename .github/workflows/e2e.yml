@@ -1,0 +1,52 @@
+name: E2E · published site
+
+# Browser tests are manual by design: they download a Chromium build and point
+# it at `docs/` served by scripts/serve_docs.py. Keeping them off the automatic
+# gates means a browser outage never blocks a documentation fix, while the
+# harness stays ready for a real review.
+on:
+  workflow_dispatch:
+    inputs:
+      project:
+        description: "Playwright project to run"
+        required: true
+        default: chromium
+        type: choice
+        options: [chromium, mobile-chromium]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: e2e-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  playwright:
+    name: Chromium against docs/
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          package-manager-cache: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install locked dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Run the published site end to end
+        run: npx playwright test --project "${{ inputs.project }}"
+      - name: Upload the report on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 7
