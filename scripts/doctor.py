@@ -37,7 +37,8 @@ def check() -> list[tuple[str, bool, str]]:
         out.append(("README con contenido", len(txt.splitlines()) >= 10, f"{len(txt.splitlines())} líneas"))
         out.append(("README cita la ficha", "plataforma/FICHA.md" in txt, ""))
 
-    for html in list(ROOT.glob("*.html"))[:40]:
+    # Every root page is inspected: a silent [:40] slice used to hide pages.
+    for html in sorted(ROOT.glob("*.html")):
         txt = html.read_text(encoding="utf-8", errors="replace")
         out.append((f"{html.name}: doctype", bool(re.match(r"\s*<!doctype html", txt, re.I)), ""))
         out.append((f"{html.name}: lang", bool(re.search(r"<html[^>]+lang=", txt, re.I)), ""))

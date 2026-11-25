@@ -80,6 +80,26 @@
 | A60 | `COH-02` | Aviso legal | `aviso-legal.html` | aplicado | aviso-legal.html ya estaba · 974 B · confirmado en primera pasada |
 | A61 | `WEB-22` | Meta, Open Graph y favicon en las páginas | `(25 primeras páginas)` | ya estaba | 0 páginas con meta/OG/favicon · 6/6 |
 
+## Restauración 2026-11-25
+
+| ID | Regla | Cambio | Archivo | Estado | Evidencia |
+|---|---|---|---|---|---|
+| R01 | `WEB-06` | Documento publicado cinco veces (5 `<header>`, 5 `<main>`, 5 `<footer>`, 5 scripts WebGL) | `docs/auditoria.html`, `docs/catalogo.html`, `productos.html`, `escaparate-v1.html`, `ecosistema.html` | aplicado | 1 `<main>`, 1 `id="contenido"`, `<div>` balanceados; `audit_site.py` 0 hallazgos |
+| R02 | `WEB-07` | Enlaces del portal apuntaban a páginas no publicadas en `docs/` | `docs/docs.html`, `docs/accesibilidad.html`, `docs/privacidad.html`, `docs/404.html` | aplicado | `tests/test_served_site.py` responde 200 en las 8+ páginas |
+| R03 | `ACC-02` | Control sin nombre accesible y ausencia de `<main>`/enlace de salto | `docs/living-machine/index.html`, `docs/living-machine/studio.html` | aplicado | `audit_site.py`: 0 errores, 0 avisos |
+| R04 | `SEO-02` | `sitemap.xml` enumeraba páginas que ningún workflow publica | `sitemap.xml`, `docs/sitemap.xml`, `docs/robots.txt` | aplicado | `tests/test_published_mirrors.py::SitemapTests` |
+| R05 | `DEV-04` | `npm test` no era reproducible: sin dependencias ni lockfile, `terminal.test.cjs` fuera de los workflows | `package.json`, `package-lock.json`, `.github/workflows/*.yml` | aplicado | 39 tests Node + 95 tests Python en verde |
+| R06 | `DEV-06` | Configs de Vite/ESLint/TypeScript no ejecutables (`__dirname` en ESM, plugins con `await import()`, referencia `tsconfig.node.json` inexistente) | `vite.config.mts`, `eslint.config.js`, `tsconfig.json` | aplicado | `npm run build`, `npm run lint`, `npm run typecheck` en verde |
+| R07 | `COH-02` | `doctor.py` exigía `CONTRIBUTING.md` y `CODE_OF_CONDUCT.md`, que `.gitignore` ocultaba | `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `.gitignore` | aplicado | `python3 scripts/doctor.py` → 59/59 |
+| R08 | `SEO-03` | `README.md` había perdido el contrato del perfil (`## Selected systems`, «labelled unverified») | `README.md`, `tests/test_profile_presentation.py` | aplicado | `scripts/profile_evidence.py` en verde, 9 sistemas verificados |
+
+### Herramientas añadidas
+
+- `scripts/audit_site.py` — auditoría estática de accesibilidad, SEO, higiene y peso (28 reglas, `--strict`).
+- `scripts/serve_docs.py` — servidor estático del artefacto, con `--check`.
+- `tests/test_audit_site.py`, `tests/test_served_site.py`, `tests/test_published_mirrors.py` — contratos ejecutables.
+- `e2e/public-site.spec.ts` — Playwright contra el sitio real (Chromium y Pixel 7).
+
 ## Fallos
 
 Ninguno.

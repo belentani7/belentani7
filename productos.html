@@ -43,6 +43,7 @@ h3{font-size:1.02rem;margin:28px 0 10px;letter-spacing:-.01em}
 p,li{max-width:var(--measure);color:var(--ink)}
 .lead{font-size:clamp(1.05rem,2vw,1.28rem);color:var(--dim);max-width:56ch}
 hr{border:0;border-top:1px solid var(--line);margin:clamp(40px,8vh,80px) 0}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;
 background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin:32px 0}
 .cell{background:var(--bg2);padding:22px 20px}
@@ -87,30 +88,6 @@ color:var(--accent2);padding:4px 10px;border-radius:999px;margin:10px 0}
 <nav class="site" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="docs.html">Documentación</a><a href="accesibilidad.html">Accesibilidad</a><a href="privacidad.html">Privacidad</a><a href="404.html">404</a></nav>
 </div></header>
 <main id="contenido"><div class="wrap">
-<a class="skip" href="#contenido">Saltar al contenido</a>
-<header class="site"><div class="wrap" style="display:flex;justify-content:space-between;align-items:baseline;gap:18px;flex-wrap:wrap">
-<div class="brand">perfil <span>· ecosistema Belentani · WebGL online</span></div>
-<nav class="site" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="docs.html">Documentación</a><a href="accesibilidad.html">Accesibilidad</a><a href="privacidad.html">Privacidad</a><a href="404.html">404</a></nav>
-</div></header>
-<main id="contenido"><div class="wrap">
-<a class="skip" href="#contenido">Saltar al contenido</a>
-<header class="site"><div class="wrap" style="display:flex;justify-content:space-between;align-items:baseline;gap:18px;flex-wrap:wrap">
-<div class="brand">perfil <span>· ecosistema Belentani · WebGL online</span></div>
-<nav class="site" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="docs.html">Documentación</a><a href="accesibilidad.html">Accesibilidad</a><a href="privacidad.html">Privacidad</a><a href="404.html">404</a></nav>
-</div></header>
-<main id="contenido"><div class="wrap">
-<a class="skip" href="#contenido">Saltar al contenido</a>
-<header class="site"><div class="wrap" style="display:flex;justify-content:space-between;align-items:baseline;gap:18px;flex-wrap:wrap">
-<div class="brand">perfil <span>· ecosistema Belentani · WebGL online</span></div>
-<nav class="site" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="docs.html">Documentación</a><a href="accesibilidad.html">Accesibilidad</a><a href="privacidad.html">Privacidad</a><a href="404.html">404</a></nav>
-</div></header>
-<main id="contenido"><div class="wrap">
-<a class="skip" href="#contenido">Saltar al contenido</a>
-<header class="site"><div class="wrap" style="display:flex;justify-content:space-between;align-items:baseline;gap:18px;flex-wrap:wrap">
-<div class="brand">perfil <span>· ecosistema Belentani · WebGL online</span></div>
-<nav class="site" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="docs.html">Documentación</a><a href="accesibilidad.html">Accesibilidad</a><a href="privacidad.html">Privacidad</a><a href="404.html">404</a></nav>
-</div></header>
-<main id="contenido"><div class="wrap">
 <a class="skip" href="#main">Saltar al contenido</a>
 <header class="bar">
   <div class="wrap bar__in">
@@ -123,7 +100,7 @@ color:var(--accent2);padding:4px 10px;border-radius:999px;margin:10px 0}
     </nav>
   </div>
 </header>
-<main id="main">
+<div id="main">
 <section class="hero wrap" style="padding-bottom:32px">
 <p class="eyebrow reveal">Catálogo · 38 productos</p>
 <h1 class="reveal">Cada repositorio,<br>un <em>producto</em>.</h1>
@@ -139,7 +116,7 @@ color:var(--accent2);padding:4px 10px;border-radius:999px;margin:10px 0}
 <button data-filter="Negocio y estudios" aria-pressed="false" type="button">Negocio y estudios · 5</button>
 <button data-filter="Plataformas" aria-pressed="false" type="button">Plataformas · 4</button>
 <button data-filter="Varios" aria-pressed="false" type="button">Varios · 5</button>
-</div><div class="grid">
+</div><h2 class="sr-only">Productos del ecosistema</h2><div class="grid">
 <article class="prod reveal" data-cat="Negocio y estudios">
 <a  rel="noopener"><h3 class="long">ArteQueVeste-Entrega-2026</h3></a>
 <p class="desc">Entrega técnica y documental del sistema de diseño, presentación ejecutiva y activos multimedia para Arte Que Veste.</p>
@@ -469,7 +446,7 @@ color:var(--accent2);padding:4px 10px;border-radius:999px;margin:10px 0}
   });
 })();
 </script>
-</main>
+</div>
 <footer>
   <div class="wrap">
     <span>© 2026 Pedro Belentani · ecosistema Belentani</span>
@@ -514,132 +491,6 @@ color:var(--accent2);padding:4px 10px;border-radius:999px;margin:10px 0}
     gl.vertexAttribPointer(attr,2,gl.FLOAT,false,0,0);
     gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
   }catch(e){ console.log('WebGL init:', e.message); }
-})();
-</script>
-</div></main>
-<footer class="site"><div class="wrap">
-<p>perfil · WebGL listo para servir online · <a href="index.html">Inicio</a> · <a href="accesibilidad.html">Accesibilidad</a> · <a href="privacidad.html">Privacidad</a></p>
-</div></footer>
-<script>
-(function(){
-  var canvas = document.createElement('canvas');
-  canvas.className = 'webgl-canvas';
-  var container = document.getElementById('contenido');
-  if(container){ container.appendChild(canvas); }
-  try{
-    var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
-    if(!gl){ canvas.innerHTML = '<p style="color:var(--dim);font-family:var(--mono);padding:12px">WebGL no disponible en este navegador.</p>'; return; }
-    gl.clearColor(0.047,0.043,0.039,1);
-    gl.clear(gl.COLOR_BUFFER_BIT);
-    var vs = gl.createShader(gl.VERTEX_SHADER);
-    gl.shaderSource(vs, 'attribute vec2 p;void main(){gl_Position=vec4(p,0.0,1.0);}');
-    gl.compileShader(vs);
-    var fs = gl.createShader(gl.FRAGMENT_SHADER);
-    gl.shaderSource(fs, 'precision mediump float;uniform vec4 c;void main(){gl_FragColor=c;}');
-    gl.compileShader(fs);
-    var prog = gl.createProgram();
-    gl.attachShader(prog,vs); gl.attachShader(prog,fs); gl.linkProgram(prog);
-    gl.useProgram(prog);
-    var loc = gl.getUniformLocation(prog,'c');
-    gl.uniform4f(loc, 0.549, 0.659, 0.545, 1.0);
-    var buf = gl.createBuffer();
-    gl.bindBuffer(gl.ARRAY_BUFFER,buf);
-    gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
-    var attr = gl.getAttribLocation(prog,'p');
-    gl.enableVertexAttribArray(attr);
-    gl.vertexAttribPointer(attr,2,gl.FLOAT,false,0,0);
-    gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
-  }catch(e){ console.log('WebGL init:', e.message); }
-})();
-</script>
-</div></main>
-<footer class="site"><div class="wrap">
-<p>perfil · WebGL listo para servir online · <a href="index.html">Inicio</a> · <a href="accesibilidad.html">Accesibilidad</a> · <a href="privacidad.html">Privacidad</a></p>
-</div></footer>
-<script>
-(function(){
-  var canvas = document.createElement('canvas');
-  canvas.className = 'webgl-canvas';
-  var container = document.getElementById('contenido');
-  if(container){ container.appendChild(canvas); }
-  try{
-    var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
-    if(!gl){ canvas.innerHTML = '<p style="color:var(--dim);font-family:var(--mono);padding:12px">WebGL no disponible en este navegador.</p>'; return; }
-    gl.clearColor(0.047,0.043,0.039,1);
-    gl.clear(gl.COLOR_BUFFER_BIT);
-    var vs = gl.createShader(gl.VERTEX_SHADER);
-    gl.shaderSource(vs, 'attribute vec2 p;void main(){gl_Position=vec4(p,0.0,1.0);}');
-    gl.compileShader(vs);
-    var fs = gl.createShader(gl.FRAGMENT_SHADER);
-    gl.shaderSource(fs, 'precision mediump float;uniform vec4 c;void main(){gl_FragColor=c;}');
-    gl.compileShader(fs);
-    var prog = gl.createProgram();
-    gl.attachShader(prog,vs); gl.attachShader(prog,fs); gl.linkProgram(prog);
-    gl.useProgram(prog);
-    var loc = gl.getUniformLocation(prog,'c');
-    gl.uniform4f(loc, 0.549, 0.659, 0.545, 1.0);
-    var buf = gl.createBuffer();
-    gl.bindBuffer(gl.ARRAY_BUFFER,buf);
-    gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
-    var attr = gl.getAttribLocation(prog,'p');
-    gl.enableVertexAttribArray(attr);
-    gl.vertexAttribPointer(attr,2,gl.FLOAT,false,0,0);
-    gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
-  }catch(e){ console.log('WebGL init:', e.message); }
-})();
-</script>
-</div></main>
-<footer class="site"><div class="wrap">
-<p>perfil · WebGL listo para servir online · <a href="index.html">Inicio</a> · <a href="accesibilidad.html">Accesibilidad</a> · <a href="privacidad.html">Privacidad</a></p>
-</div></footer>
-<script>
-(function(){
-  var canvas = document.createElement('canvas');
-  canvas.className = 'webgl-canvas';
-  var container = document.getElementById('contenido');
-  if(container){ container.appendChild(canvas); }
-  try{
-    var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
-    if(!gl){ canvas.innerHTML = '<p style="color:var(--dim);font-family:var(--mono);padding:12px">WebGL no disponible en este navegador.</p>'; return; }
-    gl.clearColor(0.047,0.043,0.039,1);
-    gl.clear(gl.COLOR_BUFFER_BIT);
-    var vs = gl.createShader(gl.VERTEX_SHADER);
-    gl.shaderSource(vs, 'attribute vec2 p;void main(){gl_Position=vec4(p,0.0,1.0);}');
-    gl.compileShader(vs);
-    var fs = gl.createShader(gl.FRAGMENT_SHADER);
-    gl.shaderSource(fs, 'precision mediump float;uniform vec4 c;void main(){gl_FragColor=c;}');
-    gl.compileShader(fs);
-    var prog = gl.createProgram();
-    gl.attachShader(prog,vs); gl.attachShader(prog,fs); gl.linkProgram(prog);
-    gl.useProgram(prog);
-    var loc = gl.getUniformLocation(prog,'c');
-    gl.uniform4f(loc, 0.549, 0.659, 0.545, 1.0);
-    var buf = gl.createBuffer();
-    gl.bindBuffer(gl.ARRAY_BUFFER,buf);
-    gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
-    var attr = gl.getAttribLocation(prog,'p');
-    gl.enableVertexAttribArray(attr);
-    gl.vertexAttribPointer(attr,2,gl.FLOAT,false,0,0);
-    gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
-  }catch(e){ console.log('WebGL init:', e.message); }
-})();
-</script>
-</div></main>
-<footer class="site"><div class="wrap">
-<p>perfil · WebGL listo para servir online · <a href="index.html">Inicio</a> · <a href="accesibilidad.html">Accesibilidad</a> · <a href="privacidad.html">Privacidad</a></p>
-</div></footer>
-<script>
-(function(){
-  var canvas = document.createElement('canvas');
-  canvas.className = 'webgl-canvas';
-  var container = document.getElementById('contenido');
-  if(container){ container.appendChild(canvas); }
-  try{
-    var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
-    if(!gl){ canvas.innerHTML = '<p style="color:var(--dim);font-family:var(--mono);padding:12px">WebGL no disponible.</p>'; return; }
-    gl.clearColor(0.047,0.043,0.039,1);
-    gl.clear(gl.COLOR_BUFFER_BIT);
-  }catch(e){ console.log('WebGL:', e.message); }
 })();
 </script>
 </body>

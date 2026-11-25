@@ -25,6 +25,12 @@ SELECTED_REPOSITORIES = (
     "meta-skill",
     "secure-t",
 )
+# Projects that must not appear in the profile: private repositories (the public
+# GitHub API answers 403/404 for them) or repositories that are not verified as
+# public product evidence. ``ManosAbiertas`` was removed from this list on
+# 2026-11-25 because the API reports it public (private=false, archived=false)
+# and the shipped portal already features it as an education source; see
+# tests/test_portal_links.py::EXPECTED_DESTINATIONS.
 EXCLUDED_REPOSITORIES = (
     "noiacore-model-guard",
     "forja-enterprise",
@@ -34,7 +40,6 @@ EXCLUDED_REPOSITORIES = (
     "CARQUIDEC",
     "linguaforge",
     "belentani-omg-portal",
-    "ManosAbiertas",
 )
 FEATURED_SECTION = "## Selected systems"
 EVIDENCE_SECTION = "## Writing & evidence"

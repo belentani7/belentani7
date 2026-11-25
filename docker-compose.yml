@@ -1,36 +1,28 @@
-version: '3.8'
-
 services:
   app:
     build:
       context: .
       dockerfile: Dockerfile
-      target: runner
     ports:
       - "3000:3000"
-    environment:
-      - NODE_ENV=production
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "wget", "-q", "--spider", "http://localhost:3000"]
+      test: ["CMD", "wget", "-q", "--spider", "http://127.0.0.1:3000/index.html"]
       interval: 30s
-      timeout: 10s
+      timeout: 5s
       retries: 3
-      start_period: 10s
+      start_period: 5s
 
-  app-dev:
-    build:
-      context: .
-      dockerfile: Dockerfile
-      target: builder
-    ports:
-      - "3000:3000"
-      - "5173:5173"
-    environment:
-      - NODE_ENV=development
+  # Same artifact, served by the dependency-free Python server used in CI.
+  # docker compose --profile dev up docs-dev
+  docs-dev:
+    image: python:3.13-alpine
+    working_dir: /site
     volumes:
-      - .:/app
-      - /app/node_modules
-    command: pnpm dev --host 0.0.0.0
+      - ./docs:/site/docs:ro
+      - ./scripts/serve_docs.py:/site/scripts/serve_docs.py:ro
+    command: ["python3", "scripts/serve_docs.py", "--root", "docs", "--port", "4173", "--bind", "0.0.0.0"]
+    ports:
+      - "4173:4173"
     profiles:
       - dev
