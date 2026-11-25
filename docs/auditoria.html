@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Auditoría unificada — Ecosistema belentani7 · 2026-11-02 → 07</title>
-<meta name="description" content="La auditoría completa del ecosistema belentani7 consolidada en un solo documento: 73 artefactos (.md, .csv, .html, .json) fusionados. 434→115 repositorios, correcciones con estado real, seguridad, gates y gobernanza.">
+<meta name="description" content="Auditoría unificada del ecosistema belentani7: 73 artefactos fusionados, 434→115 repositorios, correcciones verificadas, seguridad, gates y gobernanza.">
 <meta name="generator" content="repo-superpowers-audit-v1">
 <meta property="og:title" content="Auditoría unificada — Ecosistema belentani7 · 2026-11-02 → 07">
 <meta property="og:description" content="La auditoría completa del ecosistema belentani7 consolidada en un solo documento: 73 artefactos (.md, .csv, .html, .json) fusionados. 434→115 repositorios, correcciones con estado real, seguridad, gates y gobernanza.">
@@ -87,30 +87,6 @@ color:var(--accent2);padding:4px 10px;border-radius:999px;margin:10px 0}
 <nav class="site" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="docs.html">Documentación</a><a href="accesibilidad.html">Accesibilidad</a><a href="privacidad.html">Privacidad</a><a href="404.html">404</a></nav>
 </div></header>
 <main id="contenido"><div class="wrap">
-<a class="skip" href="#contenido">Saltar al contenido</a>
-<header class="site"><div class="wrap" style="display:flex;justify-content:space-between;align-items:baseline;gap:18px;flex-wrap:wrap">
-<div class="brand">docs <span>· ecosistema Belentani · WebGL online</span></div>
-<nav class="site" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="docs.html">Documentación</a><a href="accesibilidad.html">Accesibilidad</a><a href="privacidad.html">Privacidad</a><a href="404.html">404</a></nav>
-</div></header>
-<main id="contenido"><div class="wrap">
-<a class="skip" href="#contenido">Saltar al contenido</a>
-<header class="site"><div class="wrap" style="display:flex;justify-content:space-between;align-items:baseline;gap:18px;flex-wrap:wrap">
-<div class="brand">docs <span>· ecosistema Belentani · WebGL online</span></div>
-<nav class="site" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="docs.html">Documentación</a><a href="accesibilidad.html">Accesibilidad</a><a href="privacidad.html">Privacidad</a><a href="404.html">404</a></nav>
-</div></header>
-<main id="contenido"><div class="wrap">
-<a class="skip" href="#contenido">Saltar al contenido</a>
-<header class="site"><div class="wrap" style="display:flex;justify-content:space-between;align-items:baseline;gap:18px;flex-wrap:wrap">
-<div class="brand">docs <span>· ecosistema Belentani · WebGL online</span></div>
-<nav class="site" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="docs.html">Documentación</a><a href="accesibilidad.html">Accesibilidad</a><a href="privacidad.html">Privacidad</a><a href="404.html">404</a></nav>
-</div></header>
-<main id="contenido"><div class="wrap">
-<a class="skip" href="#contenido">Saltar al contenido</a>
-<header class="site"><div class="wrap" style="display:flex;justify-content:space-between;align-items:baseline;gap:18px;flex-wrap:wrap">
-<div class="brand">docs <span>· ecosistema Belentani · WebGL online</span></div>
-<nav class="site" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="docs.html">Documentación</a><a href="accesibilidad.html">Accesibilidad</a><a href="privacidad.html">Privacidad</a><a href="404.html">404</a></nav>
-</div></header>
-<main id="contenido"><div class="wrap">
 <header>
   <a class="marca" href="index.html">
     <svg width="24" height="24" viewBox="0 0 32 32" aria-hidden="true">
@@ -153,7 +129,7 @@ color:var(--accent2);padding:4px 10px;border-radius:999px;margin:10px 0}
     <a href="#fuentes">10 · Fuentes consolidadas</a>
   </nav>
 
-  <main>
+  <div class="doc-body">
 
   <section id="resumen">
     <h2>1 · Resumen ejecutivo</h2>
@@ -406,7 +382,7 @@ color:var(--accent2);padding:4px 10px;border-radius:999px;margin:10px 0}
     </p>
   </section>
 
-  </main>
+  </div>
 </div>
 
 <footer>
@@ -455,132 +431,6 @@ color:var(--accent2);padding:4px 10px;border-radius:999px;margin:10px 0}
     gl.vertexAttribPointer(attr,2,gl.FLOAT,false,0,0);
     gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
   }catch(e){ console.log('WebGL init:', e.message); }
-})();
-</script>
-</div></main>
-<footer class="site"><div class="wrap">
-<p>docs · WebGL listo para servir online · <a href="index.html">Inicio</a> · <a href="accesibilidad.html">Accesibilidad</a> · <a href="privacidad.html">Privacidad</a></p>
-</div></footer>
-<script>
-(function(){
-  var canvas = document.createElement('canvas');
-  canvas.className = 'webgl-canvas';
-  var container = document.getElementById('contenido');
-  if(container){ container.appendChild(canvas); }
-  try{
-    var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
-    if(!gl){ canvas.innerHTML = '<p style="color:var(--dim);font-family:var(--mono);padding:12px">WebGL no disponible en este navegador.</p>'; return; }
-    gl.clearColor(0.047,0.043,0.039,1);
-    gl.clear(gl.COLOR_BUFFER_BIT);
-    var vs = gl.createShader(gl.VERTEX_SHADER);
-    gl.shaderSource(vs, 'attribute vec2 p;void main(){gl_Position=vec4(p,0.0,1.0);}');
-    gl.compileShader(vs);
-    var fs = gl.createShader(gl.FRAGMENT_SHADER);
-    gl.shaderSource(fs, 'precision mediump float;uniform vec4 c;void main(){gl_FragColor=c;}');
-    gl.compileShader(fs);
-    var prog = gl.createProgram();
-    gl.attachShader(prog,vs); gl.attachShader(prog,fs); gl.linkProgram(prog);
-    gl.useProgram(prog);
-    var loc = gl.getUniformLocation(prog,'c');
-    gl.uniform4f(loc, 0.549, 0.659, 0.545, 1.0);
-    var buf = gl.createBuffer();
-    gl.bindBuffer(gl.ARRAY_BUFFER,buf);
-    gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
-    var attr = gl.getAttribLocation(prog,'p');
-    gl.enableVertexAttribArray(attr);
-    gl.vertexAttribPointer(attr,2,gl.FLOAT,false,0,0);
-    gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
-  }catch(e){ console.log('WebGL init:', e.message); }
-})();
-</script>
-</div></main>
-<footer class="site"><div class="wrap">
-<p>docs · WebGL listo para servir online · <a href="index.html">Inicio</a> · <a href="accesibilidad.html">Accesibilidad</a> · <a href="privacidad.html">Privacidad</a></p>
-</div></footer>
-<script>
-(function(){
-  var canvas = document.createElement('canvas');
-  canvas.className = 'webgl-canvas';
-  var container = document.getElementById('contenido');
-  if(container){ container.appendChild(canvas); }
-  try{
-    var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
-    if(!gl){ canvas.innerHTML = '<p style="color:var(--dim);font-family:var(--mono);padding:12px">WebGL no disponible en este navegador.</p>'; return; }
-    gl.clearColor(0.047,0.043,0.039,1);
-    gl.clear(gl.COLOR_BUFFER_BIT);
-    var vs = gl.createShader(gl.VERTEX_SHADER);
-    gl.shaderSource(vs, 'attribute vec2 p;void main(){gl_Position=vec4(p,0.0,1.0);}');
-    gl.compileShader(vs);
-    var fs = gl.createShader(gl.FRAGMENT_SHADER);
-    gl.shaderSource(fs, 'precision mediump float;uniform vec4 c;void main(){gl_FragColor=c;}');
-    gl.compileShader(fs);
-    var prog = gl.createProgram();
-    gl.attachShader(prog,vs); gl.attachShader(prog,fs); gl.linkProgram(prog);
-    gl.useProgram(prog);
-    var loc = gl.getUniformLocation(prog,'c');
-    gl.uniform4f(loc, 0.549, 0.659, 0.545, 1.0);
-    var buf = gl.createBuffer();
-    gl.bindBuffer(gl.ARRAY_BUFFER,buf);
-    gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
-    var attr = gl.getAttribLocation(prog,'p');
-    gl.enableVertexAttribArray(attr);
-    gl.vertexAttribPointer(attr,2,gl.FLOAT,false,0,0);
-    gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
-  }catch(e){ console.log('WebGL init:', e.message); }
-})();
-</script>
-</div></main>
-<footer class="site"><div class="wrap">
-<p>docs · WebGL listo para servir online · <a href="index.html">Inicio</a> · <a href="accesibilidad.html">Accesibilidad</a> · <a href="privacidad.html">Privacidad</a></p>
-</div></footer>
-<script>
-(function(){
-  var canvas = document.createElement('canvas');
-  canvas.className = 'webgl-canvas';
-  var container = document.getElementById('contenido');
-  if(container){ container.appendChild(canvas); }
-  try{
-    var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
-    if(!gl){ canvas.innerHTML = '<p style="color:var(--dim);font-family:var(--mono);padding:12px">WebGL no disponible en este navegador.</p>'; return; }
-    gl.clearColor(0.047,0.043,0.039,1);
-    gl.clear(gl.COLOR_BUFFER_BIT);
-    var vs = gl.createShader(gl.VERTEX_SHADER);
-    gl.shaderSource(vs, 'attribute vec2 p;void main(){gl_Position=vec4(p,0.0,1.0);}');
-    gl.compileShader(vs);
-    var fs = gl.createShader(gl.FRAGMENT_SHADER);
-    gl.shaderSource(fs, 'precision mediump float;uniform vec4 c;void main(){gl_FragColor=c;}');
-    gl.compileShader(fs);
-    var prog = gl.createProgram();
-    gl.attachShader(prog,vs); gl.attachShader(prog,fs); gl.linkProgram(prog);
-    gl.useProgram(prog);
-    var loc = gl.getUniformLocation(prog,'c');
-    gl.uniform4f(loc, 0.549, 0.659, 0.545, 1.0);
-    var buf = gl.createBuffer();
-    gl.bindBuffer(gl.ARRAY_BUFFER,buf);
-    gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
-    var attr = gl.getAttribLocation(prog,'p');
-    gl.enableVertexAttribArray(attr);
-    gl.vertexAttribPointer(attr,2,gl.FLOAT,false,0,0);
-    gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
-  }catch(e){ console.log('WebGL init:', e.message); }
-})();
-</script>
-</div></main>
-<footer class="site"><div class="wrap">
-<p>docs · WebGL listo para servir online · <a href="index.html">Inicio</a> · <a href="accesibilidad.html">Accesibilidad</a> · <a href="privacidad.html">Privacidad</a></p>
-</div></footer>
-<script>
-(function(){
-  var canvas = document.createElement('canvas');
-  canvas.className = 'webgl-canvas';
-  var container = document.getElementById('contenido');
-  if(container){ container.appendChild(canvas); }
-  try{
-    var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
-    if(!gl){ canvas.innerHTML = '<p style="color:var(--dim);font-family:var(--mono);padding:12px">WebGL no disponible.</p>'; return; }
-    gl.clearColor(0.047,0.043,0.039,1);
-    gl.clear(gl.COLOR_BUFFER_BIT);
-  }catch(e){ console.log('WebGL:', e.message); }
 })();
 </script>
 </body>

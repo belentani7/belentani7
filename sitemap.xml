@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Only the pages that the deploy workflow actually publishes are listed:
+  `.github/workflows/deploy-pages.yml` uploads `docs/` as the site artifact,
+  so files that live outside `docs/` are not reachable under this URL.
+-->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://belentani7.github.io/belentani7/auditoria.html</loc></url>
-  <url><loc>https://belentani7.github.io/belentani7/ecosistema.html</loc></url>
-  <url><loc>https://belentani7.github.io/belentani7/escaparate-v1.html</loc></url>
   <url><loc>https://belentani7.github.io/belentani7/index.html</loc></url>
-  <url><loc>https://belentani7.github.io/belentani7/productos.html</loc></url>
-  <url><loc>https://belentani7.github.io/belentani7/react.html</loc></url>
+  <url><loc>https://belentani7.github.io/belentani7/catalogo.html</loc></url>
+  <url><loc>https://belentani7.github.io/belentani7/auditoria.html</loc></url>
+  <url><loc>https://belentani7.github.io/belentani7/docs.html</loc></url>
+  <url><loc>https://belentani7.github.io/belentani7/accesibilidad.html</loc></url>
+  <url><loc>https://belentani7.github.io/belentani7/privacidad.html</loc></url>
+  <url><loc>https://belentani7.github.io/belentani7/projects/</loc></url>
+  <url><loc>https://belentani7.github.io/belentani7/living-machine/index.html</loc></url>
+  <url><loc>https://belentani7.github.io/belentani7/living-machine/studio.html</loc></url>
+  <url><loc>https://belentani7.github.io/belentani7/living-machine/diagnostics.html</loc></url>
 </urlset>
