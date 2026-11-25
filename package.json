@@ -1,11 +1,8 @@
 {
   "name": "belentani7-profile",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "description": "The product house — portfolio vitrine, catalogue of 115 products and the unified audit. Every vitrine verified: pushed, deployed, green.",
-  "scripts": {
-    "test": "node --test docs/living-machine/quality.test.cjs docs/living-machine/studio.test.cjs docs/living-machine/media.test.cjs docs/living-machine/i18n.test.cjs docs/living-machine/video.test.cjs docs/living-machine/diagnostics.test.cjs docs/living-machine/offline.test.cjs"
-  },
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -16,6 +13,48 @@
   },
   "homepage": "https://belentani7.github.io/belentani7/",
   "engines": {
-    "node": ">=18"
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 5173",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 4173",
+    "typecheck": "tsc --noEmit --pretty false",
+    "lint": "eslint src e2e vite.config.mts playwright.config.ts",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,css}\" \"*.{json,ts}\"",
+    "test": "npm run test:node && npm run test:python",
+    "test:node": "node --test docs/living-machine/*.test.cjs",
+    "test:python": "python3 -m unittest discover -s tests -p test_*.py",
+    "test:unit": "vitest run",
+    "test:e2e": "playwright test",
+    "serve:docs": "python3 scripts/serve_docs.py --port 4173",
+    "audit:site": "python3 scripts/audit_site.py",
+    "doctor": "python3 scripts/doctor.py",
+    "verify": "npm run lint && npm run typecheck && npm test && npm run test:unit && npm run audit:site && npm run doctor",
+    "test:unit:coverage": "vitest run --coverage"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "@testing-library/jest-dom": "^8.0.0",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.13",
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.1",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "@vitest/coverage-v8": "^5.1.1",
+    "eslint": "^10.15.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.14.0",
+    "jsdom": "^31.0.1",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.74.0",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.1"
+  },
+  "dependencies": {
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
   }
 }

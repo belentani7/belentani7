@@ -1,32 +1,44 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import path from 'path'
+import { fileURLToPath, URL } from 'node:url';
+import { defineConfig } from 'vitest/config';
+import react from '@vitejs/plugin-react';
+
+// Component playground configuration.
+//
+// The public product is the build-free static site in `docs/` (`vercel.json`
+// sets an empty install and build command). This Vite project only builds the
+// React playground used to prototype UI pieces and to run the component test
+// suite, so its root is `src/` — never the repository root, which ships the
+// real `index.html` page and must not be bundled.
+const srcDir = fileURLToPath(new URL('./src', import.meta.url));
 
 export default defineConfig({
+  root: srcDir,
   plugins: [react()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
+      '@': srcDir,
     },
   },
+  server: {
+    host: '0.0.0.0',
+    port: 5173,
+  },
   build: {
-    sourcemap: true,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-        },
-      },
-    },
+    outDir: fileURLToPath(new URL('./dist', import.meta.url)),
+    emptyOutDir: true,
+    sourcemap: false,
   },
   test: {
     globals: true,
     environment: 'jsdom',
-    setupFiles: './src/test/setup.ts',
+    setupFiles: './test/setup.ts',
+    include: ['**/*.test.{ts,tsx}'],
+    restoreMocks: true,
     coverage: {
       provider: 'v8',
-      reporter: ['text', 'json', 'html'],
-      exclude: ['node_modules/', 'src/test/', '**/*.d.ts'],
+      reporter: ['text', 'json-summary'],
+      include: ['**/*.{ts,tsx}'],
+      exclude: ['test/**', 'main.tsx', '**/*.d.ts'],
     },
   },
-})
+});
