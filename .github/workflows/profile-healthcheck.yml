@@ -1,10 +1,5 @@
-permissions:
-  contents: read
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-
 name: Profile Readme Health
+
 on:
   pull_request:
     paths:
@@ -34,8 +29,14 @@ on:
   schedule:
     - cron: '37 6 * * 1'
   workflow_dispatch:
+
 permissions:
   contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   audit:
     runs-on: ubuntu-latest

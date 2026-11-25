@@ -11,6 +11,32 @@ def workflow(name):
 
 
 class WorkflowPolicyTests(unittest.TestCase):
+    def test_workflows_have_no_duplicate_top_level_keys(self):
+        """A duplicated YAML key makes GitHub fail the run at startup.
+
+        `build.yml`, `quality.yml`, `living-machine-ci.yml` and
+        `profile-healthcheck.yml` carried two top-level `permissions:` blocks.
+        GitHub does not tolerate duplicate keys: every push produced a run with
+        zero jobs named after the file path, so those workflows never executed.
+        """
+        for path in sorted(ROOT.glob("*.yml")):
+            seen = {}
+            for number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+                if line.startswith((" ", "\t", "#", "-")) or not line.strip():
+                    continue
+                if ":" not in line:
+                    continue
+                key = line.split(":", 1)[0]
+                duplicate = key in seen
+                self.assertFalse(
+                    duplicate,
+                    f"{path.name}: duplicate top-level key {key!r} at line {number} "
+                    f"(first seen at line {seen.get(key)})",
+                )
+                seen[key] = number
+            for required in ("name", "on", "jobs", "permissions"):
+                self.assertIn(required, seen, f"{path.name} must declare {required}")
+
     def test_all_setup_node_steps_disable_unneeded_implicit_cache(self):
         # Keep this invariant across future supported major action upgrades.
         for name in ("ci.yml", "cd.yml", "build.yml", "quality.yml", "living-machine-ci.yml"):
